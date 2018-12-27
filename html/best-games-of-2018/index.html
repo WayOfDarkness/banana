@@ -1,0 +1,928 @@
+<!doctype html>
+<html lang="en" itemscope id="" class="no-js no-touch  html-event">
+
+
+<!-- Mirrored from www.gamespot.com/best-games-of-2018/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Dec 2018 20:19:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Vg8OUFFACgYBUVZQDw=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(16),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(17),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,v="fn"+h,w="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(v,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(19)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(19)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(19)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(19)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(19)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,v=l.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(w,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("../index.html")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(16),s=t(17),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],16:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],17:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],18:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],19:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(17),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([b,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function v(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},b={on:p,addEventListener:p,removeEventListener:h,emit:e,get:v,listeners:m,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(16),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=x.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+x.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-x.offset}var s=(new Date).getTime(),c=t("handle"),f=t(16),u=t("ee"),d=t(15),l=window,p=l.document,h="addEventListener",m="attachEvent",v=l.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:v,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:b,userAgent:d};t(12),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(18)},{}]},{},["loader",2,10,4,3]);</script>
+      
+
+<script type="text/javascript">
+  (function() {
+    "use strict";
+    /**
+     * Include a script in the head of the doc. This is a private function called from the load third party function and callback only
+     * @param  {string}  scriptid ID of the script element
+     * @param  {string}  url      URL to the script
+     * @param  {boolean} async    Whether or not to load the script async
+     */
+    function includeScript (scriptid, url, async) {
+      var doc = document,
+      tagname = 'script',
+      lastScript = doc.getElementsByTagName(tagname)[0];
+      if (!lastScript) {
+          lastScript = doc.head;
+      }
+      var script = doc.createElement(tagname);
+      script.async = async ? true : false;
+      script.id = scriptid;
+      script.src = url;
+      lastScript.parentNode.insertBefore(script,lastScript);
+    }
+
+    var PhoenixLoader = window.PhoenixLoader = {
+      consent: false,
+      scripts: [],
+      scriptFailed: false,
+
+      /**
+       * Load a third party consent when GDPR consent is received
+       * @param  {string}  scriptid ID of the script element
+       * @param  {string}  url      URL to the script
+       * @param  {boolean} async    Whether or not to load the script async
+       */
+      loadThirdParty: function (scriptid, url, async) {
+        if (this.consent) {
+          includeScript(scriptid, url, async);
+        }
+        else {
+          this.scripts[scriptid] = { 'url': url, 'async': async };
+        }
+      },
+
+      /**
+       * Run a callback when third party consent is received from the GDPR script
+       * @param  {Function} callback Callback function to call when consent is received
+       */
+      thirdPartyCallback: function (callback) {
+        if (this.consent) {
+          callback();
+        }
+        else {
+          document.addEventListener('loadThirdParty', function (e) {
+            callback();
+          });
+        }
+      },
+
+      /**
+       * Trigger the consent event so the rest of the scripts can load
+       * This should only be called after GDPR script has run and the user has given consent
+       */
+      triggerConsent: function () {
+        this.consent = true;
+        var event = null;
+        if(typeof(Event) === 'function') {
+            var event = new Event('loadThirdParty');
+        }
+        // IE 11 and below doesn't support the Event constructor, use the old deprecated way of creating events
+        else{
+            var event = document.createEvent('Event');
+            event.initEvent('loadThirdParty', true, true);
+        }
+
+        document.dispatchEvent(event);
+      },
+
+      /**
+       * Monitor a script tag for failure to load. If it fails to load mark failed
+       * @param  {Element} script Script element to monitor
+       */
+      monitorKeyScript: function (script) {
+        var self = this;
+        script.addEventListener('error', function (err){
+          if (err) {
+            self.scriptFailed = true;
+          }
+        });
+      },
+
+      /**
+       * Have key scripts failed to load
+       * @return {boolean} Returns true if any of the key scripts we monitor have failed to load
+       */
+      keyScriptsFailed: function () {
+        return this.scriptFailed;
+      }
+    };
+    /**
+     * When third party consent is received run all the scripts we've queued up
+     */
+    PhoenixLoader.thirdPartyCallback(function(){
+      var scripts = PhoenixLoader.scripts;
+      Object.keys(scripts).forEach(function(key) {
+        includeScript(key, scripts[key].url, scripts[key].async);
+        delete scripts[key];
+      });
+    });
+  })();
+</script>
+<script type="text/javascript">
+window.gdprConsent = false;
+(function(id){function append(scriptid,url,async){var d=document,sn='script',f=d.getElementsByTagName(sn)[0];if(!f)f=d.head;var s=d.createElement(sn);s.async=!0;s.id=scriptid;s.src=url;PhoenixLoader.monitorKeyScript(s);f.parentNode.insertBefore(s,f);}
+function getRootDomain(){var parts=window.location.hostname.split('.');if(parts.length===2)rootDomain=parts[0];else if(parts.length>2){var part=parts[parts.length-2];if(part==='com'||part==='co'){rootDomain=parts[parts.length-3]}
+else{rootDomain=part}} return rootDomain;}
+window.evidon={};window.evidon.id=id;var cdn='http://c.evidon.com/',rootDomain=getRootDomain(),noticecdn=cdn+'sitenotice/';append('evidon-notice',noticecdn+'evidon-sitenotice-tag.js',!1);append('evidon-location',cdn+'geo/country.js',!0);append('evidon-themes',noticecdn+id+'/snthemes.js',!0);if(rootDomain)append('evidon-settings',noticecdn+id+'/'+rootDomain+'/settings.js',!0);
+    window.evidon.priorConsentCallback=function(){
+        PhoenixLoader.triggerConsent();
+
+        window.gdprConsent = true;
+
+        if (typeof om == 'object' && typeof om.fireGdprTags != 'undefined') {
+            om.fireGdprTags();
+        }
+    };
+    window.evidon.closeCallback=function(){};
+    window.evidon.consentWithdrawnCallback=function(){
+      // User does not consent to tracking fire tracking event to make video player load anyway
+      if (typeof $ != undefined) {
+        $(document).ready(function(){
+          $(document).trigger('tracking_initialized');
+          $(document).trigger('ads_initialized');
+        });
+      }
+    };
+})(425);
+</script>
+        <script type="text/javascript">
+  var performance = window.performance || {};
+  if (performance.mark && performance.measure) {
+    performance.mark('nr_pageStart');
+      }
+</script>
+        <title>Best Games of 2018 - GameSpot</title>
+
+        <meta name="description" content="Best of 2018 - Best Games of 2018">
+        <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <meta name="application-name" content="GameSpot"/>
+    <meta name="msapplication-TileColor" content="#26292B"/>
+    <meta name="msapplication-TileImage" content="https://static.gamespot.com/bundles/gamespotsite/images/win8pin.png"/>
+
+    
+        <meta name="userAuthState" content="noUser"/>
+
+    
+    <meta id="cdnHost" itemprop="cdnHost" content="static.gamespot.com">
+
+    
+            <meta id="view-guid-meta" name="view-guid-meta" itemprop="view-guid" content="">
+
+                      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          
+                                
+      <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@GameSpot">
+      <meta name="twitter:creator" content="@GameSpot">
+  
+    		<meta property="og:image" content="https://static.gamespot.com/uploads/screen_kubrick/1551/15514330/3468438-2018-boty-hub.png"/>
+	
+        	<meta property="og:title" content="Best Games of 2018"/>
+  	        <meta property="og:description" content="Best of 2018 - Best Games of 2018"/>
+      
+  <meta property="og:site_name" content="GameSpot"/>
+
+      <meta property="og:type" content="website"/>
+  
+      <meta property="og:url" content="https://www.gamespot.com/best-games-of-2018/"/>
+              <link rel="canonical" href="index.html" />
+      
+
+                  
+                      <meta name="modal-cdn-url" content="/js/modals.json">
+          
+          <meta name='js-sort-filter-text' content='yes'>
+
+                              <meta id="tracking-dw"
+                    class="js-post-render-tracking-consumer tracking-settings"
+              data-tracking-service="dw"
+        itemprop="tracking-dw"
+        content="{&quot;pageParams&quot;:{&quot;siteid&quot;:&quot;6&quot;,&quot;ptid&quot;:&quot;6336&quot;,&quot;onid&quot;:null,&quot;ednm&quot;:&quot;{edition}&quot;,&quot;ursuid&quot;:&quot;{ursuid}&quot;,&quot;regSilo&quot;:&quot;2&quot;,&quot;rsid&quot;:&quot;cbsigamespotsite&quot;,&quot;prodtypid&quot;:&quot;8&quot;,&quot;pagetype&quot;:&quot;event_hub&quot;,&quot;topicbrcrm&quot;:&quot;Events|Summary&quot;},&quot;cleargifSrc&quot;:&quot;https:\/\/dw.cbsi.com\/clear\/c.gif?ptid=6336&amp;ednm=%7Bedition%7D&amp;ursuid=%7Bursuid%7D&amp;regSilo=2&amp;rsid=cbsigamespotsite&amp;prodtypid=8&amp;pagetype=event_hub&amp;topicbrcrm=Events%7CSummary&amp;sid=6&amp;ts=1545940719&quot;}"
+        >
+                  <meta id="tracking-ga"
+                    class="js-post-render-tracking-consumer tracking-settings"
+              data-tracking-service="ga"
+        itemprop="tracking-ga"
+        content="{&quot;custom&quot;:{&quot;PageType&quot;:{&quot;index&quot;:&quot;1&quot;,&quot;name&quot;:&quot;PageType&quot;,&quot;value&quot;:&quot;6336&quot;,&quot;scope&quot;:&quot;3&quot;},&quot;UserType&quot;:{&quot;index&quot;:&quot;2&quot;,&quot;name&quot;:&quot;UserType&quot;,&quot;value&quot;:&quot;{gaUserType}&quot;,&quot;scope&quot;:&quot;1&quot;}},&quot;account&quot;:&quot;UA-22577913-1&quot;}"
+        >
+                  <meta id="tracking-om"
+                    class="js-post-render-tracking-consumer tracking-settings"
+              data-tracking-service="om"
+        itemprop="tracking-om"
+        content="{&quot;brand&quot;:&quot;GameSpot&quot;,&quot;sid&quot;:&quot;gamespot&quot;,&quot;rsids&quot;:&quot;cbsigamespotsite&quot;,&quot;user_status&quot;:&quot;{userStatus}&quot;,&quot;urs_id&quot;:&quot;{ursuid}&quot;,&quot;edition&quot;:&quot;{edition}&quot;,&quot;site_type&quot;:&quot;{siteType}&quot;,&quot;anon_id&quot;:&quot;{xclgfbrowser}&quot;,&quot;url&quot;:&quot;D=g&quot;,&quot;user_agent&quot;:&quot;D=User-Agent&quot;,&quot;page_type_id&quot;:&quot;6336&quot;,&quot;page_name&quot;:&quot;gs:\/best-games-of-2018\/&quot;,&quot;ab_test&quot;:&quot;{abTestLabel}&quot;,&quot;theme&quot;:&quot;{theme}&quot;,&quot;event_hierarchy&quot;:&quot;{eventHierarchy}&quot;,&quot;marketing_cloud_id&quot;:&quot;10D31225525FF5790A490D4D@AdobeOrg&quot;,&quot;session&quot;:&quot;{ad_session}&quot;,&quot;page_type&quot;:&quot;event_hub&quot;,&quot;channel&quot;:&quot;Events&quot;,&quot;hierarchy&quot;:&quot;Events|Summary&quot;,&quot;collection&quot;:[&quot;best-of-2018&quot;],&quot;subcollection&quot;:[&quot;best-games-of-2018&quot;]}"
+                  data-post-render-param="TrackingBundle.page_type"
+          data-post-render-value="event_hub"
+      >
+          
+                    
+              
+    
+        
+    
+    <meta id="ad-settings" class="js-post-render-tracking-consumer ad-settings" itemprop="ad-settings" content="{&quot;service&quot;:&quot;dart&quot;,&quot;client&quot;:&quot;xfp&quot;,&quot;deferred&quot;:true,&quot;load_in_head&quot;:&quot;gpt&quot;,&quot;single_request&quot;:true,&quot;disable_initial_load&quot;:true,&quot;enable_callback&quot;:true,&quot;enable_collapse_empty_divs&quot;:true,&quot;enable_guilt&quot;:true,&quot;script&quot;:&quot;\/\/www.googletagservices.com\/tag\/js\/gpt.js&quot;,&quot;unit_name&quot;:&quot;\/8264\/asia-gamespot&quot;,&quot;target_params&quot;:{&quot;session&quot;:&quot;p&quot;,&quot;test&quot;:&quot;{abTestLabelDart}&quot;,&quot;cid&quot;:&quot;gs-2800-171&quot;,&quot;ptype&quot;:&quot;event_hub&quot;,&quot;collection&quot;:&quot;best-of-2018&quot;,&quot;subcollection&quot;:&quot;best-games-of-2018&quot;,&quot;user&quot;:&quot;anon&quot;},&quot;slot_order&quot;:[&quot;skybox-nav&quot;,&quot;leader_top&quot;,&quot;leader_plus_top&quot;,&quot;pbr_leader_plus_top&quot;,&quot;mpu_top&quot;,&quot;mpu_plus_top&quot;,&quot;skin_top&quot;,&quot;omnibar_top&quot;,&quot;nav_logo_top&quot;,&quot;logo_top&quot;,&quot;interstitial&quot;,&quot;leader_middle&quot;,&quot;mpu_middle&quot;,&quot;native-top&quot;,&quot;incontent-ad&quot;,&quot;mpu_bottom&quot;,&quot;leader_bottom&quot;,&quot;ytembed_top&quot;,&quot;overlay_leader_top&quot;,&quot;overlay_mpu_top&quot;],&quot;mapped_units&quot;:{&quot;skybox-nav&quot;:{&quot;size&quot;:[[5,5]],&quot;target&quot;:{&quot;pos&quot;:&quot;nav&quot;}},&quot;interstitial&quot;:{&quot;outOfPage&quot;:true},&quot;leader_plus_top&quot;:{&quot;size&quot;:[[970,66],[728,90],[970,90],[970,250]],&quot;target&quot;:{&quot;pos&quot;:&quot;top&quot;}},&quot;leader_top&quot;:{&quot;size&quot;:[[970,66],[728,90]],&quot;target&quot;:{&quot;pos&quot;:&quot;top&quot;}},&quot;pbr_leader_plus_top&quot;:{&quot;size&quot;:[[970,250],[970,66],[728,90],[321,31]],&quot;target&quot;:{&quot;pos&quot;:&quot;top&quot;}},&quot;incontent-ad&quot;:{&quot;size&quot;:[[321,31],[11,11],&quot;fluid&quot;],&quot;target&quot;:{&quot;pos&quot;:&quot;top&quot;,&quot;strnativekey&quot;:&quot;RXgzcUoSf2QsMvrywodSX52Z&quot;}},&quot;native-top&quot;:{&quot;size&quot;:[[11,11],&quot;fluid&quot;],&quot;target&quot;:{&quot;pos&quot;:&quot;top&quot;,&quot;strnativekey&quot;:&quot;RXgzcUoSf2QsMvrywodSX52Z&quot;}},&quot;mpu_top&quot;:{&quot;size&quot;:[[300,250]],&quot;target&quot;:{&quot;pos&quot;:&quot;top&quot;}},&quot;mpu_bottom&quot;:{&quot;size&quot;:[[300,250]],&quot;target&quot;:{&quot;pos&quot;:&quot;bottom&quot;}},&quot;leader_bottom&quot;:{&quot;size&quot;:[[728,90],[970,66]],&quot;target&quot;:{&quot;pos&quot;:&quot;bottom&quot;}}},&quot;region&quot;:&quot;as&quot;}">
+
+    
+                                            <meta id="qualtrics-settings"
+      itemprop="qualtrics-settings"
+      content="{&quot;id&quot;:&quot;ZN_aah4Vz47v491vLf&quot;,&quot;script&quot;:&quot;\/\/zn_aah4vz47v491vlf-cbs.siteintercept.qualtrics.com\/WRSiteInterceptEngine\/&quot;}" />
+              
+      <meta name="username" id="username" content="GS|Anonymous" />
+
+                  
+        
+        <meta id="js-loading-html" content="&lt;div class=&quot;js-loader loader&quot;&gt;&lt;div class=&quot;loader-animation&quot;&gt;&lt;div class=&quot;loading&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;">
+
+            <link rel="shortcut icon" href="../favicon.ico" />
+
+      <link rel="apple-touch-icon" href="../../img/touch-icon-iphone-precomposed.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../img/touch-icon-ipad.html">
+  <link rel="apple-touch-icon" sizes="120x120" href="../../img/touch-icon-iphone-retina-precomposed.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../../img/touch-icon-ipad-retina-precomposed.png">
+
+    
+                      
+  
+        <meta id="richTextEditorTheme" itemprop="richTextEditorTheme" content="white" data-themes="{&quot;white&quot;:&quot;https:\/\/static.gamespot.com\/bundles\/gamespotsite\/css\/wysiwyg_white-045e88ce0c6033ba3d60b91b6f4adc5d.css&quot;,&quot;black&quot;:&quot;https:\/\/static.gamespot.com\/bundles\/gamespotsite\/css\/wysiwyg_black-045e88ce0c6033ba3d60b91b6f4adc5d.css&quot;}">
+
+           <!--[if !IE]> --><link id="skin-color" rel="stylesheet" href="../../css/gamespot_white-045e88ce0c6033ba3d60b91b6f4adc5d.css"><!-- <![endif]--><!--[if IE]><link id="skin-color-0" rel="stylesheet" href="https://static.gamespot.com/bundles/gamespotsite/css/gamespot_white_split1-045e88ce0c6033ba3d60b91b6f4adc5d.css"><link id="skin-color-1" rel="stylesheet" href="https://static.gamespot.com/bundles/gamespotsite/css/gamespot_white_split2-045e88ce0c6033ba3d60b91b6f4adc5d.css"><![endif]-->
+
+  
+
+          <link href="https://static.gamespot.com/bundles/gamespotsite/css/theme/events/goty/default/default-045e88ce0c6033ba3d60b91b6f4adc5d.css" rel="stylesheet">
+
+          
+                  <style>
+/*
+Added By: Will
+Description: Hide carousel item type
+Remove: issue-tracker/issues/6386
+*/
+.carousel-strip .bottom-left-card {
+   display: none;
+}
+
+
+/* Hide the feedback button temporarily - Lark 4/22/16 */
+#qualtrics-feedback {
+  display: none;
+}
+
+body.skin-yes { overflow-x: hidden; display: block !important; }
+/* Temporary last minute on Friday fix for headers being cut off on smaller screens */
+@media only screen and (max-width: 1209px) {
+  .pod-title>h4,
+  .pod-title>h4>h4 {
+    font-size: 15px;
+    padding-right: 5px;
+  }
+}
+h4 { font-size: 1.28571rem; line-height: 1.62857rem; }
+@media only screen and (min-width: 1210px) {
+h4 { font-size: 1.28571rem; line-height: 1.72857rem; }
+}
+
+/* This is a weird one but it cuts off the 3rd game href */
+.pod--topgames.pod-filter .filter-results { position: static; }
+
+/* fix for FF not liking width on table-cell */
+.pod-popular .media--small .media-img { width: inherit; }
+
+/* fixes custom html 5 video embeds bleeding outside container */
+[data-embed-type="html"] video { max-width: 100%; }
+
+/* PC Chrome button whitespace fix */
+.btn { white-space: nowrap; }
+
+.pod-filter .filter-results.grid { overflow: hidden; }
+#incontent_top iframe { display:none; }
+
+/* Removing at the moment because of a visual bug on prod, this will need to be reevaluated */
+.skin-yes.money-rainbows #mantle_skin:before {
+display: none;
+}
+
+/* For seamless, larger images that are broken into parts. Keep this for now! -DA */
+#infographic figure,
+#infographic p {
+    margin-bottom: 0;
+}
+
+/* Clear native ads */
+.media--sponsored {
+    clear: both;
+}
+
+/* Top Leader misaligned. Going to investigate why | DA | 1/12/2015 */
+.ad-wrap.ad-wrap-leader_plus_top > div > div > div {
+  margin: 0 auto;
+}
+
+.has-vid-countdown > .av-video-player-bg > .av-video-title {display: none !important; }
+
+/*
+Added By: Regina
+Description: Hides the newsletter subscribe module that only appears for anonymous users because it 500 everytime you click the subscribe button
+Github Issue: https://github.com/cbsi/issue-tracker/issues/6390
+Remove: When newsletter subscribe box is fixed
+Url: https://www.gamespot.com/articles/first-men-in-black-reboot-movie-trailer-is-an-alie/1100-6464042/
+*/
+.newsletter-subscribe-box {display: none !important;}
+</style>          
+          
+    <meta id="kCode" itemprop="kCode" name="kCode" content="/contra/cheats/">
+
+    
+
+        
+          <script src="../../js/header_js2e33.js?19fbee9856dc7fcab3a92b2fa1e670dc" type="text/javascript"></script>
+    
+                  <script type="text/javascript">PhoenixLoader.loadThirdParty('index_exchange', '../../js-sec.indexww.com/ht/ls-gamespot.js', true);</script>
+                    <script type="text/javascript" charset="utf-8">
+        PhoenixLoader.thirdPartyCallback(function(){
+          (function(G,o,O,g,L,e){G[g]=G[g]||function(){(G[g]['q']=G[g]['q']||[]).push(
+          arguments)},G[g]['t']=1*new Date;L=o.createElement(O),e=o.getElementsByTagName(
+          O)[0];L.async=1;L.src='../../www.google.com/adsense/search/async-ads.js';
+          e.parentNode.insertBefore(L,e)})(window,document,'script','_googCsa');
+        });
+      </script>        <script type="text/javascript">
+        PhoenixLoader.thirdPartyCallback(function() {
+          var googletag = googletag || {};
+          googletag.cmd = googletag.cmd || [];
+          (function () {
+            var gads = document.createElement("script");
+            gads.async = true;
+            gads.id = "ad-service-client";
+            gads.className = "js-spof";
+            gads.type = "text/javascript";
+                        gads.setAttribute('onerror',"this.setAttribute('data-is-spof','true')");
+            gads.src = "../../www.googletagservices.com/tag/js/gpt.js";
+            var node = document.getElementsByTagName("script")[0];
+            node.parentNode.insertBefore(gads, node);
+                      })();
+        });
+      </script>    
+      
+    
+  </head>
+
+
+<body id="default-body" class="default has-nav-slim body-event body-event--best-of-2018 has-new-masthead skin-no single-page-template " style="display: block !important" >
+              <section id="message-block" class="message-success" style="display: none">
+                      </section>
+    
+    <div id="site-main">
+
+      
+              <div id="skybox-nav-wrap" class="js-mapped-ad mapped-ad mapped-skybox-nav mapped-skybox-nav-dart"  data-ad-type="skybox-nav"><div id="skybox-nav" class="ad-wrap ad-wrap-skybox-nav" data-skybox-auto-collapse="1"></div></div>  
+
+        <header id="masthead" class="js-masthead js-fixed-masthead masthead"><div class="js-masthead-overlay masthead-overlay"></div><div class="masthead-rows"><div class="js-masthead-compact masthead-row masthead-compact"><div class="js-masthead-toggle masthead-toggle masthead-toggle-nav" data-toggle="nav"><i class="masthead-toggle-nav-open"><svg version="1.1" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" class="symbol symbol-reorder"><path d="M24 21v2q0 0.406-0.297 0.703t-0.703 0.297h-22q-0.406 0-0.703-0.297t-0.297-0.703v-2q0-0.406 0.297-0.703t0.703-0.297h22q0.406 0 0.703 0.297t0.297 0.703zM24 13v2q0 0.406-0.297 0.703t-0.703 0.297h-22q-0.406 0-0.703-0.297t-0.297-0.703v-2q0-0.406 0.297-0.703t0.703-0.297h22q0.406 0 0.703 0.297t0.297 0.703zM24 5v2q0 0.406-0.297 0.703t-0.703 0.297h-22q-0.406 0-0.703-0.297t-0.297-0.703v-2q0-0.406 0.297-0.703t0.703-0.297h22q0.406 0 0.703 0.297t0.297 0.703z"/></svg></i><i class="masthead-toggle-close masthead-toggle-nav-close"><svg version="1.1" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true" class="symbol symbol-remove"><path d="M20.281 20.656q0 0.625-0.438 1.062l-2.125 2.125q-0.438 0.438-1.062 0.438t-1.062-0.438l-4.594-4.594-4.594 4.594q-0.438 0.438-1.062 0.438t-1.062-0.438l-2.125-2.125q-0.438-0.438-0.438-1.062t0.438-1.062l4.594-4.594-4.594-4.594q-0.438-0.438-0.438-1.062t0.438-1.062l2.125-2.125q0.438-0.438 1.062-0.438t1.062 0.438l4.594 4.594 4.594-4.594q0.438-0.438 1.062-0.438t1.062 0.438l2.125 2.125q0.438 0.438 0.438 1.062t-0.438 1.062l-4.594 4.594 4.594 4.594q0.438 0.438 0.438 1.062z"/></svg></i></div><div class="masthead-logo"><a class="masthead-logo-link" href="../index.html" title="GameSpot"><i><svg viewBox="0 0 1631.76 517.06" width="1631.76" height="517.06" aria-hidden="true" class="symbol symbol-logo-outline-full symbol--color-site-logo"><path d="M1510,137.41a119.48,119.48,0,0,0-75.43,27l60.12-88.74L1383.6,151.05,1411,19.51l-73.82,112.37L1311.82,0l-25.16,131.87-73.71-112,27.2,131.23-110.9-75,60,88.07a119.78,119.78,0,0,0-75.55-26.71c-41.34,0-77.15,20.59-99.43,51.75-22-31.16-58-51.75-99.3-51.75a121.52,121.52,0,0,0-99.24,51.75,121.49,121.49,0,0,0-99.21-51.75c-40.94,0-77.15,20.59-99.33,51.75a120.86,120.86,0,0,0-99-51.75c-41,0-77.23,20.59-99.53,51.75a120.74,120.74,0,0,0-99-51.75c-41,0-77.12,20.59-99.44,51.75a120.69,120.69,0,0,0-99.12-51.75C54.43,137.41,0,191.87,0,258.72S54.43,380,121.12,380a120.32,120.32,0,0,0,99.12-51.62C242.57,359.61,278.73,380,319.69,380a120.37,120.37,0,0,0,99-51.62C441,359.61,477.28,380,518.25,380a120.49,120.49,0,0,0,99-51.62,121.26,121.26,0,0,0,198.54,0,121.26,121.26,0,0,0,198.54,0c22.28,31.26,58.09,51.62,99.43,51.62,28.3,0,54.33-9.83,75.55-25.91l-60,87.21,111.12-75.21-27.22,131.36,73.73-112.09L1312,517.06l25.5-131.72,73.71,111.88-27.42-131.37,111.12,75.34-59.15-86.55A121.82,121.82,0,0,0,1510,380c67.4,0,121.71-54.42,121.71-121.26S1577.44,137.41,1510,137.41Zm.76,225.84c-46,0-78.72-26.79-121-53.28l51.68,77.52-79.84-55.27,24.57,98.27-55.27-86-18.36,98.26-18.49-98.26-55.27,86,24.57-98.27-79.85,55.27,51.14-76.71c-42.47,26.22-76.33,52.46-121.17,52.46a104.7,104.7,0,0,1-99.32-71.68,104.65,104.65,0,0,1-198.64,0,104.65,104.65,0,0,1-198.64,0,104.65,104.65,0,0,1-198.64,0,104.65,104.65,0,0,1-198.64,0,104.73,104.73,0,1,1,0-66.1,104.65,104.65,0,0,1,198.64,0,104.65,104.65,0,0,1,198.64,0,104.65,104.65,0,0,1,198.64,0,104.65,104.65,0,0,1,198.64,0,104.7,104.7,0,0,1,99.32-71.68c46.59,0,78.7,26.25,121.17,52.46l-51.14-76.71,79.85,55.28-24.57-98.27,55.27,86,18.38-98.27L1331,172.55l55.27-86-24.57,98.27,79.84-55.28-50.64,76c42.19-26,78.93-51.72,119.94-51.72a104.73,104.73,0,0,1,0,209.46Z"/><path d="M136.2,280.15a8.92,8.92,0,0,1-2.94,6.85c-1.92,1.72-4.39,2.16-7.18,2.16a24,24,0,0,1-18.81-8.58c-5.25-5.91-7.81-13.08-7.81-21.85s2.67-16.52,8.4-22.61c6.21-6.63,14.41-10,24.91-10a55.78,55.78,0,0,1,15.21,2,63,63,0,0,1,10.67,3.53l3.81-14.57c-9.32-3.41-14.58-5.11-15.65-5.33-6.91-1.74-15.26-2.47-25.82-2.47-16.12,0-29.36,4.71-39.86,14.36C70.9,233,66,244.69,66,258.6c0,13.6,5.25,25.2,15.2,34.84a52.57,52.57,0,0,0,36.92,14.26,73.35,73.35,0,0,0,15.16-1.85c12.42-2.57,20.39-3.85,23.52-3.85a18.05,18.05,0,0,1,10.4,2.77V260.23h-31Z"/><path d="M308.4,212.23l-43.31,92.56H283.8l6.92-15h42.42l6.9,15h34.07l-43.5-92.56Zm-9.81,60.86,13.24-28.58,13.32,28.58Z"/><polygon points="517.91 252.84 489.36 212.22 463.43 212.22 463.43 304.78 480.56 304.78 480.56 253.16 500.7 282.49 517.91 282.49 541.47 248.89 541.47 304.78 572.38 304.78 572.38 212.22 546.73 212.22 517.91 252.84"/><polygon points="677.93 304.78 754.15 304.78 754.15 287.99 709.2 287.99 709.2 263.12 740.28 263.12 740.28 246.19 709.2 246.19 709.2 229.06 754.15 229.06 754.15 212.22 677.93 212.22 677.93 304.78"/><path d="M924.15,245.87c-6.33-2.34-10.84-4.62-13.66-6.65s-3.9-4-3.9-5.65a5,5,0,0,1,2.39-4.4,13.87,13.87,0,0,1,6.92-1.63,57.86,57.86,0,0,1,16,2.27,70.33,70.33,0,0,1,14,6.76L954.25,224A70.11,70.11,0,0,0,936,214.15a66.35,66.35,0,0,0-24.85-4.79q-16.81,0-27.49,8.68c-6.69,5.34-10.17,12-10.17,19.93,0,6.43,2.28,11.89,7,16.89s11.62,9.48,21.33,13c14.46,5.57,21.74,10.1,21.74,13.61A6.14,6.14,0,0,1,920.4,287c-2.36,1.72-5.24,2.16-9.21,2.16-6.11,0-11.68-.76-16.67-2.92a54.94,54.94,0,0,1-14.66-8.9l-9.34,11.38a61.93,61.93,0,0,0,18.58,13.18,59.16,59.16,0,0,0,26.15,5.8c13.07,0,23.57-2.92,31.63-8.9,7.49-5.57,11.13-12,11.13-19.48a25.2,25.2,0,0,0-7-17.78C945.58,255.5,936.79,249.93,924.15,245.87Z"/><path d="M1157.51,221.11c-7.93-6-17.35-8.88-28.29-8.88h-52.83v92.56h31.3V273.94h21.53c10.94,0,20.36-3.13,28.29-9.21,7.72-6,11.48-13.38,11.48-21.84S1165.23,227.13,1157.51,221.11Zm-24.43,31.38a20.71,20.71,0,0,1-13.05,4.11h-12.34V229.06H1120a22.34,22.34,0,0,1,13.05,4.18c3.55,2.78,5.36,6.19,5.36,9.66C1138.43,246.85,1136.62,249.93,1133.07,252.48Z"/><path d="M1349.28,223.58c-9.75-9.53-21.94-14.23-36.65-14.23-14.22,0-26.44,4.71-36.61,14.23-9.87,9.66-14.9,21.35-14.9,35s5,25.2,14.9,34.84a52.15,52.15,0,0,0,36.61,14.26c14.7,0,26.9-4.72,36.65-14.26,10.41-9.64,15.33-21.24,15.33-34.84S1359.45,233.24,1349.28,223.58Zm-23.56,56.78c-3.74,6.13-7.95,8.81-12.87,8.81s-9.4-2.61-13.16-8.58a46.53,46.53,0,0,1,0-43.73c4-6.19,8.24-9.33,13.16-9.33s9.57,3.14,13.09,9c3.74,6.09,5.56,13.37,5.56,22C1331.5,267.07,1329.69,274.48,1325.72,280.36Z"/><polygon points="1464.79 229.06 1495.11 229.06 1495.11 304.78 1525.79 304.78 1525.79 229.06 1555.98 229.06 1555.98 212.22 1464.79 212.22 1464.79 229.06"/></svg></i></a></div></div><div class="masthead-row masthead-default"><div class="masthead-logo"><a class="masthead-logo-link" href="../index.html" title="GameSpot"><i><svg viewBox="0 0 1631.76 517.06" width="1631.76" height="517.06" aria-hidden="true" class="symbol symbol-logo-outline-full symbol--color-site-logo"><path d="M1510,137.41a119.48,119.48,0,0,0-75.43,27l60.12-88.74L1383.6,151.05,1411,19.51l-73.82,112.37L1311.82,0l-25.16,131.87-73.71-112,27.2,131.23-110.9-75,60,88.07a119.78,119.78,0,0,0-75.55-26.71c-41.34,0-77.15,20.59-99.43,51.75-22-31.16-58-51.75-99.3-51.75a121.52,121.52,0,0,0-99.24,51.75,121.49,121.49,0,0,0-99.21-51.75c-40.94,0-77.15,20.59-99.33,51.75a120.86,120.86,0,0,0-99-51.75c-41,0-77.23,20.59-99.53,51.75a120.74,120.74,0,0,0-99-51.75c-41,0-77.12,20.59-99.44,51.75a120.69,120.69,0,0,0-99.12-51.75C54.43,137.41,0,191.87,0,258.72S54.43,380,121.12,380a120.32,120.32,0,0,0,99.12-51.62C242.57,359.61,278.73,380,319.69,380a120.37,120.37,0,0,0,99-51.62C441,359.61,477.28,380,518.25,380a120.49,120.49,0,0,0,99-51.62,121.26,121.26,0,0,0,198.54,0,121.26,121.26,0,0,0,198.54,0c22.28,31.26,58.09,51.62,99.43,51.62,28.3,0,54.33-9.83,75.55-25.91l-60,87.21,111.12-75.21-27.22,131.36,73.73-112.09L1312,517.06l25.5-131.72,73.71,111.88-27.42-131.37,111.12,75.34-59.15-86.55A121.82,121.82,0,0,0,1510,380c67.4,0,121.71-54.42,121.71-121.26S1577.44,137.41,1510,137.41Zm.76,225.84c-46,0-78.72-26.79-121-53.28l51.68,77.52-79.84-55.27,24.57,98.27-55.27-86-18.36,98.26-18.49-98.26-55.27,86,24.57-98.27-79.85,55.27,51.14-76.71c-42.47,26.22-76.33,52.46-121.17,52.46a104.7,104.7,0,0,1-99.32-71.68,104.65,104.65,0,0,1-198.64,0,104.65,104.65,0,0,1-198.64,0,104.65,104.65,0,0,1-198.64,0,104.65,104.65,0,0,1-198.64,0,104.73,104.73,0,1,1,0-66.1,104.65,104.65,0,0,1,198.64,0,104.65,104.65,0,0,1,198.64,0,104.65,104.65,0,0,1,198.64,0,104.65,104.65,0,0,1,198.64,0,104.7,104.7,0,0,1,99.32-71.68c46.59,0,78.7,26.25,121.17,52.46l-51.14-76.71,79.85,55.28-24.57-98.27,55.27,86,18.38-98.27L1331,172.55l55.27-86-24.57,98.27,79.84-55.28-50.64,76c42.19-26,78.93-51.72,119.94-51.72a104.73,104.73,0,0,1,0,209.46Z"/><path d="M136.2,280.15a8.92,8.92,0,0,1-2.94,6.85c-1.92,1.72-4.39,2.16-7.18,2.16a24,24,0,0,1-18.81-8.58c-5.25-5.91-7.81-13.08-7.81-21.85s2.67-16.52,8.4-22.61c6.21-6.63,14.41-10,24.91-10a55.78,55.78,0,0,1,15.21,2,63,63,0,0,1,10.67,3.53l3.81-14.57c-9.32-3.41-14.58-5.11-15.65-5.33-6.91-1.74-15.26-2.47-25.82-2.47-16.12,0-29.36,4.71-39.86,14.36C70.9,233,66,244.69,66,258.6c0,13.6,5.25,25.2,15.2,34.84a52.57,52.57,0,0,0,36.92,14.26,73.35,73.35,0,0,0,15.16-1.85c12.42-2.57,20.39-3.85,23.52-3.85a18.05,18.05,0,0,1,10.4,2.77V260.23h-31Z"/><path d="M308.4,212.23l-43.31,92.56H283.8l6.92-15h42.42l6.9,15h34.07l-43.5-92.56Zm-9.81,60.86,13.24-28.58,13.32,28.58Z"/><polygon points="517.91 252.84 489.36 212.22 463.43 212.22 463.43 304.78 480.56 304.78 480.56 253.16 500.7 282.49 517.91 282.49 541.47 248.89 541.47 304.78 572.38 304.78 572.38 212.22 546.73 212.22 517.91 252.84"/><polygon points="677.93 304.78 754.15 304.78 754.15 287.99 709.2 287.99 709.2 263.12 740.28 263.12 740.28 246.19 709.2 246.19 709.2 229.06 754.15 229.06 754.15 212.22 677.93 212.22 677.93 304.78"/><path d="M924.15,245.87c-6.33-2.34-10.84-4.62-13.66-6.65s-3.9-4-3.9-5.65a5,5,0,0,1,2.39-4.4,13.87,13.87,0,0,1,6.92-1.63,57.86,57.86,0,0,1,16,2.27,70.33,70.33,0,0,1,14,6.76L954.25,224A70.11,70.11,0,0,0,936,214.15a66.35,66.35,0,0,0-24.85-4.79q-16.81,0-27.49,8.68c-6.69,5.34-10.17,12-10.17,19.93,0,6.43,2.28,11.89,7,16.89s11.62,9.48,21.33,13c14.46,5.57,21.74,10.1,21.74,13.61A6.14,6.14,0,0,1,920.4,287c-2.36,1.72-5.24,2.16-9.21,2.16-6.11,0-11.68-.76-16.67-2.92a54.94,54.94,0,0,1-14.66-8.9l-9.34,11.38a61.93,61.93,0,0,0,18.58,13.18,59.16,59.16,0,0,0,26.15,5.8c13.07,0,23.57-2.92,31.63-8.9,7.49-5.57,11.13-12,11.13-19.48a25.2,25.2,0,0,0-7-17.78C945.58,255.5,936.79,249.93,924.15,245.87Z"/><path d="M1157.51,221.11c-7.93-6-17.35-8.88-28.29-8.88h-52.83v92.56h31.3V273.94h21.53c10.94,0,20.36-3.13,28.29-9.21,7.72-6,11.48-13.38,11.48-21.84S1165.23,227.13,1157.51,221.11Zm-24.43,31.38a20.71,20.71,0,0,1-13.05,4.11h-12.34V229.06H1120a22.34,22.34,0,0,1,13.05,4.18c3.55,2.78,5.36,6.19,5.36,9.66C1138.43,246.85,1136.62,249.93,1133.07,252.48Z"/><path d="M1349.28,223.58c-9.75-9.53-21.94-14.23-36.65-14.23-14.22,0-26.44,4.71-36.61,14.23-9.87,9.66-14.9,21.35-14.9,35s5,25.2,14.9,34.84a52.15,52.15,0,0,0,36.61,14.26c14.7,0,26.9-4.72,36.65-14.26,10.41-9.64,15.33-21.24,15.33-34.84S1359.45,233.24,1349.28,223.58Zm-23.56,56.78c-3.74,6.13-7.95,8.81-12.87,8.81s-9.4-2.61-13.16-8.58a46.53,46.53,0,0,1,0-43.73c4-6.19,8.24-9.33,13.16-9.33s9.57,3.14,13.09,9c3.74,6.09,5.56,13.37,5.56,22C1331.5,267.07,1329.69,274.48,1325.72,280.36Z"/><polygon points="1464.79 229.06 1495.11 229.06 1495.11 304.78 1525.79 304.78 1525.79 229.06 1555.98 229.06 1555.98 212.22 1464.79 212.22 1464.79 229.06"/></svg></i></a></div><div class="js-masthead-nav masthead-nav"><nav class="js-masthead-site-nav masthead-nav-section masthead-site-nav" role="navigation"><ul class="masthead-nav-items"><li class="js-masthead-menu js-masthead-nav-item masthead-nav-item"><div class="masthead-nav-item-wrap"><a class="js-masthead-menu-link masthead-nav-item-label" href="index.html"><span class="masthead-nav-item-text">Best of 2018</span><i class="masthead-nav-item-icon masthead-hide-mobile"><svg version="1.1" width="18" height="28" viewBox="0 0 18 28" aria-hidden="true" class="symbol symbol-angle-down"><path d="M16.797 11.5q0 0.203-0.156 0.359l-7.281 7.281q-0.156 0.156-0.359 0.156t-0.359-0.156l-7.281-7.281q-0.156-0.156-0.156-0.359t0.156-0.359l0.781-0.781q0.156-0.156 0.359-0.156t0.359 0.156l6.141 6.141 6.141-6.141q0.156-0.156 0.359-0.156t0.359 0.156l0.781 0.781q0.156 0.156 0.156 0.359z"/></svg></i></a><span class="js-masthead-menu-toggle masthead-nav-item-toggle"><i class="masthead-toggle-nav-item-open"><svg version="1.1" width="18" height="28" viewBox="0 0 18 28" aria-hidden="true" class="symbol symbol-angle-down"><path d="M16.797 11.5q0 0.203-0.156 0.359l-7.281 7.281q-0.156 0.156-0.359 0.156t-0.359-0.156l-7.281-7.281q-0.156-0.156-0.156-0.359t0.156-0.359l0.781-0.781q0.156-0.156 0.359-0.156t0.359 0.156l6.141 6.141 6.141-6.141q0.156-0.156 0.359-0.156t0.359 0.156l0.781 0.781q0.156 0.156 0.156 0.359z"/></svg></i><i class="masthead-toggle-close masthead-toggle-nav-item-close"><svg version="1.1" width="18" height="28" viewBox="0 0 18 28" aria-hidden="true" class="symbol symbol-angle-up"><path d="M16.797 18.5q0 0.203-0.156 0.359l-0.781 0.781q-0.156 0.156-0.359 0.156t-0.359-0.156l-6.141-6.141-6.141 6.141q-0.156 0.156-0.359 0.156t-0.359-0.156l-0.781-0.781q-0.156-0.156-0.156-0.359t0.156-0.359l7.281-7.281q0.156-0.156 0.359-0.156t0.359 0.156l7.281 7.281q0.156 0.156 0.156 0.359z"/></svg></i></span></div><div class="js-masthead-subnav masthead-subnav masthead-subnav-default"><div class="masthead-subnav-content"><ul class="masthead-subnav-items"><li class="masthead-subnav-item"><a href="index.html"
+               class=""
+              >
+            Games
+            </a></li><li class="masthead-subnav-item"><a href="https://www.gamespot.com/best-entertainment-of-2018/"
+               class=""
+              >
+            Entertainment
+            </a></li></ul></div></div></li><li class="js-masthead-menu js-masthead-nav-item masthead-nav-item"><div class="masthead-nav-item-wrap"><a class="js-masthead-menu-link masthead-nav-item-label" href="https://www.gamespot.com/most-anticipated-games-of-2019/"><span class="masthead-nav-item-text">Most Anticipated of 2019</span><i class="masthead-nav-item-icon masthead-hide-mobile"><svg version="1.1" width="18" height="28" viewBox="0 0 18 28" aria-hidden="true" class="symbol symbol-angle-down"><path d="M16.797 11.5q0 0.203-0.156 0.359l-7.281 7.281q-0.156 0.156-0.359 0.156t-0.359-0.156l-7.281-7.281q-0.156-0.156-0.156-0.359t0.156-0.359l0.781-0.781q0.156-0.156 0.359-0.156t0.359 0.156l6.141 6.141 6.141-6.141q0.156-0.156 0.359-0.156t0.359 0.156l0.781 0.781q0.156 0.156 0.156 0.359z"/></svg></i></a><span class="js-masthead-menu-toggle masthead-nav-item-toggle"><i class="masthead-toggle-nav-item-open"><svg version="1.1" width="18" height="28" viewBox="0 0 18 28" aria-hidden="true" class="symbol symbol-angle-down"><path d="M16.797 11.5q0 0.203-0.156 0.359l-7.281 7.281q-0.156 0.156-0.359 0.156t-0.359-0.156l-7.281-7.281q-0.156-0.156-0.156-0.359t0.156-0.359l0.781-0.781q0.156-0.156 0.359-0.156t0.359 0.156l6.141 6.141 6.141-6.141q0.156-0.156 0.359-0.156t0.359 0.156l0.781 0.781q0.156 0.156 0.156 0.359z"/></svg></i><i class="masthead-toggle-close masthead-toggle-nav-item-close"><svg version="1.1" width="18" height="28" viewBox="0 0 18 28" aria-hidden="true" class="symbol symbol-angle-up"><path d="M16.797 18.5q0 0.203-0.156 0.359l-0.781 0.781q-0.156 0.156-0.359 0.156t-0.359-0.156l-6.141-6.141-6.141 6.141q-0.156 0.156-0.359 0.156t-0.359-0.156l-0.781-0.781q-0.156-0.156-0.156-0.359t0.156-0.359l7.281-7.281q0.156-0.156 0.359-0.156t0.359 0.156l7.281 7.281q0.156 0.156 0.156 0.359z"/></svg></i></span></div><div class="js-masthead-subnav masthead-subnav masthead-subnav-default"><div class="masthead-subnav-content"><ul class="masthead-subnav-items"><li class="masthead-subnav-item"><a href="https://www.gamespot.com/most-anticipated-games-of-2019/"
+               class=""
+              >
+            Games
+            </a></li><li class="masthead-subnav-item"><a href="https://www.gamespot.com/most-anticipated-entertainment-of-2019/"
+               class=""
+              >
+            Entertainment
+            </a></li></ul></div></div></li></ul></nav></div></div></div></header>
+                        <div id="interstitial-wrap" class="js-mapped-ad mapped-ad mapped-interstitial mapped-interstitial-dart"  data-ad-type="interstitial"><div id="interstitial" class="ad-wrap ad-wrap-interstitial"></div></div>                <div id="site-wrapper" >
+                      <div class="js-toggle-content event-about event-about--collapsed">
+  <div class="event-about-bg" style="background-image:url(https://static.gamespot.com/uploads/original/1551/15514330/3468438-2018-boty-hub.png)"></div>
+  <div class="container">
+    <div class="event-about-title">
+      <h2>Best Games of 2018</h2>
+              <div>
+          <button class="js-toggle-content-btn event-about-btn event-about-btn--collapse" data-on-classnames="event-about--collapsed" data-off-classnames="event-about--expanded">
+            <i><svg version="1.1" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true" class="symbol symbol-remove"><path d="M20.281 20.656q0 0.625-0.438 1.062l-2.125 2.125q-0.438 0.438-1.062 0.438t-1.062-0.438l-4.594-4.594-4.594 4.594q-0.438 0.438-1.062 0.438t-1.062-0.438l-2.125-2.125q-0.438-0.438-0.438-1.062t0.438-1.062l4.594-4.594-4.594-4.594q-0.438-0.438-0.438-1.062t0.438-1.062l2.125-2.125q0.438-0.438 1.062-0.438t1.062 0.438l4.594 4.594 4.594-4.594q0.438-0.438 1.062-0.438t1.062 0.438l2.125 2.125q0.438 0.438 0.438 1.062t-0.438 1.062l-4.594 4.594 4.594 4.594q0.438 0.438 0.438 1.062z"/></svg></i>          </button>
+
+          <button class="js-toggle-content-btn event-about-btn event-about-btn--expand" data-on-classnames="event-about--expanded" data-off-classnames="event-about--collapsed"><span>How it works</span></button>
+        </div>
+          </div>
+
+          <div class="event-about-body">
+        <div class="event-about-body-wrap">
+          <p>ALL THE GAMES YOU NEED TO PLAY - 2018 is almost over, and after racking up thousands of hours playing hundreds of games, the GameSpot crew is ready to give you our verdicts on the most outstanding video game experiences 2018 had to offer. Join us during the next few weeks of December as we unveil our choices for the best PlayStation 4, Xbox One, PC, and Nintendo Switch games of the year.</p><p>We'll officially announce our Game of the Year on December 19, and in the lead-up to that, we'll take you through the year that was, highlight the best games of 2018 in a variety of categories, and tell you what our editors are most looking forward to in the new year. Keep checking back here at GameSpot to find out more.</p>
+        </div>
+      </div>
+      </div>
+</div>
+    <div id="mantle_skin">
+    <div id="rbSkin">
+      <span id="adSkinLeft"></span>
+      <span id="adSkinRight"></span>
+            <div id="leader_top-wrap" class="js-mapped-ad mapped-ad mapped-leader_top mapped-leader_top-dart"  data-ad-type="leader_top"><div id="leader_top" class="ad-wrap ad-wrap-leader_top"></div></div><div class="js-taboola-module taboola-leader_top " data-taboola-parameters="{&quot;target_type&quot;:&quot;mix&quot;,&quot;mode&quot;:&quot;thumbnails-b-abp&quot;,&quot;container&quot;:&quot;taboola-abp-leaderboard-thumbnails&quot;,&quot;placement&quot;:&quot;Above Article Leaderboard - ABP&quot;}"></div>        <div id="wrapper">
+                                                    <div id="site" class="l-main" role="main">
+          <div id="default-content" class="">
+                                    <div class="primary-content primary-content--event ">
+                              <div class="container">
+                                    
+            <div class="js-content-entity-body" data-content-element-selector=".js-event-hub-promo-group" data-in-content-placements="[{&quot;adType&quot;:&quot;incontent-ad&quot;,&quot;placeIndex&quot;:1,&quot;minElements&quot;:3,&quot;removeOnFail&quot;:true}]">
+                            
+                                                          <div id="content-section-3739" class="js-event-hub-promo-group event-section">
+                                
+      
+    
+  
+<section class="event-promo-group event-promo-group--single-promo">
+  
+  <div class="event-promo-group-content">
+            
+
+
+
+
+<div class="event-promo event-promo--content-item">
+  <a class="event-promo__cta" href="https://www.gamespot.com/articles/gamespots-game-of-the-year-2018/1100-6464009/">  <div class="event-promo__body">
+
+    <div class="event-promo-content event-promo-content--image">
+      <img src="https://static.gamespot.com/uploads/screen_kubrick/1575/15759911/3478814-slate_goty_winner.jpg" />
+    </div>
+
+    <div class="event-promo-content event-promo-content--metadata">
+      <h4 class="event-promo-content__label">Red Dead Redemption 2</h4>
+
+              <div class="event-promo-content__deck">
+          Game of the Year
+        </div>
+          </div>
+
+  </div>
+  </a></div>
+    
+      </div>
+</section>
+                          </div>
+
+                          <div class="js-event-hub-promo-group">
+                
+
+              <section class="event-section event-crosshub-promos">
+      <h3 class="event-section-title">Latest from Best Entertainment of 2018</h3>
+      <div class="event-section-body">
+        <ul class="bullets">
+                      <li><a href="https://www.gamespot.com/gallery/editors-choice-2018-our-personal-favorite-movies-t/2900-2489/">Editors Choice 2018: Our Personal Favorite Movies, TV Shows, And More</a></li>
+                      <li><a href="https://www.gamespot.com/gallery/the-biggest-disappointments-in-movies-and-tv-of-20/2900-2488/">The Biggest Disappointments In Movies And TV Of 2018</a></li>
+                      <li><a href="https://www.gamespot.com/gallery/the-20-best-reviewed-movies-of-2018/2900-2484/">The 20 Best Reviewed Movies Of 2018</a></li>
+                  </ul>
+        <a href="https://www.gamespot.com/best-entertainment-of-2018/" class="js-click-tag event-section-btn btn btn-white" data-click-tag="Bestof2018|BestGamesof2018|clickToBestEntertainmentof2018">View Best Entertainment of 2018</a>
+      </div>
+    </section>
+                                </div>
+                      
+                            
+                                                          <div id="content-section-3740" class="js-event-hub-promo-group event-section">
+                              <div class="pod pod--carousel-strip  carousel__standard" ><h2 >
+              Game of the Year Nominees
+          </h2><div class="js-carousel-strip carousel-strip" data-viewport="4"><div class="carousel-strip__control js-carousel-strip__control--prev carousel-strip__control--prev"><button type="button" class="js-carousel-strip__control" data-control-dir="1"><i><svg version="1.1" width="10" height="28" viewBox="0 0 10 28" aria-hidden="true" class="symbol symbol-angle-left"><path d="M9.797 8.5q0 0.203-0.156 0.359l-6.141 6.141 6.141 6.141q0.156 0.156 0.156 0.359t-0.156 0.359l-0.781 0.781q-0.156 0.156-0.359 0.156t-0.359-0.156l-7.281-7.281q-0.156-0.156-0.156-0.359t0.156-0.359l7.281-7.281q0.156-0.156 0.359-0.156t0.359 0.156l0.781 0.781q0.156 0.156 0.156 0.359z"/></svg></i></button></div><div class="js-carousel-strip__viewport carousel-strip__viewport"><div class="js-carousel-strip__body carousel-strip__body"><ul class="js-carousel-strip__strip carousel-strip__strip"><li data-id="23744" class="carousel-strip__slot" style="max-width:25%;flex:1 0 25%;"><div class="carousel-strip__content-item "
+    ><div class="carousel-strip__content-item-body"><div class="content-item--card-item flexbox-flex-even"><a href="https://www.gamespot.com/gallery/game-of-the-year-2018s-10-best-games/2900-2463/" class=""
+            ><div class="link-img vertical-spacing text-small text-center uppercase"><img class="type-image gallery" src="https://static.gamespot.com/uploads/screen_small/1197/11970954/3478681-bestgamesof2018-promo-thumb.jpg" alt="Game Of The Year: 2018&#039;s 10 Best Games"></div><div class="card-byline"><p class="p-small-space text-small">Game Of The Year: 2018&#039;s 10 Best Games</p></div></a></div></div></li><li data-id="23727" class="carousel-strip__slot" style="max-width:25%;flex:1 0 25%;"><div class="carousel-strip__content-item "
+    ><div class="carousel-strip__content-item-body"><div class="content-item--card-item flexbox-flex-even"><a href="https://www.gamespot.com/articles/best-games-of-2018-super-smash-bros-ultimate/1100-6463967/" class=""
+            ><div class="link-img vertical-spacing text-small text-center uppercase"><img class="type-article" src="https://static.gamespot.com/uploads/screen_small/172/1720905/3477036-slate_goty-supersmah-promo-thumb.jpg" alt="Best Games Of 2018: Super Smash Bros. Ultimate"><span class="bottom-left-card uppercase text-small color-white text-tag bg-10"><span >Article</span></span></div><div class="card-byline"><p class="p-small-space text-small">Best Games Of 2018: Super Smash Bros. Ultimate</p></div></a></div></div></li><li data-id="23728" class="carousel-strip__slot" style="max-width:25%;flex:1 0 25%;"><div class="carousel-strip__content-item "
+    ><div class="carousel-strip__content-item-body"><div class="content-item--card-item flexbox-flex-even"><a href="https://www.gamespot.com/articles/best-games-of-2018-hitman-2/1100-6463892/" class=""
+            ><div class="link-img vertical-spacing text-small text-center uppercase"><img class="type-article" src="https://static.gamespot.com/uploads/screen_small/123/1239113/3475427-slate_goty-hitman2-promo-thumb.jpg" alt="Best Games Of 2018: Hitman 2"><span class="bottom-left-card uppercase text-small color-white text-tag bg-10"><span >Article</span></span></div><div class="card-byline"><p class="p-small-space text-small">Best Games Of 2018: Hitman 2</p></div></a></div></div></li><li data-id="23715" class="carousel-strip__slot" style="max-width:25%;flex:1 0 25%;"><div class="carousel-strip__content-item "
+    ><div class="carousel-strip__content-item-body"><div class="content-item--card-item flexbox-flex-even"><a href="https://www.gamespot.com/articles/best-games-of-2018-red-dead-redemption-2/1100-6463946/" class=""
+            ><div class="link-img vertical-spacing text-small text-center uppercase"><img class="type-article" src="https://static.gamespot.com/uploads/screen_small/1575/15759911/3476732-slate_goty-red-dead-redemption2-promo-thumb.jpg" alt="Best Games Of 2018: Red Dead Redemption 2"><span class="bottom-left-card uppercase text-small color-white text-tag bg-10"><span >Article</span></span></div><div class="card-byline"><p class="p-small-space text-small">Best Games Of 2018: Red Dead Redemption 2</p></div></a></div></div></li><li data-id="23714" class="carousel-strip__slot" style="max-width:25%;flex:1 0 25%;"><div class="carousel-strip__content-item "
+    ><div class="carousel-strip__content-item-body"><div class="content-item--card-item flexbox-flex-even"><a href="https://www.gamespot.com/articles/best-games-of-2018-tetris-effect/1100-6463951/" class=""
+            ><div class="link-img vertical-spacing text-small text-center uppercase"><img class="type-article" src="https://static.gamespot.com/uploads/screen_small/1406/14063904/3476797-943068460775618.gnofw71p2ixrrl3lfzic_height640.jpg" alt="Best Games Of 2018: Tetris Effect"><span class="bottom-left-card uppercase text-small color-white text-tag bg-10"><span >Article</span></span></div><div class="card-byline"><p class="p-small-space text-small">Best Games Of 2018: Tetris Effect</p></div></a></div></div></li><li data-id="23680" class="carousel-strip__slot" style="max-width:25%;flex:1 0 25%;"><div class="carousel-strip__content-item "
+    ><div class="carousel-strip__content-item-body"><div class="content-item--card-item flexbox-flex-even"><a href="https://www.gamespot.com/articles/best-games-of-2018-marvels-spider-man/1100-6463901/" class=""
+            ><div class="link-img vertical-spacing text-small text-center uppercase"><img class="type-article" src="https://static.gamespot.com/uploads/screen_small/1587/15875866/3475537-slate5_goty-spider-man-promo-thumb.jpg" alt="Best Games Of 2018: Marvel&#039;s Spider-Man"><span class="bottom-left-card uppercase text-small color-white text-tag bg-10"><span >Article</span></span></div><div class="card-byline"><p class="p-small-space text-small">Best Games Of 2018: Marvel&#039;s Spider-Man</p></div></a></div></div></li><li data-id="23681" class="carousel-strip__slot" style="max-width:25%;flex:1 0 25%;"><div class="carousel-strip__content-item "
+    ><div class="carousel-strip__content-item-body"><div class="content-item--card-item flexbox-flex-even"><a href="https://www.gamespot.com/articles/best-games-of-2018-return-of-the-obra-dinn/1100-6463891/" class=""
+            ><div class="link-img vertical-spacing text-small text-center uppercase"><img class="type-article" src="https://static.gamespot.com/uploads/screen_small/1575/15759911/3475391-slate6_goty-return-of-the-obra-dinn-promo-thumb.jpg" alt="Best Games Of 2018: Return Of The Obra Dinn"><span class="bottom-left-card uppercase text-small color-white text-tag bg-10"><span >Article</span></span></div><div class="card-byline"><p class="p-small-space text-small">Best Games Of 2018: Return Of The Obra Dinn</p></div></a></div></div></li><li data-id="23671" class="carousel-strip__slot" style="max-width:25%;flex:1 0 25%;"><div class="carousel-strip__content-item "
+    ><div class="carousel-strip__content-item-body"><div class="content-item--card-item flexbox-flex-even"><a href="https://www.gamespot.com/articles/best-games-of-2018-into-the-breach/1100-6463873/" class=""
+            ><div class="link-img vertical-spacing text-small text-center uppercase"><img class="type-article" src="https://static.gamespot.com/uploads/screen_small/172/1720905/3475171-slate4_goty-into-the-breach-promo-thumb.jpg" alt="Best Games Of 2018: Into The Breach"><span class="bottom-left-card uppercase text-small color-white text-tag bg-10"><span >Article</span></span></div><div class="card-byline"><p class="p-small-space text-small">Best Games Of 2018: Into The Breach</p></div></a></div></div></li><li data-id="23647" class="carousel-strip__slot" style="max-width:25%;flex:1 0 25%;"><div class="carousel-strip__content-item "
+    ><div class="carousel-strip__content-item-body"><div class="content-item--card-item flexbox-flex-even"><a href="https://www.gamespot.com/articles/best-games-of-2018-dead-cells/1100-6463856/" class=""
+            ><div class="link-img vertical-spacing text-small text-center uppercase"><img class="type-article" src="https://static.gamespot.com/uploads/screen_small/43/434805/3474905-slate3_goty-dead-cells-promo-thumb.jpg" alt="Best Games Of 2018: Dead Cells"><span class="bottom-left-card uppercase text-small color-white text-tag bg-10"><span >Article</span></span></div><div class="card-byline"><p class="p-small-space text-small">Best Games Of 2018: Dead Cells</p></div></a></div></div></li><li data-id="23652" class="carousel-strip__slot" style="max-width:25%;flex:1 0 25%;"><div class="carousel-strip__content-item "
+    ><div class="carousel-strip__content-item-body"><div class="content-item--card-item flexbox-flex-even"><a href="https://www.gamespot.com/articles/best-games-of-2018-god-of-war/1100-6463854/" class=""
+            ><div class="link-img vertical-spacing text-small text-center uppercase"><img class="type-article" src="https://static.gamespot.com/uploads/screen_small/1406/14063904/3474868-slate_goty-god-of-war-2-promo-thumb.jpg" alt="Best Games Of 2018: God Of War"><span class="bottom-left-card uppercase text-small color-white text-tag bg-10"><span >Article</span></span></div><div class="card-byline"><p class="p-small-space text-small">Best Games Of 2018: God Of War</p></div></a></div></div></li><li data-id="23651" class="carousel-strip__slot" style="max-width:25%;flex:1 0 25%;"><div class="carousel-strip__content-item "
+    ><div class="carousel-strip__content-item-body"><div class="content-item--card-item flexbox-flex-even"><a href="https://www.gamespot.com/articles/best-games-of-2018-monster-hunter-world/1100-6463855/" class=""
+            ><div class="link-img vertical-spacing text-small text-center uppercase"><img class="type-article" src="https://static.gamespot.com/uploads/screen_small/1406/14063904/3474890-slate1_goty-monster-hunter-world-promo-thumb.jpg" alt="Best Games Of 2018: Monster Hunter World"><span class="bottom-left-card uppercase text-small color-white text-tag bg-10"><span >Article</span></span></div><div class="card-byline"><p class="p-small-space text-small">Best Games Of 2018: Monster Hunter World</p></div></a></div></div></li></ul></div></div><div class="carousel-strip__control js-carousel-strip__control--next carousel-strip__control--next"><button type="button" class="js-carousel-strip__control" data-control-dir="-1"><i><svg version="1.1" width="10" height="28" viewBox="0 0 10 28" aria-hidden="true" class="symbol symbol-angle-right"><path d="M9.297 15q0 0.203-0.156 0.359l-7.281 7.281q-0.156 0.156-0.359 0.156t-0.359-0.156l-0.781-0.781q-0.156-0.156-0.156-0.359t0.156-0.359l6.141-6.141-6.141-6.141q-0.156-0.156-0.156-0.359t0.156-0.359l0.781-0.781q0.156-0.156 0.359-0.156t0.359 0.156l7.281 7.281q0.156 0.156 0.156 0.359z"/></svg></i></button></div></div></div>                          </div>
+
+                      
+                            
+                                                          <div id="content-section-3741" class="js-event-hub-promo-group event-section">
+                                
+      
+    
+  
+<section class="event-promo-group event-promo-group--multi-promo event-promo-group--multi-promo-3up">
+      <h3 class="event-section-title">2018 Highlights</h3>
+  
+  <div class="event-promo-group-content">
+            
+
+
+
+
+<div class="event-promo event-promo--content-item">
+  <a class="event-promo__cta" href="https://www.gamespot.com/gallery/game-of-the-year-2018-editors-spotlight-awards/2900-2479/">  <div class="event-promo__body">
+
+    <div class="event-promo-content event-promo-content--image">
+      <img src="https://static.gamespot.com/uploads/square_medium/1579/15792183/3479683-slate_editors.jpg" />
+    </div>
+
+    <div class="event-promo-content event-promo-content--metadata">
+      <h4 class="event-promo-content__label">Game Of The Year 2018: Editor&#039;s Spotlight Awards</h4>
+
+          </div>
+
+  </div>
+  </a></div>
+            
+
+
+
+
+<div class="event-promo event-promo--content-item">
+  <a class="event-promo__cta" href="https://www.gamespot.com/articles/how-pokemon-go-recaptured-attention-in-2018/1100-6463825/">  <div class="event-promo__body">
+
+    <div class="event-promo-content event-promo-content--image">
+      <img src="https://static.gamespot.com/uploads/square_medium/1578/15787979/3474201-theyearpokemonevolved-promo.jpg" />
+    </div>
+
+    <div class="event-promo-content event-promo-content--metadata">
+      <h4 class="event-promo-content__label">How Pokemon Go Recaptured Players&#039; Attention In 2018</h4>
+
+          </div>
+
+  </div>
+  </a></div>
+            
+
+
+
+
+<div class="event-promo event-promo--content-item">
+  <a class="event-promo__cta" href="https://www.gamespot.com/articles/vr-gaming-2018-report-card-heres-a-review-of-how-t/1100-6463814/">  <div class="event-promo__body">
+
+    <div class="event-promo-content event-promo-content--image">
+      <img src="https://static.gamespot.com/uploads/square_medium/1574/15747411/3473972-vrreportcard-promo-thumb.jpg" />
+    </div>
+
+    <div class="event-promo-content event-promo-content--metadata">
+      <h4 class="event-promo-content__label">VR Gaming 2018 Report Card: Year In Review</h4>
+
+          </div>
+
+  </div>
+  </a></div>
+            
+
+
+
+
+<div class="event-promo event-promo--content-item">
+  <a class="event-promo__cta" href="https://www.gamespot.com/articles/2018-the-year-that-indies-defined-switch/1100-6463766/">  <div class="event-promo__body">
+
+    <div class="event-promo-content event-promo-content--image">
+      <img src="https://static.gamespot.com/uploads/square_medium/1587/15875866/3472675-the-year-indies-defined-switch-promo-thumb.jpg" />
+    </div>
+
+    <div class="event-promo-content event-promo-content--metadata">
+      <h4 class="event-promo-content__label">2018: The Year Indies Defined Switch</h4>
+
+          </div>
+
+  </div>
+  </a></div>
+            
+
+
+
+
+<div class="event-promo event-promo--content-item">
+  <a class="event-promo__cta" href="https://www.gamespot.com/articles/pc-report-card-for-2018-year-in-review/1100-6463613/">  <div class="event-promo__body">
+
+    <div class="event-promo-content event-promo-content--image">
+      <img src="https://static.gamespot.com/uploads/square_medium/172/1720905/3470675-pcreportcard-promo-thumb.jpg" />
+    </div>
+
+    <div class="event-promo-content event-promo-content--metadata">
+      <h4 class="event-promo-content__label">PC 2018 Report Card: Year In Review</h4>
+
+          </div>
+
+  </div>
+  </a></div>
+            
+
+
+
+
+<div class="event-promo event-promo--content-item">
+  <a class="event-promo__cta" href="https://www.gamespot.com/articles/microtransactions-in-2018-everything-that-happened/1100-6463690/">  <div class="event-promo__body">
+
+    <div class="event-promo-content event-promo-content--image">
+      <img src="https://static.gamespot.com/uploads/square_medium/1179/11799911/3471522-mtx.jpg" />
+    </div>
+
+    <div class="event-promo-content event-promo-content--metadata">
+      <h4 class="event-promo-content__label">2018: The State Of Microtransactions</h4>
+
+          </div>
+
+  </div>
+  </a></div>
+            
+
+
+
+
+<div class="event-promo event-promo--content-item">
+  <a class="event-promo__cta" href="https://www.gamespot.com/articles/nintendo-switch-report-card-for-2018-year-in-revie/1100-6463681/">  <div class="event-promo__body">
+
+    <div class="event-promo-content event-promo-content--image">
+      <img src="https://static.gamespot.com/uploads/square_medium/1578/15787979/3471334-nintendoreportcard-promo-thumb.jpg" />
+    </div>
+
+    <div class="event-promo-content event-promo-content--metadata">
+      <h4 class="event-promo-content__label">Switch Report Card 2018: Nintendo&#039;s Year In Review</h4>
+
+          </div>
+
+  </div>
+  </a></div>
+            
+
+
+
+
+<div class="event-promo event-promo--content-item">
+  <a class="event-promo__cta" href="https://www.gamespot.com/articles/xbox-one-report-card-for-2018-year-in-review/1100-6463575/">  <div class="event-promo__body">
+
+    <div class="event-promo-content event-promo-content--image">
+      <img src="https://static.gamespot.com/uploads/square_medium/1197/11970954/3470652-xboxonereportcard-promo-thumb.jpg" />
+    </div>
+
+    <div class="event-promo-content event-promo-content--metadata">
+      <h4 class="event-promo-content__label">Xbox One 2018 Report Card: Year In Review</h4>
+
+          </div>
+
+  </div>
+  </a></div>
+            
+
+
+
+
+<div class="event-promo event-promo--content-item">
+  <a class="event-promo__cta" href="https://www.gamespot.com/gallery/the-biggest-news-stories-of-2018/2900-2412/">  <div class="event-promo__body">
+
+    <div class="event-promo-content event-promo-content--image">
+      <img src="https://static.gamespot.com/uploads/square_medium/1197/11970954/3470515-biggestnewsof2018-promo-thumb.jpg" />
+    </div>
+
+    <div class="event-promo-content event-promo-content--metadata">
+      <h4 class="event-promo-content__label">The Biggest News Stories of 2018</h4>
+
+          </div>
+
+  </div>
+  </a></div>
+            
+
+
+
+
+<div class="event-promo event-promo--content-item">
+  <a class="event-promo__cta" href="https://www.gamespot.com/gallery/gamespots-lowest-reviewed-games-of-2018/2900-2413/">  <div class="event-promo__body">
+
+    <div class="event-promo-content event-promo-content--image">
+      <img src="https://static.gamespot.com/uploads/square_medium/1197/11970954/3470002-lowestreviewedgamesof2018-promo-thumb.jpg" />
+    </div>
+
+    <div class="event-promo-content event-promo-content--metadata">
+      <h4 class="event-promo-content__label">GameSpot&#039;s Lowest Reviewed Games Of 2018</h4>
+
+          </div>
+
+  </div>
+  </a></div>
+            
+
+
+
+
+<div class="event-promo event-promo--content-item">
+  <a class="event-promo__cta" href="https://www.gamespot.com/articles/how-fortnite-had-a-major-impact-on-the-industry-in/1100-6463620/">  <div class="event-promo__body">
+
+    <div class="event-promo-content event-promo-content--image">
+      <img src="https://static.gamespot.com/uploads/square_medium/1197/11970954/3471227-theyearoffortnite-promo.jpg" />
+    </div>
+
+    <div class="event-promo-content event-promo-content--metadata">
+      <h4 class="event-promo-content__label">Fortnite&#039;s Biggest News Of 2018 And How It Impacted The Industry</h4>
+
+          </div>
+
+  </div>
+  </a></div>
+    
+          <div class="event-promo event-promo--filler">
+        <div class="event-promo-filler-body" style="background-image:url(https://static.gamespot.com/uploads/original/1551/15514330/3468438-2018-boty-hub.png)">
+          <p>Check Back For More of 2018 Highlights</p>
+        </div>
+      </div>
+      </div>
+</section>
+                          </div>
+
+                      
+                            
+                                                          <div id="content-section-3742" class="js-event-hub-promo-group event-section">
+                              <div class="pod pod--carousel-strip  carousel__standard" ><h2 >
+              Category Awards
+          </h2><div class="js-carousel-strip carousel-strip" data-viewport="4"><div class="carousel-strip__control js-carousel-strip__control--prev carousel-strip__control--prev"><button type="button" class="js-carousel-strip__control" data-control-dir="1"><i><svg version="1.1" width="10" height="28" viewBox="0 0 10 28" aria-hidden="true" class="symbol symbol-angle-left"><path d="M9.797 8.5q0 0.203-0.156 0.359l-6.141 6.141 6.141 6.141q0.156 0.156 0.156 0.359t-0.156 0.359l-0.781 0.781q-0.156 0.156-0.359 0.156t-0.359-0.156l-7.281-7.281q-0.156-0.156-0.156-0.359t0.156-0.359l7.281-7.281q0.156-0.156 0.359-0.156t0.359 0.156l0.781 0.781q0.156 0.156 0.156 0.359z"/></svg></i></button></div><div class="js-carousel-strip__viewport carousel-strip__viewport"><div class="js-carousel-strip__body carousel-strip__body"><ul class="js-carousel-strip__strip carousel-strip__strip"><li data-id="23790" class="carousel-strip__slot" style="max-width:25%;flex:1 0 25%;"><div class="carousel-strip__content-item "
+    ><div class="carousel-strip__content-item-body"><div class="content-item--card-item flexbox-flex-even"><a href="https://www.gamespot.com/gallery/all-the-best-shooters-of-2018-by-score/2900-2470/" class=""
+            ><div class="link-img vertical-spacing text-small text-center uppercase"><img class="type-image gallery" src="https://static.gamespot.com/uploads/screen_small/1406/14063904/3477799-7716868968-far-c.jpg" alt="The Best Shooters of 2018 By Score"></div><div class="card-byline"><p class="p-small-space text-small">The Best Shooters of 2018 By Score</p></div></a></div></div></li><li data-id="23774" class="carousel-strip__slot" style="max-width:25%;flex:1 0 25%;"><div class="carousel-strip__content-item "
+    ><div class="carousel-strip__content-item-body"><div class="content-item--card-item flexbox-flex-even"><a href="https://www.gamespot.com/gallery/all-the-best-rpgs-of-2018-based-on-review-score/2900-2471/" class=""
+            ><div class="link-img vertical-spacing text-small text-center uppercase"><img class="type-image gallery" src="https://static.gamespot.com/uploads/screen_small/1406/14063904/3477859-9302534970-Drago.jpg" alt="The Best RPGs Of 2018 By Review Score"></div><div class="card-byline"><p class="p-small-space text-small">The Best RPGs Of 2018 By Review Score</p></div></a></div></div></li><li data-id="23762" class="carousel-strip__slot" style="max-width:25%;flex:1 0 25%;"><div class="carousel-strip__content-item "
+    ><div class="carousel-strip__content-item-body"><div class="content-item--card-item flexbox-flex-even"><a href="https://www.gamespot.com/gallery/all-the-best-fighting-games-of-2018-based-on-revie/2900-2469/" class=""
+            ><div class="link-img vertical-spacing text-small text-center uppercase"><img class="type-image gallery" src="https://static.gamespot.com/uploads/screen_small/1406/14063904/3477791-8720547214-maxre.jpg" alt="The Best Fighting Games of 2018 By Score"></div><div class="card-byline"><p class="p-small-space text-small">The Best Fighting Games of 2018 By Score</p></div></a></div></div></li><li data-id="23753" class="carousel-strip__slot" style="max-width:25%;flex:1 0 25%;"><div class="carousel-strip__content-item "
+    ><div class="carousel-strip__content-item-body"><div class="content-item--card-item flexbox-flex-even"><a href="https://www.gamespot.com/gallery/all-the-best-action-adventure-games-of-2018-based-/2900-2472/" class=""
+            ><div class="link-img vertical-spacing text-small text-center uppercase"><img class="type-image gallery" src="https://static.gamespot.com/uploads/screen_small/1406/14063904/3477896-6718978415-33440.jpg" alt="The Best Action-Adventure Games of 2018 By Score"></div><div class="card-byline"><p class="p-small-space text-small">The Best Action-Adventure Games of 2018 By Score</p></div></a></div></div></li><li data-id="23607" class="carousel-strip__slot" style="max-width:25%;flex:1 0 25%;"><div class="carousel-strip__content-item "
+    ><div class="carousel-strip__content-item-body"><div class="content-item--card-item flexbox-flex-even"><a href="https://www.gamespot.com/articles/heres-the-5-best-ps4-game-releases-in-2018/1100-6463792/" class=""
+            ><div class="link-img vertical-spacing text-small text-center uppercase"><img class="type-article" src="https://static.gamespot.com/uploads/screen_small/1585/15855271/3473540-slate_ps4.jpg" alt="The 5 Best PS4 Games Of 2018"><span class="bottom-left-card uppercase text-small color-white text-tag bg-10"><span >Article</span></span></div><div class="card-byline"><p class="p-small-space text-small">The 5 Best PS4 Games Of 2018</p></div></a></div></div></li><li data-id="23618" class="carousel-strip__slot" style="max-width:25%;flex:1 0 25%;"><div class="carousel-strip__content-item "
+    ><div class="carousel-strip__content-item-body"><div class="content-item--card-item flexbox-flex-even"><a href="https://www.gamespot.com/articles/heres-the-5-best-nintendo-switch-game-released-in-/1100-6463806/" class=""
+            ><div class="link-img vertical-spacing text-small text-center uppercase"><img class="type-article" src="https://static.gamespot.com/uploads/screen_small/1552/15524586/3473647-slate_switch.jpg" alt="The 5 Best Nintendo Switch Games Of 2018"><span class="bottom-left-card uppercase text-small color-white text-tag bg-10"><span >Article</span></span></div><div class="card-byline"><p class="p-small-space text-small">The 5 Best Nintendo Switch Games Of 2018</p></div></a></div></div></li><li data-id="23634" class="carousel-strip__slot" style="max-width:25%;flex:1 0 25%;"><div class="carousel-strip__content-item "
+    ><div class="carousel-strip__content-item-body"><div class="content-item--card-item flexbox-flex-even"><a href="https://www.gamespot.com/articles/heres-the-5-best-xbox-one-game-releases-in-2018/1100-6463832/" class=""
+            ><div class="link-img vertical-spacing text-small text-center uppercase"><img class="type-article" src="https://static.gamespot.com/uploads/screen_small/1556/15568848/3474245-slate_xbox.jpg" alt="The 5 Best Xbox One Games Of 2018"><span class="bottom-left-card uppercase text-small color-white text-tag bg-10"><span >Article</span></span></div><div class="card-byline"><p class="p-small-space text-small">The 5 Best Xbox One Games Of 2018</p></div></a></div></div></li><li data-id="23627" class="carousel-strip__slot" style="max-width:25%;flex:1 0 25%;"><div class="carousel-strip__content-item "
+    ><div class="carousel-strip__content-item-body"><div class="content-item--card-item flexbox-flex-even"><a href="https://www.gamespot.com/articles/heres-the-5-best-pc-games-released-in-2018/1100-6463824/" class=""
+            ><div class="link-img vertical-spacing text-small text-center uppercase"><img class="type-article" src="https://static.gamespot.com/uploads/screen_small/172/1720905/3474148-slate_pc.jpg" alt="The 5 Best PC Games Of 2018"><span class="bottom-left-card uppercase text-small color-white text-tag bg-10"><span >Article</span></span></div><div class="card-byline"><p class="p-small-space text-small">The 5 Best PC Games Of 2018</p></div></a></div></div></li><li data-id="23630" class="carousel-strip__slot" style="max-width:25%;flex:1 0 25%;"><div class="carousel-strip__content-item "
+    ><div class="carousel-strip__content-item-body"><div class="content-item--card-item flexbox-flex-even"><a href="https://www.gamespot.com/articles/5-best-vr-games-in-2018/1100-6463829/" class=""
+            ><div class="link-img vertical-spacing text-small text-center uppercase"><img class="type-article" src="https://static.gamespot.com/uploads/screen_small/1406/14063904/3474228-5438781215-8127b1f4750ae2081e9858133ca815ea" alt="The 5 Best VR Games Of 2018"><span class="bottom-left-card uppercase text-small color-white text-tag bg-10"><span >Article</span></span></div><div class="card-byline"><p class="p-small-space text-small">The 5 Best VR Games Of 2018</p></div></a></div></div></li></ul></div></div><div class="carousel-strip__control js-carousel-strip__control--next carousel-strip__control--next"><button type="button" class="js-carousel-strip__control" data-control-dir="-1"><i><svg version="1.1" width="10" height="28" viewBox="0 0 10 28" aria-hidden="true" class="symbol symbol-angle-right"><path d="M9.297 15q0 0.203-0.156 0.359l-7.281 7.281q-0.156 0.156-0.359 0.156t-0.359-0.156l-0.781-0.781q-0.156-0.156-0.156-0.359t0.156-0.359l6.141-6.141-6.141-6.141q-0.156-0.156-0.156-0.359t0.156-0.359l0.781-0.781q0.156-0.156 0.359-0.156t0.359 0.156l7.281 7.281q0.156 0.156 0.156 0.359z"/></svg></i></button></div></div></div>                          </div>
+
+                      
+        
+        <div id="incontent-ad-wrap" class="js-mapped-ad mapped-ad mapped-incontent-ad mapped-incontent-ad-dart"  data-ad-type="incontent-ad"><div id="incontent-ad" class="ad-wrap ad-wrap-incontent-ad"></div></div>      </div>
+      </div>
+                          </div>
+                                              </div>
+                            </div>
+      </div>
+    </div>
+  </div>
+
+              <div id="leader_bottom-wrap" class="js-mapped-ad mapped-ad mapped-leader_bottom mapped-leader_bottom-dart"  data-ad-type="leader_bottom"><div id="leader_bottom" class="ad-wrap ad-wrap-leader_bottom"></div></div>          </div>
+      <footer class="event-mastfoot">
+  <div class="event-mastfoot-logo">
+    <a href="../index.html"><i><svg viewBox="0 0 731.79 731.81" width="731.79" height="731.81" aria-hidden="true" class="symbol symbol-logo-outline-circle"><path d="M365.89,0C163.81,0,0,163.83,0,365.91s163.81,365.9,365.89,365.9S731.79,568,731.79,365.91,568,0,365.89,0Zm0,684.24c-175.81,0-318.33-142.53-318.33-318.33S190.08,47.58,365.89,47.58,684.23,190.1,684.23,365.91,541.71,684.24,365.89,684.24Z"/><path d="M508.25,506.5c-8.35-5.84-19.41-8.42-31.6-8.42-9.51,0-33.75,3.88-71.5,11.7-19.88,4.27-35.17,5.61-46.07,5.61-43.63,0-80.47-14.35-112.21-43.36-30.26-29.3-46.21-64.56-46.21-105.9,0-42.29,14.94-77.74,46-106.05,31.92-29.35,72.16-43.65,121.16-43.65,32.09,0,57.48,2.21,78.49,7.5,3.24.65,19.22,5.84,47.56,16.19l-11.58,44.3c-14.15-5.81-24.73-9.14-32.43-10.73a169.56,169.56,0,0,0-46.22-6.16c-31.92,0-56.85,10.13-75.72,30.29-17.42,18.52-25.53,41.72-25.53,68.73,0,26.67,7.79,48.47,23.74,66.42C342.3,451.12,361.33,459,383.29,459c8.48,0,16-1.34,21.83-6.58a27.1,27.1,0,0,0,9-20.83V371.07h94.15Z"/></svg></i></a>
+  </div>
+</footer>
+
+    </div>
+
+                  
+  
+                  <meta name="ssbfo" content="e8fQ9NwZwoSAByKF+Oz4oj13I6r/P52Z1VKH8YHpu0pDz4W+3ivT3CrnvQ==" />
+      
+      <script type="text/javascript" src="libs/jquery/1.8.3/jquery.min.js"></script><script type="text/javascript" src="libs/jqueryui/1.8.23/jquery-ui.min.js"></script><script>
+  window.jQuery || document.write('<script src="../../js/jquery.local2e33.js?19fbee9856dc7fcab3a92b2fa1e670dc">\x3C/script>')
+</script>
+        
+          <script src="../../js/all2e33.js?19fbee9856dc7fcab3a92b2fa1e670dc" type="text/javascript"></script>
+  
+  
+  
+            <script id="imageInfoBarTemplate" type="text/template">
+      <a href="<%= profileUrl %>" class="avatar img"><img src="<%= avatar %>" /></a>
+      <div>
+        <a href="<%= profileUrl %>"><%= author %></a> uploaded on <%= dateCreated %>.
+      </div>
+
+      <div>
+        
+              </div>
+    </script>
+
+    <script id="imageCommentsTemplate" type="text/template">
+      <li>
+        <a href="<%= user.url %>" class="avatar img">
+          <img src="<%= user.img %>" />
+        </a>
+        <div>
+          <a href="<%= user.url %>"><%= user.username %></a> <%= body %>
+        </div>
+      </li>
+    </script>
+
+    <script id="imageFilmstripTemplate" type="text/template">
+      <li>
+        <a href="#imageViewer<%= id %>" data-ref-id="<%= id %>"><img src="http://gs.cbsimg.net/b.gif" data-img-src="<%= thumbnail %>" /></a>
+      </li>
+    </script>
+
+        <div id="js-filmstrip" class="filmstrip filmstrip-with-ads is-hidden" itemscope tabindex="-1" ><meta id="image_view-tracking-dw"
+                    class="js-post-render-tracking-consumer image_view-tracking-settings"
+              data-tracking-service="dw"
+        itemprop="image_view-tracking-dw"
+        content="{&quot;pageParams&quot;:{&quot;siteid&quot;:&quot;6&quot;,&quot;ptid&quot;:&quot;6336&quot;,&quot;onid&quot;:null,&quot;ednm&quot;:&quot;{edition}&quot;,&quot;ursuid&quot;:&quot;{ursuid}&quot;,&quot;regSilo&quot;:&quot;2&quot;,&quot;rsid&quot;:&quot;cbsigamespotsite&quot;,&quot;prodtypid&quot;:&quot;8&quot;,&quot;pagetype&quot;:&quot;event_hub&quot;,&quot;topicbrcrm&quot;:&quot;Events|Summary&quot;},&quot;cleargifSrc&quot;:&quot;https:\/\/dw.cbsi.com\/clear\/c.gif?ptid=6336&amp;ednm=%7Bedition%7D&amp;ursuid=%7Bursuid%7D&amp;regSilo=2&amp;rsid=cbsigamespotsite&amp;prodtypid=8&amp;pagetype=event_hub&amp;topicbrcrm=Events%7CSummary&amp;sid=6&amp;ts=1545940719&quot;}"
+        ><meta id="image_view-tracking-ga"
+                    class="js-post-render-tracking-consumer image_view-tracking-settings"
+              data-tracking-service="ga"
+        itemprop="image_view-tracking-ga"
+        content="{&quot;custom&quot;:{&quot;PageType&quot;:{&quot;index&quot;:&quot;1&quot;,&quot;name&quot;:&quot;PageType&quot;,&quot;value&quot;:&quot;6336&quot;,&quot;scope&quot;:&quot;3&quot;},&quot;UserType&quot;:{&quot;index&quot;:&quot;2&quot;,&quot;name&quot;:&quot;UserType&quot;,&quot;value&quot;:&quot;{gaUserType}&quot;,&quot;scope&quot;:&quot;1&quot;}},&quot;account&quot;:&quot;UA-22577913-1&quot;}"
+        ><meta id="image_view-tracking-om"
+                    class="js-post-render-tracking-consumer image_view-tracking-settings"
+              data-tracking-service="om"
+        itemprop="image_view-tracking-om"
+        content="{&quot;brand&quot;:&quot;GameSpot&quot;,&quot;sid&quot;:&quot;gamespot&quot;,&quot;rsids&quot;:&quot;cbsigamespotsite&quot;,&quot;user_status&quot;:&quot;{userStatus}&quot;,&quot;urs_id&quot;:&quot;{ursuid}&quot;,&quot;edition&quot;:&quot;{edition}&quot;,&quot;site_type&quot;:&quot;{siteType}&quot;,&quot;anon_id&quot;:&quot;{xclgfbrowser}&quot;,&quot;url&quot;:&quot;D=g&quot;,&quot;user_agent&quot;:&quot;D=User-Agent&quot;,&quot;page_type_id&quot;:6052,&quot;page_name&quot;:&quot;gs:\/best-games-of-2018\/&quot;,&quot;ab_test&quot;:&quot;{abTestLabel}&quot;,&quot;theme&quot;:&quot;{theme}&quot;,&quot;event_hierarchy&quot;:&quot;{eventHierarchy}&quot;,&quot;marketing_cloud_id&quot;:&quot;10D31225525FF5790A490D4D@AdobeOrg&quot;,&quot;session&quot;:&quot;{ad_session}&quot;,&quot;page_type&quot;:&quot;image&quot;,&quot;channel&quot;:&quot;Events&quot;,&quot;hierarchy&quot;:&quot;Events|Summary&quot;,&quot;collection&quot;:[&quot;best-of-2018&quot;],&quot;subcollection&quot;:[&quot;best-games-of-2018&quot;],&quot;content_type&quot;:&quot;image&quot;}"
+        ><meta id="image_view-ad-settings" class="js-post-render-tracking-consumer ad-settings page-event-ad-settings" itemprop="page-event-ad-settings" content="{&quot;page_event_name&quot;:&quot;image_view&quot;,&quot;mapped_units&quot;:{&quot;overlay_mpu_top&quot;:{&quot;size&quot;:[[300,250]],&quot;target&quot;:{&quot;pos&quot;:&quot;top&quot;,&quot;ptype&quot;:&quot;image&quot;},&quot;on_event&quot;:&quot;image_view&quot;},&quot;overlay_leader_top&quot;:{&quot;size&quot;:[[970,66],[728,90]],&quot;target&quot;:{&quot;pos&quot;:&quot;top&quot;,&quot;ptype&quot;:&quot;image&quot;},&quot;on_event&quot;:&quot;image_view&quot;}}}"><div id="js-image-mask" class="image-mask"></div><div id="js-image-ad-leader" class="image-viewer-ad image-viewer-leader"><div id="overlay_leader_top-wrap" class="js-mapped-ad mapped-ad mapped-overlay_leader_top mapped-overlay_leader_top-dart"  data-ad-type="overlay_leader_top"><div id="overlay_leader_top" class="ad-wrap ad-wrap-overlay_leader_top" data-ad-event="image_view"></div></div></div><a id="js-image-close" href="#" class="image-control image-close" title="Close Viewer"><i><svg version="1.1" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true" class="symbol symbol-remove symbol--size-3x"><path d="M20.281 20.656q0 0.625-0.438 1.062l-2.125 2.125q-0.438 0.438-1.062 0.438t-1.062-0.438l-4.594-4.594-4.594 4.594q-0.438 0.438-1.062 0.438t-1.062-0.438l-2.125-2.125q-0.438-0.438-0.438-1.062t0.438-1.062l4.594-4.594-4.594-4.594q-0.438-0.438-0.438-1.062t0.438-1.062l2.125-2.125q0.438-0.438 1.062-0.438t1.062 0.438l4.594 4.594 4.594-4.594q0.438-0.438 1.062-0.438t1.062 0.438l2.125 2.125q0.438 0.438 0.438 1.062t-0.438 1.062l-4.594 4.594 4.594 4.594q0.438 0.438 0.438 1.062z"/></svg></i></a><div id="js-image-pane" class="image-pane"><h3 id="js-image-title" class="image-title"></h3><img tabindex="0" src="#" id="imageSource" alt="" /><div id="js-image-commands-tip" class="image-commands-tip image-commands-tip-hide"><p>Use your keyboard!</p><ul class="keyboard light"><li><i><svg version="1.1" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" class="symbol symbol-arrow-left symbol--size-large"><path d="M24 14v2q0 0.828-0.508 1.414t-1.32 0.586h-11l4.578 4.594q0.594 0.562 0.594 1.406t-0.594 1.406l-1.172 1.188q-0.578 0.578-1.406 0.578-0.812 0-1.422-0.578l-10.172-10.187q-0.578-0.578-0.578-1.406 0-0.812 0.578-1.422l10.172-10.156q0.594-0.594 1.422-0.594 0.812 0 1.406 0.594l1.172 1.156q0.594 0.594 0.594 1.422t-0.594 1.422l-4.578 4.578h11q0.812 0 1.32 0.586t0.508 1.414z"/></svg></i></li><li><i><svg version="1.1" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" class="symbol symbol-arrow-right symbol--size-large"><path d="M23 15q0 0.844-0.578 1.422l-10.172 10.172q-0.609 0.578-1.422 0.578-0.797 0-1.406-0.578l-1.172-1.172q-0.594-0.594-0.594-1.422t0.594-1.422l4.578-4.578h-11q-0.812 0-1.32-0.586t-0.508-1.414v-2q0-0.828 0.508-1.414t1.32-0.586h11l-4.578-4.594q-0.594-0.562-0.594-1.406t0.594-1.406l1.172-1.172q0.594-0.594 1.406-0.594 0.828 0 1.422 0.594l10.172 10.172q0.578 0.547 0.578 1.406z"/></svg></i></li><li><i><svg version="1.1" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true" class="symbol symbol-arrow-up symbol--size-large"><path d="M25.172 15.172q0 0.797-0.578 1.406l-1.172 1.172q-0.594 0.594-1.422 0.594-0.844 0-1.406-0.594l-4.594-4.578v11q0 0.812-0.586 1.32t-1.414 0.508h-2q-0.828 0-1.414-0.508t-0.586-1.32v-11l-4.594 4.578q-0.562 0.594-1.406 0.594t-1.406-0.594l-1.172-1.172q-0.594-0.594-0.594-1.406 0-0.828 0.594-1.422l10.172-10.172q0.547-0.578 1.406-0.578 0.844 0 1.422 0.578l10.172 10.172q0.578 0.609 0.578 1.422z"/></svg></i></li><li><i><svg version="1.1" width="26" height="28" viewBox="0 0 26 28" aria-hidden="true" class="symbol symbol-arrow-down symbol--size-large"><path d="M25.172 13q0 0.828-0.578 1.406l-10.172 10.187q-0.609 0.578-1.422 0.578-0.828 0-1.406-0.578l-10.172-10.187q-0.594-0.562-0.594-1.406 0-0.828 0.594-1.422l1.156-1.172q0.609-0.578 1.422-0.578 0.828 0 1.406 0.578l4.594 4.594v-11q0-0.812 0.594-1.406t1.406-0.594h2q0.812 0 1.406 0.594t0.594 1.406v11l4.594-4.594q0.578-0.578 1.406-0.578 0.812 0 1.422 0.578l1.172 1.172q0.578 0.609 0.578 1.422z"/></svg></i></li><li>ESC</li></ul></div><a href="#" tabindex="0" id="js-image-prev" class="image-control image-prev hidden" title="Previous Image"><i><svg version="1.1" width="10" height="28" viewBox="0 0 10 28" aria-hidden="true" class="symbol symbol-caret-left symbol--size-2x"><path d="M10 7v14q0 0.406-0.297 0.703t-0.703 0.297-0.703-0.297l-7-7q-0.297-0.297-0.297-0.703t0.297-0.703l7-7q0.297-0.297 0.703-0.297t0.703 0.297 0.297 0.703z"/></svg></i></a><a href="#" tabindex="0" id="js-image-next" class="image-control image-next hidden" title="Next Image"><i><svg version="1.1" width="10" height="28" viewBox="0 0 10 28" aria-hidden="true" class="symbol symbol-caret-right symbol--size-2x"><path d="M9 14q0 0.406-0.297 0.703l-7 7q-0.297 0.297-0.703 0.297t-0.703-0.297-0.297-0.703v-14q0-0.406 0.297-0.703t0.703-0.297 0.703 0.297l7 7q0.297 0.297 0.297 0.703z"/></svg></i></a></div><div id="js-side-column" class="image-comments"><div id="js-image-ad-mpu" class="image-viewer-ad image-viewer-mpu"><div id="overlay_mpu_top-wrap" class="js-mapped-ad mapped-ad mapped-overlay_mpu_top mapped-overlay_mpu_top-dart"  data-ad-type="overlay_mpu_top"><div id="overlay_mpu_top" class="ad-wrap ad-wrap-overlay_mpu_top" data-ad-event="image_view"></div></div></div><ul><li class="upload" id="imageInfo"></li><li class="box login-alert"><p><a href="../login/index.html">Log in</a> to comment</p></li></ul><ul class="scroll" id="imageComments"></ul></div><div class="image-strip"><a tabindex="0" href="#" id="js-image-view-film" class="image-view-film"><span id="js-btn-message" class="caret-message"></span><i><svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" aria-hidden="true" class="symbol symbol-caret-down symbol--size-large"><path d="M23.999997,10.222341 C23.999997,10.5531467 23.8825847,10.8397498 23.6477603,11.0821505 L15.3353915,19.6374684 C15.1005671,19.8791561 14.8221028,20 14.4999985,20 C14.1778942,20 13.8994298,19.8791561 13.6646054,19.6374684 L5.35223663,11.0821505 C5.11741221,10.8404628 5,10.5538596 5,10.222341 C5,9.89082248 5.11741221,9.60421933 5.35223663,9.3625316 C5.58706105,9.12084387 5.8655254,9 6.18762969,9 L22.8123673,9 C23.1337789,9 23.4122432,9.12084387 23.6477603,9.3625316 C23.8832774,9.60421933 24.0006897,9.89082248 23.999997,10.222341 L23.999997,10.222341 Z" stroke-width="1" fill-rule="evenodd"/></svg></i></a><div class="number"></div><ul id="js-image-strip"><li id="js-image-strip-load-more"><a href="#" class="more-images"></a></li></ul></div></div>
+            <script src="https://static.gamespot.com/js/compiled/imageViewer.js?19fbee9856dc7fcab3a92b2fa1e670dc" type="text/javascript"></script>
+        
+    
+  <script src="../../js/site2e33.js?19fbee9856dc7fcab3a92b2fa1e670dc" type="text/javascript"></script>
+  <!-- BEG: base custom_js -->
+    
+
+  
+    <script src="https://static.gamespot.com/js/compiled/goty.js?19fbee9856dc7fcab3a92b2fa1e670dc" type="text/javascript"></script>
+
+    <!-- END: base custom_js -->
+
+              
+        <script src="../../js/tracking2e33.js?19fbee9856dc7fcab3a92b2fa1e670dc" type="text/javascript"></script>
+  
+  <meta name="trackingEventsLookup" content='[]' />
+  
+  
+    <noscript>
+      <img src="https://dw.cbsi.com/clear/c.gif?ptid=6336&amp;ednm=%7Bedition%7D&amp;ursuid=%7Bursuid%7D&amp;regSilo=2&amp;rsid=cbsigamespotsite&amp;prodtypid=8&amp;pagetype=event_hub&amp;topicbrcrm=Events%7CSummary&amp;sid=6&amp;ts=1545940719" alt="" class="visuallyhidden">
+    </noscript>
+  
+  
+  <script type="text/javascript">PhoenixLoader.loadThirdParty('TrueAnthem', '../../tru.am/scripts/custom/cbsinteractive.js', true);</script>
+
+                                              
+                    <script type="text/javascript">
+          var taboola_url = '../../cdn.taboola.com/libtrc/cbsinteractive-gamespot/loader.js';
+          var taboola_header_key = 'other';
+        </script>
+                  <script async src="../../js/427f5db2e33.js?19fbee9856dc7fcab3a92b2fa1e670dc" type="text/javascript"></script>
+              
+            <script type="text/javascript">function setUpAgknTag(tag){tag.setBpId("cbsinteractive");}</script>
+      <script type="text/javascript">PhoenixLoader.loadThirdParty('P&G', '../../js.agkn.com/prod/v0/tag.js', true);</script>
+        
+    
+            
+    
+
+  
+        <script type="text/javascript">
+    (function () {
+            var $xdetstatus = $('<meta id="xdetstatus" itemprop="xdetstatus" content="" data-status="unknown" data-processed="0"/>').appendTo($('head'));
+
+      var updateStatus = function (blocking) {
+        $xdetstatus.data('status', !!blocking);
+        $xdetstatus.trigger('statusChange', [blocking]);
+      };
+
+            if (typeof window.I11C !== "undefined") {
+          $(document).ready(function(){
+            var blocking = window.I11C.Morph === 1;
+            updateStatus(blocking);
+          });
+          return;
+      }
+
+            var h=function(e){if(e.target.tagName === 'SCRIPT' && e.target.src.indexOf('js/compiled/sourcepoint') !== -1){updateStatus(true);window.removeEventListener('error', h);}};
+      window.addEventListener('error', h, true);
+
+            var evt1='sp.blocking',
+        evt2='sp.not_blocking',
+        f1=function(e){updateStatus(true);document.removeEventListener(evt1, f1);document.removeEventListener(evt2, f2);},
+        f2=function (e){updateStatus(false);document.removeEventListener(evt1, f1);document.removeEventListener(evt2, f2);};
+      document.addEventListener(evt1, f1);
+      document.addEventListener(evt2, f2);
+    })();
+
+        window._sp_ = window._sp_ || {};
+    window._sp_.config = window._sp_.config || {};
+    window._sp_.config.account_id = 68;
+
+        PhoenixLoader.thirdPartyCallback(function() {
+      var s = document.createElement('script'); s.src = '../../js/sourcepoint2e33.js?19fbee9856dc7fcab3a92b2fa1e670dc';
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    });
+  </script>  
+      <div id="liveMessageOverlay" class="live_message-overlay" style="display:none;">
+      <div id="liveMessageInner" class="live_message-container">
+        <span><i><svg version="1.1" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" class="symbol symbol-info-sign"><path d="M16 21.5v-2.5q0-0.219-0.141-0.359t-0.359-0.141h-1.5v-8q0-0.219-0.141-0.359t-0.359-0.141h-5q-0.219 0-0.359 0.141t-0.141 0.359v2.5q0 0.219 0.141 0.359t0.359 0.141h1.5v5h-1.5q-0.219 0-0.359 0.141t-0.141 0.359v2.5q0 0.219 0.141 0.359t0.359 0.141h7q0.219 0 0.359-0.141t0.141-0.359zM14 7.5v-2.5q0-0.219-0.141-0.359t-0.359-0.141h-3q-0.219 0-0.359 0.141t-0.141 0.359v2.5q0 0.219 0.141 0.359t0.359 0.141h3q0.219 0 0.359-0.141t0.141-0.359zM24 14q0 3.266-1.609 6.023t-4.367 4.367-6.023 1.609-6.023-1.609-4.367-4.367-1.609-6.023 1.609-6.023 4.367-4.367 6.023-1.609 6.023 1.609 4.367 4.367 1.609 6.023z"/></svg></i></span>
+        <p id="liveMessageContent"></p>
+        <a onclick="closeOverlay();" class="live_message-close btn btn-large btn-default">Close</a>
+      </div>
+    </div>
+      
+        <script id="js-template-autocomplete-result-pod" type="text/template"><span class="<%= data.resultPodClass %>"><span><%= data.resultDisplayName %></span><i><svg version="1.1" width="22" height="28" viewBox="0 0 22 28" aria-hidden="true" class="symbol symbol-remove"><path d="M20.281 20.656q0 0.625-0.438 1.062l-2.125 2.125q-0.438 0.438-1.062 0.438t-1.062-0.438l-4.594-4.594-4.594 4.594q-0.438 0.438-1.062 0.438t-1.062-0.438l-2.125-2.125q-0.438-0.438-0.438-1.062t0.438-1.062l4.594-4.594-4.594-4.594q-0.438-0.438-0.438-1.062t0.438-1.062l2.125-2.125q0.438-0.438 1.062-0.438t1.062 0.438l4.594 4.594 4.594-4.594q0.438-0.438 1.062-0.438t1.062 0.438l2.125 2.125q0.438 0.438 0.438 1.062t-0.438 1.062l-4.594 4.594 4.594 4.594q0.438 0.438 0.438 1.062z"/></svg></i><input type="hidden" name="<%= data.resultInputName %>" value="<%= data.resultInputValue %>"></span></script><script id="js-template-autocomplete-results" type="text/template"><div class="dropdown--autocomplete"><ul class="js-autocomplete-list autocomplete-list bordered-list"><% if (data.showNotificationBar) { %><li class="js-autocomplete-notification-bar notification-bar color-tertiary"><span class="js-autocomplete-notification-text notification-text">Searching for</span> &quot;<span class="js-autocomplete-notification-term notification-term"></span>&quot;</li><% } %></ul><div class="js-loader loader"><div class="loader-animation"><div class="loading"></div></div></div></div></script><script id="js-template-autocomplete-results-legacy" type="text/template"><div class="dropdown-menu typeahead typeahead-full"><ul class="js-autocomplete-list autocomplete-list"><% if (data.showNotificationBar) { %><li class="js-autocomplete-notification-bar notificationBar"><span class="js-autocomplete-notification-text notification-text">Searching for</span> &quot;<span class="js-autocomplete-notification-term notification-term"></span>&quot;</li><% } %></ul><div class="js-loader loader"><div class="loader-animation"><div class="loading"></div></div></div></div></script><script id="js-template-autocomplete-result-item" type="text/template"><li><% if (data.hasResult) { %><% if (data.resultUrl) { %><a class="flexbox-row <% if (data.resultClass) { print(data.resultClass); } %>" href="<%= data.resultUrl %>" data-id="<%= data.resultUrlDataId %>" data-key="<%= data.resultUrlDataKey %>" data-type="<%= data.resultUrlDataType %>"><% } else { %><div class="flexbox-row <% if (data.resultClass) { print(data.resultClass); } %>"><% } %><% if (data.resultImage) { %><div class="link-img"><img src="<%= data.resultImage %>"></div><% } %><div class="flexbox-row flexbox-justify-between"><p><%= data.resultName %></p><% if (data.resultType) { %><span class="result-type"><%= data.resultType %></span><% } %></div><% if (data.resultUrl) { %></a><% } else { %></div><% } %><% } else { %><% if (data.emptyText) { %><div class="noResults"><%= data.emptyText %></div><% } %><% } %></li></script><script id="js-template-autocomplete-result-item-legacy" type="text/template"><li><% if (data.hasResult) { %><% if (data.resultUrl) { %><a class=" <% if (data.resultClass) { print(data.resultClass); } %>" href="<%= data.resultUrl %>" data-id="<%= data.resultUrlDataId %>" data-key="<%= data.resultUrlDataKey %>" data-type="<%= data.resultUrlDataType %>"><% } else { %><div class=" <% if (data.resultClass) { print(data.resultClass); } %>"><% } %><% if (data.resultImage) { %><img src="<%= data.resultImage %>"><% } %><div class="flexbox-row flexbox-justify-between"><p><%= data.resultName %></p><% if (data.resultType) { %><span class="result-type"><%= data.resultType %></span><% } %></div><% if (data.resultUrl) { %></a><% } else { %></div><% } %><% } else { %><% if (data.emptyText) { %><div class="noResults"><%= data.emptyText %></div><% } %><% } %></li></script><script id="js-template-autocomplete-pagination" type="text/template"><li class="js-autocomplete-page <%= data.direction %>" data-direction="<%= data.direction %>"><% if (data.direction === "next") { %>See more results<% } else { %>See previous results<% } %></li></script>      <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"afb799a982","applicationID":"2515728","transactionName":"blVaMEAHDUdZVBYMDFcfexFBEgxZF2cKCgZXWUA2VwIKRl1UFicWV1RUAQg0BlBRRQcGFwNWVxZFBxFQ","queueTime":0,"applicationTime":369,"atts":"QhJNRggdHhgaVkBfGERN","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+<!-- Mirrored from www.gamespot.com/best-games-of-2018/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 27 Dec 2018 20:19:49 GMT -->
+</html>
