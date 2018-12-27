@@ -1,0 +1,17 @@
+HTTrack3.49-2+htsswf+htsjava launched on Fri, 28 Dec 2018 03:18:48 at https://www.gamespot.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwr2%e2C2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A250000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://www.gamespot.com/ -O1 "C:\My Web Sites\gamespot" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+03:19:49	Error: 	"Not Found" (404) at link https://static.gamespot.com/bundles/gamespotsite/images/touch-icon-ipad.png (from https://www.gamespot.com/)
+03:19:53	Warning: 	Moved Permanently for https://www.gamespot.com/shows/New_Releases/
+03:19:53	Warning: 	Redirected link is identical because of 'URL Hack' option: https://www.gamespot.com/shows/New_Releases/ and https://www.gamespot.com/shows/new_releases/
+03:19:53	Warning: 	Warning moved treated for https://www.gamespot.com/shows/New_Releases/ (real one is https://www.gamespot.com/shows/new_releases/)
+03:19:57	Error: 	"Not Found" (404) at link https://static.gamespot.com/uploads/screen_petite/43/434805/3481602-3475379-fortnite+screenshot+2018.12.06+-+14.29.52.35.jpg (from https://www.gamespot.com/)
+03:19:58	Error: 	"Not Found" (404) at link https://static.gamespot.com/uploads/screen_petite/1585/15855271/3481399-3454835-dd+header+0.jpg (from https://www.gamespot.com/)
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 17 seconds : 150 links scanned, 145 files written (25153185 bytes overall) [6187105 bytes received at 80352 bytes/sec], 24673361 bytes transferred using HTTP compression in 144 files, ratio 22%, 3.8 requests per connection
+(3 errors, 3 warnings, 0 messages)

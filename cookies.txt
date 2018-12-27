@@ -1,0 +1,14 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.gamespot.com	TRUE	/	FALSE	1999999999	device_view	full
+www.gamespot.com	TRUE	/	FALSE	1999999999	xcr2	as-as
+www.gamespot.com	TRUE	/	FALSE	1999999999	xcab	80-0%7C81-0%7C82-0%7C83-0%7C84-0%7C85-0
+www.gamespot.com	TRUE	/	FALSE	1999999999	AD_SESSION	n
+.gamespot.com	TRUE	/	FALSE	1999999999	sat	f323b1b110fda1820d565d67772f1e94
+www.gamespot.com	TRUE	/	FALSE	1999999999	il_geo	%7B%22country%5Fcode%22%3A%22VN%22%2C+%22country%5Fname%22%3A%22Vietnam%22%2C+%22dma%5Fcode%22%3A%22ZZ%22%2C+%22postal%5Fcode%22%3A%22ZZ%22%7D
+static.gamespot.com	TRUE	/	FALSE	1999999999	device_view	full
+.cbsi.com	TRUE	/	FALSE	1999999999	XCLGFbrowser	MUhSElwlM+PEw97Vpmk
+.tru.am	TRUE	/	FALSE	1999999999	__cfduid	d7bbaf99707cf10d497a57c20592d14041545941987
+cdn.taboola.com	TRUE	/	FALSE	1999999999	Ab	18
+www.gamespot.com	TRUE	/	FALSE	1999999999	sptg	%5B%5D
+
