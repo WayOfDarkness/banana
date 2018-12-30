@@ -1055,7 +1055,7 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale
 }
@@ -3637,7 +3637,7 @@ body.skybox-loaded.has-promo-alert {
 
 .js-taboola-module .trc_rbox .trc_rbox_header {
   color: #262626;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif
+
 }
 
 .js-taboola-module .trc_rbox .trc_rbox_header .logoDiv a span {
@@ -3651,7 +3651,7 @@ body.skybox-loaded.has-promo-alert {
 
 .js-taboola-module .trc_rbox .videoCube .branding {
   color: #999;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif
+
 }
 
 .js-taboola-module .trc_rbox .videoCube:hover .video-label-box .video-title {
@@ -3661,7 +3661,7 @@ body.skybox-loaded.has-promo-alert {
 
 .js-taboola-module .trc_rbox .video-title {
   color: #262626;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif
+
 }
 
 #ads_adhesion_closeBtn {
@@ -5330,7 +5330,7 @@ body.has-promo-alert--breaking-news {
 }
 
 .nav-bar__item {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   margin: 0;
   position: relative
@@ -5529,7 +5529,7 @@ body.has-promo-alert--breaking-news {
     line-height: 1.3rem;
     line-height: 40px;
     white-space: nowrap;
-    font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
     font-weight: normal;
     font-style: normal;
     color: #262626;
@@ -5817,7 +5817,7 @@ body.has-promo-alert--breaking-news {
 
   .sidenav-list__item > a:not(.btn), .sidenav-list__item span:not(.btn) {
     color: #4c4c4c;
-    font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
     font-weight: normal;
     font-style: normal;
     text-transform: uppercase;
@@ -5867,7 +5867,7 @@ body.has-promo-alert--breaking-news {
 }
 
 .sidenav-list__item .sidenav-list__item > a, .sidenav-list__item .sidenav-list__item span {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   text-transform: none
@@ -9052,7 +9052,7 @@ input.flag {
 
 .filmstrip .image-comments li {
   font-style: italic;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   padding: 10px;
   background-color: #ecedee;
   line-height: 16px;
@@ -17167,7 +17167,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 .pod-header .pod-div {
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   background-position: center left
@@ -17218,7 +17218,8 @@ a:hover .link-img .hover-play-pause {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
-  flex-direction: row
+  flex-direction: row;
+  font-weight: bold;
 }
 
 .no-flexbox .pod-header .pod-title {
@@ -17293,8 +17294,8 @@ a:hover .link-img .hover-play-pause {
 }
 
 .pod-title, .pod-title > h4, .pod-title > h1 {
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
-  font-weight: normal;
+
+  font-weight: bold;
   font-style: normal;
   padding: 0 0 0 15px;
   margin: 0;
@@ -17369,7 +17370,7 @@ a:hover .link-img .hover-play-pause {
   padding: 2px 10px;
   border-radius: 15px;
   text-align: center;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   color: #262626;
@@ -17404,7 +17405,7 @@ a:hover .link-img .hover-play-pause {
   border: 0;
   border-radius: 15px;
   color: #e03800;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   padding: 2px 18px 2px 10px;
@@ -17492,7 +17493,7 @@ a:hover .link-img .hover-play-pause {
   padding: 12px 0 3px;
   position: relative;
   width: 50%;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   font-size: 1.125rem;
@@ -17620,7 +17621,7 @@ a:hover .link-img .hover-play-pause {
   padding: 5px 7px;
   text-align: center;
   margin: 0 5px 5px 0;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -17641,7 +17642,7 @@ a:hover .link-img .hover-play-pause {
   padding: 5px 10px;
   border-radius: 15px;
   text-align: center;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   display: inline-block;
@@ -17768,7 +17769,7 @@ a:hover .link-img .hover-play-pause {
   line-height: 24px;
   position: absolute;
   top: -1px;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   text-align: center;
@@ -18037,7 +18038,7 @@ a:hover .link-img .hover-play-pause {
   line-height: 1.3rem;
   border-top: 4px solid #e03800;
   color: #fff;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   text-transform: uppercase;
@@ -18290,7 +18291,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 .kubrick-breadcrumbs {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   text-shadow: rgba(0, 0, 0, 0.5) 0 1px 0;
@@ -18373,7 +18374,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 .kubrick__tabs-item span {
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -18749,7 +18750,7 @@ a:hover .link-img .hover-play-pause {
 .kubrick-info--ring h3.kubrick-info__title {
   font-size: 1.125rem;
   line-height: 1.3rem;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -19533,7 +19534,7 @@ a:hover .link-img .hover-play-pause {
 .promo--review-score {
   font-size: 1.8125rem;
   line-height: 1.95rem;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   color: #fff;
@@ -20691,7 +20692,7 @@ a:hover .link-img .hover-play-pause {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   margin-top: .2rem
@@ -20808,7 +20809,7 @@ a:hover .link-img .hover-play-pause {
   }
 
   .media-date > span {
-    font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
     font-weight: normal;
     font-style: normal
   }
@@ -20932,7 +20933,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 .imgflare--gradient .media-title, .imgflare--gradient .promo-strip__title {
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   color: #262626
@@ -21221,7 +21222,7 @@ a:hover .link-img .hover-play-pause {
   .show-info h3 a {
     font-size: 1.4375rem;
     line-height: 1.95rem;
-    font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
     font-weight: normal;
     font-style: normal
   }
@@ -21366,7 +21367,7 @@ a:hover .link-img .hover-play-pause {
 
 .news-section .breadcrumbs, .news-section a {
   background-color: #f2f2f3;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -21452,7 +21453,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 .content-slug a {
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   display: inline-block
@@ -22194,7 +22195,7 @@ i > b, i > strong, em > b, em > strong {
   font-size: 26px;
   line-height: 1.9rem;
   color: #a928e5;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   border-bottom: 1px solid #a928e5;
   border-top: 1px solid #a928e5;
   padding: 15px 0;
@@ -22229,13 +22230,13 @@ i > b, i > strong, em > b, em > strong {
   color: #e03800;
   font-size: 46px;
   line-height: 46px;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
 
 .article .typography-format blockquote cite {
-  font-family: "ArgumentumLightItalic", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -22252,7 +22253,7 @@ i > b, i > strong, em > b, em > strong {
 }
 
 .typography-format figcaption {
-  font-family: "ArgumentumLightItalic", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   font-size: .875rem;
@@ -22285,13 +22286,13 @@ h4 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
 
 .type-headline {
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -22405,7 +22406,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .review-breakdown__inner .breakdown > dt {
   text-transform: uppercase;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   margin-bottom: .325rem
@@ -22493,7 +22494,7 @@ h1, h2, h3, h4, h5, h6 {
 .review-breakdown__inner .breakdown-score .score-about {
   font-size: .8125rem;
   line-height: 1.3rem;
-  font-family: "ArgumentumLightItalic", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   margin-bottom: .845rem;
@@ -22565,7 +22566,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .related-game--main .related-game__title .related-game__platforms {
-  font-family: "ArgumentumLightItalic", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   color: #e03800;
@@ -22573,7 +22574,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .related-game--main .related-game__title .related-game__platforms > strong {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   color: #e03800
@@ -22647,7 +22648,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .related-reviews .related-game__title > a {
   color: #e03800;
-  font-family: "ArgumentumLightItalic", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   display: block;
@@ -22666,7 +22667,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .related-reviews .related-game__title .related-game__platforms > strong {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   color: #262626
@@ -22699,7 +22700,7 @@ h1, h2, h3, h4, h5, h6 {
 .review-authors h3 {
   border-top: 2px solid #e03800;
   display: inline-block;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   margin-bottom: 1.3rem;
@@ -22852,7 +22853,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   bottom: -1px;
   left: 0;
-  background-image: url(/bundles/gamespotsite/images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -22876,14 +22877,14 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.4375rem;
   line-height: 1.95rem;
   color: #e03800;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
 
 .reviews-list__item .game-score dd {
   color: #4c4c4c;
-  font-family: "ArgumentumLightItalic", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   text-transform: uppercase;
@@ -22896,8 +22897,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .reviews-list__item .game-title {
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
-  font-weight: normal;
+
+  font-weight: bold;
   font-style: normal;
   color: #262626;
   font-size: 1rem;
@@ -23004,8 +23005,8 @@ h1, h2, h3, h4, h5, h6 {
   float: left;
   text-transform: uppercase;
   color: #fff;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
-  font-weight: normal;
+
+  font-weight: bold;
   font-style: normal;
   padding: 0 15px;
   -webkit-font-smoothing: antialiased;
@@ -23136,7 +23137,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .reviewObject__meta {
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-style: italic;
   text-align: center
 }
@@ -23183,7 +23184,7 @@ h1, h2, h3, h4, h5, h6 {
   .reviewObject__read {
     display: block;
     color: #fff;
-    font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
     font-weight: normal;
     font-style: normal;
     text-shadow: rgba(255, 255, 255, 0.7) 0 0 12px;
@@ -23507,7 +23508,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #0aabe6;
   padding: 2px 5px;
   box-shadow: rgba(255, 255, 255, 0.1) 0 1px inset, rgba(0, 0, 0, 0.75) 0 1px 3px;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   text-shadow: rgba(0, 0, 0, 0.35) 0 -1px 0
@@ -23528,7 +23529,7 @@ h1, h2, h3, h4, h5, h6 {
 .userReview-hdr__title {
   font-size: 1.4375rem;
   line-height: 1.95rem;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   margin-bottom: 1.3rem
@@ -23558,7 +23559,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .userReview-hdr__rating .score {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   color: #e03800
@@ -23638,7 +23639,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.4375rem;
   line-height: 1.95rem;
   color: #fff;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   display: block
@@ -23648,7 +23649,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #e03800;
   font-size: 2.875rem;
   line-height: 3.25rem;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   display: block;
@@ -23692,7 +23693,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .breakdown-avgScore__title {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   font-size: 1.125rem;
@@ -23714,7 +23715,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .breakdown-avgScore__meta a {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -23737,7 +23738,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
   font-style: normal;
   color: #fff;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   text-shadow: rgba(255, 255, 255, 0.7) 0 0 12px;
@@ -23764,7 +23765,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
   padding-top: 0;
   padding-left: 20px;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -23874,7 +23875,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   background: #2b2d31;
   border-top: 2px solid #e03800;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   color: #fff;
@@ -23940,7 +23941,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .userReview-list__rating > a {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -24032,7 +24033,7 @@ h1, h2, h3, h4, h5, h6 {
 .pod-data-breakdown__overview > span {
   font-size: 1.8125rem;
   line-height: 1.95rem;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   color: #e03800;
@@ -24065,7 +24066,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: normal;
   display: block;
   float: left;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -24121,7 +24122,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   z-index: 2;
   color: #fff;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   cursor: pointer;
@@ -24262,7 +24263,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pod-objectStats-info__title h3 {
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   font-size: 1.8125rem;
@@ -24305,7 +24306,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pod-objectStats-info__release, .pod-objectStats-info__systems {
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   margin-bottom: .65rem
@@ -24324,7 +24325,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: -15px;
   padding: 1.3rem 15px;
   color: #bdbdbd;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   border-top: 1px solid #000;
@@ -24377,7 +24378,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pod-objectStats__esrb > dl dt {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   margin-bottom: .39rem
@@ -24427,7 +24428,7 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
   text-transform: uppercase;
   color: #bdbdbd;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   text-align: right
@@ -24465,7 +24466,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .pod-objectStats-reviews .breakdown-reviewScores__scoreWord {
   color: #fff;
-  font-family: "ArgumentumLightItalic", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   display: block
@@ -25009,7 +25010,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #f1f1f4;
   text-shadow: rgba(0, 0, 0, 0.5) 0 1px 5px;
   text-align: center;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   position: absolute;
@@ -25030,7 +25031,7 @@ h1, h2, h3, h4, h5, h6 {
 .gs-score__cell {
   display: table-cell;
   vertical-align: middle;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -25334,7 +25335,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .user-info__name {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   word-wrap: break-word;
@@ -25356,7 +25357,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .role {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   display: inline-block !important
@@ -25442,7 +25443,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .avatar-user-info dt {
   font-size: 16px;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   margin-bottom: 4px;
@@ -25529,7 +25530,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
   float: left;
   width: 50%;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   text-align: left;
@@ -25550,7 +25551,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn {
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -25632,7 +25633,7 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
   padding: 0;
   color: gray;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   text-align: left;
@@ -25811,7 +25812,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .paginate-messages > dt {
   margin: 0;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -25854,7 +25855,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h5.text-base {
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -25864,7 +25865,7 @@ h5.text-base {
 }
 
 .message-title a {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   font-size: 1rem;
@@ -25885,7 +25886,7 @@ h5.text-base {
 }
 
 .message-notification-line .bug {
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -25937,7 +25938,7 @@ h5.text-base {
   padding: .325rem 0 0 0;
   color: #e03800;
   line-height: 1;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   font-size: 1.8125rem;
@@ -26011,7 +26012,7 @@ h5.text-base {
   color: #fff;
   font-size: .8125rem;
   line-height: 1.3rem;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   -webkit-transition: all 150ms;
@@ -26077,7 +26078,7 @@ h5.text-base {
 
 .sort-label {
   display: inline-block;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -26250,7 +26251,7 @@ h5.text-base {
 }
 
 .pod-popular .media-title {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -26343,7 +26344,7 @@ h5.text-base {
 .profile-header .table td {
   font-size: 1.4375rem;
   line-height: 1.95rem;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -26476,7 +26477,7 @@ h5.text-base {
   color: #4c4c4c;
   font-size: 1rem;
   line-height: 1.3rem;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   text-transform: none;
@@ -26716,7 +26717,7 @@ h5.text-base {
 }
 
 .pod-miniUser__info dt {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   font-size: 1.125rem;
@@ -26766,7 +26767,7 @@ h5.text-base {
 }
 
 .pod-miniUser__stats > li a {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   display: block;
@@ -26784,7 +26785,7 @@ h5.text-base {
   margin: 0 0 .65rem;
   color: #666;
   clear: both;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   font-size: .8125rem;
@@ -26797,7 +26798,7 @@ h5.text-base {
 }
 
 .tabs__item {
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -26818,7 +26819,7 @@ h5.text-base {
 
 @media only screen and (min-width: 980px) {
   .platform-nav h1 {
-    font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
     font-weight: normal;
     font-style: normal;
     margin-left: 15px;
@@ -26857,7 +26858,7 @@ h5.text-base {
 }
 
 .pod-games--tabbed .media-title {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   margin: 0;
@@ -26887,7 +26888,7 @@ h5.text-base {
   font-size: 1.4375rem;
   line-height: 1.95rem;
   color: #e03800;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -26958,7 +26959,7 @@ h5.text-base {
   padding: 0;
   text-align: center;
   position: relative;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 1px inset;
@@ -27300,7 +27301,7 @@ h5.text-base {
 .poll-e3 .game-poll--label {
   padding: 0;
   text-transform: uppercase;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   font-size: .8125rem;
@@ -27363,7 +27364,7 @@ h5.text-base {
 
 .filter-title > span {
   border-top: 2px solid #e03800;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   display: inline-block;
@@ -27436,7 +27437,7 @@ h5.text-base {
   line-height: 1.3rem;
   color: #666;
   line-height: 1;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   text-align: right;
@@ -27670,7 +27671,7 @@ h5.text-base {
 }
 
 .buy-offer__header, .buy-offer__name {
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   color: inherit;
@@ -27679,7 +27680,7 @@ h5.text-base {
 
 .buy-offer__header {
   display: inline-block;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   text-transform: uppercase;
@@ -27702,7 +27703,7 @@ h5.text-base {
 .buy-offer__store dt {
   color: #fff;
   text-transform: uppercase;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -27763,7 +27764,7 @@ h5.text-base {
 .amazon__buynowLink, .amazon__label {
   color: #000;
   text-transform: uppercase;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   font-size: .8125rem;
@@ -27781,7 +27782,7 @@ h5.text-base {
 .amazon__price {
   display: block;
   color: #f90;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   text-shadow: rgba(0, 0, 0, 0.35) 0 -1px 0
@@ -27923,7 +27924,7 @@ h5.text-base {
 
 .authorCard--base .authorCard-name > a {
   color: #e03800;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -27936,7 +27937,7 @@ h5.text-base {
 }
 
 .authorCard--base .authorCard-perspective {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -27957,7 +27958,7 @@ h5.text-base {
 .authorCard--article .authorCard-name {
   font-size: 1rem;
   line-height: 1.3rem;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   margin-bottom: .325rem
@@ -28114,7 +28115,7 @@ h5.text-base {
 
 .related-content__promo .promo-hub, .related-content__promo .promo-superscript {
   color: #0aabe6;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -28239,7 +28240,7 @@ h5.text-base {
 }
 
 .dropnav-tabs__item > a {
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -28258,7 +28259,7 @@ h5.text-base {
 }
 
 .dropnav-menu__item {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   font-size: 14px
@@ -28286,7 +28287,7 @@ h5.text-base {
   margin: 0 auto;
   font-size: .875rem;
   line-height: 1.3rem;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -28531,7 +28532,7 @@ h5.text-base {
   text-shadow: none;
   border: none;
   padding: 2px 4px;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   background-color: #2b2d31;
@@ -28829,7 +28830,7 @@ h5.text-base {
   display: inline-block;
   text-align: center;
   text-transform: uppercase;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   font-size: .8125rem;
@@ -28992,7 +28993,7 @@ h5.text-base {
 }
 
 .upcoming-item__title, .upcoming-item__cat {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   color: #fff;
@@ -29015,7 +29016,7 @@ h5.text-base {
   background: #0aabe6;
   color: #fff;
   display: block;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   text-transform: uppercase;
@@ -29080,7 +29081,7 @@ h5.text-base {
   font-size: 1.125rem;
   line-height: 1.3rem;
   line-height: 2.6rem;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   color: #262626;
@@ -29139,7 +29140,7 @@ h5.text-base {
   border-radius: 15px;
   text-align: center;
   margin: 0 15px;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   background-color: #fcfcfd;
@@ -29162,7 +29163,7 @@ h5.text-base {
   text-align: center;
   display: block;
   font-size: 11px;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   text-indent: -9999px;
@@ -29241,7 +29242,7 @@ h5.text-base {
   float: left;
   padding: 5px 0;
   max-width: 80%;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   white-space: nowrap;
@@ -29309,7 +29310,7 @@ h5.text-base {
 }
 
 .table-games td.cell-title {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   font-size: 1rem;
@@ -29329,14 +29330,14 @@ h5.text-base {
 
 .table-games td.cell-platform .system {
   font-size: 11px;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   margin: 0 3px
 }
 
 .table-games td.cell-score a {
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -29391,7 +29392,7 @@ h5.text-base {
 
 .pod-topgames--platforms .media-title {
   color: #fff;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   font-size: 1rem;
@@ -29495,7 +29496,8 @@ h5.text-base {
 
 .game--top-games {
   counter-reset: counter-topgames;
-  position: relative
+  position: relative;
+  margin-bottom: 10px;
 }
 
 .game--top-games .game-background {
@@ -29512,7 +29514,7 @@ h5.text-base {
   counter-increment: counter-topgames;
   display: block;
   font-size: 24px;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   line-height: 20px;
@@ -29568,7 +29570,7 @@ h5.text-base {
 .game--top-games .game-meta--date {
   font-size: .8125rem;
   line-height: 1.3rem;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -29605,15 +29607,14 @@ h5.text-base {
 }
 
 .game-gs50__logo {
+  display: none;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
-  display: inline-block;
   font-size: 0;
-  display: block;
   margin: 0 auto;
   width: 85px;
-  background: url(/bundles/gamespotsite/images/logo-gs50--small@2x.png) no-repeat;
+  background: url("../img/icon/logo.png") no-repeat;
   background-size: contain
 }
 
@@ -29693,7 +29694,7 @@ h5.text-base {
     color: #fff;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8), 0 0 6px rgba(255, 255, 255, 0.2);
     margin-bottom: 0;
-    font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
     font-weight: normal;
     font-style: normal;
     max-height: 2.6rem;
@@ -29724,7 +29725,7 @@ h5.text-base {
     border-width: 1px 1px 0 0;
     color: #fff;
     font-size: 11px;
-    font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
     font-weight: normal;
     font-style: normal;
     line-height: 15px;
@@ -29824,7 +29825,7 @@ h5.text-base {
   }
 
   .game--golden .game-item:nth-child(n+6):nth-child(-n+10) .game-title {
-    font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
     font-weight: normal;
     font-style: normal;
     font-size: 1rem;
@@ -29906,7 +29907,7 @@ h5.text-base {
 
   .game--golden .game-title {
     color: #fff;
-    font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
     font-weight: normal;
     font-style: normal;
     margin-bottom: 0
@@ -29959,7 +29960,7 @@ h5.text-base {
   color: #fff;
   cursor: pointer;
   display: block;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   padding: .65rem 22.5px;
@@ -30313,7 +30314,7 @@ h5.text-base {
 .stacks-userStacks__title {
   border-top: 2px solid #e03800;
   color: #262626;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   display: inline-block;
@@ -30447,7 +30448,7 @@ h5.text-base {
   padding: 8px 16px;
   border-radius: 20px;
   text-align: center;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   display: inline-block;
@@ -30462,7 +30463,7 @@ h5.text-base {
 
 .paginate-simple__page {
   padding: .65rem 0;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   float: left;
@@ -30895,7 +30896,7 @@ h5.text-base {
   border-radius: 100%;
   background: rgba(43, 45, 49, 0.65);
   color: #fff;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   padding: 0 15px;
   z-index: 1;
   text-align: center;
@@ -30956,7 +30957,7 @@ h5.text-base {
   background-image: linear-gradient(#ffffff, rgba(242, 242, 242, 0));
   font-size: 11px;
   text-transform: uppercase;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -31187,7 +31188,7 @@ h5.text-base {
 }
 
 .userStacks-table .media-title {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   line-height: 1.18;
@@ -31258,7 +31259,7 @@ h5.text-base {
 }
 
 .userStacks--widget .userStacks-header {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   display: block;
@@ -31317,7 +31318,7 @@ h5.text-base {
 
 .userStacks--list > li.userStacks--list__plusGames > span {
   color: #e03800;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -31385,7 +31386,7 @@ h5.text-base {
   font-size: 1.8125rem;
   line-height: 1.95rem;
   display: block;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -31416,7 +31417,7 @@ h5.text-base {
 
 .score-hold__votes .count {
   color: #4c4c4c;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -31428,7 +31429,7 @@ h5.text-base {
   color: #fff;
   font-size: .8125rem;
   line-height: 1.3rem;
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   opacity: 0;
@@ -31792,7 +31793,7 @@ h5.text-base {
 }
 
 .userStacks-list__item-header {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   font-size: 1rem;
@@ -32363,7 +32364,7 @@ h5.text-base {
 
 .body-collection--game .media-title {
   color: gray;
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   text-shadow: rgba(255, 255, 255, 0.5) 0 1px 0
@@ -32596,7 +32597,7 @@ h5.text-base {
 }
 
 .header-border {
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -32608,19 +32609,19 @@ h5.text-base {
 }
 
 .forum-section__header h2, .forum-section__header h3 {
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
 
 .forum-board__title {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
 
 .table-forums .topic-name, .table-forums .board-name {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -32638,13 +32639,13 @@ h5.text-base {
 }
 
 .table-forums .type {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
 
 .table th, table[data-max-width="true"] th {
-  font-family: "ArgumentumMed", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -33047,7 +33048,7 @@ a#qualtrics-feedback:hover {
   }
 
   .footer-links > ul > li span {
-    font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
     font-weight: normal;
     font-style: normal;
     color: #fff;
@@ -33408,7 +33409,7 @@ a#qualtrics-feedback:hover {
 }
 
 .text-custom {
-  font-family: "ArgumentumBold", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif
+
 }
 
 .text-center {

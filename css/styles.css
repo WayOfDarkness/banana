@@ -79,3 +79,18 @@
 .brand-color {
   background-color: orange;
 }
+.river .media:not(:first-child) {
+  background-image: url(../img/bg-border-light.png);
+  background-position: top;
+  background-repeat: repeat-x;
+}
+.reviews-list {
+  list-style: none;
+  margin: 0px;
+}
+.reviews-list li {
+  margin: 0;
+}
+#block-copyright {
+  margin: 0px;
+}
