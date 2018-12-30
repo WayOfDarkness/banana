@@ -1,0 +1,102 @@
+{% extends "layout.twig" %}
+
+{% block pre_include %}
+    <title>Đặt hàng thành công</title>
+{% endblock %}
+
+{% block content %}
+
+    <main class="main-content">
+        <nav class="breadcrumbk">
+            <div class="container">
+                <ul class="reset-list breadcrumbk-list">
+                    <li class="item">
+                        <a href="/" class="link">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                    <li class="item active">Cảm ơn</li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="cart-page pt-20">
+            <h3 class="d-none">thanks-page</h3>
+            <div class="container">
+                <ul class="reset-list cart-page__progress-bar d-flex align-items-center justify-content-between">
+                    <li class="item active">
+                        <span class="d-block item-dot">
+                            <span class="d-block numb">1</span>
+                            <span class="text">Đăng nhập</span>
+                        </span>
+                    </li>
+                    <li class="item active">
+                        <span class="d-block item-dot">
+                            <span class="d-block numb">2</span>
+                            <span class="text">Thanh toán</span>
+                        </span>
+                    </li>
+                    <li class="item active">
+                        <span class="d-block item-dot">
+                            <span class="d-block numb">3</span>
+                            <span class="text">Hoàn tất</span>
+                        </span>
+                    </li>
+                </ul>
+
+                <div class="cart-page__thanks mb-50">
+                    <div class="row">
+                        <div class="col-12 col-md-7">
+                            <div class="left-col">
+                                <p class="fs_24 text-uppercase mb-4 cl_red fm">Đặt hàng thành công!</p>
+                                <p class="text fl mb-4">
+                                    <span class="cl_red">Cảm ơn bạn đã mua hàng!</span>
+                                    <br><br>
+                                    Mã đơn hàng:
+                                    <span class="fr">#{{session.order_id}}</span>
+                                    <br><br>
+                                    Bạn sẽ sớm nhận được email/điện thoại xác nhận đơn hàng từ chúng tôi.
+                                    <br><br>
+                                </p>
+                                <a href="{{__('ALL_PRODUCTS_URL')}}" class="btn-blue mb-4">Tiếp tục mua hàng</a>
+                            </div>
+                        </div>
+
+                        {% if customer.logged_in %}
+                            <div class="col-12 col-md-5">
+                                <div class="right-col bg_main">
+                                    <header class="top fs_16 p-3 cl_white">YÊU THÍCH ({{customer.wishlist | length}})</header>
+                                    <div class="right-col__body bg_white p-3">
+                                        <span class="d-block mb-10">Sản phẩm đã thêm gần đây</span>
+                                        <ul class="reset-list">
+                                            {% for item in customer.wishlist %}
+                                                <li class="item d-flex hasLink">
+                                                    <a href="{{item.url}}" class="link"></a>
+                                                    <div class="col-4 col-sm-2 p-sm-0">
+                                                        <figure class="img h-100">
+                                                            <img src="{{item.image | upload_url}}" alt="{{item.title}}" class="d-block mx-auto w-100">
+                                                        </figure>
+                                                    </div>
+                                                    <div class="col-8 col-sm-10 pt-5c pl-30">
+                                                        {% if item.price_compare %}
+                                                            <span class="price-old">{{item.price_compare | money}}
+                                                                đ</span>
+                                                        {% endif %}
+                                                        <span class="price-new">{{item.price | money}}
+                                                            ₫</span>
+                                                        <span class="name d-block fs_16 fl">{{item.title}}</span>
+                                                    </div>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+{% endblock content %}

@@ -1,0 +1,807 @@
+{
+  "tabs": [
+    {
+      "title": "Trang chủ",
+      "id": "Home",
+      "groups": [
+        {
+          "title": "Thông Tin",
+          "attributes": [
+            {
+              "label": "Tên công ty",
+              "type": "text",
+              "name": "shop_name"
+            },
+            {
+              "label": "Favicon",
+              "type": "image",
+              "name": "home_favicon",
+              "size": "32x32"
+            },
+            {
+              "label": "Logo",
+              "type": "image",
+              "name": "home_logo",
+              "size": "119x34"
+            },
+            {
+              "label": "Banner",
+              "type": "image",
+              "name": "home_banner",
+              "size": "1920x78"
+            },
+            {
+              "label": "Slide",
+              "type": "gallery",
+              "name": "home_slide"
+            }
+          ]
+        },
+        {
+          "title": "Sự kiện sắp tới",
+          "attributes": [
+            {
+              "label": "Thời gian sự kiện 1 ",
+              "description": "mm/dd/yyyy",
+              "type": "text",
+              "name": "event_time_1"
+            },
+            {
+              "label": "Hình trái",
+              "type": "image",
+              "name": "event_image_1",
+              "size": "32x32"
+            },
+            {
+              "label": "Link",
+              "type": "text",
+              "name": "event_link_1"
+            },
+            {
+              "label": "Thời gian sự kiện 2 ",
+              "description": "mm/dd/yyyy",
+              "type": "text",
+              "name": "event_time_2"
+            },
+            {
+              "label": "Hình trái",
+              "type": "image",
+              "name": "event_image_2",
+              "size": "32x32"
+            },
+            {
+              "label": "Link",
+              "type": "text",
+              "name": "event_link_2"
+            },
+            {
+              "label": "Thời gian sự kiện 3 ",
+              "description": "mm/dd/yyyy",
+              "type": "text",
+              "name": "event_time_3"
+            },
+            {
+              "label": "Hình trái",
+              "type": "image",
+              "name": "event_image_3",
+              "size": "32x32"
+            },
+            {
+              "label": "Link",
+              "type": "text",
+              "name": "event_link_3"
+            }
+          ]
+        },
+        {
+          "title": "Sách mới và nổi bật",
+          "attributes": [
+            {
+              "label": "Tiêu đề",
+              "type": "text",
+              "name": "booknew_title"
+            },
+            {
+              "label": "Nhóm sách",
+              "type": "collections",
+              "name": "booknew_collection"
+            },
+            {
+              "label": "Link",
+              "type": "text",
+              "name": "booknew_link"
+            }
+          ]
+        },
+        {
+          "title": "Sách bán chạy",
+          "attributes": [
+            {
+              "label": "Tiêu đề",
+              "type": "text",
+              "name": "bookhot_title"
+            },
+            {
+              "label": "Nhóm sách",
+              "type": "collections",
+              "name": "bookhot_collection"
+            },
+            {
+              "label": "Link",
+              "type": "text",
+              "name": "bookhot_link"
+            },
+            {
+              "label": "Banner",
+              "type": "image",
+              "name": "bookhot_banner",
+              "size": "32x32"
+            },
+            {
+              "label": "Link banner",
+              "type": "text",
+              "name": "bookhot_link1"
+            }
+          ]
+        },
+        {
+          "title": "Sách đang bán",
+          "attributes": [
+            {
+              "label": "Tiêu đề 1",
+              "type": "text",
+              "name": "book_title_1"
+            },
+            {
+              "label": "Nhóm sách 1",
+              "type": "collections",
+              "name": "book_collection_1"
+            },
+            {
+              "label": "Link 1",
+              "type": "text",
+              "name": "book_link_1"
+            },
+            {
+              "label": "Tiêu đề 2",
+              "type": "text",
+              "name": "book_title_2"
+            },
+            {
+              "label": "Nhóm sách 2",
+              "type": "collections",
+              "name": "book_collection_2"
+            },
+            {
+              "label": "Link 2",
+              "type": "text",
+              "name": "book_link_2"
+            },
+            {
+              "label": "Tiêu đề 3",
+              "type": "text",
+              "name": "book_title_3"
+            },
+            {
+              "label": "Nhóm sách 3",
+              "type": "collections",
+              "name": "book_collection_3"
+            },
+            {
+              "label": "Link 3",
+              "type": "text",
+              "name": "book_link_3"
+            },
+            {
+              "label": "Tiêu đề 4",
+              "type": "text",
+              "name": "book_title_4"
+            },
+            {
+              "label": "Nhóm sách 4",
+              "type": "collections",
+              "name": "book_collection_4"
+            },
+            {
+              "label": "Link 4",
+              "type": "text",
+              "name": "book_link_4"
+            },
+            {
+              "label": "Tiêu đề 5",
+              "type": "text",
+              "name": "book_title_5"
+            },
+            {
+              "label": "Nhóm tác giả",
+              "type": "blogs",
+              "name": "book_blog"
+            },
+            {
+              "label": "Link 5",
+              "type": "text",
+              "name": "book_link_5"
+            }
+          ]
+        },
+        {
+          "title": "Lịch 2019",
+          "attributes": [
+            {
+              "label": "Tiêu đề",
+              "type": "text",
+              "name": "lich_title"
+            },
+            {
+              "label": "Nhóm lịch",
+              "type": "collections",
+              "name": "lich_collection"
+            },
+            {
+              "label": "Link",
+              "type": "text",
+              "name": "lich_link"
+            }
+          ]
+        },
+        {
+          "title": "Văn phòng phẩm",
+          "attributes": [
+            {
+              "label": "Tiêu đề",
+              "type": "text",
+              "name": "vpp_title"
+            },
+            {
+              "label": "Nhóm văn phòng phẩm",
+              "type": "collections",
+              "name": "vpp_collection"
+            },
+            {
+              "label": "Link",
+              "type": "text",
+              "name": "vpp_link"
+            }
+          ]
+        },
+        {
+          "title": "Footer",
+          "attributes": [
+            {
+              "label": "Tiêu đề 1",
+              "type": "text",
+              "name": "footer_title_1"
+            },
+            {
+              "label": "Tiêu đề 2",
+              "type": "text",
+              "name": "footer_title_2"
+            },
+            {
+              "label": "Tiêu đề 3",
+              "type": "text",
+              "name": "footer_title_3"
+            },
+            {
+              "label": "Tiêu đề 1",
+              "type": "text",
+              "name": "footer_title_4"
+            },
+            {
+              "label": "Hotline",
+              "type": "text",
+              "name": "footer_hotline"
+            },
+            {
+              "label": "Địa chỉ",
+              "type": "text",
+              "name": "footer_address"
+            },
+            {
+              "label": "Phone",
+              "type": "text",
+              "name": "phone"
+            },
+            {
+              "label": "Email",
+              "type": "text",
+              "name": "email"
+            },
+            {
+              "label": "Link fanpage",
+              "type": "text",
+              "name": "footer_fanpage"
+            },
+            {
+              "label": "Facebook",
+              "type": "text",
+              "name": "facebook"
+            },
+            {
+              "label": "Google",
+              "type": "text",
+              "name": "google"
+            },
+            {
+              "label": "Pinterest",
+              "type": "text",
+              "name": "pinterest"
+            },
+            {
+              "label": "Instagram",
+              "type": "text",
+              "name": "instagram"
+            },
+            {
+              "label": "Shopee",
+              "type": "text",
+              "name": "shopee"
+            },
+            {
+              "label": "Youtube",
+              "type": "text",
+              "name": "youtube"
+            },
+            {
+              "label": "Copyright",
+              "type": "text",
+              "name": "copyright"
+            },
+            {
+              "label": "Logo",
+              "type": "image",
+              "name": "footer_image_1",
+              "size": "50x50"
+            },
+            {
+              "label": "Bộ công thương",
+              "type": "image",
+              "name": "footer_image_2",
+              "size": "100x50"
+            },
+            {
+              "label": "Link",
+              "type": "text",
+              "name": "footer_link"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Popup - Khách hàng",
+      "id": "popup",
+      "groups": [
+        {
+          "title": "Popup",
+          "attributes": [
+            {
+              "label": "Hiển thị",
+              "type": "checkbox",
+              "name": "popup_check"
+            },
+            {
+              "label": "Link",
+              "type": "text",
+              "name": "popup_link"
+            },
+            {
+              "label": "Hình ảnh",
+              "type": "image",
+              "name": "popup_image",
+              "size": "768x255"
+            }
+          ]
+        },
+        {
+          "title": "Khách hàng",
+          "attributes": [
+            {
+              "label": "Hình ảnh trên",
+              "type": "image",
+              "name": "register_top_image",
+              "size": "1170x183"
+            },
+            {
+              "label": "Hình ảnh dưới",
+              "type": "image",
+              "name": "register_bottom_image",
+              "size": "1170x194"
+            },
+            {
+              "label": "Phân trang tác giả",
+              "type": "number",
+              "name": "blog_pt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Custom",
+      "id": "custom",
+      "groups": [
+        {
+          "title": "Nhà vận chuyển",
+          "attributes": [
+            {
+              "label": "Tiêu đề 1",
+              "type": "text",
+              "name": "nvc_title_1"
+            },
+            {
+              "label": "Mô tả",
+              "type": "text",
+              "name": "nvc_desc_1"
+            },
+            {
+              "label": "Tiêu đề 2",
+              "type": "text",
+              "name": "nvc_title_2"
+            },
+            {
+              "label": "Mô tả ",
+              "type": "text",
+              "name": "nvc_desc_2"
+            }
+          ]
+        },
+        {
+          "title": "Product",
+          "attributes": [
+            {
+              "label": "Thời gian làm việc",
+              "type": "text",
+              "name": "pro_time"
+            },
+            {
+              "label": "Tiêu đề 1",
+              "type": "text",
+              "name": "pro_title1"
+            },
+            {
+              "label": "Link",
+              "type": "text",
+              "name": "pro_link1"
+            },
+            {
+              "label": "Tiêu đề 2",
+              "type": "text",
+              "name": "pro_title2"
+            },
+            {
+              "label": "Link",
+              "type": "text",
+              "name": "pro_link2"
+            },
+            {
+              "label": "Tiêu đề 3",
+              "type": "text",
+              "name": "pro_title3"
+            },
+            {
+              "label": "Link",
+              "type": "text",
+              "name": "pro_link3"
+            },
+            {
+              "label": "Nội dung",
+              "type": "editor",
+              "name": "pro_desc"
+            },
+            {
+              "label": "Hình",
+              "type": "image",
+              "name": "pro_image",
+              "size": "320x187"
+            },
+            {
+              "label": "Tiêu chí đánh giá",
+              "type": "editor",
+              "name": "standard_rating"
+            }
+          ]
+        },
+        {
+          "title": "Nhóm sản phẩm",
+          "attributes": [
+            {
+              "label": "Nhóm sản phẩm bộ lọc",
+              "type": "collections",
+              "name": "col_filter"
+            },
+            {
+              "label": "Hình trên trái",
+              "type": "image",
+              "name": "col_image",
+              "size": "405x133"
+            },
+            {
+              "label": "Link",
+              "type": "text",
+              "name": "col_link"
+            },
+            {
+              "label": "Hình trên phải",
+              "type": "image",
+              "name": "col_image1",
+              "size": "405x133"
+            },
+            {
+              "label": "Link",
+              "type": "text",
+              "name": "col_link1"
+            },
+            {
+              "label": "Hình trái trên",
+              "type": "image",
+              "name": "col_image2",
+              "size": "405x133"
+            },
+            {
+              "label": "Link",
+              "type": "text",
+              "name": "col_link2"
+            },
+            {
+              "label": "Hình trái dưới",
+              "type": "image",
+              "name": "col_image3",
+              "size": "405x133"
+            },
+            {
+              "label": "Link",
+              "type": "text",
+              "name": "col_link3"
+            }
+          ]
+        },
+        {
+          "title": "Tin tức nổi bật",
+          "attributes": [
+            {
+              "label": "Tiêu đề",
+              "type": "text",
+              "name": "ttnb_title"
+            },
+            {
+              "label": "Bài viết",
+              "type": "articles",
+              "name": "ttnb_baiviet"
+            }
+          ]
+        },
+        {
+          "title": "Tác giả",
+          "attributes": [
+            {
+              "label": "Nhóm tác phẩm trang tác giả",
+              "type": "products",
+              "name": "author_product"
+            }
+          ]
+        },
+        {
+          "title": "Giỏ hàng",
+          "attributes": [
+            {
+              "label": "Giỏ hàng rỗng",
+              "type": "editor",
+              "name": "cart_null"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Liên hệ",
+      "id": "contact",
+      "groups": [
+        {
+          "title": "Contact",
+          "attributes": [
+            {
+              "label": "Liên hệ",
+              "type": "text",
+              "name": "contact_title"
+            },
+            {
+              "label": "Tiếp nhận yêu cầu",
+              "type": "text",
+              "name": "contact_title1"
+            },
+            {
+              "label": "Hệ thống nhà sách",
+              "type": "text",
+              "name": "contact_title2"
+            }
+
+          ]
+        },
+        {
+          "title": "SEO",
+          "attributes": [
+            {
+              "label": "Tiêu đề trang",
+              "type": "text",
+              "name": "contact_meta_title"
+            },
+            {
+              "label": "Mô tả trang",
+              "type": "textarea",
+              "name": "contact_meta_description"
+            },
+            {
+              "label": "Từ khóa",
+              "type": "textarea",
+              "name": "contact_meta_keyword"
+            },
+            {
+              "label": "Meta robots",
+              "type": "select",
+              "multiple": false,
+              "name": "contact_meta_robots",
+              "options": [
+                {
+                  "value": "index, follow",
+                  "title": "Index, Follow"
+                },
+                {
+                  "value": "noindex, follow",
+                  "title": "No Index, Follow"
+                },
+                {
+                  "value": "index, nofollow",
+                  "title": "Index, No Follow"
+                },
+                {
+                  "value": "noindex, nofollow",
+                  "title": "No Index, No Follow"
+                }
+              ]
+            },
+            {
+              "label": "Hình đại diện",
+              "type": "image",
+              "name": "contact_meta_image",
+              "size": "470x264"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Tích lũy điểm",
+      "id": "tab_point",
+      "groups": [
+        {
+          "attributes": [
+            {
+              "label": "Số người được giới thiệu tối đa",
+              "type": "number",
+              "name": "max_number_user_referral"
+            },
+            {
+              "label": "Số V-point người giới thiệu nhận được khi người được giới thiệu mua hàng lần đầu tiên",
+              "type": "number",
+              "name": "v_point_save_first_order_referral"
+            },
+            {
+              "label": "Giá trị của 1 V-point",
+              "type": "number",
+              "name": "v_point_to_vnd"
+            },
+            {
+              "label": "Số V-point nhận được khi mua hàng (tính theo giá trị đơn hàng là 100k)",
+              "type": "number",
+              "name": "v_point_save_order"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Mã giới thiệu",
+      "id": "tab_referral",
+      "groups": [
+        {
+          "attributes": [
+            {
+              "label": "Banner",
+              "type": "image",
+              "name": "banner_customer_referral",
+              "size": "840x125"
+            },
+            {
+              "label": "Mô tả",
+              "type": "editor",
+              "name": "description_customer_referral"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "SEO",
+      "id": "seo",
+      "groups": [
+        {
+          "title": "SEO",
+          "attributes": [
+            {
+              "label": "Tiêu đề trang",
+              "type": "text",
+              "name": "meta_title"
+            },
+            {
+              "label": "Mô tả trang",
+              "type": "textarea",
+              "name": "meta_description"
+            },
+            {
+              "label": "Từ khóa",
+              "type": "textarea",
+              "name": "meta_keyword"
+            },
+            {
+              "label": "Meta robots",
+              "type": "select",
+              "multiple": false,
+              "name": "meta_robots",
+              "options": [
+                {
+                  "value": "index, follow",
+                  "title": "Index, Follow"
+                },
+                {
+                  "value": "noindex, follow",
+                  "title": "No Index, Follow"
+                },
+                {
+                  "value": "index, nofollow",
+                  "title": "Index, No Follow"
+                },
+                {
+                  "value": "noindex, nofollow",
+                  "title": "No Index, No Follow"
+                }
+              ]
+            },
+            {
+              "label": "Hình đại diện",
+              "type": "image",
+              "name": "meta_image",
+              "size": "470x264"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Tích hợp mã",
+      "id": "add",
+      "groups": [
+        {
+          "title": "Tích hợp mã",
+          "attributes": [
+            {
+              "label": "Google analytics",
+              "type": "textarea",
+              "name": "google_analytics"
+            },
+            {
+              "label": "Facebook pixel",
+              "type": "textarea",
+              "name": "facebook_pixel"
+            },
+            {
+              "label": "Chat online",
+              "type": "textarea",
+              "name": "chat_online"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

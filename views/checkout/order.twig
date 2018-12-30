@@ -1,0 +1,695 @@
+{% extends "layout.twig" %}
+
+{% block pre_include %}
+    <title>Thanh toán</title>
+{% endblock %}
+
+{% block content %}
+    <main class="main-content">
+        <nav class="breadcrumbk">
+            <div class="container">
+                <ul class="reset-list breadcrumbk-list">
+                    <li class="item">
+                        <a href="/" class="link">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                    <li class="item active">Thanh toán</li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="payment-page">
+            <h3 class="d-none">payment-page</h3>
+            <div class="container">
+                <figure class="img mb-35">
+                    <img src="{{theme.uri}}/assets/img/demo/img99.png" class="d-block w-100">
+                </figure>
+
+                <ul class="reset-list cart-page__progress-bar d-flex align-items-center justify-content-between mb-72">
+                    <li class="item active">
+                        <span class="d-block item-dot">
+                            <span class="d-block numb">1</span>
+                            <span class="text">Đăng nhập</span>
+                        </span>
+                    </li>
+                    <li class="item active">
+                        <span class="d-block item-dot">
+                            <span class="d-block numb">2</span>
+                            <span class="text">Thanh toán</span>
+                        </span>
+                    </li>
+                    <li class="item">
+                        <span class="d-block item-dot">
+                            <span class="d-block numb">3</span>
+                            <span class="text">Hoàn tất</span>
+                        </span>
+                    </li>
+                </ul>
+
+                <h3 class="cl_blue fs_24 text-uppercase">THANH TOÁN</h3>
+                <small class="fs_14 d-block mb-20">
+                    {% if customer.logged_in %}
+                        Điền vào các mục dưới đây để hoàn thành mua hàng của bạn!
+                    {% else %}
+                        <a href="{{__('LOGIN_URL')}}" class="login d-block fl cl_blue">
+                            <i class="fa fa-info-circle"></i>
+                            Bạn đã là thành viên? |
+                            <span class="text-uppercase fb">Đăng nhập</span>
+                        </a>
+                    {% endif %}
+                </small>
+
+                <div class="row tablet-cus">
+                    <div class="col-12 col-md-4">
+                        {% if customer.logged_in %}
+                            <div class="payment-page__item address-book mb-30">
+                                <header class="bg_main cl_white fs_16 d-flex align-items-center py-3 position-relative">
+                                    <img src="{{theme.uri}}/assets/img/icon/icon1.png" class="icon">
+                                    <i class="fa fa-home pr-3"></i>
+                                    <span class="text text-uppercase">THÔNG TIN GIAO HÀNG</span>
+                                </header>
+
+                                <div class="item-body bg_white p-3">
+                                    <div class="form-control p-0 border-0">
+                                        <label class="checkbox style2 d-flex align-items-center radio">
+                                            <input class="checkbox-input js-address1" type="radio" name="shippingInfo" value="1" checked="checked">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text fs_14">Chọn từ sổ địa chỉ</span>
+                                        </label>
+                                        <div class="filter-wrap ml-25 mt-14 mb-18">
+                                            <div class="selectbox w-100 border-0">
+                                                <select id="current-address"></select>
+                                                <i class="fa fa-caret-down"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-control p-0 border-0">
+                                        <label class="checkbox style2 d-flex align-items-center radio">
+                                            <input class="checkbox-input js-address2" type="radio" name="shippingInfo" value="2">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text fs_14">Vận chuyển đến địa chỉ khác</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="payment-page__item mb-30 js-otherAdd diachinhanhang d-none">
+                                <header class="bg_main cl_white fs_16 d-flex align-items-center py-3 position-relative">
+                                    <img src="{{theme.uri}}/assets/img/icon/icon1.png" alt="" class="icon">
+                                    <i class="fa fa-home pr-3"></i>
+                                    <span class="text text-uppercase title-change-point">ĐỊA CHỈ NHẬN HÀNG (KHÁC)</span>
+                                </header>
+
+                                <div class="item-body bg_white p-3 style2">
+                                    <input type="text" placeholder="Họ tên*" id="checkout-name" class="form-control mb-10"/>
+                                    <input type="text" placeholder="Email*" id="checkout-email" class="form-control mb-10" value="{{customer.email}}" disabled="disabled"/>
+                                    <input type="text" placeholder="Số điện thoại*" id="checkout-phone" class="form-control mb-10"/>
+                                    <input type="text" placeholder="Địa chỉ*" id="checkout-address" class="form-control mb-10"/>
+                                    <div class="filter-wrap mb-10">
+                                        <div class="selectbox w-100 border-0">
+                                            <select name="district" id="district">
+                                                <option value="" disabled="disabled" selected="selected">Tỉnh/Thành phố</option>
+                                                {% set regions = Region() %}
+                                                {% for region in regions %}
+                                                    <option value="{{region.id}}">{{region.name}}</option>
+                                                {% endfor %}
+                                            </select>
+                                            <i class="fa fa-caret-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="filter-wrap mb-10">
+                                        <div class="selectbox w-100 border-0">
+                                            <select name="ward" id="ward">
+                                                <option value="" disabled="disabled" selected="selected">Quận/Huyện</option>
+                                            </select>
+                                            <i class="fa fa-caret-down"></i>
+                                        </div>
+                                    </div>
+
+                                    <label class="checkbox style2 d-flex align-items-center">
+                                        <input class="checkbox-input" type="checkbox" id="add-new-address" checked="checked">
+                                        <span class="checkbox-icon"></span>
+                                        <span class="checkbox-text fs_14">Lưu vào sổ địa chỉ</span>
+                                    </label>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="payment-page__item mb-30 js-otherAdd">
+                                <header class="bg_main cl_white fs_16 d-flex align-items-center py-3 position-relative">
+                                    <img src="{{theme.uri}}/assets/img/icon/icon1.png" alt="" class="icon">
+                                    <i class="fa fa-home pr-3"></i>
+                                    <span class="text text-uppercase">THÔNG TIN GIAO HÀNG</span>
+                                </header>
+
+                                <div class="item-body bg_white p-3 style2">
+                                    <input type="text" placeholder="Họ tên*" id="checkout-name" class="form-control mb-10"/>
+                                    <input type="text" placeholder="Email*" id="checkout-email" class="form-control mb-10"/>
+                                    <input type="text" placeholder="Số điện thoại*" id="checkout-phone" class="form-control mb-10"/>
+                                    <input type="text" placeholder="Địa chỉ*" id="checkout-address" class="form-control mb-10"/>
+                                    <div class="filter-wrap mb-10">
+                                        <div class="selectbox w-100 border-0">
+                                            <select name="district" id="district">
+                                                <option value="" disabled="disabled" selected="selected">Tỉnh/Thành phố</option>
+                                                {% set regions = Region() %}
+                                                {% for region in regions %}
+                                                    <option value="{{region.id}}">{{region.name}}</option>
+                                                {% endfor %}
+                                            </select>
+                                            <i class="fa fa-caret-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="filter-wrap mb-10">
+                                        <div class="selectbox w-100 border-0">
+                                            <select name="ward" id="ward">
+                                                <option value="" disabled="disabled" selected="selected">Quận/Huyện</option>
+                                            </select>
+                                            <i class="fa fa-caret-down"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="payment-page__item mb-30">
+                            <header class="bg_main cl_white fs_16 d-flex align-items-center py-3 position-relative">
+                                <img src="{{theme.uri}}/assets/img/icon/icon1.png" alt="" class="icon">
+                                <i class="fa fa-truck pl-3 scalex-1"></i>
+                                <span class="text text-uppercase">nhà vận chuyển</span>
+                            </header>
+                            <div class="item-body bg_white p-3">
+                                {% if settings['nvc_title_1'] %}
+                                    <div class="form-control p-0 border-0">
+                                        <label class="checkbox style2 d-flex align-items-center radio">
+                                            <input class="checkbox-input shippingInfo3___" type="radio" name="shippingInfo3" vendor-name="{{settings['nvc_title_1']}}" vendor-desc="{{settings['nvc_desc_2']}}">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text fs_14">{{settings['nvc_title_1']}}</span>
+                                        </label>
+                                        <div class="filter-wrap ml-25 mt-14 mb-18 fl">{{settings['nvc_desc_1']}}</div>
+                                    </div>
+                                {% endif %}
+
+                                {% if settings['nvc_title_2'] %}
+                                    <div class="form-control p-0 border-0">
+                                        <label class="checkbox style2 d-flex align-items-center radio">
+                                            <input class="checkbox-input" type="radio" name="shippingInfo3" vendor-name="{{settings['nvc_title_2']}}" vendor-desc="{{settings['nvc_desc_2']}}">
+                                            <span class="checkbox-icon"></span>
+                                            <span class="checkbox-text fs_14">{{settings['nvc_title_2']}}</span>
+                                        </label>
+                                        <div class="filter-wrap ml-25 mt-14 mb-18 fl">{{settings['nvc_desc_2']}}</div>
+                                    </div>
+                                {% endif %}
+                                <input type="hidden" id="vendor-hidden"/>
+                                <input type="hidden" id="vendor-desc-hidden"/>
+                                <div class="form-control p-0 border-0">
+                                    Ghi chú của khách hàng
+                                    <textarea class="mb-10 mt-10 d-block w-100 form-textarea" name="customer_note" cols="30" rows="10" placeholder="Nội dung"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="payment-page__item mb-30">
+                            <header class="bg_main cl_white fs_16 d-flex align-items-center py-3 position-relative">
+                                <img src="{{theme.uri}}/assets/img/icon/icon1.png" alt="" class="icon">
+                                <i class="fa fa-credit-card pr-3"></i>
+                                <span class="text text-uppercase">THANH TOÁN</span>
+                            </header>
+                            <div class="item-body bg_white p-3">
+                                <span class="d-block fb fs_14 pb-1">Phương thức thanh toán</span>
+                                <div class="form-control p-0 border-0">
+                                    <label class="checkbox style2 d-flex align-items-center radio">
+                                        <input class="checkbox-input shippingInfo4___" type="radio" name="shippingInfo4" method-name="Thanh toán bằng tiền mặt khi nhận hàng">
+                                        <span class="checkbox-icon"></span>
+                                        <span class="checkbox-text fs_14">Thanh toán bằng tiền mặt khi nhận hàng</span>
+                                    </label>
+                                </div>
+
+                                <div class="form-control p-0 border-0">
+                                    <label class="checkbox style2 d-flex align-items-center radio">
+                                        <input class="checkbox-input" type="radio" name="shippingInfo4" method-name="Chuyển khoản ngân hàng">
+                                        <span class="checkbox-icon"></span>
+                                        <span class="checkbox-text fs_14">Chuyển khoản ngân hàng</span>
+                                    </label>
+                                    <div class="mb-10 mt-10 h-138 form-textarea fl">
+                                        {% for item in Bank() %}
+                                            {{item.bank_name}}
+                                            <br>
+                                            Tên Tài Khoản:
+                                            <span class="fr">{{item.user_name}}</span>
+                                            <br>
+                                            Số tài khoản:
+                                            <span class="fr">{{item.bank_number}}</span>
+                                            <br><br>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <input type="hidden" id="payment-method-hidden"/>
+
+                                <div class="bt-1 mt-4 pt-3">
+                                    <span class="d-block fs_16 pb-2">Hoá đơn</span>
+                                    <label class="checkbox style2">
+                                        <input type="checkbox" class="checkbox-input bill">
+                                        <span class="checkbox-icon"></span>
+                                        <span class="checkbox-text fs_14">Yêu cầu xuất hóa đơn GTGT cho đơn đặt hàng này</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row tablet-cus">
+                    <div class="col-12 col-md-4">
+                        <div class="payment-page__item mb-30">
+                            <header class="bg_main cl_white fs_16 d-flex align-items-center py-3 position-relative">
+                                <img src="{{theme.uri}}/assets/img/icon/icon1.png" alt="" class="icon">
+                                <i class="fa fa-user pr-3"></i>
+                                <span class="text text-uppercase">THÀNH VIÊN (V-CLUB)</span>
+                            </header>
+
+                            <div class="item-body bg_white p-3">
+                                <span class="d-block fs_16 mb-7">Tài khoản V-point:
+                                    {% set discount_point = 0 %}
+                                    {% if settings['v_point_to_vnd'] %}
+                                        {% set point = customerPoint() %}
+                                        {% set discount_point = point * settings['v_point_to_vnd'] %}
+                                    {% endif %}
+                                    <span class="cl_main" id="v_point">{{ discount_point | money }}
+                                        đ</span>
+                                </span>
+                                {% if customer.logged_in %}
+                                    <label class="checkbox style2 d-flex align-items-center">
+                                        <input class="checkbox-input" type="checkbox" name="shippingInfo5" id="check_use_v_point">
+                                        <span class="checkbox-icon"></span>
+                                        <span class="checkbox-text fs_14 fl">Sử dụng V-point để thanh toán</span>
+                                    </label>
+                                {% else %}
+                                    <a href="{{__('LOGIN_URL')}}" class="login d-block cl_blue fl">Vui lòng đăng nhập để sử dụng V-point
+                                        <i class="fa fa-question-circle pl-1"></i>
+                                    </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <div class="payment-page__item">
+                            <header class="bg_main cl_white fs_16 d-flex align-items-center py-3 position-relative">
+                                <img src="{{theme.uri}}/assets/img/icon/icon1.png" alt="" class="icon">
+                                <i class="fa fa-check pr-3"></i>
+                                <span class="text text-uppercase">KIỂM TRA LẠI ĐƠN HÀNG</span>
+                            </header>
+                            <div class="item-body bg_white px-3 fs_16">
+                                <form action="" class="discount-code d-flex flex-wrap align-items-center jusitfy-content-between">
+                                    <label for="input-discount" class="mb-1">Mã giảm giá</label>
+                                    <input type="text" id="discount-code" class="form-control mr-sm-10 mr-md-20 ml-auto mb-1"/>
+                                    <button class="reset-btn btn-blue fl mb-1" id="discount-code-apply">Áp dụng</button>
+                                </form>
+                            </div>
+                            <div class="item-footer bg_white table-responsive table-discount">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="fs_16 font-weight-normal br-0">Tên sản phẩm</th>
+                                            <th scope="col" class="fs_16 font-weight-normal">SL</th>
+                                            <th scope="col" class="fs_16 font-weight-normal text-right">Thành tiền</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Danh sách các sản phẩm -->
+                                        {% for item in cart.items %}
+                                            <tr>
+                                                <td class="fl br-0">{{item.product_title}}</td>
+                                                <td class="fl">{{item.quantity}}</td>
+                                                {% if item.stop_selling == 'availableSoon' or item.stop_selling == 'publishSoon' %}
+                                                    <td class="fl text-right">(chưa mở bán)</td>
+                                                {% else %}
+                                                    <td class="fl text-right __money__" data-money="{{item.price * item.quantity}}">{{(item.price * item.quantity) | money}}
+                                                        đ
+                                                    </td>
+                                                {% endif %}
+                                            </tr>
+                                        {% endfor %}
+
+                                        <tr class="fl text-right new-style">
+                                            <td colspan="2" class="pt-3">Thành tiền</td>
+                                            <td class="pt-3 __subtotal__">{{cart.total | money}}
+                                                đ
+                                            </td>
+                                        </tr>
+
+                                        <tr class="fl text-right new-style">
+                                            <td colspan="2">Phí vận chuyển ( Miễn phí vận chuyển cho đơn hàng trên 200k tại Tp. HCM và 300k trên toàn quốc.</td>
+                                            <td class="_shippingFee">0 đ</td>
+                                        </tr>
+
+                                        <tr class="fl text-right new-style">
+                                            <td colspan="2">Mã giảm giá</td>
+                                            <td class="magiamgia-checkout">0 đ</td>
+                                        </tr>
+
+                                        <tr class="fl text-right new-style">
+                                            <td colspan="2">Giảm giá V-point</td>
+                                            <td id="text_discount_v_point">0 đ</td>
+                                        </tr>
+
+                                        <tr class="text-right new-style">
+                                            <td colspan="2">TỔNG SỐ TIỀN (GỒM VAT)</td>
+                                            <td class="tongsotien-checkout">{{cart.total | money}}
+                                                đ
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="box-submit-checkout col-12">
+                        <button class="btn-submit-checkout reset-btn btn-blue fl mb-1">Hoàn tất</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript">
+
+        var subtotal = {{cart.total}};
+        var shipping_price = 0;
+        var discount = 0;
+        var customer_point_money = {{discount_point}};
+        var use_point = 0;
+        var discount_point = 0;
+
+        $('#check_use_v_point').change(updateTotalPrice);
+
+        // Load page
+        $(document).ready(function (e) {
+            var subTotal = 0;
+            $('.__money__').each(function (i, e) {
+                subTotal = subTotal + parseInt($(this).attr('data-money'));
+            });
+            $('.__subtotal__').html(formatMoney(subTotal) + ' ₫');
+            $('.tongsotien-checkout').html(formatMoney(subTotal) + ' ₫');
+        });
+
+        // Check mã giảm giá
+        $('#discount-code-apply').click(function (e) {
+            e.preventDefault();
+            var data = {
+                coupon: $('#discount-code').val(),
+                subtotal: subtotal
+            };
+
+            if (!data.coupon) {
+                $('#discount-code').addClass('noti-input-error');
+                toastr.error('Vui lòng nhập mã giảm giá!');
+                return;
+            } else {
+                $('#discount-code').removeClass('noti-input-error');
+            }
+
+            StoreAPI.checkCoupon(data, function (result) {
+                if (!result.code) {
+                    toastr.success("Mã giảm giá hợp lệ");
+                    $('.magiamgia-checkout').html(formatMoney(result.discount) + ' ₫');
+                    $('#discount-code-hidden').val(data.coupon);
+                    discount = result.discount;
+                    updateTotalPrice();
+                } else {
+                    $('#discount-code').addClass('noti-input-error');
+                    toastr.error("Mã giảm giá không hợp lệ");
+                }
+            })
+        });
+
+        // Cập nhật tổng tiền
+        function updateTotalPrice() {
+
+            var total = subtotal - discount + shipping_price;
+
+            if (customer_point_money) {
+                var checked_use_point = $('#check_use_v_point:checked').length > 0;
+                if (checked_use_point) {
+                    if (customer_point_money > total) {
+                        discount_point = total;
+                    } else {
+                        discount_point = customer_point_money;
+                    }
+                    use_point = discount_point / {{settings['v_point_to_vnd']}};
+
+                } else {
+                    use_point = 0;
+                    discount_point = 0;
+                }
+
+                $('#text_discount_v_point').html(formatMoney(discount_point) + ' đ');
+            }
+
+            total = total - discount_point;
+            $('.tongsotien-checkout').html(formatMoney(total) + ' ₫');
+        }
+
+        // Tính toán phí ship
+        function calcShipping() {
+            var region_id = $('#district').val();
+            var subregion_id = $('#ward').val();
+            var subtotal = {{cart.total}};
+
+            if (region_id && subregion_id) {
+                StoreAPI.getShipping(region_id, subregion_id, subtotal, function (result) {
+                    if (!result.code) {
+                        if (result.data && result.data.length) {
+                            if (result.data[0].price) {
+                                shipping_price = result.data[0].price;
+                                $('._shippingFee').html(formatMoney(shipping_price) + ' ₫');
+                                $('._shippingFee').attr('fee', shipping_price);
+                                updateTotalPrice();
+                            }
+                        }
+                    }
+                })
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        // Lấy danh sách tỉnh/quận
+        $('#district').change(function (e) {
+            var region_id = $(this).val();
+            StoreAPI.getSubRegion(region_id, function (result) {
+                var options = '';
+                var subRegions = result.data;
+                for (var i = 0; i < subRegions.length; i++) {
+                    options += `<option value="${subRegions[i].id}">${subRegions[i].name}</option>`;
+                }
+                $('#ward').html(options);
+            });
+            calcShipping();
+        });
+
+        $('#ward').change(function (e) {
+            calcShipping();
+        });
+    </script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('.shippingInfo4___').click();
+            $('.shippingInfo3___').click();
+
+            $.ajax({
+                type: 'GET',
+                url: '/customer/addressBook',
+                success: function (json) {
+                    var address_list = '';
+                    if (!json.code) {
+                        for (i = 0; i < json.listAddress.length; i++) {
+                            address_list += `<option data-name=${json.listAddress[i].name} data-phone=${json.listAddress[i].phone} data-address=${json.listAddress[i].address} data-region=${json.listAddress[i].region} data-subregion=${json.listAddress[i].subregion}>${json.listAddress[i].address}, ${json.listAddress[i].subregion_name}, ${json.listAddress[i].region_name}</option>`;
+                        }
+                    }
+                    if (address_list == '') {
+                        $('.title-change-point').html('THÔNG TIN GIAO HÀNG');
+                        $('.address-book').addClass('d-none');
+                        $('.diachinhanhang').removeClass('d-none');
+                    } else {
+                        $('#current-address').html(address_list);
+                    }
+                }
+            })
+        })
+
+        // Chọn phương thức thanh toán
+        $('input[name="shippingInfo4"]').click(function (e) {
+            var method = $(this).attr('method-name');
+            $('#payment-method-hidden').val(method);
+        });
+
+        // Chọn nhà vận chuyển
+        $('input[name="shippingInfo3"]').click(function (e) {
+            var vendor = $(this).attr('vendor-name');
+            var vendor_desc = $(this).attr('vendor-desc');
+            $('#vendor-hidden').val(vendor);
+            $('#vendor-desc-hidden').val(vendor_desc);
+        });
+
+        // Thanh toán
+        $('.btn-submit-checkout').click(function (e) {
+            e.preventDefault();
+            if ($('.bill').is(":checked")) {
+                var bill = 'Yêu cầu xuất hóa đơn GTGT cho đơn đặt hàng này';
+            }
+            vendor = $('#vendor-hidden').val();
+            vendor_desc = $('#vendor-desc-hidden').val();
+
+            var data = {};
+            data.email = $('#checkout-email').val();
+            data.payment_method = $('#payment-method-hidden').val();
+            data.coupon = $('#discount-code').val();
+            data.shipping_price = shipping_price;
+            data.note = $('textarea[name="customer_note"]').val();
+            data.metafield = vendor + '</br>' + vendor_desc + '</br>' + bill;
+            data.use_point = use_point;
+
+            var type_of_address_book = $('input[name="shippingInfo"]:checked').val();
+
+            if (type_of_address_book == 1 && $('.address-book').is(":visible")) {
+                data.name = $('#current-address').find('option:selected').attr('data-name');
+                data.phone = $('#current-address').find('option:selected').attr('data-phone');
+                data.address = $('#current-address').find('option:selected').attr('data-address');
+                data.region = $('#current-address').find('option:selected').attr('data-region');
+                data.subregion = $('#current-address').find('option:selected').attr('data-subregion');
+            } else {
+                data.name = $('#checkout-name').val();
+                data.phone = $('#checkout-phone').val();
+                data.address = $('#checkout-address').val();
+                data.region = $('#district').val();
+                data.subregion = $('#ward').val();
+            }
+
+            if (!data.name) {
+                $('#checkout-name').addClass('noti-input-error');
+                toastr.error("Vui lòng nhập họ tên");
+                return;
+            } else {
+                $('#checkout-name').removeClass('noti-input-error');
+            }
+
+            if (!data.email) {
+                $('#checkout-email').addClass('noti-input-error');
+                toastr.error("Vui lòng nhập email");
+                return;
+            } else {
+                $('#checkout-email').removeClass('noti-input-error');
+            }
+
+            if (!data.email.match("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$")) {
+                $('#checkout-email').addClass('noti-input-error');
+                toastr.error('Email không đúng định dạng!');
+                return;
+            } else {
+                $('#checkout-email').removeClass('noti-input-error');
+            }
+
+            if (!data.phone) {
+                $('#checkout-phone').addClass('noti-input-error');
+                toastr.error("Vui lòng nhập số điện thoại");
+                return;
+            } else {
+                $('#checkout-phone').removeClass('noti-input-error');
+            }
+
+            if (!isNumber(data.phone) || data.phone.length < 10) {
+                $('#checkout-phone').addClass('noti-input-error');
+                toastr.error("Số điện thoại không đúng định dạng");
+                return;
+            } else {
+                $('#checkout-phone').removeClass('noti-input-error');
+            }
+
+            if (!data.address) {
+                $('#checkout-address').addClass('noti-input-error');
+                toastr.error("Vui lòng nhập địa chỉ giao hàng");
+                return;
+            } else {
+                $('#checkout-address').removeClass('noti-input-error');
+            }
+
+            if (!data.region) {
+                $('#district').addClass('noti-input-error');
+                toastr.error("Vui lòng chọn Tỉnh/Thành phố");
+                return;
+            } else {
+                $('#district').removeClass('noti-input-error');
+            }
+
+            if (!data.subregion) {
+                $('#ward').addClass('noti-input-error');
+                toastr.error("Vui lòng chọn Quận/Huyện");
+                return;
+            } else {
+                $('#ward').removeClass('noti-input-error');
+            }
+
+            if ($('#add-new-address').is(":checked") && $('input[name="shippingInfo"]').is(":checked")) {
+                $.ajax({type: 'post', url: '/api/create/AddressBook', data: data, success: function (json) {}})
+            }
+
+            $.ajax({
+                url: "/api/store-order",
+                type: "POST",
+                data: data,
+                success: function (result) {
+                    if (!result.code) {
+                        if (result.pre_order_id) {
+                          StoreAPI.sendEmail(result.pre_order_id);
+                          StoreAPI.sendEmailAdmin(result.pre_order_id);
+                        }
+                        if (result.order_id) {
+                          StoreAPI.sendEmail(result.order_id);
+                          StoreAPI.sendEmailAdmin(result.order_id);
+                        }
+                        toastr.success('Cảm ơn bạn đã mua hàng của chúng tôi!');
+                        var session = {};
+                        session.key = "order_id";
+                        if (result.order_id) {
+                          session.value = result.order_id;
+                        } else {
+                          session.value = result.pre_order_id;
+                        }
+                        $.ajax({
+                            url: "/api/setSession",
+                            type: "POST",
+                            data: session,
+                            success: function (result) {
+                                if (!result.code) {
+                                    setTimeout(function () {
+                                        location.href = '{{__("CHECKOUT_SUCCESS_URL")}}';
+                                    }, 1000);
+                                }
+                            }
+                        });
+                    } else {
+                        toastr.error(result.message);
+                    }
+                }
+            })
+        })
+    </script>
+    <!-- <script type="text/javascript">
+    function sendEmailAdminPreOrder(orderID) {
+      $.ajax({
+        type: 'GET',
+        url: '/api/order/' + orderID + '/sendEmailAdminPreOder',
+        success: function (result) {
+          return;
+        }
+      })
+    }
+    </script> -->
+{% endblock content %}

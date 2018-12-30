@@ -1,0 +1,137 @@
+{% extends "layout.twig" %}
+
+{% block pre_include %}
+    <title>{{article.title}}</title>
+{% endblock %}
+
+{% block post_include %}{% endblock post_include %}
+
+{% block content %}
+    {% set blog = Blog(article.blogs[0].handle) %}
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <!-- BREADCRUMB -->
+        <nav class="breadcrumbk">
+            <div class="container">
+                <ul class="reset-list breadcrumbk-list">
+                    <li class="item">
+                        <a href="/" class="link">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="{{blog.url}}" class="link">{{blog.title}}</a>
+                    </li>
+                    <li class="item active">{{article.title}}</li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /BREADCRUMB -->
+
+        <!-- NEWS -->
+        <section class="news">
+            <h3 class="d-none">NEWS</h3>
+
+            <!--figure class="bestSelling-banner"><img src="../assets/img/demo/best-selling/best-selling--banner.png" alt="Top 100 sách bán chạy nhất"></figure-->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-8 mb-4 mb-lg-0">
+                        <div class="content-detail border-table-s1  mb-10">
+                            <p class="titlek fm">{{article.title}}</p>
+                            {{article.content|raw}}
+                        </div>
+
+                        <div class="social-wrap">
+                            <span class="text">Share:</span>
+                            <ul class="reset-list list">
+                                <li class="item">
+                                    <a href="https://www.facebook.com/sharer/sharer.php?u={{url}}" class="link fb" target="_blank" title="Facebook">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+
+                                <li class="item">
+                                    <a href="https://plus.google.com/share?url={{url}}" class="link gp" target="_blank" title="Google Plus">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </li>
+
+                                <li class="item">
+                                    <a href="http://pinterest.com/pin/create/button/?url={{url}}" target="_blank" class="link pin" title="Pinterest">
+                                        <i class="fa fa-pinterest"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-4 news-aside">
+                        <div class="news-aside__block">
+                            <p class="titlek text-uppercase cl_blue fm">{{settings.ttnb_title}}</p>
+
+                            <ul class="reset-list news-aside__list style2">
+                                {% for items in settings.ttnb_baiviet %}
+                                    {% set item = Article(items.handle) %}
+                                    <li class="item">
+                                        <div class="thumbnail">
+                                            <figure class="img hasLink">
+                                                <img src="{{item.image|upload_url}}" alt="{{item.title}}">
+                                                <a href="{{item.url}}" class="link" title="{{item.title}}"></a>
+                                            </figure>
+                                        </div>
+                                        <div class="content">
+                                            <a href="{{item.url}}" class="name fm" title="{{item.title}}">{{item.title}}</a>
+                                            <p class="summary fl mb-0">{{item.created_at|date('d/m/Y')}}</p>
+                                        </div>
+                                    </li>
+
+                                {% endfor %}
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% if ViewedProducts(12) | length > 0 %}
+                    <div class="bg_white item-viewed">
+                        <p class="titlek text-uppercase cl_blue fm">Sản phẩm đã xem</p>
+
+                        <div class="slick js-slick-5 nav-slick nav-slick-2">
+
+                            {% for item in ViewedProducts(12) %}
+                                <div class="book-list__item hasLink" data-id="{{item.id}}">
+                                    <a href="{{item.url}}" class="link"></a>
+                                    <figure class="img">
+                                        <img src="{{item.image|upload_url}}" alt="img11" class="img_cen img_full img_fit"/>
+                                    </figure>
+                                    <div class="content">
+                                        <h5 class="title fs_16">{{item.title}}</h5>
+                                        <ul class="reset-list price d-flex align-items-center justify-content-between flex-wrap">
+                                            <li class="price-new">{{item.price|money('.')}}
+                                                ₫</li>
+                                            {% if item.price_compare %}
+                                                <li class="price-old">{{item.price_compare|money('.')}}
+                                                    đ</li>
+                                                <li class="discount">-{{((1-((item.price/item.price_compare)))*100)|round(0,'floor')}}%</li>
+                                            {% endif %}
+                                        </ul>
+                                        <div class="rating without-caption">
+                                            <input type="text" class="d-none kv-fa js-rating rating-loading daily-foods__star" value="{{item.rating}}" title="" readonly="readonly">
+                                            <span class="d-inline-block pl-2 numb">(3)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                {% endif %}
+
+            </div>
+        </section>
+        <!-- /NEWS -->
+    </main>
+    <!-- /MAIN CONTENT -->
+
+{% endblock content %}

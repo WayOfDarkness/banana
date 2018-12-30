@@ -1,0 +1,46 @@
+{% extends "layout.twig" %}
+{% block pre_include %}
+    <title>{{gallery.title}}</title>
+{% endblock %}
+{% block post_include %}{% endblock post_include %}
+{% block content %}
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <!-- BREADCRUMB -->
+        <nav class="breadcrumbk">
+            <div class="container">
+                <ul class="reset-list breadcrumbk-list">
+                    <li class="item">
+                        <a href="/" class="link">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                    <li class="item active">{{gallery.title}}</li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /BREADCRUMB -->
+
+        <!-- PROVIDER -->
+        <section class="provider">
+            <h3 class="d-none">PROVIDER</h3>
+            <div class="container">
+                <ul class="reset-list provider-list">
+                    {% for item in gallery.photos %}
+
+                        <li class="item">
+                            <figure class="img hasLink mb-0">
+                                <img src="{{item.image|upload_url}}" alt="{{item.title}}">
+                                <a href="{{item.link}}" class="link" target="_blank" title="{{item.title}}"></a>
+                            </figure>
+                        </li>
+
+                    {% endfor %}
+
+                </ul>
+            </div>
+        </section>
+        <!-- /PROVIDER -->
+    </main>
+    <!-- /MAIN CONTENT -->
+{% endblock content %}

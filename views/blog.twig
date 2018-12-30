@@ -1,0 +1,165 @@
+{% extends "layout.twig" %}
+
+{% block pre_include %}
+    <title>{{blog.title}}</title>
+{% endblock %}
+{% block post_include %}
+    <script src="{{shop.static}}/libs/twbsPagination.min.js"></script>
+    <script type="text/javascript">
+        var page_number,
+            total;
+        page_number = jQuery(document).find('#pagination').data('page_number');
+        total = jQuery(document).find('#pagination').data('total');
+
+        if (total && parseInt(total) > 1) {
+            jQuery(document).find('#pagination').twbsPagination('destroy');
+            jQuery(document).find('#pagination').twbsPagination({
+                totalPages: parseInt(total),
+                visiblePages: 7,
+                startPage: parseInt(page_number),
+                initiateStartPageClick: false,
+                paginationClass: 'reset-list paginationk-list',
+                pageClass: 'item',
+                first: false,
+                prev: '<span></span>',
+                prevClass: 'item',
+                next: '<span></span>',
+                nextClass: 'item',
+                activeClass: 'active',
+                disabledClass: 'disabled',
+                anchorClass: 'link',
+                last: false,
+                href: false,
+                onPageClick: function (event, page) {
+                    var href = location.href;
+                    var s = location.search;
+                    if (!s || !s.indexOf('?page=')) {
+                        if (page == 1) 
+                            href = location.pathname;
+                        else 
+                            href = location.pathname + '?page=' + page;
+                        }
+                    else {
+                        if (href.indexOf('&page=') > -1) 
+                            href = href.substring(0, href.indexOf('&page='));
+                        if (page > 1) 
+                            href = href + '&page=' + page;
+                        }
+                    location.href = href;
+                }
+            });
+        }
+    </script>
+
+{% endblock %}
+
+{% block content %}
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <!-- BREADCRUMB -->
+        <nav class="breadcrumbk">
+            <div class="container">
+                <ul class="reset-list breadcrumbk-list">
+                    <li class="item">
+                        <a href="/" class="link">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                    <li class="item active">{{blog.title}}</li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /BREADCRUMB -->
+
+        <!-- NEWS -->
+        <section class="news">
+            <h3 class="d-none">NEWS</h3>
+
+            <figure class="bestSelling-banner">
+                <img src="{{blog.image|upload_url}}" alt=""></figure>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-8 mb-4 mb-lg-0">
+                        <p class="titlek text-uppercase cl_blue fm">{{blog.description}}</p>
+
+                        <div class="row row-sm news-list">
+                            {% for item in blog.articles %}
+
+                                <article class="col-12 col-sm-6 item">
+                                    <figure class="img hasLink">
+                                        <img src="{{item.image|upload_url}}" alt="{{item.title}}">
+                                        <a href="{{item.url}}" class="link" title="{{item.title}}"></a>
+                                    </figure>
+                                    <div class="content">
+                                        <p class="date">{{item.created_at|date('d/m/Y')}}</p>
+                                        <a href="{{item.url}}" class="name fm" title="{{item.title}}">{{item.title}}</a>
+                                        <p class="summary mb-0">{{item.description}}
+                                        </p>
+                                    </div>
+                                </article>
+
+                            {% endfor %}
+
+                        </div>
+
+                        <!-- PAGINATION -->
+                        <nav class="paginationk right">
+                            <div id="pagination" data-page_number="{{paginate.current_page}}" data-total="{{paginate.total_pages}}"></div>
+
+                        </nav>
+                        <!-- /PAGINATION -->
+                    </div>
+
+                    <div class="col-12 col-lg-4 news-aside">
+                        <div class="news-aside__block">
+                            <p class="titlek text-uppercase cl_blue fm">Tin được xem nhiều</p>
+
+                            <ul class="reset-list news-aside__list">
+                                {% for item in Article(1, 4,'view-desc') %}
+                                    {% if item.blogs[0].handle!='tac-gia' %}
+                                        <li class="item">
+                                            <div class="thumbnail">
+                                                <figure class="img hasLink">
+                                                    <img src="{{item.image|upload_url}}" alt="{{item.title}}">
+                                                    <a href="{{item.url}}" class="link" title="{{item.title}}"></a>
+                                                </figure>
+                                            </div>
+                                            <div class="content">
+                                                <a href="{{item.url}}" class="name" title="{{item.title}}">{{item.title}}</a>
+                                                <p class="summary fl mb-0">{{item.description}}</p>
+                                            </div>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+
+                        <div class="news-aside__block">
+                            <p class="titlek text-uppercase cl_blue fm">Tin tức mới</p>
+
+                            <ul class="reset-list news-aside__list">
+                                {% for item in Article(1, 4,'created_at-desc') %}
+                                    <li class="item">
+                                        <div class="thumbnail">
+                                            <figure class="img hasLink">
+                                                <img src="{{item.image|upload_url}}" alt="{{item.title}}">
+                                                <a href="{{item.url}}" class="link" title="{{item.title}}"></a>
+                                            </figure>
+                                        </div>
+                                        <div class="content">
+                                            <a href="{{item.url}}" class="name" title="{{item.title}}">{{item.title}}</a>
+                                            <p class="summary fl mb-0">{{item.description}}</p>
+                                        </div>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /NEWS -->
+    </main>
+    <!-- /MAIN CONTENT -->
+{% endblock content %}

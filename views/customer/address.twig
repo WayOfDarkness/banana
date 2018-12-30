@@ -1,0 +1,162 @@
+{% extends "layout.twig" %}
+
+{% block pre_include %}
+    <title>Sổ địa chỉ</title>
+{% endblock %}
+
+{% block content %}
+    <main class="main-content">
+        <nav class="breadcrumbk">
+            <div class="container">
+                <ul class="reset-list breadcrumbk-list">
+                    <li class="item">
+                        <a href="/" class="link">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="{{__('CUSTOMER_EDIT_ACCOUNT_URL')}}" class="link">Tài khoản</a>
+                    </li>
+                    <li class="item active">Sổ địa chỉ</li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="dashboard mb-35">
+            <div class="container dashboard-wrap">
+                <aside class="dashboard-aside js-dbAside">
+                    <button class="reset-btn dashboard-aside--close f-b d-lg-none">
+                        <i class="fa fa-angle-left"></i>Trở về</button>
+
+                    <div class="dashboard-aside--inner js-blurOff">
+                        <h4 class="title-1 text-uppercase fs_24 cl_blue">tài khoản</h4>
+
+                        <ul class="reset-list dashboard-aside__list">
+                            <li class="item">
+                                <a href="{{__('CUSTOMER_EDIT_ACCOUNT_URL')}}" class="d-block fl">Thông tin tài khoản</a>
+                            </li>
+                            <li class="item active">
+                                <a href="/customer/addressBook?view=customer/address" class="d-block fl">Sổ địa chỉ</a>
+                            </li>
+                            <li class="item">
+                                <a href="{{__('SAVE_POINT_URL')}}" class="d-block fl">Điểm tích luỹ</a>
+                            </li>
+                            <li class="item">
+                                <a href="{{__('CUSTOMER_ORDERS_URL')}}" class="d-block fl">Lịch sử đơn hàng</a>
+                            </li>
+                            <li class="item">
+                                <a href="{{__('CUSTOMER_WISHLIST_URL')}}" class="d-block fl">Yêu thích</a>
+                            </li>
+                            <li class="item">
+                                <a href="/customer/subscribe?view=customer/subcribe" class="d-block fl">Đăng ký nhận tin điện tử</a>
+                            </li>
+                            <li class="item">
+                                <a href="{{__('REFERRAL_URL')}}" class="d-block fl">Mã giới thiệu</a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <div class="dashboard-content">
+                    <btn class="mb-15 reset-btn dashboard-aside--open js-dbAsideTrigger fb fs_15 d-block d-lg-none">
+                        <i class="fa fa-hand-point-right cl_blue mr-1"></i>Bảng thông tin</btn>
+
+                    <div class="dashboard-content__detail pb-2">
+                        <h4 class="title-1 text-uppercase fs_24 cl_blue mb-25">sổ địa chỉ</h4>
+
+                        <button class="reset-btn btn-blue fl btn-addAddr">+ Thêm địa chỉ mới</button>
+
+                        <div class="text fl pt-max-sm-40 lh-24 d-flex flex-wrap">
+                            <div class="col-12 col-sm-6 px-20 pb-3">
+                                <h5 class="title text-uppercase fm">địa chỉ mặc định</h5>
+                                <p class="fm mb-0">Địa chỉ thanh toán mặc định</p>
+                                <p class="fl mb-0 default-billing">
+                                    Bạn không có địa chỉ thanh toán mặc định
+                                </p>
+                                <p class="fm mb-0">Địa chỉ giao hàng mặc định</p>
+                                <p class="fl mb-0 default-shipping">
+                                    Bạn không có địa chỉ giao hàng mặc định
+                                </p>
+                            </div>
+                            <div class="col-12 col-sm-6 px-20 pb-3 selector-others-addresses">
+                                <h5 class="title text-uppercase fm others-addresses">địa chỉ khác</h5>
+                                <p class="fl address-none">Bạn không có địa chỉ khác trong Sổ địa chỉ.</p>
+                            </div>
+
+                            <div class="come-back w-100 mx-20 bt-1 fm pt-2">
+                                <a href="javascript:history.back(-1)" class="d-block cl_blue">
+                                    <i class="fa fa-angle-double-left"></i>
+                                    Quay lại
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+
+        $('.btn-addAddr').click(function () {
+            location.href = '/customer/addressBook?view=customer/create-new-address';
+        })
+
+        $(document).ready(function () {
+            $.ajax({
+                type: 'GET',
+                url: '/customer/addressBook',
+                success: function (json) {
+                    var address_list = '';
+                    if (!json.code) {
+                        for (i = 0; i < json.listAddress.length; i++) {
+                            if (json.listAddress[i].default_shipping == 0 && json.listAddress[i].default_billing == 0) {
+                                address_list += `<p class="fl mb-0">
+                                    ${json.listAddress[i].name}
+                                    <br>
+                                    ${json.listAddress[i].address}
+                                    <br>
+                                    ${json.listAddress[i].subregion_name}, ${json.listAddress[i].region_name}
+                                    <br>
+                                    Tel: ${json.listAddress[i].phone}
+                                </p>
+                                <div class="mb-2">
+                                    <a href="/api/addressBook/${json.listAddress[i].id}?view=customer/edit-address" class="link fm cl_blue mb-2">Sửa địa chỉ</a>
+                                    |
+                                    <a href="javascript:;" class="link fm cl_blue mb-2 del-address" data-id="${json.listAddress[i].id}">Xóa địa chỉ</a>
+                                </div>`;
+                            }
+                            if (json.listAddress[i].default_shipping == 1) {
+                                $('.default-shipping').html(`${json.listAddress[i].name}<br>${json.listAddress[i].address}<br>${json.listAddress[i].subregion_name}, ${json.listAddress[i].region_name}<br>Tel: ${json.listAddress[i].phone}`);
+                                var change = `<a href="/api/addressBook/${json.listAddress[i].id}?view=customer/edit-address" class="link fm cl_blue d-block mb-2">Thay đổi Địa chỉ giao hàng</a>`;
+                                $(change).insertAfter('.default-shipping');
+                            }
+                            if (json.listAddress[i].default_billing == 1) {
+                                $('.default-billing').html(`${json.listAddress[i].name}<br>${json.listAddress[i].address}<br>${json.listAddress[i].subregion_name}, ${json.listAddress[i].region_name}<br>Tel: ${json.listAddress[i].phone}`);
+                                var change = `<a href="/api/addressBook/${json.listAddress[i].id}?view=customer/edit-address" class="link fm cl_blue d-block mb-2">Thay đổi Địa chỉ thanh toán</a>`;
+                                $(change).insertAfter('.default-billing');
+                            }
+                            $('.address-none').hide();
+                        }
+                    }
+                    $(address_list).insertAfter('.others-addresses');
+                }
+            })
+        })
+
+        $('.selector-others-addresses').on('click', '.del-address', function () {
+            var id = $(this).attr('data-id');
+            $.ajax({
+                type: 'delete',
+                url: '/api/delete/AddressBook/' + id,
+                success: function (json) {
+                    toastr.success('Xóa sổ địa chỉ thành công');
+                    setTimeout(function () {
+                        location.reload();
+                    }, 200);
+                }
+            })
+        })
+    </script>
+
+{% endblock content %}

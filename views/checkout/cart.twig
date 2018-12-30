@@ -1,0 +1,253 @@
+{% extends "layout.twig" %}
+
+{% block pre_include %}
+    <title>Giỏ hàng</title>
+{% endblock %}
+
+{% block content %}
+
+    <main class="main-content">
+        <nav class="breadcrumbk">
+            <div class="container">
+                <ul class="reset-list breadcrumbk-list">
+                    <li class="item">
+                        <a href="/" class="link">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                    <li class="item active">Giỏ hàng</li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="cart-page pt-20">
+            <h3 class="d-none">cart-page</h3>
+            <div class="container">
+                <ul class="reset-list cart-page__progress-bar d-flex align-items-center justify-content-between">
+                    <li class="item active">
+                        <span class="d-block item-dot">
+                            <span class="d-block numb">1</span>
+                            <span class="text">Đăng nhập</span>
+                        </span>
+                    </li>
+                    <li class="item active">
+                        <span class="d-block item-dot">
+                            <span class="d-block numb">2</span>
+                            <span class="text">Thanh toán</span>
+                        </span>
+                    </li>
+                    <li class="item">
+                        <span class="d-block item-dot">
+                            <span class="d-block numb">3</span>
+                            <span class="text">Hoàn tất</span>
+                        </span>
+                    </li>
+                </ul>
+
+                <h3 class="title cl_blue fs_24 text-uppercase mt-65 mb-25">giỏ hàng</h3>
+                {% if cart.items %}
+                    <div class="table-responsive-md">
+                        <table class="table">
+                            <thead>
+                                <tr class="fl">
+                                    <th class="fr font-weight-normal" scope="col">Gỡ bỏ</th>
+                                    <th class="fr font-weight-normal" scope="col">Hình ảnh</th>
+                                    <th class="fr font-weight-normal" scope="col">Tên sản phẩm</th>
+                                    <th class="fr font-weight-normal" scope="col">Giá</th>
+                                    <th class="fr font-weight-normal" scope="col">Số lượng</th>
+                                    <th class="fr font-weight-normal" scope="col">Thành tiền</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in cart.items %}
+                                    <tr class="fl _fl" data-variant-id="{{item.variant_id}}">
+                                        <th class="fr font-weight-normal" scrope="row">
+                                            <button class="reset-btn btn-del">&times;</button>
+                                        </th>
+                                        <td><img src="{{item.image | upload_url}}" class="d-block mx-auto"></td>
+                                        <td>{{item.product_title}}</td>
+
+                                        <td class="cl_red fb _price" data-type='{{item.stop_selling}}' data-price='{{item.price}}'>{{item.price | money}}
+                                            ₫</td>
+                                        <td>
+                                            <div class="quantity justify-content-center">
+                                                <button class="reset-btn quantity-btn minus-btn" type="button">-</button>
+                                                <input type="text" class="quantity-value" value="{{item.quantity}}">
+                                                <button class="reset-btn quantity-btn plus-btn" type="button">+</button>
+                                            </div>
+                                        </td>
+
+                                        {% if item.stop_selling == 'availableSoon' or item.stop_selling == 'publishSoon' %}
+                                            <td class="cl_red fb">(chưa mở bán)</td>
+                                        {% else %}
+                                            <td class="cl_red fb _totalPrice" data-product-subtotal="{{item.price * item.quantity}}">{{(item.price * item.quantity) | money}}
+                                                ₫
+                                            </td>
+                                        {% endif %}
+                                    </tr>
+                                {% endfor %}
+
+                                <tr class="fl">
+                                    <td colspan="6" class="p-3">
+                                        <div class="d-flex flex-wrap justify-content-between">
+                                            <a href="/" class="btn-blue mr-10">Chọn thêm</a>
+                                            <button class="reset-btn btn-blue ml-auto __removeAllItems">Xoá hết giỏ hàng</button>
+                                            <button class="reset-btn btn-blue ml-10 __updateAllItems">Cập nhật giỏ hàng</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="cart-page__footer">
+                        <div class="row">
+                            <div class="col-12 col-md-6 mb-15 max-md-order-2">
+                                <figure class="img hasLink h-100">
+                                    <a href="javascript:;" class="link"></a>
+                                    <img src="{{theme.uri}}/assets/img/demo/img98.png" alt="" class="img_full img_fit">
+                                </figure>
+                            </div>
+                            <div class="col-12 col-md-6 mb-15 max-md-order-1">
+                                <div class="bg_white px-3 fs_16 h-100">
+                                    <header class="bb-1 py-2 fm">
+                                        Giỏ hàng
+                                    </header>
+                                    <ul class="reset-list text-right py-2">
+                                        <li class="d-flex py-1 fs_14">
+                                            <span class="col-8">
+                                                Tạm tính:
+                                            </span>
+                                            <span class="col-4 _total">
+                                                {{cart.total | money}}
+                                                đ
+                                            </span>
+                                        </li>
+                                        <li class="d-flex py-1 fm">
+                                            <span class="col-8">
+                                                Tổng số tiền (Gồm VAT)
+                                            </span>
+                                            <span class="col-4 __total">
+                                                {{cart.total | money}}
+                                                đ
+                                            </span>
+                                        </li>
+                                    </ul>
+
+                                    <footer class="bt-1 text-right py-2">
+                                        <button class="reset-btn btn-blue fs_14 __checkout">Thanh toán</button>
+                                        <span class="fs_12 d-block pt-2">(Giảm giá trên web chỉ áp dụng cho bán lẻ)</span>
+                                    </footer>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="table-responsive-md">{{settings.cart_null | raw}}</div>
+                {% endif %}
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript">
+        // Function format money
+        function formatMoney(num) {
+            if (num) 
+                num = num.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+            return num;
+        };
+
+        // Remove item
+        $(".btn-del").click(function (e) {
+            var variant_id = $(this).closest('.fl').attr('data-variant-id');
+            StoreAPI.removeItem(variant_id, function () {
+                toastr.success("Xóa sản phẩm thành công");
+                setTimeout(function () {
+                    location.reload();
+                }, 1000);
+            })
+        });
+
+        // Load page
+        $(document).ready(function (e) {
+            var subTotal = 0;
+            $('._totalPrice').each(function (i, e) {
+                subTotal = subTotal + parseInt($(this).attr('data-product-subtotal'));
+            });
+            $('._total').html(formatMoney(subTotal) + ' ₫');
+            $('.__total').html(formatMoney(subTotal) + ' ₫');
+        });
+
+        // Change quantity
+        $(".quantity-btn").click(function (e) {
+            e.preventDefault();
+            var quantity = $(this).parent().find('input').val();
+            var price = $(this).closest('.fl').find('._price').attr('data-price');
+            var type = $(this).closest('.fl').find('._price').attr('data-type');
+            var upcomingPrice;
+            if ($(this).hasClass('minus-btn') && quantity > 1) {
+                $(this).parent().find('input').val(parseInt(quantity) - 1);
+                upcomingPrice = price * (parseInt(quantity) - 1);
+            } else if ($(this).hasClass('plus-btn')) {
+                $(this).parent().find('input').val(parseInt(quantity) + 1);
+                upcomingPrice = price * (parseInt(quantity) + 1);
+            } else {
+                upcomingPrice = price;
+            }
+
+            if (type != 'availableSoon' && type != 'publishSoon') {
+                $(this).closest('.fl').find('._totalPrice').html(formatMoney(upcomingPrice) + ' ₫');
+                $(this).closest('.fl').find('._totalPrice').attr('data-product-subtotal', upcomingPrice);
+
+                var subTotal = 0;
+                $('._totalPrice').each(function (i, e) {
+                    subTotal = subTotal + parseInt($(this).attr('data-product-subtotal'));
+                });
+                $('._total').html(formatMoney(subTotal) + ' ₫');
+                $('.__total').html(formatMoney(subTotal) + ' ₫');
+            }
+        });
+
+        // Remove cart
+        $(".__removeAllItems").click(function (e) {
+            StoreAPI.clear(function () {
+                toastr.success("Xóa giỏ hàng thành công");
+                setTimeout(function () {
+                    location.reload();
+                }, 1000);
+            });
+        })
+
+        // Update cart
+        $(".__updateAllItems").click(function (e) {
+            var s = $(this);
+            s.closest('.table-responsive-md').find('._fl').each(function (i, e) {
+                var variant_id = $(e).attr('data-variant-id');
+                var quantity = $(e).find('.quantity-value').val();
+                StoreAPI.changeItem(variant_id, quantity, function () {});
+            });
+            toastr.success("Cập nhật giỏ hàng thành công");
+            setTimeout(function () {
+                location.reload();
+            }, 1000);
+        });
+
+        // Checkout
+        $(".__checkout").click(function (e) {
+            var s = $(this);
+
+            if (s.closest('.cart-page').find('._fl').length < 1) {
+                toastr.error('Vui lòng thêm sản phẩm vào giỏ hàng trước khi tiến hành đặt hàng!');
+                return;
+            }
+
+            s.closest('.cart-page').find('._fl').each(function (i, e) {
+                var variant_id = $(e).attr('data-variant-id');
+                var quantity = $(e).find('.quantity-value').val();
+                StoreAPI.changeItem(variant_id, quantity, function () {});
+            });
+            setTimeout(function () {
+                location.href = '/dat-hang';
+            }, 1000);
+        });
+    </script>
+{% endblock content %}

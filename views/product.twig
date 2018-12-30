@@ -1,0 +1,889 @@
+{% extends "layout.twig" %}
+{% block pre_include %}
+    <title>{{product.title}}</title>
+    {% include 'snippet/rich-snippet.twig' %}
+{% endblock pre_include %}
+
+{% block post_include %}
+
+    <script>
+        $('.add-cart1').click(function (e) {
+            e.preventDefault();
+            var variant_id = $('input[name="variant_id"]').val();
+            var quantity = $('.quantity-value').val();
+            if (quantity == 0) {
+                StoreAPI.addItem(variant_id, quantity, function () {
+                    toastr.remove();
+                    toastr.success("Thêm vào giỏ hàng thành công");
+                    setTimeout(function () {
+                        window.location.reload();
+                    }, 1000);
+                });
+            } else {
+                toastr.remove();
+                toastr.error("Số lượng sản phẩm tối thiểu là 1!");
+                return;
+            }
+        })
+        $('.add-cart2').click(function (e) {
+            e.preventDefault();
+            var s = $(this);
+            var variant_id = $('input[name="variant_id"]').val();
+            var quantity = $('.quantity-value').val();
+            if (quantity >= 1) {
+                StoreAPI.addItem(variant_id, quantity, function (result) {
+                    if (!result.code) {
+                        toastr.success("Sản phẩm đã được thêm vào giỏ hàng thành công");
+                        StoreAPI.getCart(function (json) {
+                            var item = "";
+                            var count = 0;
+                            $.each(json.cart.items, function (i, e) {
+                                count = count + e.quantity;
+                                item += `<li class="item clearfix"><div class="left-col"><img src="/uploads/${e.image}" alt="${e.product_title}" title="${e.product_title}" class="d-block w-100"/></div><div class="right-col position-relative fl"><h5 class="name fs_14 fr">${e.product_title}</h5>`;
+                                if (e.stop_selling == 'availableSoon' || e.stop_selling == 'publishSoon') {
+                                    item += `<span class="price">(chưa mở bán)</span>`;
+                                } else {
+                                    item += `<span class="price _money_price_" data-money="${e.quantity * e.price}">${e.quantity} x ${formatMoney(e.price)} đ</span>`;
+                                }
+                                item += `<i class="fa fa-pencil-square-o p-3" aria-hidden="true"></i></div></li>`;
+                            });
+                            var subTotal = 0;
+                            $(document).find('._money_price_').each(function (i, e) {
+                                subTotal = subTotal + parseInt($(this).attr('data-money'));
+                            });
+                            $('.subtotal-change-noload').html(`Tạm Tính: ${formatMoney(subTotal)} đ`);
+                            $('.cart_dropdown-list').html(item);
+                            $('.cart-content').html(count);
+                        });
+                        setTimeout(function () {
+                            if (s.hasClass('btn-blue')) {
+                                location.href = "{{__('ALL_PRODUCTS_URL')}}";
+                            }
+                        }, 1000);
+                    } else {
+                        toastr.error(result.message);
+                    }
+                });
+            } else {
+                toastr.remove();
+                toastr.error("Số lượng sản phẩm tối thiểu là 1!");
+                return;
+            }
+        })
+
+        $('.add-cart3').click(function (e) {
+            e.preventDefault();
+            var variant_id = $('input[name="variant_id"]').val();
+            var quantity = $('.quantity-value').val();
+            if (quantity >= 1) {
+                StoreAPI.addItem(variant_id, quantity, function () {
+                    toastr.remove();
+                    toastr.success("Thêm vào giỏ hàng thành công");
+                    setTimeout(function () {
+                        location.href = "{{__('CART_URL')}}";
+                    }, 1000);
+                });
+            } else {
+                toastr.remove();
+                toastr.error("Số lượng sản phẩm tối thiểu là 1!");
+                return;
+            }
+
+        })
+
+        $('.withlist1').click(function (e) {
+            e.preventDefault();
+            var product_id = $('input[name="wl_id"]').val();
+            $.ajax({
+                url: "/api/wishlist",
+                type: "POST",
+                data: {
+                    product_id: product_id
+                },
+                success: function (result) {
+                    if (result.code == 0) {
+                        toastr.success("Sản phẩm đã được thêm vào trong wishlist");
+                    } else {
+                        toastr.error(result.message);
+                    }
+                }
+
+            });
+
+        })
+        // Add quantity
+        $(".qup").click(function (e) {
+            e.preventDefault();
+            var quantity = $('.quantity-value').val();
+            $('.quantity-value').val(parseInt(quantity) + 1);
+
+        });
+
+        // Subtract quantity
+        $(".qdown").click(function (e) {
+            e.preventDefault();
+            var quantity = $('.quantity-value').val();
+            if (quantity != 1) {
+                $('.quantity-value').val(parseInt(quantity) - 1);
+            }
+        });
+    </script>
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js,
+                fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) 
+                return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+{% endblock post_include %}
+
+{% block content %}
+    {% set collection = Collection(product.collections[0].handle) %}
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <!-- BREADCRUMB -->
+        <nav class="breadcrumbk">
+            <div class="container">
+                <ul class="reset-list breadcrumbk-list">
+                    <li class="item">
+                        <a href="/" class="link">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="{{__('ALL_PRODUCTS_URL')}}" class="link">Sản phẩm</a>
+                    </li>
+                    {% for item in Collection() %}
+                        {% if item.id == collection.parent_id %}
+                            <li class="item">
+                                <a href="{{item.url}}" class="link">{{item.title}}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                    {% if collection %}
+                        <li class="item">
+                            <a href="{{collection.url}}" class="link">{{collection.title}}</a>
+                        </li>
+                    {% endif %}
+                    <li class="item active">{{product.title}}</li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /BREADCRUMB -->
+
+        <!-- PRODUCT DETAIL INFOMATION -->
+        <section class="prod-detail__info book-list stylek section">
+            <h3 class="d-none">PRODUCT DETAIL INFOMATION</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-xl-8">
+                        <div class="bg_white h-100">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <div class="prod-detail__slider">
+                                        <div class="slider-sync--thumbnail js-sliderSyncThumbnail">
+                                            {% for item in product.images %}
+                                                <div class="item">
+                                                    <figure class="img"><img src="{{item.name|upload_url}}" alt="{{item.title}}" title="{{item.title}}"></figure>
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                        <div class="slider-sync--large js-sliderSyncLarge">
+                                            {% for item in product.images %}
+                                                <div class="item">
+                                                    <figure class="img mb-0">
+                                                        <img src="{{item.name|upload_url}}" alt="{{item.title}}" title="{{item.title}}">
+                                                        <button class="reset-btn btn-try fm" data-toggle="modal" data-target="#modalTry"><img src="{{theme.uri}}/assets/img/icon/book-open.png">
+                                                            Đọc thử</button>
+                                                    </figure>
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <div class="prod-detail__content">
+                                        <p class="name titlek mb-1">{{product.title}}</p>
+                                        <div class="rating without-caption">
+                                            <input type="text" class="d-none kv-fa js-rating rating-loading daily-foods__star" value="{{product.rating}}" title="" readonly="readonly">
+                                            <span class="d-inline-block pl-2 numb cl_c4 numb-product">(0 nhận xét)</span>
+                                        </div>
+                                        {% if CustomField(product.id,"product","tac-gia") %}
+                                            {% set author = Article(CustomField(product.id,"product","tac-gia")) %}
+                                            <p class="mb-1">Tác giả:
+                                                <a href="{{author.url}}" class="fm">{{author.title}}</a>
+                                            </p>
+                                        {% endif %}
+                                        <p class="mb-1">
+                                            <span class="titlek cl_red fm">{{product.price|money('.')}}
+                                                ₫</span></p>
+                                        {% if product.price_compare %}
+
+                                            <p class="mb-1 cl_c4">Tiết kiệm:
+                                                <span class="cl_red">-{{((1-((product.price / product.price_compare)))*100)|round(0,'floor')}}%</span>
+                                                ({{(product.price_compare - product.price)|money('.')}}
+                                                ₫)</p>
+                                            <p class="mb-0 cl_c4">Giá thị trường:
+                                                {{product.price_compare|money('.')}}
+                                                ₫</p>
+                                        {% endif %}
+                                        <input type="hidden" name="variant_id" value="{{product.variants[0].id}}">
+                                        <div class="dividered"></div>
+
+                                        <p class="mb-2 fs_16">Số lượng:</p>
+                                        <div class="d-flex align-items-center fs_16 mb-2">
+                                            <div class="quantity mb-2 mr-4 mr-sm-5">
+                                                <button class="reset-btn quantity-btn qdown" type="button">-</button>
+                                                <input type="text" class="quantity-value" value="1">
+                                                <button class="reset-btn quantity-btn qup" type="button">+</button>
+                                            </div>
+                                            {% if product.stop_selling == "publishSoon" or product.stop_selling == "availableSoon" %}
+                                                <button class="btn-order-before reset-btn btn-red fs_16 mb-2 add-cart2" type="button" data-toggle="modal" data-target="#addCartModal">
+                                                    <i class="fa fa-calendar"></i>
+                                                    Đặt trước</button>
+                                            {% else %}
+                                                <button class="reset-btn btn-red fs_16 mb-2 add-cart2" type="button" data-toggle="modal" data-target="#addCartModal">
+                                                    <i class="fa fa-cart-arrow-down"></i>
+                                                    Chọn mua</button>
+                                            {% endif %}
+                                        </div>
+
+                                        <div class="fs_16">
+                                            <a href="#comments" class="mb-1 mr-4 mr-sm-5">
+                                                <i class="fa fa-pencil-square-o"></i>
+                                                Nhận xét</a>
+                                            <button class="reset-btn mb-1 withlist1">
+                                                <input type="hidden" name="wl_id" value="{{product.id}}">
+                                                <i class="fa fa-heart-o"></i>
+                                                Yêu thích</button>
+                                        </div>
+
+                                        <ul class="reset-list list mb-1">
+                                            {% if CustomField(product.id,"product","luu-y-1") %}
+                                                <li class="item mb-1">{{CustomField(product.id,"product","luu-y-1")}}</li>
+                                            {% endif %}
+                                            {% if CustomField(product.id,"product","luu-y-2") %}
+                                                <li class="item mb-1">{{CustomField(product.id,"product","luu-y-2")}}</li>
+                                            {% endif %}
+                                        </ul>
+
+                                        <p class="mb-0">
+                                            <div class="fb-like" data-href="{{url}}" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-xl-4">
+                        <div class="prod-detail__contact bg_white h-100">
+                            {% if settings.footer_hotline %}
+                                <p class="fm mb-1">
+                                    <i class="fa fa-phone-square"></i>
+                                    Hotline:
+                                    <a href="tel:{{settings.footer_hotline}}" class="cl_red">{{settings.footer_hotline}}</a>
+                                </p>
+                            {% endif %}
+                            {% if settings.pro_time %}
+
+                                <p class="small mb-2">{{settings.pro_time}}</p>
+                            {% endif %}
+                            <ul class="list fb mb-2 fs_16">
+                                {% if settings.pro_title1 %}
+                                    <li class="item mb-1">
+                                        <a href="{{settings.pro_link1}}" class="link">{{settings.pro_title1}}</a>
+                                    </li>
+                                {% endif %}
+                                {% if settings.pro_title2 %}
+                                    <li class="item mb-1">
+                                        <a href="{{settings.pro_link2}}" class="link">{{settings.pro_title2}}</a>
+                                    </li>
+                                {% endif %}
+                                {% if settings.pro_title3 %}
+                                    <li class="item mb-1">
+                                        <a href="{{settings.pro_link3}}" class="link">{{settings.pro_title3}}</a>
+                                    </li>
+                                {% endif %}
+
+                            </ul>
+                            {% if settings.pro_desc %}
+                                <div class="small mb-2">{{settings.pro_desc|raw}}</div>
+                            {% endif %}
+                            {% if settings.pro_image %}
+                                <p class="mb-0">
+                                    <img src="{{settings.pro_image|upload_url}}"></p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /PRODUCT DETAIL INFOMATION -->
+
+        <!-- RELATED PRODUCTS -->
+        <section class="book-list stylek section">
+            <h3 class="d-none">RELATED PRODUCTS</h3>
+            <div class="container">
+                <div class="bg_white">
+                    <header class="book-list__header d-flex flex-wrap justify-content-between bb-1">
+                        <h3 class="mr-sm-auto title text-uppercase fs_24 cl_blue mb-0 fm">Sản phẩm liên quan</h3>
+                        {% set quantam = Collection(CustomField(product.id,"product","chuyen-muc")) %}
+                        <ul class="nav nav-style1 d-flex clearfix" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link fs_16 active" data-toggle="pill" href="#book-style-1-1" role="tab">Văn lang khuyên đọc</a>
+                            </li>
+                            {% if quantam %}
+                                <li class="nav-item">
+                                    <a class="nav-link fs_16" data-toggle="pill" href="#book-style-1-2" role="tab">{{quantam.title}}</a>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </header>
+
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="book-style-1-1" role="tabpanel">
+                            <div class="slick js-slick-5 nav-slick nav-slick-2">
+                                {% for item in collection.products  | slice(0,10)%}
+                                    {% if item.id != product.id %}
+                                        {% include 'snippet/product_loop.twig' %}
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                        {% if quantam %}
+                            <div class="tab-pane fade" id="book-style-1-2" role="tabpanel">
+                                <div class="slick js-slick-5 nav-slick nav-slick-2">
+                                    {% for item in quantam.products | slice(0, 10) %}
+                                        {% if item.id != product.id %}
+                                            {% include 'snippet/product_loop.twig' %}
+                                        {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                    {% if collection.url %}
+                        <footer class="book-list__footer text-right">
+                            <a href="{{collection.url}}" class="d-inline-block btn-blue">Xem tất cả
+                                <i class="fa fa-angle-double-right"></i>
+                            </a>
+                        </footer>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+        <!-- /RELATED PRODUCTS -->
+        {% if CustomField(product.id,"product","thong-tin-chi-tiet") %}
+            <!-- PRODUCT DETAIL TABLE -->
+            <section class="prod-detail__info book-list stylek section">
+                <h3 class="d-none">PRODUCT DETAIL TABLE</h3>
+                <div class="container">
+                    <div class="bg_white">
+                        <header class="book-list__header d-flex flex-wrap justify-content-between bb-1">
+                            <h3 class="mr-sm-auto title text-uppercase fs_24 cl_blue mb-0 pb-0 fm">Thông tin chi tiết</h3>
+                        </header>
+
+                        <div class="">
+                            <div class="px-3 py-4">
+                                <div class="table-responsivez">
+                                    {{CustomField(product.id,"product","thong-tin-chi-tiet")|raw}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /PRODUCT DETAIL TABLE -->
+        {% endif %}
+        <!-- BOOK'S INTRODUCED -->
+        <section class="prod-viewed book-list style3 stylek section">
+            <h3 class="d-none">BOOK'S INTRODUCED</h3>
+            <div class="container">
+                <div class="bg_white">
+                    <header class="book-list__header d-flex flex-wrap justify-content-between bb-1">
+                        <h3 class="mr-sm-auto title text-uppercase fs_24 cl_blue mb-0 pb-0 fm">Giới thiệu sách</h3>
+                    </header>
+                    <div class="">
+                        <div class="px-3 py-2">
+                            {{product.content|raw}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /BOOK'S INTRODUCED -->
+
+        <!-- COMMENTS -->
+        <section id="comments" class="comment book-list stylek section">
+            <h3 class="d-none">COMMENTS</h3>
+            <div class="container">
+                <div class="bg_white">
+                    <header class="book-list__header d-flex flex-wrap justify-content-between bb-1">
+                        <h3 class="mr-sm-auto title text-uppercase fs_24 cl_blue mb-0 pb-0 fm">Nhận xét được yêu thích nhất</h3>
+                    </header>
+
+                    <div class="comment-wrap">
+                        <header class="comment-header" id="review-filter"></header>
+
+                        <div class="comment-filter pt-4 pb-3">
+                            <label class="selectbox">
+                                <select id="rating-filter">
+                                    <option value="1">Nhận xét được yêu thích</option>
+                                    <option value="2">Nhận xét mới nhất</option>
+                                </select>
+                                <i class="fa fa-caret-down"></i>
+                            </label>
+                        </div>
+
+                        <div class="comment-list"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /COMMENTS -->
+
+        {% if customer.logged_in %}
+            <section class="write-comment">
+                <h3 class="d-none">write-comment</h3>
+                <div class="container">
+                    <div class="bg-white">
+                        <div class="col-12 py-3">
+                            Bạn đang nhận xét cho
+                            <br>
+                            Bạn đánh giá sản phẩm này thế nào
+                            <br>
+
+                            <form id="rating-form" class="write-comment__form mt-1">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered mb-20">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"></th>
+                                                <th scope="col">1 Sao</th>
+                                                <th scope="col">2 Sao</th>
+                                                <th scope="col">3 Sao</th>
+                                                <th scope="col">4 Sao</th>
+                                                <th scope="col">5 Sao</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="border-cus">
+                                                <th scope="row">Đánh giá</th>
+                                                <td>
+                                                    <div class="form-control p-0 border-0 mb-0">
+                                                        <label class="checkbox style2 d-flex align-items-center radio mb-0 justify-content-center">
+                                                            <input class="checkbox-input js-address1" type="radio" name="ratingStar" value="1">
+                                                            <span class="checkbox-icon"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-control p-0 border-0 mb-0">
+                                                        <label class="checkbox style2 d-flex align-items-center radio mb-0 justify-content-center">
+                                                            <input class="checkbox-input js-address2" type="radio" name="ratingStar" value="2">
+                                                            <span class="checkbox-icon"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-control p-0 border-0 mb-0">
+                                                        <label class="checkbox style2 d-flex align-items-center radio mb-0 justify-content-center">
+                                                            <input class="checkbox-input js-address3" type="radio" name="ratingStar" value="3">
+                                                            <span class="checkbox-icon"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-control p-0 border-0 mb-0">
+                                                        <label class="checkbox style2 d-flex align-items-center radio mb-0 justify-content-center">
+                                                            <input class="checkbox-input js-address4" type="radio" name="ratingStar" value="4">
+                                                            <span class="checkbox-icon"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-control p-0 border-0 mb-0">
+                                                        <label class="checkbox style2 d-flex align-items-center radio mb-0 justify-content-center">
+                                                            <input class="checkbox-input js-address5" type="radio" name="ratingStar" value="5">
+                                                            <span class="checkbox-icon"></span>
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <label for="comment__name" class="d-block">Tên của bạn<span class="cl_red">*</span></label>
+                                <input type="text" class="form-control rounded-0" id="rating-name">
+
+                                <label for="comment__title" class="d-block">Tiêu đề<span class="cl_red">*</span></label>
+                                <input type="text" class="form-control rounded-0" id="rating-title">
+
+                                <label for="comment__detail" class="d-block">Nhận xét</label>
+                                <textarea id="rating-content" cols="30" rows="10" class="d-block w-100 form-control textarea rounded-0"></textarea>
+                                {% if settings.standard_rating %}
+                                    <p class="mb-35 mt-4">
+                                        {{settings.standard_rating | raw}}
+                                    </p>
+                                {% endif %}
+                                <button class="d-block ml-auto reset-btn btn-blue mb-2">Gửi đánh giá</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        {% endif %}
+        {% if ViewedProducts(12) | length > 0 %}
+            <!-- VIEWED PRODUCTS -->
+            <section class="prod-viewed book-list stylek section">
+                <h3 class="d-none">VIEWED PRODUCTS</h3>
+                <div class="container">
+                    <div class="bg_white item-viewed">
+                        <p class="titlek text-uppercase cl_blue fm">Sản phẩm đã xem</p>
+                        <div class="slick js-slick-5 nav-slick nav-slick-2">
+                            {% for item in ViewedProducts(12) %}
+                                <div class="book-list__item hasLink" data-id="{{item.id}}">
+                                    <a href="{{item.url}}" class="link"></a>
+                                    <figure class="img">
+                                        <img src="{{item.image|upload_url}}" alt="img11" class="img_cen img_full img_fit"/>
+                                    </figure>
+                                    <div class="content">
+                                        <h5 class="title fs_16">{{item.title}}</h5>
+                                        <ul class="reset-list price d-flex align-items-left flex-wrap">
+                                            <li class="price-new">{{item.price|money('.')}}
+                                                ₫</li>
+                                            {% if item.price_compare %}
+                                                <li class="price-old">{{item.price_compare|money('.')}}
+                                                    đ</li>
+                                                <li class="discount">-{{((1-((item.price/item.price_compare)))*100)|round(0,'floor')}}%</li>
+                                            {% endif %}
+                                        </ul>
+                                        <div class="rating without-caption">
+                                            <input type="text" class="d-none kv-fa js-rating rating-loading daily-foods__star" value="{{item.rating}}" title="" readonly="readonly">
+                                            <span class="d-inline-block pl-2 numb">(3)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /VIEWED PRODUCTS -->
+        {% endif %}
+    </main>
+    <!-- /MAIN CONTENT -->
+
+    <!-- MODAL TRY -->
+    <section class="modal prod-detail__modal" id="modalTry" role="dialog">
+        <h3 class="d-none">OVERVIEW</h3>
+
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="fb titlek cl_blue title">Đọc thử</span>
+                    <span class="fb titlek cl_blue name">{{product.title}}</span>
+                    <button class="reset-btn btn-close" data-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body js-tabParent">
+                    <aside class="left">
+                        <div class="item-container">
+                            <div class="thumb mb-3 mb-lg-0">
+                                <figure class="img"><img src="{{product.image|upload_url}}" alt="{{product.title}}" title="{{product.title}}"></figure>
+                            </div>
+                            <div class="content">
+                                <p class="name fs_16 mb-2">{{product.title}}</p>
+                                {% if author.title %}
+
+                                    <p class="mb-1">Tác giả:
+                                        <span class="cl_red">{{author.title}}</span></p>
+                                {% endif %}
+                                <p class="mb-1">
+                                    <span class="price-current cl_blue fs_16">{{product.price|money('.')}}
+                                        đ</span></p>
+                                {% if product.price_compare %}
+                                    <p class="mb-2">
+                                        <span class="cl_gray2 price-old fs_16">{{product.price_compare|money('.')}}
+                                            đ</span>
+                                        <span class="cl_red">-{{((1-((product.price / product.price_compare)))*100)|round(0,'floor')}}%</span></p>
+                                {% endif %}
+                                <p class="mb-2">
+                                    <button class="reset-btn btn-blue add-cart1">
+                                        <i class="fa fa-cart-arrow-down"></i>&nbsp;Mua hàng</button>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="tab-menu js-tabNav">
+                            <p class="titlek fm cl_blue">Nội dung chính</p>
+
+                            <ul class="reset-list aside-list">
+                                <li class="item">
+                                    <a href="javascript:;" data-target="#modalTab1" class="link js-tabLink active">Bìa trước</a>
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:;" data-target="#modalTab2" class="link js-tabLink">Bìa sau</a>
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:;" data-target="#modalTab3" class="link js-tabLink">Mục lục</a>
+                                </li>
+                                <li class="item">
+                                    <a href="javascript:;" data-target="#modalTab4" class="link js-tabLink">Nội dung</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+
+                    <div class="right">
+                        <div class="js-tabContent">
+                            {% if CustomField(product.id,"product","bia-truoc") %}
+                                <div class="tab-panel faded active" id="modalTab1">
+                                    {{CustomField(product.id,"product","bia-truoc")|raw}}
+                                </div>
+                            {% endif %}
+                            {% if CustomField(product.id,"product","bia-sau") %}
+                                <div class="tab-panel faded" id="modalTab2">
+                                    <div class="py-4">
+                                        {{CustomField(product.id,"product","bia-sau")|raw}}
+                                    </div>
+                                </div>
+                            {% endif %}
+                            {% if CustomField(product.id,"product","muc-luc") %}
+                                <div class="tab-panel faded" id="modalTab3">
+                                    <div class="py-4">
+                                        {{CustomField(product.id,"product","muc-luc")|raw}}
+                                    </div>
+                                </div>
+                            {% endif %}
+                            {% if CustomField(product.id,"product","noi-dung") %}
+                                <div class="tab-panel faded" id="modalTab4">
+                                    <div class="py-4">
+                                        {{CustomField(product.id,"product","noi-dung")|raw}}
+                                    </div>
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /MODAL TRY -->
+
+    <!-- addCartModal -->
+    <div class="modal fade addCartModal" id="addCartModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content rounded-0">
+                <!-- <div class="modal-header flex-wrap"> <h5 class="modal-title fs_24 cl_blue" id="exampleModalLongTitle">ĐĂNG NHẬP</h5> <small class="fs_14 d-block w-100">Đăng ký tài khoản nhấn <a href="javascript:;" class="text-underline cl_red">vào đây</a></small> </div> -->
+                <div class="modal-body">
+                    <button type="button" class="close btn-close-black" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+
+                    <img src="{{product.image|upload_url}}" alt="{{product.title}}" title="{{product.title}}" class="d-block mx-auto mb-3 mt-14">
+
+                    <h4 class="title text-uppercase fs_14 mb-1 text-center">{{product.title}}</h4>
+
+                    <small class="fs_14 d-block text-center mb-3 fl">Sản phẩm đã được thêm thành công vào giỏ hàng của bạn</small>
+
+                    <div class="d-flex justify-content-center flex-wrap mb-0 fl">
+                        <a href="javascript:;" class="btn-blue text-uppercase mx-3 mb-2 add-cart2">chọn thêm
+                            <i class="fa fa-cart-plus"></i>
+                        </a>
+                        <a href="javascript:;" class="btn-blue style2 text-uppercase mx-3 mb-2 add-cart3">thanh toán</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#rating-form').submit(function (e) {
+            e.preventDefault();
+
+            var name = $('#rating-name').val();
+
+            var data = {};
+
+            data.rating = $('input[name="ratingStar"]:checked').val();
+            data.post_type = 'product';
+            data.title = $('#rating-title').val();
+            data.content = $('#rating-content').val();
+            data.post_id = $('input[name="wl_id"]').val();
+
+            if (!data.rating) {
+                toastr.error('Vui lòng đánh giá!');
+                return;
+            }
+
+            if (!name) {
+                $('#rating-name').addClass('noti-input-error');
+                toastr.error('Vui lòng nhập tên của bạn!');
+                return;
+            } else {
+                $('#rating-name').removeClass('noti-input-error');
+            }
+
+            if (!data.title) {
+                $('#rating-title').addClass('noti-input-error');
+                toastr.error('Vui lòng nhập tiêu đề!');
+                return;
+            } else {
+                $('#rating-title').removeClass('noti-input-error');
+            }
+
+            StoreAPI.addReview(data, function (result) {
+                if (!result.code) {
+                    toastr.success("Rating thành công");
+                    setTimeout(function () {
+                        location.reload();
+                    }, 1000);
+                } else {
+                    toastr.error(result.message);
+                }
+            })
+        })
+
+        function getReview() {
+            var post_type = 'product';
+            var post_id = $('input[name="wl_id"]').val();
+            var review_list = '<p class="titlek cl_main">Khách Hàng Nhận Xét</p>';
+            var type_of_top = $('#rating-filter').val();
+
+            if (type_of_top == 1) 
+                var type_of_sort = 'like-desc';
+            else 
+                var type_of_sort = 'created_at-desc';
+            
+            StoreAPI.getReview(post_type, post_id, type_of_sort, function (result) {
+                for (var i = 1; i < result.data.length; i++) {
+                    review_list += `<div class="comment-row">
+                                                        <p class="name fm mb-2">${result.data[i].title}</p>
+                                                        <div class="rating without-caption mb-2">
+                                                                <div class="rating-container theme-krajee-fa rating-md rating-animate rating-disabled">
+                                <div class="rating-stars">
+                                    <span class="empty-stars">
+                                        <span class="star">
+                                            <i class="fa fa-star-o"></i>
+                                        </span>
+                                        <span class="star">
+                                            <i class="fa fa-star-o"></i>
+                                        </span>
+                                        <span class="star">
+                                            <i class="fa fa-star-o"></i>
+                                        </span>
+                                        <span class="star">
+                                            <i class="fa fa-star-o"></i>
+                                        </span>
+                                        <span class="star">
+                                            <i class="fa fa-star-o"></i>
+                                        </span>
+                                    </span>
+                                    <span class="filled-stars" style="width: ${result.data[i].rating * 20}%;">
+                                        <span class="star">
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                        <span class="star">
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                        <span class="star">
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                        <span class="star">
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                        <span class="star">
+                                            <i class="fa fa-star"></i>
+                                        </span>
+                                    </span>
+                                    <input type="text" class="d-none kv-fa js-rating daily-foods__star rating-input" value="${result.data[i].rating}" title="" readonly="readonly"></div>
+                            </div>
+                        </div>
+                                                        <p>Rất hay - <span class="amount-of-like">${result.data[i].like}</span> lượt thích.
+                                                            <a href="javascript:;" class="fm like-review" review-like="${result.data[i].like}" review-id="${result.data[i].id}">Thích</a>
+                                                            hoặc
+                                                            <a href="javascript:;" class="fm report-review" review-report="${result.data[i].dislike}" review-id="${result.data[i].id}">Báo cáo</a>
+                                                        </p>
+                                                        <p>
+									                        <span class="fhs_review-like customer_liked"><i class="fa fa-check" aria-hidden="true"></i> Cảm ơn bạn đã thích nhận xét này.</span>
+								                        </p>
+                                                        <p>
+									                        <span class="fhs_review-like customer_abuse"><i class="fa fa-check" aria-hidden="true"></i> Cảm ơn phản hồi của bạn .</span>
+							                            </p>
+                                                        <p>Nhận xét bởi
+                                                            <a href="javascript:;" class="fm">${result.data[i].customer.name.split('/')[0]} `;
+
+                    if (result.data[i].customer.name.split('/')[1]) {
+                        review_list += `${result.data[i].customer.name.split('/')[1]}</a>`;
+                    } else {
+                        review_list += `</a>`;
+                    }
+
+                    review_list += ` vào ngày ${result.data[i].created_at.split(' ')[0].split('-')[2]}/${result.data[i].created_at.split(' ')[0].split('-')[1]}/${result.data[i].created_at.split(' ')[0].split('-')[0]}</p>
+                                                        <div class="content">
+                                                        ${result.data[i].content}
+                                                        </div>
+                                                    </div>`;
+                }
+                $('.comment-list').html(review_list);
+                $('.numb-product').html('(' + result.data.length + ' nhận xét)');
+                var top_like = `<p>Rất hay - ${result.data[0].like} lượt thích.
+                                <a href="javascript:;" class="fm like-review" review-like="${result.data[0].like}" review-id="${result.data[0].id}">Thích</a>
+                                hoặc
+                                <a href="javascript:;" class="fm report-review" review-report="${result.data[0].dislike}" review-id="${result.data[0].id}">Báo cáo</a>
+                            </p>
+                             <p>
+								<span class="fhs_review-like customer_liked"><i class="fa fa-check" aria-hidden="true"></i> Cảm ơn bạn đã thích nhận xét này.</span>
+							</p>
+                            <p>
+								<span class="fhs_review-like customer_abuse"><i class="fa fa-check" aria-hidden="true"></i> Cảm ơn phản hồi của bạn .</span>
+							</p>
+                            <p>Nhận xét bởi ${result.data[0].title.split('</br>')[0]}, vào ngày ${result.data[0].created_at.split(' ')[0].split('-')[2]}/${result.data[0].created_at.split(' ')[0].split('-')[1]}/${result.data[0].created_at.split(' ')[0].split('-')[0]}</p>
+                            <p>${result.data[0].content}</p>`;
+                $('#review-filter').html(top_like);
+            })
+        }
+
+        $('#rating-filter').change(function (e) {
+            getReview();
+        })
+
+        $(document).ready(function () {
+            getReview();
+            $(document).find('.fhs_review-like').hide();
+        })
+
+        $(document).on('click', '.like-review', function () {
+            var s = $(this);
+            var review_id = s.attr('review-id');
+            var current_like = s.attr('review-like');
+            StoreAPI.likeReview(review_id, function (result) {
+                if (!result.code) {
+                    s.parent().find('.amount-of-like').html(parseInt(current_like) + 1);
+                }
+                s.parent().parent().find('.customer_liked').show();
+            })
+        })
+
+        $(document).on('click', '.report-review', function () {
+            var s = $(this);
+            var review_id = s.attr('review-id');
+            StoreAPI.dislikeReview(review_id, function (result) {
+                s.parent().parent().find('.customer_abuse').show();
+            })
+        })
+    </script>
+
+{% endblock content %}

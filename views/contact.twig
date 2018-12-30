@@ -1,0 +1,181 @@
+{% extends "layout.twig" %}
+{% block pre_include %}
+    <title>{{settings.meta_title ? settings.meta_title:settings.contact_title}}</title>
+{% endblock pre_include %}
+{% block post_include %}
+
+    <script type="text/javascript">
+        $('.sending').click(function (e) {
+            e.preventDefault();
+            var data = {
+                email: $("#email").val(),
+                name: $("#name").val(),
+                phone: $("#phone").val(),
+                content: $("#content").val()
+            };
+            $('.contact-page__form').find('.form-control').each(function (i, e) {
+                var a = $(e).val();
+                if (!a) {
+                    $(e).addClass('noti-input-error');
+                } else {
+                    $(e).removeClass('noti-input-error');
+                }
+            });
+            if (!data.phone.match("^[+]?[0-9]{9,12}$")) {
+                $("#phone").addClass('noti-input-error');
+            } else {
+                $("#phone").removeClass('noti-input-error');
+            }
+            if (!data.email.match("[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}")) {
+                $("#email").addClass('noti-input-error');
+            } else {
+                $("#email").removeClass('noti-input-error');
+            }
+           
+            if (!data.name) {
+                toastr.error("Vui lòng nhập tên khách hàng!");
+                return;
+            }
+            if (!data.phone) {
+                toastr.error("Vui lòng nhập số điện thoại!");
+                return;
+            }
+            if (!data.phone.match("^[+]?[0-9]{9,12}$")) {
+                toastr.error("Số điện thoại không đúng định dạng!");
+                return;
+            }
+            if (!data.email) {
+                toastr.error("Vui lòng nhập email!");
+                return;
+            }
+            if (!data.email.match("[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,3}")) {
+                toastr.error('Email không đúng định dạng!');
+                return;
+            }
+            if (!data.content) {
+                toastr.error('Vui lòng nhập nội dung!');
+                return;
+            }
+
+            StoreAPI.sendContact(data, function (result) {
+                if (!result.code) {
+                    toastr.success("Cảm ơn bạn đã gửi yêu cầu cho chúng tôi. Chúng tôi sẽ phản hồi đến bạn nhanh nhất.");
+                    setTimeout(function () {
+                        location.reload();
+                    }, 1000);
+                } else {
+                    toastr.error('Xin vui lòng kiểm tra lại thông tin đã nhập!');
+                }
+            });
+        });
+    </script>
+
+{% endblock post_include %}
+{% block content %}
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <!-- BREADCRUMB -->
+        <nav class="breadcrumbk">
+            <div class="container">
+                <ul class="reset-list breadcrumbk-list">
+                    <li class="item">
+                        <a href="/" class="link">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                    <li class="item active">{{settings.contact_title}}</li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /BREADCRUMB -->
+
+        <!-- contact-page -->
+        <section class="contact-page footer">
+            <h3 class="d-none">contact-page</h3>
+            <div class="container">
+                <h3 class="title text-uppercase cl_blue fs_24 mb-0 py-1">{{settings.contact_title}}</h3>
+
+                <ul class="reset-list card-body fl pt-0 col-sm-6 col-md-5 col-lg-4 col-xl-3 px-0 lh-24">
+                    {% if settings.footer_address %}
+                        <li class="item">
+                            <a href="javascript:;" class="d-block">
+                                <i class="fa float-left fa-map-marker"></i>
+                                <span class="d-block pl-4">{{settings.footer_address}}</span>
+                            </a>
+                        </li>
+                    {% endif %}
+                    {% if settings.phone %}
+                        <li class="item">
+                            <a href="tel:{{settings.phone}}" class="d-block">
+                                <i class="fa float-left fa-phone"></i>
+                                <span class="d-block pl-4">{{settings.phone}}
+                                </span>
+                            </a>
+                        </li>
+                    {% endif %}
+                    {% if settings.email %}
+                        <li class="item">
+                            <a href="mailto:{{settings.email}}" class="d-block">
+                                <i class="fa float-left fa-envelope"></i>
+                                <span class="d-block pl-4">{{settings.email}}</span>
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
+
+                <h3 class="title text-uppercase cl_blue fs_24 pb-3 pt-4">{{settings.contact_title1}}</h3>
+
+                <form class="contact-page__form col-12 col-md-8 col-lg-6 px-0">
+                    <input type="text" id="name" class="form-control" placeholder="Họ và tên*"/>
+                    <input type="text" id="phone" class="form-control" placeholder="Số điện thoại*"/>
+                    <input type="email" id="email" class="form-control" placeholder="Email*"/>
+                    <textarea id="content" cols="30" rows="10" class="form-control" placeholder="Nội dung*"></textarea>
+                    <button class="reset-btn sending btn-blue">Gửi</button>
+                </form>
+
+                <h3 class="title text-uppercase cl_blue fs_24 mb-0 pb-3">{{settings.contact_title2}}</h3>
+
+                <ul class="reset-list d-flex flex-wrap justify-content-between contact-page__book-store">
+                    {% for item in Testimonial() %}
+                        <li class="item">
+                            <figure class="img hasLink">
+                                <a href="{{CustomField (item.id,'testimonial','link')}}" class="link" title="{{item.name}}"></a>
+                                <img src="{{item.logo| upload_url}}" alt="" class="img_cen img_full img_fit">
+                            </figure>
+                            <ul class="reset-list card-body fl py-0">
+                                {% if CustomField(item.id, 'testimonial', 'address') %}
+                                    <li class="item">
+                                        <a href="javascript:;" class="d-block cl_blue">
+                                            <i class="fa float-left fa-map-marker"></i>
+                                            <span class="d-block pl-4">{{CustomField (item.id,'testimonial','address')}}</span>
+                                        </a>
+                                    </li>
+                                {% endif %}
+                                {% if CustomField(item.id, 'testimonial', 'phone') %}
+                                    <li class="item">
+                                        <a href="tel:{{CustomField (item.id,'testimonial','phone')}}" class="d-block">
+                                            <i class="fa float-left fa-phone"></i>
+                                            <span class="d-block pl-4">{{CustomField (item.id,'testimonial','phone')}}
+                                            </span>
+                                        </a>
+                                    </li>
+                                {% endif %}
+                                {% if CustomField(item.id, 'testimonial', 'email') %}
+                                    <li class="item">
+                                        <a href="mailto:{{CustomField (item.id,'testimonial','email')}}" class="d-block">
+                                            <i class="fa float-left fa-envelope"></i>
+                                            <span class="d-block pl-4">{{CustomField (item.id,'testimonial','email')}}</span>
+                                        </a>
+                                    </li>
+                                {% endif %}
+                            </ul>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+        <!-- /contact-page -->
+
+    </main>
+    <!-- /MAIN CONTENT -->
+{% endblock %}

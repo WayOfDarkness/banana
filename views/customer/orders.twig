@@ -1,0 +1,183 @@
+{% extends "layout.twig" %}
+
+{% block pre_include %}
+    <title>Lịch sử đơn hàng</title>
+{% endblock %}
+
+{% block content %}
+    <main class="main-content">
+        <nav class="breadcrumbk">
+            <div class="container">
+                <ul class="reset-list breadcrumbk-list">
+                    <li class="item">
+                        <a href="/" class="link">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="{{__('CUSTOMER_EDIT_ACCOUNT_URL')}}" class="link">Tài khoản</a>
+                    </li>
+                    <li class="item active">Lịch sử đơn hàng</li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="dashboard mb-35">
+            <div class="container dashboard-wrap">
+                <aside class="dashboard-aside js-dbAside">
+                    <button class="reset-btn dashboard-aside--close f-b d-lg-none">
+                        <i class="fa fa-angle-left"></i>Trở về</button>
+
+                    <div class="dashboard-aside--inner js-blurOff">
+                        <h4 class="title-1 text-uppercase fs_24 cl_blue">tài khoản</h4>
+
+                        <ul class="reset-list dashboard-aside__list">
+                            <li class="item">
+                                <a href="{{__('CUSTOMER_EDIT_ACCOUNT_URL')}}" class="d-block fl">Thông tin tài khoản</a>
+                            </li>
+                            <li class="item">
+                                <a href="/customer/addressBook?view=customer/address" class="d-block fl">Sổ địa chỉ</a>
+                            </li>
+                            <li class="item">
+                                <a href="{{__('SAVE_POINT_URL')}}" class="d-block fl">Điểm tích luỹ</a>
+                            </li>
+                            <li class="item active">
+                                <a href="{{__('CUSTOMER_ORDERS_URL')}}" class="d-block fl">Lịch sử đơn hàng</a>
+                            </li>
+                            <li class="item">
+                                <a href="{{__('CUSTOMER_WISHLIST_URL')}}" class="d-block fl">Yêu thích</a>
+                            </li>
+                            <li class="item">
+                                <a href="/customer/subscribe?view=customer/subcribe" class="d-block fl">Đăng ký nhận tin điện tử</a>
+                            </li>
+                            <li class="item">
+                                <a href="{{__('REFERRAL_URL')}}" class="d-block fl">Mã giới thiệu</a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <div class="dashboard-content">
+                    <btn class="mb-15 reset-btn dashboard-aside--open js-dbAsideTrigger fb fs_15 d-block d-lg-none">
+                        <i class="fa fa-hand-point-right cl_blue mr-1"></i>Bảng thông tin</btn>
+
+                    <div class="dashboard-content__detail pb-2 h-unset payment-page">
+                        <h4 class="title-1 text-uppercase fs_24 cl_blue mb-2">lịch sử ĐƠN HÀNG</h4>
+
+                        <div class="text fl lh-24 d-flex flex-wrap">
+                            <div class="col-12 px-0 pb-1">
+                                <div class="filter-wrap text-right justify-content-end px-20">
+                                    <span class="pr-3">Hiển thị:</span>
+                                    <div class="item mr-0 mb-0">
+                                        <div class="selectbox border-0">
+                                            <select id="orders-filter">
+                                                <option value="10">10</option>
+                                                <option value="15">15</option>
+                                                <option value="20">20</option>
+                                                <option value="30">30</option>
+                                            </select>
+                                            <i class="fa fa-caret-down"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="table-responsive-lg order-history-table">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Mã đơn Hàng#</th>
+                                                <th scope="col">Ngày đặt</th>
+                                                <th scope="col">Tên người nhận</th>
+                                                <th scope="col">Tổng cộng đơn hàng</th>
+                                                <th scope="col">Trạng thái</th>
+                                                <th scope="col"></th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            {% for item in orders %}
+                                                <tr class="order-item">
+                                                    <td>{{item.id}}</td>
+                                                    <td>{{order.created_at | date ('d/m/Y')}}</td>
+                                                    <td>{{customer.name}}</td>
+                                                    <td>{{item.total | money}}
+                                                        đ</td>
+                                                    <td>
+                                                        {% if item.shipping_status == 0 %}
+                                                            Đang xử lí
+                                                        {% elseif item.shipping_status == 1 %}
+                                                            Đang giao hàng
+                                                        {% else %}
+                                                            Đã giao hàng
+                                                        {% endif %}
+                                                    </td>
+                                                    <td>
+                                                        <a href="javascript:;" class="cl_blue d-block order-detail-btn" data-id="{{item.id}}">Xem</a>
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="come-back w-100 mx-20 bt-1 fm pt-2">
+                                <a href="javascript:history.back(-1)" class="d-block cl_blue">
+                                    <i class="fa fa-angle-double-left"></i>
+                                    Quay lại
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function ordersFilter() {
+            $('.order-item').show();
+            var count = 0;
+            var filter_value = $('#orders-filter').find('option:selected').val();
+            var current_amount_of_order = $('.order-item').length;
+
+            if (current_amount_of_order > filter_value) {
+                $('.order-item').hide();
+                $('.order-item').each(function (i, e) {
+                    if (count < filter_value) {
+                        $(this).show();
+                        count = count + 1;
+                    }
+                })
+            }
+        }
+
+        $('#orders-filter').change(function (e) {
+            ordersFilter();
+        });
+
+        $(document).ready(function (e) {
+            ordersFilter();
+        });
+
+        $('.order-detail-btn').click(function (e) {
+            var id = $(this).attr('data-id');
+            var session = {};
+            session.key = "order_id";
+            session.value = id;
+            $.ajax({
+                url: "/api/setSession",
+                type: "POST",
+                data: session,
+                success: function (result) {
+                    if (!result.code) {
+                        setTimeout(function () {
+                            location.href = '/customer/order-detail?view=customer/order-detail';
+                        }, 1000);
+                    }
+                }
+            });
+        })
+    </script>
+
+{% endblock content %}

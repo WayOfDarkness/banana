@@ -1,0 +1,84 @@
+{% extends "layout.twig" %}
+
+{% block pre_include %}
+    <title>Điểm tích lũy</title>
+{% endblock %}
+
+{% block content %}
+    <main class="main-content">
+        <nav class="breadcrumbk">
+            <div class="container">
+                <ul class="reset-list breadcrumbk-list">
+                    <li class="item">
+                        <a href="/" class="link">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="{{__('CUSTOMER_EDIT_ACCOUNT_URL')}}" class="link">Tài khoản</a>
+                    </li>
+                    <li class="item active">Điểm tích luỹ</li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="dashboard mb-35">
+            <div class="container dashboard-wrap">
+                <aside class="dashboard-aside js-dbAside">
+                    <button class="reset-btn dashboard-aside--close f-b d-lg-none">
+                        <i class="fa fa-angle-left"></i>Trở về</button>
+
+                    <div class="dashboard-aside--inner js-blurOff">
+                        <h4 class="title-1 text-uppercase fs_24 cl_blue">tài khoản</h4>
+
+                        <ul class="reset-list dashboard-aside__list">
+                            <li class="item">
+                                <a href="{{__('CUSTOMER_EDIT_ACCOUNT_URL')}}" class="d-block fl">Thông tin tài khoản</a>
+                            </li>
+                            <li class="item">
+                                <a href="/customer/addressBook?view=customer/address" class="d-block fl">Sổ địa chỉ</a>
+                            </li>
+                            <li class="item active">
+                                <a href="{{__('SAVE_POINT_URL')}}" class="d-block fl">Điểm tích luỹ</a>
+                            </li>
+                            <li class="item">
+                                <a href="{{__('CUSTOMER_ORDERS_URL')}}" class="d-block fl">Lịch sử đơn hàng</a>
+                            </li>
+                            <li class="item">
+                                <a href="{{__('CUSTOMER_WISHLIST_URL')}}" class="d-block fl">Yêu thích</a>
+                            </li>
+                            <li class="item">
+                                <a href="/customer/subscribe?view=customer/subcribe" class="d-block fl">Đăng ký nhận tin điện tử</a>
+                            </li>
+                            <li class="item">
+                                <a href="{{__('REFERRAL_URL')}}" class="d-block fl">Mã giới thiệu</a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <div class="dashboard-content">
+                    <btn class="mb-15 reset-btn dashboard-aside--open js-dbAsideTrigger fb fs_15 d-block d-lg-none">
+                        <i class="fa fa-hand-point-right cl_blue mr-1"></i>Bảng thông tin</btn>
+
+                    <div class="dashboard-content__detail">
+                        <h4 class="title-1 text-uppercase fs_24 cl_blue">điểm tích luỹ</h4>
+
+                        <img src="{{theme.uri}}/assets/img/demo/img100.png" alt="" class="d-block mx-auto mb-30 px-20">
+
+                        <div class="text text-center fl">
+                            <p class="mb-5c">Điểm tích luỹ:
+                                <span class="cl_main fs_24 fr">{{customerPoint()}}
+                                    V-point</span></p>
+                            <p class="mb-5c">Họ và tên:
+                                <span class="fr">{{customer.name}}</span></p>
+                            <p class="mb-5c">Email:
+                                <span class="fr">{{customer.email}}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+{% endblock content %}

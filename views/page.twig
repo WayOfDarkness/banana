@@ -1,0 +1,86 @@
+{% extends "layout.twig" %}
+{% block pre_include %}
+    <title>{{page.title}}</title>
+{% endblock pre_include %}
+{% block post_include %}{% endblock post_include %}
+{% block content %}
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <!-- BREADCRUMB -->
+        <nav class="breadcrumbk">
+            <div class="container">
+                <ul class="reset-list breadcrumbk-list">
+                    <li class="item">
+                        <a href="/" class="link">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                    <li class="item active">{{page.title}}</li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /BREADCRUMB -->
+
+        <!-- chinh-sach-doi-tra -->
+        <section class="policy-page border-table-s1">
+            <h3 class="d-none">chinh-sach-doi-tra</h3>
+
+            <div class="container">
+                <div class="bg_white col-sm-12">
+                    <h3 class="title text-uppercase cl_blue fs_24 mb-0 bb-1 py-3 px-sm-3">{{page.description}}</h3>
+
+                    <div class="content py-3 px-sm-3">
+                        <p class="lh-24 fl">
+                            {{page.content|raw}}
+                        </p>
+                    </div>
+                </div>
+                {% if CustomField(page.id, "page", "buoc-1") %}
+                    <div class="bg_white mt-35 col-sm-12">
+                        <h3 class="title cl_blue fs_24 mb-0 bb-1 py-3 px-sm-3">{{CustomField(page.id, "page","buoc-1")}}</h3>
+                        <div class="content py-3 px-sm-3">
+                            {{CustomField(page.id, "page","noi-dung-1")|raw}}
+                        </div>
+                    </div>
+                {% endif %}
+                {% if CustomField(page.id, "page", "buoc-2") %}
+                    <div class="bg_white mt-35 col-sm-12">
+                        <h3 class="title cl_blue fs_24 mb-0 bb-1 py-3 px-sm-3">{{CustomField(page.id, "page","buoc-2")}}</h3>
+
+                        <div class="content py-3 px-sm-3">
+                            {{CustomField(page.id, "page","noi-dung-2")|raw}}
+                        </div>
+                    </div>
+                {% endif %}
+                {% if CustomField(page.id, "page", "buoc-3") %}
+
+                    <div class="bg_white mt-35 col-sm-12">
+                        <h3 class="title cl_blue fs_24 mb-0 bb-1 py-3 px-sm-3">{{CustomField(page.id, "page","buoc-3")}}</h3>
+
+                        <div class="content py-3 px-sm-3">
+                            {{CustomField(page.id, "page","noi-dung-3")|raw}}
+                        </div>
+                    </div>
+                {% endif %}
+                {% if CustomField(page.id, "page", "buoc-4") %}
+
+                    <div class="bg_white mt-35 col-sm-12">
+                        <h3 class="title cl_blue fs_24 mb-0 bb-1 py-3 px-sm-3">{{CustomField(page.id, "page","buoc-4")}}</h3>
+
+                        <div class="content py-3 px-sm-3">
+                            {{CustomField(page.id, "page","noi-dung-4")|raw}}
+                        </div>
+                    </div>
+                {% endif %}
+                <p class="fm mt-30 mb-5 fs_16">Nếu cần hỗ trợ thêm quý khách có thể liên hệ trực tiếp qua
+                    <span class="cl_red">hotline
+                        {{settings.footer_hotline}}</span>
+                    để được hỗ trợ nhanh chóng.</p>
+            </div>
+        </section>
+        <!-- /chinh-sach-doi-tra -->
+
+    </main>
+    <!-- /MAIN CONTENT -->
+
+{% endblock %}

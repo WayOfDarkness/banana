@@ -1,0 +1,142 @@
+{% extends "layout.twig" %}
+
+{% block pre_include %}
+    <title>Đăng nhập</title>
+{% endblock %}
+
+{% block content %}
+
+    {% set urlLogin = session.urlLogin %}
+    <main class="main-content">
+        <nav class="breadcrumbk">
+            <div class="container">
+                <ul class="reset-list breadcrumbk-list">
+                    <li class="item">
+                        <a href="/" class="link">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                    <li class="item active">Đăng nhập</li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="reset-psw pt-20">
+            <h3 class="d-none">reset-psw</h3>
+            <div class="container">
+                <ul class="reset-list cart-page__progress-bar d-flex align-items-center justify-content-between mb-72">
+                    <li class="item active">
+                        <span class="d-block item-dot">
+                            <span class="d-block numb">1</span>
+                            <span class="text">Đăng nhập</span>
+                        </span>
+                    </li>
+                    <li class="item">
+                        <span class="d-block item-dot">
+                            <span class="d-block numb">2</span>
+                            <span class="text">Thanh toán</span>
+                        </span>
+                    </li>
+                    <li class="item">
+                        <span class="d-block item-dot">
+                            <span class="d-block numb">3</span>
+                            <span class="text">Hoàn tất</span>
+                        </span>
+                    </li>
+                </ul>
+
+                <div class="bg_white pt-30 loginModal">
+                    <form id="login-page-form" class="login-form col-sm-10 col-md-8 col-lg-6 mx-auto fl">
+                        <h5 class="fs_24 cl_blue fm">ĐĂNG NHẬP</h5>
+                        <small class="fs_14 d-block w-100 mb-3">Đăng ký tài khoản nhấn
+                            <a href="{{__('REGISTER_URL')}}" class="text-underline cl_blue">vào đây</a>
+                        </small>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Địa chỉ Email*</label>
+                            <input type="text" id="login-page-email" class="form-control" placeholder="Email"/>
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="password2" class="form-label">Mật khẩu</label>
+                            <input type="password" id="login-page-password" class="form-control" placeholder="Nhập mật khẩu"/>
+                        </div>
+
+                        <div class="form-group">
+                            <a href="{{__('CUSTOMER_FORGOT_PASSWORD_URL')}}" class="d-block">Quên mật khẩu?</a>
+                        </div>
+
+                        <div class="form-group d-flex align-items-center flex-wrap mb-0">
+                            <button type="submit" class="mr-4	reset-btn btn-blue text-uppercase mb-3">Đăng nhập</button>
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="text pr-3">Đăng nhập bằng:</span>
+                                <ul class="reset-list d-flex align-items-center social-icons">
+                                    <li class="item">
+                                        <a href="{{loginFacebook(__('EDIT_ACCOUNT_URL'))}}" class="fab d-block btn-fab">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="{{loginGoogle(__('EDIT_ACCOUNT_URL'))}}" class="ggp d-block btn-ggp">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        $("#login-page-form").submit(function (e) {
+            e.preventDefault();
+            var data = {
+                email: $("#login-page-email").val(),
+                password: $("#login-page-password").val()
+            };
+
+            if (!data.email) {
+                $('#login-page-email').addClass('noti-input-error');
+                toastr.error('Vui lòng nhập email!');
+                return;
+            } else {
+                $('#login-page-email').removeClass('noti-input-error');
+            }
+
+            if (!data.email.match("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$")) {
+                $('#login-page-email').addClass('noti-input-error');
+                toastr.error('Email không đúng định dạng!');
+                return;
+            } else {
+                $('#login-page-email').removeClass('noti-input-error');
+            }
+
+            if (!data.password) {
+                $('#login-page-password').addClass('noti-input-error');
+                toastr.error('Vui lòng nhập mật khẩu!');
+                return;
+            } else {
+                $('#login-page-password').removeClass('noti-input-error');
+            }
+
+            $.ajax({
+                url: "/api/signin",
+                type: "POST",
+                data: data,
+                success: function (result) {
+                    if (!result.code) {
+                        toastr.success("Đăng nhập thành công");
+                        setTimeout(function () {
+                            location.href = "{{__('CART_URL')}}";
+                        }, 1000);
+                    } else {
+                        toastr.error(result.message);
+                    }
+                }
+            });
+        });
+    </script>
+
+{% endblock content %}

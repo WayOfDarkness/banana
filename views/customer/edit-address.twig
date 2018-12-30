@@ -1,0 +1,294 @@
+{% extends "layout.twig" %}
+
+{% block pre_include %}
+    <title>Cập nhật sổ địa chỉ</title>
+{% endblock %}
+
+{% block content %}
+
+    <main class="main-content">
+        <nav class="breadcrumbk">
+            <div class="container">
+                <ul class="reset-list breadcrumbk-list">
+                    <li class="item">
+                        <a href="/" class="link">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="{{__('CUSTOMER_EDIT_ACCOUNT_URL')}}" class="link">Tài khoản</a>
+                    </li>
+                    <li class="item active">Sổ địa chỉ</li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="dashboard mb-35">
+            <div class="container dashboard-wrap">
+                <aside class="dashboard-aside js-dbAside">
+                    <button class="reset-btn dashboard-aside--close f-b d-lg-none">
+                        <i class="fa fa-angle-left"></i>Trở về</button>
+
+                    <div class="dashboard-aside--inner js-blurOff">
+                        <h4 class="title-1 text-uppercase fs_24 cl_blue">tài khoản</h4>
+
+                        <ul class="reset-list dashboard-aside__list">
+                            <li class="item">
+                                <a href="{{__('CUSTOMER_EDIT_ACCOUNT_URL')}}" class="d-block fl">Thông tin tài khoản</a>
+                            </li>
+                            <li class="item active">
+                                <a href="/customer/addressBook?view=customer/address" class="d-block fl">Sổ địa chỉ</a>
+                            </li>
+                            <li class="item">
+                                <a href="{{__('SAVE_POINT_URL')}}" class="d-block fl">Điểm tích luỹ</a>
+                            </li>
+                            <li class="item">
+                                <a href="{{__('CUSTOMER_ORDERS_URL')}}" class="d-block fl">Lịch sử đơn hàng</a>
+                            </li>
+                            <li class="item">
+                                <a href="{{__('CUSTOMER_WISHLIST_URL')}}" class="d-block fl">Yêu thích</a>
+                            </li>
+                            <li class="item">
+                                <a href="/customer/subscribe?view=customer/subcribe" class="d-block fl">Đăng ký nhận tin điện tử</a>
+                            </li>
+                            <li class="item">
+                                <a href="{{__('REFERRAL_URL')}}" class="d-block fl">Mã giới thiệu</a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <div class="d-none address-id-hidden">{{url | split('?')[0] | split('/')[5]}}</div>
+                <div class="dashboard-content">
+                    <btn class="mb-15 reset-btn dashboard-aside--open js-dbAsideTrigger fb fs_15 d-block d-lg-none">
+                        <i class="fa fa-hand-point-right cl_blue mr-1"></i>Bảng thông tin</btn>
+
+                    <div class="dashboard-content__detail pb-2 h-unset payment-page">
+                        <h4 class="title-1 text-uppercase fs_24 cl_blue mb-4">CHỈNH SỬA ĐỊA CHỈ</h4>
+
+                        <div class="text fl lh-24 d-flex flex-wrap dang-ky loginModal">
+                            <div class="col-12 px-0 pb-1">
+                                <form class="login-form px-50 mb-3">
+                                    <input type="hidden" id="address-id" value=""/>
+                                    <div class="form-row">
+                                        <div class="form-group col-12 col-md-6 mb-10">
+                                            <input type="text" class="form-control style2 mb-0" placeholder="Tên*" id="address-firstname"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-12 col-md-6 mb-10">
+                                            <input type="text" class="form-control style2 mb-0" placeholder="Họ*" id="address-lastname"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-12 col-md-6 mb-10">
+                                            <input type="text" class="form-control style2 mb-0" placeholder="Địa chỉ*" id="address-address"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-12 col-md-6 mb-10">
+                                            <input type="text" class="form-control style2 mb-0" placeholder="Số điện thoại*" id="address-phone"/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group col-12 col-md-6 mb-10">
+                                            <div class="filter-wrap mb-0">
+                                                <label class="form-label pr-33 mb-0">Tỉnh/Thành phố*</label>
+                                                <div class="selectbox">
+                                                    <select id="region">
+                                                        <option value="" disabled="disabled" selected="selected">Chọn Tỉnh/Thành phố</option>
+                                                        {% set regions = Region() %}
+                                                        {% for region in regions %}
+                                                            <option value="{{region.id}}">{{region.name}}</option>
+                                                        {% endfor %}
+                                                    </select>
+                                                    <i class="fa fa-caret-down"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-12 col-md-6 mb-10">
+                                            <div class="filter-wrap mb-0">
+                                                <label class="form-label pr-33 mb-0">Quận/Huyện*</label>
+                                                <div class="selectbox">
+                                                    <select id="subregion">
+                                                        <option value="" disabled="disabled" selected="selected">Chọn Quận/Huyện</option>
+                                                    </select>
+                                                    <i class="fa fa-caret-down"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group col-12 col-md-6 mb-10 control">
+                                            <input type="checkbox" id="primary_billing" name="default_billing" value="1" title="Use as My Default Billing Address" class="checkbox">
+                                            <label for="primary_billing">
+                                                Sử dụng như Địa chỉ thanh toán mặc định của tôi</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-12 col-md-6 mb-10 control">
+                                            <input type="checkbox" id="primary_shipping" name="default_shipping" value="1" title="Use as My Default Shipping Address" class="checkbox">
+                                            <label for="primary_shipping">
+                                                Sử dụng như Địa chỉ giao hàng mặc định của tôi</label>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+
+                            <div class="come-back w-100 mx-20 bt-1 fm pt-2 d-flex flex-wrap align-items-center justify-content-between pl-30">
+                                <a href="javascript:history.back(-1)" class="d-block cl_blue">
+                                    <i class="fa fa-angle-double-left"></i>
+                                    Quay lại
+                                </a>
+
+                                <span class="cl_red fl">(*): bắt buộc</span>
+                            </div>
+
+                            <button class="ml-auto mr-3 mt-2 mw-unset	reset-btn btn-blue mb-3 px-4 update-address-btn">Lưu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="text/javascript">
+        function showSubregion(region_id) {
+            StoreAPI.getSubRegion(region_id, function (result) {
+                var options = '';
+                var subRegions = result.data;
+                for (var i = 0; i < subRegions.length; i++) {
+                    options += `<option value="${subRegions[i].id}">${subRegions[i].name}</option>`;
+                }
+                $('#subregion').html(options);
+            });
+        }
+
+        $('#region').change(function (e) {
+            var region_id = $(this).val();
+            showSubregion(region_id)
+        });
+
+        $(document).ready(function (e) {
+            var id = $('.address-id-hidden').html();
+            $.ajax({
+                type: 'GET',
+                url: '/api/addressBook/' + id,
+                success: function (json) {
+                    if (!json.code) {
+                        var firstname = json.address.name.split(' ', 2)[1];
+                        var lastname = json.address.name.split(' ', 2)[0];
+                        $('#address-firstname').val(firstname);
+                        $('#address-lastname').val(lastname);
+                        $('#address-address').val(json.address.address);
+                        $('#address-phone').val(json.address.phone);
+                        $('#region').val(json.address.region);
+                        showSubregion(json.address.region);
+                        $('#subregion').val(json.address.subregion);
+                    }
+                }
+            });
+        });
+
+        $('.update-address-btn').click(function (e) {
+            e.preventDefault();
+
+            var id = $('.address-id-hidden').html();
+            var firstName = $('#address-firstname').val();
+            var lastname = $('#address-lastname').val();
+
+            var data = {};
+            data.email = $('#checkout-email').val();
+            data.name = lastname + " " + firstName;
+            data.phone = $('#address-phone').val();
+            data.address = $('#address-address').val();
+            data.region = $('#region').find('option:selected').val();
+            data.subregion = $('#subregion').find('option:selected').val();
+
+            if (!firstName) {
+                $('#address-firstname').addClass('noti-input-error');
+                toastr.error("Vui lòng nhập tên");
+                return;
+            } else {
+                $('#address-firstname').removeClass('noti-input-error');
+            }
+
+            if (!lastname) {
+                $('#address-lastname').addClass('noti-input-error');
+                toastr.error("Vui lòng nhập họ");
+                return;
+            } else {
+                $('#address-lastname').removeClass('noti-input-error');
+            }
+
+            if (!data.address) {
+                $('#address-address').addClass('noti-input-error');
+                toastr.error("Vui lòng nhập địa chỉ");
+                return;
+            } else {
+                $('#address-address').removeClass('noti-input-error');
+            }
+
+            if (!data.phone) {
+                $('#address-phone').addClass('noti-input-error');
+                toastr.error("Vui lòng nhập số điện thoại");
+                return;
+            } else {
+                $('#address-phone').removeClass('noti-input-error');
+            }
+
+            if (!isNumber(data.phone) || data.phone.length < 10) {
+                $('#address-phone').addClass('noti-input-error');
+                toastr.error("Số điện thoại không đúng định dạng");
+                return;
+            } else {
+                $('#address-phone').removeClass('noti-input-error');
+            }
+
+            if (!data.region) {
+                $('#region').addClass('noti-input-error');
+                toastr.error("Vui lòng chọn Tỉnh/Thành phố");
+                return;
+            } else {
+                $('#region').removeClass('noti-input-error');
+            }
+
+            if (!data.subregion) {
+                $('#subregion').addClass('noti-input-error');
+                toastr.error("Vui lòng chọn Quận/Huyện");
+                return;
+            } else {
+                $('#subregion').removeClass('noti-input-error');
+            }
+
+            if ($('#primary_billing').is(":checked")) {
+                data.default_billing = 'default';
+            }
+
+            if ($('#primary_shipping').is(":checked")) {
+                data.default_shipping = 'default';
+            }
+
+            $.ajax({
+                type: 'post',
+                url: '/api/update/AddressBook/' + id,
+                data: data,
+                success: function (result) {
+                    if (!result.code) {
+                        toastr.success('Cập nhật sổ địa chỉ thành công!');
+                        setTimeout(function () {
+                            location.href = '/customer/addressBook?view=customer/address';
+                        }, 1000);
+                    } else {
+                        toastr.error(result.message);
+                    }
+                }
+            })
+        });
+    </script>
+
+{% endblock content %}

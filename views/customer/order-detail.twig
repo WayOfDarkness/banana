@@ -1,0 +1,195 @@
+{% extends "layout.twig" %}
+
+{% block pre_include %}
+    <title>Lịch sử đơn hàng chi tiết</title>
+{% endblock %}
+
+{% block content %}
+
+    <main class="main-content">
+        <nav class="breadcrumbk">
+            <div class="container">
+                <ul class="reset-list breadcrumbk-list">
+                    <li class="item">
+                        <a href="/" class="link">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="{{__('CUSTOMER_EDIT_ACCOUNT_URL')}}" class="link">Tài khoản</a>
+                    </li>
+                    <li class="item active">Lịch sử đơn hàng chi tiết</li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="dashboard mb-35">
+            <div class="container dashboard-wrap">
+                <aside class="dashboard-aside js-dbAside">
+                    <button class="reset-btn dashboard-aside--close f-b d-lg-none">
+                        <i class="fa fa-angle-left"></i>Trở về</button>
+
+                    <div class="dashboard-aside--inner js-blurOff">
+                        <h4 class="title-1 text-uppercase fs_24 cl_blue">tài khoản</h4>
+
+                        <ul class="reset-list dashboard-aside__list">
+                            <li class="item">
+                                <a href="{{__('CUSTOMER_EDIT_ACCOUNT_URL')}}" class="d-block fl">Thông tin tài khoản</a>
+                            </li>
+                            <li class="item">
+                                <a href="/customer/addressBook?view=customer/address" class="d-block fl">Sổ địa chỉ</a>
+                            </li>
+                            <li class="item">
+                                <a href="{{__('SAVE_POINT_URL')}}" class="d-block fl">Điểm tích luỹ</a>
+                            </li>
+                            <li class="item active">
+                                <a href="{{__('CUSTOMER_ORDERS_URL')}}" class="d-block fl">Lịch sử đơn hàng</a>
+                            </li>
+                            <li class="item">
+                                <a href="{{__('CUSTOMER_WISHLIST_URL')}}" class="d-block fl">Yêu thích</a>
+                            </li>
+                            <li class="item">
+                                <a href="/customer/subscribe?view=customer/subcribe" class="d-block fl">Đăng ký nhận tin điện tử</a>
+                            </li>
+                            <li class="item">
+                                <a href="{{__('REFERRAL_URL')}}" class="d-block fl">Mã giới thiệu</a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                {% for item in customer.orders %}
+                    {% if session.order_id == item.id %}
+                        <div class="dashboard-content" data-id="{{session.order_id}}">
+                            <btn class="mb-15 reset-btn dashboard-aside--open js-dbAsideTrigger fb fs_15 d-block d-lg-none">
+                                <i class="fa fa-hand-point-right cl_blue mr-1"></i>Bảng thông tin</btn>
+
+                            <div class="dashboard-content__detail pb-2 h-unset payment-page">
+                                <div class="d-flex flex-wrap align-items-center">
+                                    <h4 class="title-1 fs_24 cl_blue mb-2">Mã đơn Hàng: #{{session.order_id}}
+                                        -
+                                        {% if item.order_status == 0 %}
+                                            Chờ xác nhận
+                                        {% else %}
+                                            Đã xác nhận
+                                        {% endif %}
+                                    </h4>
+                                    <div class="come-back ml-auto fm px-20 mb-2">
+                                        <a href="javascript:history.back(-1)" class="d-block cl_blue">
+                                            <i class="fa fa-angle-double-left"></i>
+                                            Quay lại
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="text fl lh-24 d-flex flex-wrap">
+                                    <div class="col-12 px-20 pb-3">
+                                        <h5 class="d-block fm fs_14">1. THÔNG TIN GIAO HÀNG</h5>
+
+                                        <p class="info fl ml-18 info-js"></p>
+
+                                        <h5 class="d-block fm fs_14">2. NHÀ VẬN CHUYỂN</h5>
+                                        <p class="info fl ml-18">
+                                            <span class="d-block fm">{{CustomField(session.order_id,"order","more-information") | split('</br>')[0]}}</span>
+                                            {{CustomField(session.order_id,"order","more-information") | split('</br>')[1]}}
+                                        </p>
+
+                                        <h5 class="d-block fm fs_14">3. THANH TOÁN</h5>
+                                        <p class="info fl ml-18">
+                                            {{item.payment_method}}
+                                        </p>
+                                        {% if item.payment_method == "Chuyển khoản ngân hàng" %}
+                                            <div class="mb-3 mt-10 h-138 form-textarea fl ml-18">
+                                                {% for item in Bank() %}
+                                                    {{item.bank_name}}
+                                                    <br>
+                                                    Tên Tài Khoản:
+                                                    <span class="fr">{{item.user_name}}</span>
+                                                    <br>
+                                                    Số tài khoản:
+                                                    <span class="fr">{{item.bank_number}}</span>
+                                                    <br><br>
+                                                {% endfor %}
+                                            </div>
+                                        {% endif %}
+                                        <h5 class="d-block fm fs_14">4. ĐƠN HÀNG</h5>
+                                        <div class="item-footer bg_white table-responsive table-discount pr-3 pr-md-4 ml-18">
+                                            <table class="table table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" class="fs_16 font-weight-normal br-0 fm">Tên sản phẩm</th>
+                                                        <th scope="col" class="fs_16 font-weight-normal fm">SL</th>
+                                                        <th scope="col" class="fs_16 font-weight-normal text-right fm">Thành tiền</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {% for book in item.cart %}
+                                                        <tr>
+                                                            <td class="fl br-0">{{book.product_title}}</td>
+                                                            <td class="fl">{{book.quantity}}</td>
+                                                            <td class="fl text-right">{{book.price | money}}
+                                                                đ</td>
+                                                        </tr>
+                                                    {% endfor %}
+
+                                                    <tr class="fl text-right new-style">
+                                                        <td colspan="2" class="pt-3">Thành tiền</td>
+                                                        <td class="pt-3">{{item.subtotal | money}}
+                                                            đ</td>
+                                                    </tr>
+
+                                                    <tr class="fl text-right new-style">
+                                                        <td colspan="2">Phí vận chuyển ( Miễn phí vận chuyển cho đơn hàng trên 200k tại Tp. HCM và 300k trên toàn quốc.</td>
+                                                        <td>{{item.shipping_price | money}}
+                                                            đ</td>
+                                                    </tr>
+
+                                                    <tr class="fl text-right new-style">
+                                                        <td colspan="2">Mã giảm giá</td>
+                                                        <td>{{item.coupon_discount | money}}
+                                                            đ</td>
+                                                    </tr>
+
+                                                    <tr class="fl text-right new-style">
+                                                        <td colspan="2">Giảm giá V-point</td>
+                                                        <td>{{item.discount_point | money}}
+                                                            đ</td>
+                                                    </tr>
+
+                                                    <tr class="text-right new-style fm">
+                                                        <td colspan="2">TỔNG SỐ TIỀN (GỒM VAT)</td>
+                                                        <td >{{item.total | money}}
+                                                            đ</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+
+    <script>
+        $(document).ready(function () {
+            var id = $('.dashboard-content').data('id');
+            $.ajax({
+                url: "/api/get-order/" + id,
+                type: "GET",
+                success: function (result) {
+                    console.log(result);
+                    info = `Người nhận: ${result.shipping_info.name}<br>
+                            Địa chỉ: ${result.shipping_info.address}, ${result.shipping_info.subregion_name}, ${result.shipping_info.region_name}<br>
+                            Số điện thoại: ${result.shipping_info.phone}<br>
+                            Email: ${result.shipping_info.email}`;
+                    $('.info-js').html(info);
+                }
+            });
+        })
+    </script>
+
+{% endblock content %}

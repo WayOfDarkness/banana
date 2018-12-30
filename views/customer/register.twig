@@ -1,0 +1,230 @@
+{% extends "layout.twig" %}
+
+{% block pre_include %}
+    <title>Đăng ký</title>
+{% endblock %}
+
+{% block content %}
+    {% set urlLogin = session.urlLogin %}
+
+    <main class="main-content">
+        <nav class="breadcrumbk">
+            <div class="container">
+                <ul class="reset-list breadcrumbk-list">
+                    <li class="item">
+                        <a href="/" class="link">
+                            <i class="fa fa-home"></i>
+                        </a>
+                    </li>
+                    <li class="item active">Đăng ký</li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="dang-ky loginModal">
+            <h3 class="d-none">dang-ky</h3>
+            <div class="container">
+                <figure class="dang-ky__img">
+                    <img src="{{settings.register_top_image | upload_url}}" class="d-block img_full">
+                </figure>
+
+                <div class="bg_white mt-35 col py-4">
+                    <a href="/" class="link d-block cl_blue pb-1 fm">
+                        <i class="fa fa-angle-double-left pr-2"></i>Quay lại</a>
+
+                    <h3 class="title text-uppercase text-center fs_24 mb-3">TẠO TÀI KHOẢN</h3>
+
+                    <form id="register-form" class="login-form col-xl-8 mx-auto">
+                        <div class="form-row">
+                            <div class="form-group col-12 col-md-6">
+                                <input type="text" id="register-email" class="form-control" placeholder="Địa chỉ Email*"/>
+                            </div>
+                            <div class="form-group col-12 col-md-6">
+                                <input type="text" id="register-name" class="form-control" placeholder="Họ và tên*"/>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-12 col-md-6">
+                                <input type="password" id="register-password" class="form-control" placeholder="Mật khẩu*"/>
+                            </div>
+                            <div class="form-group col-12 col-md-6 d-flex align-items-center style2">
+                                <label class="form-label mb-0">Ngày sinh</label>
+                                <div class="d-flex form-control-wrap">
+                                    <div class="col-4">
+                                        <input type="text" id="register-day" class="form-control" maxlength="2" placeholder="Ngày"/>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" id="register-month" class="form-control" maxlength="2" placeholder="Tháng"/>
+                                    </div>
+                                    <div class="col-4">
+                                        <input type="text" id="register-year" class="form-control" maxlength="4" placeholder="Năm"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-12 col-md-6">
+                                <input type="password" id="register-confirmPassword" class="form-control" placeholder="Xác nhận mật khẩu*"/>
+                            </div>
+
+                            <div class="form-group col-12 col-md-6">
+                                <div class="filter-wrap mb-0">
+                                    <label class="form-label pr-33 mb-0">Giới tính</label>
+                                    <div class="selectbox">
+                                        <select id="register-gender">
+                                            <option value="">Chọn giới tính</option>
+                                            <option value="">Nam</option>
+                                            <option value="">Nữ</option>
+                                            <option value="">Khác</option>
+                                        </select>
+                                        <i class="fa fa-caret-down"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-12 col-md-6">
+                                <input type="text" id="register-ref" class="form-control" placeholder="Mã giới thiệu"/>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-12 col-md-6">
+                                <label class="checkbox style2 d-flex align-items-center">
+                                    <input type="checkbox" id="register-sub" class="checkbox-input" checked="checked">
+                                    <span class="checkbox-icon"></span>
+                                    <span class="checkbox-text cl_blue">Đăng ký nhận bản tin định kỳ</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group d-flex align-items-center flex-wrap mb-0">
+                                <button type="submit" class="mr-4 reset-btn btn-blue mb-3">Gửi thông tin</button>
+                                <div class="d-flex align-items-center mb-3">
+                                    <span class="text pr-3">Đăng nhập bằng:</span>
+                                    <ul class="reset-list d-flex align-items-center social-icons">
+                                        <li class="item">
+                                            <a href="{{loginFacebook(__('EDIT_ACCOUNT_URL'))}}" class="fab d-block btn-fab">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="item">
+                                            <a href="{{loginGoogle(__('EDIT_ACCOUNT_URL'))}}" class="ggp d-block btn-ggp">
+                                                <i class="fa fa-google-plus"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <figure class="dang-ky__img">
+                    <img src="{{settings.register_bottom_image | upload_url}}" class="d-block img_full">
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript">
+        $(function () {
+            var regExp = /[0-9]/;
+
+            $("#register-year, #register-month, #register-day").on('keydown keyup', function (e) {
+                var value = String.fromCharCode(e.which) || e.key;
+
+                if (!regExp.test(value) && e.which != 8 && e.which != 9 && e.which != 46 && (e.which < 37 || e.which > 40)) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+        });
+
+        $("#register-form").submit(function (e) {
+            e.preventDefault();
+            var confirmPassword = $("#register-confirmPassword").val();
+            var data = {
+                name: $("#register-name").val(),
+                email: $("#register-email").val(),
+                password: $("#register-password").val(),
+                gender: $("register-gender:checked").val(),
+                birthday: $("#register-year").val() + "-" + $("#register-month").val() + "-" + $("#register-day").val(),
+                ref_id: $("#register-ref").val()
+            };
+
+            if (!data.email) {
+                $('#register-email').addClass('noti-input-error');
+                toastr.error('Vui lòng nhập email!');
+                return;
+            } else {
+                $('#register-email').removeClass('noti-input-error');
+            }
+
+            if (!data.email.match("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$")) {
+                $('#register-email').addClass('noti-input-error');
+                toastr.error('Email không đúng định dạng!');
+                return;
+            } else {
+                $('#register-email').removeClass('noti-input-error');
+            }
+
+            if (!data.name) {
+                $('#register-name').addClass('noti-input-error');
+                toastr.error('Vui lòng nhập họ tên!');
+                return;
+            } else {
+                $('#register-name').removeClass('noti-input-error');
+            }
+
+            if (!data.password) {
+                $('#register-password').addClass('noti-input-error');
+                toastr.error('Vui lòng nhập họ mật khẩu!');
+                return;
+            } else {
+                $('#register-password').removeClass('noti-input-error');
+            }
+
+            if (!confirmPassword) {
+                $('#register-confirmPassword').addClass('noti-input-error');
+                toastr.error('Vui lòng xác nhận mật khẩu!');
+                return;
+            } else {
+                $('#register-confirmPassword').removeClass('noti-input-error');
+            }
+
+            if (data.password != confirmPassword) {
+                $('#register-confirmPassword').addClass('noti-input-error');
+                toastr.error('Mật khẩu không trùng khớp!');
+                return;
+            } else {
+                $('#register-confirmPassword').removeClass('noti-input-error');
+            }
+
+            if ($('#register-sub').is(":checked")) {
+                StoreAPI.addSubscriber(data.email, 'email', function () {});
+            }
+
+            $.ajax({
+                url: "/api/signup",
+                type: "POST",
+                data: data,
+                success: function (result) {
+                    if (!result.code) {
+                        toastr.success("Đăng ký thành công");
+                        setTimeout(function () {
+                            location.href = '/';
+                        }, 1000);
+                    } else {
+                        toastr.error(result.message);
+                    }
+                }
+            });
+        });
+    </script>
+
+{% endblock content %}
