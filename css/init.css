@@ -19454,7 +19454,11 @@ a:hover .link-img .hover-play-pause {
 
 .promo--image img {
   -webkit-transition: opacity .25s;
-  transition: opacity .25s
+  transition: opacity .25s;
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
 }
 
 .promo--media-type {
