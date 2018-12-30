@@ -1,6 +1,6 @@
 // Outline
 var html = '';
-console.log('aaaa');
+
 $('.ds-main .field--type-text-with-summary').find('h2').each(function (i, e) {
     $(this).attr('id', i);
     var g = $(this).html();
