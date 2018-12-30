@@ -22878,7 +22878,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.95rem;
   color: #e03800;
 
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal
 }
 
@@ -22886,9 +22886,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #4c4c4c;
 
   font-weight: normal;
-  font-style: normal;
+  font-style: italic;
   text-transform: uppercase;
-  font-size: .75rem;
+  font-size: .7rem;
   line-height: .91rem
 }
 

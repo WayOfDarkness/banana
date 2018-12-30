@@ -1,89 +1,94 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-	<title>Chơi gì đây ?</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8">
+    <title>Chơi gì đây ?</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
 
-  {% set seo = Seo() %}
-  <meta name="title" content="{{seo.meta_title ? seo.meta_title:settings.home_name}}">
-  <meta name="description" content="{{seo.meta_description}}">
-  <meta name="keywords" content="{{seo.meta_keyword}}">
-  <meta name="robots" content="{{seo.meta_robots}}">
-  <meta property="og:title" content="{{seo.meta_title}}"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="{{currentUrl()}}"/>
-  <meta property="og:image" content="{{seo.meta_image}}"/>
-  <meta property="og:description" content="{{seo.meta_description}}"/>
+    {% set seo = Seo() %}
+    <meta name="title" content="{{ seo.meta_title ? seo.meta_title:settings.home_name }}">
+    <meta name="description" content="{{ seo.meta_description }}">
+    <meta name="keywords" content="{{ seo.meta_keyword }}">
+    <meta name="robots" content="{{ seo.meta_robots }}">
+    <meta property="og:title" content="{{ seo.meta_title }}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="{{ currentUrl() }}"/>
+    <meta property="og:image" content="{{ seo.meta_image }}"/>
+    <meta property="og:description" content="{{ seo.meta_description }}"/>
 
-	<!-- Font -->
+    <!-- Font -->
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CPoppins:400,500" rel="stylesheet">
-
-
-	<link href="{{theme.uri}}/comming/common-css/ionicons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CPoppins:400,500" rel="stylesheet">
 
 
-	<link rel="stylesheet" href="common-css/jquery.classycountdown.css" />
+    <link href="{{ theme.uri }}/comming/common-css/ionicons.css" rel="stylesheet">
 
-	<link href="{{theme.uri}}/comming/05-comming-soon/css/styles.css" rel="stylesheet">
 
-	<link href="{{theme.uri}}/comming/05-comming-soon/css/responsive.css" rel="stylesheet">
-  <style>
+    <link rel="stylesheet" href="common-css/jquery.classycountdown.css"/>
 
-		@media only screen and (max-height: 600px) {
-			#normal-countdown, .main-area .social-btn .list-heading {
-				display: none;
-			}
-      .main-area .notify-btn {
-        margin: 10px 0 80px;
-      }
+    <link href="{{ theme.uri }}/comming/05-comming-soon/css/styles.css" rel="stylesheet">
 
-		  }
+    <link href="{{ theme.uri }}/comming/05-comming-soon/css/responsive.css" rel="stylesheet">
+    <style>
 
-	</style>
+        @media only screen and (max-height: 600px) {
+            #normal-countdown, .main-area .social-btn .list-heading {
+                display: none;
+            }
+
+            .main-area .notify-btn {
+                margin: 10px 0 80px;
+            }
+
+        }
+        .main-area.center-text {
+            background-position: bottom center;
+        }
+
+    </style>
 
 
 </head>
 <body>
 
-	<div class="main-area-wrapper">
-		<div class="main-area center-text" style="background-image:url('{{theme.uri}}/comming/images/comming_soon_2.gif');">
+<div class="main-area-wrapper">
+    <div class="main-area center-text"
+         style="background-image:url('{{ theme.uri }}/comming/images/comming_soon_2.gif');">
 
-			<div class="display-table">
-				<div class="display-table-cell">
+        <div class="display-table">
+            <div class="display-table-cell">
 
-					<h1 class="title"><b>Comming Soon</b></h1>
-					<p class="desc font-white">Our website is currently undergoing scheduled maintenance.
-						We Should be back shortly. Thank you for your patience.</p>
+                <h1 class="title"><b>Comming Soon</b></h1>
+                <p class="desc font-white">Our website is currently undergoing scheduled maintenance.
+                    We Should be back shortly. Thank you for your patience.</p>
 
-					<div id="normal-countdown" data-date="2019/1/20"></div>
+                <div id="normal-countdown" data-date="2019/1/20"></div>
 
-					<a class="notify-btn" href="#"><b>NOTIFY US</b></a>
+                <a class="notify-btn" href="#"><b>NOTIFY US</b></a>
 
-					<ul class="social-btn">
-						<li class="list-heading">Follow us for update</li>
-						<li><a href="https://www.facebook.com/PageChoiGiDay"><i class="ion-social-facebook"></i></a></li>
-						<li><a href="#"><i class="ion-social-twitter"></i></a></li>
-						<li><a href="#"><i class="ion-social-googleplus"></i></a></li>
-						<li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
-						<li><a href="#"><i class="ion-social-pinterest"></i></a></li>
-					</ul>
+                <ul class="social-btn">
+                    <li class="list-heading">Follow us for update</li>
+                    <li><a href="https://www.facebook.com/PageChoiGiDay"><i class="ion-social-facebook"></i></a></li>
+                    <li><a href="#"><i class="ion-social-twitter"></i></a></li>
+                    <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                    <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+                    <li><a href="#"><i class="ion-social-pinterest"></i></a></li>
+                </ul>
 
-				</div><!-- display-table -->
-			</div><!-- display-table-cell -->
-		</div><!-- main-area -->
-	</div><!-- main-area-wrapper -->
+            </div><!-- display-table -->
+        </div><!-- display-table-cell -->
+    </div><!-- main-area -->
+</div><!-- main-area-wrapper -->
 
 
-	<!-- SCIPTS -->
+<!-- SCIPTS -->
 
-	<script src="{{theme.uri}}/comming/common-js/jquery-3.1.1.min.js"></script>
+<script src="{{ theme.uri }}/comming/common-js/jquery-3.1.1.min.js"></script>
 
-	<script src="{{theme.uri}}/comming/common-js/jquery.countdown.min.js"></script>
+<script src="{{ theme.uri }}/comming/common-js/jquery.countdown.min.js"></script>
 
-	<script src="{{theme.uri}}/comming/common-js/scripts.js"></script>
+<script src="{{ theme.uri }}/comming/common-js/scripts.js"></script>
 
 </body>
 </html>
