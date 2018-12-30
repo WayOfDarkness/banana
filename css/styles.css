@@ -46,3 +46,10 @@
     display: none !important;
   }
 }
+.promo-strip__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.promo-strip__list li {
+  margin: 0;
+}
