@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{theme.uri}}/css/init.css">
+        <link rel="stylesheet" href="{{theme.uri}}/css/styles.css">
+
+        <style>
+            .noti-input-error {
+                border: 1px double red!important;
+            }
+        </style>
+        <script src="{{theme.uri}}/assets/vendor/js/jquery-3.3.1.min.js"></script>
+        <script src="{{shop.static}}/libs/StoreAPI.jquery.js" type="text/javascript"></script>
+
+        {% set seo = Seo() %}
+        <meta name="title" content="{{seo.meta_title ? seo.meta_title:settings.home_name}}">
+        <meta name="description" content="{{seo.meta_description}}">
+        <meta name="keywords" content="{{seo.meta_keyword}}">
+        <meta name="robots" content="{{seo.meta_robots}}">
+        <meta property="og:title" content="{{seo.meta_title}}"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="{{currentUrl()}}"/>
+        <meta property="og:image" content="{{seo.meta_image}}"/>
+        <meta property="og:description" content="{{seo.meta_description}}"/>
+        {% if settings.home_favicon %}
+            <link rel="shortcut icon" href="{{settings.home_favicon|upload_url}}">
+        {% endif %}
+
+        {{settings.google_analytics | raw}}
+        {% block pre_include %}{% endblock %}
+    </head>
+
+    <body>
+
+      {% include 'snippet/header.twig' %}
+      {% block content %}{% endblock %}
+      {% include 'snippet/footer.twig' %}
+
+      <img src="/pixel/visit" hidden="hidden">
+
+
+      <script src="{{theme.uri}}/js/jquery-3.3.1.min.js" type="application/javascript"></script>
+      <script src="{{theme.uri}}/js/scripts.js" type="application/javascript"></script>
+
+      {{settings.facebook_pixel | raw}}
+      {{settings.chat_online | raw}}
+
+      {% block post_include %}{% endblock %}
+    </body>
+</html>
