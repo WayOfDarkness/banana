@@ -379,10 +379,10 @@
        
        if (jQuery('.ds-wrapper').hasClass('legacy')) {
        
-           jQuery('.ds-footer-full').append('<div id="comments-disabled" class="legacy">Comments have been disabled for this article</div>');
+           jQuery('.ds-footer-full').append('<div id="comments-disabled" class="legacy">Comments have been disabled for this articles</div>');
        } else {
        
-           jQuery('.ds-footer-full').append('<div id="comments-disabled">Comments have been disabled for this article</div>');
+           jQuery('.ds-footer-full').append('<div id="comments-disabled">Comments have been disabled for this articles</div>');
        
        }
    
