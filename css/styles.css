@@ -53,3 +53,29 @@
 .promo-strip__list li {
   margin: 0;
 }
+
+.tag-block {
+  margin: 0;
+}
+
+.text-block {
+  width: 50%;
+  margin: 0 5px;
+  text-align: center;
+}
+
+.alert-text {
+  margin-bottom: 5px !important;
+}
+
+.platform-color {
+  background-color: #599E42;
+}
+
+.type-color {
+  background-color: #26BDF0;
+}
+
+.brand-color {
+  background-color: orange;
+}
