@@ -3864,7 +3864,6 @@ header:after {
 }
 
 .header-logo .site-logo {
-  width: 20rem;
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3888,10 +3887,7 @@ header:after {
 }
 
 .header-logo .site-logo img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
 }
 
 .header-logo .site-logo:hover {
@@ -4590,7 +4586,7 @@ main {
 }
 
 footer[role="contentinfo"] {
-  padding: 1rem;
+  padding: 10px 0px 80px;
   clear: both;
   width: 100%
 }
@@ -4600,7 +4596,7 @@ footer[role="contentinfo"] {
 }
 
 .footer-custom-logo, .footer-social-links, footer[role="contentinfo"] .block {
-  margin: 1.5rem 3rem 2.5rem
+  margin: 15px auto 25px;
 }
 
 @media screen and (max-width: 800px) {
@@ -4612,12 +4608,13 @@ footer[role="contentinfo"] {
 
 .region-footer .block {
   font-size: 1.36rem;
-  text-align: center
+  text-align: center;
+  margin: 15px auto 25px;
 }
 
 .region-footer .block p:last-of-type {
   margin-bottom: 0;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .region-footer .menu {
@@ -4640,7 +4637,8 @@ footer[role="contentinfo"] {
 
 .region-footer li::after {
   content: "|";
-  margin: 0 .5rem
+  margin: 0 .5rem;
+  font-size: 18px;
 }
 
 .region-footer li:last-of-type::after {
@@ -4653,7 +4651,7 @@ footer[role="contentinfo"] {
   border-bottom: none;
   -webkit-transition: color .3s ease;
   transition: color .3s ease;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .footer-cover-image {
@@ -4674,16 +4672,17 @@ footer[role="contentinfo"] {
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center
+  justify-content: center;
+  margin: 15px auto 25px;
 }
 
 .footer-social-links .social-icon {
-  height: 2rem;
-  width: 2rem;
+  height: 26px;
+  width: 26px;
   display: inline-block;
   margin: 0 .5rem;
   text-indent: -9999px;
-  background-size: 2rem;
+  background-size: 26px;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -4705,19 +4704,11 @@ footer[role="contentinfo"] {
 }
 
 .footer-social-links .social-icon.facebook {
-  background-image: url("/themes/gi5/includes/images/social/footer_facebook.svg")
-}
-
-.footer-social-links .social-icon.twitter {
-  background-image: url("/themes/gi5/includes/images/social/footer_twitter.svg")
+  background-image: url("../img/icon/footer_facebook.svg")
 }
 
 .footer-social-links .social-icon.youtube {
-  background-image: url("/themes/gi5/includes/images/social/footer_youtube.svg")
-}
-
-.footer-social-links .social-icon.twitch {
-  background-image: url("/themes/gi5/includes/images/social/footer_twitch.svg")
+  background-image: url("../img/icon/footer_youtube.svg")
 }
 
 .block-customlogo {
