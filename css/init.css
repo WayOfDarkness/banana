@@ -1920,8 +1920,7 @@ input:focus, textarea:focus {
 }
 
 .no-touch input:focus, .no-touch textarea:focus {
-  border-color: rgba(224, 56, 0, 0.8);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(224, 56, 0, 0.6)
+  border-color: #e03800cc;
 }
 
 textarea {

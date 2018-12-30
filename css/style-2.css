@@ -464,7 +464,6 @@ ul.menu {
 }
 
 .menu-item {
-  padding-top: 0.2em;
   margin: 0;
 }
 
@@ -3720,6 +3719,7 @@ table th, table td {
 header {
   position: relative;
   padding: 5px 30px;
+  height: 60px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
@@ -3735,12 +3735,11 @@ header {
 }
 
 header > .max-width-container {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -3796,6 +3795,7 @@ header:after {
 }
 
 .header-right-container {
+  position: relative;
   width: 15rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3846,8 +3846,11 @@ header:after {
 
 .header-icon {
   border-bottom: 5px solid transparent;
-  padding-bottom: 1.2rem;
-  margin: 0 .6rem
+  margin: 0 .6rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .expanded .header-icon {
@@ -3923,8 +3926,8 @@ header:after {
 }
 
 .header-right-container .icon-search {
-  height: 2rem;
-  width: 2rem;
+  height: 26px;
+  width: 26px;
   display: inline-block;
   margin: 0 .5rem;
   text-indent: -9999px;
@@ -3947,7 +3950,9 @@ label[for="edit-keyword"] {
 
 .search-block-form, .block-views-exposed-filter-blocksearch-content-page-1 {
   width: 100%;
-  position: relative
+  position: relative;
+  display: flex;
+  padding: 5px;
 }
 
 .search-block-form .form-item, .block-views-exposed-filter-blocksearch-content-page-1 .form-item {
@@ -3960,10 +3965,9 @@ label[for="edit-keyword"] {
 }
 
 .region-header-hamburger-top .search-block-form form, #search-dropdown .search-block-form form, .region-header-hamburger-top .block-views-exposed-filter-blocksearch-content-page-1 form, #search-dropdown .block-views-exposed-filter-blocksearch-content-page-1 form {
-  border-bottom: 2px solid #dbdbdb;
-  padding-bottom: 1.5rem;
   display: block;
-  position: relative
+  position: relative;
+  flex-grow: 1;
 }
 
 .region-header-hamburger-top .search-block-form .form-item, #search-dropdown .search-block-form .form-item, .region-header-hamburger-top .block-views-exposed-filter-blocksearch-content-page-1 .form-item, #search-dropdown .block-views-exposed-filter-blocksearch-content-page-1 .form-item {
@@ -3972,9 +3976,14 @@ label[for="edit-keyword"] {
 }
 
 .region-header-hamburger-top .search-block-form .form-text, #search-dropdown .search-block-form .form-text, .region-header-hamburger-top .block-views-exposed-filter-blocksearch-content-page-1 .form-text, #search-dropdown .block-views-exposed-filter-blocksearch-content-page-1 .form-text {
-  padding-left: 4.5rem;
-  border: none;
-  width: 100%
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  border-width: 2px;
+  font-size: 20px;
 }
 
 .region-header-hamburger-top .search-block-form .form-actions, #search-dropdown .search-block-form .form-actions, .region-header-hamburger-top .block-views-exposed-filter-blocksearch-content-page-1 .form-actions, #search-dropdown .block-views-exposed-filter-blocksearch-content-page-1 .form-actions {
@@ -3983,12 +3992,9 @@ label[for="edit-keyword"] {
 }
 
 .region-header-hamburger-top .search-block-form .icon-search, #search-dropdown .search-block-form .icon-search, .region-header-hamburger-top .block-views-exposed-filter-blocksearch-content-page-1 .icon-search, #search-dropdown .block-views-exposed-filter-blocksearch-content-page-1 .icon-search {
-  position: absolute;
-  height: 2rem;
-  width: 2rem;
-  background-size: 2rem;
-  left: 0;
-  bottom: 2rem
+  display: inline-block;
+  width: 40px;
+  margin-right: 10px;
 }
 
 .header-dropdown {
@@ -4009,9 +4015,12 @@ label[for="edit-keyword"] {
   font-size: 1.7rem;
   font-family: "Unica One", sans-serif;
   text-transform: uppercase;
-  padding: 1rem 3rem
+  padding: 15px 30px;
+  height: 80px;
 }
-
+.header-dropdown div {
+  height: 100%;
+}
 .header-dropdown.open {
   display: block
 }
@@ -4026,7 +4035,6 @@ label[for="edit-keyword"] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 1rem 0
 }
 
 .header-dropdown:after {
@@ -4082,7 +4090,7 @@ label[for="edit-keyword"] {
 }
 
 .slide-in.mCS_no_scrollbar {
-  padding-right: 3rem
+  padding: 100px 30px;
 }
 
 .layout-container .slide-in a {
@@ -4154,10 +4162,12 @@ label[for="edit-keyword"] {
 .menu--main li a {
   font-weight: normal;
   text-decoration: none;
-  padding-bottom: 12px;
+  padding: 12px 0px;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
-  border-bottom: 5px solid transparent
+  border-bottom: 5px solid transparent;
+  display: inline-block;
+  line-height: 26px;
 }
 
 .expanded .menu--main li a {
@@ -4165,18 +4175,14 @@ label[for="edit-keyword"] {
 }
 
 .icon-expanded {
-  height: 2rem;
-  width: 2rem;
   display: inline-block;
-  margin: 0 .5rem;
   text-indent: -9999px;
-  background-size: 2rem;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
   speak: none;
-  height: 1.7rem;
-  margin: .2rem 0 .1rem;
+  width: 26px;
+  height: 26px;
   cursor: pointer;
   -webkit-mask: url("../img/icon/bars-solid.svg") no-repeat 100% 100%;
   mask: url("../img/icon/bars-solid.svg") no-repeat 100% 100%
@@ -4425,15 +4431,14 @@ label[for="edit-keyword"] {
 
 .user-icon img, .user-icon.icon-missing {
   cursor: pointer;
-  border-radius: 50%;
-  height: 20px;
-  width: 20px
+  height: 26px;
+  width: 26px
 }
 
 .user-icon.icon-missing {
-  background-image: url("../img/icon/user-ninja-solid.svg");
-  background-size: cover;
-  background-repeat: no-repeat
+  background-color: #656565;
+  -webkit-mask: url("../img/icon/user-ninja-solid.svg") no-repeat 100% 100%;
+
 }
 
 #account-dropdown .account-wrapper > *, #account-dropdown .account-wrapper .views-row > * {
@@ -4444,7 +4449,10 @@ label[for="edit-keyword"] {
 
 #account-dropdown .user-loggedout, #account-dropdown .user-pages ul {
   text-align: right;
-  margin: 0
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 #account-dropdown li {
@@ -4488,9 +4496,12 @@ label[for="edit-keyword"] {
 }
 
 .user-mobile a, .hamburger-bottom .user-loggedout ul a {
-  border-bottom: none
+  border-bottom: none;
+  color:#d9d9d9;
 }
-
+.user-mobile a, .hamburger-bottom .user-loggedout ul a:hover {
+  color: #999;
+}
 .user-mobile p, .hamburger-bottom .user-loggedout ul p {
   margin: 0
 }
@@ -7953,15 +7964,38 @@ header {
 }
 
 .header-icon {
-  border-bottom-color: transparent
+  border-bottom-color: transparent;
+  position: relative;
+  width: 32px;
 }
 
-.header-icon:hover {
-  border-bottom-color: #4b4b4b
+.header-icon.close > div {
+  background-color: #1f64e2 !important;
+  width: 32px;
+  height: 32px;
+  transition-duration: 0.3s;
+}
+.header-icon.close::before {
+  background-color: #1f64e2 !important;
+  opacity: 1;
+}
+.header-icon::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #4b4b4b;
+  top: calc(100% + 5px);
+  opacity: 0;
+  transition-timing-function: ease-out;
+  transition-duration: 0.3s;
+}
+.header-icon:hover::before {
+  opacity: 1;
 }
 
 .header-icon.close {
-  border-bottom-color: #1f64e2
 }
 
 @supports (-ms-ime-align:auto) {
@@ -8015,7 +8049,6 @@ header {
 }
 
 .region-header-hamburger-top .search-block-form form, #search-dropdown .search-block-form form, .region-header-hamburger-top .block-views-exposed-filter-blocksearch-content-page-1 form, #search-dropdown .block-views-exposed-filter-blocksearch-content-page-1 form {
-  border-bottom-color: #dbdbdb
 }
 
 .header-dropdown {
@@ -8098,7 +8131,7 @@ header {
 }
 
 .slide-in .menu--hamburger-menu a:hover, .slide-in .menu--hamburger-menu a:active {
-  color: #999
+  color: #999;
 }
 
 .slide-in .menu--hamburger-menu a.is-active {
@@ -8235,7 +8268,6 @@ header {
 }
 
 .user-icon.icon-missing {
-  background-color: #717171
 }
 
 #account-dropdown a {
@@ -8247,7 +8279,7 @@ header {
 }
 
 #account-dropdown a:hover, #account-dropdown a:active, #account-dropdown a.is-active {
-  color: #1f64e2
+  color: #e03800cc;
 }
 
 .user-mobile, .hamburger-bottom .user-loggedout ul {

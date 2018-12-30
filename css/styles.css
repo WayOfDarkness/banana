@@ -1,3 +1,7 @@
+* {
+
+}
+
 .social-share-button .social-icon.upvote {
   -webkit-mask: url("../img/icon/thumbs-up-solid.svg") no-repeat 100% 100%;
 }
@@ -43,7 +47,6 @@
 
 @media screen and (min-width: 1151px) {
   .expanded-menu-button {
-    display: none !important;
   }
 }
 .promo-strip__list {
@@ -93,4 +96,25 @@
 }
 #block-copyright {
   margin: 0px;
+}
+
+#expanded-menu input[type="text"] {
+  height: 40px;
+  font-size: 20px;
+  line-height: 20px;
+  padding-left: 32px;
+}
+.hamburger-middle {
+  font-size: 16px;
+}
+.menu--hamburger-menu li a {
+  line-height: 26px;
+  margin-bottom: 3px;
+}
+.hamburger-top .icon-search {
+  position: absolute;
+  left: 0px;
+  bottom: 16px;
+  width: 26px !important;
+  height: 26px;
 }
