@@ -7,7 +7,7 @@ $('.ds-main .field--type-text-with-summary').find('h2').each(function (i, e) {
     html += `<div class="scroll-animated" style="font-size: 12px;" rel="#${i}">${g}</div>`;
 })
 
-$('.ad-300').html(html);
+$('.ad-299').html(html);
 
 $(".scroll-animated").click(function () {
     var id = $(this).attr('rel');
