@@ -4245,7 +4245,7 @@ body.has-promo-alert--breaking-news {
     width: 2px;
     top: 0;
     right: 0;
-    background-image: url(../img/bg-border-light.png);
+    background-image: url(../img/border-light-y.png);
     background-repeat: repeat-y;
     background-position: left
   }
@@ -20617,7 +20617,7 @@ a:hover .link-img .hover-play-pause {
 
 @media (min-width: 640px) {
   .river .media + .media {
-    background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
+    background-image: url(../img/bg-border-light.png);
     background-position: top;
     background-repeat: repeat-x
   }
@@ -20732,7 +20732,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 .media-well--review-gs + .media-well--review-user > span {
-  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
+  background-image: url(/../img/bg-border-light.png);
   background-position: top;
   background-repeat: repeat-x
 }
@@ -21172,7 +21172,7 @@ a:hover .link-img .hover-play-pause {
 .video-info {
   padding: .65rem 0;
   width: 100%;
-  background-image: url(/bundles/gamespotsi../img/bg-border-light.png), url(/bundles/gamespotsi../img/bg-border-light.png);
+  background-image: url(/../img/bg-border-light.png), url(/../img/bg-border-light.png);
   background-position: top, bottom;
   background-repeat: repeat-x
 }
@@ -21353,7 +21353,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 .news-section {
-  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
+  background-image: url(/../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   display: block;
@@ -21552,7 +21552,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 .article--two-column .news-hdr {
-  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
+  background-image: url(/../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -23518,7 +23518,7 @@ h1, h2, h3, h4, h5, h6 {
 .userReview-hdr {
   margin-bottom: 1.3rem;
   padding-bottom: 1.3rem;
-  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
+  background-image: url(/../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -23776,7 +23776,7 @@ h1, h2, h3, h4, h5, h6 {
 .breakdown-helpful {
   background: #e4e5e7;
   padding: 15px;
-  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
+  background-image: url(/../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -25563,7 +25563,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .comment-messages .message {
   padding-bottom: 0;
-  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
+  background-image: url(/../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -25574,7 +25574,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .comment-messages .message .message {
   padding-top: .65rem;
-  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
+  background-image: url(/../img/bg-border-light.png);
   background-position: top;
   background-repeat: repeat-x;
   last-child-padding: 0
@@ -26136,7 +26136,7 @@ h5.text-base {
 .popular {
   clear: both;
   padding-top: 1.3rem;
-  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
+  background-image: url(/../img/bg-border-light.png);
   background-position: top;
   background-repeat: repeat-x
 }
@@ -26255,7 +26255,7 @@ h5.text-base {
 
 .pod-popular .media--small, .pod-popular .media--sponsored {
   padding: 3px 0 5px 0;
-  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
+  background-image: url(/../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -26299,7 +26299,7 @@ h5.text-base {
 }
 
 .pod-popular .media--is-top .media-body {
-  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
+  background-image: url(/../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -26419,7 +26419,7 @@ h5.text-base {
 }
 
 .profile-stats__title > span {
-  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
+  background-image: url(/../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   color: #4c4c4c;
@@ -26836,7 +26836,7 @@ h5.text-base {
   position: absolute;
   bottom: -1px;
   left: 0;
-  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
+  background-image: url(/../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -26909,7 +26909,7 @@ h5.text-base {
 
 .pod-games--tabbed .tab-pane--releaselist .media > a {
   padding: .325rem 7.5px;
-  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
+  background-image: url(/../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -27117,7 +27117,7 @@ h5.text-base {
   text-align: left;
   clear: none;
   margin: 0;
-  background-image: url(/bundles/gamespotsi../img/bg-border-light.png), url(/bundles/gamespotsi../img/bg-border-light.png);
+  background-image: url(/../img/bg-border-light.png), url(/../img/bg-border-light.png);
   background-position: top, bottom;
   background-repeat: repeat-x
 }
@@ -29120,7 +29120,7 @@ h5.text-base {
 }
 
 .schedule-item.more {
-  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
+  background-image: url(/../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   background-position: center center;
@@ -29912,7 +29912,7 @@ h5.text-base {
 
 .pod-related-games li {
   padding: .65rem 0;
-  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
+  background-image: url(/../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -31520,7 +31520,7 @@ h5.text-base {
 }
 
 .userStacks-edit .btn-success:after {
-  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
+  background-image: url(/../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   content: "";
@@ -33455,7 +33455,7 @@ a#qualtrics-feedback:hover {
 }
 
 .ellipseborder-bottom {
-  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
+  background-image: url(/../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }

@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>Reviews game Việt - Choigiday?</title>
+  <title>Cộng đồng game Việt - Choigiday?</title>
   <link rel="shortcut icon" href="../favicon.ico"/>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,11 +34,14 @@
   <link rel="stylesheet" href="../../css/init.css">
   <link rel="stylesheet" href="../../css/style-1.css">
   <link rel="stylesheet" href="../../css/style-2.css">
+  <link rel="stylesheet" href="../../css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
   <link rel="stylesheet" href="../../css/styles.css">
 
 </head>
 
-<body id="default-body" class="default has-nav-slim skin-no col-2-template " style="display: block !important">
+<body id="default-body" class="default has-nav-slim money-rainbows  body-home skin-no col-2-template "
+      style="display: block !important">
 
 <div id="site-main">
 
@@ -50,7 +53,7 @@
           <div class="region region-header-logo">
             <div id="block-gi5-branding" class="block block-system block-system-branding-block">
               <a href="/" title="Home" rel="home" class="site-logo">
-                <img src="../img/icon/logo.png" alt="Home"/>
+                <img src="../../img/icon/logo.png" alt="Home"/>
               </a>
             </div>
           </div>
@@ -75,19 +78,19 @@
               <h2 class="visually-hidden" id="block-gi5-main-menu-menu">Main navigation</h2>
               <ul class="menu">
                 <li class="menu-item" id="menu-News">
-                  <a href="/news" data-drupal-link-system-path="news">Chơi gì đây?</a>
+                  <a href="../home" data-drupal-link-system-path="news">Chơi gì đây?</a>
                 </li>
                 <li class="menu-item" id="menu-Previews">
-                  <a href="/previews" data-drupal-link-system-path="previews">Tin tức</a>
+                  <a href="../news" data-drupal-link-system-path="previews">Tin tức</a>
                 </li>
                 <li class="menu-item" id="menu-Reviews">
-                  <a href="/reviews" data-drupal-link-system-path="reviews">Hướng dẫn</a>
+                  <a href="../walkthrough" data-drupal-link-system-path="reviews">Hướng dẫn</a>
                 </li>
                 <li class="menu-item" id="menu-Features">
-                  <a href="/features" data-drupal-link-system-path="features">Đánh giá</a>
+                  <a href="../reviews" data-drupal-link-system-path="features">Đánh giá</a>
                 </li>
                 <li class="menu-item" id="menu-Videos">
-                  <a href="/videos" data-drupal-link-system-path="videos">Videos</a>
+                  <a href="../videos" data-drupal-link-system-path="videos">Videos</a>
                 </li>
               </ul>
             </nav>
@@ -138,16 +141,16 @@
       <div class="max-width-container">
         <div class="account-wrapper">
           <script>
-              window.onload = function () {
-                  var pathname = location.pathname;
-                  if (pathname.search(/\/user\/login/) == -1) {
-                      document.getElementsByClassName('user-loggedout')[0].getElementsByTagName('a')[1].setAttribute('href', "/user/login?destination=" + pathname);
-                      try {
-                          document.getElementsByClassName('user-loggedout')[1].getElementsByTagName('a')[1].setAttribute('href', "/user/login?destination=" + pathname);
-                      } catch (e) {
-                      }
-                  }
+            window.onload = function () {
+              var pathname = location.pathname;
+              if (pathname.search(/\/user\/login/) == -1) {
+                document.getElementsByClassName('user-loggedout')[0].getElementsByTagName('a')[1].setAttribute('href', "/user/login?destination=" + pathname);
+                try {
+                  document.getElementsByClassName('user-loggedout')[1].getElementsByTagName('a')[1].setAttribute('href', "/user/login?destination=" + pathname);
+                } catch (e) {
+                }
               }
+            }
           </script>
           <div class="user-menu user-loggedout">
             <ul>
@@ -170,19 +173,19 @@
                  data-drupal-selector="views-exposed-form-search-content-page-1"
                  id="block-exposedformsearch-contentpage-1-2">
               <span class="icon-search"></span>
-              <form action="/search" method="get" id="views-exposed-form-search-content-page-1"
+              <form action="/search" method="get" id="views-exposed-form-search-content-page-1-mobile"
                     accept-charset="UTF-8">
                 <div class="form--inline clearfix">
                   <div
                     class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-keyword form-item-keyword">
                     <label for="edit-keyword">Search</label>
-                    <input data-drupal-selector="edit-keyword" type="text" id="edit-keyword"
+                    <input data-drupal-selector="edit-keyword" type="text" id="edit-keyword-mobile"
                            name="keyword" value="" size="30" maxlength="128" class="form-text"/>
                   </div>
                   <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper"
-                       id="edit-actions"><input data-drupal-selector="edit-submit-search-content"
-                                                type="submit" id="edit-submit-search-content" value="Search"
-                                                class="button js-form-submit form-submit"/>
+                       id="edit-actions-mobile"><input data-drupal-selector="edit-submit-search-content"
+                                                       type="submit" id="edit-submit-search-content-mobile" value="Search"
+                                                       class="button js-form-submit form-submit"/>
                   </div>
                 </div>
               </form>
@@ -196,75 +199,19 @@
               <h2 class="visually-hidden" id="block-hamburgermenu-menu">Hamburger Menu</h2>
               <ul class="menu">
                 <li class="menu-item">
-                  <a href="/" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+                  <a href="../home" data-drupal-link-system-path="&lt;front&gt;">Chơi gì đây?</a>
                 </li>
                 <li class="menu-item">
-                  <a href="/news" data-drupal-link-system-path="news">News</a>
+                  <a href="../news" data-drupal-link-system-path="news">Tin tức</a>
                 </li>
                 <li class="menu-item">
-                  <a href="/previews" data-drupal-link-system-path="previews">Previews</a>
+                  <a href="../walkthrough" data-drupal-link-system-path="previews">Hướng dẫn</a>
                 </li>
                 <li class="menu-item">
-                  <a href="/reviews" data-drupal-link-system-path="reviews">Reviews</a>
+                  <a href="../reviews" data-drupal-link-system-path="reviews">Đánh giá</a>
                 </li>
                 <li class="menu-item">
-                  <a href="/features" data-drupal-link-system-path="features">Features</a>
-                </li>
-                <li class="menu-item">
-                  <a href="/videos" data-drupal-link-system-path="videos">Videos</a>
-                </li>
-                <li class="menu-item menu-item--expanded">
-                  <a href="/hubs" data-drupal-link-system-path="node/16924">Hubs</a>
-                  <ul class="menu">
-                    <li class="menu-item">
-                      <a href="/rage2" data-drupal-link-system-path="node/91592">Rage 2,
-                        January Cover Story</a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="/columns" data-drupal-link-system-path="node/4618">Columns</a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="/gishow" data-drupal-link-system-path="node/4210">The GI
-                        Show Podcast</a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="/ngt" data-drupal-link-system-path="node/4209">New
-                        Gameplay Today</a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="/replay" data-drupal-link-system-path="node/4208">Replay</a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="/thevault" data-drupal-link-system-path="node/4622">The
-                        Vault</a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="/b/contests/default.aspx" data-drupal-link-system-path="contests">Contests</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="menu-item menu-item--expanded">
-                  <a href="/magazine" data-drupal-link-system-path="node/60">Magazine</a>
-                  <ul class="menu">
-                    <li class="menu-item">
-                      <a href="/subscribe" data-drupal-link-system-path="node/22">Subscribe</a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="/magazine" data-drupal-link-system-path="node/60">Apps</a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="/covers" data-drupal-link-system-path="node/19">Cover
-                        Gallery</a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="/subscription/management" data-drupal-link-system-path="subscription/management">Manage
-                        My Subscription</a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="/help" data-drupal-link-system-path="node/14">Help/Customer
-                        Service</a>
-                    </li>
-                  </ul>
+                  <a href="../videos" data-drupal-link-system-path="features">Videos</a>
                 </li>
               </ul>
             </nav>
@@ -273,16 +220,16 @@
         <div class="hamburger-bottom">
           <div id="toolbar-item-lightswitch">&nbsp;</div>
           <script>
-              window.onload = function () {
-                  var pathname = location.pathname;
-                  if (pathname.search(/\/user\/login/) == -1) {
-                      document.getElementsByClassName('user-loggedout')[0].getElementsByTagName('a')[1].setAttribute('href', "/user/login?destination=" + pathname);
-                      try {
-                          document.getElementsByClassName('user-loggedout')[1].getElementsByTagName('a')[1].setAttribute('href', "/user/login?destination=" + pathname);
-                      } catch (e) {
-                      }
-                  }
+            window.onload = function () {
+              var pathname = location.pathname;
+              if (pathname.search(/\/user\/login/) == -1) {
+                document.getElementsByClassName('user-loggedout')[0].getElementsByTagName('a')[1].setAttribute('href', "/user/login?destination=" + pathname);
+                try {
+                  document.getElementsByClassName('user-loggedout')[1].getElementsByTagName('a')[1].setAttribute('href', "/user/login?destination=" + pathname);
+                } catch (e) {
+                }
               }
+            }
           </script>
           <div class="user-menu user-loggedout">
             <ul>
@@ -318,7 +265,6 @@
         <div id="wrapper">
 
 
-          <div class="container row span12 promo--header"><h1>Reviews</h1></div>
           <section class="promo--container container row span12"><a
             href="battle-princess-madelyn-review-halfway-there/1900-6417058/index.html"
 
@@ -349,8 +295,8 @@
 
 
               <section class="promo-strip span12">
-                <ul class="promo-strip__list row ">
-                  <li class="promo-type--grid promo-strip__item media  span3 "><a
+                <ul class="promo-strip__list row owl-carousel owl-theme">
+                  <li class="promo-type--grid promo-strip__item media"><a
                     href="super-smash-bros-ultimate-review-me-and-you-and-ev/1900-6417051/index.html" class=""
                     data-promo-id="23534" data-top-slot-allowed="1">
                     <figure class="media-figure">
@@ -371,7 +317,7 @@
                     <div class="media-body"><h3 class="media-title promoTitle--rhythm--inc">Super Smash Bros. Ultimate
                       Review - Mario Teaches Takedowns</h3></div>
                   </a></li>
-                  <li class="promo-type--grid promo-strip__item media  span3 "><a
+                  <li class="promo-type--grid promo-strip__item media"><a
                     href="gris-review-seeing-in-color/1900-6417057/index.html" class="" data-promo-id="23667"
                     data-top-slot-allowed="1">
                     <figure class="media-figure">
@@ -392,7 +338,7 @@
                     <div class="media-body"><h3 class="media-title promoTitle--rhythm--inc">Gris Review - Seeing In
                       Color</h3></div>
                   </a></li>
-                  <li class="promo-type--grid promo-strip__item media  span3 "><a
+                  <li class="promo-type--grid promo-strip__item media"><a
                     href="monster-boy-and-the-cursed-kingdom-review-fit-for-/1900-6417055/index.html" class=""
                     data-promo-id="23625" data-top-slot-allowed="1">
                     <figure class="media-figure">
@@ -413,7 +359,7 @@
                     <div class="media-body"><h3 class="media-title promoTitle--rhythm--inc">Monster Boy And The Cursed
                       Kingdom Review - Thy Kingdom Come</h3></div>
                   </a></li>
-                  <li class="promo-type--grid promo-strip__item media  span3 "><a
+                  <li class="promo-type--grid promo-strip__item media"><a
                     href="desert-child-review-burning-fuel/1900-6417056/index.html" class="" data-promo-id="23628"
                     data-top-slot-allowed="1">
                     <figure class="media-figure">
@@ -2056,10 +2002,8 @@
       <div class="footer-custom-logo">Game Informer</div>
     </a>
     <div class="footer-social-links">
-      <a href="http://twitter.com/GameInformer" class="social-icon twitter">Twitter</a>
-      <a href="http://facebook.com/officialgameinformer" class="social-icon facebook">Facebook</a>
-      <a href="http://twitch.tv/gameinformer" class="social-icon twitch">Twitch</a>
-      <a href="https://www.youtube.com/gameinformer" class="social-icon youtube">YouTube</a>
+      <a href="http://facebook.com/choigiday" class="social-icon facebook">Facebook</a>
+      <a href="https://www.youtube.com/choigiday" class="social-icon youtube">YouTube</a>
     </div>
     <div class="region region-footer">
       <nav role="navigation" aria-labelledby="block-gi5-footer-menu" id="block-gi5-footer"
@@ -2100,11 +2044,7 @@
             <div class="paragraph paragraph--type--copy paragraph--view-mode--default">
               <div
                 class="clearfix text-formatted field field--name-field-copy field--type-text-long field--label-hidden field__item">
-                <p>© 2018 to
-                  <script type="text/javascript">
-                      document.write(new Date().getFullYear());
-                  </script>
-                  Choigiday? All Rights Reserved.
+                <p>© 2018 Choigiday? All Rights Reserved.
                 </p>
               </div>
             </div>
@@ -2116,13 +2056,14 @@
 
 </div>
 
-<script src="../js/jquery-3.3.1.min.js" type="application/javascript"></script>
+<script src="../../js/jquery-3.3.1.min.js" type="application/javascript"></script>
+<script src="../../js/owl.carousel.min.js" type="application/javascript"></script>
 
-<script src="../js/script-2.js" type="application/javascript"></script>
-<script src="../js/script-7.js" type="application/javascript"></script>
-<script src="../js/slick.min.js" type="application/javascript"></script>
+<script src="../../js/script-2.js" type="application/javascript"></script>
+<script src="../../js/script-7.js" type="application/javascript"></script>
+<script src="../../js/slick.min.js" type="application/javascript"></script>
 
-<script src="../js/scripts.js" type="application/javascript"></script>
+<script src="../../js/scripts.js" type="application/javascript"></script>
 
 </body>
 

@@ -4471,7 +4471,8 @@ label[for="edit-keyword"] {
   text-decoration: none;
   border-bottom: none;
   -webkit-transition: color .3s ease;
-  transition: color .3s ease
+  transition: color .3s ease;
+  font-size: 20px !important;
 }
 
 .user-mobile, .hamburger-bottom .user-loggedout ul {

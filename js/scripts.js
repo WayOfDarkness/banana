@@ -19,7 +19,7 @@ $(document).ready(function(){
     $('.owl-carousel').owlCarousel({
         loop:true,
         margin:10,
-        nav:true,
+        nav: true,
         dots: false,
         autoplay: true,
         autoplayTimeout:3000,
@@ -36,9 +36,12 @@ $(document).ready(function(){
         }
     })
 });
-console.log('test');
 
 //filter pod-header
 $('.pod-header__filters-item.js-filter-option').click(function () {
     $(this).addClass('on').siblings().removeClass('on');
+})
+$('.pod-header__grid').click(function () {
+    $(this).find('.feed-view').addClass('on').siblings().removeClass('on');
+    $(this).siblings().find('.feed-view').removeClass('on');
 })
