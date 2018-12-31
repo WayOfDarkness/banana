@@ -299,3 +299,19 @@ body.page-article {
 }
 
 
+
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 1150px) {
+  header {
+    height: initial;
+  }
+  .header-right-container .expanded-menu-button {
+    position: fixed;
+    top: 10px;
+    right: 30px;
+    height: initial;
+    width: initial;
+  }
+}
