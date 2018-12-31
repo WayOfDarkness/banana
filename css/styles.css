@@ -259,6 +259,11 @@ body.page-article .alert-text {
 body.page-article .tag-block {
   margin-bottom: 32px;
 }
+body.page-article .ds-standard-article {
+  max-width: 1460px;
+  margin:0px auto;
+  padding: 0;
+}
 body.page-article {
 
 
