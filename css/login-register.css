@@ -64,6 +64,7 @@ html * {
       border-radius: 50em;
       font-size: 20px;
       color: white !important;
+      cursor: pointer;
     }
     .main-nav a.cd-signup {
       background: #2f889a;
@@ -140,6 +141,7 @@ html * {
     width: 50%;
     float: left;
     text-align: center;
+    cursor: pointer;
   }
   .cd-user-modal-container .cd-switcher li:first-child a {
     border-radius: .25em 0 0 0;
@@ -279,6 +281,7 @@ html * {
     font-size: 0.875rem;
     color: #343642;
     margin-left: 5px;
+    cursor: pointer;
   }
   .cd-form .hide-password.hide-password-off {
     background-image: url("../img/icon/eye-regular.svg");
@@ -372,6 +375,7 @@ html * {
   .cd-form-bottom-message a {
     color: black;
     text-decoration: underline;
+    cursor: pointer;
   }
   
   .cd-close-form {
@@ -385,6 +389,7 @@ html * {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
+    cursor: pointer;
   }
   @media only screen and (min-width: 1170px) {
     .cd-close-form {
