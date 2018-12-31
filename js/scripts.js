@@ -21,6 +21,8 @@ $(document).ready(function(){
         margin:10,
         nav:true,
         dots: false,
+        autoplay: true,
+        autoplayTimeout:3000,
         responsive:{
             0:{
                 items:1
@@ -36,3 +38,7 @@ $(document).ready(function(){
 });
 console.log('test');
 
+//filter pod-header
+$('.pod-header__filters-item.js-filter-option').click(function () {
+    $(this).addClass('on').siblings().removeClass('on');
+})
