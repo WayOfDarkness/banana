@@ -118,3 +118,41 @@ html {
   width: 26px !important;
   height: 26px;
 }
+
+.owl-theme .owl-nav {
+
+}
+.owl-theme .owl-nav button span {
+}
+.owl-theme .owl-nav button:hover {
+  color: #e03800 !important;
+  width: 200px;
+}
+.owl-theme .owl-nav button {
+  transition-duration: 0.3s;
+  position: absolute;
+  font-size: 80px !important;
+  color: #ffffff78 !important;
+  width: 100px;
+  height: 100%;
+  top: 0px;
+  margin: 0px !important;
+  background: none !important;
+}
+.owl-theme .owl-nav .owl-prev:hover {
+  background-image: linear-gradient(to right, rgba(5, 0, 0, 0.50), transparent) !important;
+}
+.owl-theme .owl-nav .owl-prev {
+  left: 0px;
+  background-image: linear-gradient(to right, rgba(5, 0, 0, 0.15), transparent) !important;
+}
+.owl-theme .owl-nav .owl-next:hover {
+  background-image: linear-gradient(to left, rgba(5, 0, 0, 0.50), transparent) !important;
+}
+.owl-theme .owl-nav .owl-next{
+  right: 0px;
+  background-image: linear-gradient(to left, rgba(5, 0, 0, 0.15), transparent) !important;
+}
+.owl-theme .owl-nav {
+  margin: 0px;
+}

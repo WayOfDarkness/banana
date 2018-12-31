@@ -3438,7 +3438,6 @@ ol {
 }
 
 li {
-  margin-left: 3rem
 }
 
 li ol, li ul {
@@ -4350,53 +4349,53 @@ label[for="edit-keyword"] {
 }
 
 .header-social-links .social-icon.facebook {
-  -webkit-mask: url("/themes/gi5/includes/images/social/header_facebook.svg") no-repeat 100% 100%;
-  mask: url("/themes/gi5/includes/images/social/header_facebook.svg") no-repeat 100% 100%
+  -webkit-mask: url("../img/icon/header_facebook.svg") no-repeat 100% 100%;
+  mask: url("../img/icon/header_facebook.svg") no-repeat 100% 100%
 }
 
 @supports (-ms-ime-align:auto) {
   .header-social-links .social-icon.facebook {
-    background: url("/themes/gi5/includes/images/social/header_facebook.svg") no-repeat 100% 100%
+    background: url("../img/icon/header_facebook.svg") no-repeat 100% 100%
   }
 }
 
 @media screen and (-ms-high-contrast: active),(-ms-high-contrast: none) {
   .header-social-links .social-icon.facebook {
-    background: url("/themes/gi5/includes/images/social/header_facebook.svg") no-repeat 100% 100%
+    background: url("../img/icon/header_facebook.svg") no-repeat 100% 100%
   }
 }
 
 .header-social-links .social-icon.twitter {
-  -webkit-mask: url("/themes/gi5/includes/images/social/header_twitter.svg") no-repeat 100% 100%;
-  mask: url("/themes/gi5/includes/images/social/header_twitter.svg") no-repeat 100% 100%
+  -webkit-mask: url("../img/icon/header_twitter.svg") no-repeat 100% 100%;
+  mask: url("../img/icon/header_twitter.svg") no-repeat 100% 100%
 }
 
 @supports (-ms-ime-align:auto) {
   .header-social-links .social-icon.twitter {
-    background: url("/themes/gi5/includes/images/social/header_twitter.svg") no-repeat 100% 100%
+    background: url("../img/icon/header_twitter.svg") no-repeat 100% 100%
   }
 }
 
 @media screen and (-ms-high-contrast: active),(-ms-high-contrast: none) {
   .header-social-links .social-icon.twitter {
-    background: url("/themes/gi5/includes/images/social/header_twitter.svg") no-repeat 100% 100%
+    background: url("../img/icon/header_twitter.svg") no-repeat 100% 100%
   }
 }
 
 .header-social-links .social-icon.youtube {
-  -webkit-mask: url("/themes/gi5/includes/images/social/header_youtube.svg") no-repeat 100% 100%;
-  mask: url("/themes/gi5/includes/images/social/header_youtube.svg") no-repeat 100% 100%
+  -webkit-mask: url("../img/icon/header_youtube.svg") no-repeat 100% 100%;
+  mask: url("../img/icon/header_youtube.svg") no-repeat 100% 100%
 }
 
 @supports (-ms-ime-align:auto) {
   .header-social-links .social-icon.youtube {
-    background: url("/themes/gi5/includes/images/social/header_youtube.svg") no-repeat 100% 100%
+    background: url("../img/icon/header_youtube.svg") no-repeat 100% 100%
   }
 }
 
 @media screen and (-ms-high-contrast: active),(-ms-high-contrast: none) {
   .header-social-links .social-icon.youtube {
-    background: url("/themes/gi5/includes/images/social/header_youtube.svg") no-repeat 100% 100%
+    background: url("../img/icon/header_youtube.svg") no-repeat 100% 100%
   }
 }
 
@@ -6360,53 +6359,53 @@ aside p {
 }
 
 .author-footer-social a.author-footer-facebook {
-  -webkit-mask: url("/themes/gi5/includes/images/social/user_facebook.svg") no-repeat 100% 100%;
-  mask: url("/themes/gi5/includes/images/social/user_facebook.svg") no-repeat 100% 100%
+  -webkit-mask: url("../img/icon/user_facebook.svg") no-repeat 100% 100%;
+  mask: url("../img/icon/user_facebook.svg") no-repeat 100% 100%
 }
 
 @supports (-ms-ime-align:auto) {
   .author-footer-social a.author-footer-facebook {
-    background-image: url("/themes/gi5/includes/images/social/user_facebook.svg") no-repeat 100% 100%
+    background-image: url("../img/icon/user_facebook.svg") no-repeat 100% 100%
   }
 }
 
 @media screen and (-ms-high-contrast: active),(-ms-high-contrast: none) {
   .author-footer-social a.author-footer-facebook {
-    background-image: url("/themes/gi5/includes/images/social/user_facebook.svg") no-repeat 100% 100%
+    background-image: url("../img/icon/user_facebook.svg") no-repeat 100% 100%
   }
 }
 
 .author-footer-social a.author-footer-twitter {
-  -webkit-mask: url("/themes/gi5/includes/images/social/user_twitter.svg") no-repeat 100% 100%;
-  mask: url("/themes/gi5/includes/images/social/user_twitter.svg") no-repeat 100% 100%
+  -webkit-mask: url("../img/icon/user_twitter.svg") no-repeat 100% 100%;
+  mask: url("../img/icon/user_twitter.svg") no-repeat 100% 100%
 }
 
 @supports (-ms-ime-align:auto) {
   .author-footer-social a.author-footer-twitter {
-    background-image: url("/themes/gi5/includes/images/social/user_twitter.svg") no-repeat 100% 100%
+    background-image: url("../img/icon/user_twitter.svg") no-repeat 100% 100%
   }
 }
 
 @media screen and (-ms-high-contrast: active),(-ms-high-contrast: none) {
   .author-footer-social a.author-footer-twitter {
-    background-image: url("/themes/gi5/includes/images/social/user_twitter.svg") no-repeat 100% 100%
+    background-image: url("../img/icon/user_twitter.svg") no-repeat 100% 100%
   }
 }
 
 .author-footer-social a.author-footer-email {
-  -webkit-mask: url("/themes/gi5/includes/images/social/user_email.svg") no-repeat 100% 100%;
-  mask: url("/themes/gi5/includes/images/social/user_email.svg") no-repeat 100% 100%
+  -webkit-mask: url("../img/icon/user_email.svg") no-repeat 100% 100%;
+  mask: url("../img/icon/user_email.svg") no-repeat 100% 100%
 }
 
 @supports (-ms-ime-align:auto) {
   .author-footer-social a.author-footer-email {
-    background-image: url("/themes/gi5/includes/images/social/user_email.svg") no-repeat 100% 100%
+    background-image: url("../img/icon/user_email.svg") no-repeat 100% 100%
   }
 }
 
 @media screen and (-ms-high-contrast: active),(-ms-high-contrast: none) {
   .author-footer-social a.author-footer-email {
-    background-image: url("/themes/gi5/includes/images/social/user_email.svg") no-repeat 100% 100%
+    background-image: url("../img/icon/user_email.svg") no-repeat 100% 100%
   }
 }
 
@@ -6898,64 +6897,64 @@ aside p {
 
 @supports (-ms-ime-align:auto) {
   .social-share-button .social-icon.facebook {
-    background: url("/themes/gi5/includes/images/social/share_facebook.svg") no-repeat 100% 100%
+    background: url("../img/icon/share_facebook.svg") no-repeat 100% 100%
   }
 }
 
 @media screen and (-ms-high-contrast: active),(-ms-high-contrast: none) {
   .social-share-button .social-icon.facebook {
-    background: url("/themes/gi5/includes/images/social/share_facebook.svg") no-repeat 100% 100%
+    background: url("../img/icon/share_facebook.svg") no-repeat 100% 100%
   }
 }
 
 .social-share-button .social-icon.twitter {
-  -webkit-mask: url("/themes/gi5/includes/images/social/share_twitter.svg") no-repeat 100% 100%;
-  mask: url("/themes/gi5/includes/images/social/share_twitter.svg") no-repeat 100% 100%
+  -webkit-mask: url("../img/icon/share_twitter.svg") no-repeat 100% 100%;
+  mask: url("../img/icon/share_twitter.svg") no-repeat 100% 100%
 }
 
 @supports (-ms-ime-align:auto) {
   .social-share-button .social-icon.twitter {
-    background: url("/themes/gi5/includes/images/social/share_twitter.svg") no-repeat 100% 100%
+    background: url("../img/icon/share_twitter.svg") no-repeat 100% 100%
   }
 }
 
 @media screen and (-ms-high-contrast: active),(-ms-high-contrast: none) {
   .social-share-button .social-icon.twitter {
-    background: url("/themes/gi5/includes/images/social/share_twitter.svg") no-repeat 100% 100%
+    background: url("../img/icon/share_twitter.svg") no-repeat 100% 100%
   }
 }
 
 .social-share-button .social-icon.comment {
-  -webkit-mask: url("/themes/gi5/includes/images/social/share_comment.svg") no-repeat 100% 100%;
-  mask: url("/themes/gi5/includes/images/social/share_comment.svg") no-repeat 100% 100%
+  -webkit-mask: url("../img/icon/share_comment.svg") no-repeat 100% 100%;
+  mask: url("../img/icon/share_comment.svg") no-repeat 100% 100%
 }
 
 @supports (-ms-ime-align:auto) {
   .social-share-button .social-icon.comment {
-    background: url("/themes/gi5/includes/images/social/share_comment.svg") no-repeat 100% 100%
+    background: url("../img/icon/share_comment.svg") no-repeat 100% 100%
   }
 }
 
 @media screen and (-ms-high-contrast: active),(-ms-high-contrast: none) {
   .social-share-button .social-icon.comment {
-    background: url("/themes/gi5/includes/images/social/share_comment.svg") no-repeat 100% 100%
+    background: url("../img/icon/share_comment.svg") no-repeat 100% 100%
   }
 }
 
 .social-share-button .social-icon.email {
-  -webkit-mask: url("/themes/gi5/includes/images/social/share_email.svg") no-repeat 100% 100%;
-  mask: url("/themes/gi5/includes/images/social/share_email.svg") no-repeat 100% 100%
+  -webkit-mask: url("../img/icon/share_email.svg") no-repeat 100% 100%;
+  mask: url("../img/icon/share_email.svg") no-repeat 100% 100%
 }
 
 @supports (-ms-ime-align:auto) {
   .social-share-button .social-icon.email {
-    background: url("/themes/gi5/includes/images/social/share_email.svg") no-repeat 100% 100%
+    background: url("../img/icon/share_email.svg") no-repeat 100% 100%
   }
 }
 
 @media screen and (-ms-high-contrast: active),(-ms-high-contrast: none) {
   .social-share-button .social-icon.email {
-    background: url("/themes/gi5/includes/images/social/share_email.svg") no-repeat 100% 100%
+    background: url("../img/icon/share_email.svg") no-repeat 100% 100%
   }
 }
 

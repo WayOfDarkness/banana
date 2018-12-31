@@ -2773,7 +2773,6 @@ table th {
 
 .no-touch .btn:hover {
   background-color: #d9d9d9;
-  color: inherit
 }
 
 .btn:active, .btn:focus {
@@ -10545,6 +10544,9 @@ tr.pm .time {
   }
 }
 
+.paginate__item.on a {
+  color: #e03800;
+}
 .paginate__item {
   padding: 0 3px;
   font-weight: bold;
@@ -10563,7 +10565,8 @@ tr.pm .time {
   padding: 0 6px;
   font-size: 12px;
   line-height: 19px !important;
-  box-shadow: #a6a6a6 0 0 0 1px, rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(0, 0, 0, 0.3) 0 1px 5px, #fff 0 2px 0
+  box-shadow: #a6a6a6 0 0 0 1px, rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(0, 0, 0, 0.3) 0 1px 5px, #fff 0 2px 0;
+  font-weight: bold;
 }
 
 .paginate__item.on > a {
