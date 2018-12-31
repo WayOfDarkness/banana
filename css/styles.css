@@ -1,5 +1,5 @@
 html {
-  font-family: "HelveticaNeue", Serif;
+  font-family: "HelveticaNeue", "Times New Roman", Serif;
 }
 
 .social-share-button .social-icon.upvote {
@@ -160,3 +160,108 @@ html {
 .owl-theme .owl-nav {
   margin: 0px;
 }
+
+body.page-article {
+
+}
+body.page-article main {
+  margin-top: 60px;
+}
+body.page-article .field--name-dynamic-block-fieldnode-content-bug .bug-text {
+  font-size: 17px;
+  padding: 8px;
+}
+body.page-article h1 {
+  font-size: 2.5rem;
+}
+body.page-article .ds-standard-article .author-details {
+  font-size: 1rem;
+
+}
+body.page-article .social-share {
+  font-size: 17px;
+}
+body.page-article .social-share-button .social-icon {
+  height: 20px;
+  width: 20px;
+}
+body.page-article .social-share-button {
+  margin: 0 0 1rem 0;
+}
+body.page-article .ds-right .field__item {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+body.page-article .ds-right .scroll-animated {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+body.page-article .ds-right {
+  max-width: 30%;
+  padding-left: 32px;
+}
+body.page-article .ds-left {
+  padding-right: 2rem;
+  max-width: 30%;
+}
+body.page-article .ds-header {
+  margin: 15px auto 30px;
+}
+body.page-article .ds-main {
+  min-width: 60%;
+  font-size: 1.1rem;
+}
+body.page-article .ds-wrapper {
+  margin: 15px auto;
+}
+body.page-article h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem !important;
+}
+body.page-article .author-footer-social a {
+  height: 20px;
+  width: 20px;
+}
+body.page-article .recommended-articles-widget .article-section.bug-wrapper {
+  padding: 8px;
+  font-size: 14px;
+}
+body.page-article .page-title {
+  font-size: 1rem;
+  line-height: 1rem;
+  margin: 15px 15px 5px !important;
+}
+body.page-article .fb-comments {
+  text-align: center;
+  width: 100%;
+}
+body.page-article .author-details {
+  padding-bottom: 30px;
+}
+
+body.page-article #comments-toggle {
+  padding: 10px;
+  font-size: 1.1rem;
+}
+body.page-article .ds-footer {
+  min-width: 100%;
+}
+body.page-article .wrapper-footer {
+  width: 60%;
+  min-width: 320px;
+  margin: auto;
+}
+body.page-article .alert-text {
+  margin-bottom: 5px !important;
+  line-height: 32px;
+  font-size: 1rem;
+}
+body.page-article .tag-block {
+  margin-bottom: 32px;
+}
+body.page-article {
+
+
+}
+
+
