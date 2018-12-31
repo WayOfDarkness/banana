@@ -1,3 +1,8 @@
+.clearfix::before, .clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
 html {
   font-family: "HelveticaNeue", "Times New Roman", Serif;
 }
@@ -197,22 +202,28 @@ body.page-article .ds-right .scroll-animated {
   font-size: 1rem;
 }
 body.page-article .ds-right {
-  max-width: 30%;
+  width: 20%;
   padding-left: 32px;
 }
 body.page-article .ds-left {
   padding-right: 2rem;
-  max-width: 30%;
+  width: 20%;
 }
 body.page-article .ds-header {
   margin: 15px auto 30px;
+  width: 100%;
 }
 body.page-article .ds-main {
-  min-width: 60%;
+  width: 60%;
   font-size: 1.1rem;
+}
+body.page-article .ds-wrapper > * {
+  display: block;
+  float: left;
 }
 body.page-article .ds-wrapper {
   margin: 15px auto;
+  display: block;
 }
 body.page-article h2 {
   font-size: 1.6rem;
@@ -227,8 +238,8 @@ body.page-article .recommended-articles-widget .article-section.bug-wrapper {
   font-size: 14px;
 }
 body.page-article .page-title {
-  font-size: 1rem;
-  line-height: 1rem;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
   margin: 15px 15px 5px !important;
 }
 body.page-article .fb-comments {
@@ -263,6 +274,24 @@ body.page-article .ds-standard-article {
   max-width: 1460px;
   margin:0px auto;
   padding: 0;
+}
+body.page-article .full-width img {
+  max-width: 100%;
+}
+body.page-article .author-footer {
+  margin: 30px auto;
+  padding: 20px;
+}
+body.page-article .ds-footer-full .article-title {
+  font-size: 1rem;
+  line-height: 1rem;
+  margin: 10px 10px 5px !important;
+}
+body.page-article .footer-social-links .social-icon {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  background-size: 20px;
 }
 body.page-article {
 
