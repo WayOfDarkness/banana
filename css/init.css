@@ -17,7 +17,7 @@ audio:not([controls]) {
 }
 
 html {
-  font-family: sans-serif;
+
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%
 }
@@ -58,7 +58,7 @@ mark {
 }
 
 code, kbd, pre, samp {
-  font-family: monospace, serif;
+
   font-size: 1em
 }
 
@@ -119,7 +119,7 @@ legend {
 }
 
 button, input, select, textarea {
-  font-family: inherit;
+
   font-size: 100%;
   margin: 0;
   vertical-align: baseline
@@ -263,25 +263,25 @@ iframe {
 }
 
 .ellipseborder-top {
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: top;
   background-repeat: repeat-x
 }
 
 .ellipseborder-bottom {
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
 
 .ellipseborder-left {
-  background-image: url(https://static.gamespot.com/bundles/gamespotsite/images/bg-border-left-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-repeat: repeat-y;
   background-position: left
 }
 
 .ellipseborder-vert {
-  background-image: url(../images/bg-border-light.png), url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png), url(../img/bg-border-light.png);
   background-position: top, bottom;
   background-repeat: repeat-x
 }
@@ -295,7 +295,7 @@ html {
 }
 
 body {
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-weight: 400;
   text-rendering: optimizeLegibility
 }
@@ -1154,7 +1154,7 @@ h4 {
 .type-subheader, .t-container .news-deck {
   font-size: 1.4375rem;
   line-height: 1.95rem;
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-weight: 100
 }
 
@@ -1211,7 +1211,7 @@ hr {
   border: 0;
   margin: 1.3rem 0;
   padding: 1px 0;
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -1295,7 +1295,7 @@ img[width], img[height] {
 figure[data-embed-type="gallery"] {
   margin: 1.3rem 0;
   position: relative;
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -1314,7 +1314,7 @@ figure[data-embed-type="gallery"]:before {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -1480,7 +1480,7 @@ blockquote p:only-of-type, blockquote p:last-of-type {
 
 blockquote cite {
   display: block;
-  font-family: Georgia, serif;
+
   font-style: italic;
   font-weight: normal;
   color: #666;
@@ -1705,9 +1705,9 @@ blockquote[data-align="center"] {
   padding: .325rem 20px;
   text-align: center;
   font-style: italic;
-  font-family: Georgia, serif;
+
   color: #666;
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   font-size: .8125rem;
@@ -2162,7 +2162,7 @@ legend.full-width {
   width: 100%;
   margin-bottom: 1.3rem;
   line-height: 2.6rem;
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -4226,7 +4226,7 @@ body.has-promo-alert--breaking-news {
 .header-border {
   text-transform: uppercase;
   margin: .65rem 0;
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   clear: both;
   font-weight: 800;
   font-size: .8125rem;
@@ -4246,7 +4246,7 @@ body.has-promo-alert--breaking-news {
     width: 2px;
     top: 0;
     right: 0;
-    background-image: url(https://static.gamespot.com/bundles/gamespotsite/images/bg-border-left-light.png);
+    background-image: url(../img/bg-border-light.png);
     background-repeat: repeat-y;
     background-position: left
   }
@@ -4368,7 +4368,7 @@ body.has-promo-alert--breaking-news {
   bottom: 0;
   right: 0;
   top: 0;
-  background-image: url(https://static.gamespot.com/bundles/gamespotsite/images/bg-border-left-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-repeat: repeat-y;
   background-position: left
 }
@@ -5772,7 +5772,7 @@ body.has-promo-alert--breaking-news {
     margin-right: -15px;
     padding: 0 15px .65rem 0;
     position: relative;
-    background-image: url(https://static.gamespot.com/bundles/gamespotsite/images/bg-border-left-light.png);
+    background-image: url(../img/bg-border-light.png);
     background-repeat: repeat-y;
     background-position: right
   }
@@ -5782,7 +5782,7 @@ body.has-promo-alert--breaking-news {
     padding: .325rem 0;
     margin: 0 0 .65rem 9px;
     box-shadow: none;
-    background-image: url(https://static.gamespot.com/bundles/gamespotsite/images/bg-border-left-light.png);
+    background-image: url(../img/bg-border-light.png);
     background-repeat: repeat-y;
     background-position: left;
     z-index: 2
@@ -6593,7 +6593,7 @@ p.author {
 }
 
 .auth-container .profile-border {
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   margin-bottom: 1.3rem
@@ -6778,7 +6778,6 @@ body.sub-sale #promo .sale-btn:hover {
 body.sub-sale #promo .available {
   position: absolute;
   width: 95px;
-  font: 20px/25px sans-serif;
   right: 327px;
   top: 830px
 }
@@ -7192,7 +7191,7 @@ body.sub-sale #promo .available span {
 .message-sig {
   position: relative;
   border-top: 1px solid #cacbce;
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif !important;
+
   color: #666;
   padding: .65rem 15px;
   font-size: .8125rem;
@@ -7221,7 +7220,7 @@ body.sub-sale #promo .available span {
   margin-bottom: .65rem;
   padding-bottom: 7px;
   position: relative;
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -7238,7 +7237,7 @@ body.sub-sale #promo .available span {
   margin-bottom: 4px;
   height: 2px;
   width: 100%;
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -7280,7 +7279,7 @@ body.sub-sale #promo .available span {
 
 @media (min-width: 980px) {
   .paginate-messages .paginate-order {
-    background-image: url(https://static.gamespot.com/bundles/gamespotsite/images/bg-border-left-light.png);
+    background-image: url(../img/bg-border-light.png);
     background-repeat: repeat-y;
     background-position: left
   }
@@ -7685,7 +7684,7 @@ body.sub-sale #promo .available span {
 
 .dropnav-tabs {
   margin: 0 0 .65rem;
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -7769,7 +7768,7 @@ body.sub-sale #promo .available span {
   clear: both;
   padding: .65rem 0;
   color: #000;
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-size: 1rem;
   line-height: 1.3rem
 }
@@ -7778,7 +7777,7 @@ body.sub-sale #promo .available span {
   text-align: center;
   color: #666;
   clear: both;
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-size: 12px;
   line-height: 18px
 }
@@ -7786,7 +7785,7 @@ body.sub-sale #promo .available span {
 .inboxMessage, .inboxNotification {
   text-align: left;
   padding: 8px 0 0 0;
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: top;
   background-repeat: repeat-x
 }
@@ -7840,7 +7839,7 @@ body.sub-sale #promo .available span {
 .js-notification-show-more {
   text-align: center;
   display: block;
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: top;
   background-repeat: repeat-x
 }
@@ -7944,7 +7943,7 @@ body.sub-sale #promo .available span {
 
 .typeahead-full h5, .typeahead-full p {
   font-weight: 800;
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   margin: 0
 }
 
@@ -8108,7 +8107,7 @@ input.flag {
 .header-border {
   text-transform: uppercase;
   margin: .65rem 0;
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   clear: both;
   font-weight: 800;
   font-size: .8125rem;
@@ -8163,7 +8162,7 @@ input.flag {
 }
 
 .forum-section__header h2, .forum-section__header h3 {
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-weight: 800;
   padding: 0;
   margin: 0 0 .325rem;
@@ -8176,7 +8175,7 @@ input.flag {
 }
 
 .forum-section__top {
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   padding-bottom: .65rem;
@@ -8401,7 +8400,7 @@ input.flag {
   padding: 4px 0 12px 0;
   display: block;
   position: relative;
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -8632,7 +8631,7 @@ input.flag {
 }
 
 .mod-title {
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   padding: .65rem 0;
@@ -8691,7 +8690,7 @@ input.flag {
   padding: 4px 0 12px 0;
   display: block;
   position: relative;
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -9009,7 +9008,7 @@ input.flag {
   position: absolute;
   left: 40px;
   top: 40px;
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-weight: bold;
   z-index: 5800004
 }
@@ -9031,7 +9030,7 @@ input.flag {
 .filmstrip .image-comments .login-alert {
   text-align: center;
   background: #f2f2f3;
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -9055,7 +9054,7 @@ input.flag {
   padding: 10px;
   background-color: #ecedee;
   line-height: 16px;
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -9429,7 +9428,7 @@ input.flag {
   margin-bottom: 0;
   margin-top: .65rem;
   line-height: 1.95rem;
-  background-image: url(../images/bg-border-light.png), url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png), url(../img/bg-border-light.png);
   background-position: top, bottom;
   background-repeat: repeat-x
 }
@@ -9918,7 +9917,7 @@ tr.pm .time {
   font-size: 1rem;
   line-height: 1.3rem;
   font-weight: 500;
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   margin: 0 0 .325rem
 }
 
@@ -10189,7 +10188,7 @@ tr.pm .time {
 .modal.modal-upload-image li {
   padding-top: 1.3rem;
   margin-top: 1.3rem;
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: top;
   background-repeat: repeat-x
 }
@@ -10657,7 +10656,7 @@ tr.pm .time {
 
 @media (min-width: 760px) {
   .paginate-refresh {
-    background-image: url(https://static.gamespot.com/bundles/gamespotsite/images/bg-border-left-light.png);
+    background-image: url(../img/bg-border-light.png);
     background-repeat: repeat-y;
     background-position: left;
     margin-left: 15px
@@ -11153,7 +11152,7 @@ tr.pm .time {
   font-size: inherit;
   padding-left: 10px;
   padding-right: 10px;
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-weight: bold;
   font-style: normal
 }
@@ -11894,7 +11893,7 @@ tr.pm .time {
   border: none;
   background: transparent;
   padding: 7px;
-  font-family: inherit;
+
   color: #f2f2f2;
   cursor: pointer;
   line-height: inherit;
@@ -12416,7 +12415,7 @@ tr.pm .time {
 
 .av-player-athena .av-livestream .av-stream-status {
   display: none;
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-weight: bold;
   font-style: normal
 }
@@ -13816,7 +13815,7 @@ body.nocursor {
 .pod-section__header {
   text-transform: uppercase;
   margin: .65rem 0;
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   clear: both;
   font-weight: 800;
   font-size: .8125rem;
@@ -14034,7 +14033,7 @@ body.nocursor {
   }
 
   .no-touch .editorial .media + .media, .no-touch .forum-messages .media + .media, .no-touch .mapped-ad .media + .media {
-    background-image: url(../images/bg-border-light.png);
+    background-image: url(../img/bg-border-light.png);
     background-position: top;
     background-repeat: repeat-x
   }
@@ -14537,7 +14536,7 @@ body.nocursor {
 }
 
 .search-results .media-group {
-  background-image: url(../images/bg-border-light.png), url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png), url(../img/bg-border-light.png);
   background-position: top, bottom;
   background-repeat: repeat-x;
   background-position: bottom
@@ -14613,7 +14612,7 @@ body.nocursor {
 
 .search-group-toggle .search-group-toggle__label:before {
   content: "";
-  font-family: fontawesome-webfont;
+
   width: 18px;
   vertical-align: middle;
   display: inline-block;
@@ -14656,7 +14655,7 @@ body.nocursor {
 .image-gallery-pod__list > li + li {
   margin-top: .325rem;
   padding-top: .325rem;
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: top;
   background-repeat: repeat-x
 }
@@ -14671,7 +14670,7 @@ body.nocursor {
 }
 
 .image-gallery-pod__list .media-title {
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.3rem
@@ -14694,7 +14693,7 @@ body.nocursor {
 }
 
 .image-gallery-pod-related .media-title {
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.3rem
@@ -15465,7 +15464,7 @@ body.nocursor {
 .nav-tabs {
   margin-top: .65rem;
   padding-bottom: 2px;
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -15517,7 +15516,7 @@ body.nocursor {
 
 .inline-tabs {
   margin-bottom: 1.3rem;
-  background-image: url(../images/bg-border-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   background-position: center
@@ -16034,7 +16033,6 @@ li.ui-timepicker-selected .ui-timepicker-duration, .ui-timepicker-list li:hover 
   min-height: 150px;
   border: 0;
   background: none;
-  font: 12px monospace;
   box-shadow: none;
   border-radius: 0;
   padding: 0;
@@ -16074,7 +16072,7 @@ li.ui-timepicker-selected .ui-timepicker-duration, .ui-timepicker-list li:hover 
   cursor: pointer;
   border: 1px solid transparent;
   height: 22px;
-  font-family: Arial, sans-serif;
+
   text-align: center;
   min-width: 20px;
   background: none;
@@ -16305,7 +16303,6 @@ li.ui-timepicker-selected .ui-timepicker-duration, .ui-timepicker-list li:hover 
   height: 20px;
   padding: 0 5px;
   text-align: center;
-  font: bold 11px/20px Arial, Sans-serif;
   cursor: pointer;
   border: 1px solid #1a1a1a;
   color: #999;
@@ -16335,7 +16332,6 @@ li.ui-timepicker-selected .ui-timepicker-duration, .ui-timepicker-list li:hover 
   position: absolute;
   background: #444;
   color: #fff;
-  font: 12px/22px Arial, Sans-serif;
   padding: 5px;
   background-color: #464d53;
   border: 1px solid #25282c;
@@ -16358,7 +16354,6 @@ li.ui-timepicker-selected .ui-timepicker-duration, .ui-timepicker-list li:hover 
   margin: 0 0 0 3px;
   padding: 0 5px;
   text-align: center;
-  font: bold 11px/20px Arial, Sans-Serif;
   cursor: pointer;
   border: 1px solid #1a1a1a;
   color: #999;
@@ -16415,7 +16410,7 @@ li.ui-timepicker-selected .ui-timepicker-duration, .ui-timepicker-list li:hover 
 }
 
 .wysiwyg-modal [data-embed-option] .option-title, .wysiwyg-modal [data-embed-option] .step-title {
-  font-family: Arial, sans-serif;
+
   font-size: 1.1em;
   font-weight: bold;
   line-height: 2;
@@ -17147,7 +17142,7 @@ a:hover .link-img .hover-play-pause {
 
 .pod-header {
   text-transform: uppercase;
-  font-family: "ArgumentumBlack", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   display: -ms-flexbox;
@@ -17259,7 +17254,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 .pod-section__header {
-  font-family: "ArgumentumBlack", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -17985,7 +17980,7 @@ a:hover .link-img .hover-play-pause {
 .kubrick-info__title {
   font-size: 1.8125rem;
   line-height: 1.95rem;
-  font-family: "ArgumentumBlack", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   margin: 0 0 .65rem;
@@ -18393,7 +18388,7 @@ a:hover .link-img .hover-play-pause {
   margin: .325rem;
   font-size: 1rem;
   line-height: 1.3rem;
-  font-family: "ArgumentumLight", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -18720,7 +18715,7 @@ a:hover .link-img .hover-play-pause {
 .kubrick-info--ring .kubrick-info__title {
   font-size: 1.125rem;
   line-height: 1.3rem;
-  font-family: "ArgumentumBlack", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -19587,7 +19582,7 @@ a:hover .link-img .hover-play-pause {
   max-height: 0;
   font-size: 1.125rem;
   line-height: 1.3rem;
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-weight: normal;
   font-style: normal;
   line-height: 1.3em
@@ -19720,7 +19715,7 @@ a:hover .link-img .hover-play-pause {
   font-size: 1.4375rem;
   line-height: 1.95rem;
   line-height: 23px;
-  font-family: "ArgumentumUltraLight", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   color: #000
@@ -20355,7 +20350,7 @@ a:hover .link-img .hover-play-pause {
   text-transform: uppercase;
   white-space: nowrap;
   padding: 0 1.3rem 0 0;
-  font-family: "ArgumentumMedItalic", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   font-size: 1.4375rem;
@@ -20441,7 +20436,7 @@ a:hover .link-img .hover-play-pause {
   padding-top: .325rem;
   font-size: 1.4375rem;
   line-height: 1.95rem;
-  font-family: "ArgumentumUltraLight", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -20555,7 +20550,7 @@ a:hover .link-img .hover-play-pause {
 .promo-banner__title {
   z-index: 1;
   display: inline-block;
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-weight: bold;
   font-style: normal
 }
@@ -20619,7 +20614,7 @@ a:hover .link-img .hover-play-pause {
 
 @media (min-width: 640px) {
   .river .media + .media {
-    background-image: url(/bundles/gamespotsite/images/bg-border-light.png);
+    background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
     background-position: top;
     background-repeat: repeat-x
   }
@@ -20647,7 +20642,7 @@ a:hover .link-img .hover-play-pause {
     padding: 0 .65rem;
     margin-top: .65rem;
     margin-bottom: .65rem;
-    background-image: url(/bundles/gamespotsite/images/bg-border-left-light.png);
+    background-image: url(../img/bg-border-light.png);
     background-repeat: repeat-y;
     background-position: left
   }
@@ -20734,7 +20729,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 .media-well--review-gs + .media-well--review-user > span {
-  background-image: url(/bundles/gamespotsite/images/bg-border-light.png);
+  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
   background-position: top;
   background-repeat: repeat-x
 }
@@ -21174,7 +21169,7 @@ a:hover .link-img .hover-play-pause {
 .video-info {
   padding: .65rem 0;
   width: 100%;
-  background-image: url(/bundles/gamespotsite/images/bg-border-light.png), url(/bundles/gamespotsite/images/bg-border-light.png);
+  background-image: url(/bundles/gamespotsi../img/bg-border-light.png), url(/bundles/gamespotsi../img/bg-border-light.png);
   background-position: top, bottom;
   background-repeat: repeat-x
 }
@@ -21187,14 +21182,14 @@ a:hover .link-img .hover-play-pause {
 
 .show-info__header {
   margin-top: 2.6rem;
-  font-family: "ArgumentumBlack", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
 
 @media (max-width: 759px) {
   .show-info__header {
-    font-family: "ArgumentumBlack", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
     font-weight: normal;
     font-style: normal
   }
@@ -21206,7 +21201,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 .show-info h4 {
-  font-family: "ArgumentumLight", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   margin-bottom: .325rem;
@@ -21297,7 +21292,7 @@ a:hover .link-img .hover-play-pause {
 
 .content-slug .video-info__more a {
   display: block;
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -21331,7 +21326,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 .news-deck {
-  font-family: "ArgumentumUltraLight", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -21343,19 +21338,19 @@ a:hover .link-img .hover-play-pause {
 }
 
 .news-byline {
-  font-family: "ArgumentumLight", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
 
 .news-title {
-  font-family: "ArgumentumBlack", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
 
 .news-section {
-  background-image: url(/bundles/gamespotsite/images/bg-border-light.png);
+  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   display: block;
@@ -21446,7 +21441,7 @@ a:hover .link-img .hover-play-pause {
 .content-slug > em {
   text-align: center;
   display: block;
-  font-family: "ArgumentumBoldItalic", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -21516,7 +21511,7 @@ a:hover .link-img .hover-play-pause {
 .content-slug__author-social > li + li {
   padding-left: 10px;
   margin-left: 10px;
-  background-image: url(/bundles/gamespotsite/images/bg-border-left-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-repeat: repeat-y;
   background-position: left
 }
@@ -21554,7 +21549,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 .article--two-column .news-hdr {
-  background-image: url(/bundles/gamespotsite/images/bg-border-light.png);
+  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -21645,7 +21640,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 .article-related-video .video-caption em {
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-weight: bold;
   font-style: normal;
   color: #262626
@@ -22057,7 +22052,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 @font-face {
-  font-family: "ArgumentumLightItalic";
+
   src: url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-LightItalic-webfont.eot");
   src: url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-LightItalic-webfont.eot?#iefix") format("embedded-opentype"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-LightItalic-webfont.woff2") format("woff2"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-LightItalic-webfont.woff") format("woff"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-LightItalic-webfont.ttf") format("truetype"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-LightItalic-webfont.svg#argumentumlight_italic") format("svg");
   font-weight: "normal";
@@ -22065,7 +22060,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 @font-face {
-  font-family: "ArgumentumLight";
+
   src: url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-Light-webfont.eot");
   src: url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-Light-webfont.eot?#iefix") format("embedded-opentype"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-Light-webfont.woff2") format("woff2"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-Light-webfont.woff") format("woff"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-Light-webfont.ttf") format("truetype"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-Light-webfont.svg#argumentumlight") format("svg");
   font-weight: "normal";
@@ -22073,7 +22068,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 @font-face {
-  font-family: "ArgumentumUltraLightItalic";
+
   src: url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-UltraLightItalic-webfont.eot");
   src: url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-UltraLightItalic-webfont.eot?#iefix") format("embedded-opentype"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-UltraLightItalic-webfont.woff2") format("woff2"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-UltraLightItalic-webfont.woff") format("woff"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-UltraLightItalic-webfont.ttf") format("truetype"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-UltraLightItalic-webfont.svg#argumentumultra_light_italic") format("svg");
   font-weight: "normal";
@@ -22081,7 +22076,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 @font-face {
-  font-family: "ArgumentumUltraLight";
+
   src: url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-UltraLight-webfont.eot");
   src: url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-UltraLight-webfont.eot?#iefix") format("embedded-opentype"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-UltraLight-webfont.woff2") format("woff2"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-UltraLight-webfont.woff") format("woff"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-UltraLight-webfont.ttf") format("truetype"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-UltraLight-webfont.svg#argumentumultra_light") format("svg");
   font-weight: "normal";
@@ -22089,7 +22084,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 @font-face {
-  font-family: "ArgumentumBlackItalic";
+
   src: url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-BLackItalic-webfont.eot");
   src: url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-BLackItalic-webfont.eot?#iefix") format("embedded-opentype"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-BLackItalic-webfont.woff2") format("woff2"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-BLackItalic-webfont.woff") format("woff"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-BLackItalic-webfont.ttf") format("truetype"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-BLackItalic-webfont.svg#argumentumblack_italic") format("svg");
   font-weight: "normal";
@@ -22097,7 +22092,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 @font-face {
-  font-family: "ArgumentumBlack";
+
   src: url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-BLack-webfont.eot");
   src: url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-BLack-webfont.eot?#iefix") format("embedded-opentype"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-BLack-webfont.woff2") format("woff2"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-BLack-webfont.woff") format("woff"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-BLack-webfont.ttf") format("truetype"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-BLack-webfont.svg#argumentumblack") format("svg");
   font-weight: "normal";
@@ -22105,7 +22100,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 @font-face {
-  font-family: "ArgumentumBoldItalic";
+
   src: url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-BoldItalic-webfont.eot");
   src: url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-BoldItalic-webfont.eot?#iefix") format("embedded-opentype"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-BoldItalic-webfont.woff2") format("woff2"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-BoldItalic-webfont.woff") format("woff"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-BoldItalic-webfont.ttf") format("truetype"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-BoldItalic-webfont.svg#argumentumbold_italic") format("svg");
   font-weight: "normal";
@@ -22113,7 +22108,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 @font-face {
-  font-family: "ArgumentumBold";
+
   src: url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-Bold-webfont.eot");
   src: url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-Bold-webfont.woff2") format("woff2"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-Bold-webfont.woff") format("woff"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-Bold-webfont.ttf") format("truetype"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-Bold-webfont.svg#argumentumbold") format("svg");
   font-weight: "normal";
@@ -22121,7 +22116,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 @font-face {
-  font-family: "ArgumentumMedItalic";
+
   src: url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-MediumItalic-webfont.eot");
   src: url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-MediumItalic-webfont.eot?#iefix") format("embedded-opentype"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-MediumItalic-webfont.woff2") format("woff2"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-MediumItalic-webfont.woff") format("woff"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-MediumItalic-webfont.ttf") format("truetype"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-MediumItalic-webfont.svg#argumentummedium_italic") format("svg");
   font-weight: "normal";
@@ -22129,7 +22124,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 @font-face {
-  font-family: "ArgumentumMed";
+
   src: url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-Medium-webfont.eot");
   src: url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-Medium-webfont.eot?#iefix") format("embedded-opentype"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-Medium-webfont.woff2") format("woff2"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-Medium-webfont.woff") format("woff"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-Medium-webfont.ttf") format("truetype"), url("/bundles/phoenixsite/fonts/Argumentum/Argumentum-Medium-webfont.svg#argumentummedium") format("svg");
   font-weight: "normal";
@@ -22137,7 +22132,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 @font-face {
-  font-family: "MuchoSansBold";
+
   src: url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_bold-webfont.eot");
   src: url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_bold-webfont.eot?#iefix") format("embedded-opentype"), url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_bold-webfont.woff2") format("woff2"), url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_bold-webfont.woff") format("woff"), url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_bold-webfont.ttf") format("truetype"), url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_bold-webfont.svg#mucho_sansbold") format("svg");
   font-weight: "bold";
@@ -22145,7 +22140,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 @font-face {
-  font-family: "MuchoSansBoldItalic";
+
   src: url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_bolditalic-webfont.eot");
   src: url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_bolditalic-webfont.woff2") format("woff2"), url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_bolditalic-webfont.woff") format("woff"), url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_bolditalic-webfont.ttf") format("truetype"), url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_bolditalic-webfont.svg#mucho_sansbold_italic") format("svg");
   font-weight: "bold";
@@ -22153,7 +22148,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 @font-face {
-  font-family: "MuchoSansItalic";
+
   src: url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_italic-webfont.eot");
   src: url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_italic-webfont.eot?#iefix") format("embedded-opentype"), url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_italic-webfont.woff2") format("woff2"), url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_italic-webfont.woff") format("woff"), url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_italic-webfont.ttf") format("truetype"), url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_italic-webfont.svg#mucho_sansitalic") format("svg");
   font-weight: "normal";
@@ -22161,7 +22156,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 @font-face {
-  font-family: "MuchoSansReg";
+
   src: url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_regular-webfont.eot");
   src: url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_regular-webfont.eot?#iefix") format("embedded-opentype"), url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_regular-webfont.woff2") format("woff2"), url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_regular-webfont.woff") format("woff"), url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_regular-webfont.ttf") format("truetype"), url("/bundles/phoenixsite/fonts/MuchoSans/mucho_sans_regular-webfont.svg#mucho_sansregular") format("svg");
   font-weight: "normal";
@@ -22169,7 +22164,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 b, strong {
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-weight: bold;
   font-style: normal
 }
@@ -22180,7 +22175,7 @@ b > i, b > em, strong > i, strong > em {
 }
 
 i, em {
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-weight: normal;
   font-style: italic
 }
@@ -22216,7 +22211,7 @@ i > b, i > strong, em > b, em > strong {
   padding: 0 0 0 30px;
   border: none;
   background: transparent;
-  font-family: "ArgumentumMedItalic", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -22298,7 +22293,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 759px) {
   .type-headline {
-    font-family: "ArgumentumLight", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
     font-weight: normal;
     font-style: normal
   }
@@ -22307,7 +22302,7 @@ h1, h2, h3, h4, h5, h6 {
 .type-subheader, .t-container .news-deck {
   font-size: 1.4375rem;
   line-height: 1.95rem;
-  font-family: "ArgumentumUltraLight", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -22321,7 +22316,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 759px) {
   .type-subheader, .t-container .news-deck {
-    font-family: "ArgumentumLight", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
     font-weight: normal;
     font-style: normal
   }
@@ -22714,7 +22709,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .review-authors__alt {
-  background-image: url(/bundles/gamespotsite/images/bg-border-left-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-repeat: repeat-y;
   background-position: left
 }
@@ -23471,7 +23466,7 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: rgba(0, 0, 0, 0.55) 0 1px 1px;
   text-transform: none;
   padding: 0 15px;
-  font-family: "ArgumentumMedItalic", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   display: inline-block;
@@ -23520,7 +23515,7 @@ h1, h2, h3, h4, h5, h6 {
 .userReview-hdr {
   margin-bottom: 1.3rem;
   padding-bottom: 1.3rem;
-  background-image: url(/bundles/gamespotsite/images/bg-border-light.png);
+  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -23734,7 +23729,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .breakdown-userScore__read {
   display: block;
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-style: normal;
   color: #fff;
 
@@ -23778,7 +23773,7 @@ h1, h2, h3, h4, h5, h6 {
 .breakdown-helpful {
   background: #e4e5e7;
   padding: 15px;
-  background-image: url(/bundles/gamespotsite/images/bg-border-light.png);
+  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -25217,7 +25212,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #e03800;
   text-transform: uppercase;
   text-align: center;
-  font-family: "ArgumentumBoldItalic", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   font-size: 1.125rem;
@@ -25565,7 +25560,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .comment-messages .message {
   padding-bottom: 0;
-  background-image: url(/bundles/gamespotsite/images/bg-border-light.png);
+  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -25576,7 +25571,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .comment-messages .message .message {
   padding-top: .65rem;
-  background-image: url(/bundles/gamespotsite/images/bg-border-light.png);
+  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
   background-position: top;
   background-repeat: repeat-x;
   last-child-padding: 0
@@ -26138,7 +26133,7 @@ h5.text-base {
 .popular {
   clear: both;
   padding-top: 1.3rem;
-  background-image: url(/bundles/gamespotsite/images/bg-border-light.png);
+  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
   background-position: top;
   background-repeat: repeat-x
 }
@@ -26257,7 +26252,7 @@ h5.text-base {
 
 .pod-popular .media--small, .pod-popular .media--sponsored {
   padding: 3px 0 5px 0;
-  background-image: url(/bundles/gamespotsite/images/bg-border-light.png);
+  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -26301,7 +26296,7 @@ h5.text-base {
 }
 
 .pod-popular .media--is-top .media-body {
-  background-image: url(/bundles/gamespotsite/images/bg-border-light.png);
+  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -26421,7 +26416,7 @@ h5.text-base {
 }
 
 .profile-stats__title > span {
-  background-image: url(/bundles/gamespotsite/images/bg-border-light.png);
+  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   color: #4c4c4c;
@@ -26503,7 +26498,7 @@ h5.text-base {
 .profile-image .hover-link {
   font-size: 100%;
   font-weight: 600;
-  font-family: "Helvetica Neue", "HelveticaNeue", Arial, sans-serif;
+
   padding: 4px 10px;
   text-decoration: none;
   text-align: center;
@@ -26838,7 +26833,7 @@ h5.text-base {
   position: absolute;
   bottom: -1px;
   left: 0;
-  background-image: url(/bundles/gamespotsite/images/bg-border-light.png);
+  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -26894,7 +26889,7 @@ h5.text-base {
 
 .pod-games--tabbed .game-score dd {
   color: #4c4c4c;
-  font-family: "ArgumentumMedItalic", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   text-transform: uppercase;
@@ -26911,7 +26906,7 @@ h5.text-base {
 
 .pod-games--tabbed .tab-pane--releaselist .media > a {
   padding: .325rem 7.5px;
-  background-image: url(/bundles/gamespotsite/images/bg-border-light.png);
+  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -27119,7 +27114,7 @@ h5.text-base {
   text-align: left;
   clear: none;
   margin: 0;
-  background-image: url(/bundles/gamespotsite/images/bg-border-light.png), url(/bundles/gamespotsite/images/bg-border-light.png);
+  background-image: url(/bundles/gamespotsi../img/bg-border-light.png), url(/bundles/gamespotsi../img/bg-border-light.png);
   background-position: top, bottom;
   background-repeat: repeat-x
 }
@@ -27158,7 +27153,7 @@ h5.text-base {
   padding-left: 10px;
   margin-top: -30px;
   text-align: right;
-  font-family: "ArgumentumLight", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -27242,7 +27237,7 @@ h5.text-base {
 
 .game-poll--indicator:before {
   display: inline-block;
-  font-family: fontawesome-webfont;
+
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -27915,7 +27910,7 @@ h5.text-base {
 }
 
 .authorCard--base .authorCard-name {
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   color: #666;
   font-size: 1rem;
   line-height: 1.3rem
@@ -28422,7 +28417,7 @@ h5.text-base {
 .search-results--full-list h2 {
   margin: 1.3rem 0;
   color: #e03800;
-  font-family: "ArgumentumBlack", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   text-transform: uppercase
@@ -28432,7 +28427,7 @@ h5.text-base {
   border-bottom: 1px solid #bfbfbf;
   margin: 0 0 1.3rem 0;
   padding: 0 0 .65rem 0;
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   text-transform: uppercase
 }
 
@@ -28938,7 +28933,7 @@ h5.text-base {
   width: 2px;
   top: 0;
   left: 24px;
-  background-image: url(/bundles/gamespotsite/images/bg-border-left-light.png);
+  background-image: url(../img/bg-border-light.png);
   background-repeat: repeat-y;
   background-position: left
 }
@@ -29092,7 +29087,7 @@ h5.text-base {
   color: #999;
   display: inline-block;
   font-size: 13px;
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-weight: normal;
   font-style: normal;
   text-transform: none;
@@ -29122,7 +29117,7 @@ h5.text-base {
 }
 
 .schedule-item.more {
-  background-image: url(/bundles/gamespotsite/images/bg-border-light.png);
+  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   background-position: center center;
@@ -29553,7 +29548,6 @@ h5.text-base {
 }
 
 .game--top-games .game-title {
-  font: 500 19px/20px -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
   color: #fff;
   margin: 0;
   padding-right: 5px;
@@ -29600,7 +29594,7 @@ h5.text-base {
   font-size: .8125rem;
   line-height: 1.3rem;
   color: #0aabe6;
-  font-family: "ArgumentumMedItalic", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -29915,7 +29909,7 @@ h5.text-base {
 
 .pod-related-games li {
   padding: .65rem 0;
-  background-image: url(/bundles/gamespotsite/images/bg-border-light.png);
+  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -31292,7 +31286,7 @@ h5.text-base {
 .userStacks--widget .userStacks-header__likes {
   float: right;
   color: #bfbfbf;
-  font-family: "ArgumentumLight", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal;
   border-left: 1px dashed #d7d8da;
@@ -31347,13 +31341,13 @@ h5.text-base {
 .userStacks-header--editing .userStacks-header__title > a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
 
 .userStacks-header--editing .userStacks-header__title > span {
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-weight: bold;
   font-style: normal;
   position: absolute;
@@ -31523,7 +31517,7 @@ h5.text-base {
 }
 
 .userStacks-edit .btn-success:after {
-  background-image: url(/bundles/gamespotsite/images/bg-border-light.png);
+  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   content: "";
@@ -31935,7 +31929,7 @@ h5.text-base {
   color: rgba(0, 0, 0, 0.2);
   top: 50%;
   left: 50%;
-  font-family: fontawesome-webfont;
+
   font-size: 1rem;
   line-height: 1.3rem;
   -webkit-transform: translate3d(-50%, -50%, 0);
@@ -32211,7 +32205,7 @@ h5.text-base {
   text-transform: uppercase;
   font-size: .75rem !important;
   margin-bottom: .65rem;
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-weight: bold;
   font-style: normal
 }
@@ -32602,7 +32596,7 @@ h5.text-base {
 }
 
 .forum-section__header h1 {
-  font-family: "ArgumentumBlack", "Franklin Gothic Medium", "Arial Narrow Bold", "Helvetica Neue", Arial, sans-serif;
+
   font-weight: normal;
   font-style: normal
 }
@@ -32626,7 +32620,7 @@ h5.text-base {
 }
 
 .forum-aside li.on a {
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-weight: bold;
   font-style: normal
 }
@@ -32650,7 +32644,7 @@ h5.text-base {
 }
 
 [data-message-user] {
-  font-family: -apple-system, ".SFNSText-Regular", BlinkMacSystemFont, "San Francisco", "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Lucida Grande", sans-serif;
+
   font-weight: bold;
   font-style: normal
 }
@@ -33458,7 +33452,7 @@ a#qualtrics-feedback:hover {
 }
 
 .ellipseborder-bottom {
-  background-image: url(/bundles/gamespotsite/images/bg-border-light.png);
+  background-image: url(/bundles/gamespotsi../img/bg-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
