@@ -140,18 +140,6 @@
     <div class="header-dropdown" id="account-dropdown">
       <div class="max-width-container">
         <div class="account-wrapper">
-          <script>
-            window.onload = function () {
-              var pathname = location.pathname;
-              if (pathname.search(/\/user\/login/) == -1) {
-                document.getElementsByClassName('user-loggedout')[0].getElementsByTagName('a')[1].setAttribute('href', "/user/login?destination=" + pathname);
-                try {
-                  document.getElementsByClassName('user-loggedout')[1].getElementsByTagName('a')[1].setAttribute('href', "/user/login?destination=" + pathname);
-                } catch (e) {
-                }
-              }
-            }
-          </script>
           <div class="user-menu user-loggedout">
             <ul>
               <li>

@@ -225,18 +225,6 @@
           </div>
           <div class="hamburger-bottom">
             <div id="toolbar-item-lightswitch">&nbsp;</div>
-            <script>
-              window.onload = function () {
-                var pathname = location.pathname;
-                if (pathname.search(/\/user\/login/) == -1) {
-                  document.getElementsByClassName('user-loggedout')[0].getElementsByTagName('a')[1].setAttribute('href', "/user/login?destination=" + pathname);
-                  try {
-                    document.getElementsByClassName('user-loggedout')[1].getElementsByTagName('a')[1].setAttribute('href', "/user/login?destination=" + pathname);
-                  } catch (e) {
-                  }
-                }
-              }
-            </script>
             <div class="user-menu user-loggedout">
               <ul>
                 <li>
