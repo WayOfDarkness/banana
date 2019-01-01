@@ -67,9 +67,9 @@ html {
 }
 
 .text-block {
-  width: 50%;
-  margin: 0 5px;
   text-align: center;
+  width: 48%;
+  max-width: 160px;
 }
 
 .alert-text {
@@ -196,17 +196,40 @@ body.page-article .social-share-button .social-icon {
 body.page-article .social-share-button {
   margin: 0;
 }
+body.page-article .ds-right .field__item h2::before,
+body.page-article .ds-right .field__item h2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  border-bottom: 1px solid black;
+  top: 50%;
+  width: 1000px;
+}
+body.page-article .ds-right .field__item h2::before {
+  left: calc(100% + 10px);
+}
+body.page-article .ds-right .field__item h2::after {
+  right: calc(100% + 10px);
+}
+body.page-article .ds-right .field__item h2 {
+  position: relative;
+  display: inline-block;
+  margin-left: 30px;
+}
 body.page-article .ds-right .field__item {
   font-size: 1.6rem;
   margin-bottom: 1rem;
+  overflow: hidden;
 }
 body.page-article .ds-right .scroll-animated {
   margin-bottom: 0.5rem;
   font-size: 1rem;
 }
 body.page-article .ds-right {
-  width: 30%;
-  padding-left: 32px;
+  width: 27%;
+  float: right !important;
+  padding-left: 0;
+  z-index: 6;
 }
 body.page-article .ds-header {
   margin: 15px auto 30px;
@@ -215,10 +238,12 @@ body.page-article .ds-header {
 body.page-article .ds-main {
   width: 70%;
   font-size: 1.1rem;
+  float: left;
 }
 body.page-article .ds-wrapper > * {
   display: block;
   float: left;
+  z-index: 5;
 }
 body.page-article .ds-wrapper {
   margin: 15px auto;
@@ -268,6 +293,9 @@ body.page-article .alert-text {
 }
 body.page-article .tag-block {
   margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 body.page-article .ds-standard-article {
   max-width: 1170px;
@@ -297,6 +325,12 @@ body.page-article .social-share-buttons {
   display: flex;
   justify-content: flex-start;
 }
+body.page-article .expanded-menu-button {
+  display: none;
+}
+body.page-article .layout-container {
+  display: block;
+}
 body.page-article {
 
 
@@ -311,11 +345,58 @@ body.page-article {
   header {
     height: initial;
   }
+  header .header-logo {
+    display: inline-block;
+  }
   .header-right-container .expanded-menu-button {
     position: fixed;
     top: 10px;
     right: 30px;
     height: initial;
     width: initial;
+  }
+  body.page-article .social-share {
+    background-color: #eceded;
+    color: #15abd8;
+    margin: 0px;
+    padding: 1rem;
+  }
+  body.page-article .social-share-button .social-icon {
+    margin: 0;
+  }
+  body.page-article .social-share-buttons a {
+    margin: 0 0.6rem;
+  }
+  body.page-article .social-share-buttons {
+    justify-content: center;
+  }
+  .social-share-button a {
+
+  }
+  body.page-article .expanded-menu-button .icon-expanded {
+    margin: 0;
+  }
+  body.page-article .expanded-menu-button {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 30px;
+  }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  body.page-article .ds-wrapper > * {
+    width: 100%;
+  }
+  body.page-article .tag-block {
+    justify-content: flex-start;
+  }
+  .text-block {
+    margin-right: 5px;
+  }
+  .recommended-articles-widget {
+    padding: 10px 30px;
   }
 }
