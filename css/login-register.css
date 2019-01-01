@@ -156,7 +156,6 @@ html * {
     line-height: 50px;
     background: grey;
     color: white;
-    font-size: 30px;
   }
   .cd-user-modal-container .cd-switcher a.selected {
     background: white;
@@ -169,6 +168,18 @@ html * {
     .cd-user-modal-container .cd-switcher a {
       height: 70px;
       line-height: 70px;
+      font-size: 20px;
+    }
+  }
+
+  @media only screen and (max-width: 599px) {
+    .cd-user-modal-container {
+      margin: 3em auto;
+    }
+    .cd-user-modal-container .cd-switcher a {
+      height: 50px;
+      line-height: 50px;
+      font-size: 15px;
     }
   }
   
@@ -188,6 +199,7 @@ html * {
   .cd-form label {
     font-size: 14px;
     font-size: 0.875rem;
+    float: left;
   }
   .cd-form label.image-replace {
     display: inline-block;
@@ -367,13 +379,13 @@ html * {
     position: absolute;
     width: 100%;
     left: 0;
-    bottom: 10px;
+    bottom: -100px;
     text-align: center;
     font-size: 14px;
     font-size: 0.875rem;
   }
   .cd-form-bottom-message a {
-    color: black;
+    color: white;
     text-decoration: underline;
     cursor: pointer;
   }
@@ -405,3 +417,7 @@ html * {
     display: block;
   }
   
+  #remember-me {
+    float: left;
+    margin-right: 5px;
+  }

@@ -16,6 +16,7 @@ jQuery(document).ready(function ($) {
 		if ($(event.target).is($main_nav)) {
 			$(this).children('ul').toggleClass('is-visible');
 		} else {
+			$('.header-icon.expanded-menu-button.close').click();
 			$main_nav.children('ul').removeClass('is-visible');
 
 			if ($(event.target).is('.cd-signup')) {
