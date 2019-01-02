@@ -50,15 +50,12 @@ html {
   display: none !important;
 }
 
-@media screen and (min-width: 1151px) {
-  .expanded-menu-button {
-  }
-}
-.promo-strip__list {
+#default-content .promo-strip__list {
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
 }
-.promo-strip__list li {
+#default-content .promo-strip__list li {
   margin: 0;
 }
 
@@ -232,7 +229,7 @@ body.page-article .ds-right {
   z-index: 6;
 }
 body.page-article .ds-header {
-  margin: 15px auto 30px;
+  margin: 1rem auto 2rem;
   width: 100%;
 }
 body.page-article .ds-main {
@@ -262,7 +259,7 @@ body.page-article .recommended-articles-widget .article-section.bug-wrapper {
   font-size: 14px;
 }
 body.page-article .page-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 2.5rem;
   margin: 15px 15px 5px !important;
 }
@@ -271,7 +268,7 @@ body.page-article .fb-comments {
   width: 100%;
 }
 body.page-article .author-details {
-  padding-bottom: 30px;
+  padding-bottom: 1.8rem;
 }
 
 body.page-article #comments-toggle {
@@ -300,7 +297,7 @@ body.page-article .tag-block {
 body.page-article .ds-standard-article {
   max-width: 1170px;
   margin:0px auto;
-  padding: 3%;
+  padding: 1rem 1.5rem;
   background-color: white;
 }
 body.page-article .full-width img {
@@ -331,12 +328,33 @@ body.page-article .expanded-menu-button {
 body.page-article .layout-container {
   display: block;
 }
+body.page-article .slick-prev, .slick-next {
+  height: 100%;
+}
 body.page-article {
 
 
 }
+.page-blog .pod-header--tabs .pod-header__filters--tabs > a {
+  box-shadow: none !important;
+}
+.page-blog .media-title {
+  font-size: 1.2rem !important;
+}
+.page-blog .pod {
+  margin-bottom: 0;
+}
+.footer-social-links .social-icon {
+  width: 2rem;
+  height: 2rem;
+  background-size: 2rem;
+}
+.region-footer .block p:last-of-type {
+  font-size: 1rem;
+}
+.page-blog {
 
-
+}
 
 
 /*RESPONSIVE*/
@@ -384,6 +402,8 @@ body.page-article {
   }
 }
 
+@media screen and (min-width: 1151px) {
+}
 
 
 @media screen and (max-width: 1024px) {
@@ -398,5 +418,34 @@ body.page-article {
   }
   .recommended-articles-widget {
     padding: 10px 30px;
+  }
+}
+@media screen and (max-width: 979px) {
+  .promo-strip__item {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .author-footer-photo {
+    width: initial;
+    height: initial;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  body.page-article .ds-standard-article {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 759px) {
+  .paginate__results {
+    display: block;
+    width: 100%;
+    clear: both;
+    margin-bottom: 0.5rem;
   }
 }
