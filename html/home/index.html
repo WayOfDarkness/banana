@@ -37,6 +37,7 @@
   <link rel="stylesheet" href="../../css/style-2.css">
   <link rel="stylesheet" href="../../css/owl.carousel.min.css">
   <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../../css/login-register.css">
   <link rel="stylesheet" href="../../css/styles.css">
 
 </head>
@@ -138,29 +139,14 @@
         </div>
       </div>
     </div>
+
     <div class="header-dropdown" id="account-dropdown">
       <div class="max-width-container">
         <div class="account-wrapper">
-          <script>
-            window.onload = function () {
-              var pathname = location.pathname;
-              if (pathname.search(/\/user\/login/) == -1) {
-                document.getElementsByClassName('user-loggedout')[0].getElementsByTagName('a')[1].setAttribute('href', "/user/login?destination=" + pathname);
-                try {
-                  document.getElementsByClassName('user-loggedout')[1].getElementsByTagName('a')[1].setAttribute('href', "/user/login?destination=" + pathname);
-                } catch (e) {
-                }
-              }
-            }
-          </script>
-          <div class="user-menu user-loggedout">
+          <div class="user-menu user-loggedout main-nav">
             <ul>
-              <li>
-                <a href="#">ĐĂNG KÝ</a>
-              </li>
-              <li>
-                <a href="#">ĐĂNG NHẬP</a>
-              </li>
+              <li><a class="cd-signin" href="javascript:;">Đăng nhập</a></li>
+              <li><a class="cd-signup" href="javascript:;">Đăng ký</a></li>
             </ul>
           </div>
         </div>
@@ -219,28 +205,13 @@
             </nav>
           </div>
         </div>
+
         <div class="hamburger-bottom">
           <div id="toolbar-item-lightswitch">&nbsp;</div>
-          <script>
-            window.onload = function () {
-              var pathname = location.pathname;
-              if (pathname.search(/\/user\/login/) == -1) {
-                document.getElementsByClassName('user-loggedout')[0].getElementsByTagName('a')[1].setAttribute('href', "/user/login?destination=" + pathname);
-                try {
-                  document.getElementsByClassName('user-loggedout')[1].getElementsByTagName('a')[1].setAttribute('href', "/user/login?destination=" + pathname);
-                } catch (e) {
-                }
-              }
-            }
-          </script>
-          <div class="user-menu user-loggedout">
+          <div class="user-menu user-loggedout main-nav">
             <ul>
-              <li>
-                <a href="/user/register">Join</a>
-              </li>
-              <li>
-                <a href="/user/login">Sign In</a>
-              </li>
+              <li><a class="cd-signin" href="javascript:;">Đăng nhập</a></li>
+              <li><a class="cd-signup" href="javascript:;">Đăng ký</a></li>
             </ul>
           </div>
         </div>
@@ -1424,6 +1395,88 @@
 
 </div>
 
+<div class="cd-user-modal">
+  <div class="cd-user-modal-container">
+    <ul class="cd-switcher">
+      <li><a href="javascript:;">ĐĂNG NHẬP</a></li>
+      <li><a href="javascript:;">ĐĂNG KÝ</a></li>
+    </ul>
+
+    <div id="cd-login">
+      <form class="cd-form">
+        <p class="fieldset">
+          <label class="image-replace cd-email" for="signin-email">E-mail</label>
+          <input class="full-width has-padding has-border" id="signin-email" type="text" placeholder="E-mail">
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <label class="image-replace cd-password" for="signin-password">Password</label>
+          <input class="full-width has-padding has-border" id="signin-password" type="password" placeholder="Password">
+          <a href="javascript:;" class="hide-password hide-password-on"></a>
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <!-- <p class="fieldset">
+          <input type="checkbox" id="remember-me" checked>
+          <label for="remember-me">Nhớ mật khẩu</label>
+        </p> -->
+
+        <p class="fieldset">
+          <input class="full-width" type="submit" value="Đăng nhập">
+        </p>
+      </form>
+      <p class="cd-form-bottom-message"><a href="javascript:;">Quên mật khẩu?</a></p>
+      <!-- <a href="javascript:;" class="cd-close-form">X</a> -->
+    </div>
+
+    <div id="cd-signup">
+      <form class="cd-form">
+        <p class="fieldset">
+          <label class="image-replace cd-email" for="signup-email">E-mail</label>
+          <input class="full-width has-padding has-border" id="signup-email" type="text" placeholder="E-mail">
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <label class="image-replace cd-password" for="signup-password">Mật khẩu</label>
+          <input class="full-width has-padding has-border" id="signup-password" type="password" placeholder="Password">
+          <a href="javascript:;" class="hide-password hide-password-on"></a>
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <label class="image-replace cd-password" for="signup-password-confirm">Nhập lại mật khẩu</label>
+          <input class="full-width has-padding has-border" id="signup-password-confirm" type="password" placeholder="Nhập lại mật khẩu">
+          <a href="javascript:;" class="hide-password hide-password-on"></a>
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <input class="full-width has-padding" type="submit" value="Tạo tài khoản">
+        </p>
+      </form>
+      <!-- <a href="javascript:;" class="cd-close-form">X</a> -->
+    </div>
+
+    <div id="cd-reset-password">
+      <p class="cd-form-message">Điền email của bạn để lấy lại mật khẩu!</p>
+      <form class="cd-form">
+        <p class="fieldset">
+          <label class="image-replace cd-email" for="reset-email">E-mail</label>
+          <input class="full-width has-padding has-border" id="reset-email" type="text" placeholder="E-mail">
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+        <p class="fieldset">
+          <input class="full-width has-padding" type="submit" value="Lấy lại mật khẩu">
+        </p>
+      </form>
+      <p class="cd-form-bottom-message"><a href="javascript:;">Trở về đăng nhập</a></p>
+    </div>
+    <!-- <a href="javascript:;" class="cd-close-form">X</a> -->
+  </div>
+</div>
+
 <script src="../../js/jquery-3.3.1.min.js" type="application/javascript"></script>
 <script src="../../js/owl.carousel.min.js" type="application/javascript"></script>
 
@@ -1431,6 +1484,7 @@
 <script src="../../js/script-7.js" type="application/javascript"></script>
 <script src="../../js/slick.min.js" type="application/javascript"></script>
 
+<script src="../../js/login-register.js"></script>
 <script src="../../js/scripts.js" type="application/javascript"></script>
 
 </body>

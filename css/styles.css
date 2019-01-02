@@ -280,7 +280,7 @@ body.page-article .ds-footer {
 }
 body.page-article .wrapper-footer {
   width: 60%;
-  min-width: 320px;
+  min-width: 290px;
   margin: auto;
 }
 body.page-article .alert-text {
@@ -322,7 +322,7 @@ body.page-article .social-share-buttons {
   display: flex;
   justify-content: flex-start;
 }
-body.page-article .expanded-menu-button {
+body .expanded-menu-button {
   display: none;
 }
 body.page-article .layout-container {
@@ -352,9 +352,13 @@ body.page-article {
 .region-footer .block p:last-of-type {
   font-size: 1rem;
 }
+#expanded-menu a {
+  font-size: 1.3rem !important;
+}
 .page-blog {
 
 }
+
 
 
 /*RESPONSIVE*/
@@ -391,10 +395,11 @@ body.page-article {
   .social-share-button a {
 
   }
-  body.page-article .expanded-menu-button .icon-expanded {
-    margin: 0;
+  body .expanded-menu-button .icon-expanded {
+    margin-top: 12px !important;
+    right: -16px !important;
   }
-  body.page-article .expanded-menu-button {
+  body .expanded-menu-button {
     display: block;
     position: fixed;
     top: 20px;
@@ -447,5 +452,10 @@ body.page-article {
     width: 100%;
     clear: both;
     margin-bottom: 0.5rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .slide-in .user-menu a {
+    color: #4b4b4b !important;
   }
 }
