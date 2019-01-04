@@ -116,9 +116,9 @@ html * {
   .cd-user-modal-container {
     position: relative;
     width: 90%;
-    max-width: 600px;
+    max-width: 500px;
     background: #FFF;
-    margin: 3em auto 4em;
+    margin: 2em auto 10px auto;
     cursor: auto;
     border-radius: 0.5em;
     -webkit-transform: translateY(-30px);
@@ -132,6 +132,9 @@ html * {
     -webkit-transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     transition-duration: 0.3s;
+  }
+  .cd-user-modal-container .cd-switcher {
+    height: 30px;
   }
   .cd-user-modal-container .cd-switcher::after {
     clear: both;
@@ -164,22 +167,22 @@ html * {
   }
   @media only screen and (min-width: 600px) {
     .cd-user-modal-container {
-      margin: 4em auto;
+      margin: 4em auto 10px auto;
     }
     .cd-user-modal-container .cd-switcher a {
-      height: 70px;
-      line-height: 70px;
+      height: 50px;
+      line-height: 50px;
       font-size: 20px;
     }
   }
 
   @media only screen and (max-width: 599px) {
     .cd-user-modal-container {
-      margin: 3em auto;
+      margin: 3em auto 10px auto;
     }
     .cd-user-modal-container .cd-switcher a {
-      height: 50px;
-      line-height: 50px;
+      height: 30px;
+      line-height: 30px;
       font-size: 15px;
     }
   }
@@ -421,4 +424,46 @@ html * {
   #remember-me {
     float: left;
     margin-right: 5px;
+  }
+
+  .cd-user-modal-container.clearfix {
+    margin-top: 30px !important;
+  }
+
+  .omniauth-container {
+    padding: 15px;
+    font-size: 13px;
+    border-radius: 0.5em;
+  }
+
+  .prepend-top-2 {
+    margin-top: 2px;
+  }
+
+  label.label-bold {
+    font-weight: 600;
+  }
+
+  .justify-content-between {
+    justify-content: space-between !important;
+  }
+
+  .flex-wrap {
+    flex-wrap: wrap !important;
+  }
+
+  .d-flex {
+    display: flex !important;
+  }
+
+  .omniauth-container .omniauth-btn {
+    margin-bottom: 16px;
+    width: 48%;
+    padding: 8px;
+  }
+
+  .omniauth-container .omniauth-btn img {
+    width: 18px;
+    height: 18px;
+    margin-right: 16px;
   }
