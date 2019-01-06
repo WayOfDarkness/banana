@@ -696,7 +696,7 @@ html {
 .container {
   margin-left: auto;
   margin-right: auto;
-  position: relative
+  position: relative;
 }
 
 .container:after {
@@ -923,7 +923,6 @@ html {
   position: relative;
   top: -1px;
   height: 1em;
-  width: 1em;
   vertical-align: middle
 }
 
@@ -22378,7 +22377,7 @@ h1, h2, h3, h4, h5, h6 {
   border-top: 3px solid #e03800;
   border-bottom: 3px solid #262626;
   padding: 1.3rem 0 2.6rem;
-  min-height: 13rem;
+  min-height: 14rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale
 }
@@ -22401,10 +22400,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .review-breakdown__inner .breakdown > dt {
   text-transform: uppercase;
-
   font-weight: normal;
   font-style: normal;
-  margin-bottom: .325rem
+  margin-bottom: .5rem;
 }
 
 .review-breakdown__inner .breakdown > dd {
@@ -22468,15 +22466,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .review-breakdown__inner .breakdown-score .score-word {
-  margin-top: .975rem;
+  margin-top: 1.2rem;
   padding: 0;
   font-size: 1.4375rem;
-  line-height: 1.95rem
+  line-height: 1.95rem;
 }
 
 @media (max-width: 759px) {
   .review-breakdown__inner .breakdown-score .score-word {
-    margin-top: .65rem
+    margin-top: .85rem
   }
 }
 
