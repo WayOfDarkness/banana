@@ -5,7 +5,7 @@
 }
 
 html {
-  font-family: 'K2D', sans-serif;
+  font-family: 'Alegreya Sans', Arial, sans-serif;
   font-size: 16px !important;
 }
 
@@ -483,11 +483,12 @@ body.page-article {
 }
 
 .font-arima {
-  font-family: Arima !important;
+  font-family: 'Arima Madurai', cursive;
 }
 
 .menu--main li a {
   font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .flex-div {
@@ -529,7 +530,7 @@ body.page-article {
 .breakdown-good__item, .breakdown-bad__item {
   font-size: 1.1rem;
   line-height: 2rem;
-  font-family: 'Arima Madurai';
+  font-family: 'Arima Madurai', cursive;
 }
 
 .rating-overflow {
@@ -540,4 +541,5 @@ body.page-article {
   font-size: 2rem;
   margin-left: 2rem;
   margin-bottom: 1rem;
+  font-family: "Arima Madurai", cursive;
 }

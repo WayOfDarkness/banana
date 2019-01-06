@@ -3181,14 +3181,17 @@ input:-moz-placeholder {
 }
 
 .Faustina, .faustina {
-  font-family: 'K2D', sans-serif;}
+  font-family: 'Alegreya Sans', sans-serif;
+}
+
 
 .Fira, .fira {
 
 }
 
 .FiraCondensed, .firacondensed {
-  font-family: 'K2D', sans-serif;}
+  font-family: 'Alegreya Sans', sans-serif
+}
 
 * {
   -webkit-box-sizing: border-box;
@@ -3500,7 +3503,8 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
   border: none;
   border-bottom: 1px solid #717171;
   width: 100%;
-  font-family: 'K2D', sans-serif;}
+  font-family: 'Alegreya Sans', sans-serif
+}
 
 .form-textarea-wrapper {
   margin-top: 1rem
@@ -4760,7 +4764,7 @@ footer[role="contentinfo"] {
 
 .widget-teaser .widget-title .page-title {
   margin: 0;
-  font-family: 'K2D', sans-serif;}
+  font-family: 'Alegreya Sans', sans-serif;}
 
 .icon-arrow {
   -webkit-mask: url("/themes/gi5/includes/images/arrow-right.svg") no-repeat 100% 100%;
@@ -7074,7 +7078,8 @@ aside p {
 
   text-transform: uppercase;
   text-align: center;
-  font-weight: normal
+  font-weight: bold;
+  font-family: "Arima Madurai", cursive;
 }
 
 .recommended-articles-widget .teaser {
@@ -7732,7 +7737,7 @@ aside p {
   top: -0.75em;
   right: 1.5rem;
   padding: 0;
-  font-family: 'K2D', sans-serif;}
+  font-family: 'Alegreya Sans', sans-serif;}
 
 .unica, .Unica {
 
@@ -7741,14 +7746,14 @@ aside p {
 }
 
 .Faustina, .faustina {
-  font-family: 'K2D', sans-serif;}
+  font-family: 'Alegreya Sans', sans-serif;}
 
 .Fira, .fira {
 
 }
 
 .FiraCondensed, .firacondensed {
-  font-family: 'K2D', sans-serif;}
+  font-family: 'Alegreya Sans', sans-serif;}
 
 body {
   background-color: #f6f6f6;
@@ -8294,7 +8299,7 @@ footer[role="contentinfo"] {
 
 .widget-teaser .widget-title .page-title {
   margin: 0;
-  font-family: 'K2D', sans-serif;}
+  font-family: 'Alegreya Sans', sans-serif;}
 
 .icon-arrow {
   background-color: #656565
@@ -8513,6 +8518,7 @@ aside {
 .author-footer a {
   background-color: transparent;
   font-size: 2rem;
+  font-family: "Arima Madurai", cursive;
 }
 
 .author-footer-photo .image-style-user-thumbnail {
@@ -8946,14 +8952,14 @@ aside {
 }
 
 .Faustina, .faustina {
-  font-family: 'K2D', sans-serif;}
+  font-family: 'Alegreya Sans', sans-serif;}
 
 .Fira, .fira {
 
 }
 
 .FiraCondensed, .firacondensed {
-  font-family: 'K2D', sans-serif;}
+  font-family: 'Alegreya Sans', sans-serif;}
 
 .toolbar li {
   margin: 0
@@ -9241,14 +9247,14 @@ aside {
 }
 
 .Faustina, .faustina {
-  font-family: 'K2D', sans-serif;}
+  font-family: 'Alegreya Sans', sans-serif;}
 
 .Fira, .fira {
 
 }
 
 .FiraCondensed, .firacondensed {
-  font-family: 'K2D', sans-serif;}
+  font-family: 'Alegreya Sans', sans-serif;}
 
 .theme-dark {
   background-color: #272727;
@@ -9262,14 +9268,14 @@ aside {
 }
 
 .theme-dark .Faustina, .theme-dark .faustina {
-  font-family: 'K2D', sans-serif;}
+  font-family: 'Alegreya Sans', sans-serif;}
 
 .theme-dark .Fira, .theme-dark .fira {
 
 }
 
 .theme-dark .FiraCondensed, .theme-dark .firacondensed {
-  font-family: 'K2D', sans-serif;}
+  font-family: 'Alegreya Sans', sans-serif;}
 
 .theme-dark body {
   background-color: #272727;
@@ -9798,7 +9804,7 @@ aside {
 
 .theme-dark .widget-teaser .widget-title .page-title {
   margin: 0;
-  font-family: 'K2D', sans-serif;}
+  font-family: 'Alegreya Sans', sans-serif;}
 
 .theme-dark .icon-arrow {
   background-color: #d3d3d3
@@ -10521,14 +10527,14 @@ aside {
 }
 
 .Faustina, .faustina {
-  font-family: 'K2D', sans-serif;}
+  font-family: 'Alegreya Sans', sans-serif;}
 
 .Fira, .fira {
 
 }
 
 .FiraCondensed, .firacondensed {
-  font-family: 'K2D', sans-serif;}
+  font-family: 'Alegreya Sans', sans-serif;}
 
 .theme-dark-header header {
   background-color: #000;
