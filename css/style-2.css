@@ -4008,10 +4008,9 @@ label[for="edit-keyword"] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 1.7rem;
-
   text-transform: uppercase;
   padding: 15px 30px;
-  height: 80px;
+  height: 65px;
 }
 .header-dropdown div {
   height: 100%;
