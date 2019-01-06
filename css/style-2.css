@@ -4052,11 +4052,11 @@ label[for="edit-keyword"] {
   position: fixed;
   overflow-y: auto;
   width: 100%;
-  max-width: 400px;
+  max-width: 320px;
   font-size: 1.7rem;
   padding: 3rem;
   padding-right: 1rem;
-  padding-top: 8.6rem
+  padding-top: 8.6rem;
 }
 
 .expanded .slide-in {
@@ -4076,7 +4076,7 @@ label[for="edit-keyword"] {
 }
 
 .slide-in.mCS_no_scrollbar {
-  padding: 100px 30px;
+  padding: 80px 20px;
 }
 
 .layout-container .slide-in a {
