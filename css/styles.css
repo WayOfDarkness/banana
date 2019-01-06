@@ -4,8 +4,7 @@
   clear: both;
 }
 html {
-  font-family: "HelveticaNeue", "Times New Roman", Serif;
-}
+  font-family: 'Arima Madurai', cursive;}
 
 .social-share-button .social-icon.upvote {
   -webkit-mask: url("../img/icon/thumbs-up-solid.svg") no-repeat 100% 100%;
