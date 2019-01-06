@@ -7282,7 +7282,9 @@ body.sub-sale #promo .available span {
 }
 
 .paginate-messages .paginate__results {
-  display: none
+  display: none;
+  font-size: 1rem;
+  color: #161616;
 }
 
 .paginate-messages .message-sort {
@@ -17223,7 +17225,8 @@ a:hover .link-img .hover-play-pause {
 .pod-header .pod-title > h1, .pod-header .pod-title > h4, .pod-header .pod-title span {
   -ms-flex: 1 1 auto;
   -webkit-flex: 1 1 auto;
-  flex: 1 1 auto
+  flex: 1 1 auto;
+  font-size: 1.2rem;
 }
 
 .no-flexbox .pod-header .pod-title > h1, .no-flexbox .pod-header .pod-title > h4, .no-flexbox .pod-header .pod-title span {
@@ -17347,7 +17350,8 @@ a:hover .link-img .hover-play-pause {
 }
 
 .pod-filter .has-feed-group {
-  padding-right: 0
+  padding-right: 0;
+  margin-bottom: 1.2rem;
 }
 
 .pod-header__filters--tabs {
@@ -17542,7 +17546,8 @@ a:hover .link-img .hover-play-pause {
 }
 
 .pod-footer {
-  text-align: center
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .pod-footer > a {
@@ -19692,10 +19697,9 @@ a:hover .link-img .hover-play-pause {
 }
 
 .promo-type--single h1, .promo-type--single h2 {
-  font-size: 2.25rem;
-  line-height: 2.6rem;
+  font-size: 2rem;
+  line-height: 2.4rem;
   color: #000;
-  line-height: 1em;
   margin-bottom: .65rem
 }
 
@@ -20688,7 +20692,6 @@ a:hover .link-img .hover-play-pause {
 
   font-weight: normal;
   font-style: normal;
-  margin-top: .2rem
 }
 
 .media-well--review-gs .site-logo--mono {
@@ -26272,7 +26275,7 @@ h5.text-base {
 
 .pod-popular .media--small .media-title, .pod-popular .media--sponsored .media-title {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1rem !important;
   line-height: 1.3rem;
   overflow: hidden;
   display: -webkit-box;
@@ -26281,9 +26284,9 @@ h5.text-base {
 }
 
 .pod-popular .media--is-top .media-title {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.3rem;
-  margin-bottom: .65rem
+  margin-bottom: .65rem;
 }
 
 @media only screen and (min-width: 1210px) {
@@ -29504,8 +29507,7 @@ h5.text-base {
   content: counter(counter-topgames);
   counter-increment: counter-topgames;
   display: block;
-  font-size: 24px;
-
+  font-size: 1.5rem;
   font-weight: normal;
   font-style: normal;
   line-height: 20px;
