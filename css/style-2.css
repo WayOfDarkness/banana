@@ -6310,13 +6310,14 @@ aside p {
 
 .author-footer-title {
   margin: .25em 0;
-  font-style: italic
+  font-style: italic;
+  font-size: 1.6rem;
 }
 
 .author-footer-shortbio {
 
-  font-size: .9em;
-  line-height: 1.5
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 .author-footer-contact {
@@ -8510,7 +8511,8 @@ aside {
 }
 
 .author-footer a {
-  background-color: transparent
+  background-color: transparent;
+  font-size: 2rem;
 }
 
 .author-footer-photo .image-style-user-thumbnail {
