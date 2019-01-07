@@ -412,3 +412,13 @@ body.page-article {
   display: flex;
 }
 
+.breakdown-good__item, .breakdown-bad__item {
+  font-size: 17.6px;
+  line-height: 25px;
+  font-family: 'Arima Madurai';
+}
+
+.rating-overflow {
+  width: 500%;
+  margin-left: -200%;
+}

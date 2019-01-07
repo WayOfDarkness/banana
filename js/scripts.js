@@ -97,5 +97,3 @@ if($(".page-walkthrough").length) {
 
 }
 //END WALKTHROUGH
-
-
