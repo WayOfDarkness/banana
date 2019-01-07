@@ -1,58 +1,5 @@
 //ALL PAGE RUN THIS CODE
-console.log('Welcome to https://choigiday.com')
-
-//BLOG RUN THIS CODE
-if($(".page-blog").length) {
-
-}
-
-//ARTICLE RUN THIS CODE
-if($(".page-article").length) {
-
-}
-
-//HOME RUN THIS CODE
-if($(".page-home").length) {
-
-}
-
-//NEWS RUN THIS CODE
-if($(".page-news").length) {
-
-}
-
-//REVIEWS RUN THIS CODE
-if($(".page-reviews").length) {
-
-}
-
-//VIDEO RUN THIS CODE
-if($(".page-videos").length) {
-
-}
-
-//WALKTHROUGH RUN THIS CODE
-if($(".page-walkthrough").length) {
-
-}
-
-
-
-// Outline
-var html = '';
-
-$('.ds-main .field--type-text-with-summary').find('h2').each(function (i, e) {
-  $(this).attr('id', i);
-  var g = $(this).html();
-  html += `<div class="scroll-animated" rel="#${i}">${g}</div>`;
-})
-
-$('.ad-299').html(html);
-
-$(".scroll-animated").click(function () {
-  var id = $(this).attr('rel');
-  $('html,body').animate({scrollTop: $(id).offset().top - 60}, 'slow');
-});
+console.log('Welcome to https://choigiday.com');
 
 //owl carousel v2
 $('.owl-carousel').each(function () {
@@ -84,3 +31,71 @@ $('.pod-header__grid').click(function () {
   $(this).find('.feed-view').addClass('on').siblings().removeClass('on');
   $(this).siblings().find('.feed-view').removeClass('on');
 })
+
+//END ALL PAGE
+
+//BLOG RUN THIS CODE
+if($(".page-blog").length) {
+  console.log("Blog");
+
+}
+//END BLOG PAGE
+
+//ARTICLE RUN THIS CODE
+if($(".page-article").length) {
+  console.log("Article");
+// Outline
+  var html = '';
+
+  $('.ds-main .field--type-text-with-summary').find('h2').each(function (i, e) {
+    $(this).attr('id', i);
+    var g = $(this).html();
+    html += `<div class="scroll-animated" rel="#${i}">${g}</div>`;
+  })
+
+  $('.ad-299').html(html);
+
+  $(".scroll-animated").click(function () {
+    var id = $(this).attr('rel');
+    $('html,body').animate({scrollTop: $(id).offset().top - 60}, 'slow');
+  });
+
+}
+//END ARTICLE PAGE
+
+//HOME RUN THIS CODE
+if($(".page-home").length) {
+  console.log("Home");
+
+}
+//END HOME PAGE
+
+//NEWS RUN THIS CODE
+if($(".page-news").length) {
+  console.log("News");
+
+}
+//END NEWS PAGE
+
+//REVIEWS RUN THIS CODE
+if($(".page-reviews").length) {
+  console.log("Reviews");
+
+}
+//END REVIEWS PAGE
+
+//VIDEO RUN THIS CODE
+if($(".page-videos").length) {
+  console.log("Video");
+
+}
+//END VIDEO PAGE
+
+//WALKTHROUGH RUN THIS CODE
+if($(".page-walkthrough").length) {
+  console.log("Walkthrough");
+
+}
+//END WALKTHROUGH
+
+

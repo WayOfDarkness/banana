@@ -359,7 +359,16 @@ body.page-article {
 
 }
 
+.page-article .recommended-articles-widget .teaser {
+  padding: 0;
+}
+.page-article .recommended-articles-widget .teaser-left {
+  max-width: 100%;
+}
 
+.page-article views-element-container {
+  padding: 1.2rem 0px;
+}
 
 /*RESPONSIVE*/
 
