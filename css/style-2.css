@@ -3717,8 +3717,8 @@ table th, table td {
 
 header {
   position: relative;
-  padding: 5px 30px;
-  height: 60px;
+  padding: 0 30px;
+  height: 50px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
@@ -7960,13 +7960,13 @@ header {
 }
 
 .header-icon.close > div {
-  background-color: #1f64e2 !important;
+  background-color: #2C7ABE !important;
   width: 32px;
   height: 32px;
   transition-duration: 0.3s;
 }
 .header-icon.close::before {
-  background-color: #1f64e2 !important;
+  background-color: #2C7ABE !important;
   opacity: 1;
 }
 .header-icon::before {

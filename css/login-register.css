@@ -67,7 +67,7 @@ html * {
       cursor: pointer;
     }
     .main-nav a.cd-signup {
-      background: #2f889a;
+      background: #2C7ABE;
       border: none;
     }
     .main-nav a.cd-signin {
@@ -158,7 +158,7 @@ html * {
     width: 100%;
     height: 50px;
     line-height: 50px;
-    background: #444;
+    background: #808080;
     color: white;
   }
   .cd-user-modal-container .cd-switcher a.selected {
@@ -277,7 +277,7 @@ html * {
     appearance: none;
   }
   .no-touch .cd-form input[type=submit]:hover, .no-touch .cd-form input[type=submit]:focus {
-    background: #3599ae;
+    background: #e74c3c;
     outline: none;
   }
   .cd-form .hide-password {
