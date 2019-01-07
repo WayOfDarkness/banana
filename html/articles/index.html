@@ -695,7 +695,7 @@
             <span class="cd-error-message">Error message here!</span>
           </p>
 
-          <p class="fieldset">
+          <p class="fieldset last-e">
             <label class="image-replace cd-password" for="signin-password">Password</label>
             <input class="full-width has-padding has-border" id="signin-password" type="password" placeholder="Password">
             <a href="javascript:;" class="hide-password hide-password-on"></a>
@@ -730,11 +730,11 @@
             <span class="cd-error-message">Error message here!</span>
           </p>
 
-          <p class="fieldset">
+          <p class="fieldset last-e">
             <label class="image-replace cd-password" for="signup-password-confirm">Nhập lại mật khẩu</label>
-            <input class="full-width has-padding has-border" id="signup-password-confirm" type="password" placeholder="Nhập lại mật khẩu">
+            <input class="full-width has-padding has-border error-noti" id="signup-password-confirm" type="password" placeholder="Nhập lại mật khẩu">
             <a href="javascript:;" class="hide-password hide-password-on"></a>
-            <span class="cd-error-message">Error message here!</span>
+            <span class="cd-error-message is-visible">Error message here!</span>
           </p>
 
           <p class="fieldset">
@@ -747,7 +747,7 @@
       <div id="cd-reset-password">
         <p class="cd-form-message">Điền email của bạn để lấy lại mật khẩu!</p>
         <form class="cd-form">
-          <p class="fieldset">
+          <p class="fieldset last-e">
             <label class="image-replace cd-email" for="reset-email">E-mail</label>
             <input class="full-width has-padding has-border" id="reset-email" type="text" placeholder="E-mail">
             <span class="cd-error-message">Error message here!</span>
@@ -761,8 +761,8 @@
       <!-- <a href="javascript:;" class="cd-close-form">X</a> -->
     </div>
     <div class="cd-user-modal-container clearfix">
-      <div class="omniauth-container prepend-top-2">
-        <label class="label-bold d-block">
+      <div class="omniauth-container">
+        <label class="d-block">
           Đăng nhập bằng
         </label>
         <div class="d-flex justify-content-between flex-wrap">
@@ -770,14 +770,14 @@
             rel="nofollow" data-method="post" href="/users/auth/google_oauth2">
             <img alt="Google" title="Sign in with Google" class="js-lazy-loaded" src="https://assets.gitlab-static.net/assets/auth_buttons/google_64-9ab7462cd2115e11f80171018d8c39bd493fc375e83202fbb6d37a487ad01908.png">
             <span>
-              GOOGLE
+              Google
             </span>
           </a>
           <a class="btn d-flex align-items-center omniauth-btn text-left oauth-login qa-saml-login-button" id="oauth-login-twitter"
             rel="nofollow" data-method="post" href="/users/auth/twitter">
             <img alt="Twitter" title="Sign in with Twitter" class="js-lazy-loaded" src="https://assets.gitlab-static.net/assets/auth_buttons/twitter_64-86860edb139fb2f62fc25ef62a4213a5c8b20122fd8752ab0df09e740eb53deb.png">
             <span>
-              FACEBOOK
+              Facebook
             </span>
           </a>
         </div>

@@ -120,7 +120,7 @@ html * {
     background: #FFF;
     margin: 2em auto 10px auto;
     cursor: auto;
-    border-radius: 0.5em;
+    border-radius: 3px;
     -webkit-transform: translateY(-30px);
     -moz-transform: translateY(-30px);
     -ms-transform: translateY(-30px);
@@ -148,42 +148,42 @@ html * {
     cursor: pointer;
   }
   .cd-user-modal-container .cd-switcher li:first-child a {
-    border-radius: .25em 0 0 0;
+    border-radius: 0 !important;;
   }
   .cd-user-modal-container .cd-switcher li:last-child a {
-    border-radius: 0 .25em 0 0;
+    border-radius: 0 !important;;
   }
   .cd-user-modal-container .cd-switcher a {
     display: block;
     width: 100%;
     height: 50px;
     line-height: 50px;
-    background: grey;
+    background: #444;
     color: white;
   }
   .cd-user-modal-container .cd-switcher a.selected {
     background: white;
-    color: black;
+    color: #161616;
   }
   @media only screen and (min-width: 600px) {
-    .cd-user-modal-container {
-      margin: 4em auto 10px auto;
-    }
     .cd-user-modal-container .cd-switcher a {
       height: 50px;
       line-height: 50px;
       font-size: 20px;
     }
+    .cd-user-modal-container.clearfix {
+      margin-top: 30px;
+    }
   }
 
   @media only screen and (max-width: 599px) {
-    .cd-user-modal-container {
-      margin: 3em auto 10px auto;
-    }
     .cd-user-modal-container .cd-switcher a {
       height: 30px;
       line-height: 30px;
       font-size: 15px;
+    }
+    .cd-user-modal-container.clearfix {
+      margin-top: 40px;
     }
   }
   
@@ -230,7 +230,7 @@ html * {
     background-image: url("../img/icon/envelope-solid.svg");
   }
   .cd-form label.cd-password {
-    background-image: url("../img/icon/keycdn-brands.svg");
+    background-image: url("../img/icon/lock-solid.svg");
   }
   .cd-form input {
     margin: 0;
@@ -241,7 +241,7 @@ html * {
     width: 100%;
   }
   .cd-form input.has-padding {
-    padding: 12px 20px 12px 50px;
+    padding: 10px 20px 10px 50px;
   }
   .cd-form input.has-border {
     border: 1px solid #d2d8d8;
@@ -265,7 +265,7 @@ html * {
   .cd-form input[type=submit] {
     padding: 16px 0;
     cursor: pointer;
-    background: #2f889a;
+    background: #2C7ABE;
     color: #FFF;
     font-weight: bold;
     border: none;
@@ -349,7 +349,7 @@ html * {
       padding: 2em;
     }
     .cd-form .fieldset {
-      margin: 2em 0;
+      margin: 20px 0;
     }
     .cd-form .fieldset:first-child {
       margin-top: 0;
@@ -358,7 +358,7 @@ html * {
       margin-bottom: 0;
     }
     .cd-form input.has-padding {
-      padding: 16px 20px 16px 50px;
+      padding: 10px 20px 10px 50px;
     }
     .cd-form input[type=submit] {
       padding: 16px 0;
@@ -383,13 +383,13 @@ html * {
     position: absolute;
     width: 100%;
     left: 0;
-    bottom: -100px;
+    bottom: 20px;
     text-align: center;
     font-size: 14px;
     font-size: 0.875rem;
   }
   .cd-form-bottom-message a {
-    color: white;
+    color: #161616;
     text-decoration: underline;
     cursor: pointer;
   }
@@ -426,18 +426,10 @@ html * {
     margin-right: 5px;
   }
 
-  .cd-user-modal-container.clearfix {
-    margin-top: 30px !important;
-  }
-
   .omniauth-container {
-    padding: 15px;
+    padding: 12px 32px 16px 32px;
     font-size: 13px;
-    border-radius: 0.5em;
-  }
-
-  .prepend-top-2 {
-    margin-top: 2px;
+    border-radius: 3px;
   }
 
   label.label-bold {
@@ -457,13 +449,40 @@ html * {
   }
 
   .omniauth-container .omniauth-btn {
-    margin-bottom: 16px;
     width: 48%;
     padding: 8px;
+    background-color: white;
+    background-image: none;
+    box-shadow: none !important;
+    border: 1px solid #d9d9d9;
+  }
+
+  .omniauth-container .omniauth-btn:hover {
+    color: #161616;
+    transition-duration: 0s;
   }
 
   .omniauth-container .omniauth-btn img {
     width: 18px;
     height: 18px;
     margin-right: 16px;
+  }
+  
+  .omniauth-btn span {
+    vertical-align: middle;
+    line-height: 18px;
+  }
+
+  .fieldset.last-e {
+    margin-bottom: 50px;
+  }
+
+  .omniauth-container label {
+    color: #161616;
+    line-height: 13px;
+    vertical-align: middle;
+  }
+
+  input.error-noti {
+    border-color: #e74c3c !important;
   }
