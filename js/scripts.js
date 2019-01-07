@@ -85,7 +85,7 @@ if($(".page-reviews").length) {
 //END REVIEWS PAGE
 
 //VIDEO RUN THIS CODE
-if($(".page-videos").length) {
+if($(".page-Videos").length) {
   console.log("Video");
 
 }
