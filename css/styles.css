@@ -8,6 +8,12 @@ html {
   font-size: 16px !important;
 }
 
+p {
+  font-size: 1rem;
+}
+h2 {
+  font-size: 1.6rem;
+}
 .social-share-button i {
   color: black;
   font-size: 12px;
@@ -178,7 +184,7 @@ body.page-article main {
   margin-top: 60px;
 }
 body.page-article .field--name-dynamic-block-fieldnode-content-bug .bug-text {
-  font-size: 17px;
+  font-size: 1.2rem;
   padding: 8px;
 }
 body.page-article h1 {
@@ -350,6 +356,8 @@ body.page-article {
 }
 .page-blog .pod-header--tabs .pod-header__filters--tabs > a {
   box-shadow: none !important;
+  font-size: 1.5rem !important;
+  font-weight: bold;
 }
 .page-blog .media-title {
   font-size: 1.2rem !important;
@@ -406,10 +414,29 @@ body.page-article {
 }
 
 .menu--main li a {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 .flex-div {
   display: flex;
+}
+
+.media-date {
+  font-size: 0.8rem;
+}
+.game--top-games .game-meta--date {
+  font-size: 0.8rem;
+}
+
+.page-reviews input[type="text"] {
+  border-radius: 0;
+}
+.page-reviews select {
+  background: #f6f6f6;
+  border: 1px solid #888;
+  line-height: 1.5rem;
+}
+.page-reviews .form-composite > legend, .label {
+  font-size: 0.65rem;
 }
 
 .breakdown-good__item, .breakdown-bad__item {
