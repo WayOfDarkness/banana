@@ -1,0 +1,32 @@
+/* vietnamese */
+@font-face {
+  font-family: 'Arima Madurai';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Arima Madurai'), local('ArimaMadurai-Regular'), url(https://fonts.gstatic.com/s/arimamadurai/v3/t5tmIRoeKYORG0WNMgnC3seB3THPr6OH.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Arima Madurai';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Arima Madurai Bold'), local('ArimaMadurai-Bold'), url(https://fonts.gstatic.com/s/arimamadurai/v3/t5t7IRoeKYORG0WNMgnC3seB1YXqupOmfyca.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'K2D';
+  font-style: normal;
+  font-weight: 400;
+  src: local('K2D Regular'), local('K2D-Regular'), url(https://fonts.gstatic.com/s/k2d/v1/J7aTnpF2V0Ejf6UsrLc.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'K2D';
+  font-style: normal;
+  font-weight: 700;
+  src: local('K2D Bold'), local('K2D-Bold'), url(https://fonts.gstatic.com/s/k2d/v1/J7aenpF2V0Ery4A5nJY91po.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
