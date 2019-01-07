@@ -19408,7 +19408,7 @@ a:hover .link-img .hover-play-pause {
 .promo--container {
   display: flex;
   justify-content: center;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 @media (max-width: 759px) {
