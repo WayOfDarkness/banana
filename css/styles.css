@@ -7,6 +7,15 @@ html {
   font-family: "HelveticaNeue", "Times New Roman", Serif;
 }
 
+.social-share-button .social-icon i {
+  color: red;
+  font-size: 10px;
+  float: right;
+  position: absolute;
+  left: 30px;
+  z-index: 6;
+}
+
 .social-share-button .social-icon.upvote {
   -webkit-mask: url("../img/icon/thumbs-up-solid.svg") no-repeat 100% 100%;
 }
@@ -59,16 +68,11 @@ html {
   margin: 0;
 }
 
-.tag-block {
-  margin: 0;
-}
-
-.text-block {
+a.text-block {
+  color: black !important;
   text-align: center;
-  width: 48%;
-  max-width: 160px;
+  width: 100%;
 }
-
 .alert-text {
   margin-bottom: 5px !important;
 }
@@ -76,13 +80,14 @@ html {
 .platform-color {
   background-color: #599E42;
 }
-
 .type-color {
   background-color: #26BDF0;
 }
-
 .brand-color {
   background-color: orange;
+}
+.genre-color {
+  background-color: red;
 }
 .river .media:not(:first-child) {
   background-image: url(../img/bg-border-light.png);
@@ -182,16 +187,17 @@ body.page-article .ds-standard-article .author-details {
 }
 body.page-article .social-share {
   font-size: 17px;
-  width: 100%;
-  margin: 0 0 2rem;
+  margin: 0 0 2rem 0;
+  flex: 15%;
 }
 body.page-article .social-share-button .social-icon {
-  height: 20px;
-  width: 20px;
-  margin: 0 1rem 0 0;
+  height: 24px;
+  width: 24px;
 }
 body.page-article .social-share-button {
-  margin: 0;
+  margin: 0 0 10px 0;
+  float: left;
+  position: relative;
 }
 body.page-article .ds-right .field__item h2::before,
 body.page-article .ds-right .field__item h2::after {
@@ -285,14 +291,15 @@ body.page-article .wrapper-footer {
 }
 body.page-article .alert-text {
   margin-bottom: 5px !important;
-  line-height: 32px;
+  line-height: 36px;
   font-size: 1rem;
 }
 body.page-article .tag-block {
-  margin-bottom: 2rem;
-  display: flex;
+  flex: 90%;
+  margin: 0 0 2rem 0;
   flex-wrap: wrap;
   justify-content: space-between;
+  float: right !important;
 }
 body.page-article .ds-standard-article {
   max-width: 1170px;
@@ -320,6 +327,7 @@ body.page-article .footer-social-links .social-icon {
 }
 body.page-article .social-share-buttons {
   display: flex;
+  width: 100%;
   justify-content: flex-start;
 }
 body .expanded-menu-button {
@@ -395,15 +403,6 @@ body.page-article {
   body.page-article .social-share-button .social-icon {
     margin: 0;
   }
-  body.page-article .social-share-buttons a {
-    margin: 0 0.6rem;
-  }
-  body.page-article .social-share-buttons {
-    justify-content: center;
-  }
-  .social-share-button a {
-
-  }
   body .expanded-menu-button .icon-expanded {
     margin-top: 12px !important;
     right: -16px !important;
@@ -467,4 +466,7 @@ body.page-article {
   .slide-in .user-menu a {
     color: #4b4b4b !important;
   }
+}
+.flex-div {
+  display: flex;
 }
