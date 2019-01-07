@@ -92,4 +92,11 @@
   html {
     font-size: 12px !important;
   }
+  .block-chat {
+    flex-direction: row-reverse;
+  }
+  .block-comment {}
+  .block-reviews {
+    margin-left: 0px;
+  }
 }

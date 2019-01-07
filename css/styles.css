@@ -543,3 +543,68 @@ body.page-article {
   margin-bottom: 1rem;
   font-family: "Arima Madurai", cursive;
 }
+
+
+/*css comment*/
+
+.block-chat {
+  width: 100%;
+}
+.block-title {
+  display: flex;
+  align-items: center;
+}
+
+.block-title span {
+  padding-left: 3%;
+  flex-grow: 1;
+}
+
+.block-comment,
+.block-reviews {
+  width: 50%;
+  padding: 0px 1rem;
+  float: left;
+}
+.block-comment--comments {
+  background: #eee;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.8rem;
+}
+.block-reviews {
+  padding-left: 5%;
+}
+
+.comment-avatar {
+  float: left;
+}
+.comment-follow {
+  float: right;
+}
+.comment-avatar > img {
+  border-radius: 50%;
+  object-fit: cover;
+  background-position: center center;
+}
+
+.author-info {
+  padding-left: 2%;
+}
+.comment-text p {
+  margin-bottom: 0.5rem;
+}
+.comment-text {
+  text-indent: 2%;
+}
+
+.block-reviews--auth span {
+}
+
+.block-reviews--comment {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+
+/*end css comment*/
+
