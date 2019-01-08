@@ -93,10 +93,12 @@
     font-size: 12px !important;
   }
   .block-chat {
-    flex-direction: row-reverse;
   }
-  .block-comment {}
+  .block-comment {
+    width: 100%;
+  }
   .block-reviews {
-    margin-left: 0px;
+    width: 100%;
+    padding-left: 0px;
   }
 }

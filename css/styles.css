@@ -405,6 +405,7 @@ body .expanded-menu-button {
 
 body.page-article .layout-container {
   display: block;
+  overflow: hidden;
 }
 
 body.page-article .slick-prev, .slick-next {
@@ -549,6 +550,7 @@ body.page-article {
 
 .block-chat {
   width: 100%;
+  padding: 1rem 0;
 }
 .block-title {
   display: flex;
@@ -568,6 +570,7 @@ body.page-article {
   padding: 0px 1rem;
   float: left;
   position: relative;
+  margin-bottom: 2rem;
 }
 .block-comment--comments {
   background: #eee;
@@ -682,7 +685,6 @@ body.page-article {
   border: none;
   background: #2C7ABE;
   color: white;
-  border-top: 0.5rem solid white;
 }
 .list-comment {
   max-height: 600px;
@@ -762,4 +764,14 @@ body.page-article {
   background: #e74c3c;
 }
 
-/*end css config*/
+/*end css comment*/
+
+.ds-footer-full {
+  margin: 2rem 0;
+}
+#default-content, #below-content {
+  padding: 0;
+}
+.recommended-articles-widget .view-header h2 {
+  padding-top: 0.5rem;
+}
