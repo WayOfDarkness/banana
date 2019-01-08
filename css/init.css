@@ -22470,6 +22470,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0;
   font-size: 1.4375rem;
   line-height: 1.95rem;
+  font-family: "Arima Madurai", cursive;
 }
 
 @media (max-width: 759px) {
