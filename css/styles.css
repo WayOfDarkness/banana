@@ -543,3 +543,34 @@ body.page-article {
   margin-bottom: 1rem;
   font-family: "Arima Madurai", cursive;
 }
+
+.config-wrapper {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.config-tab-wrapper {
+  width: 40%;
+  margin: auto;
+  height: 36px;
+}
+
+.config-tab {
+  float: left;
+  width: 50%;
+  height: 100%;
+  color: white !important;
+  text-align: center;
+  margin: auto;
+  background-color: #808080;
+  line-height: 36px;
+  font-size: 28px;
+}
+
+.config-tab.active {
+  background-color: #e74c3c;
+}
+
+.config-footer {
+  margin-top: 0 !important;
+}
