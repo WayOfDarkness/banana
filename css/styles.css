@@ -405,7 +405,6 @@ body .expanded-menu-button {
 
 body.page-article .layout-container {
   display: block;
-  overflow: hidden;
 }
 
 body.page-article .slick-prev, .slick-next {
@@ -550,7 +549,6 @@ body.page-article {
 
 .block-chat {
   width: 100%;
-  padding: 1rem 0;
 }
 .block-title {
   display: flex;
@@ -562,6 +560,7 @@ body.page-article {
 .block-title span {
   padding-left: 3%;
   flex-grow: 1;
+  position: relative;
 }
 
 .block-comment,
@@ -569,8 +568,6 @@ body.page-article {
   width: 50%;
   padding: 0px 1rem;
   float: left;
-  position: relative;
-  margin-bottom: 2rem;
 }
 .block-comment--comments {
   background: #eee;
@@ -580,6 +577,7 @@ body.page-article {
 .block-reviews {
   padding-left: 5%;
 }
+
 .comment-avatar {
   float: left;
 }
@@ -625,7 +623,6 @@ body.page-article {
 }
 .block-reviews--auth span {
 }
-
 .block-reviews--comment:last-of-type {
 }
 .block-reviews--comment {
@@ -635,41 +632,6 @@ body.page-article {
 .block-comment-text {
   display: flex;
   flex-wrap: wrap;
-}
-
-
-/*end css comment*/
-
-/* css config */
-.config-wrapper {
-  margin-top: 30px;
-  width: 100%;
-}
-
-.config-tab-wrapper {
-  width: 40%;
-  margin: auto;
-  height: 36px;
-}
-
-.config-tab {
-  float: left;
-  width: 50%;
-  height: 100%;
-  color: white !important;
-  text-align: center;
-  margin: auto;
-  background-color: #808080;
-  line-height: 36px;
-  font-size: 28px;
-}
-
-.config-tab.active {
-  background-color: #e74c3c;
-}
-
-.config-footer {
-  margin-top: 0 !important;
 }
 
 .btn-login-to-comment {
@@ -685,6 +647,7 @@ body.page-article {
   border: none;
   background: #2C7ABE;
   color: white;
+  border-top: 0.5rem solid white;
 }
 .list-comment {
   max-height: 600px;
@@ -743,6 +706,40 @@ body.page-article {
   color: #2C7ABE;
 }
 
+/*end css comment*/
+
+/* css config */
+.config-wrapper {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.config-tab-wrapper {
+  width: 40%;
+  margin: auto;
+  height: 36px;
+}
+
+.config-tab {
+  float: left;
+  width: 50%;
+  height: 100%;
+  color: white !important;
+  text-align: center;
+  margin: auto;
+  background-color: #808080;
+  line-height: 36px;
+  font-size: 28px;
+}
+
+.config-tab.active {
+  background-color: #e74c3c;
+}
+
+.config-footer {
+  margin-top: 0 !important;
+}
+/*end css config*/
 
 /* width */
 ::-webkit-scrollbar {
@@ -762,16 +759,4 @@ body.page-article {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #e74c3c;
-}
-
-/*end css comment*/
-
-.ds-footer-full {
-  margin: 2rem 0;
-}
-#default-content, #below-content {
-  padding: 0;
-}
-.recommended-articles-widget .view-header h2 {
-  padding-top: 0.5rem;
 }
