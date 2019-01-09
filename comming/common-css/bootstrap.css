@@ -306,7 +306,7 @@ template {
   }
   .table td,
   .table th {
-    background-color: #fff !important;
+    background-color: #feffff!important;
   }
   .table-bordered th,
   .table-bordered td {
@@ -2484,7 +2484,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .has-warning .input-group-addon {
   color: #f0ad4e;
   border-color: #f0ad4e;
-  background-color: white;
+  background-color: #feffff;
 }
 
 .has-warning .form-control-warning {
@@ -3717,7 +3717,7 @@ tbody.collapse.show {
   line-height: 1.25;
   color: #464a4c;
   vertical-align: middle;
-  background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
+  background: #feffffurl("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
   -webkit-background-size: 8px 10px;
           background-size: 8px 10px;
   border: 1px solid rgba(0, 0, 0, 0.15);
@@ -4357,13 +4357,13 @@ tbody.collapse.show {
 
 .navbar-inverse .navbar-brand,
 .navbar-inverse .navbar-toggler {
-  color: white;
+  color: #feffff;
 }
 
 .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-toggler:focus,
 .navbar-inverse .navbar-toggler:hover {
-  color: white;
+  color: #feffff;
 }
 
 .navbar-inverse .navbar-nav .nav-link {
@@ -4382,7 +4382,7 @@ tbody.collapse.show {
 .navbar-inverse .navbar-nav .active > .nav-link,
 .navbar-inverse .navbar-nav .nav-link.open,
 .navbar-inverse .navbar-nav .nav-link.active {
-  color: white;
+  color: #feffff;
 }
 
 .navbar-inverse .navbar-toggler {
@@ -9154,7 +9154,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 }
 
 .text-white {
-  color: #fff !important;
+  color: #feffff!important;
 }
 
 .text-muted {

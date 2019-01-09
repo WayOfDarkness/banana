@@ -2086,7 +2086,7 @@ html.with-featherlight {
 }
 
 .slick-loading .slick-list {
-  background: #fff url(/themes/gi5/css/curtis/slick/./ajax-loader.gif) center center no-repeat;
+  background: #feffffurl(/themes/gi5/css/curtis/slick/./ajax-loader.gif) center center no-repeat;
 }
 
 @font-face {
@@ -2135,7 +2135,7 @@ html.with-featherlight {
   font-size: 20px;
   line-height: 1;
   opacity: .75;
-  color: white;
+  color: #feffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -3708,7 +3708,7 @@ table th, table td {
   left: 0;
   right: 0;
   z-index: 500;
-  background-color: white;
+  background-color: #feffff;
 }
 
 header {
@@ -5398,7 +5398,7 @@ img.lazy {
 .blurred-header-content {
   position: relative;
   z-index: 1;
-  background-color: #f6f6f6;
+  background-color: #eff2f4;
   top: 40%
 }
 
@@ -7648,7 +7648,7 @@ aside p {
 
 .js #toolbar-item-lightswitch {
   cursor: pointer;
-  background-color: #f6f6f6;
+  background-color: #eff2f4;
   color: #000;
   padding: 1rem;
   margin-top: 3rem
@@ -7755,7 +7755,7 @@ aside p {
   font-family: 'Alegreya Sans', sans-serif;}
 
 body {
-  background-color: #f6f6f6;
+  background-color: #eff2f4;
   color: #000
 }
 
@@ -7816,7 +7816,7 @@ h1 a.page-title--hover, .page-title a.page-title--hover {
 
 select {
   border-color: #dbdbdb;
-  background: #f6f6f6
+  background: #eff2f4
 }
 
 .button, input[type="submit"], input[type="reset"], input[type="button"] {
@@ -7864,7 +7864,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
 
 input[type="radio"]:checked + label:before, input[type="radio"]:not(:checked) + label:before {
   border-color: #dbdbdb;
-  background: #f6f6f6
+  background: #eff2f4
 }
 
 input[type="radio"]:checked + label:after, input[type="radio"]:not(:checked) + label:after {
@@ -8239,7 +8239,7 @@ header {
 }
 
 main {
-  background-color: #f6f6f6
+  background-color: #eff2f4
 }
 
 footer[role="contentinfo"] {
@@ -8325,7 +8325,7 @@ img.lazy {
 }
 
 .ajax-progress-fullscreen {
-  background-color: #f6f6f6
+  background-color: #eff2f4
 }
 
 .ds-gi5-teaser, .teaser {
@@ -8359,7 +8359,7 @@ img.lazy {
 }
 
 .blurred-header-content {
-  background-color: #f6f6f6
+  background-color: #eff2f4
 }
 
 .vjs-my-custom-modal .vjs-modal-dialog-content {
@@ -8393,13 +8393,13 @@ img.lazy {
 }
 
 .ds-main .fotorama__nav--dots:after {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(25%, #f6f6f6), color-stop(75%, #f6f6f6), to(transparent)), radial-gradient(farthest-side at 100% 25%, #f6f6f6, transparent);
-  background-image: linear-gradient(transparent, #f6f6f6 25%, #f6f6f6 75%, transparent), radial-gradient(farthest-side at 100% 25%, #f6f6f6, transparent)
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(25%, #eff2f4), color-stop(75%, #eff2f4), to(transparent)), radial-gradient(farthest-side at 100% 25%, #eff2f4, transparent);
+  background-image: linear-gradient(transparent, #eff2f4 25%, #eff2f4 75%, transparent), radial-gradient(farthest-side at 100% 25%, #eff2f4, transparent)
 }
 
 .ds-main .fotorama__nav--dots:before {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(25%, #f6f6f6), color-stop(75%, #f6f6f6), to(transparent)), radial-gradient(farthest-side at 0 75%, #f6f6f6, transparent);
-  background-image: linear-gradient(transparent, #f6f6f6 25%, #f6f6f6 75%, transparent), radial-gradient(farthest-side at 0 75%, #f6f6f6, transparent)
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(25%, #eff2f4), color-stop(75%, #eff2f4), to(transparent)), radial-gradient(farthest-side at 0 75%, #eff2f4, transparent);
+  background-image: linear-gradient(transparent, #eff2f4 25%, #eff2f4 75%, transparent), radial-gradient(farthest-side at 0 75%, #eff2f4, transparent)
 }
 
 .fotorama__caption {
@@ -8424,7 +8424,7 @@ img.lazy {
 }
 
 .flex-control-paging li a.flex-active {
-  background-color: #f6f6f6
+  background-color: #eff2f4
 }
 
 .twitter-tweet {
@@ -8511,7 +8511,7 @@ aside {
 }
 
 .author-footer {
-  background-color: #eaeaea
+  background-color: #eff2f4
 }
 
 .author-footer a {
@@ -8804,12 +8804,12 @@ aside {
 }
 
 #stickynav nav li a.nav-active {
-  color: #f6f6f6;
+  color: #eff2f4;
   background-color: #2C7ABE
 }
 
 #stickynav nav li a.nav-active:hover {
-  color: #f6f6f6;
+  color: #eff2f4;
   background-color: #2C7ABE
 }
 
@@ -8881,7 +8881,7 @@ aside {
 }
 
 .show-ngt .show-left::after {
-  border-color: #fff transparent transparent transparent
+  border-color: #fefffftransparent transparent transparent
 }
 
 .show-ngt .show-right {
@@ -9016,7 +9016,7 @@ aside {
 }
 
 #expanded-menu .block-local-tasks-block {
-  background-color: #f6f6f6;
+  background-color: #eff2f4;
   padding: 1rem;
   border-radius: 5px
 }
@@ -9888,12 +9888,12 @@ aside {
 
 .theme-dark .ds-full-width .fotorama__nav--dots:after {
   background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(25%, #fff), color-stop(75%, #fff), to(transparent)), radial-gradient(farthest-side at 100% 25%, #fff, transparent);
-  background-image: linear-gradient(transparent, #fff 25%, #fff 75%, transparent), radial-gradient(farthest-side at 100% 25%, #fff, transparent)
+  background-image: linear-gradient(transparent, #feffff25%, #feffff75%, transparent), radial-gradient(farthest-side at 100% 25%, #fff, transparent)
 }
 
 .theme-dark .ds-full-width .fotorama__nav--dots:before {
   background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(25%, #fff), color-stop(75%, #fff), to(transparent)), radial-gradient(farthest-side at 0 75%, #fff, transparent);
-  background-image: linear-gradient(transparent, #fff 25%, #fff 75%, transparent), radial-gradient(farthest-side at 0 75%, #fff, transparent)
+  background-image: linear-gradient(transparent, #feffff25%, #feffff75%, transparent), radial-gradient(farthest-side at 0 75%, #fff, transparent)
 }
 
 .theme-dark .ds-main .fotorama__nav--dots:after {
@@ -10385,7 +10385,7 @@ aside {
 }
 
 .theme-dark .show-ngt .show-left::after {
-  border-color: #fff transparent transparent transparent
+  border-color: #fefffftransparent transparent transparent
 }
 
 .theme-dark .show-ngt .show-right {

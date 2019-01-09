@@ -1991,13 +1991,13 @@ input.datepicker-input, input.timepicker {
 
 input.datepicker-input {
   width: 130px;
-  background: #fff url(https://static.gamespot.com/bundles/phoenixsite/images/core/sprites/icons/icn-calendar-16x16.png) no-repeat 4px 6px
+  background: #feffffurl(https://static.gamespot.com/bundles/phoenixsite/images/core/sprites/icons/icn-calendar-16x16.png) no-repeat 4px 6px
 }
 
 input.timepicker {
   width: 120px;
   margin-left: 10px;
-  background: #fff url(https://static.gamespot.com/bundles/phoenixsite/images/core/sprites/icons/icn-clock-16x16.png) no-repeat 4px 6px
+  background: #feffffurl(https://static.gamespot.com/bundles/phoenixsite/images/core/sprites/icons/icn-clock-16x16.png) no-repeat 4px 6px
 }
 
 table.time-display td {
@@ -2171,7 +2171,7 @@ legend.full-width {
   margin-bottom: 0;
   width: 320px;
   max-width: 100%;
-  background: #fff url(https://static.gamespot.com/bundles/phoenixsite/images/core/sprites/icons/icn-search-12x12.png) no-repeat 2px center
+  background: #feffffurl(https://static.gamespot.com/bundles/phoenixsite/images/core/sprites/icons/icn-search-12x12.png) no-repeat 2px center
 }
 
 .autocomplete, .tagsinput {
@@ -3079,7 +3079,7 @@ table th {
     top: 50px;
     left: 0;
     right: 0;
-    background: linear-gradient(#ffffff, rgba(0, 0, 0, 0));
+    background: linear-gradient(#feffff, rgba(0, 0, 0, 0));
     height: 100px;
     white-space: nowrap
   }
@@ -3662,7 +3662,7 @@ body.skybox-loaded.has-promo-alert {
 #ads_adhesion_closeBtn {
   top: -14px !important;
   right: 0 !important;
-  color: #fff !important;
+  color: #feffff!important;
   padding: 5px !important;
   line-height: 14px !important;
   font-size: 24px !important;
@@ -6376,7 +6376,7 @@ p.author {
   max-width: 830px;
   margin: 10% auto;
   padding-top: 60px;
-  background: #fff none;
+  background: #feffffnone;
   color: #404040;
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.55) 0 1px 3px
@@ -6991,7 +6991,7 @@ body.sub-sale #promo .available span {
   background-color: #e6e6e6;
   background-image: -webkit-linear-gradient(#f5f5f5, rgba(230, 230, 230, 0));
   background-image: linear-gradient(#f5f5f5, rgba(230, 230, 230, 0));
-  box-shadow: #fff 0 1px 0 inset, rgba(0, 0, 0, 0.1) 0 1px 1px
+  box-shadow: #feffff0 1px 0 inset, rgba(0, 0, 0, 0.1) 0 1px 1px
 }
 
 .message-notification-line .bug .icon {
@@ -7283,7 +7283,7 @@ body.sub-sale #promo .available span {
 .paginate-messages .paginate__results {
   display: none;
   font-size: 1rem;
-  color: #161616;
+  color: #141517;
 }
 
 .paginate-messages .message-sort {
@@ -8568,7 +8568,7 @@ input.flag {
   line-height: 1.3rem;
   color: #999;
   background-color: #e6e6e6;
-  box-shadow: #a6a6a6 0 0 0 1px, rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(0, 0, 0, 0.3) 0 1px 5px, #fff 0 2px 0
+  box-shadow: #a6a6a6 0 0 0 1px, rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(0, 0, 0, 0.3) 0 1px 5px, #feffff0 2px 0
 }
 
 .table-forums .type .icon:before {
@@ -9447,7 +9447,7 @@ input.flag {
 
 .gallery-tags__item input {
   padding-left: 18px;
-  background: #fff url(https://static.gamespot.com/bundles/phoenixsite/images/core/sprites/icons/icn-search-12x12.png) no-repeat 2px center
+  background: #feffffurl(https://static.gamespot.com/bundles/phoenixsite/images/core/sprites/icons/icn-search-12x12.png) no-repeat 2px center
 }
 
 .gallery-header__actions {
@@ -10562,12 +10562,12 @@ tr.pm .time {
   padding: 0 6px;
   font-size: 12px;
   line-height: 19px !important;
-  box-shadow: #a6a6a6 0 0 0 1px, rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(0, 0, 0, 0.3) 0 1px 5px, #fff 0 2px 0;
+  box-shadow: #a6a6a6 0 0 0 1px, rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(0, 0, 0, 0.3) 0 1px 5px, #feffff0 2px 0;
   font-weight: bold;
 }
 
 .paginate__item.on > a {
-  box-shadow: #a6a6a6 0 0 0 1px, rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(0, 0, 0, 0.3) 0 1px 5px inset, #fff 0 2px 0
+  box-shadow: #a6a6a6 0 0 0 1px, rgba(255, 255, 255, 0.15) 0 1px 0 inset, rgba(0, 0, 0, 0.3) 0 1px 5px inset, #feffff0 2px 0
 }
 
 .paginate__results {
@@ -11178,7 +11178,7 @@ tr.pm .time {
   content: "";
   display: block;
   border: 9px solid;
-  border-color: #fff transparent transparent;
+  border-color: #fefffftransparent transparent;
   position: absolute;
   bottom: -18px;
   left: 50%;
@@ -14502,7 +14502,7 @@ body.nocursor {
 
 @media (min-width: 980px) {
   .search-filters {
-    box-shadow: #e4e5e7 0 0 0 1px inset, #fff 0 2px 0 inset, #fcfcfd 0 0 0 4px inset, #dddddf 0 0 0 5px inset;
+    box-shadow: #e4e5e7 0 0 0 1px inset, #feffff0 2px 0 inset, #fcfcfd 0 0 0 4px inset, #dddddf 0 0 0 5px inset;
     padding: 15px
   }
 }
@@ -17700,10 +17700,10 @@ a:hover .link-img .hover-play-pause {
   height: 18px;
   margin: 2px;
   display: block;
-  background-color: #161616;
+  background-color: #141517;
   box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.85);
-  background-image: -webkit-linear-gradient(bottom, #303030 0%, #161616 85%, #000000 100%);
-  background-image: linear-gradient(to top, #303030 0%, #161616 85%, #000000 100%);
+  background-image: -webkit-linear-gradient(bottom, #303030 0%, #141517 85%, #000000 100%);
+  background-image: linear-gradient(to top, #303030 0%, #141517 85%, #000000 100%);
   border-radius: 22px;
   background-clip: padding-box
 }
@@ -17711,16 +17711,16 @@ a:hover .link-img .hover-play-pause {
 .switch__item.switch__item--white {
   border: 1px solid rgba(38, 38, 38, 0.25);
   background-color: #fff;
-  background-image: -webkit-linear-gradient(bottom, #ffffff 0%, #f2f2f2 100%);
-  background-image: linear-gradient(to top, #ffffff 0%, #f2f2f2 100%);
+  background-image: -webkit-linear-gradient(bottom, #feffff 0%, #f2f2f2 100%);
+  background-image: linear-gradient(to top, #feffff 0%, #f2f2f2 100%);
   box-shadow: rgba(255, 255, 255, 0.35) 1px 0 0 inset
 }
 
 .switch__item.switch__item--white:before {
   background-color: #f2f2f2;
   box-shadow: inset 0 1px 4px rgba(109, 109, 109, 0.75);
-  background-image: -webkit-linear-gradient(bottom, #d9d9d9 0%, #f2f2f2 85%, #ffffff 100%);
-  background-image: linear-gradient(to top, #d9d9d9 0%, #f2f2f2 85%, #ffffff 100%)
+  background-image: -webkit-linear-gradient(bottom, #d9d9d9 0%, #f2f2f2 85%, #feffff 100%);
+  background-image: linear-gradient(to top, #d9d9d9 0%, #f2f2f2 85%, #feffff 100%)
 }
 
 .switch__item.switch__item--white .switch__btn.black {
@@ -17742,10 +17742,10 @@ a:hover .link-img .hover-play-pause {
 }
 
 .switch__item.switch__item--black:before {
-  background-color: #161616;
+  background-color: #141517;
   box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.85);
-  background-image: -webkit-linear-gradient(bottom, #303030 0%, #161616 85%, #000000 100%);
-  background-image: linear-gradient(to top, #303030 0%, #161616 85%, #000000 100%)
+  background-image: -webkit-linear-gradient(bottom, #303030 0%, #141517 85%, #000000 100%);
+  background-image: linear-gradient(to top, #303030 0%, #141517 85%, #000000 100%)
 }
 
 .switch__item.switch__item--black .switch__btn.white {
@@ -17810,8 +17810,8 @@ a:hover .link-img .hover-play-pause {
   background-color: #fff;
   text-shadow: rgba(255, 255, 255, 0.7) 0 1px 1px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
-  background-image: -webkit-linear-gradient(bottom, #d9d9d9 0%, #d9d9d9 .24%, #ffffff 100%);
-  background-image: linear-gradient(to top, #d9d9d9 0%, #d9d9d9 .24%, #ffffff 100%)
+  background-image: -webkit-linear-gradient(bottom, #d9d9d9 0%, #d9d9d9 .24%, #feffff 100%);
+  background-image: linear-gradient(to top, #d9d9d9 0%, #d9d9d9 .24%, #feffff 100%)
 }
 
 .switch__item--white .switch__btn:visited {
@@ -17857,7 +17857,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 .no-touch .kubrick a:not(.btn):hover .kubrick-info__title {
-  text-shadow: #fff 0 0 10px
+  text-shadow: #feffff0 0 10px
 }
 
 @media (min-width: 1210px) {
@@ -20044,7 +20044,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 .no-touch .promo-strip a:hover .promo-strip__title {
-  text-shadow: #fff 0 0 5px
+  text-shadow: #feffff0 0 5px
 }
 
 .promo-strip.span12 {
@@ -20234,11 +20234,11 @@ a:hover .link-img .hover-play-pause {
 }
 
 .body-event--gdc-2015 .promo-strip--event div {
-  background: #fff url(https://static.gamespot.com/uploads/original/1511/15113458/2819242-gdc-eventpage-strip-cut.jpg) center center no-repeat
+  background: #feffffurl(https://static.gamespot.com/uploads/original/1511/15113458/2819242-gdc-eventpage-strip-cut.jpg) center center no-repeat
 }
 
 .body-event--gdc-2016 .promo-strip--event div {
-  background: #fff url(/bundles/gamespotsite/images/events/gdc2016/GDC-hubpage-strip.jpg) center center no-repeat
+  background: #feffffurl(/bundles/gamespotsite/images/events/gdc2016/GDC-hubpage-strip.jpg) center center no-repeat
 }
 
 .body-event--game-awards-and-psx-2015 .promo-strip--event div {
@@ -26013,7 +26013,7 @@ h5.text-base {
 }
 
 .followgames-title:before {
-  border-color: #fff transparent transparent transparent;
+  border-color: #fefffftransparent transparent transparent;
   border-style: solid;
   border-width: 10px;
   content: "";
@@ -27722,8 +27722,8 @@ h5.text-base {
   border-radius: 30px;
   padding: .325rem 15px;
   background-color: #f2f2f2;
-  background-image: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
-  background-image: linear-gradient(to bottom, #ffffff, #f2f2f2)
+  background-image: -webkit-linear-gradient(top, #feffff, #f2f2f2);
+  background-image: linear-gradient(to bottom, #feffff, #f2f2f2)
 }
 
 .amazon__links:after {
@@ -30943,8 +30943,8 @@ h5.text-base {
   padding: 4px 8px;
   background-color: #f2f2f2;
   background-color: #f2f2f2;
-  background-image: -webkit-linear-gradient(#ffffff, rgba(242, 242, 242, 0));
-  background-image: linear-gradient(#ffffff, rgba(242, 242, 242, 0));
+  background-image: -webkit-linear-gradient(#feffff, rgba(242, 242, 242, 0));
+  background-image: linear-gradient(#feffff, rgba(242, 242, 242, 0));
   font-size: 11px;
   text-transform: uppercase;
 

@@ -166,7 +166,7 @@ a.text-block {
   transition-duration: 0.3s;
   position: absolute;
   font-size: 80px !important;
-  color: #ffffff78 !important;
+  color: #feffff78 !important;
   width: 100px;
   height: 100%;
   top: 0px;
@@ -360,7 +360,7 @@ body.page-article .tag-block {
   flex-wrap: wrap;
   justify-content: space-between;
   float: right !important;
-  border-left: 1px solid #808080;
+  border-left: 1px solid #818583;
   padding-left: 1rem;
 }
 
@@ -368,7 +368,7 @@ body.page-article .ds-standard-article {
   max-width: 1170px;
   margin: 0px auto;
   padding: 1rem 1.5rem;
-  background-color: white;
+  background-color: #feffff;
 }
 
 body.page-article .full-width img {
@@ -457,15 +457,23 @@ body.page-article {
 }
 
 #account-dropdown .user-menu > ul > li a {
-  float: left;
   height: 100%;
   padding: 0px 30px;
   line-height: 34px;
+  border: 2px solid #2C7ABE;
+  background: white;
+  color: #2C7ABE !important;
+  font-weight: bold;
 }
 
+#account-dropdown .user-menu > ul > li a:hover {
+
+}
 #account-dropdown .user-menu > ul > li {
   padding: 3px;
   height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #account-dropdown .user-menu > ul {
@@ -508,7 +516,7 @@ body.page-article {
 }
 
 .page-reviews select {
-  background: #f6f6f6;
+  background: #eff2f4;
   border: 1px solid #888;
   line-height: 1.5rem;
 }
@@ -527,6 +535,12 @@ body.page-article {
   text-align: center;
 }
 
+.breakdown-good__item svg {
+  fill: #2C7ABE;
+}
+.breakdown-bad__item svg {
+  fill: #e74c3c;
+}
 .breakdown-good__item, .breakdown-bad__item {
   font-size: 1.1rem;
   line-height: 2rem;
@@ -537,12 +551,22 @@ body.page-article {
   width: 500%;
   margin-left: -200%;
 }
-.review-breakdown__inner dt.breakdown-good__title {
+.review-breakdown__inner dt.breakdown-good__title,
+.review-breakdown__inner dt.breakdown-bad__title {
   font-size: 2rem;
   margin-left: 2rem;
   margin-bottom: 1rem;
 }
+.review-breakdown__inner dt.breakdown-bad__title {
+  color: #e74c3c;
+}
+.review-breakdown__inner dt.breakdown-good__title span {
+  color: #2C7ABE;
+}
 
+.review-breakdown__inner {
+  background: #141517;
+}
 
 /*css comment*/
 
@@ -552,7 +576,7 @@ body.page-article {
 .block-title {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #808080;
+  border-bottom: 1px solid #818583;
   padding-bottom: 0.5rem;
 }
 
@@ -569,7 +593,7 @@ body.page-article {
   float: left;
 }
 .block-comment--comments {
-  background: #eee;
+  background: #eff2f4;
   margin-bottom: 0.5rem;
   padding: 0.8rem;
 }
@@ -604,7 +628,7 @@ body.page-article {
 .author-info {
   padding-left: 2%;
   font-size: 1rem;
-  color: #808080;
+  color: #818583;
   flex-grow: 1;
 }
 .comment-text p {
@@ -617,7 +641,7 @@ body.page-article {
 
 .block-reviews--auth {
   font-size: 1rem;
-  color: #808080;
+  color: #818583;
   margin-bottom: 0.25rem;
 }
 .block-reviews--auth span {
@@ -625,7 +649,7 @@ body.page-article {
 .block-reviews--comment:last-of-type {
 }
 .block-reviews--comment {
-  border-bottom: 1px solid #808080;
+  border-bottom: 1px solid #818583;
   margin-bottom: 1.5rem;
 }
 .block-comment-text {
@@ -645,7 +669,7 @@ body.page-article {
   width: 100%;
   border: none;
   background: #2C7ABE;
-  color: white;
+  color: #feffff;
   border-top: 0.5rem solid white;
 }
 .list-comment {
@@ -673,7 +697,7 @@ body.page-article {
 
 .btn-readmore-review:hover {
   background: #2C7ABE;
-  color: white;
+  color: #feffff;
   transition-duration: 0.1s;
   border-color: #2C7ABE;
 }
@@ -690,7 +714,7 @@ body.page-article {
 }
 .btn-load-more-comment:hover {
   transition-duration: 0.1s;
-  color: white;
+  color: #feffff;
   background: #2C7ABE;
 }
 .btn-load-more-comment {
@@ -723,10 +747,10 @@ body.page-article {
   float: left;
   width: 50%;
   height: 100%;
-  color: white !important;
+  color: #feffff !important;
   text-align: center;
   margin: auto;
-  background-color: #808080;
+  background-color: #818583;
   line-height: 50px;
   font-size: 28px;
 }
@@ -861,7 +885,7 @@ body.page-article {
   border: none;
   border-radius: 50%;
   box-sizing: border-box;
-  color: #808080;
+  color: #818583;
   font-weight: bold;
   display: block;
   font-size: 16px;
@@ -901,7 +925,7 @@ body.page-article {
 }
 .pagination button.active {
   background: #eee;
-  color: #161616;
+  color: #141517;
 }
 .pagination .prev,
 .pagination .next {
