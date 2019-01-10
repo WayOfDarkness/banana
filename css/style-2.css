@@ -7937,7 +7937,7 @@ header {
   position: absolute;
   width: 100%;
   height: 5px;
-  background-color: #4b4b4b;
+  background-color: #2C7ABE;
   top: calc(100% - 2px);
   opacity: 0;
   transition-timing-function: ease-out;
@@ -8125,7 +8125,7 @@ header {
 }
 
 .menu--main li a.menu-hovered {
-  border-bottom-color: #4b4b4b
+  border-bottom-color: #2C7ABE
 }
 
 .menu--main li a.menu-remove-hover {
