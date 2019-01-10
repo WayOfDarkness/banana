@@ -717,7 +717,7 @@ body.page-article {
 .config-tab-wrapper {
   width: 40%;
   margin: auto;
-  height: 36px;
+  height: 50px;
 }
 
 .config-tab {
@@ -728,7 +728,7 @@ body.page-article {
   text-align: center;
   margin: auto;
   background-color: #808080;
-  line-height: 36px;
+  line-height: 50px;
   font-size: 28px;
 }
 
@@ -738,6 +738,7 @@ body.page-article {
 
 .config-footer {
   margin-top: 0 !important;
+  text-align: center;
 }
 /*end css config*/
 

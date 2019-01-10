@@ -97,3 +97,12 @@ if($(".page-walkthrough").length) {
 
 }
 //END WALKTHROUGH
+
+$('.config-tab').click(function(e){
+  var s = $(this);
+  $('.config-tab').removeClass('active');
+  $('.config-footer').addClass('d-none');
+  s.addClass('active');
+  if (s.hasClass('config-info')) $('.config-info-area').removeClass('d-none');
+  else $('.config-req-area').removeClass('d-none');
+})
