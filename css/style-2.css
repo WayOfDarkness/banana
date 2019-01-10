@@ -3791,7 +3791,6 @@ header:after {
 
 .header-right-container {
   position: relative;
-  width: 15rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4110,7 +4109,6 @@ label[for="edit-keyword"] {
 }
 
 .header-nav {
-  width: 100%
 }
 
 .expanded .header-nav {
@@ -4136,8 +4134,8 @@ label[for="edit-keyword"] {
   list-style-type: none;
   margin: 0;
   font-size: 1.2rem;
-
-  text-transform: uppercase
+  white-space: nowrap;
+  text-transform: uppercase;
 }
 
 .menu--main li::after {
@@ -8113,7 +8111,7 @@ header {
 }
 
 .menu--main li a:link, .menu--main li a:visited {
-  color: #4b4b4b
+  color: #4b4b4b;
 }
 
 .menu--main li a:active, .menu--main li a.is-active {
