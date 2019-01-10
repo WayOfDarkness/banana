@@ -597,6 +597,43 @@ body.page-article {
   background: #141517;
 }
 
+@media screen and (max-width: 979px) {
+  .rating-overflow {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .breakdown.span6 {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .breakdown.span6 {
+    float: left;
+    width: 37%;
+  }
+  .review-breakdown__inner .breakdown-score {
+    right: 30px;
+    margin-right: 0;
+    margin-top: 0;
+    top: -50px;
+  }
+  .review-breakdown__inner {
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 603px) {
+  .breakdown.span6 {
+    float: none;
+    width: 70%;
+  }
+  .review-breakdown__inner .breakdown-score {
+    right: 10px;
+  }
+}
+
 /*css comment*/
 
 .block-chat {
