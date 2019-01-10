@@ -814,22 +814,41 @@ body.page-article {
   float: left;
   width: 50%;
   height: 100%;
-  color: #feffff !important;
   text-align: center;
   margin: auto;
-  background-color: #818583;
   line-height: 50px;
   font-size: 28px;
+  height: 100%;
+  background: #fffffe;
+  color: #2C7ABE !important;
+  font-weight: bold;
+  transition: box-shadow 0.1s;
+  box-shadow: inset 0 0 20px #0089ff10, 0 0 20px #0088ff05;
+  border: 1px solid #2C7ABE;
 }
 
 .config-tab.active {
-  background-color: #e74c3c;
+  background-color: #2C7ABE;
+  color: #fff !important;
 }
 
 .config-footer {
   margin-top: 0 !important;
   text-align: center;
 }
+
+@media screen and (max-width: 991px) {
+  .config-tab {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .config-tab-wrapper {
+    width: 100%;
+  }
+}
+
 /*end css config*/
 
 /* width */
