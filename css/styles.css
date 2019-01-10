@@ -92,19 +92,19 @@ a.text-block {
 }
 
 .platform-color {
-  background-color: #599E42;
+  background-color: #59e248;
 }
 
 .type-color {
-  background-color: #26BDF0;
+  background-color: #4799e0;
 }
 
 .brand-color {
-  background-color: orange;
+  background-color: #ffc355;
 }
 
 .genre-color {
-  background-color: red;
+  background-color: #cf72ff;
 }
 
 .river .media:not(:first-child) {
@@ -158,7 +158,7 @@ a.text-block {
 }
 
 .owl-theme .owl-nav button:hover {
-  color: #e03800 !important;
+  color: #2C7ABE !important;
   width: 150px;
 }
 
@@ -424,6 +424,7 @@ body.page-article {
 
 .page-blog .media-title {
   font-size: 1.2rem !important;
+  color: #141517;
 }
 
 .page-blog .pod {
@@ -460,14 +461,40 @@ body.page-article {
   height: 100%;
   padding: 0px 30px;
   line-height: 34px;
-  border: 2px solid #2C7ABE;
-  background: white;
+  background: #fffffe;
   color: #2C7ABE !important;
   font-weight: bold;
+  position: relative;
+  transition: box-shadow 0.1s;
+  box-shadow: inset 0 0 20px #0089ff10, 0 0 20px #0088ff05;
+  border: 1px solid transparent;
 }
 
 #account-dropdown .user-menu > ul > li a:hover {
+  box-shadow: inset 0 0 20px #0089ff59, 0 0 20px #0088ff3d;
+  transition: box-shadow 0.5s;
+  border: 1px solid rgb(44, 122, 190);
+}
 
+#account-dropdown .user-menu > ul > li a::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%; /*border cuả th cha*/
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  border: 1px solid rgba(44, 122, 190, 0.91);
+  border-radius: 50em;
+
+}
+#account-dropdown .user-menu > ul > li a:hover::before {
+  transition-timing-function: ease-out;
+  width: calc(100% + 2rem);
+  transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  height:  calc(100% + 1.2rem);
+  opacity: 0;
 }
 #account-dropdown .user-menu > ul > li {
   padding: 3px;
@@ -505,6 +532,7 @@ body.page-article {
 
 .media-date {
   font-size: 0.8rem;
+  color: #818583;
 }
 
 .game--top-games .game-meta--date {
@@ -932,3 +960,18 @@ body.page-article {
 }
 
 /*end pagination css*/
+
+.nav-active {
+  color: #2C7ABE !important;
+}
+.menu--main li a:hover {
+  color: #2C7ABE !important;
+  transition-duration: 0s;
+}
+
+.pod-footer > a {
+  color: #2C7ABE;
+}
+.media-body {
+  color: #141517;
+}
