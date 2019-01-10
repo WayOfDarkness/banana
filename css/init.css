@@ -814,7 +814,7 @@ html {
 @media (min-width: 640px) {
   .grid > * {
     float: left;
-    padding: 0 15px 2.6rem
+    padding: 0 15px 0.7rem
   }
 }
 

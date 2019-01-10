@@ -106,3 +106,10 @@ $('.config-tab').click(function(e){
   if (s.hasClass('config-info')) $('.config-info-area').removeClass('d-none');
   else $('.config-req-area').removeClass('d-none');
 })
+
+$('.feed-view').click(function() {
+  if ($(this).attr('id') == 'feed-view-grid')
+    $('.filter-results.js-filter-results.editorial.thirds').removeClass('river').addClass('grid');
+  else
+    $('.filter-results.js-filter-results.editorial.thirds').removeClass('grid').addClass('river');
+})
