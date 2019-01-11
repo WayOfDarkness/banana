@@ -1033,3 +1033,45 @@ body.page-article {
 .media-body {
   color: #141517;
 }
+
+.header-logo {
+  width: initial;
+  float: left;
+}
+.header-logo .site-logo img {
+  object-fit: contain;
+
+}
+.header-right-container {
+  float: right;
+  width: initial;
+}
+.block-login {
+  height: 100%;
+}
+#login {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#login a {
+  display: block;
+  white-space: nowrap;
+  width: initial;
+  margin-top: 5px !important;
+  padding: 10px 0px;
+  line-height: 20px;
+  color: #2C7ABE;
+  margin: 0 1rem;
+  position: relative;
+}
+#login .btn-signin::after {
+  position: absolute;
+  content:'';
+  right: -1rem;
+  top: 0px;
+  height: 100%;
+  width: 1px;
+  background: #2C7ABE;
+}
+
