@@ -49,9 +49,12 @@ h2 {
 }
 
 .ad-299 {
+  padding: 1rem 0.5rem;
+  box-shadow: 0 0 4px 0px gainsboro;
   text-align: left;
   margin-top: 10px;
-  max-height: 200px;
+  height: 50vh;
+  max-height: 400px;
   overflow-y: scroll;
 }
 
@@ -243,7 +246,7 @@ body.page-article .social-share-button {
 
 body.page-article .ds-right .field__item h2::before,
 body.page-article .ds-right .field__item h2::after {
-  content: '';
+  /*content: '';*/
   display: block;
   position: absolute;
   border-bottom: 1px solid black;
@@ -261,11 +264,13 @@ body.page-article .ds-right .field__item h2::after {
 
 body.page-article .ds-right .field__item h2 {
   position: relative;
+  margin-bottom: 0px !important;
   display: inline-block;
   margin-left: 30px;
 }
 
 body.page-article .ds-right .field__item {
+  border-left: 1px solid #141517;
   font-size: 1.6rem;
   margin-bottom: 1rem;
   overflow: hidden;
@@ -274,8 +279,13 @@ body.page-article .ds-right .field__item {
 body.page-article .ds-right .scroll-animated {
   margin-bottom: 0.5rem;
   font-size: 1rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid transparent;
 }
-
+body.page-article .ds-right .scroll-animated.active {
+  border-left: 1px solid #141517;
+  font-weight: bold;
+}
 body.page-article .ds-right {
   width: 27%;
   float: right !important;
@@ -1089,3 +1099,9 @@ body.page-article {
   background: #2C7ABE;
 }
 
+.cursor-pointer:hover {
+  color: #e74c3c;
+}
+.cursor-pointer {
+  cursor: pointer;
+}

@@ -50,7 +50,7 @@ if ($(".page-article").length) {
   $('.ds-main .field--type-text-with-summary').find('h2').each(function (i, e) {
     $(this).attr('id', i);
     var g = $(this).html();
-    html += `<div class="scroll-animated" rel="#${i}">${g}</div>`;
+    html += `<div class="scroll-animated cursor-pointer ${i%3==0?'active':''}" rel="#${i}">${g}</div>`;
   })
 
   $('.ad-299').html(html);
