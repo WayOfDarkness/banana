@@ -35,14 +35,14 @@ $('.pod-header__grid').click(function () {
 //END ALL PAGE
 
 //BLOG RUN THIS CODE
-if($(".page-blog").length) {
+if ($(".page-blog").length) {
   console.log("Blog");
 
 }
 //END BLOG PAGE
 
 //ARTICLE RUN THIS CODE
-if($(".page-article").length) {
+if ($(".page-article").length) {
   console.log("Article");
 // Outline
   var html = '';
@@ -64,41 +64,41 @@ if($(".page-article").length) {
 //END ARTICLE PAGE
 
 //HOME RUN THIS CODE
-if($(".page-home").length) {
+if ($(".page-home").length) {
   console.log("Home");
 
 }
 //END HOME PAGE
 
 //NEWS RUN THIS CODE
-if($(".page-news").length) {
+if ($(".page-news").length) {
   console.log("News");
 
 }
 //END NEWS PAGE
 
 //REVIEWS RUN THIS CODE
-if($(".page-reviews").length) {
+if ($(".page-reviews").length) {
   console.log("Reviews");
 
 }
 //END REVIEWS PAGE
 
 //VIDEO RUN THIS CODE
-if($(".page-Videos").length) {
+if ($(".page-Videos").length) {
   console.log("Video");
 
 }
 //END VIDEO PAGE
 
 //WALKTHROUGH RUN THIS CODE
-if($(".page-walkthrough").length) {
+if ($(".page-walkthrough").length) {
   console.log("Walkthrough");
 
 }
 //END WALKTHROUGH
 
-$('.config-tab').click(function(e){
+$('.config-tab').click(function (e) {
   var s = $(this);
   $('.config-tab').removeClass('active');
   $('.config-footer').addClass('d-none');
@@ -107,9 +107,25 @@ $('.config-tab').click(function(e){
   else $('.config-req-area').removeClass('d-none');
 })
 
-$('.feed-view').click(function() {
+$('.feed-view').click(function () {
   if ($(this).attr('id') == 'feed-view-grid')
     $('.filter-results.js-filter-results.editorial.thirds').removeClass('river').addClass('grid');
   else
     $('.filter-results.js-filter-results.editorial.thirds').removeClass('grid').addClass('river');
+})
+
+//click button sign in, sign up
+$('#login .btn-signin').click(function (e) {
+  $('.cd-user-modal').addClass('is-visible');
+  $('#cd-login').addClass('is-selected');
+  $('#cd-signup').removeClass('is-selected');
+  $('.cd-switcher li').eq(0).find('a').addClass('selected');
+  $('.cd-switcher li').eq(1).find('a').removeClass('selected');
+})
+$('#login .btn-signup').click(function (e) {
+  $('.cd-user-modal').addClass('is-visible');
+  $('#cd-login').removeClass('is-selected');
+  $('#cd-signup').addClass('is-selected');
+  $('.cd-switcher li').eq(0).find('a').removeClass('selected');
+  $('.cd-switcher li').eq(1).find('a').addClass('selected');
 })
