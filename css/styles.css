@@ -1036,15 +1036,29 @@ body.page-article {
 
 .header-logo {
   width: initial;
-  float: left;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 .header-logo .site-logo img {
   object-fit: contain;
 
 }
-.header-right-container {
-  float: right;
+.header-nav {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
   width: initial;
+}
+.header-right-container {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: initial;
+}
+.header-icon.search-button {
+  height: 48px;
 }
 .block-login {
   height: 100%;
