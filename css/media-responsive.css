@@ -1,6 +1,9 @@
 /*RESPONSIVE*/
 
 @media screen and (max-width: 1150px) {
+  body.page-article .tag-block {
+    border-left: none;
+  }
   body.page-article .social-share {
     position: fixed;
     top: 50%;
