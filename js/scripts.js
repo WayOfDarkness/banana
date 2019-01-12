@@ -166,3 +166,9 @@ function showModalSearch(bool) {
   $('body').attr('modal-search', bool);
   return false;
 }
+
+//toggle social outline menu
+function toggleSocialMobile() {
+  console.log('test');
+  $('.block-fixed').toggleClass('show-social');
+}
