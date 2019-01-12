@@ -128,7 +128,15 @@ function showRegister() {
   $('#cd-signup').addClass('is-selected');
   $('.cd-switcher li').eq(0).find('a').removeClass('selected');
   $('.cd-switcher li').eq(1).find('a').addClass('selected');
+
 }
+
+//click sort news
+$('.js-filter-load-page').click(function (e) {
+  var sort_value = $(this).val();
+  $(this).closest('.pod-header').find('.pod-header__item .pod-title h4').html('Tin tức ' + sort_value);
+})
+
 function showLogin() {
   $('.cd-user-modal').addClass('is-visible');
   $('#cd-login').addClass('is-selected');
