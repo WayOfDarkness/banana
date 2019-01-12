@@ -4081,6 +4081,7 @@ label[for="edit-keyword"] {
 
 .slide-in.mCS_no_scrollbar {
   padding: 80px 20px;
+  top: 3px;
 }
 
 .layout-container .slide-in a {
