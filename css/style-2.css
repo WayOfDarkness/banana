@@ -3662,7 +3662,7 @@ table th, table td {
 .sticky {
   position: -webkit-sticky;
   position: sticky;
-  top: 9rem
+  top: 5rem
 }
 
 @media screen and (max-width: 800px) {
