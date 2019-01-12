@@ -4128,7 +4128,9 @@ label[for="edit-keyword"] {
 
 .menu--main .menu {
   text-align: center;
-  margin: 0 3rem
+  margin: 0 3rem;
+  display: flex;
+
 }
 
 .menu--main li {
