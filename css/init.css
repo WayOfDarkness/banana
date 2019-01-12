@@ -26102,7 +26102,8 @@ h5.text-base {
 }
 
 .sort-search {
-  float: right
+  float: right;
+  width: 100%;
 }
 
 @media (max-width: 480px) {
@@ -26123,7 +26124,8 @@ h5.text-base {
   background: transparent;
   border-radius: 2px;
   padding: 10px;
-  margin-bottom: 1.3rem
+  margin-bottom: 1.3rem;
+  height: 55px;
 }
 
 .popular {

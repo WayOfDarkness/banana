@@ -563,7 +563,6 @@ body.page-article {
 }
 
 .page-reviews select {
-  background: #eff2f4;
   border: 1px solid #888;
   line-height: 1.5rem;
 }
@@ -1209,4 +1208,8 @@ body.page-article {
 
 .float-right {
   float: right !important;
+}
+
+.pod-header.has-feed-group.no-layout {
+  padding-right: 0 !important;
 }
