@@ -161,3 +161,8 @@ function submitNewComment() {
 function showSocialMobile(bool) {
   $('.social-share').attr("showSocialMobile", bool);
 }
+function showModalSearch(bool) {
+  console.log('click', bool);
+  $('body').attr('modal-search', bool);
+  return false;
+}

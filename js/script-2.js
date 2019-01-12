@@ -2892,7 +2892,7 @@ jQuery('a[href^="#"]').on("click", function (e) {
   })
 }), jQuery(document).ready(function () {
   jQuery(".header-right-container .search-button").click(function () {
-    jQuery("#search-dropdown").toggleClass("open"), jQuery(".header-right-container .search-button").toggleClass("close"), jQuery('#search-dropdown input[type="text"]').focus(), closeAccount(), closeSlideMenu()
+    // jQuery("#search-dropdown").toggleClass("open"), jQuery(".header-right-container .search-button").toggleClass("close"), jQuery('#search-dropdown input[type="text"]').focus(), closeAccount(), closeSlideMenu()
   })
 }), jQuery(document).ready(function () {
   jQuery(".region-header-hamburger .icon-search").click(function () {
