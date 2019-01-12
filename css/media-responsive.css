@@ -22,6 +22,14 @@
     display: block;
     text-align: center;
     font-weight: bold;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: #2A61D6;
+    border-radius: 50%;
+    line-height: 40px;
+    color: white;
+    font-size: 1.4rem;
   }
   body.page-article .social-share div {
     cursor: pointer;
@@ -34,22 +42,13 @@
   }
   body.page-article .social-share[showSocialMobile="false"] .collapse-social-icon {
     left: 60px;
-    position: relative;
-    width: 40px;
-    height: 40px;
-    background: blue;
-    border-radius: 50%;
-    line-height: 40px;
-    color: white;
-    font-weight: bold;
-    font-size: 1.4rem;
   }
   body.page-article .social-share[showSocialMobile="true"] {
     left: 0px;
 
   }
   body.page-article .social-share {
-    padding: 0px 0.5rem 1rem !important;
+    padding: 0.5rem 0.5rem 1rem !important;
     left: -60px;
   }
   body.page-article .social-share-button a:not(.have-number) {
