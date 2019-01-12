@@ -532,6 +532,14 @@ body.page-article {
   font-family: 'Arima Madurai', cursive;
 }
 
+.menu--main li {
+
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  white-space: nowrap;
+}
+
 .menu--main li a {
   font-size: 1.2rem;
   font-weight: bold;
