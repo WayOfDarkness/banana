@@ -2222,7 +2222,6 @@ html.with-featherlight {
 }
 
 .slick-dots li button:before {
-
   font-size: 6px;
   line-height: 20px;
   position: absolute;
@@ -2373,54 +2372,11 @@ article .inline-image-source-caption {
 }
 
 article .inline-image-source-caption::before {
-/ / content: "Source: ";
+  content: "Source: ";
 }
 
 .promo-img-thumb {
   width: 100%;
-url('/themes/gi5/includes/images/loading.svg') center center;
-}
-
-.toolbar-icon-menu-link-content:
-
-2269
-fdcf-69d3-49d0-a8d3-b52c54118de4 {
-  background-image: url(/themes/gi5/includes/images/toolbar/787878/giicon.svg) !important;
-}
-
-.toolbar-icon-menu-link-content:
-
-2269
-fdcf-69d3-49d0-a8d3-b52c54118de4:active:before, .toolbar-icon-menu-link-content:
-
-2269
-fdcf-69d3-49d0-a8d3-b52c54118de4.is-active:before {
-  background-image: url(/themes/gi5/includes/images/toolbar/000000/giicon.svg) !important;
-}
-
-.toolbar-icon-menu-link-content:
-
-268
-fac50-7b3e-4971-b5c0-b9bcd376ed22:before {
-  background-image: url(/themes/gi5/includes/images/toolbar/787878/dashboard.svg) !important;
-}
-
-.toolbar-icon-menu-link-content:
-
-268
-fac50-7b3e-4971-b5c0-b9bcd376ed22:active:before, .toolbar-icon-menu-link-content:
-
-268
-fac50-7b3e-4971-b5c0-b9bcd376ed22.is-active:before {
-  background-image: url(/themes/gi5/includes/images/toolbar/000000/dashboard.svg) !important;
-}
-
-#toolbar-link-front:before {
-  background-image: url(/themes/gi5/includes/images/toolbar/787878/giicon.svg) !important;
-}
-
-#toolbar-link-view-editor_dashboard-page_1:before {
-  background-image: url(/themes/gi5/includes/images/toolbar/787878/dashboard.svg) !important;
 }
 
 .cke_combopanel {
@@ -2563,13 +2519,10 @@ fac50-7b3e-4971-b5c0-b9bcd376ed22.is-active:before {
 }
 
 .fotorama__thumb {
-/ / background-color: #7f7f7f;
+  background-color: #7f7f7f;
   background-color: rgba(127, 127, 127, 0.2);
 }
 
-background-color:#000
-
-;
 @media print {
   .fotorama__arr, .fotorama__fullscreen-icon, .fotorama__video-play, .fotorama__video-close, .fotorama__thumb-border {
     background: none !important;
@@ -2851,7 +2804,7 @@ background-color:#000
 
 .fotorama__caption__wrap {
   background-color: transparent;
-/ / background-color: #ccc;
+  background-color: #ccc;
   padding: 5px 10px;
 }
 
@@ -3284,7 +3237,6 @@ img {
 
 h1, .page-title {
   font-weight: 700;
-  ;
   text-transform: none
 }
 
@@ -3345,7 +3297,6 @@ h1 {
 
 h2, .subhead, .subhead-aside {
   font-size: 1.6em;
-  ;
   font-weight: 700;
   line-height: 1.2
 }
@@ -3372,7 +3323,6 @@ h2, .subhead, .subhead-aside {
 
 h3 {
   font-size: 1.2em;
-  ;
   font-weight: 700;
   line-height: 1.2
 }
@@ -3385,7 +3335,6 @@ h3 {
 
 h4 {
   font-size: 1.1em;
-  ;
   font-weight: 700;
   line-height: 1.2
 }
@@ -3398,7 +3347,6 @@ h4 {
 
 h5 {
   font-size: 1em;
-  ;
   font-weight: 700;
   line-height: 1.2
 }
@@ -3411,7 +3359,6 @@ h5 {
 
 h6 {
   font-size: 1em;
-  ;
   font-weight: 400;
   line-height: 1.2
 }
@@ -5666,7 +5613,6 @@ img.lazy {
 }
 
 .fotorama__caption {
-  ;
   font-size: 1.36rem;
   line-height: 1.2
 }
@@ -5961,7 +5907,6 @@ blockquote::before {
 }
 
 .bq-long {
-  ;
   font-size: 1em;
   font-style: normal;
   border-left: 3px solid #dbdbdb;
@@ -6231,7 +6176,6 @@ aside p {
 .author-footer {
   -webkit-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
-  ;
   clear: both;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6433,7 +6377,6 @@ aside p {
 }
 
 .game-details {
-  ;
   text-align: center;
   padding: 1.5rem 0;
   display: -webkit-box;
@@ -6487,7 +6430,6 @@ aside p {
 }
 
 .poll-view .poll-question {
-  ;
   font-weight: 700;
   font-size: 1.5em;
   margin-bottom: 1rem;
@@ -6519,7 +6461,6 @@ aside p {
 }
 
 .poll-view .form-radios label {
-  ;
   text-transform: none;
   font-weight: 400
 }
@@ -6590,7 +6531,6 @@ aside p {
 }
 
 .review-summary-header {
-  ;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7659,7 +7599,6 @@ aside p {
 }
 
 .eu-cookie-compliance-banner {
-  ;
   font-size: 1.7rem;
   text-align: center;
   margin-top: 2rem
@@ -7687,7 +7626,6 @@ aside p {
   border-bottom: none;
   background-color: #2C7ABE;
   color: #fff;
-
   text-transform: uppercase;
   font-weight: 400
 }
@@ -7743,17 +7681,12 @@ aside p {
   font-family: 'Alegreya Sans', sans-serif;}
 
 .unica, .Unica {
-
   text-transform: uppercase;
   font-weight: normal
 }
 
 .Faustina, .faustina {
   font-family: 'Alegreya Sans', sans-serif;}
-
-.Fira, .fira {
-
-}
 
 .FiraCondensed, .firacondensed {
   font-family: 'Alegreya Sans', sans-serif;}
@@ -8854,7 +8787,7 @@ aside {
 }
 
 .show-ngt .show-left::after {
-  border-color: #fefffftransparent transparent transparent
+  border-color: #feffff transparent transparent transparent
 }
 
 .show-ngt .show-right {
