@@ -17338,6 +17338,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 .pod-header__filters--js {
+  margin-right: 5px;
 }
 
 .js .pod-header__filters--js {
