@@ -13924,10 +13924,6 @@ body.nocursor {
     padding-bottom: .65rem
   }
 
-  .river > .media:first-of-type, .forum-messages > .media:first-of-type, .mapped-ad > .media:first-of-type {
-    padding-top: 0
-  }
-
   .river .media--small, .river .pod-popular .media--sponsored, .pod-popular .river .media--sponsored, .forum-messages .media--small, .forum-messages .pod-popular .media--sponsored, .pod-popular .forum-messages .media--sponsored, .mapped-ad .media--small, .mapped-ad .pod-popular .media--sponsored, .pod-popular .mapped-ad .media--sponsored {
     padding-top: .325rem;
     padding-bottom: .325rem
