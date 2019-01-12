@@ -1,6 +1,69 @@
 /*RESPONSIVE*/
 
 @media screen and (max-width: 1150px) {
+  body.page-article .social-share {
+    position: fixed;
+    top: 50%;
+    left: 0px;
+    bottom: unset;
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    transform: translateY(-50%);
+    padding: 0rem !important;
+    width: initial;
+  }
+  .social-share-button i {
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .collapse-social-icon {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+  }
+  body.page-article .social-share div {
+    cursor: pointer;
+  }
+  body.page-article .social-share[showSocialMobile="false"] .icon-collapse-close{
+    display: none;
+  }
+  body.page-article .social-share[showSocialMobile="true"] .icon-collapse-open{
+    display: none;
+  }
+  body.page-article .social-share[showSocialMobile="false"] .collapse-social-icon {
+    left: 60px;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: blue;
+    border-radius: 50%;
+    line-height: 40px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+  body.page-article .social-share[showSocialMobile="true"] {
+    left: 0px;
+
+  }
+  body.page-article .social-share {
+    padding: 0px 0.5rem 1rem !important;
+    left: -60px;
+  }
+  body.page-article .social-share-button a:not(.have-number) {
+    padding-bottom: 0px;
+  }
+  body.page-article .social-share-button a {
+    padding: 0.5rem;
+    margin:0;
+    width: initial;
+    height: initial;
+  }
+  body.page-article .social-share-button {
+
+  }
   #login {
     display: none;
   }
@@ -87,6 +150,20 @@
   }
 }
 
+@media (max-width: 759px) {
+  .paginate__results {
+    display: block;
+    width: 100%;
+    clear: both;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .slide-in .user-menu a {
+    color: #4b4b4b !important;
+  }
+}
 @media screen and (max-width: 425px) {
   html {
     font-size: 12px !important;
@@ -99,18 +176,5 @@
   .block-reviews {
     width: 100%;
     padding-left: 0px;
-  }
-}
-@media (max-width: 759px) {
-  .paginate__results {
-    display: block;
-    width: 100%;
-    clear: both;
-    margin-bottom: 0.5rem;
-  }
-}
-@media screen and (max-width: 450px) {
-  .slide-in .user-menu a {
-    color: #4b4b4b !important;
   }
 }

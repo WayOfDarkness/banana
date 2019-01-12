@@ -236,8 +236,10 @@ body.page-article .social-share-button .social-icon {
   width: 24px;
 }
 
-body.page-article .social-share-button {
+body.page-article .social-share-button:not(:last-of-type) {
   margin: 0 0 10px 0;
+}
+body.page-article .social-share-button {
   float: left;
   position: relative;
 }
@@ -1209,4 +1211,7 @@ body.page-article {
 
 .float-right {
   float: right !important;
+}
+.collapse-social-icon {
+  display: none;
 }

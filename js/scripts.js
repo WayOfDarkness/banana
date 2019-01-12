@@ -157,3 +157,7 @@ function checkLogin() {
 function submitNewComment() {
   console.log('submit new comment...');
 }
+//set status social mobile pos-fixed
+function showSocialMobile(bool) {
+  $('.social-share').attr("showSocialMobile", bool);
+}

@@ -616,15 +616,19 @@
                     </div>
                     <div class="ds-right sticky">
                       <wrap class="flex-div">
-                        <section class="social-share">
+                        <section class="social-share" showSocialMobile="true">
+                          <div class="collapse-social-icon">
+                            <div class="icon-collapse-open" onclick="showSocialMobile(true)"> >> </div>
+                            <div class="icon-collapse-close"  onclick="showSocialMobile(false)"> << </div>
+                          </div>
                           <div class="social-share-button">
-                            <a href="#" target="_blank">
+                            <a href="#" target="_blank" class="have-number">
                               <span class="social-icon upvote"></span>
                               <i>888</i>
                             </a>
                           </div>
                           <div class="social-share-button">
-                            <a href="#" target="_blank">
+                            <a href="#" target="_blank" class="have-number">
                               <span class="social-icon downvote"></span>
                               <i>888</i>
                             </a>
@@ -640,7 +644,7 @@
                             </a>
                           </div>
                           <div class="social-share-button">
-                            <a href="#" target="_blank">
+                            <a href="#" target="_blank" class="have-number">
                               <span class="social-icon comment"></span>
                               <i>888</i>
                             </a>
