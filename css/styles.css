@@ -1376,3 +1376,9 @@ z-index: 99;
 .block-fixed .list-social-mobile {
   border-bottom: 1px solid #2C7ABE;
 }
+
+@media screen and (max-width: 639px) {
+  .breakdown.span6 {
+    width: 50%;
+  }
+}
