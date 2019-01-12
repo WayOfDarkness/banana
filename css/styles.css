@@ -1295,3 +1295,26 @@ z-index: 99;
   border-bottom-color: #2C7ABE;
 }
 
+.review-pusher {
+  margin-top: 10px;
+  min-height: 50px;
+}
+
+.review-pusher-item {
+  float: right;
+  width: 49%;
+}
+
+.review-pusher-item:not(:first-child) {
+  float: left;
+  width: 45%;
+}
+
+.review-pusher-item select {
+  width: 100%;
+  background: #fcfcfd url('../img/icon/blue-triangle.png') right center no-repeat !important;
+  max-height: 35px;
+  line-height: 30px;
+  font-weight: bold;
+  font-size: 19.2px;
+}
