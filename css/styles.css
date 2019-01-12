@@ -53,8 +53,8 @@ h2 {
   box-shadow: 0 0 4px 0px gainsboro;
   text-align: left;
   margin-top: 10px;
-  height: 50vh;
-  max-height: 400px;
+  height: 40vh;
+  max-height: 300px;
   overflow-y: scroll;
 }
 
