@@ -277,7 +277,6 @@ body.page-article .ds-right .field__item h2 {
 }
 
 body.page-article .ds-right .field__item {
-  border-left: 1px solid #141517;
   font-size: 1.6rem;
   margin-bottom: 1rem;
   overflow: hidden;
@@ -1222,4 +1221,14 @@ body.page-article {
 }
 .pod-header.has-feed-group.no-layout {
   padding-right: 0 !important;
+}
+.header-dropdown.open {
+
+}
+
+.header-dropdown.open {
+  position: fixed;
+}
+.social-share-button {
+  margin: 0px;
 }
