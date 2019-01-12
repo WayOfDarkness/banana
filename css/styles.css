@@ -417,6 +417,7 @@ body .expanded-menu-button {
 
 body.page-article .layout-container {
   display: block;
+  overflow: hidden;
 }
 
 body.page-article .slick-prev, .slick-next {
