@@ -1173,8 +1173,8 @@ body.page-article {
 
 .effect-hover-1 {
   height: 100%;
-  padding: 0px 30px;
-  line-height: 34px;
+  padding: 0px auto;
+  line-height: 28px;
   background: #fffffe;
   color: #2C7ABE !important;
   font-weight: bold;
@@ -1303,6 +1303,7 @@ z-index: 99;
 .review-pusher-item {
   float: right;
   width: 49%;
+  max-height: 36px;
 }
 
 .review-pusher-item:not(:first-child) {
