@@ -134,7 +134,8 @@ function showRegister() {
 //click sort news
 $('.js-filter-load-page').click(function (e) {
   var sort_value = $(this).val();
-  $(this).closest('.pod-header').find('.pod-header__item .pod-title h4').html('Tin tức ' + sort_value);
+  var data_filter = $(this).data('filter');
+  $(this).closest('.pod-header').find('.pod-header__item .pod-title h4').html(data_filter + ' ' + sort_value);
 })
 
 function showLogin() {
