@@ -8017,13 +8017,6 @@ header {
   color: #fff
 }
 
-@media screen and (max-width: 450px) {
-  .slide-in {
-    background-color: #fff;
-    color: #4b4b4b
-  }
-}
-
 .slide-in .icon-search {
   background-color: #fff
 }
@@ -8039,12 +8032,6 @@ header {
   .slide-in .icon-search {
     -webkit-filter: brightness(300%);
     filter: brightness(300%)
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .slide-in .icon-search {
-    background-color: #656565
   }
 }
 
@@ -8092,24 +8079,6 @@ header {
 
 .slide-in .menu--hamburger-menu a.is-active {
   color: #6192eb
-}
-
-@media screen and (max-width: 450px) {
-  .slide-in .menu--hamburger-menu a {
-    color: #4b4b4b
-  }
-
-  .slide-in .menu--hamburger-menu a:link, .slide-in .menu--hamburger-menu a:visited {
-    color: #4b4b4b
-  }
-
-  .slide-in .menu--hamburger-menu a:hover, .slide-in .menu--hamburger-menu a:active {
-    color: #717171
-  }
-
-  .slide-in .menu--hamburger-menu a.is-active {
-    color: #6192eb
-  }
 }
 
 .menu--main li a {

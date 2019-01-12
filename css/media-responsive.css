@@ -161,11 +161,6 @@
   }
 }
 
-@media screen and (max-width: 450px) {
-  .slide-in .user-menu a {
-    color: #4b4b4b !important;
-  }
-}
 @media screen and (max-width: 425px) {
   html {
     font-size: 12px !important;
