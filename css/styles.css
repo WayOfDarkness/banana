@@ -1401,3 +1401,17 @@ z-index: 99;
 .filter-list__filter > select {
   font-size: 1rem;
 }
+
+#default-content {
+  background-color: #fffffe;
+  padding: 0px;
+}
+.promo-strip {
+  background-color: #eff2f4;
+}
+.promo--container {
+  padding: 1.3rem 0px;
+}
+.promo-strip.span12 {
+  padding: 0px;
+}
