@@ -181,8 +181,19 @@ function doSearch(e) {
     console.log('search ', searchContent);
     window.location.href = "../search/";
   }
-
-
 }
+
+
+//go to page search
+function doSearchMobile(e) {
+
+  if (e.which == '13') {
+    var searchContent = $('#edit-keyword').val();
+    console.log('search ', searchContent);
+    window.location.href = "../search/";
+  }
+}
+
+
 $('#edit-keyword').click(function (e) {
 })
