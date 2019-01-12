@@ -315,7 +315,7 @@ body.page-article .ds-wrapper {
 
 body.page-article h2 {
   font-size: 1.6rem;
-  margin-bottom: 1rem !important;
+  margin-bottom: 24px !important;
 }
 
 body.page-article .author-footer-social a {
@@ -647,12 +647,15 @@ body.page-article {
 
 .block-chat {
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 }
 .block-title {
   display: flex;
   align-items: center;
   border-bottom: 1px solid #818583;
   padding-bottom: 0.5rem;
+  margin-top: 5px;
 }
 
 .block-title span {
@@ -674,6 +677,7 @@ body.page-article {
 }
 .block-reviews {
   padding-left: 5%;
+  float: right;
 }
 
 .comment-avatar {
@@ -748,7 +752,7 @@ body.page-article {
   border-top: 0.5rem solid white;
 }
 .list-comment {
-  max-height: 600px;
+  max-height: 400px;
   overflow-y: scroll;
   margin-bottom: 60px;
 }
@@ -768,6 +772,9 @@ body.page-article {
 }
 
 .list-comment-review {
+  max-height: 400px;
+  overflow-y: scroll;
+  margin-bottom: 60px;
 }
 
 .btn-readmore-review:hover {
@@ -1113,19 +1120,23 @@ body.page-article {
 
 .text-editer {
   margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #818583;
+  border-radius: 0px;
 }
 #text-editer-comment {
   box-shadow: none;
   width: 100%;
-  min-height: 100px;
+  min-height: 62px;
   border: 1px solid #eff2f4;
-  border-radius: 5px;
+  border-radius: 0px;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
 }
 .btn-submit-comment {
   float: right;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.2rem;
   border-radius: 3px;
   border: 1px solid #2A61D6;
   color: #2A61D6;
@@ -1174,3 +1185,8 @@ body.page-article {
   opacity: 0;
 }
 /*end css button submit comment*/
+
+
+.float-right {
+  float: right !important;
+}
