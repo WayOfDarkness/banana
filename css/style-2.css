@@ -4589,7 +4589,7 @@ main {
 }
 
 footer[role="contentinfo"] {
-  padding: 10px 0px 80px;
+  padding: 10px 0px 20px;
   clear: both;
   width: 100%
 }
