@@ -634,11 +634,20 @@ body.page-article {
 }
 
 @media screen and (max-width: 603px) {
+  .review-breakdown {
+    padding-top: 0;
+  }
   .breakdown.span6 {
     float: none;
     width: 100%;
-    text-align: center;
     padding-top: 0;
+  }
+  .breakdown-good__title, .breakdown-bad__title {
+    text-align: center;
+    margin-left: 0 !important;
+  }
+  .breakdown-good__item, .breakdown-bad__item {
+    padding-left: 10%;
   }
   .review-breakdown__inner .breakdown-score {
     position: static;
