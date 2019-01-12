@@ -1394,3 +1394,10 @@ z-index: 99;
   -moz-border-radius: 0px;
   border-radius: 0px;
 }
+.filter-list__label {
+  font-size: 1rem;
+}
+
+.filter-list__filter > select {
+  font-size: 1rem;
+}
