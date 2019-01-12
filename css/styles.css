@@ -50,9 +50,7 @@ h2 {
 
 .ad-299 {
   padding: 1rem 0.5rem;
-  box-shadow: 0 0 4px 0px gainsboro;
   text-align: left;
-  margin-top: 10px;
   height: 40vh;
   max-height: 300px;
   overflow-y: scroll;
@@ -1105,4 +1103,10 @@ body.page-article {
 }
 .cursor-pointer {
   cursor: pointer;
+}
+.block-ad-299 {
+  padding: 0.5rem 0px;
+  border-top: 1px solid #eff2f4;
+  border-bottom: 1px solid #eff2f4;
+  margin-top: 10px;
 }
