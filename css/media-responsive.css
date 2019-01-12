@@ -7,6 +7,9 @@
   body.page-article .tag-block {
     border-left: none;
   }
+  body.page-article .ds-right .field__item {
+    display: none;
+  }
   body.page-article .social-share {
     position: fixed;
     top: 50%;
@@ -111,11 +114,28 @@
 
 
 @media screen and (max-width: 1024px) {
-  body.page-article .ds-wrapper > * {
-    width: 100%;
+
+  .flex-div {
+    margin-top: 1.5rem !important;
+    border-bottom: 1px solid #818583;
   }
   body.page-article .tag-block {
     justify-content: flex-start;
+    display: flex;
+    padding: 0px;
+  }
+  a.text-block .simple-text  {
+    padding: 0.25rem;
+  }
+  a.text-block {
+    min-width: 120px;
+    width: 25%;
+    max-width: 300px;
+    display: inline-block;
+    margin: 0px;
+  }
+  body.page-article .ds-wrapper > * {
+    width: 100%;
   }
   .text-block {
     margin-right: 5px;
