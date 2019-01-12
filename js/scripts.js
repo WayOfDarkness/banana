@@ -181,6 +181,7 @@ function doSearch(e) {
     console.log('search ', searchContent);
     window.location.href = "../search/";
   }
+  return false;
 }
 
 

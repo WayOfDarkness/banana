@@ -1389,3 +1389,8 @@ z-index: 99;
   padding-top: 100px;
 }
 
+.page-search .divider input {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}

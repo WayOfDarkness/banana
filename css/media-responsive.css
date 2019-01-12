@@ -167,6 +167,25 @@
   }
 }
 @media screen and (max-width: 768px) {
+  #default-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .filter-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .filter-list__item {
+    width: 45%;
+    margin: 0;
+  }
+  #default-content > * {
+    flex-grow: 1;
+    width: 100%;
+  }
+
   html {
     font-size: 14px !important;
   }
@@ -184,6 +203,16 @@
   }
 }
 
+@media screen and (max-width: 525px) {
+  .filter-list__filter {
+    padding: 0.5rem;
+  }
+  .filter-list__item {
+    width: 100%;
+    margin: 0;
+  }
+
+}
 @media screen and (max-width: 425px) {
   html {
     font-size: 12px !important;
