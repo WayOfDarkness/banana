@@ -3082,7 +3082,6 @@ jQuery(function () {
         // Create new script element and load a script into it
         js = document.createElement("script");
         js.setAttribute('async', 'true');
-        js.src = "//gameinformeronline.disqus.com/count.js";
         js.id = "dsq-count-scr";
         document.body.appendChild(js);
 

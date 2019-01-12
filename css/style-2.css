@@ -7484,7 +7484,7 @@ aside p {
 }
 
 .gi-show {
-  background-image: url("https://s3.amazonaws.com/prod-media.gameinformer.com/imagefeed/show-gi_bkg.png");
+
   background-repeat: repeat-y;
   background-position: 15px
 }
