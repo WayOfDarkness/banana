@@ -636,10 +636,13 @@ body.page-article {
 @media screen and (max-width: 603px) {
   .breakdown.span6 {
     float: none;
-    width: 70%;
+    width: 100%;
+    text-align: center;
+    padding-top: 0;
   }
   .review-breakdown__inner .breakdown-score {
-    right: 10px;
+    position: static;
+    margin-bottom: 20px;
   }
 }
 
