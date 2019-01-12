@@ -172,3 +172,17 @@ function toggleSocialMobile() {
   console.log('test');
   $('.block-fixed').toggleClass('show-social');
 }
+
+//go to page search
+function doSearch(e) {
+
+  if (e.which == '13') {
+    var searchContent = $('#edit-keyword').val();
+    console.log('search ', searchContent);
+    window.location.href = "../search/";
+  }
+
+
+}
+$('#edit-keyword').click(function (e) {
+})

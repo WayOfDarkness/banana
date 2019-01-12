@@ -41,11 +41,11 @@ jQuery(document).ready(function ($) {
 		}
 	});
 	//close modal when clicking the esc keyboard button
-	$(document).keyup(function (event) {
-		if (event.which == '27') {
-			$form_modal.removeClass('is-visible');
-		}
-	});
+	// $(document).keyup(function (event) {
+	// 	if (event.which == '27') {
+	// 		$form_modal.removeClass('is-visible');
+	// 	}
+	// });
 
 	//switch from a tab to another
 	$form_modal_tab.on('click', function (event) {
