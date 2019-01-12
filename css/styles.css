@@ -1110,3 +1110,67 @@ body.page-article {
   border-bottom: 1px solid #eff2f4;
   margin-top: 10px;
 }
+
+.text-editer {
+  margin-bottom: 1rem;
+}
+#text-editer-comment {
+  box-shadow: none;
+  width: 100%;
+  min-height: 100px;
+  border: 1px solid #eff2f4;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.btn-submit-comment {
+  float: right;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  border: 1px solid #2A61D6;
+  color: #2A61D6;
+  background-color: #fffffe;
+}
+
+
+/*css button submit comment*/
+
+.effect-hover-1 {
+  height: 100%;
+  padding: 0px 30px;
+  line-height: 34px;
+  background: #fffffe;
+  color: #2C7ABE !important;
+  font-weight: bold;
+  position: relative;
+  transition: box-shadow 0.1s;
+  box-shadow: inset 0 0 10px #0089ff10, 0 0 10px #0088ff05;
+  border: 1px solid transparent;
+}
+
+.effect-hover-1:hover {
+  box-shadow: inset 0 0 10px #0089ff59, 0 0 10px #0088ff3d;
+  transition: box-shadow 0.5s;
+  border: 1px solid rgb(44, 122, 190);
+}
+
+.effect-hover-1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%; /*border cuả th cha*/
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  border: 1px solid rgba(44, 122, 190, 0.91);
+
+}
+.effect-hover-1:hover::before {
+  transition-timing-function: ease-out;
+  width: calc(100% + 2rem);
+  transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  height:  calc(100% + 1.2rem);
+  opacity: 0;
+}
+/*end css button submit comment*/

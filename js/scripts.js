@@ -115,17 +115,36 @@ $('.feed-view').click(function () {
 })
 
 //click button sign in, sign up
-$('#login .btn-signin').click(function (e) {
-  $('.cd-user-modal').addClass('is-visible');
-  $('#cd-login').addClass('is-selected');
-  $('#cd-signup').removeClass('is-selected');
-  $('.cd-switcher li').eq(0).find('a').addClass('selected');
-  $('.cd-switcher li').eq(1).find('a').removeClass('selected');
+$('.btn-signin').click(function (e) {
+  showLogin();
 })
-$('#login .btn-signup').click(function (e) {
+$('.btn-signup').click(function (e) {
+  showRegister();
+})
+
+function showRegister() {
   $('.cd-user-modal').addClass('is-visible');
   $('#cd-login').removeClass('is-selected');
   $('#cd-signup').addClass('is-selected');
   $('.cd-switcher li').eq(0).find('a').removeClass('selected');
   $('.cd-switcher li').eq(1).find('a').addClass('selected');
-})
+}
+function showLogin() {
+  $('.cd-user-modal').addClass('is-visible');
+  $('#cd-login').addClass('is-selected');
+  $('#cd-signup').removeClass('is-selected');
+  $('.cd-switcher li').eq(0).find('a').addClass('selected');
+  $('.cd-switcher li').eq(1).find('a').removeClass('selected');
+}
+function checkLogin() {
+  var login = false; //test
+  if(login) {
+    submitNewComment();
+  }
+  else {
+    showLogin();
+  }
+}
+function submitNewComment() {
+  console.log('submit new comment...');
+}
