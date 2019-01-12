@@ -13779,10 +13779,8 @@ body.nocursor {
   clear: both
 }
 
-@media (min-width: 980px) {
-  .pod-header.has-feed-group {
-    padding-right: 50px
-  }
+.pod-header.has-feed-group {
+  padding-right: 50px
 }
 
 .pod-title {
@@ -33360,9 +33358,12 @@ a#qualtrics-feedback:hover {
   display: block !important
 }
 
-@media (max-width: 479px) {
+@media (max-width: 639px) {
   .hide-mobile {
     display: none !important
+  }
+  .pod-header.has-feed-group {
+    padding-right: 0;
   }
 }
 
