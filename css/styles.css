@@ -1415,3 +1415,24 @@ z-index: 99;
 .promo-strip.span12 {
   padding: 0;
 }
+.cd-form-bottom-message {
+  bottom: 10px;
+}
+
+#cd-signup .custom-btn-login input,
+#cd-login .custom-btn-login input {
+  height: 100%;
+  padding: 0;
+}
+#cd-login .custom-btn-login,
+#cd-signup .custom-btn-login {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 100%;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  max-width: 400px;
+  transform: translate(-50%, 50%);
+}

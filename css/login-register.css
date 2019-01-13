@@ -288,6 +288,7 @@ html * {
   .cd-form .hide-password.hide-password-on {
     background-image: url("../img/icon/eye-slash-regular.svg");
     background-repeat: no-repeat;
+    border: none;
   }
   .cd-form .cd-error-message {
     display: inline-block;
