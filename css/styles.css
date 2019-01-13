@@ -1053,7 +1053,7 @@ body.page-article {
 }
 .pagination button.active {
   background: #eee;
-  color: #141517;
+  color: #e03800;
 }
 .pagination .prev,
 .pagination .next {
