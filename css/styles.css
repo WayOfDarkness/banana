@@ -610,6 +610,7 @@ body.page-article {
 }
 .review-breakdown__inner dt.breakdown-good__title,
 .review-breakdown__inner dt.breakdown-bad__title {
+  white-space: nowrap;
   font-size: 2rem;
   margin-left: 2rem;
   margin-bottom: 1rem;
