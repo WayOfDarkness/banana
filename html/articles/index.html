@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#"
-      xmlns:product="http://ogp.me/ns/product#"
-      xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#"
-      prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
 
 <head>
   <meta charset="utf-8"/>
@@ -23,11 +20,6 @@
   <meta name="theme-color" content="#2C7ABE"/>
   <meta name="HandheldFriendly" content="true"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <link rel="apple-touch-icon" sizes="180x180" href="/sites/default/files/favicons/apple-touch-icon.png"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="/sites/default/files/favicons/favicon-32x32.png"/>
-  <link rel="icon" type="image/png" sizes="16x16" href="/sites/default/files/favicons/favicon-16x16.png"/>
-  <link rel="manifest" href="/sites/default/files/favicons/site.webmanifest"/>
-  <link rel="mask-icon" href="/sites/default/files/favicons/safari-pinned-tab.svg" color="#2C7ABE"/>
   <meta name="msapplication-TileColor" content="#2C7ABE"/>
   <meta name="theme-color" content="#feffff"/>
   <meta name="favicon-generator" content="Drupal responsive_favicons + realfavicongenerator.net"/>
@@ -38,10 +30,9 @@
 
 
   <link rel="icon" href="../../img/favicon.png" type="image/gif" sizes="16x16">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+  <script src="../../js/modernizr.min.js" type="text/javascript"></script>
 
-  <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/reset.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="../../css/reset.min.css">
 
   <link rel="stylesheet" href="../../css/init.css">
   <link rel="stylesheet" href="../../css/style-1.css">
@@ -148,7 +139,7 @@
                    data-drupal-selector="views-exposed-form-search-content-page-1"
                    id="block-exposedformsearch-contentpage-1-2">
                 <span class="icon-search"></span>
-                <form  method="get" id="views-exposed-form-search-content-page-1"
+                <form  method="get" id="views-exposed-form-search-content-page-1-mobile"
                       accept-charset="UTF-8">
                   <div class="form--inline clearfix">
                     <div
@@ -187,7 +178,7 @@
                     <a href="../reviews" data-drupal-link-system-path="reviews">Đánh giá</a>
                   </li>
                   <li class="menu-item font-arima">
-                    <a href="../Videos" data-drupal-link-system-path="features">Videos</a>
+                    <a href="../videos" data-drupal-link-system-path="features">Videos</a>
                   </li>
                 </ul>
               </nav>
@@ -1008,7 +999,7 @@
                         var js, fjs = d.getElementsByTagName(s)[0];
                         if (d.getElementById(id)) return;
                         js = d.createElement(s); js.id = id;
-                        js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=839840852755043&autoLogAppEvents=1';
+                        js.src = '../../js/sdk.js';
                         fjs.parentNode.insertBefore(js, fjs);
                       }(document, 'script', 'facebook-jssdk'));
                       </script>
@@ -1315,7 +1306,7 @@
            id="oauth-login-google_oauth2"
            rel="nofollow" data-method="post" href="/users/auth/google_oauth2">
           <img alt="Google" title="Sign in with Google" class="js-lazy-loaded"
-               src="https://assets.gitlab-static.net/assets/auth_buttons/google_64-9ab7462cd2115e11f80171018d8c39bd493fc375e83202fbb6d37a487ad01908.png">
+               src="../../img/icon-google.png">
           <span>
                             Google
                         </span>
@@ -1324,7 +1315,7 @@
            id="oauth-login-twitter"
            rel="nofollow" data-method="post" href="/users/auth/twitter">
           <img alt="Twitter" title="Sign in with Twitter" class="js-lazy-loaded"
-               src="https://assets.gitlab-static.net/assets/auth_buttons/twitter_64-86860edb139fb2f62fc25ef62a4213a5c8b20122fd8752ab0df09e740eb53deb.png">
+               src="../../img/icon-twitter.png">
           <span>
                             Facebook
                         </span>
@@ -1339,13 +1330,12 @@
 <script src="../../js/jquery-3.3.1.min.js" type="application/javascript"></script>
 <script src="../../js/owl.carousel.min.js" type="application/javascript"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="../../js/popper.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
 <!-- Comment -->
 <script src="../../js/script-2.js"></script>
 <!-- Slider -->
 <script src="../../js/script-7.js"></script>
-<!--<script src="../../js/slick.min.js"></script>-->
 <!-- Custom -->
 
 
