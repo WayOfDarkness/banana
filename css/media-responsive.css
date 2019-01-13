@@ -115,7 +115,28 @@
 
 @media screen and (max-width: 1024px) {
 
+
+
+  .flex-div.mobile {
+    display: block !important;
+    margin-top: 0 !important;
+    width: 100%;
+    float: left !important;
+    justify-content: flex-start;
+  }
+  .flex-div.mobile .tag-block a.text-block {
+    padding-right: 0.5rem;
+  }
+  .flex-div.mobile .tag-block a.text-block .simple-text {
+    padding: 0.5rem 0;
+    margin: 0;
+  }
+  .flex-div.mobile .tag-block {
+    margin: 0 !important;
+    width: 100%;
+  }
   .flex-div {
+    display: none !important;
     margin-top: 1.5rem !important;
     border-bottom: 1px solid #818583;
   }
@@ -181,7 +202,9 @@
   .block-chat > div {
     width: 100%;
   }
-
+  .block-reviews {
+    padding: 0 1rem;
+  }
   .review-breakdown__inner > .row {
     padding-right: 0px;
     padding-bottom: 18rem;
@@ -198,6 +221,7 @@
   .review-breakdown__inner .breakdown.breakdown-good dt {
     width: 100%;
     text-align: center;
+    margin-left: 0;
   }
   .review-breakdown__inner .breakdown-score {
     bottom: 0px;

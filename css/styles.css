@@ -1402,3 +1402,7 @@ z-index: 99;
 main {
   padding-bottom: 0px;
 }
+
+.flex-div.mobile {
+  display: none;
+}
