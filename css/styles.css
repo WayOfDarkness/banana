@@ -1410,7 +1410,7 @@ z-index: 99;
   background-color: #eff2f4;
 }
 .promo--container {
-  padding: 1.3rem 0;
+  padding: 0;
 }
 .promo-strip.span12 {
   padding: 0;
@@ -1420,12 +1420,14 @@ z-index: 99;
 }
 
 #cd-signup .custom-btn-login input,
-#cd-login .custom-btn-login input {
+#cd-login .custom-btn-login input,
+#cd-reset-password .custom-btn-login input {
   height: 100%;
   padding: 0;
 }
 #cd-login .custom-btn-login,
-#cd-signup .custom-btn-login {
+#cd-signup .custom-btn-login,
+#cd-reset-password .custom-btn-login {
   position: absolute;
   bottom: 0px;
   left: 50%;
@@ -1435,4 +1437,10 @@ z-index: 99;
   padding: 0;
   max-width: 400px;
   transform: translate(-50%, 50%);
+}
+#cd-reset-password .fieldset:last-of-type {
+
+}
+#cd-reset-password .mb-3 {
+  margin-bottom: 3rem;
 }
