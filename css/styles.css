@@ -1406,3 +1406,11 @@ main {
 .flex-div.mobile {
   display: none;
 }
+
+.media-figure--has-rhythm img {
+  width: 100%;
+  min-height: 200px;
+  max-height: 400px;
+  object-fit: cover;
+  background-position: center center;
+}
