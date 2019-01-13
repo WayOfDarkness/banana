@@ -1991,13 +1991,11 @@ input.datepicker-input, input.timepicker {
 
 input.datepicker-input {
   width: 130px;
-  background: #feffffurl(https://static.gamespot.com/bundles/phoenixsite/images/core/sprites/icons/icn-calendar-16x16.png) no-repeat 4px 6px
 }
 
 input.timepicker {
   width: 120px;
   margin-left: 10px;
-  background: #feffffurl(https://static.gamespot.com/bundles/phoenixsite/images/core/sprites/icons/icn-clock-16x16.png) no-repeat 4px 6px
 }
 
 table.time-display td {
@@ -2171,7 +2169,6 @@ legend.full-width {
   margin-bottom: 0;
   width: 320px;
   max-width: 100%;
-  background: #feffffurl(https://static.gamespot.com/bundles/phoenixsite/images/core/sprites/icons/icn-search-12x12.png) no-repeat 2px center
 }
 
 .autocomplete, .tagsinput {
@@ -2989,65 +2986,6 @@ table th {
   border-radius: 0 2px 2px 0
 }
 
-@media print {
-  background:transparent
-
-!important;color:#000
-
-!important;box-shadow:none
-
-!important;text-shadow:none
-
-!important;filter:none
-
-!important;-ms-filter:none
-
-!important;a, a:visited {
-             text-decoration: underline
-           }
-
-  a[href]:after {
-    content: " (" attr(href) ")"
-  }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")"
-  }
-
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
-    content: ""
-  }
-
-  pre, blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid
-  }
-
-  thead {
-    display: table-header-group
-  }
-
-  tr, img {
-    page-break-inside: avoid
-  }
-
-  img {
-    max-width: 100% !important
-  }
-
-  @page {
-    margin: .5cm
-  }
-
-  p, h2, h3 {
-    orphans: 3;
-    widows: 3
-  }
-
-  h2, h3 {
-    page-break-after: avoid
-  }
-}
 
 #in-page-nav {
   display: none;
@@ -4448,8 +4386,8 @@ body.has-promo-alert--breaking-news {
   }
 
   .nav-mobile__logo .eyebrow-promo a {
-    min-width: 0px;
-    line-height: 0px
+    min-width: 0;
+    line-height: 0
   }
 
   .nav-mobile__logo .eyebrow-promo a img {
@@ -4513,7 +4451,7 @@ body.has-promo-alert--breaking-news {
     border: 6px solid red;
     top: 8px;
     right: 27px;
-    box-shadow: 0px 0px 1px 3px #2b2d31
+    box-shadow: 0 0 1px 3px #2b2d31
   }
 
   .nav-mobile__menu .symbol-remove, .nav-mobile__menu .symbol-search {
@@ -6753,7 +6691,7 @@ body.sub-sale #promo .sale-btn {
   line-height: 40px;
   margin-right: 5%;
   text-align: center;
-  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 0px;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 1px 0;
   border: 1px solid #90050e;
   width: 200px;
   position: absolute;
@@ -6762,12 +6700,12 @@ body.sub-sale #promo .sale-btn {
   border-radius: 40px;
   background-image: -webkit-linear-gradient(#c62420, #8f050e);
   background-image: linear-gradient(#c62420, #8f050e);
-  box-shadow: #ff4840 0 1px 0px inset, rgba(0, 0, 0, 0.5) 0 1px 10px
+  box-shadow: #ff4840 0 1px 0 inset, rgba(0, 0, 0, 0.5) 0 1px 10px
 }
 
 body.sub-sale #promo .sale-btn:hover {
   -webkit-transform: scale(1.05, 1.05);
-  box-shadow: #ff4840 0 1px 0px inset, rgba(255, 255, 255, 0.5) 0 1px 10px
+  box-shadow: #ff4840 0 1px 0 inset, rgba(255, 255, 255, 0.5) 0 1px 10px
 }
 
 body.sub-sale #promo .available {
@@ -7406,7 +7344,7 @@ body.sub-sale #promo .available span {
 
 .dropnav-menu {
   opacity: 0;
-  height: 0px;
+  height: 0;
   visibility: hidden
 }
 
@@ -8408,7 +8346,7 @@ input.flag {
 
 .log li a .action {
   display: inline-block;
-  padding: 0px 3px;
+  padding: 0 3px;
   border-radius: 2px
 }
 
@@ -8707,7 +8645,7 @@ input.flag {
 
 .moderation-log li a .action {
   display: inline-block;
-  padding: 0px 3px;
+  padding: 0 3px;
   border-radius: 2px
 }
 
@@ -8777,7 +8715,7 @@ input.flag {
   left: 50%;
   margin-left: -1.5px;
   z-index: 30;
-  box-shadow: 0px 0px 12px rgba(51, 51, 51, 0.5)
+  box-shadow: 0 0 12px rgba(51, 51, 51, 0.5)
 }
 
 .twentytwenty-container a:after {
@@ -8881,7 +8819,7 @@ input.flag {
   margin-top: -22px;
   border: 3px solid #fff;
   border-radius: 1000px;
-  box-shadow: 0px 0px 12px rgba(51, 51, 51, 0.5);
+  box-shadow: 0 0 12px rgba(51, 51, 51, 0.5);
   z-index: 40;
   cursor: ew-resize
 }
@@ -9447,7 +9385,6 @@ input.flag {
 
 .gallery-tags__item input {
   padding-left: 18px;
-  background: #feffffurl(https://static.gamespot.com/bundles/phoenixsite/images/core/sprites/icons/icn-search-12x12.png) no-repeat 2px center
 }
 
 .gallery-header__actions {
@@ -10687,7 +10624,7 @@ tr.pm .time {
   width: 12px;
   height: 12px;
   position: absolute;
-  left: 0px;
+  left: 0;
   right: auto;
   top: -3px;
   border-radius: 100%;
@@ -11410,7 +11347,7 @@ tr.pm .time {
 
 .av-player-athena .av-msg-invalid-sub {
   background: rgba(0, 0, 0, 0.7);
-  text-shadow: 0px 0px 1px #aaa
+  text-shadow: 0 0 1px #aaa
 }
 
 .av-player-athena .av-msg-invalid-sub > a {
@@ -18810,7 +18747,7 @@ a:hover .link-img .hover-play-pause {
 
 .kubrick-info--ring--review .gs-score {
   position: absolute;
-  right: 0px;
+  right: 0;
   bottom: 18px
 }
 
@@ -20229,11 +20166,9 @@ a:hover .link-img .hover-play-pause {
 }
 
 .body-event--gdc-2015 .promo-strip--event div {
-  background: #feffffurl(https://static.gamespot.com/uploads/original/1511/15113458/2819242-gdc-eventpage-strip-cut.jpg) center center no-repeat
 }
 
 .body-event--gdc-2016 .promo-strip--event div {
-  background: #feffffurl(/bundles/gamespotsite/images/events/gdc2016/GDC-hubpage-strip.jpg) center center no-repeat
 }
 
 .body-event--game-awards-and-psx-2015 .promo-strip--event div {
@@ -21966,7 +21901,7 @@ a:hover .link-img .hover-play-pause {
   position: sticky;
   background-color: #fff;
   z-index: 202;
-  box-shadow: 0px 0px 2px 0px gray;
+  box-shadow: 0 0 2px 0 gray;
   padding-top: 4px
 }
 
@@ -26935,7 +26870,7 @@ h5.text-base {
 .pod-games--tabbed .inline-tabs:before {
   content: "";
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   height: 3px;
   width: 100%;
   display: block;
@@ -27826,7 +27761,7 @@ h5.text-base {
 .followBuy__body .expandable .signUp_header {
   font-size: 14px;
   border-top: 1px solid #eee;
-  padding: 17px 15px 0px;
+  padding: 17px 15px 0;
   line-height: 18px;
   color: #000
 }
@@ -29413,7 +29348,7 @@ h5.text-base {
 .pod-topgames--platforms .inline-tabs:before {
   content: "";
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   height: 3px;
   width: 100%;
   display: block;
@@ -33090,7 +33025,7 @@ a#qualtrics-feedback:hover {
   }
 
   .footer_logo_gb {
-    background-position: 0px 0px
+    background-position: 0 0px
   }
 
   .footer_logo_mc {
@@ -33098,7 +33033,7 @@ a#qualtrics-feedback:hover {
   }
 
   .footer_logo_gr {
-    background-position: 0px -17px
+    background-position: 0 -17px
   }
 
   .footer_logo_gf {
@@ -33125,7 +33060,7 @@ a#qualtrics-feedback:hover {
 }
 
 .newsletter-subscribe-box .newsletter-subscribe-form {
-  padding: 15px 15px 0px 15px
+  padding: 15px 15px 0 15px
 }
 
 .newsletter-subscribe-box .newsletter-subscribe-btn {

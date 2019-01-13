@@ -15,8 +15,8 @@ html {
 html, body {
   width: 100%;
   height: initial;
-  margin: 0px;
-  padding:0px;
+  margin: 0;
+  padding:0;
   border:none;
 }
 body {
@@ -130,7 +130,7 @@ a.text-block {
 
 .reviews-list {
   list-style: none;
-  margin: 0px;
+  margin: 0;
 }
 
 .reviews-list li {
@@ -138,7 +138,7 @@ a.text-block {
 }
 
 #block-copyright {
-  margin: 0px;
+  margin: 0;
 }
 
 #expanded-menu input[type="text"] {
@@ -159,7 +159,7 @@ a.text-block {
 
 .hamburger-top .icon-search {
   position: absolute;
-  left: 0px;
+  left: 0;
   bottom: 16px;
   width: 26px !important;
   height: 26px;
@@ -184,8 +184,8 @@ a.text-block {
   color: #feffff78 !important;
   width: 100px;
   height: 100%;
-  top: 0px;
-  margin: 0px !important;
+  top: 0;
+  margin: 0 !important;
   background: none !important;
 }
 
@@ -194,7 +194,7 @@ a.text-block {
 }
 
 #default-content .owl-theme .owl-nav .owl-prev {
-  left: 0px;
+  left: 0;
   text-align: left;
   padding-left: 32px !important;
   background-image: linear-gradient(to right, rgba(5, 0, 0, 0.15), transparent) !important;
@@ -205,14 +205,14 @@ a.text-block {
 }
 
 #default-content .owl-theme .owl-nav .owl-next {
-  right: 0px;
+  right: 0;
   text-align: right;
   padding-right: 32px !important;
   background-image: linear-gradient(to left, rgba(5, 0, 0, 0.15), transparent) !important;
 }
 
 .owl-theme .owl-nav {
-  margin: 0px;
+  margin: 0;
 }
 
 body.page-article {
@@ -276,7 +276,7 @@ body.page-article .ds-right .field__item h2::after {
 
 body.page-article .ds-right .field__item h2 {
   position: relative;
-  margin-bottom: 0px !important;
+  margin-bottom: 0 !important;
   display: inline-block;
   margin-left: 30px;
 }
@@ -389,7 +389,7 @@ body.page-article .tag-block {
 
 body.page-article .ds-standard-article {
   max-width: 1170px;
-  margin: 0px auto;
+  margin: 0 auto;
   padding: 1rem 1.5rem;
   background-color: #feffff;
 }
@@ -482,7 +482,7 @@ body.page-article {
 
 #account-dropdown .user-menu > ul > li a {
   height: 100%;
-  padding: 0px 30px;
+  padding: 0 30px;
   line-height: 34px;
   background: #fffffe;
   color: #2C7ABE !important;
@@ -532,8 +532,8 @@ body.page-article {
   height: 100%;
 }
 
-.page-article views-element-container {
-  padding: 1.2rem 0px;
+.page-article .views-element-container {
+  padding: 1.2rem 0;
 }
 
 #block-exposedformsearch-contentpage-1 .js-form-item {
@@ -586,7 +586,7 @@ body.page-article {
 #expanded-menu .user-loggedout a {
   border-bottom: none;
   color: #d9d9d9;
-  padding: 0px;
+  padding: 0;
   line-height: 34px;
   width: 98%;
   font-size: 1rem !important;
@@ -698,7 +698,7 @@ body.page-article {
 .block-comment,
 .block-reviews {
   width: 50%;
-  padding: 0px 1rem;
+  padding: 0 1rem;
   float: left;
 }
 .block-comment--comments {
@@ -776,7 +776,6 @@ body.page-article {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
   border: none;
   background: #2C7ABE;
   color: #feffff;
@@ -818,7 +817,6 @@ body.page-article {
   text-align: right;
   font-weight: bold;
   font-size: 1.2rem;
-  border: none;
   color: #2C7ABE;
   background: none;
   float: right;
@@ -836,7 +834,6 @@ body.page-article {
   text-align: center;
   font-weight: bold;
   font-size: 1.2rem;
-  width: 100%;
   border: 1px solid #2C7ABE;
   background: white;
   color: #2C7ABE;
@@ -864,7 +861,6 @@ body.page-article {
   margin: auto;
   line-height: 50px;
   font-size: 28px;
-  height: 100%;
   background: #fffffe;
   color: #2C7ABE !important;
   font-weight: bold;
@@ -960,7 +956,7 @@ body.page-article {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
   text-align: center;
   width: 100%;
-  margin: 0.5rem 0px;
+  margin: 0.5rem 0;
 }
 .pagination__wrapper:before, .pagination__wrapper:after {
   background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 17%, rgba(0, 0, 0, 0.1) 83%, rgba(0, 0, 0, 0) 100%);
@@ -1084,8 +1080,8 @@ body.page-article {
 .header-logo {
   width: initial;
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
 }
 .header-logo .site-logo img {
   object-fit: contain;
@@ -1093,15 +1089,15 @@ body.page-article {
 }
 .header-nav {
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: initial;
 }
 .header-right-container {
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   width: initial;
 }
 .header-icon.search-button {
@@ -1119,18 +1115,17 @@ body.page-article {
   display: block;
   white-space: nowrap;
   width: initial;
-  margin-top: 5px !important;
-  padding: 10px 0px;
+  margin: 5px 1rem 0 !important;
+  padding: 10px 0;
   line-height: 20px;
   color: #2C7ABE;
-  margin: 0 1rem;
   position: relative;
 }
 #login .btn-signin::after {
   position: absolute;
   content:'';
   right: -1rem;
-  top: 0px;
+  top: 0;
   height: 100%;
   width: 1px;
   background: #2C7ABE;
@@ -1143,7 +1138,7 @@ body.page-article {
   cursor: pointer;
 }
 .block-ad-299 {
-  padding: 0.5rem 0px;
+  padding: 0.5rem 0;
   border-top: 1px solid #eff2f4;
   border-bottom: 1px solid #eff2f4;
   margin-top: 10px;
@@ -1153,14 +1148,14 @@ body.page-article {
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #818583;
-  border-radius: 0px;
+  border-radius: 0;
 }
 #text-editer-comment {
   box-shadow: none;
   width: 100%;
   min-height: 62px;
   border: 1px solid #eff2f4;
-  border-radius: 0px;
+  border-radius: 0;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -1179,7 +1174,7 @@ body.page-article {
 
 .effect-hover-1 {
   height: 100%;
-  padding: 0px auto;
+  padding: 0 auto;
   line-height: 28px;
   background: #fffffe;
   color: #2C7ABE !important;
@@ -1228,7 +1223,7 @@ body.page-article {
   padding-right: 0 !important;
 }
 .social-share-button {
-  margin: 0px;
+  margin: 0;
 }
 #search-dropdown .x-close {
   position: absolute;
@@ -1266,7 +1261,7 @@ body[modal-search="true"] #search-dropdown::before {
   transform: translateX(-50%);
 }
 body[modal-search="true"] #search-dropdown{
-  top: 0px;
+  top: 0;
 }
 
 
@@ -1280,7 +1275,7 @@ body[modal-search="true"] #navbar::before {
   position: absolute;
   width: 100%;
   height: 100%;
-  left: 0px;
+  left: 0;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.7);
 }
@@ -1293,8 +1288,8 @@ z-index: 99;
   width: 100vw;
   height: 200vh;
   background-color: rgba(0,0,0,0.8);
-  right: 0px;
-  bottom: 0px;
+  right: 0;
+  bottom: 0;
   transform: translate(-50%, -50%);
 }
 #edit-keyword {
@@ -1336,7 +1331,7 @@ z-index: 99;
   position: fixed;
   right: -300px;
   bottom: 3.5rem;
-  box-shadow: 1px 1px 8px 0px grey;
+  box-shadow: 1px 1px 8px 0 grey;
   border-radius: 5px;
   z-index: 2222;
   background-color: #fffffe;
@@ -1395,9 +1390,9 @@ z-index: 99;
 }
 
 .page-search .divider input {
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 .filter-list__label {
   font-size: 1rem;
@@ -1409,14 +1404,14 @@ z-index: 99;
 
 #default-content {
   background-color: #fffffe;
-  padding: 0px;
+  padding: 0;
 }
 .promo-strip {
   background-color: #eff2f4;
 }
 .promo--container {
-  padding: 1.3rem 0px;
+  padding: 1.3rem 0;
 }
 .promo-strip.span12 {
-  padding: 0px;
+  padding: 0;
 }

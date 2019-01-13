@@ -24,7 +24,6 @@ html * {
   }
   
   input, textarea {
-    font-size: 16px;
     font-size: 1rem;
   }
   input::-ms-clear, textarea::-ms-clear {
@@ -94,16 +93,10 @@ html * {
     cursor: pointer;
     visibility: hidden;
     opacity: 0;
-    -webkit-transition: opacity 0.3s 0, visibility 0 0.3s;
-    -moz-transition: opacity 0.3s 0, visibility 0 0.3s;
-    transition: opacity 0.3s 0, visibility 0 0.3s;
   }
   .cd-user-modal.is-visible {
     visibility: visible;
     opacity: 1;
-    -webkit-transition: opacity 0.3s 0, visibility 0 0;
-    -moz-transition: opacity 0.3s 0, visibility 0 0;
-    transition: opacity 0.3s 0, visibility 0 0;
   }
   .cd-user-modal.is-visible .cd-user-modal-container {
     -webkit-transform: translateY(0);
@@ -202,7 +195,6 @@ html * {
     margin-top: 50px;
   }
   .cd-form label {
-    font-size: 14px;
     font-size: 0.875rem;
     float: left;
   }
@@ -246,11 +238,6 @@ html * {
   }
   .cd-form input.has-border {
     border: 1px solid #d2d8d8;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
-    appearance: none;
   }
   .cd-form input.has-border:focus {
     border-color: #343642;
@@ -271,11 +258,6 @@ html * {
     color: #FFF;
     font-weight: bold;
     border: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
-    appearance: none;
   }
   .no-touch .cd-form input[type=submit]:hover, .no-touch .cd-form input[type=submit]:focus {
     background: #e74c3c;
@@ -285,7 +267,6 @@ html * {
     display: inline-block;
     position: absolute;
     right: 0;
-    top: 0;
     padding: 6px 15px;
     border-left: 1px solid #d2d8d8;
     top: 50%;
@@ -295,7 +276,6 @@ html * {
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
-    font-size: 20px;
     font-size: 0.875rem;
     color: #343642;
     margin-left: 5px;
@@ -318,15 +298,11 @@ html * {
     padding: .8em;
     z-index: 2;
     color: #FFF;
-    font-size: 13px;
     font-size: 0.8125rem;
     border-radius: 0.25em;
     pointer-events: none;
     visibility: hidden;
     opacity: 0;
-    -webkit-transition: opacity 0.2s 0, visibility 0 0.2s;
-    -moz-transition: opacity 0.2s 0, visibility 0 0.2s;
-    transition: opacity 0.2s 0, visibility 0 0.2s;
   }
   .cd-form .cd-error-message::after {
     content: '';
@@ -342,9 +318,6 @@ html * {
   .cd-form .cd-error-message.is-visible {
     opacity: 1;
     visibility: visible;
-    -webkit-transition: opacity 0.2s 0, visibility 0 0;
-    -moz-transition: opacity 0.2s 0, visibility 0 0;
-    transition: opacity 0.2s 0, visibility 0 0;
   }
   @media only screen and (min-width: 600px) {
     .cd-form {
@@ -369,11 +342,10 @@ html * {
   
   .cd-form-message {
     padding: 1.4em 1.4em 0;
-    font-size: 14px;
     font-size: 0.875rem;
     line-height: 1.4;
     text-align: center;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
   @media only screen and (min-width: 600px) {
     .cd-form-message {
@@ -387,7 +359,6 @@ html * {
     left: 0;
     bottom: 15px;
     text-align: center;
-    font-size: 14px;
     font-size: 0.875rem;
   }
   .cd-form-bottom-message a {

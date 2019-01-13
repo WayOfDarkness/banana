@@ -13,7 +13,7 @@
   body.page-article .social-share {
     position: fixed;
     top: 50%;
-    left: 0px;
+    left: 0;
     bottom: unset;
     display: flex;
     flex-direction: column;
@@ -53,7 +53,7 @@
     left: 60px;
   }
   body.page-article .social-share[showSocialMobile="true"] {
-    left: 0px;
+    left: 0;
 
   }
   body.page-article .social-share {
@@ -61,7 +61,7 @@
     left: -60px;
   }
   body.page-article .social-share-button a:not(.have-number) {
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
   body.page-article .social-share-button a {
     padding: 0.5rem;
@@ -91,7 +91,7 @@
   body.page-article .social-share {
     background-color: #eceded;
     color: #15abd8;
-    margin: 0px;
+    margin: 0;
     padding: 1rem;
   }
   body.page-article .social-share-button .social-icon {
@@ -122,7 +122,7 @@
   body.page-article .tag-block {
     justify-content: flex-start;
     display: flex;
-    padding: 0px;
+    padding: 0;
   }
   a.text-block .simple-text  {
     padding: 0.25rem;
@@ -132,7 +132,7 @@
     width: 25%;
     max-width: 300px;
     display: inline-block;
-    margin: 0px;
+    margin: 0;
   }
   body.page-article .ds-wrapper > * {
     width: 100%;
@@ -224,6 +224,6 @@
   }
   .block-reviews {
     width: 100%;
-    padding-left: 0px;
+    padding-left: 0;
   }
 }
