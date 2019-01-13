@@ -154,7 +154,17 @@
   }
 
 }
+
+
 @media screen and (max-width: 979px) {
+  .rating-overflow {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .breakdown.span6 {
+    width: 50%;
+  }
   .promo-strip__item {
     width: 100%;
   }
@@ -167,6 +177,27 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .review-breakdown__inner > .row {
+    padding-right: 0px;
+    padding-bottom: 18rem;
+  }
+  .review-breakdown__inner .breakdown-score .score-word {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .review-breakdown__inner .breakdown.breakdown-bad dt,
+  .review-breakdown__inner .breakdown.breakdown-good dt {
+    width: 100%;
+    text-align: center;
+  }
+  .review-breakdown__inner .breakdown-score {
+    bottom: 0px;
+    top: unset;
+    right: unset;
+  }
+  .review-breakdown__inner .breakdown {
+    width: 100%;
+  }
   #default-content {
     display: flex;
     justify-content: space-between;
@@ -193,6 +224,28 @@
   }
 }
 
+@media screen and (max-width: 759px) {
+  .review-breakdown__inner {
+    padding-bottom: 0px;
+  }
+  /*.breakdown.span6 {*/
+    /*float: left;*/
+    /*width: 37%;*/
+  /*}*/
+  /*.review-breakdown__inner .breakdown-score {*/
+    /*right: 30px;*/
+    /*margin-right: 0;*/
+    /*margin-top: 0;*/
+    /*top: -50px;*/
+  /*}*/
+  /*.review-breakdown__inner {*/
+    /*padding-bottom: 0;*/
+  /*}*/
+  .review-breakdown__inner > .row {
+    padding-bottom: 12rem;
+  }
+}
+
 @media (max-width: 759px) {
   .paginate__results {
     display: block;
@@ -200,6 +253,28 @@
     clear: both;
     margin-bottom: 0.5rem;
   }
+}
+
+@media screen and (max-width: 603px) {
+  /*.review-breakdown {*/
+    /*padding-top: 0;*/
+  /*}*/
+  /*.breakdown.span6 {*/
+    /*float: none;*/
+    /*width: 100%;*/
+    /*padding-top: 0;*/
+  /*}*/
+  /*.breakdown-good__title, .breakdown-bad__title {*/
+    /*text-align: center;*/
+    /*margin-left: 0 !important;*/
+  /*}*/
+  /*.breakdown-good__item, .breakdown-bad__item {*/
+    /*padding-left: 10%;*/
+  /*}*/
+  /*.review-breakdown__inner .breakdown-score {*/
+    /*position: static;*/
+    /*margin-bottom: 20px;*/
+  /*}*/
 }
 
 @media screen and (max-width: 525px) {
