@@ -263,25 +263,25 @@ iframe {
 }
 
 .ellipseborder-top {
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: top;
   background-repeat: repeat-x
 }
 
 .ellipseborder-bottom {
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
 
 .ellipseborder-left {
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-repeat: repeat-y;
   background-position: left
 }
 
 .ellipseborder-vert {
-  background-image: url(../img/bg-border-light.png), url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png), url(../img/bd-border-light.png);
   background-position: top, bottom;
   background-repeat: repeat-x
 }
@@ -1210,7 +1210,7 @@ hr {
   border: 0;
   margin: 1.3rem 0;
   padding: 1px 0;
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -1294,7 +1294,7 @@ img[width], img[height] {
 figure[data-embed-type="gallery"] {
   margin: 1.3rem 0;
   position: relative;
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -1313,7 +1313,7 @@ figure[data-embed-type="gallery"]:before {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -1705,7 +1705,7 @@ blockquote[data-align="center"] {
   font-style: italic;
 
   color: #666;
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   font-size: .8125rem;
@@ -2158,7 +2158,7 @@ legend.full-width {
   width: 100%;
   margin-bottom: 1.3rem;
   line-height: 2.6rem;
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -4302,7 +4302,7 @@ body.has-promo-alert--breaking-news {
   bottom: 0;
   right: 0;
   top: 0;
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-repeat: repeat-y;
   background-position: left
 }
@@ -5705,7 +5705,7 @@ body.has-promo-alert--breaking-news {
     margin-right: -15px;
     padding: 0 15px .65rem 0;
     position: relative;
-    background-image: url(../img/bg-border-light.png);
+    background-image: url(../img/bd-border-light.png);
     background-repeat: repeat-y;
     background-position: right
   }
@@ -5715,7 +5715,7 @@ body.has-promo-alert--breaking-news {
     padding: .325rem 0;
     margin: 0 0 .65rem 9px;
     box-shadow: none;
-    background-image: url(../img/bg-border-light.png);
+    background-image: url(../img/bd-border-light.png);
     background-repeat: repeat-y;
     background-position: left;
     z-index: 2
@@ -6526,7 +6526,7 @@ p.author {
 }
 
 .auth-container .profile-border {
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   margin-bottom: 1.3rem
@@ -7153,7 +7153,7 @@ body.sub-sale #promo .available span {
   margin-bottom: .65rem;
   padding-bottom: 7px;
   position: relative;
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -7170,7 +7170,7 @@ body.sub-sale #promo .available span {
   margin-bottom: 4px;
   height: 2px;
   width: 100%;
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -7212,7 +7212,7 @@ body.sub-sale #promo .available span {
 
 @media (min-width: 980px) {
   .paginate-messages .paginate-order {
-    background-image: url(../img/bg-border-light.png);
+    background-image: url(../img/bd-border-light.png);
     background-repeat: repeat-y;
     background-position: left
   }
@@ -7720,7 +7720,7 @@ body.sub-sale #promo .available span {
 .inboxMessage, .inboxNotification {
   text-align: left;
   padding: 8px 0 0 0;
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: top;
   background-repeat: repeat-x
 }
@@ -7774,7 +7774,7 @@ body.sub-sale #promo .available span {
 .js-notification-show-more {
   text-align: center;
   display: block;
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: top;
   background-repeat: repeat-x
 }
@@ -8109,7 +8109,7 @@ input.flag {
 }
 
 .forum-section__top {
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   padding-bottom: .65rem;
@@ -8334,7 +8334,7 @@ input.flag {
   padding: 4px 0 12px 0;
   display: block;
   position: relative;
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -8565,7 +8565,7 @@ input.flag {
 }
 
 .mod-title {
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   padding: .65rem 0;
@@ -8624,7 +8624,7 @@ input.flag {
   padding: 4px 0 12px 0;
   display: block;
   position: relative;
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -8964,7 +8964,7 @@ input.flag {
 .filmstrip .image-comments .login-alert {
   text-align: center;
   background: #f2f2f3;
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -8988,7 +8988,7 @@ input.flag {
   padding: 10px;
   background-color: #ecedee;
   line-height: 16px;
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -9362,7 +9362,7 @@ input.flag {
   margin-bottom: 0;
   margin-top: .65rem;
   line-height: 1.95rem;
-  background-image: url(../img/bg-border-light.png), url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png), url(../img/bd-border-light.png);
   background-position: top, bottom;
   background-repeat: repeat-x
 }
@@ -10121,7 +10121,7 @@ tr.pm .time {
 .modal.modal-upload-image li {
   padding-top: 1.3rem;
   margin-top: 1.3rem;
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: top;
   background-repeat: repeat-x
 }
@@ -10593,7 +10593,7 @@ tr.pm .time {
 
 @media (min-width: 760px) {
   .paginate-refresh {
-    background-image: url(../img/bg-border-light.png);
+    background-image: url(../img/bd-border-light.png);
     background-repeat: repeat-y;
     background-position: left;
     margin-left: 15px
@@ -13964,7 +13964,7 @@ body.nocursor {
   }
 
   .no-touch .editorial .media + .media, .no-touch .forum-messages .media + .media, .no-touch .mapped-ad .media + .media {
-    background-image: url(../img/bg-border-light.png);
+    background-image: url(../img/bd-border-light.png);
     background-position: top;
     background-repeat: repeat-x
   }
@@ -14467,7 +14467,7 @@ body.nocursor {
 }
 
 .search-results .media-group {
-  background-image: url(../img/bg-border-light.png), url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png), url(../img/bd-border-light.png);
   background-position: top, bottom;
   background-repeat: repeat-x;
   background-position: bottom
@@ -14586,7 +14586,7 @@ body.nocursor {
 .image-gallery-pod__list > li + li {
   margin-top: .325rem;
   padding-top: .325rem;
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: top;
   background-repeat: repeat-x
 }
@@ -15395,7 +15395,7 @@ body.nocursor {
 .nav-tabs {
   margin-top: .65rem;
   padding-bottom: 2px;
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -15447,7 +15447,7 @@ body.nocursor {
 
 .inline-tabs {
   margin-bottom: 1.3rem;
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   background-position: center
@@ -17092,7 +17092,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 .pod-header .pod-div {
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   background-position: center left
@@ -20546,7 +20546,7 @@ a:hover .link-img .hover-play-pause {
 
 @media (min-width: 640px) {
   .river .media + .media {
-    background-image: url(../img/bg-border-light.png);
+    background-image: url(../img/bd-border-light.png);
     background-position: top;
     background-repeat: repeat-x
   }
@@ -20574,7 +20574,7 @@ a:hover .link-img .hover-play-pause {
     padding: 0 .65rem;
     margin-top: .65rem;
     margin-bottom: .65rem;
-    background-image: url(../img/bg-border-light.png);
+    background-image: url(../img/bd-border-light.png);
     background-repeat: repeat-y;
     background-position: left
   }
@@ -20660,7 +20660,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 .media-well--review-gs + .media-well--review-user > span {
-  background-image: url(/../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: top;
   background-repeat: repeat-x
 }
@@ -21074,7 +21074,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 .pod-cast .pod-section {
-  background-image: url(/bundles/phoenixsite/images/core/loose/bg-border-light-dashed.png);
+  background-image: url(/bundles/phoenixsite/images/core/loose/bd-border-lightt-dashed.png);
   background-repeat: repeat-x;
   background-position: top
 }
@@ -21100,7 +21100,7 @@ a:hover .link-img .hover-play-pause {
 .video-info {
   padding: .65rem 0;
   width: 100%;
-  background-image: url(/../img/bg-border-light.png), url(/../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png), url(../img/bd-border-light.png);
   background-position: top, bottom;
   background-repeat: repeat-x
 }
@@ -21281,7 +21281,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 .news-section {
-  background-image: url(/../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   display: block;
@@ -21441,7 +21441,7 @@ a:hover .link-img .hover-play-pause {
 .content-slug__author-social > li + li {
   padding-left: 10px;
   margin-left: 10px;
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-repeat: repeat-y;
   background-position: left
 }
@@ -21479,7 +21479,7 @@ a:hover .link-img .hover-play-pause {
 }
 
 .article--two-column .news-hdr {
-  background-image: url(/../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -22638,7 +22638,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .review-authors__alt {
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-repeat: repeat-y;
   background-position: left
 }
@@ -22776,7 +22776,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   bottom: -1px;
   left: 0;
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -23444,7 +23444,7 @@ h1, h2, h3, h4, h5, h6 {
 .userReview-hdr {
   margin-bottom: 1.3rem;
   padding-bottom: 1.3rem;
-  background-image: url(/../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -23702,7 +23702,7 @@ h1, h2, h3, h4, h5, h6 {
 .breakdown-helpful {
   background: #e4e5e7;
   padding: 15px;
-  background-image: url(/../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -25489,7 +25489,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .comment-messages .message {
   padding-bottom: 0;
-  background-image: url(/../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -25500,7 +25500,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .comment-messages .message .message {
   padding-top: .65rem;
-  background-image: url(/../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: top;
   background-repeat: repeat-x;
   last-child-padding: 0
@@ -26064,7 +26064,7 @@ h5.text-base {
 .popular {
   clear: both;
   padding-top: 1.3rem;
-  background-image: url(/../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: top;
   background-repeat: repeat-x
 }
@@ -26183,7 +26183,7 @@ h5.text-base {
 
 .pod-popular .media--small, .pod-popular .media--sponsored {
   padding: 3px 0 5px 0;
-  background-image: url(/../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -26227,7 +26227,7 @@ h5.text-base {
 }
 
 .pod-popular .media--is-top .media-body {
-  background-image: url(/../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -26347,7 +26347,7 @@ h5.text-base {
 }
 
 .profile-stats__title > span {
-  background-image: url(/../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   color: #4c4c4c;
@@ -26636,7 +26636,7 @@ h5.text-base {
 }
 
 .pod-miniUser__info + .pod-miniUser__stats {
-  background-image: url(/bundles/phoenixsite/images/core/loose/bg-border-light-dashed.png);
+  background-image: url(/bundles/phoenixsite/images/core/loose/bd-border-lightt-dashed.png);
   background-repeat: repeat-x;
   background-position: top
 }
@@ -26764,7 +26764,7 @@ h5.text-base {
   position: absolute;
   bottom: -1px;
   left: 0;
-  background-image: url(/../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -26837,7 +26837,7 @@ h5.text-base {
 
 .pod-games--tabbed .tab-pane--releaselist .media > a {
   padding: .325rem 7.5px;
-  background-image: url(/../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -27045,7 +27045,7 @@ h5.text-base {
   text-align: left;
   clear: none;
   margin: 0;
-  background-image: url(/../img/bg-border-light.png), url(/../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png), url(../img/bd-border-light.png);
   background-position: top, bottom;
   background-repeat: repeat-x
 }
@@ -27527,7 +27527,7 @@ h5.text-base {
 }
 
 .activity-list__item {
-  background-image: url(/bundles/phoenixsite/images/core/loose/bg-border-light-dashed.png);
+  background-image: url(/bundles/phoenixsite/images/core/loose/bd-border-lightt-dashed.png);
   background-repeat: repeat-x;
   background-position: top
 }
@@ -27927,7 +27927,7 @@ h5.text-base {
 .related-content__header-container {
   padding: .65rem 0;
   margin-bottom: .65rem;
-  background-image: url(/bundles/phoenixsite/images/core/loose/bg-border-light-dashed.png);
+  background-image: url(/bundles/phoenixsite/images/core/loose/bd-border-lightt-dashed.png);
   background-repeat: repeat-x;
   background-position: bottom
 }
@@ -28863,7 +28863,7 @@ h5.text-base {
   width: 2px;
   top: 0;
   left: 24px;
-  background-image: url(../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-repeat: repeat-y;
   background-position: left
 }
@@ -29047,7 +29047,7 @@ h5.text-base {
 }
 
 .schedule-item.more {
-  background-image: url(/../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   background-position: center center;
@@ -29838,7 +29838,7 @@ h5.text-base {
 
 .pod-related-games li {
   padding: .65rem 0;
-  background-image: url(/../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
@@ -31446,7 +31446,7 @@ h5.text-base {
 }
 
 .userStacks-edit .btn-success:after {
-  background-image: url(/../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x;
   content: "";
@@ -33383,7 +33383,7 @@ a#qualtrics-feedback:hover {
 }
 
 .ellipseborder-bottom {
-  background-image: url(/../img/bg-border-light.png);
+  background-image: url(../img/bd-border-light.png);
   background-position: bottom;
   background-repeat: repeat-x
 }
