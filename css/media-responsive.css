@@ -177,6 +177,11 @@
   }
 }
 @media screen and (max-width: 768px) {
+
+  .block-chat > div {
+    width: 100%;
+  }
+
   .review-breakdown__inner > .row {
     padding-right: 0px;
     padding-bottom: 18rem;
@@ -184,6 +189,10 @@
   .review-breakdown__inner .breakdown-score .score-word {
     margin-top: 2rem;
     margin-bottom: 1rem;
+  }
+  .review-breakdown__inner .breakdown.breakdown-bad,
+  .review-breakdown__inner .breakdown.breakdown-good {
+    padding: 1rem 10% !important;
   }
   .review-breakdown__inner .breakdown.breakdown-bad dt,
   .review-breakdown__inner .breakdown.breakdown-good dt {
@@ -284,6 +293,10 @@
   .filter-list__item {
     width: 100%;
     margin: 0;
+  }
+  .review-breakdown__inner .breakdown.breakdown-bad,
+  .review-breakdown__inner .breakdown.breakdown-good {
+    padding: 1rem 0px;
   }
 
 }
