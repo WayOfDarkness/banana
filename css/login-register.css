@@ -219,6 +219,9 @@ html * {
     background-repeat: no-repeat;
     background-position: 50% 0;
   }
+  .cd-form label.cd-name {
+    background-image: url("../img/icon/user-ninja-solid.svg");
+  }
   .cd-form label.cd-email {
     background-image: url("../img/icon/envelope-solid.svg");
   }
