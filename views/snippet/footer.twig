@@ -1,0 +1,43 @@
+<footer role="contentinfo">
+    <a href="/">
+        <div class="footer-custom-logo">{{settings.website_name}}</div>
+    </a>
+
+    {% if settings.facebook or settings.youtube %}
+        <div class="footer-social-links">
+            {% if settings.facebook %}
+                <a href="{{settings.facebook}}" class="social-icon facebook">Facebook</a>
+            {% endif %}
+            {% if settings.youtube %}
+                <a href="{{settings.youtube}}" class="social-icon youtube">YouTube</a>
+            {% endif %}
+        </div>
+    {% endif %}
+
+    <div class="region region-footer">
+        <nav class="block navigation" role="navigation">
+            <h2 class="visually-hidden">Footer menu</h2>
+            {% set footer_menu = Menu ('menu') %}
+            <ul class="menu">
+                {% for item in footer_menu.children %}
+                    <li class="menu-item font-arima">
+                        <a href="{{item.link}}">{{item.title}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+
+        <div id="block-copyright" class="block">
+            <div class="field field__items">
+                <div class="field__item">
+                    <div class="paragraph">
+                        <div class="clearfix text-formatted field field__item">
+                            <p>{{settings.copyright}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
