@@ -1114,6 +1114,8 @@ body.page-article {
 }
 .isLoginSuccess .user-avatar img {
   width: 100%;
+  border: 1px solid #eff2f4;
+  border-radius: 50%;
   height: 100%;
   object-fit: contain;
   background-position: center center;
