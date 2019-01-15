@@ -156,7 +156,7 @@ $("#register-form").submit(function (e) {
 	var data = {
 		name: $("#signup-name").val(),
 		email: $("#signup-email").val(),
-		password: $("#signup-password").val(),
+		password: $("#signup-password").val()
 	};
 
 	if (!data.name) {
@@ -235,6 +235,90 @@ $("#register-form").submit(function (e) {
 						}
 					});
 				}, 1000);
+			}
+		}
+	});
+});
+
+$("#login-form").submit(function (e) {
+	e.preventDefault();
+	
+	var data = {
+		email: $("#signin-email").val(),
+		password: $("#signin-password").val()
+	};
+
+	if (!data.email) {
+		$('#signin-email').addClass('has-error').next('span').addClass('is-visible');
+		$('#signin-email').addClass('has-error').next('span').html('Vui lòng nhập email!');
+		return;
+	} else {
+		$('#signin-email').removeClass('has-error').next('span').removeClass('is-visible');
+	}
+
+	if (!data.password) {
+		$('#signin-password').addClass('has-error').next('span').addClass('is-visible');
+		$('#signin-password').addClass('has-error').next('span').html('Vui lòng nhập mật khẩu!');
+		return;
+	} else {
+		$('#signin-password').removeClass('has-error').next('span').removeClass('is-visible');
+	}
+
+	$.ajax({
+		url: "/api/signin",
+		type: "POST",
+		data: data,
+		success: function (result) {
+			if (!result.code) {
+				setTimeout(function () {
+					window.location.reload();
+				}, 1000);
+			} else {
+				$('#signin-email').addClass('has-error').next('span').addClass('is-visible');
+				$('#signin-email').addClass('has-error').next('span').html('Tên tài khoản hoặc mật khẩu không đúng!');
+				$('#signin-password').addClass('has-error').next('span').addClass('is-visible');
+				$('#signin-password').addClass('has-error').next('span').html('Tên tài khoản hoặc mật khẩu không đúng!');
+			}
+		}
+	});
+});
+
+$("#reset-form").submit(function (e) {
+	e.preventDefault();
+	
+	var data = {
+		email: $("#reset-email").val(),
+	};
+
+	if (!data.email) {
+		$('#reset-email').addClass('has-error').next('span').addClass('is-visible');
+		$('#reset-email').addClass('has-error').next('span').html('Vui lòng nhập email!');
+		return;
+	} else {
+		$('#reset-email').removeClass('has-error').next('span').removeClass('is-visible');
+	}
+
+	if (!data.email.match("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$")) {
+		$('#reset-email').addClass('has-error').next('span').addClass('is-visible');
+		$('#reset-email').addClass('has-error').next('span').html('Email không đúng định dạng!');
+		return;
+	} else {
+		$('#reset-email').removeClass('has-error').next('span').removeClass('is-visible');
+	}
+
+	$.ajax({
+		url: "/api/forgotPassword",
+		type: "POST",
+		data: data,
+		success: function (result) {
+			if (!result.code) {
+				toastr.success(result.message);
+				setTimeout(function () {
+					window.location.reload();
+				}, 1000);
+			} else {
+				$('#reset-email').addClass('has-error').next('span').addClass('is-visible');
+				$('#reset-email').addClass('has-error').next('span').html('Email không tồn tại!');
 			}
 		}
 	});
