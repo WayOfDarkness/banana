@@ -1,6 +1,31 @@
 /*RESPONSIVE*/
 
 @media screen and (max-width: 1150px) {
+  .isLoginSuccess {
+    display: none;
+  }
+  .isLoginSuccess.mobile {
+    padding: 0.5rem;
+    border-left: 1px solid #2C7ABE;
+    border-right: 1px solid #2C7ABE;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #F7F7F7;
+  }
+  .isLoginSuccess .user-name {
+    font-size: 0.8rem;
+  }
+  .isLoginSuccess .user-avatar {
+    width: 24px;
+    height: 24px;
+  }
+  .isLoginSuccess .user-avatar img {}
+  .isLoginSuccess .user-name img {
+    width: 20px;
+  }
   .icon-menu-mobile {
     display: block;
   }
