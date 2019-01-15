@@ -1063,6 +1063,82 @@ body.page-article {
   display: flex;
   align-items: center;
 }
+#isLoginSuccess p {
+  margin: 0;
+}
+#isLoginSuccess .list-menu > p::before {
+  content: '>';
+  display: block;
+  position: absolute;
+  left: -40px;
+  transition: 0.2s ease-in;
+  background: url("../img/arrow.png") no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 17px;
+}
+#isLoginSuccess .list-menu > p:hover::before {
+  left: -5px;
+  animation: rotateZ infinite 1s linear;
+}
+#isLoginSuccess .list-menu > p:hover {
+  padding-left: 1.6rem;
+  background: #eff2f4;
+}
+#isLoginSuccess .list-menu > p {
+  border-left: 3px solid transparent;
+  background: white;
+  color: #2C7ABE;
+  line-height: 1rem;
+  padding: 1.2rem;
+  transition: ease-out 0.1s;
+  position: relative;
+}
+#isLoginSuccess .list-menu{
+  width: 100%;
+  overflow: hidden;
+  background: white;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0px;
+  border-left: 3px solid #2C7ABE;
+}
+#isLoginSuccess:hover .list-menu{
+  display: block;
+}
+#isLoginSuccess .user-avatar {
+  width: 35px;
+  height: 35px;
+  margin-right: 0.5rem;
+}
+#isLoginSuccess .user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-position: center center;
+}
+#isLoginSuccess {
+  position: relative;
+  height: 50px;
+  cursor: pointer;
+  padding: 5px;
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+@keyframes rotateZ {
+  from {
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+  to {
+    -moz-transform: rotateX(-360deg);
+    -ms-transform: rotateX(-360deg);
+    transform: rotateX(-360deg);
+  }
+}
 #login a {
   display: block;
   white-space: nowrap;

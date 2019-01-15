@@ -50,7 +50,7 @@ if ($(".page-article").length) {
   $('.ds-main .field--type-text-with-summary').find('h2').each(function (i, e) {
     $(this).attr('id', i);
     var g = $(this).html();
-    html += `<div class="scroll-animated cursor-pointer ${i%3==0?'active':''}" rel="#${i}">${g}</div>`;
+    html += `<div class="scroll-animated cursor-pointer ${i % 3 == 0 ? 'active' : ''}" rel="#${i}">${g}</div>`;
   })
 
   $('.ad-299').html(html);
@@ -145,22 +145,25 @@ function showLogin() {
   $('.cd-switcher li').eq(0).find('a').addClass('selected');
   $('.cd-switcher li').eq(1).find('a').removeClass('selected');
 }
+
 function checkLogin() {
   var login = false; //test
-  if(login) {
+  if (login) {
     submitNewComment();
-  }
-  else {
+  } else {
     showLogin();
   }
 }
+
 function submitNewComment() {
   console.log('submit new comment...');
 }
+
 //set status social mobile pos-fixed
 function showSocialMobile(bool) {
   $('.social-share').attr("showSocialMobile", bool);
 }
+
 function showModalSearch(bool) {
   console.log('click', bool);
   $('body').attr('modal-search', bool);
@@ -198,3 +201,32 @@ function doSearchMobile(e) {
 
 $('#edit-keyword').click(function (e) {
 })
+
+
+//check login
+let isLogin = true; //test
+
+function getStatusLogin() {
+  if (checkLogin()) {
+    $('#login').addClass('d-none');
+    $('#isLoginSuccess').removeClass('d-none');
+    console.log('user is login');
+  } else {
+    $('#login').removeClass('d-none');
+    $('#isLoginSuccess').addClass('d-none');
+    console.log('user is not login');
+  }
+}
+
+function checkLogin() {
+  if (isLogin)
+    return true;
+  return false;
+}
+
+function logout() {
+  isLogin=false; //test
+  getStatusLogin();
+}
+
+getStatusLogin();
