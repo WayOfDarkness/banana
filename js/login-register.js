@@ -114,7 +114,6 @@ jQuery(document).ready(function ($) {
 		$form_signup.find('input[type="email"]').toggleClass('has-error').next('span').toggleClass('is-visible');
 	});
 
-
 	if (!Modernizr.input.placeholder) {
 		$('[placeholder]').focus(function () {
 			var input = $(this);
@@ -149,3 +148,94 @@ jQuery.fn.putCursorAtEnd = function () {
 		}
 	});
 };
+
+$("#register-form").submit(function (e) {
+	e.preventDefault();
+	var confirmPassword = $("#signup-password-confirm").val();
+	
+	var data = {
+		name: $("#signup-name").val(),
+		email: $("#signup-email").val(),
+		password: $("#signup-password").val(),
+	};
+
+	if (!data.name) {
+		$('#signup-name').addClass('has-error').next('span').addClass('is-visible');
+		$('#signup-name').addClass('has-error').next('span').html('Vui lòng nhập tên tài khoản!');
+		return;
+	} else {
+		$('#signup-name').removeClass('has-error').next('span').removeClass('is-visible');
+	}
+
+	if (!data.email) {
+		$('#signup-email').addClass('has-error').next('span').addClass('is-visible');
+		$('#signup-email').addClass('has-error').next('span').html('Vui lòng nhập email!');
+		return;
+	} else {
+		$('#signup-email').removeClass('has-error').next('span').removeClass('is-visible');
+	}
+
+	if (!data.email.match("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$")) {
+		$('#signup-email').addClass('has-error').next('span').addClass('is-visible');
+		$('#signup-email').addClass('has-error').next('span').html('Email không đúng định dạng!');
+		return;
+	} else {
+		$('#signup-email').removeClass('has-error').next('span').removeClass('is-visible');
+	}
+
+	if (!data.password) {
+		$('#signup-password').addClass('has-error').next('span').addClass('is-visible');
+		$('#signup-password').addClass('has-error').next('span').html('Vui lòng nhập mật khẩu!');
+		return;
+	} else {
+		$('#signup-password').removeClass('has-error').next('span').removeClass('is-visible');
+	}
+
+	if (data.password.length < 6) {
+		$('#signup-password').addClass('has-error').next('span').addClass('is-visible');
+		$('#signup-password').addClass('has-error').next('span').html('Mật khẩu phải có ít nhất 6 kí tự!');
+		return;
+	} else {
+		$('#signup-password').removeClass('has-error').next('span').removeClass('is-visible');
+	}
+
+	if (!confirmPassword) {
+		$("#signup-password-confirm").addClass('has-error').next('span').addClass('is-visible');
+		$("#signup-password-confirm").addClass('has-error').next('span').html('Vui lòng nhập lại mật khẩu!');
+		return;
+	} else {
+		$("#signup-password-confirm").removeClass('has-error').next('span').removeClass('is-visible');
+	}
+
+	if (data.password != confirmPassword) {
+		$("#signup-password-confirm").addClass('has-error').next('span').addClass('is-visible');
+		$("#signup-password-confirm").addClass('has-error').next('span').html('Mật khẩu không trùng khớp!');
+		return;
+	} else {
+		$("#signup-password-confirm").removeClass('has-error').next('span').removeClass('is-visible');
+	}
+
+	$.ajax({
+		url: "/api/signup",
+		type: "POST",
+		data: data,
+		success: function (result) {
+			if (!result.code) {
+				setTimeout(function () {
+					$.ajax({
+						url: "/api/signin",
+						type: "POST",
+						data: data,
+						success: function (result) {
+							if (!result.code) {
+								setTimeout(function () {
+									window.location.reload();
+								}, 1000);
+							}
+						}
+					});
+				}, 1000);
+			}
+		}
+	});
+});
