@@ -1504,3 +1504,6 @@ main {
   object-fit: cover;
   background-position: center center;
 }
+.text-orange {
+  color: #e74c3c !important;
+}

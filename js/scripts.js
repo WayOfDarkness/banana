@@ -213,11 +213,17 @@ function getStatusLogin() {
     $('#login').addClass('d-none');
     $('.isLoginSuccess').removeClass('d-none');
     $('.hamburger-bottom').addClass('d-none');
+    $('.isLogin').removeClass('d-none');
+    $('.isNotLogin').addClass('d-none');
+
     console.log('user is login');
   } else {
     $('#login').removeClass('d-none');
     $('.isLoginSuccess').addClass('d-none');
     $('.hamburger-bottom').removeClass('d-none');
+    $('.isLogin').addClass('d-none');
+    $('.isNotLogin').removeClass('d-none');
+
     console.log('user is not login');
   }
 }

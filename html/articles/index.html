@@ -85,15 +85,17 @@
               </nav>
             </div>
           </div>
-          <div class="d-none isLoginSuccess mobile">
-            <div class="user-avatar">
-              <img src="../../img/avatar-default.png" alt="avatar">
-            </div>
-            <p class="user-name">Nguyễn Văng Xa Vãi <img src="../../img/icon-menu-down.png" alt="menu-down" width="26px"></p>
-            <div class="list-menu">
-              <p onclick="logout()">Đăng xuất</p>
-            </div>
-          </div>
+
+          <!--<div class="d-none isLoginSuccess mobile">-->
+            <!--<div class="user-avatar">-->
+              <!--<img src="../../img/avatar-default.png" alt="avatar">-->
+            <!--</div>-->
+            <!--<p class="user-name">Nguyễn Văng Xa Vãi <img src="../../img/icon-menu-down.png" alt="menu-down" width="26px"></p>-->
+            <!--<div class="list-menu">-->
+              <!--<p onclick="logout()">Đăng xuất</p>-->
+            <!--</div>-->
+          <!--</div>-->
+
           <div class="header-right-container">
             <div class="header-icon search-button">
               <div class="icon-search" onclick="showModalSearch(true)"></div>
@@ -213,8 +215,17 @@
               </nav>
             </div>
           </div>
+
+          <div class="d-none isLoginSuccess mobile">
+            <div class="user-avatar">
+              <img src="../../img/avatar-default.png" alt="avatar">
+            </div>
+            <p class="user-name">Nguyễn Văng Xa Vãi <img src="../../img/icon-menu-down.png" alt="menu-down" width="26px"></p>
+          </div>
+          <p class="isLogin d-none text-orange border" onclick="logout()">Đăng xuất</p>
           <div class="hamburger-bottom">
             <div id="toolbar-item-lightswitch">&nbsp;</div>
+
             <div class="user-menu user-loggedout main-nav">
               <ul>
                 <li><a class="cd-signin" href="javascript:;">Đăng nhập</a></li>
