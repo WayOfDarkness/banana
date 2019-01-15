@@ -1063,10 +1063,10 @@ body.page-article {
   display: flex;
   align-items: center;
 }
-#isLoginSuccess p {
+.isLoginSuccess p {
   margin: 0;
 }
-#isLoginSuccess .list-menu > p::before {
+.isLoginSuccess .list-menu > p::before {
   content: '>';
   display: block;
   position: absolute;
@@ -1077,15 +1077,15 @@ body.page-article {
   width: 30px;
   height: 17px;
 }
-#isLoginSuccess .list-menu > p:hover::before {
+.isLoginSuccess .list-menu > p:hover::before {
   left: -5px;
   animation: rotateZ infinite 1s linear;
 }
-#isLoginSuccess .list-menu > p:hover {
+.isLoginSuccess .list-menu > p:hover {
   padding-left: 1.6rem;
   background: #eff2f4;
 }
-#isLoginSuccess .list-menu > p {
+.isLoginSuccess .list-menu > p {
   border-left: 3px solid transparent;
   background: white;
   color: #2C7ABE;
@@ -1094,32 +1094,44 @@ body.page-article {
   transition: ease-out 0.1s;
   position: relative;
 }
-#isLoginSuccess .list-menu{
+.isLoginSuccess .list-menu{
   width: 100%;
   overflow: hidden;
   background: white;
   display: none;
   position: absolute;
   top: 100%;
-  right: 0px;
+  right: 3px;
   border-left: 3px solid #2C7ABE;
 }
-#isLoginSuccess:hover .list-menu{
+.isLoginSuccess:hover .list-menu{
   display: block;
 }
-#isLoginSuccess .user-avatar {
+.isLoginSuccess .user-avatar {
   width: 35px;
   height: 35px;
   margin-right: 0.5rem;
 }
-#isLoginSuccess .user-avatar img {
+.isLoginSuccess .user-avatar img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   background-position: center center;
 }
-#isLoginSuccess {
+.isLoginSuccess.mobile {
+  display: none;
+}
+.isLoginSuccess .user-name img {
+  margin-left: 0.8rem;
+}
+.isLoginSuccess .user-name {
+  color: #2C7ABE;
+  display: flex;
+  align-items: center;
+}
+.isLoginSuccess {
   position: relative;
+  border-left: 3px solid #2C7ABE;
   height: 50px;
   cursor: pointer;
   padding: 5px;
