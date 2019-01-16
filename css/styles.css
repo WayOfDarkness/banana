@@ -1507,3 +1507,11 @@ main {
 .text-orange {
   color: #e74c3c !important;
 }
+.comment-avatar {
+  width: 45px;
+  height: 45px;
+  padding: 3px;
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: #eff2f4;
+}
