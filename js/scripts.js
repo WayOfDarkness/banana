@@ -239,3 +239,26 @@ function logout() {
   getStatusLogin();
 }
 
+
+//post review
+function postReview() {
+  if(checkLogin()) {
+    toast('Cảm ơn bạn đã Review!', 3000);
+  }
+  else {
+    toast('Bạn cần đăng nhập để Reivew', 3000);
+  }
+}
+
+
+//toast
+function toast(string, milisecond) {
+  let toast = $('.toast');
+  toast.find('.toast-content').html(string);
+  toast.addClass('active');
+  console.log('open toast');
+  setTimeout(function () {
+    toast.removeClass('active');
+    console.log('close toast');
+  },milisecond)
+}

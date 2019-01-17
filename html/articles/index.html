@@ -45,6 +45,12 @@
 </head>
 
 <body class="path-node page-article clearfix" modal-search="false">
+
+<div class="toast">
+  <div class="toast-content">
+    toast
+  </div>
+</div>
 <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
   <div class="loading-overlay"></div>
   <div class="layout-container">
@@ -1085,7 +1091,7 @@
                       <div class="text-editer clearfix">
                         <textarea name="comment" placeholder="Thêm bình luận..." id="text-editer-comment"></textarea>
                         <div class="review-pusher">
-                          <button class="review-pusher-item btn-submit-comment effect-hover-1" onclick="checkLogin()">
+                          <button class="review-pusher-item btn-submit-comment effect-hover-1" onclick="postReview()">
                             Đăng đánh giá
                           </button>
                           <dd class="pod-header__item review-pusher-item pod-header__filters pod-header__filters--js no-flex">
