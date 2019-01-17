@@ -665,6 +665,7 @@ body.page-article {
 
 .comment-avatar {
   float: left;
+  margin-right: 1rem;
 }
 .comment-follow > img {
   background-size: 1rem 1rem;
