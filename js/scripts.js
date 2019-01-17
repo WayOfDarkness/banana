@@ -109,9 +109,9 @@ $('.config-tab').click(function (e) {
 
 $('.feed-view').click(function () {
   if ($(this).attr('id') == 'feed-view-grid')
-    $('.filter-results.js-filter-results.editorial.thirds').removeClass('river').addClass('grid');
+    $('.filter-results.editorial.thirds').removeClass('river').addClass('grid');
   else
-    $('.filter-results.js-filter-results.editorial.thirds').removeClass('grid').addClass('river');
+    $('.filter-results.editorial.thirds').removeClass('grid').addClass('river');
 })
 
 //click button sign in, sign up
