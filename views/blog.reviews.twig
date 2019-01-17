@@ -112,97 +112,93 @@
 							</section>
 
 							<div class="primary-content span8 medium-span7">
-								<div class="pod pod-river">
-									<dl class="pod-header has-feed-group">
-										<dt class="pod-header__item">
-											<div class="pod-title">
-												<h4>Tin tức mới nhất</h4>
-												<span class="pod-div" role="presentation" aria-hidden="true"></span>
-											</div>
-										</dt>
-										<dd class="pod-header__item pod-header__filters pod-header__filters--js no-flex">
-											<div class="pod-header__filters--select">
-												<select name="sort" class="js-filter-load-page" data-filter="Tin tức">
-													<option value="mới nhất" selected>Mới nhất</option>
-													<option value="phổ biến nhất">Phổ biến nhất</option>
-												</select>
-											</div>
-										</dd>
-										<dd class="pod-header__item pod-header__grid no-flex hide-mobile">
-											<a href="javascript:;" id="feed-view-river" class="feed-view on">
-												<svg version="1.1" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" class="symbol symbol-reorder">
-													<path d="M24 21v2q0 0.406-0.297 0.703t-0.703 0.297h-22q-0.406 0-0.703-0.297t-0.297-0.703v-2q0-0.406 0.297-0.703t0.703-0.297h22q0.406 0 0.703 0.297t0.297 0.703zM24 13v2q0 0.406-0.297 0.703t-0.703 0.297h-22q-0.406 0-0.703-0.297t-0.297-0.703v-2q0-0.406 0.297-0.703t0.703-0.297h22q0.406 0 0.703 0.297t0.297 0.703zM24 5v2q0 0.406-0.297 0.703t-0.703 0.297h-22q-0.406 0-0.703-0.297t-0.297-0.703v-2q0-0.406 0.297-0.703t0.703-0.297h22q0.406 0 0.703 0.297t0.297 0.703z" />
-												</svg>
-											</a>
-										</dd>
-										<dd class="pod-header__item pod-header__grid no-flex hide-mobile">
-											<a href="javascript:;" id="feed-view-grid" class="feed-view">
-												<svg version="1.1" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" class="symbol symbol-th">
-													<path d="M8 19.5v3q0 0.625-0.438 1.062t-1.062 0.438h-5q-0.625 0-1.062-0.438t-0.438-1.062v-3q0-0.625 0.438-1.062t1.062-0.438h5q0.625 0 1.062 0.438t0.438 1.062zM8 11.5v3q0 0.625-0.438 1.062t-1.062 0.438h-5q-0.625 0-1.062-0.438t-0.438-1.062v-3q0-0.625 0.438-1.062t1.062-0.438h5q0.625 0 1.062 0.438t0.438 1.062zM18 19.5v3q0 0.625-0.438 1.062t-1.062 0.438h-5q-0.625 0-1.062-0.438t-0.438-1.062v-3q0-0.625 0.438-1.062t1.062-0.438h5q0.625 0 1.062 0.438t0.438 1.062zM8 3.5v3q0 0.625-0.438 1.062t-1.062 0.438h-5q-0.625 0-1.062-0.438t-0.438-1.062v-3q0-0.625 0.438-1.062t1.062-0.438h5q0.625 0 1.062 0.438t0.438 1.062zM18 11.5v3q0 0.625-0.438 1.062t-1.062 0.438h-5q-0.625 0-1.062-0.438t-0.438-1.062v-3q0-0.625 0.438-1.062t1.062-0.438h5q0.625 0 1.062 0.438t0.438 1.062zM28 19.5v3q0 0.625-0.438 1.062t-1.062 0.438h-5q-0.625 0-1.062-0.438t-0.438-1.062v-3q0-0.625 0.438-1.062t1.062-0.438h5q0.625 0 1.062 0.438t0.438 1.062zM18 3.5v3q0 0.625-0.438 1.062t-1.062 0.438h-5q-0.625 0-1.062-0.438t-0.438-1.062v-3q0-0.625 0.438-1.062t1.062-0.438h5q0.625 0 1.062 0.438t0.438 1.062zM28 11.5v3q0 0.625-0.438 1.062t-1.062 0.438h-5q-0.625 0-1.062-0.438t-0.438-1.062v-3q0-0.625 0.438-1.062t1.062-0.438h5q0.625 0 1.062 0.438t0.438 1.062zM28 3.5v3q0 0.625-0.438 1.062t-1.062 0.438h-5q-0.625 0-1.062-0.438t-0.438-1.062v-3q0-0.625 0.438-1.062t1.062-0.438h5q0.625 0 1.062 0.438t0.438 1.062z" />
-												</svg>
-											</a>
-										</dd>
-									</dl>
-
-									<div class="pod-filter">
-										<section class="filter-results editorial thirds river">
-											{% for item in blog.articles %}
-												<a href="{{item.url}}">
-													<figure class="media-figure media-figure--river">
-														<div class="media-img imgflare--river">
-															<img src="{{item.image | upload_url}}" alt="{{item.title}}"/>
-															<div class="media-type media-type--right">
-																<svg version="1.1" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"
-																	class="symbol symbol-comments">
-																	<path d="M22 12q0 2.172-1.469 4.016t-4.008 2.914-5.523 1.070q-1.344 0-2.75-0.25-1.937 1.375-4.344 2-0.562 0.141-1.344 0.25h-0.047q-0.172 0-0.32-0.125t-0.18-0.328q-0.016-0.047-0.016-0.102t0.008-0.102 0.031-0.094l0.039-0.078t0.055-0.086 0.063-0.078 0.070-0.078 0.063-0.070q0.078-0.094 0.359-0.391t0.406-0.461 0.352-0.453 0.391-0.602 0.32-0.688q-1.937-1.125-3.047-2.766t-1.109-3.5q0-2.172 1.469-4.016t4.008-2.914 5.523-1.070 5.523 1.070 4.008 2.914 1.469 4.016zM28 16q0 1.875-1.109 3.508t-3.047 2.758q0.156 0.375 0.32 0.688t0.391 0.602 0.352 0.453 0.406 0.461 0.359 0.391q0.016 0.016 0.063 0.070t0.070 0.078 0.063 0.078 0.055 0.086l0.039 0.078t0.031 0.094 0.008 0.102-0.016 0.102q-0.047 0.219-0.203 0.344t-0.344 0.109q-0.781-0.109-1.344-0.25-2.406-0.625-4.344-2-1.406 0.25-2.75 0.25-4.234 0-7.375-2.063 0.906 0.063 1.375 0.063 2.516 0 4.828-0.703t4.125-2.016q1.953-1.437 3-3.313t1.047-3.969q0-1.203-0.359-2.375 2.016 1.109 3.187 2.781t1.172 3.594z"></path>
-																</svg>{{item.commnent}}
-																<svg version="1.1" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"
-																	class="symbol symbol-thumbs-up">
-																	<path d="M4 21q0-0.406-0.297-0.703t-0.703-0.297q-0.422 0-0.711 0.297t-0.289 0.703q0 0.422 0.289 0.711t0.711 0.289q0.406 0 0.703-0.289t0.297-0.711zM6.5 13v10q0 0.406-0.297 0.703t-0.703 0.297h-4.5q-0.406 0-0.703-0.297t-0.297-0.703v-10q0-0.406 0.297-0.703t0.703-0.297h4.5q0.406 0 0.703 0.297t0.297 0.703zM25 13q0 1.344-0.859 2.328 0.234 0.688 0.234 1.188 0.047 1.188-0.672 2.141 0.266 0.875 0 1.828-0.234 0.891-0.844 1.469 0.141 1.75-0.766 2.828-1 1.188-3.078 1.219h-2.016q-1.031 0-2.25-0.242t-1.898-0.453-1.883-0.617q-1.922-0.672-2.469-0.688-0.406-0.016-0.703-0.305t-0.297-0.695v-10.016q0-0.391 0.281-0.68t0.672-0.32q0.375-0.031 1.188-0.922t1.578-1.891q1.062-1.359 1.578-1.875 0.281-0.281 0.484-0.75t0.273-0.758 0.211-0.945q0.109-0.609 0.195-0.953t0.305-0.812 0.531-0.781q0.297-0.297 0.703-0.297 0.719 0 1.289 0.164t0.938 0.406 0.625 0.633 0.375 0.703 0.187 0.781 0.078 0.703 0.008 0.609q0 0.594-0.148 1.188t-0.297 0.938-0.43 0.875q-0.047 0.094-0.156 0.281t-0.172 0.344-0.125 0.375h4.328q1.219 0 2.109 0.891t0.891 2.109z"></path>
-																</svg>{{item.like}}
+								<div>
+									<div class="pod pod-river">
+										<dl class="pod-header has-feed-group no-layout">
+											<dt class="pod-header__item">
+												<div class="pod-title">
+													<h4>Đánh giá mới nhất</h4>
+													<span class="pod-div" role="presentation" aria-hidden="true"></span>
+												</div>
+											</dt>
+											<dd class="pod-header__item pod-header__filters no-flex">
+												<div class="pod-header__filters--select">
+													<select name="sort" class="js-filter-load-page" data-filter="Đánh giá">
+														<option value="mới nhất" selected="">Mới nhất</option>
+														<option value="phổ biến nhất">Phổ biến nhất</option>
+														<option value="cao nhất">Điểm từ cao đến thấp</option>
+														<option value="thấp nhất">Điểm từ thấp đến cao</option>
+													</select>
+												</div>
+											</dd>
+										</dl>
+										<div class="divider">
+											<form method="get" class="sort-search">
+												<fieldset>
+													<input type="text" name="q" placeholder="Tìm kiếm:" autocomplete="off" class="ready"/>
+													<input type="hidden" name="article" value="reviews"/>
+												</fieldset>
+											</form>
+										</div>
+										<div id="js-sort-filter-results">
+											<section class="editorial river">
+												{% for item in blog.articles %}
+													<article class="media media-game media-game">
+														<a href="{{item.url}}">
+															<div class="media-well media-well--review">
+																<div class="media-well--review-gs">
+																	<div class="media-well--review-score">
+																		<span class="content">{{item.point}}</span>
+																	</div>
+																	<span class="score-word">{{item.point_letter}}</span>
+																</div>
 															</div>
-														</div>
-													</figure>
-													<div class="media-body">
-														<h3 class="media-title">{{item.title}}</h3>
-														<p class="media-deck">{{item.description}}</p>
-														<footer class="media-meta">
-															<time class="media-date" datetime="{{item.crearted_at}}">
-																7 hours, 21 minutes ago
-															</time>
-														</footer>
-													</div>
-												</a>
-											</article>
-											{% endfor %}
-										</section>
+															<figure class="media-figure media-figure--medium">
+																<div class="media-img imgflare--boxart">
+																	<img src="{{item.image | upload_url}}" alt="{{item.title}}"/>
+																</div>
+															</figure>
+															<div class="media-body">
+																<h3 class="media-title">{{item.title}}</h3>
+																<p class="media-deck">{{item.description}}</p>
+																<footer class="media-meta">
+																	<time class="media-date" datetime="{{item.created_at}}">
+																		5 days, 1 hour ago
+																	</time>
+																</footer>
+															</div>
+														</a>
+													</article>
+												{% endfor %}
+											</section>
 
-										<div class="pagination__wrapper">
-											<ul class="pagination">
-												<li><button class="prev" title="previous page">&#10094;</button></li>
-												<li>
-													<button title="first page - page 1">1</button>
-												</li>
-												<li>
-													<span>...</span>
-												</li>
-												<li>
-													<button title="page 8">8</button>
-												</li>
-												<li>
-													<button class="active" title="current page - page 9">9</button>
-												</li>
-												<li>
-													<button title="page 10">10</button>
-												</li>
-												<li>
-													<span>...</span>
-												</li>
-												<li>
-													<button title="last page - page 69">69</button>
-												</li>
-												<li><button class="next" title="next page">&#10095;</button></li>
-											</ul>
+											<div class="pagination__wrapper">
+												<ul class="pagination">
+													<li><button class="prev" title="previous page">&#10094;</button></li>
+													<li>
+														<button title="first page - page 1">1</button>
+													</li>
+													<li>
+														<span>...</span>
+													</li>
+													<li>
+														<button title="page 8">8</button>
+													</li>
+													<li>
+														<button class="active" title="current page - page 9">9</button>
+													</li>
+													<li>
+														<button title="page 10">10</button>
+													</li>
+													<li>
+														<span>...</span>
+													</li>
+													<li>
+														<button title="last page - page 69">69</button>
+													</li>
+													<li><button class="next" title="next page">&#10095;</button></li>
+												</ul>
+											</div>
 										</div>
 									</div>
 								</div>
