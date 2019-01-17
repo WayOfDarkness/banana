@@ -1517,18 +1517,37 @@ main {
 }
 
 .toast.active {
-  bottom: 1rem;
+  right: 3rem;
   transition-duration: 0.5s;
 }
 .toast {
+  max-width: 250px;
   position: fixed;
-  right: 1rem;
+  right: -320px;
   transition-duration: 2s;
-  bottom: -100px;
+  bottom: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   z-index: 222222;
   background: #2C7ABE;
   font-size: 1.2rem;
   color: white;
+}
+
+.toast .other-effect:not(.mario) {
+  display: none;
+}
+.toast .other-effect.mario img:nth-child(1) {
+  position: absolute;
+  bottom: 0px;
+  width: 60px;
+  right: 0px;
+  transform: translate(85%, 5px) rotateY(180deg);
+}
+.toast .other-effect.mario img:nth-child(2) {
+  position: absolute;
+  bottom: 0px;
+  width: 40px;
+  left: 0px;
+  transform: translate(-105%, 3px) rotateY(180deg);
 }
