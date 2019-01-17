@@ -256,6 +256,14 @@ function toast(string, milisecond) {
   let toast = $('.toast');
   toast.find('.toast-content').html(string);
   toast.addClass('active');
+  if(checkLogin()) {
+    console.log('reive with mario');
+    $('.other-effect').addClass('mario');
+  }
+  else {
+    console.log('reive without mario');
+    $('.other-effect').removeClass('mario');
+  }
   console.log('open toast');
   setTimeout(function () {
     toast.removeClass('active');
