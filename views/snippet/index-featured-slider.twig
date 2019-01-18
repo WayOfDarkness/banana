@@ -7,7 +7,7 @@
                     <a href="{{item.url}}">
                         <figure class="media-figure">
                             <div class="media-img">
-                                <img src="{{item.image | upload_url}}" alt="{{item.title}}" title="{{item.title}}"/>
+                                <img src="{{item.image | upload_url | resize (640)}}" alt="{{item.title}}" title="{{item.title}}"/>
                             </div>
                             <span class="content-type hide-mobile content-symbol--medium"></span>
                             <div class="media-type media-type--right">
