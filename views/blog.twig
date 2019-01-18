@@ -1,8 +1,9 @@
 {% extends "layout.twig" %}
+
 {% block pre_include %}
-    <title>
-        {{blog.title}}</title>
+    <title>{{blog.title}}</title>
 {% endblock %}
+
 {% block post_include %}
     <script src="{{shop.static}}/libs/twbsPagination.min.js"></script>
     <script type="text/javascript">
@@ -37,14 +38,11 @@
                             href = location.pathname;
                          else 
                             href = location.pathname + '?page=' + page;
-                        
                     } else {
                         if (href.indexOf('&page=') > -1) 
                             href = href.substring(0, href.indexOf('&page='));
-                        
                         if (page > 1) 
                             href = href + '&page=' + page;
-                        
                     }
                     location.href = href;
                 }
@@ -52,6 +50,7 @@
         }
     </script>
 {% endblock %}
+
 {% block content %}
     <div id="site-wrapper">
         <div id="mantle_skin">
@@ -72,10 +71,8 @@
                             <div>
                                 <div class="content">
                                     <summary class="promo--metadata">
-                                        <h2>
-                                            {{item.title}}</h2>
-                                        <span>
-                                            {{item.description}}</span>
+                                        <h2>{{item.title}}</h2>
+                                        <span>{{item.description}}</span>
                                     </summary>
                                 </div>
                             </div>
@@ -106,7 +103,8 @@
                                                 </figure>
                                                 <div class="media-body">
                                                     <h3 class="media-title promoTitle--rhythm--inc">
-                                                        {{item.title}}</h3>
+                                                        {{item.title}}
+													</h3>
                                                 </div>
                                             </a>
                                         </li>
