@@ -37,9 +37,40 @@ $('.pod-header__grid').click(function () {
 //BLOG RUN THIS CODE
 if ($(".page-blog").length) {
   console.log("Blog");
+}
+
+//scroll to loadmore
+var load_all = false;
+window.onscroll = function (e) {
+  let marginBottom = 600;
+  let numberArticleLoadmore = 10;
+  if (!load_all && (window.innerHeight + window.scrollY) >= document.body.offsetHeight - marginBottom) {
+    viewMore(numberArticleLoadmore);
+  }
+};
+
+function viewMore(numberOfArticle) {
+
+  let arrArticle = [];
+
+  //get array article
+  for (let i = 0; i < numberOfArticle; i++) {
+    let rd = Math.random()*10;
+    rd=rd-rd%1;
+    let temp = $('.media.media-article').eq(rd).clone();
+    arrArticle.push(temp);
+  }
+
+  //appent
+  arrArticle.forEach(function (article) {
+    $('.editorial.river.js-load-forever-container').append(article);
+  })
 
 }
+//end scroll to loadmore
 //END BLOG PAGE
+
+
 
 //ARTICLE RUN THIS CODE
 if ($(".page-article").length) {
@@ -235,17 +266,16 @@ function checkLogin() {
 }
 
 function logout() {
-  isLogin=false; //test
+  isLogin = false; //test
   getStatusLogin();
 }
 
 
 //post review
 function postReview() {
-  if(checkLogin()) {
+  if (checkLogin()) {
     toast('Cảm ơn bạn đã Review!', 3000);
-  }
-  else {
+  } else {
     toast('Bạn cần đăng nhập để Reivew', 3000);
   }
 }
@@ -256,11 +286,10 @@ function toast(string, milisecond) {
   let toast = $('.toast');
   toast.find('.toast-content').html(string);
   toast.addClass('active');
-  if(checkLogin()) {
+  if (checkLogin()) {
     console.log('reive with mario');
     $('.other-effect').addClass('mario');
-  }
-  else {
+  } else {
     console.log('reive without mario');
     $('.other-effect').removeClass('mario');
   }
@@ -268,5 +297,5 @@ function toast(string, milisecond) {
   setTimeout(function () {
     toast.removeClass('active');
     console.log('close toast');
-  },milisecond)
+  }, milisecond)
 }
