@@ -1,4 +1,5 @@
 {% set featured_post = settings.index_featured_post %}
+{% if featured_post %}
 <section class="promo--container container row span12">
     <a href="{{featured_post.url}}" class="promo--object promo--offset-wide promo-type--overlay">
         <div class="promo--image">
@@ -16,3 +17,4 @@
         </div>
     </a>
 </section>
+{% endif %}
