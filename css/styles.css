@@ -903,9 +903,16 @@ body.page-article {
 .clear:after, .pagination:after {
   clear: both;
 }
-
+.pagination::before {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 17%, rgba(0, 0, 0, 0.1) 83%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  top: 0px;
+  left: 0px;
+}
 .pagination__wrapper {
-  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 17%, white 83%, rgba(255, 255, 255, 0) 100%);
+  position: relative;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
   text-align: center;
   width: 100%;
@@ -1135,7 +1142,7 @@ body.page-article {
 .isLoginSuccess {
   position: relative;
   border-left: 3px solid #2C7ABE;
-  height: 50px;
+  height: 35px;
   cursor: pointer;
   padding: 5px;
   padding-right: 1rem;
