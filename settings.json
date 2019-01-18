@@ -38,7 +38,7 @@
           ]
         },
         {
-          "title": "Sự kiện sắp tới",
+          "title": "Bài viết nổi bật",
           "attributes": [
             {
               "label": "Thời gian sự kiện 1 ",
@@ -369,49 +369,64 @@
       ]
     },
     {
-      "title": "Popup - Khách hàng",
-      "id": "popup",
+      "title": "Bài viết nổi bật",
+      "id": "featured-post",
       "groups": [
         {
-          "title": "Popup",
+          "title": "Trang chủ",
           "attributes": [
             {
-              "label": "Hiển thị",
-              "type": "checkbox",
-              "name": "popup_check"
+              "label": "Bài viết",
+              "type": "article",
+              "name": "featured_post"
             },
             {
-              "label": "Link",
-              "type": "text",
-              "name": "popup_link"
-            },
-            {
-              "label": "Hình ảnh",
-              "type": "image",
-              "name": "popup_image",
-              "size": "768x255"
+              "label": "Slider",
+              "type": "articles",
+              "name": "featured_slider"
             }
           ]
         },
         {
-          "title": "Khách hàng",
+          "title": "Tin tức",
           "attributes": [
             {
-              "label": "Hình ảnh trên",
-              "type": "image",
-              "name": "register_top_image",
-              "size": "1170x183"
+              "label": "Bài viết",
+              "type": "article",
+              "name": "featured_news_post"
             },
             {
-              "label": "Hình ảnh dưới",
-              "type": "image",
-              "name": "register_bottom_image",
-              "size": "1170x194"
+              "label": "Slider",
+              "type": "articles",
+              "name": "featured_news_slider"
+            }
+          ]
+        },{
+          "title": "Đánh giá",
+          "attributes": [
+            {
+              "label": "Bài viết",
+              "type": "article",
+              "name": "featured_review_post"
             },
             {
-              "label": "Phân trang tác giả",
-              "type": "number",
-              "name": "blog_pt"
+              "label": "Slider",
+              "type": "articles",
+              "name": "featured_review_slider"
+            }
+          ]
+        },{
+          "title": "Hướng dẫn",
+          "attributes": [
+            {
+              "label": "Bài viết",
+              "type": "article",
+              "name": "featured_walkthrough_post"
+            },
+            {
+              "label": "Slider",
+              "type": "articles",
+              "name": "featured_walkthrough_slider"
             }
           ]
         }
