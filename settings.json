@@ -378,12 +378,12 @@
             {
               "label": "Bài viết",
               "type": "article",
-              "name": "featured_post"
+              "name": "index_featured_post"
             },
             {
               "label": "Slider",
               "type": "articles",
-              "name": "featured_slider"
+              "name": "index_featured_slider"
             }
           ]
         },
@@ -393,12 +393,12 @@
             {
               "label": "Bài viết",
               "type": "article",
-              "name": "featured_news_post"
+              "name": "news_featured_post"
             },
             {
               "label": "Slider",
               "type": "articles",
-              "name": "featured_news_slider"
+              "name": "news_featured_slider"
             }
           ]
         },{
@@ -407,12 +407,12 @@
             {
               "label": "Bài viết",
               "type": "article",
-              "name": "featured_review_post"
+              "name": "review_featured_post"
             },
             {
               "label": "Slider",
               "type": "articles",
-              "name": "featured_review_slider"
+              "name": "review_featured_slider"
             }
           ]
         },{
@@ -421,12 +421,12 @@
             {
               "label": "Bài viết",
               "type": "article",
-              "name": "featured_walkthrough_post"
+              "name": "walkthrough_featured_post"
             },
             {
               "label": "Slider",
               "type": "articles",
-              "name": "featured_walkthrough_slider"
+              "name": "walkthrough_featured_slider"
             }
           ]
         }
