@@ -15,7 +15,6 @@
 
         <div class="filter-results js-filter-results">
 		{% set featured_post = settings.index_featured_post %}
-   a=>{{settings.index_featured_post | json_encode}}
         <section class="editorial river js-load-forever-container">
             {% for item in Article (1, 5000, 'view-desc') %}
 				<article class="media media-article">
