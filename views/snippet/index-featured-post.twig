@@ -1,4 +1,4 @@
-{% set featured_post = settings.index_featured_post %}
+{% set featured_post = Article (settings.index_featured_post.handle) %}
 {% if featured_post %}
 <section class="promo--container container row span12">
     <a href="{{featured_post.url}}" class="promo--object promo--offset-wide promo-type--overlay">
