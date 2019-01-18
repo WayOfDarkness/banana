@@ -7,61 +7,22 @@
 {% block post_include %}
 
   <script>
-    function loadFilter(){
-      var max_price = $('input[name="max-price-filter"]').val();
-      var min_price = $('input[name="min-price-filter"]').val();
-      if ($('select[name="sortBy"]').val() ) {
-        sortbyValue = $('select[name="sortBy"]').val() ;
-      }
-      if ($('select[name="soluong1"]').val() ) {
-        perpageValue = $('select[name="soluong1"]').val() ;
-      }
-
+    $('.js-filter-option').click(function() {
+      var sortbyValue = $(this).data('sort-value');
       sortby = '&sortby=' + sortbyValue ;
-      perpage = '&perpage=' + perpageValue;
-
-      var filter = '&filter=' + 'price>=' + min_price + '%26%26price<=' + max_price;
       var attributes_url = loadfilterUrl()
-      if (!attributes_url  && ! check_price_filter && !filter) {
-        $('#filter-content').html(root_html);
-        return;
-      }
-      var url = '/api/search?type=product&view=snippet%2Fcollection_filter&attr=' + attributes_url + filter + perpage + sortby;
-      // return;
+      var url = '/api/search?type=article' + sortby;
       ajaxLoadFilter(url);
-    }
-
-    function loadfilterUrl() {
-        var url = ''
-        var count = 0;
-        $('.filter-left-aside .filter-attributes .reset-list').each(function (val) {
-            var option = $(this).data('option');
-            var option_array_value = []
-            var value_attribute = $(this).find('li input:checked').each(function (data) {
-                option_array_value.push($(this).data('value'));
-            })
-            if (option_array_value.length > 0) {
-                if (count) {
-                    url += '&&' + option + 'IN' + JSON.stringify(option_array_value);
-                } else {
-                    url += option + 'IN' + JSON.stringify(option_array_value);
-                }
-                count++;
-            }
-        })
-        console.log(url);
-        return encodeURIComponent(url);
-    }
-
+    })
+    
     function ajaxLoadFilter(url) {
       $.ajax({
           url: url,
           type: 'GET',
           success: function (html) {
-              $('#filter-content').html(html);
+              $('.js-load-forever-container').html(html);
               initPaginate(url);
               initRating();
-
           }
       })
     }
