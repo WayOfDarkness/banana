@@ -1,8 +1,9 @@
 {% extends "layout.twig" %}
+
 {% block pre_include %}
-    <title>
-        {{blog.title}}</title>
+    <title>{{blog.title}}</title>
 {% endblock %}
+
 {% block post_include %}
     <script src="{{shop.static}}/libs/twbsPagination.min.js"></script>
     <script type="text/javascript">
@@ -44,7 +45,6 @@
                         
                         if (page > 1) 
                             href = href + '&page=' + page;
-                        
                     }
                     location.href = href;
                 }
@@ -67,7 +67,7 @@
 						<a href="{{item.url}}" class="promo--object promo--offset-wide promo-type--overlay">
 							<div class="promo--image">
 								<div class="content">
-									<img src="{{item.image | upload_url}}" alt="{{item.title}}"/>
+									<img src="{{item.image | upload_url }}" alt="{{item.title}}"/>
 								</div>
 							</div>
 							<div>
