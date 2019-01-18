@@ -401,7 +401,8 @@
               "name": "news_featured_slider"
             }
           ]
-        },{
+        },
+        {
           "title": "Đánh giá",
           "attributes": [
             {
@@ -415,7 +416,8 @@
               "name": "review_featured_slider"
             }
           ]
-        },{
+        },
+        {
           "title": "Hướng dẫn",
           "attributes": [
             {

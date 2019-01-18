@@ -9,11 +9,9 @@
   <script>
     $('.js-filter-option').click(function() {
       var sortbyValue = $(this).data('sort-value');
-      console.log(sortbyValue);
       sortby = '&sortby=' + sortbyValue ;
       var url = '/api/search?type=article' + sortby;
       ajaxLoadFilter(url);
-      console.log(url);
     })
     
     function ajaxLoadFilter(url) {
@@ -21,8 +19,7 @@
           url: url,
           type: 'GET',
           success: function (html) {
-              console.log(html);
-              $('.js-load-forever-container').html(html);
+            $('.js-load-forever-container').html(html);
           }
       })
     }
