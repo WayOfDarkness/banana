@@ -7,13 +7,13 @@
 		<dl class="pod-header">
 			<dt class="pod-header__item">
 				<div class="pod-title">
-					<h4>Đánh giá</h4><span class="pod-div" role="presentation" aria-hidden="true"></span>
+					<h4>Đánh giá</h4>
+					<span aria-hidden="true" class="pod-div" role="presentation"></span>
 				</div>
 			</dt>
 			<dd class="pod-header__item pod-header__filters pod-header__filters--js no-flex">
 				<div class="pod-header__filters--select">
-					<select name="sort" class="js-filter-json"
-						data-filter-query="platform" data-filter-nohistory="1" data-filter-nodata="1">
+					<select class="js-filter-json" data-filter-nodata="1" data-filter-nohistory="1" data-filter-query="platform" name="sort">
 						<option value="latest" data-filter-url="/river/reviews/latest">MỚI NHẤT</option>
 						<option value="xbox-one" data-filter-url="/river/reviews/xbox-one">ĐIỂM CAO NHẤT</option>
 						<option value="ps4" data-filter-url="/river/reviews/ps4">ĐIỂM THẤP NHẤT</option>
@@ -28,9 +28,7 @@
 						<a href="{{item.url}}">
 							<div class="align-vertical--contain">
 								<div class="align-vertical--child game-info-wrapper">
-									<h4 class="game-title">
-										{{item.title}}
-									</h4>
+									<h4 class="game-title">{{item.title}}</h4>
 								</div>
 								<dl class="game-score align-vertical--child ">
 									<dt>
@@ -43,8 +41,7 @@
 											</div>
 											<div class="gs-score__inner">
 												<div class="gs-score__table">
-													<div class="gs-score__cell">{{item.point}}
-													</div>
+													<div class="gs-score__cell">{{item.point}}</div>
 												</div>
 											</div>
 										</div>
@@ -65,9 +62,7 @@
 					<li class="reviews-list__item">
 						<a href="{{item.url}}">
 							<div class="align-vertical--contain">
-								<h4 class="game-title align-vertical--child">
-									{{item.title}}
-								</h4>
+								<h4 class="game-title align-vertical--child">{{item.title}}</h4>
 								<dl class="game-score align-vertical--child ">
 									<dt>{{item.rating}}</dt>
 									<dd>{{item.point}}</dd>
@@ -76,12 +71,13 @@
 						</a>
 					</li>
 				{% endfor %}
-			</ol>
 
+			</ol>
+			
 			<footer class="pod-footer">
 				<a href="/danh-gia">Xem tất cả đánh giá</a>
 			</footer>
-
 		</div>
 	</section>
 </aside>
+    
