@@ -1,0 +1,30 @@
+<aside class="secondary-content span4 medium-span5">
+    <div class="pod pod-popular">
+        <dl class="pod-header  ">
+            <dt class="pod-header__item">
+                <div class="pod-title">
+                    <h4>{{redirectBlog}}</h4>
+                    <span aria-hidden="true" class="pod-div" role="presentation"></span>
+                </div>
+            </dt>
+        </dl>
+        <div class="pod-body">
+            {% for item in Blog (redirectBlog).articles %}
+                <article class="media media--is-top">
+                    <a href="{{item.url}}">
+                        <figure class="media-figure media-figure--has-rhythm">
+                            <div class="media-img imgflare--river">
+                                <img src="{{item.image | upload_url}}" alt="{{item.title}}"/>
+                            </div>
+                        </figure>
+                        <div class="media-body">
+                            <h3 class="media-title">
+                                {{item.title}}
+                            </h3>
+                        </div>
+                    </a>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+</aside>

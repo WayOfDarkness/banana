@@ -2,8 +2,8 @@
   "name": "stepcms-theme",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "ssh://git@code.eyeteam.vn:30022/themes/base.git",
-  "author": "Nguyen Quang Thien <thiennq@Nguyens-MacBook-Pro.local>",
+  "repository": "new res",
+  "author": "//choigiday.com",
   "license": "MIT",
   "dependencies": {
     "gulp": "^3.9.1",

@@ -1,8 +1,9 @@
 {% extends "layout.twig" %}
+
 {% block pre_include %}
-    <title>
-        {{blog.title}}</title>
+    <title>{{blog.title}}</title>
 {% endblock %}
+
 {% block post_include %}
     <script src="{{shop.static}}/libs/twbsPagination.min.js"></script>
     <script type="text/javascript">
@@ -44,7 +45,6 @@
                         
                         if (page > 1) 
                             href = href + '&page=' + page;
-                        
                     }
                     location.href = href;
                 }
@@ -67,7 +67,7 @@
 						<a href="{{item.url}}" class="promo--object promo--offset-wide promo-type--overlay">
 							<div class="promo--image">
 								<div class="content">
-									<img src="{{item.image | upload_url}}" alt="{{item.title}}"/>
+									<img src="{{item.image | upload_url }}" alt="{{item.title}}"/>
 								</div>
 							</div>
 							<div>
@@ -173,66 +173,14 @@
 											</section>
 
 											<div class="pagination__wrapper">
-												<ul class="pagination">
-													<li><button class="prev" title="previous page">&#10094;</button></li>
-													<li>
-														<button title="first page - page 1">1</button>
-													</li>
-													<li>
-														<span>...</span>
-													</li>
-													<li>
-														<button title="page 8">8</button>
-													</li>
-													<li>
-														<button class="active" title="current page - page 9">9</button>
-													</li>
-													<li>
-														<button title="page 10">10</button>
-													</li>
-													<li>
-														<span>...</span>
-													</li>
-													<li>
-														<button title="last page - page 69">69</button>
-													</li>
-													<li><button class="next" title="next page">&#10095;</button></li>
-												</ul>
+												<div id="pagination" data-page_number="{{paginate.current_page}}" data-total="{{paginate.total_pages}}"></div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-
-							<aside class="secondary-content span4 medium-span5">
-								<div class="pod pod-popular">
-									<dl class="pod-header  ">
-										<dt class="pod-header__item">
-											<div class="pod-title">
-												<h4>Mục gì đó chưa biết</h4>
-												<span class="pod-div" role="presentation" aria-hidden="true"></span>
-											</div>
-										</dt>
-									</dl>
-									<div class="pod-body">
-										{% for item in blog.articles %}
-											<article class="media media--is-top">
-												<a href="{{item.url}}">
-													<figure class="media-figure media-figure--has-rhythm">
-														<div class="media-img imgflare--river">
-															<img src="{{item.image | upload_url}}" alt="{{item.title}}">
-															<span class="media-type media-type-image Gallery">Games</span>
-														</div>
-													</figure>
-													<div class="media-body">
-														<h3 class="media-title">{{item.title}}</h3>
-													</div>
-												</a>
-											</article>
-										{% endfor %}
-									</div>
-								</div>
-							</aside>
+							{% set redirectBlog = 'huong-dan' %}
+							{% include 'snippet/rightside-featured.twig' %}
 						</div>
 					</div>
 				</div>

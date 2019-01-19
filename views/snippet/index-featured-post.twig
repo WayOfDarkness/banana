@@ -1,0 +1,20 @@
+{% set featured_post = Article (settings.index_featured_post.handle) %}
+{% if featured_post %}
+<section class="promo--container container row span12">
+    <a href="{{featured_post.url}}" class="promo--object promo--offset-wide promo-type--overlay">
+        <div class="promo--image">
+        <div class="content">
+            <img src="{{featured_post.image | upload_url}}" alt="{{featured_post.title}}" title="{{featured_post.title}}"/>
+        </div>
+        </div>
+        <div>
+        <div class="content">
+            <summary class="promo--metadata">
+                <h2>{{featured_post.title}}</h2>
+                <span>{{featured_post.description}}</span>
+            </summary>
+        </div>
+        </div>
+    </a>
+</section>
+{% endif %}
