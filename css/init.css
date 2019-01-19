@@ -19568,6 +19568,10 @@ a:hover .link-img .hover-play-pause {
 }
 .promo-type--grid .media-img img {
   display: block;
+  min-height: 160px;
+  height: 160px;
+  object-fit: cover;
+  background-position: center center;
 }
 .promo-type--grid .media-img:hover img {
   -webkit-transition: opacity .15s;
