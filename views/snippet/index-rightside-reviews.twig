@@ -46,7 +46,7 @@
 											</div>
 										</div>
 									</dt>
-									<dd>{{item.admin_point}}</dd>
+									{% include 'snippet/point-system.twig' %}
 								</dl>
 							</div>
 						</a>
@@ -64,8 +64,8 @@
 							<div class="align-vertical--contain">
 								<h4 class="game-title align-vertical--child">{{item.title}}</h4>
 								<dl class="game-score align-vertical--child ">
-									<dt>{{item.rating}}</dt>
-									<dd>{{item.point}}</dd>
+									<dt>{{item.admin_point}}</dt>
+									{% include 'snippet/point-system.twig' %}
 								</dl>
 							</div>
 						</a>

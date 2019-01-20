@@ -21,4 +21,10 @@
     {% else %}
     {% set admin_point_label = 'Chưa đánh giá' %}
 {% endif %}
-<span class="score-word">{{admin_point_label}}</span>
+
+{% if shop.host ~ '/' == url %}
+    <dd>{{admin_point_label}}</dd>
+{% else %}
+    <span class="score-word">{{admin_point_label}}</span>
+{% endif %}
+
