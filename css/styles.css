@@ -1576,3 +1576,11 @@ main {
   width: initial;
   min-width: 200px;
 }
+
+.type-of-article {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+
