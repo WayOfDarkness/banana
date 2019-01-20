@@ -81,13 +81,15 @@ if ($(".page-article").length) {
   $('.ds-main .field--type-text-with-summary').find('h2').each(function (i, e) {
     $(this).attr('id', i);
     var g = $(this).html();
-    html += `<div class="scroll-animated cursor-pointer ${i % 3 == 0 ? 'active' : ''}" rel="#${i}">${g}</div>`;
+    html += `<div class="scroll-animated cursor-pointer" rel="#${i}">${g}</div>`;
   })
 
   $('.ad-299').html(html);
 
   $(".scroll-animated").click(function () {
     var id = $(this).attr('rel');
+    $(".scroll-animated").removeClass('active');
+    $(this).addClass('active');
     $('html,body').animate({scrollTop: $(id).offset().top - 60}, 'slow');
   });
 
