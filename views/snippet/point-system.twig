@@ -1,4 +1,3 @@
-a={{item.admin_point}}
 {% if item.admin_point == 10 %}
     {% set admin_point_label = 'Hoàn hảo' %}
     {% elseif item.admin_point == 9 %}
@@ -22,4 +21,4 @@ a={{item.admin_point}}
     {% else %}
     {% set admin_point_label = 'Chưa đánh giá' %}
 {% endif %}
-a={{admin_point_label}}
+<span class="score-word">{{admin_point_label}}</span>
