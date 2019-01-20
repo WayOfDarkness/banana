@@ -1249,9 +1249,9 @@ figure > a.fluid-height img {
   }
 }
 
-img[width], img[height] {
+/* img[width], img[height] {
   max-width: none
-}
+} */
 
 [data-embed-type="video"] {
   clear: both;

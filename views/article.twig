@@ -6,7 +6,8 @@
 
 {% block content %}
 
-    {% set parentBlog = article.blogs[0] %}
+    {% set parentBlog = Blog(article.blogs[0]) %}
+
     <main role="main" class="container">
       <a id="main-content" tabindex="-1"></a>
       <div class="content-wrapper">
@@ -19,7 +20,7 @@
                     <div class="view">
                       <div class="view-content">
                         <div>
-                          <div class="bug-text">{{parentBlog.handle}}</div>
+                          <div class="bug-text">{{parentBlog.title}}</div>
                         </div>
                       </div>
                     </div>
@@ -222,7 +223,7 @@
                       <div class="views-element-container">
                         <div id="default-content" class="recommended-articles-widget view">
                           <div class="view-header">
-                            <h2>{{parentBlog}} liên quan</h2>
+                            <h2>{{parentBlog.title}} liên quan</h2>
                           </div>
                           <div class="article-carousel owl-carousel owl-theme">
                             {% for item in parentBlog.articles | slice (0, 10) %}
