@@ -1566,3 +1566,9 @@ main {
   object-fit: cover;
   background-position: center center;
 }
+
+.river .media-figure--medium {
+  max-width: 40%;
+  width: initial;
+  min-width: 200px;
+}
