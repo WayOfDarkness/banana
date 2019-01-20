@@ -1583,9 +1583,11 @@ main {
   position: absolute;
   top: 0px;
   left: 0px;
+  width: 40px !important;
+  height: 40px !important;
 }
 .type-of-article > * {
-  display: none;
+  display: none !important;
 }
 .type-of-article.news .news {
   display: block !important;
@@ -1597,8 +1599,8 @@ main {
   display: block !important;
 }
 .type-of-article img {
-  width: 40px !important;
-  height: 40px !important;
+  width: 100% !important;
+  height: 100% !important;
   object-fit: contain !important;
   background: #ffffffbd;
   padding: 2px;
