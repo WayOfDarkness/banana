@@ -1,82 +1,98 @@
 <div class="cd-user-modal">
-  <div class="cd-user-modal-container">
-  
-    <ul class="cd-switcher">
-      <li><a href="javascript:;">ĐĂNG NHẬP</a></li>
-      <li><a href="javascript:;">ĐĂNG KÝ</a></li>
-    </ul>
-
-    <div id="cd-login">
-      <form class="cd-form" id="login-form">
-        <p class="fieldset">
-          <label class="image-replace cd-email" for="signin-email">E-mail</label>
-          <input class="full-width has-padding has-border" id="signin-email" type="text" placeholder="E-mail">
-          <span class="cd-error-message">Error message here!</span>
-        </p>
-
-        <p class="fieldset">
-          <label class="image-replace cd-password" for="signin-password">Password</label>
-          <input class="full-width has-padding has-border" id="signin-password" type="password" placeholder="Password">
-          <a href="javascript:;" class="hide-password hide-password-on"></a>
-          <span class="cd-error-message">Error message here!</span>
-        </p>
-
-        <p class="fieldset">
-          <input class="full-width" type="submit" value="Đăng nhập">
-        </p>
-      </form>
-      <p class="cd-form-bottom-message"><a href="javascript:;">Quên mật khẩu?</a></p>
+    <div class="cd-user-modal-container">
+        <ul class="cd-switcher">
+            <li>
+                <a href="javascript:;">ĐĂNG NHẬP</a>
+            </li>
+            <li>
+                <a href="javascript:;">ĐĂNG KÝ</a>
+            </li>
+        </ul>
+        <div id="cd-login">
+            <form class="cd-form" id="login-form">
+                <p class="fieldset">
+                    <label class="image-replace cd-email" for="signin-email">E-mail</label>
+                    <input class="full-width has-padding has-border" id="signin-email" placeholder="E-mail" type="text"/>
+                    <span class="cd-error-message">Error message here!</span>
+                </p>
+                <p class="fieldset">
+                    <label class="image-replace cd-password" for="signin-password">Password</label>
+                    <input class="full-width has-padding has-border" id="signin-password" placeholder="Password" type="password"/>
+                    <a href="javascript:;" class="hide-password hide-password-on"></a>
+                    <span class="cd-error-message">Error message here!</span>
+                </p>
+                <p class="fieldset">
+                    <input class="full-width" type="submit" value="Đăng nhập"/></p>
+            </form>
+            <p class="cd-form-bottom-message">
+                <a href="javascript:;">Quên mật khẩu?</a>
+            </p>
+        </div>
+        <div id="cd-signup">
+            <form class="cd-form" id="register-form">
+                <p class="fieldset">
+                    <label class="image-replace cd-name" for="signup-name">Tên tài khoản</label>
+                    <input class="full-width has-padding has-border" id="signup-name" placeholder="Tên tài khoản" type="text"/>
+                    <span class="cd-error-message">Error message here!</span>
+                </p>
+                <p class="fieldset">
+                    <label class="image-replace cd-email" for="signup-email">E-mail</label>
+                    <input class="full-width has-padding has-border" id="signup-email" placeholder="E-mail" type="text"/>
+                    <span class="cd-error-message">Error message here!</span>
+                </p>
+                <p class="fieldset">
+                    <label class="image-replace cd-password" for="signup-password">Mật khẩu</label>
+                    <input class="full-width has-padding has-border" id="signup-password" placeholder="Password" type="password"/>
+                    <a href="javascript:;" class="hide-password hide-password-on"></a>
+                    <span class="cd-error-message">Error message here!</span>
+                </p>
+                <p class="fieldset">
+                    <label class="image-replace cd-password" for="signup-password-confirm">Nhập lại mật khẩu</label>
+                    <input class="full-width has-padding has-border" id="signup-password-confirm" placeholder="Nhập lại mật khẩu" type="password"/>
+                    <a href="javascript:;" class="hide-password hide-password-on"></a>
+                    <span class="cd-error-message">Error message here!</span>
+                </p>
+                <p class="fieldset">
+                    <input class="full-width has-padding" type="submit" value="Tạo tài khoản"/>
+                </p>
+            </form>
+        </div>
+        <div id="cd-reset-password">
+            <p class="cd-form-message">Điền email của bạn để lấy lại mật khẩu!</p>
+            <form class="cd-form" id="reset-form">
+                <p class="fieldset">
+                    <label class="image-replace cd-email" for="reset-email">E-mail</label>
+                    <input class="full-width has-padding has-border" id="reset-email" placeholder="E-mail" type="text"/>
+                    <span class="cd-error-message">Error message here!</span>
+                </p>
+                <p class="fieldset">
+                    <input class="full-width has-padding" type="submit" value="Lấy lại mật khẩu"/>
+                </p>
+            </form>
+            <p class="cd-form-bottom-message">
+                <a href="javascript:;">Trở về đăng nhập</a>
+            </p>
+        </div>
     </div>
-
-    <div id="cd-signup">
-      <form class="cd-form" id="register-form">
-
-        <p class="fieldset">
-          <label class="image-replace cd-name" for="signup-name">Tên tài khoản</label>
-          <input class="full-width has-padding has-border" id="signup-name" type="text" placeholder="Tên tài khoản">
-          <span class="cd-error-message">Error message here!</span>
-        </p>
-
-        <p class="fieldset">
-          <label class="image-replace cd-email" for="signup-email">E-mail</label>
-          <input class="full-width has-padding has-border" id="signup-email" type="text" placeholder="E-mail">
-          <span class="cd-error-message">Error message here!</span>
-        </p>
-
-        <p class="fieldset">
-          <label class="image-replace cd-password" for="signup-password">Mật khẩu</label>
-          <input class="full-width has-padding has-border" id="signup-password" type="password" placeholder="Password">
-          <a href="javascript:;" class="hide-password hide-password-on"></a>
-          <span class="cd-error-message">Error message here!</span>
-        </p>
-
-        <p class="fieldset">
-          <label class="image-replace cd-password" for="signup-password-confirm">Nhập lại mật khẩu</label>
-          <input class="full-width has-padding has-border" id="signup-password-confirm" type="password" placeholder="Nhập lại mật khẩu">
-          <a href="javascript:;" class="hide-password hide-password-on"></a>
-          <span class="cd-error-message">Error message here!</span>
-        </p>
-
-        <p class="fieldset">
-          <input class="full-width has-padding" type="submit" value="Tạo tài khoản">
-        </p>
-      </form>
+    <div class="cd-user-modal-container clearfix">
+        <div class="omniauth-container">
+            <label class="d-block">
+                Đăng nhập bằng
+            </label>
+            <div class="d-flex justify-content-between flex-wrap">
+                <a class="btn d-flex align-items-center omniauth-btn text-left oauth-login qa-saml-login-button" data-method="post" href="/users/auth/google_oauth2" id="oauth-login-google_oauth2" rel="nofollow">
+                    <img alt="Google" class="js-lazy-loaded" src="{{theme.uri}}/img/icon-google.png" title="Sign in with Google"/>
+                    <span>
+                        Google
+                    </span>
+                </a>
+                <a class="btn d-flex align-items-center omniauth-btn text-left oauth-login qa-saml-login-button" data-method="post" href="/users/auth/twitter" id="oauth-login-twitter" rel="nofollow">
+                    <img alt="Twitter" class="js-lazy-loaded" src="{{theme.uri}}/img/icon-twitter.png" title="Sign in with Twitter"/>
+                    <span>
+                        Facebook
+                    </span>
+                </a>
+            </div>
+        </div>
     </div>
-
-    <div id="cd-reset-password">
-      <p class="cd-form-message">Điền email của bạn để lấy lại mật khẩu!</p>
-      <form class="cd-form" id="reset-form">
-        <p class="fieldset">
-          <label class="image-replace cd-email" for="reset-email">E-mail</label>
-          <input class="full-width has-padding has-border" id="reset-email" type="text" placeholder="E-mail">
-          <span class="cd-error-message">Error message here!</span>
-        </p>
-        <p class="fieldset">
-          <input class="full-width has-padding" type="submit" value="Lấy lại mật khẩu">
-        </p>
-      </form>
-      <p class="cd-form-bottom-message"><a href="javascript:;">Trở về đăng nhập</a></p>
-    </div>
-
-  </div>
 </div>
