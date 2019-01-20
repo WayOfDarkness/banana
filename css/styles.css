@@ -1577,10 +1577,32 @@ main {
   min-width: 200px;
 }
 
+/*css thể loại của bài viết*/
+
 .type-of-article {
   position: absolute;
   top: 0px;
   left: 0px;
 }
-
-
+.type-of-article > * {
+  display: none;
+}
+.type-of-article.news .news {
+  display: block !important;
+}
+.type-of-article.review .review {
+  display: block !important;
+}
+.type-of-article.walkthrough .walkthrough {
+  display: block !important;
+}
+.type-of-article img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  background: #ffffffbd;
+  padding: 2px;
+  border-radius: 50%;
+  border-top-left-radius: 0;
+}
+/*end type of article*/
