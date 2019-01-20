@@ -9,7 +9,7 @@ html::after {
   clear: both;
 }
 html {
-  font-family: 'Alegreya Sans', Arial, sans-serif;
+  font-family: 'Alegreya Sans', Arial, sans-serif !important;
   font-size: 16px !important;
 }
 html, body {
