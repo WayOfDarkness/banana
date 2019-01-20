@@ -1597,9 +1597,9 @@ main {
   display: block !important;
 }
 .type-of-article img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
+  width: 40px !important;
+  height: 40px !important;
+  object-fit: contain !important;
   background: #ffffffbd;
   padding: 2px;
   border-radius: 50%;
