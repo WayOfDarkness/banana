@@ -133,12 +133,14 @@
                             </a>
                           </div>
                         </section>
+                        {% set attribute = Attribute () %}
+                        a={{attribute | jsone_encode}}
                         <div class="tag-block">
                           <a href="javascript:;" class="text-block">
                             <div class="simple-text">
                               <div class="coloralert platform-color">
                                 <p class="alert-text">
-                                  <strong>OFFLINE</strong>
+                                  <strong>{{attribute.type}}</strong>
                                 </p>
                               </div>
                             </div>
@@ -147,7 +149,7 @@
                             <div class="simple-text ">
                               <div class="coloralert type-color">
                                 <p class="alert-text">
-                                  <strong>PC</strong>
+                                  <strong>{{attribute.type}}</strong>
                                 </p>
                               </div>
                             </div>
@@ -156,7 +158,7 @@
                             <div class="simple-text ">
                               <div class="coloralert brand-color">
                                 <p class="alert-text">
-                                  <strong>Blizzard</strong>
+                                  <strong>{{attribute.type}}</strong>
                                 </p>
                               </div>
                             </div>
@@ -165,20 +167,21 @@
                             <div class="simple-text ">
                               <div class="coloralert genre-color">
                                 <p class="alert-text">
-                                  <strong>RPG</strong>
+                                  <strong>{{attribute.type}}</strong>
                                 </p>
                               </div>
                             </div>
                           </a>
                         </div>
                       </wrap>
-                      <div
-                        class="field field--type-ds field__item">
-                        <h2>OUTLINE</h2>
-                        <div class="block-ad-299">
-                          <div class="ads ad-299"></div>
+                      {% if CustomField(article.id,'article','outline')=="true" %}
+                        <div class="field field--type-ds field__item">
+                          <h2>OUTLINE</h2>
+                          <div class="block-ad-299">
+                            <div class="ads ad-299"></div>
+                          </div>
                         </div>
-                      </div>
+                      {% endif %}
                     </div>
                   </div>
                   
