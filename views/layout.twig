@@ -32,9 +32,14 @@
     </head>
 
     <body>
-      {% include 'snippet/header.twig' %}
-      {% block content %}{% endblock %}
-      {% include 'snippet/footer.twig' %}
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+        <div class="loading-overlay"></div>
+        <div class="layout-container">
+          {% include 'snippet/header.twig' %}
+          {% block content %}{% endblock %}
+          {% include 'snippet/footer.twig' %}
+        </div>
+      </div>
 
       <img src="/pixel/visit" hidden="hidden">
 
