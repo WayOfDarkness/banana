@@ -269,7 +269,7 @@
                     </div>
 
                     <div class="block-reviews float-right">
-                      <h2 class="block-title"><img src="{{theme.uri}}img/icon/icon-star.png" alt="">
+                      <h2 class="block-title"><img src="{{theme.uri}}/img/icon/icon-star.png" alt="">
                         <span>Đánh giá</span>
                       </h2>
                       
@@ -300,72 +300,26 @@
                       </div>
 
                       <div class="list-comment-review">
-                        <div class="block-reviews--comment">
-                          <div class="block-reviews--auth">
-                            <img src="{{theme.uri}}img/avatar-default.png" alt="avatar" class="comment-avatar">
-                            <span>Reviewed by <strong class="review-author">gabbymoulton</strong></span>
-                            <span class="rating-review">
-                              <img src="{{theme.uri}}img/icon/icon-star.png" width="16px" height="16px" alt=""/>9/10
-                            </span>
-                          </div>
-                          <div class="comment-text-review">
-                            <p class="review-title">
-                              Beautiful family movie
-                            </p>
-                            <p class="review-content">
-                              We thoroughly enjoyed this movie. The soundtrack-
-                              especially wonderful life- is
-                              beautiful.
-                              The message is so heartwarming, and there were lots of
-                              funny moments too.
-                            </p>
-                          </div>
-                        </div>
-
-                        <div class="block-reviews--comment">
-                          <div class="block-reviews--auth">
-                            <img src="{{theme.uri}}img/avatar-default.png" alt="avatar" class="comment-avatar">
-                            <span>Reviewed by <strong class="review-author">gabbymoulton</strong></span>
-                            <span class="rating-review">
-                              <img src="{{theme.uri}}img/icon/icon-star.png" width="16px" height="16px" alt=""/>9/10
-                            </span>
-                          </div>
-                          <div class="comment-text-review">
-                            <p class="review-title">
-                              Beautiful family movie
-                            </p>
-                            <p class="review-content">
-                              We thoroughly enjoyed this movie. The soundtrack-
-                              especially wonderful life- is
-                              beautiful.
-                              The message is so heartwarming, and there were lots of
-                              funny moments too.
-                            </p>
-                          </div>
-                        </div>
-
-                        <div class="block-reviews--comment">
+                        {% for item in items %}
+                          <div class="block-reviews--comment">
                             <div class="block-reviews--auth">
-                              <img src="{{theme.uri}}img/avatar-default.png" alt="avatar" class="comment-avatar">
-                              <span>Reviewed by <strong class="review-author">gabbymoulton</strong></span>
+                              <img src="{{theme.uri}}/img/avatar-default.png" alt="avatar" class="comment-avatar">
+                              <span>Đánh giá bởi <strong class="review-author">{{item.user}}</strong></span>
                               <span class="rating-review">
-                                <img src="{{theme.uri}}img/icon/icon-star.png" width="16px" height="16px" alt=""/>9/10
+                                <img src="{{theme.uri}}/img/icon/icon-star.png" width="16px" height="16px"/>
+                                {{item.point}}/10
                               </span>
                             </div>
                             <div class="comment-text-review">
                               <p class="review-title">
-                                Beautiful family movie
+                                {{item.title}}
                               </p>
                               <p class="review-content">
-                                We thoroughly enjoyed this movie. The soundtrack-
-                                especially wonderful life- is
-                                beautiful.
-                                The message is so heartwarming, and there were lots of
-                                funny moments too.
+                                {{item.content}}
                               </p>
                             </div>
                           </div>
-
+                        {% endfor %}
                         <button class="btn-load-more-comment">Tải thêm đánh giá</button>
                       </div>
                     </div>
