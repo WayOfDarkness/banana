@@ -23,7 +23,7 @@
 		</dl>
 		<div class="filter-results js-filter-results">
 			<ol class="reviews-list">
-				{% for item in reviewBlog.articles %}
+				{# {% for item in reviewBlog.articles %}
 					<li class="reviews-list__item reviews-list__item--first" style="background-image: url({{item.image | resize (640) | upload_url}})">
 						<a href="{{item.url}}">
 							<div class="align-vertical--contain">
@@ -51,7 +51,7 @@
 							</div>
 						</a>
 					</li>
-				{% endfor %}
+				{% endfor %} #}
 
 				{# <li class="reviews-list__header">
 					<span class="reviews-list__header-game">Game</span>
@@ -61,7 +61,7 @@
 				<div class="filter-results js-filter-results">
                     <ul class="game game--top-games">
 						{% for item in reviewBlog.articles | slice (1, 9) %}
-							<li class="reviews-list__item reviews-list__item--first" style="background-image: url({{item.image | resize (640) | upload_url}})">
+							<li class="game-background reviews-list__item reviews-list__item--first" style="background-image: url({{item.image | resize (640) | upload_url}})">
 						<a href="{{item.url}}">
 							<div class="align-vertical--contain">
 								<div class="align-vertical--child game-info-wrapper">
