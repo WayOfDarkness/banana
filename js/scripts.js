@@ -81,7 +81,7 @@ if ($(".page-article").length) {
   $('.ds-main .field--type-text-with-summary').find('h2').each(function (i, e) {
     $(this).attr('id', i);
     var g = $(this).html();
-    html += `<div class="scroll-animated cursor-pointer" rel="#${i}">${g}</div>`;
+    html += `<div class="scroll-animated cursor-pointer detect-${i}" rel="#${i}">${g}</div>`;
   })
 
   $('.ad-299').html(html);
@@ -93,16 +93,25 @@ if ($(".page-article").length) {
     $('html,body').animate({scrollTop: $(id).offset().top - 60}, 'slow');
   });
 
-  $(window).scroll(function() {
-    var hT = $('.ds-main .field--type-text-with-summary h2').offset().top,
-        hH = $('.ds-main .field--type-text-with-summary h2').outerHeight(),
-        wH = $(window).height(),
-        wS = $(this).scrollTop();
-    if (wS > (hT+hH-wH)) {
-      console.log('H1 on the view!');
-    }
+  $.fn.isInViewport = function() {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+  
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+  };
+  
+  $(window).on('resize scroll', function() {
+    $('.ds-main .field--type-text-with-summary h2').each(function() {
+      var content = $(this).attr('id');
+      if ($(this).isInViewport()) {
+        $('.detect-' + content).addClass('active');
+      } else {
+        $('.detect-' + content).removeClass('active');
+      }
+    });
   });
-
 }
 //END ARTICLE PAGE
 
