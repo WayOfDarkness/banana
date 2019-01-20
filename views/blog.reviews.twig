@@ -155,7 +155,8 @@
 																	<div class="media-well--review-score">
 																		<span class="content">{{item.admin_point}}</span>
 																	</div>
-																	<span class="score-word">{{item.point_letter}}</span>
+																	{% include 'snippet/point-system.twig' %}
+																	<span class="score-word">{{admin_point_label}}</span>
 																</div>
 															</div>
 															<figure class="media-figure media-figure--medium">
@@ -164,8 +165,8 @@
 																</div>
 															</figure>
 															<div class="media-body">
-																<h3 class="media-title">{{item.title | truncate (100)}}</h3>
-																<p class="media-deck">{{item.description | truncate (160)}}</p>
+																<h3 class="media-title">{{item.title | truncate (110)}}</h3>
+																<p class="media-deck">{{item.description | truncate (170)}}</p>
 																<footer class="media-meta">
 																	<time class="media-date" datetime="{{item.created_at}}">
 																		{{item.created_at}}
