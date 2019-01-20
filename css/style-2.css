@@ -7606,7 +7606,7 @@ html {
   color: #2C7ABE
 }
 
-.layout-container a:hover, .layout-container a:active {
+.layout-container .article----if--contains a:hover, .layout-container .article----if--contains a:active {
   color: #79a2ee
 }
 
