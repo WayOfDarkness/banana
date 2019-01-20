@@ -449,7 +449,7 @@ body.page-article {
   font-size: 1.2rem !important;
   color: #141517;
   max-height: 2em;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
