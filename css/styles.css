@@ -8,9 +8,11 @@ html::before,
 html::after {
   clear: both;
 }
-html, body {
-  font-family: 'Alegreya Sans', Arial, sans-serif;
+html {
+  font-family: 'Alegreya Sans', Arial, sans-serif !important;
   font-size: 16px !important;
+}
+html, body {
   width: 100%;
   height: initial;
   margin: 0;
