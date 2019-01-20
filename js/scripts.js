@@ -98,7 +98,7 @@ if ($(".page-article").length) {
         hH = $('.ds-main .field--type-text-with-summary h2').outerHeight(),
         wH = $(window).height(),
         wS = $(this).scrollTop();
-    if (wS > (hT+hH-wH) && (hT > wS) && (wS+wH > hT+hH)) {
+    if (wS > (hT+hH-wH)) {
       console.log('H1 on the view!');
     }
   });
