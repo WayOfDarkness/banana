@@ -93,6 +93,16 @@ if ($(".page-article").length) {
     $('html,body').animate({scrollTop: $(id).offset().top - 60}, 'slow');
   });
 
+  $(window).scroll(function() {
+    var hT = $('.ds-main .field--type-text-with-summary h2').offset().top,
+        hH = $('.ds-main .field--type-text-with-summary h2').outerHeight(),
+        wH = $(window).height(),
+        wS = $(this).scrollTop();
+    if (wS > (hT+hH-wH) && (hT > wS) && (wS+wH > hT+hH)) {
+      console.log('H1 on the view!');
+    }
+  });
+
 }
 //END ARTICLE PAGE
 
