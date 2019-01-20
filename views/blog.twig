@@ -117,7 +117,7 @@
                                                 </figure>
                                                 <div class="media-body">
                                                     <h3 class="media-title promoTitle--rhythm--inc">
-                                                        {{post.title}}
+                                                        {{post.title | truncate (30)}}
                                                     </h3>
                                                 </div>
                                             </a>
@@ -179,9 +179,9 @@
                                                         </figure>
                                                         <div class="media-body">
                                                             <h3 class="media-title">
-                                                                {{item.title}}</h3>
+                                                                {{item.title | truncate (40)}}</h3>
                                                             <p class="media-deck">
-                                                                {{item.description}}</p>
+                                                                {{item.description | truncate (100)}}</p>
                                                             <footer class="media-meta">
                                                                 <time class="media-date" datetime="{{item.created_at}}">
                                                                     {{item.created_at}}
