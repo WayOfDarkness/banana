@@ -56,7 +56,8 @@
 {% block content %}
 
 	{% set featured_post = Article (settings.review_featured_post.handle) %}
-	{% set redirectBlog = 'huong-dan' %}
+	{% set redirectBlogHandle = 'huong-dan' %}
+	{% set redirectBlog = 'Hướng dẫn' %}
 
 	<div id="site-wrapper" class="page-blog">
 		<div id="mantle_skin">
@@ -147,7 +148,6 @@
 										<div id="js-sort-filter-results">
 											<section class="editorial river">
 												{% for item in blog.articles %}
-												a={{item | json_encode}}
 													<article class="media media-game media-game">
 														<a href="{{item.url}}">
 															<div class="media-well media-well--review">

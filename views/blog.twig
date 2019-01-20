@@ -58,10 +58,12 @@
     
     {% if blog.handle == 'tin-tuc' %}
         {% set featured_post = Article (settings.news_featured_post.handle) %}
-        {% set redirectBlog = 'danh-gia' %}
+        {% set redirectBlogHandle = 'danh-gia' %}
+        {% set redirectBlog = 'Đánh giá' %}
     {% elseif blog.handle == 'huong-dan' %}
         {% set featured_post = Article (settings.walkthrough_featured_post) %}
-        {% set redirectBlog = 'tin-tuc' %}
+        {% set redirectBlogHandle = 'tin-tuc' %}
+        {% set redirectBlog = 'Tin tức' %}
     {% endif %}
 
     <div id="site-wrapper" class="page-blog">
