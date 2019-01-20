@@ -22858,16 +22858,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .reviews-list__item--first:before {
-  background-color: rgba(0, 0, 0, 0.4);
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANkAAAAKCAQAAACTHTN8AAAAbElEQVRYw+2R0QrAIAhF3f7/L/cd2ra2QsPocQzOCbsqocTd5JBSj7xaJnV2njd6hdXMnFqo79CemXszdtVNinPaXZJK+55xa+uudfXPmHuVSRYju+eaVZVd4GdgGZYBlgGWYRlgGWAZlsG3nMPhqxXZYOE8AAAAAElFTkSuQmCC);
-  background-repeat: repeat-y;
-  background-position: left top
+
 }
 
 .reviews-list__item--first > a {
   position: relative;
-  padding: 2.6rem 0 .65rem;
-  z-index: 1
+  padding: 2rem 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANkAAAAKCAQAAACTHTN8AAAAbElEQVRYw+2R0QrAIAhF3f7/L/cd2ra2QsPocQzOCbsqocTd5JBSj7xaJnV2njd6hdXMnFqo79CemXszdtVNinPaXZJK+55xa+uudfXPmHuVSRYju+eaVZVd4GdgGZYBlgGWYRlgGWAZlsG3nMPhqxXZYOE8AAAAAElFTkSuQmCC);
+  background-repeat: repeat-y;
+  background-position: left top
 }
 
 .reviews-list__item--first .align-vertical--contain:before {
