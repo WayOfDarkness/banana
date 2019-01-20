@@ -22858,8 +22858,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .reviews-list__item--first:before {
-  background-color: rgba(0, 0, 0, 0.4);
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANkAAAAKCAQAAACTHTN8AAAAbElEQVRYw+2R0QrAIAhF3f7/L/cd2ra2QsPocQzOCbsqocTd5JBSj7xaJnV2njd6hdXMnFqo79CemXszdtVNinPaXZJK+55xa+uudfXPmHuVSRYju+eaVZVd4GdgGZYBlgGWYRlgGWAZlsG3nMPhqxXZYOE8AAAAAElFTkSuQmCC);
   background-repeat: repeat-y;
   background-position: left top
 }
