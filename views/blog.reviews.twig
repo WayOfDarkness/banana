@@ -147,12 +147,13 @@
 										<div id="js-sort-filter-results">
 											<section class="editorial river">
 												{% for item in blog.articles %}
+												a={{item | json_encode}}
 													<article class="media media-game media-game">
 														<a href="{{item.url}}">
 															<div class="media-well media-well--review">
 																<div class="media-well--review-gs">
 																	<div class="media-well--review-score">
-																		<span class="content">{{item.point}}</span>
+																		<span class="content">{{item.admin_point}}</span>
 																	</div>
 																	<span class="score-word">{{item.point_letter}}</span>
 																</div>
