@@ -1,130 +1,133 @@
 {% extends "layout.twig" %}
 
 {% block pre_include %}
-    <title>Đăng ký nhận tin</title>
+  <title>Đăng ký nhận tin</title>
 {% endblock %}
 
 {% block content %}
-    <main class="main-content">
-        <nav class="breadcrumbk">
-            <div class="container">
-                <ul class="reset-list breadcrumbk-list">
-                    <li class="item">
-                        <a href="/" class="link">
-                            <i class="fa fa-home"></i>
-                        </a>
-                    </li>
-                    <li class="item">
-                        <a href="{{__('CUSTOMER_EDIT_ACCOUNT_URL')}}" class="link">Tài khoản</a>
-                    </li>
-                    <li class="item active">Đăng ký nhận tin điện tử</li>
-                </ul>
-            </div>
-        </nav>
+  <main class="main-content">
+    <nav class="breadcrumbk">
+      <div class="container">
+        <ul class="reset-list breadcrumbk-list">
+          <li class="item">
+            <a href="/" class="link">
+              <i class="fa fa-home"></i>
+            </a>
+          </li>
+          <li class="item">
+            <a href="{{ __('CUSTOMER_EDIT_ACCOUNT_URL') }}" class="link">Tài khoản</a>
+          </li>
+          <li class="item active">Đăng ký nhận tin điện tử</li>
+        </ul>
+      </div>
+    </nav>
 
-        <div class="dashboard mb-35">
-            <div class="container dashboard-wrap">
-                <aside class="dashboard-aside js-dbAside">
-                    <button class="reset-btn dashboard-aside--close f-b d-lg-none">
-                        <i class="fa fa-angle-left"></i>Trở về</button>
+    <div class="dashboard mb-35">
+      <div class="container dashboard-wrap">
+        <aside class="dashboard-aside js-dbAside">
+          <button class="reset-btn dashboard-aside--close f-b d-lg-none">
+            <i class="fa fa-angle-left"></i>Trở về
+          </button>
 
-                    <div class="dashboard-aside--inner js-blurOff">
-                        <h4 class="title-1 text-uppercase fs_24 cl_blue">tài khoản</h4>
+          <div class="dashboard-aside--inner js-blurOff">
+            <h4 class="title-1 text-uppercase fs_24 cl_blue">tài khoản</h4>
 
-                        <ul class="reset-list dashboard-aside__list">
-                            <li class="item">
-                                <a href="{{__('CUSTOMER_EDIT_ACCOUNT_URL')}}" class="d-block fl">Thông tin tài khoản</a>
-                            </li>
-                            <li class="item">
-                                <a href="/customer/addressBook?view=customer/address" class="d-block fl">Sổ địa chỉ</a>
-                            </li>
-                            <li class="item">
-                                <a href="{{__('SAVE_POINT_URL')}}" class="d-block fl">Điểm tích luỹ</a>
-                            </li>
-                            <li class="item">
-                                <a href="{{__('CUSTOMER_ORDERS_URL')}}" class="d-block fl">Lịch sử đơn hàng</a>
-                            </li>
-                            <li class="item">
-                                <a href="{{__('CUSTOMER_WISHLIST_URL')}}" class="d-block fl">Yêu thích</a>
-                            </li>
-                            <li class="item active">
-                                <a href="/customer/subscribe?view=customer/subcribe" class="d-block fl">Đăng ký nhận tin điện tử</a>
-                            </li>
-                            <li class="item">
-                                <a href="{{__('REFERRAL_URL')}}" class="d-block fl">Mã giới thiệu</a>
-                            </li>
-                        </ul>
-                    </div>
-                </aside>
+            <ul class="reset-list dashboard-aside__list">
+              <li class="item">
+                <a href="{{ __('CUSTOMER_EDIT_ACCOUNT_URL') }}" class="d-block fl">Thông tin tài khoản</a>
+              </li>
+              <li class="item">
+                <a href="/customer/addressBook?view=customer/address" class="d-block fl">Sổ địa chỉ</a>
+              </li>
+              <li class="item">
+                <a href="{{ __('SAVE_POINT_URL') }}" class="d-block fl">Điểm tích luỹ</a>
+              </li>
+              <li class="item">
+                <a href="{{ __('CUSTOMER_ORDERS_URL') }}" class="d-block fl">Lịch sử đơn hàng</a>
+              </li>
+              <li class="item">
+                <a href="{{ __('CUSTOMER_WISHLIST_URL') }}" class="d-block fl">Yêu thích</a>
+              </li>
+              <li class="item active">
+                <a href="/customer/subscribe?view=customer/subcribe" class="d-block fl">Đăng ký nhận tin điện tử</a>
+              </li>
+              <li class="item">
+                <a href="{{ __('REFERRAL_URL') }}" class="d-block fl">Mã giới thiệu</a>
+              </li>
+            </ul>
+          </div>
+        </aside>
 
-                <div class="dashboard-content">
-                    <btn class="mb-15 reset-btn dashboard-aside--open js-dbAsideTrigger fb fs_15 d-block d-lg-none">
-                        <i class="fa fa-hand-point-right cl_blue mr-1"></i>Bảng thông tin</btn>
+        <div class="dashboard-content">
+          <btn class="mb-15 reset-btn dashboard-aside--open js-dbAsideTrigger fb fs_15 d-block d-lg-none">
+            <i class="fa fa-hand-point-right cl_blue mr-1"></i>Bảng thông tin
+          </btn>
 
-                    <div class="dashboard-content__detail pb-2 h-unset">
-                        <h4 class="title-1 text-uppercase fs_24 cl_blue mb-0">ĐĂNG KÝ ĐỂ NHẬN BẢN TIN CỦA CHOIGIDAY</h4>
-                        <form id="dashboard-subscribe-form">
-                            <div class="text fl lh-24 d-flex flex-wrap">
-                                <div class="col-12 px-20 pb-3">
-                                    <label class="checkbox style2 d-flex align-items-center">
-                                        <input type="hidden" class="email-hidden" value="{{customer.email}}"/>
-                                        <input class="checkbox-input" id="dashboard-subscribe-email" type="checkbox" checked="checked">
-                                        <span class="checkbox-icon"></span>
-                                        <span class="checkbox-text fs_14">Đăng ký để nhận thông tin game mới nhất</span>
-                                    </label>
-                                </div>
-
-                                <div class="come-back w-100 mx-20 bt-1 fm pt-3 d-flex flex-wrap align-items-center justify-content-between pb-2">
-                                    <a href="javascript:history.back(-1)" class="d-block cl_blue">
-                                        <i class="fa fa-angle-double-left"></i>
-                                        Quay lại
-                                    </a>
-                                    <button class="ml-auto mw-unset px-4 reset-btn btn-blue">Lưu</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+          <div class="dashboard-content__detail pb-2 h-unset">
+            <h4 class="title-1 text-uppercase fs_24 cl_blue mb-0">ĐĂNG KÝ ĐỂ NHẬN BẢN TIN CỦA CHOIGIDAY</h4>
+            <form id="dashboard-subscribe-form">
+              <div class="text fl lh-24 d-flex flex-wrap">
+                <div class="col-12 px-20 pb-3">
+                  <label class="checkbox style2 d-flex align-items-center">
+                    <input type="hidden" class="email-hidden" value="{{ customer.email }}"/>
+                    <input class="checkbox-input" id="dashboard-subscribe-email" type="checkbox" checked="checked">
+                    <span class="checkbox-icon"></span>
+                    <span class="checkbox-text fs_14">Đăng ký để nhận thông tin game mới nhất</span>
+                  </label>
                 </div>
-            </div>
+
+                <div
+                  class="come-back w-100 mx-20 bt-1 fm pt-3 d-flex flex-wrap align-items-center justify-content-between pb-2">
+                  <a href="javascript:history.back(-1)" class="d-block cl_blue">
+                    <i class="fa fa-angle-double-left"></i>
+                    Quay lại
+                  </a>
+                  <button class="ml-auto mw-unset px-4 reset-btn btn-blue">Lưu</button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-    </main>
+      </div>
+    </div>
+  </main>
 
-    <script type="text/javascript">
-    
-        $('#dashboard-subscribe-form').submit(function (e) {
-            e.preventDefault();
+  <script type="text/javascript">
 
-            if ($('#dashboard-subscribe-email').is(':checked')) {
-                var data = $('.email-hidden').val();
-                if (!data) {
-                    $('#dashboard-subscribe-email').addClass('noti-input-error');
-                    toastr.error('Vui lòng nhập email!');
-                    return;
-                } else {
-                    $('#dashboard-subscribe-email').removeClass('noti-input-error');
-                }
+    $('#dashboard-subscribe-form').submit(function (e) {
+      e.preventDefault();
 
-                if (!data.match("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$")) {
-                    $('#dashboard-subscribe-email').addClass('noti-input-error');
-                    toastr.error('Email không đúng định dạng!');
-                    return;
-                } else {
-                    $('#dashboard-subscribe-email').removeClass('noti-input-error');
-                }
+      if ($('#dashboard-subscribe-email').is(':checked')) {
+        var data = $('.email-hidden').val();
+        if (!data) {
+          $('#dashboard-subscribe-email').addClass('noti-input-error');
+          toastr.error('Vui lòng nhập email!');
+          return;
+        } else {
+          $('#dashboard-subscribe-email').removeClass('noti-input-error');
+        }
 
-                StoreAPI.addSubscriber(data, 'email', function (result) {
-                    if (!result.code) {
-                        toastr.success("Bạn đã đăng ký nhận bản tin thành công!");
-                        setTimeout(function () {
-                            location.reload();
-                        }, 1000);
-                    } else {
-                        $('#dashboard-subscribe-email').addClass('noti-input-error');
-                        toastr.error(result.message);
-                    }
-                });
-            }
+        if (!data.match("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$")) {
+          $('#dashboard-subscribe-email').addClass('noti-input-error');
+          toastr.error('Email không đúng định dạng!');
+          return;
+        } else {
+          $('#dashboard-subscribe-email').removeClass('noti-input-error');
+        }
+
+        StoreAPI.addSubscriber(data, 'email', function (result) {
+          if (!result.code) {
+            toastr.success("Bạn đã đăng ký nhận bản tin thành công!");
+            setTimeout(function () {
+              location.reload();
+            }, 1000);
+          } else {
+            $('#dashboard-subscribe-email').addClass('noti-input-error');
+            toastr.error(result.message);
+          }
         });
-    </script>
+      }
+    });
+  </script>
 
 {% endblock content %}
