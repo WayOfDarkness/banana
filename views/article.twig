@@ -6,6 +6,376 @@
 
 {% block content %}
 
+    {% set parentBlog = article.blogs[0] %}
     <div id="site-wrapper" class="page-article">
+    <main role="main" class="container">
+      <a id="main-content" tabindex="-1"></a>
+      <div class="content-wrapper">
+        <div class="layout-content">
+          <div class="region">
+            <div class="block">
+              <div class="ds-full-width">
+                <div class="field field--name-dynamic-block-fieldnode-content-bug field--type-ds field__item">
+                  <div class="views-element-container p-0">
+                    <div class="view">
+                      <div class="view-content">
+                        <div>
+                          <div class="bug-text">{{parentBlog.handle}}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="field field--name-field-header field__item">
+                  <div class="layout layout--onecol">
+                    <div class="layout__region">
+                      <div class="full-width">
+                        <div class="field field--name-field-image field__item">
+                          <img src="{{article.image | upload_url}}" width="1460" height="821" alt="{{article.title}}" title="{{article.title}}" class="image-style-full"/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="node ds-standard-article clearfix">
+                <div class="ds-header">
+                  <div class="field field--type-ds field__item">
+                    <h1 class="page-title">
+                      {{article.title}}
+                    </h1>
+                  </div>
+                  <div
+                    class="field field--type-ds field__item">
+                    <div class="author-details">bởi
+                      <a href="javascript:;">{{article.author}}</a> vào {{article.created_at}}
+                    </div>
+                  </div>
+                  <wrap class="flex-div mobile clearfix">
+                    <div class="tag-block">
+                      <a href="javascript:;" class="text-block">
+                        <div class="simple-text">
+                          <div class="coloralert platform-color">
+                            <p class="alert-text">
+                              <strong>OFFLINE</strong>
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="javascript:;" class="text-block">
+                        <div class="simple-text ">
+                          <div class="coloralert type-color">
+                            <p class="alert-text">
+                              <strong>PC</strong>
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="javascript:;" class="text-block">
+                        <div class="simple-text ">
+                          <div class="coloralert brand-color">
+                            <p class="alert-text">
+                              <strong>Blizzard</strong>
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="javascript:;" class="text-block">
+                        <div class="simple-text ">
+                          <div class="coloralert genre-color">
+                            <p class="alert-text">
+                              <strong>RPG</strong>
+                            </p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </wrap>
+                  <div class="ds-wrapper clearfix">
+                    <div class="ds-main">
+                      <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field__item">
+                        {{article.content | raw}}
+                      </div>
+                    </div>
+                    <div class="ds-right sticky">
+                      <wrap class="flex-div">
+                        <section class="social-share" showSocialMobile="true">
+                          <div class="collapse-social-icon">
+                            <div class="icon-collapse-open" onclick="showSocialMobile(true)"> >> </div>
+                            <div class="icon-collapse-close" onclick="showSocialMobile(false)"> << </div>
+                          </div>
+                          <div class="social-share-button">
+                            <a href="#" target="_blank" class="have-number">
+                              <span class="social-icon upvote"></span>
+                              <i>888</i>
+                            </a>
+                          </div>
+                          <div class="social-share-button">
+                            <a href="#" target="_blank" class="have-number">
+                              <span class="social-icon downvote"></span>
+                              <i>888</i>
+                            </a>
+                          </div>
+                          <div class="social-share-button">
+                            <a href="#" target="_blank">
+                              <span class="social-icon share"></span>
+                            </a>
+                          </div>
+                          <div class="social-share-button">
+                            <a href="#" target="_blank">
+                              <span class="social-icon bookmark"></span>
+                            </a>
+                          </div>
+                          <div class="social-share-button">
+                            <a href="#" target="_blank" class="have-number">
+                              <span class="social-icon comment"></span>
+                              <i>888</i>
+                            </a>
+                          </div>
+                        </section>
+                        <div class="tag-block">
+                          <a href="javascript:;" class="text-block">
+                            <div class="simple-text">
+                              <div class="coloralert platform-color">
+                                <p class="alert-text">
+                                  <strong>OFFLINE</strong>
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="javascript:;" class="text-block">
+                            <div class="simple-text ">
+                              <div class="coloralert type-color">
+                                <p class="alert-text">
+                                  <strong>PC</strong>
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="javascript:;" class="text-block">
+                            <div class="simple-text ">
+                              <div class="coloralert brand-color">
+                                <p class="alert-text">
+                                  <strong>Blizzard</strong>
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                          <a href="javascript:;" class="text-block">
+                            <div class="simple-text ">
+                              <div class="coloralert genre-color">
+                                <p class="alert-text">
+                                  <strong>RPG</strong>
+                                </p>
+                              </div>
+                            </div>
+                          </a>
+                        </div>
+                      </wrap>
+                      <div
+                        class="field field--type-ds field__item">
+                        <h2>OUTLINE</h2>
+                        <div class="block-ad-299">
+                          <div class="ads ad-299"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div
+                    class="field field--type-ds field__item">
+                    <div class="views-element-container">
+                      <div class="view">
+                        <div class="view-content">
+                          <div>
+                            <div class="author-footer clearfix">
+                              <div class="author-footer-photo">
+                                <a href="#">
+                                  <img src="{{theme.uri}}/img/author/PegasuS.jpg" width="100" height="100" alt="PegasuS" class="image-style-user-thumbnail"/>
+                                </a>
+                              </div>
+                              <div class="author-footer-info">
+                                <div class="author-footer-name">
+                                  <a title="View user profile." href="javascript:;" class="username">{{article.author}}</a>
+                                </div>
+                                <div class="author-footer-title">Admin</div>
+                                <div class="author-footer-shortbio">PegasuS is
+                                  often watching Adventure Time or Steven
+                                  Universe. When it comes to games, she loves
+                                  RPGs, open-world titles, and story-driven
+                                  experiences. If you bring up Mass Effect,
+                                  she probably won't shut up about
+                                  Thane.
+                                </div>
+                              </div>
+                              <div class="author-footer-social">
+                                <a href="#" class="author-footer-twitter">Twitter</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ds-footer-full">
+                    <div class="field field--type-ds field__item">
+                      <div class="views-element-container">
+                        <div id="default-content" class="recommended-articles-widget view">
+                          <div class="view-header">
+                            <h2>{{parentBlog.handle}} liên quan</h2>
+                          </div>
+                          <div class="article-carousel owl-carousel owl-theme">
+                            {% for item in parentBlog.articles | slice (0, 10) %}
+                                {% if item.id != article.id %}
+                                    <div class="teaser">
+                                        <div class="teaser-left">
+                                            <div class="teaser-left-wrapper">
+                                                <div class="promo-img-thumb">
+                                                    <a href="{{item.url}}">
+                                                    <img src="{{item.image | upload_url}}"/>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="teaser-right">
+                                            <div class="teaser-right-wrapper">
+                                                <h3 class="page-title article-title">
+                                                    <a href="{{item.url}}">{{item.title}}</a>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="block-chat" class="block-chat clearfix">
+                    <div class="block-comment">
+                      <div class="fb-comments" data-href="https://www.facebook.com/PageChoiGiDay" data-width="100%" data-numposts="5"></div>
+                      <div id="fb-root"></div>
+                      <script>(function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=839840852755043&autoLogAppEvents=1';
+                        fjs.parentNode.insertBefore(js, fjs);
+                      }(document, 'script', 'facebook-jssdk'));
+                      </script>
+                    </div>
+
+                    <div class="block-reviews float-right">
+                      <h2 class="block-title"><img src="../../img/icon/icon-star.png" alt="">
+                        <span>Đánh giá</span>
+                      </h2>
+                      
+                      <div class="text-editer clearfix">
+                        <textarea name="comment" placeholder="Thêm bình luận..." id="text-editer-comment"></textarea>
+                        <div class="review-pusher">
+                          <button class="review-pusher-item btn-submit-comment effect-hover-1" onclick="postReview()">
+                            Đăng đánh giá
+                          </button>
+                          <dd class="pod-header__item review-pusher-item pod-header__filters pod-header__filters--js no-flex">
+                            <div class="pod-header__filters--select">
+                              <select class="effect-hover-1" name="sort">
+                                <option value="0" selected>Điểm</option>
+                                <option value="1">1 - Trash</option>
+                                <option value="2">2 - Quá tệ</option>
+                                <option value="3">3 - Tệ</option>
+                                <option value="4">4 - Nghèo nàn</option>
+                                <option value="5">5 - Trung bình</option>
+                                <option value="6">6 - Tạm được</option>
+                                <option value="7">7 - Khá</option>
+                                <option value="8">8 - Hay</option>
+                                <option value="9">9 - Xuất sắc</option>
+                                <option value="10">10 - Hoàn hảo</option>
+                              </select>
+                            </div>
+                          </dd>
+                        </div>
+                      </div>
+
+                      <div class="list-comment-review">
+                        <div class="block-reviews--comment">
+                          <div class="block-reviews--auth">
+                            <img src="../../img/avatar-default.png" alt="avatar" class="comment-avatar">
+                            <span>Reviewed by <strong class="review-author">gabbymoulton</strong></span>
+                            <span class="rating-review">
+                              <img src="../../img/icon/icon-star.png" width="16px" height="16px" alt=""/>9/10
+                            </span>
+                          </div>
+                          <div class="comment-text-review">
+                            <p class="review-title">
+                              Beautiful family movie
+                            </p>
+                            <p class="review-content">
+                              We thoroughly enjoyed this movie. The soundtrack-
+                              especially wonderful life- is
+                              beautiful.
+                              The message is so heartwarming, and there were lots of
+                              funny moments too.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="block-reviews--comment">
+                          <div class="block-reviews--auth">
+                            <img src="../../img/avatar-default.png" alt="avatar" class="comment-avatar">
+                            <span>Reviewed by <strong class="review-author">gabbymoulton</strong></span>
+                            <span class="rating-review">
+                              <img src="../../img/icon/icon-star.png" width="16px" height="16px" alt=""/>9/10
+                            </span>
+                          </div>
+                          <div class="comment-text-review">
+                            <p class="review-title">
+                              Beautiful family movie
+                            </p>
+                            <p class="review-content">
+                              We thoroughly enjoyed this movie. The soundtrack-
+                              especially wonderful life- is
+                              beautiful.
+                              The message is so heartwarming, and there were lots of
+                              funny moments too.
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="block-reviews--comment">
+                            <div class="block-reviews--auth">
+                              <img src="../../img/avatar-default.png" alt="avatar" class="comment-avatar">
+                              <span>Reviewed by <strong class="review-author">gabbymoulton</strong></span>
+                              <span class="rating-review">
+                                <img src="../../img/icon/icon-star.png" width="16px" height="16px" alt=""/>9/10
+                              </span>
+                            </div>
+                            <div class="comment-text-review">
+                              <p class="review-title">
+                                Beautiful family movie
+                              </p>
+                              <p class="review-content">
+                                We thoroughly enjoyed this movie. The soundtrack-
+                                especially wonderful life- is
+                                beautiful.
+                                The message is so heartwarming, and there were lots of
+                                funny moments too.
+                              </p>
+                            </div>
+                          </div>
+
+                        <button class="btn-load-more-comment">Tải thêm đánh giá</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     </div>
 {% endblock content %}
