@@ -66,7 +66,7 @@
         {% set redirectBlog = 'Tin tức' %}
     {% endif %}
 
-    <div id="site-wrapper" class="page-blog">
+    <div id="site-wrapper" class="page-blog col-2-template">
         <div id="mantle_skin">
             <div id="rbSkin" class="rbSkin">
                 <span id="adSkinLeft"></span>
@@ -175,6 +175,7 @@
                                                                     </svg>
                                                                     {{item.like}}
                                                                 </div>
+                                                                <div class="type-of-article {{page.tags}}"></div>
                                                             </div>
                                                         </figure>
                                                         <div class="media-body">
