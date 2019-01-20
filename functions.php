@@ -59,3 +59,5 @@ function parse_raw_product($data) {
   $text = strtolower($text);
   return $text;
 }
+
+registerCustomField("Outline","article","checkbox");
