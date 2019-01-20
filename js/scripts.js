@@ -234,41 +234,6 @@ $('#edit-keyword').click(function (e) {
 })
 
 
-//check login
-let isLogin = true; //test
-
-getStatusLogin();
-
-function getStatusLogin() {
-  if (checkLogin()) {
-    $('#login').addClass('d-none');
-    $('.isLoginSuccess').removeClass('d-none');
-    $('.hamburger-bottom').addClass('d-none');
-    $('.isLogin').removeClass('d-none');
-    $('.isNotLogin').addClass('d-none');
-
-    console.log('user is login');
-  } else {
-    $('#login').removeClass('d-none');
-    $('.isLoginSuccess').addClass('d-none');
-    $('.hamburger-bottom').removeClass('d-none');
-    $('.isLogin').addClass('d-none');
-    $('.isNotLogin').removeClass('d-none');
-
-    console.log('user is not login');
-  }
-}
-
-function checkLogin() {
-  if (isLogin)
-    return true;
-  return false;
-}
-
-function logout() {
-  isLogin = false; //test
-  getStatusLogin();
-}
 
 
 //post review
