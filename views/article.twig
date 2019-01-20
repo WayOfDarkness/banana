@@ -8,7 +8,7 @@
 
     {% set parentBlog = Blog(article.blogs[0]) %}
 
-    <main role="main" class="container">
+    <main role="main" class="container article----if--contains">
       <a id="main-content" tabindex="-1"></a>
       <div class="content-wrapper">
         <div class="layout-content">
@@ -107,13 +107,13 @@
                           <div class="social-share-button">
                             <a href="#" target="_blank" class="have-number">
                               <span class="social-icon upvote"></span>
-                              <i>888</i>
+                              <i>{{article.like}}</i>
                             </a>
                           </div>
                           <div class="social-share-button">
                             <a href="#" target="_blank" class="have-number">
                               <span class="social-icon downvote"></span>
-                              <i>888</i>
+                              <i>{{article.dislike}}</i>
                             </a>
                           </div>
                           <div class="social-share-button">
@@ -129,7 +129,7 @@
                           <div class="social-share-button">
                             <a href="#" target="_blank" class="have-number">
                               <span class="social-icon comment"></span>
-                              <i>888</i>
+                              <i>{{article.comment | length}}</i>
                             </a>
                           </div>
                         </section>

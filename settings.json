@@ -69,11 +69,6 @@
               "label": "Bài viết",
               "type": "article",
               "name": "news_featured_post"
-            },
-            {
-              "label": "Slider",
-              "type": "articles",
-              "name": "news_featured_slider"
             }
           ]
         },
@@ -84,11 +79,6 @@
               "label": "Bài viết",
               "type": "article",
               "name": "review_featured_post"
-            },
-            {
-              "label": "Slider",
-              "type": "articles",
-              "name": "review_featured_slider"
             }
           ]
         },
@@ -99,11 +89,6 @@
               "label": "Bài viết",
               "type": "article",
               "name": "walkthrough_featured_post"
-            },
-            {
-              "label": "Slider",
-              "type": "articles",
-              "name": "walkthrough_featured_slider"
             }
           ]
         }

@@ -7602,7 +7602,7 @@ html {
   -webkit-tap-highlight-color: transparent
 }
 
-.layout-container a:link, .layout-container a:visited {
+.layout-container .article----if--contains a:link, .layout-container .article----if--contains a:visited {
   color: #2C7ABE
 }
 
