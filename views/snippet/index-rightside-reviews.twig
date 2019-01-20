@@ -23,7 +23,7 @@
 		</dl>
 		<div class="filter-results js-filter-results">
 			<ol class="reviews-list">
-				{% for item in reviewBlog.articles | slice (0, 1) %}
+				{% for item in reviewBlog.articles %}
 					<li class="reviews-list__item reviews-list__item--first" style="background-image: url({{item.image | resize (640) | upload_url}})">
 						<a href="{{item.url}}">
 							<div class="align-vertical--contain">
@@ -53,25 +53,44 @@
 					</li>
 				{% endfor %}
 
-				<li class="reviews-list__header">
+				{# <li class="reviews-list__header">
 					<span class="reviews-list__header-game">Game</span>
 					<span class="reviews-list__header-score">Điểm</span>
-				<li>
+				<li> #}
 
-				{% for item in reviewBlog.articles | slice (1, 9) %}
-					<li class="reviews-list__item">
+				<div class="filter-results js-filter-results">
+                    <ul class="game game--top-games">
+						{% for item in reviewBlog.articles | slice (1, 9) %}
+							<li class="reviews-list__item reviews-list__item--first" style="background-image: url({{item.image | resize (640) | upload_url}})">
 						<a href="{{item.url}}">
 							<div class="align-vertical--contain">
-								<h4 class="game-title align-vertical--child">{{item.title}}</h4>
+								<div class="align-vertical--child game-info-wrapper">
+									<h4 class="game-title">{{item.title}}</h4>
+								</div>
 								<dl class="game-score align-vertical--child ">
-									<dt>{{item.admin_point}}</dt>
+									<dt>
+										<div class="gs-score  gs-score--small score-{{item.admin_point}}">
+											<div class="gs-score__clip">
+												<div class="gs-score__pie gs-score__spinner"></div>
+											</div>
+											<div class="gs-score__clip gs-score__clip2">
+												<div class="gs-score__pie gs-score__filler"></div>
+											</div>
+											<div class="gs-score__inner">
+												<div class="gs-score__table">
+													<div class="gs-score__cell">{{item.admin_point}}</div>
+												</div>
+											</div>
+										</div>
+									</dt>
 									{% include 'snippet/point-system.twig' %}
 								</dl>
 							</div>
 						</a>
 					</li>
-				{% endfor %}
-
+						{% endfor %}
+					</ul>
+               	</div>
 			</ol>
 			
 			<footer class="pod-footer">
@@ -79,120 +98,5 @@
 			</footer>
 		</div>
 	</section>
-
-	<section class="pod pod--topgames pod-filter js-filter-pod">
-                      <dl class="pod-header  ">
-                        <dt class="pod-header__item">
-                          <div class="pod-title">
-                            <h4>Danh sách game phổ biến</h4>
-                            <span class="pod-div" role="presentation" aria-hidden="true"></span>
-                          </div>
-                        </dt>
-                        <dd class="pod-header__item pod-header__filters pod-header__filters--js no-flex hide-mobile">
-                          <div class="pod-header__filters--select"><select name="sort" class="js-filter-json"
-                              data-filter-query="topgames" data-filter-nohistory="1" data-filter-nodata="1">
-                              <option value="overall" data-filter-url="/river/games/overall">OVERALL</option>
-                              <option value="xbox-one" data-filter-url="/river/games/xbox-one">ONLINE</option>
-                              <option value="ps4" data-filter-url="/river/games/ps4">OFFLINE</option>
-                            </select></div>
-                        </dd>
-                      </dl>
-                      <div class="filter-results js-filter-results">
-                        <ul class="game game--top-games">
-                          <li class="game-background" style="background-image: url('../../img/2887728-kh3_01re.jpg')">
-                            <div class="game-item"><a href="kingdom-hearts-iii/index.html" class="game-info">
-                                <h4 class="game-title">Kingdom Hearts III</h4>
-                                <p class="game-meta game-meta--date">
-                                  Coming <span>Jan 29, 2019</span>
-                                </p>
-								<dl class="game-score align-vertical--child ">
-									<dt>haha</dt>
-								</dl>
-                              </a></div>
-                          </li>
-                          <li class="game-background">
-                            <div class="game-item"><a href="resident-evil-2/index.html" class="game-info">
-                                <h4 class="game-title">Resident Evil 2</h4>
-                                <p class="game-meta game-meta--date">
-                                  Coming <span>Jan 25, 2019</span>
-                                </p>
-                              </a></div>
-                          </li>
-                          <li class="game-background" style="background-image: url('../../img/3165126-screen_tlou2_teaser_01.jpg')">
-                            <div class="game-item"><a href="the-last-of-us-part-ii/index.html" class="game-info">
-                                <h4 class="game-title">The Last of Us Part II</h4>
-                                <p class="game-meta game-meta--date"><span>Unknown Release Date</span>
-                                </p>
-                              </a></div>
-                          </li>
-                          <li class="game-background" style="background-image: url('../../img/2425926-2026827-672376_20130205_001.jpg')">
-                            <div class="game-item"><a href="cyberpunk-2077/index.html" class="game-info">
-                                <h4 class="game-title">Cyberpunk 2077</h4>
-                                <p class="game-meta game-meta--date"><span>Unknown Release Date</span>
-                                </p>
-                              </a></div>
-                          </li>
-                          <li class="game-background">
-                            <div class="game-item"><a href="devil-may-cry-5/index.html" class="game-info">
-                                <h4 class="game-title">Devil May Cry 5</h4>
-                                <p class="game-meta game-meta--date">
-                                  Coming <span>Mar 8, 2019</span>
-                                </p>
-                              </a></div>
-                          </li>
-                          <li class="game-background">
-                            <div class="game-item"><a href="pokemon-for-nintendo-switch/index.html" class="game-info">
-                                <h4 class="game-title">Pokemon for Nintendo Switch</h4>
-                                <p class="game-meta game-meta--date">
-
-                                  Coming <span>2019</span>
-                                </p>
-                              </a></div>
-                          </li>
-                          <li class="game-background" style="background-image: url('../../img/3245568-gamespot-50-template-gamename.jpg')">
-                            <div class="game-item"><a href="anthem/index.html" class="game-info">
-                                <h4 class="game-title">
-                                  Anthem</h4>
-                                <p class="game-meta game-meta--date">
-                                  Coming <span>Feb 22, 2019</span>
-                                </p>
-                              </a></div>
-                          </li>
-                          <li class="game-background" style="background-image: url('../../img/2604941-6759864154-20133.jpg')">
-                            <div class="game-item"><a href="star-citizen/index.html" class="game-info">
-                                <h4 class="game-title">Star Citizen</h4>
-                                <p class="game-meta game-meta--date"><span>Unknown Release Date</span>
-                                </p>
-                              </a></div>
-                          </li>
-                          <li class="game-background">
-                            <div class="game-item"><a href="doom-eternal/index.html" class="game-info">
-                                <h4 class="game-title">DOOM Eternal</h4>
-                                <p class="game-meta game-meta--date">
-
-                                  Coming <span>2019</span>
-
-                                </p>
-                              </a></div>
-                          </li>
-                          <li class="game-background" style="background-image: url('../../img/3080264-3079398-planecrash_1080_1465877083.png')">
-                            <div class="game-item"><a href="days-gone/index.html" class="game-info">
-                                <h4 class="game-title">
-                                  Days Gone</h4>
-                                <p class="game-meta game-meta--date">
-                                  Coming <span>Apr 26, 2019</span>
-                                </p>
-                              </a></div>
-                          </li>
-                        </ul>
-                        <footer class="pod-footer"><a class="game-gs50" href="gamespot-50/index.html"><span class="game-gs50__logo">GameSpot
-                              50</span>
-                            See all upcoming games <i>
-                              <svg version="1.1" width="28" height="28" viewBox="0 0 28 28" aria-hidden="true" class="symbol symbol-arrow-right">
-                                <path d="M23 15q0 0.844-0.578 1.422l-10.172 10.172q-0.609 0.578-1.422 0.578-0.797 0-1.406-0.578l-1.172-1.172q-0.594-0.594-0.594-1.422t0.594-1.422l4.578-4.578h-11q-0.812 0-1.32-0.586t-0.508-1.414v-2q0-0.828 0.508-1.414t1.32-0.586h11l-4.578-4.594q-0.594-0.562-0.594-1.406t0.594-1.406l1.172-1.172q0.594-0.594 1.406-0.594 0.828 0 1.422 0.594l10.172 10.172q0.578 0.547 0.578 1.406z" />
-                              </svg>
-                            </i></a></footer>
-                      </div>
-                    </section>
 </aside>
     
