@@ -138,7 +138,7 @@
                             <div class="simple-text">
                               <div class="coloralert platform-color">
                                 <p class="alert-text">
-                                  <strong>{{attribute.type}}</strong>
+                                  <strong>{{article.option_1}}</strong>
                                 </p>
                               </div>
                             </div>
@@ -147,7 +147,7 @@
                             <div class="simple-text ">
                               <div class="coloralert type-color">
                                 <p class="alert-text">
-                                  <strong>{{attribute.type}}</strong>
+                                  <strong>{{article.option_2}}</strong>
                                 </p>
                               </div>
                             </div>
@@ -156,7 +156,7 @@
                             <div class="simple-text ">
                               <div class="coloralert brand-color">
                                 <p class="alert-text">
-                                  <strong>{{attribute.type}}</strong>
+                                  <strong>{{article.option_3}}</strong>
                                 </p>
                               </div>
                             </div>
@@ -165,7 +165,7 @@
                             <div class="simple-text ">
                               <div class="coloralert genre-color">
                                 <p class="alert-text">
-                                  <strong>{{attribute.type}}</strong>
+                                  <strong>{{article.option_4}}</strong>
                                 </p>
                               </div>
                             </div>
@@ -182,7 +182,123 @@
                       {% endif %}
                     </div>
                   </div>
-                  a={{article | json_encode}}
+
+                  {% if article.type == 'review' %}
+                    <div class="config-wrapper">
+                      <ul class="config-tab-wrapper">
+                        <a href="javascript:;" class="config-tab config-info active">Thông tin</a>
+                        <a href="javascript:;" class="config-tab config-req">Cấu hình</a>
+                      </ul>
+                      <div class="author-footer config-footer config-info-area clearfix">
+                        <div class="author-footer-info">
+                          <p>
+                            Sản xuất: Nomada Studio<br>
+                            Phát hành: Devolver Digital<br>
+                            Thể loại: phiêu lưu, giải đố<br>
+                            Ngày ra mắt: 13/12/2018<br>
+                            Hệ máy: PC | Nintendo Switch
+                          </p>
+                        </div>
+                      </div>
+                      <div class="author-footer config-footer config-req-area d-none clearfix">
+                        <div class="author-footer-info">
+                          <p>
+                            OS: Windows 7 64-bit<br>
+                            Processor: Intel Core i5-2400<br>
+                            Memory: 8 GB RAM<br>
+                            Graphics: NVIDIA GeForce GTX 760 | AMD R9 270<br>
+                            Storage: 59 GB available space
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="review-breakdown rating-overflow">
+                      <div class="review-breakdown__inner">
+                        <div class="container row">
+                          <dl class="breakdown breakdown-good span6">
+                            <dt class="breakdown-good__title"><span>Ưu điểm</span></dt>
+                            <dd class="breakdown-good__item">
+                              <i>
+                                <svg version="1.1" width="28" height="28" viewBox="0 0 28 28"
+                                    aria-hidden="true" class="symbol symbol-plus-sign">
+                                  <path
+                                    d="M19 15v-2q0-0.406-0.297-0.703t-0.703-0.297h-4v-4q0-0.406-0.297-0.703t-0.703-0.297h-2q-0.406 0-0.703 0.297t-0.297 0.703v4h-4q-0.406 0-0.703 0.297t-0.297 0.703v2q0 0.406 0.297 0.703t0.703 0.297h4v4q0 0.406 0.297 0.703t0.703 0.297h2q0.406 0 0.703-0.297t0.297-0.703v-4h4q0.406 0 0.703-0.297t0.297-0.703zM24 14q0 3.266-1.609 6.023t-4.367 4.367-6.023 1.609-6.023-1.609-4.367-4.367-1.609-6.023 1.609-6.023 4.367-4.367 6.023-1.609 6.023 1.609 4.367 4.367 1.609 6.023z"></path>
+                                </svg>
+                              </i>
+                              Tạo ra bầu không khí kinh dị đáng sợ
+                            </dd>
+                            <dd class="breakdown-good__item">
+                              <i>
+                                <svg version="1.1" width="28" height="28" viewBox="0 0 28 28"
+                                    aria-hidden="true" class="symbol symbol-plus-sign">
+                                  <path
+                                    d="M19 15v-2q0-0.406-0.297-0.703t-0.703-0.297h-4v-4q0-0.406-0.297-0.703t-0.703-0.297h-2q-0.406 0-0.703 0.297t-0.297 0.703v4h-4q-0.406 0-0.703 0.297t-0.297 0.703v2q0 0.406 0.297 0.703t0.703 0.297h4v4q0 0.406 0.297 0.703t0.703 0.297h2q0.406 0 0.703-0.297t0.297-0.703v-4h4q0.406 0 0.703-0.297t0.297-0.703zM24 14q0 3.266-1.609 6.023t-4.367 4.367-6.023 1.609-6.023-1.609-4.367-4.367-1.609-6.023 1.609-6.023 4.367-4.367 6.023-1.609 6.023 1.609 4.367 4.367 1.609 6.023z"></path>
+                                </svg>
+                              </i>
+                              Hệ thống kĩ năng, trang bị của nhân vật đa dạng
+                            </dd>
+                            <dd class="breakdown-good__item">
+                              <i>
+                                <svg version="1.1" width="28" height="28" viewBox="0 0 28 28"
+                                    aria-hidden="true" class="symbol symbol-plus-sign">
+                                  <path
+                                    d="M19 15v-2q0-0.406-0.297-0.703t-0.703-0.297h-4v-4q0-0.406-0.297-0.703t-0.703-0.297h-2q-0.406 0-0.703 0.297t-0.297 0.703v4h-4q-0.406 0-0.703 0.297t-0.297 0.703v2q0 0.406 0.297 0.703t0.703 0.297h4v4q0 0.406 0.297 0.703t0.703 0.297h2q0.406 0 0.703-0.297t0.297-0.703v-4h4q0.406 0 0.703-0.297t0.297-0.703zM24 14q0 3.266-1.609 6.023t-4.367 4.367-6.023 1.609-6.023-1.609-4.367-4.367-1.609-6.023 1.609-6.023 4.367-4.367 6.023-1.609 6.023 1.609 4.367 4.367 1.609 6.023z"></path>
+                                </svg>
+                              </i>
+                              Đồ họa cực đẹp
+                            </dd>
+                          </dl>
+                          <dl class="breakdown breakdown-bad span6">
+                            <dt class="breakdown-bad__title"><span>Nhược điểm</span></dt>
+                            <dd class="breakdown-bad__item">
+                              <i>
+                                <svg version="1.1" width="28" height="28" viewBox="0 0 28 28"
+                                    aria-hidden="true" class="symbol symbol-minus-sign symbol--color-link">
+                                  <path
+                                    d="M19 15v-2q0-0.406-0.297-0.703t-0.703-0.297h-12q-0.406 0-0.703 0.297t-0.297 0.703v2q0 0.406 0.297 0.703t0.703 0.297h12q0.406 0 0.703-0.297t0.297-0.703zM24 14q0 3.266-1.609 6.023t-4.367 4.367-6.023 1.609-6.023-1.609-4.367-4.367-1.609-6.023 1.609-6.023 4.367-4.367 6.023-1.609 6.023 1.609 4.367 4.367 1.609 6.023z"></path>
+                                </svg>
+                              </i>
+                              Game rất nặng, gần 100 GB
+                            </dd>
+                            <dd class="breakdown-bad__item">
+                              <i>
+                                <svg version="1.1" width="28" height="28" viewBox="0 0 28 28"
+                                    aria-hidden="true" class="symbol symbol-minus-sign symbol--color-link">
+                                  <path
+                                    d="M19 15v-2q0-0.406-0.297-0.703t-0.703-0.297h-12q-0.406 0-0.703 0.297t-0.297 0.703v2q0 0.406 0.297 0.703t0.703 0.297h12q0.406 0 0.703-0.297t0.297-0.703zM24 14q0 3.266-1.609 6.023t-4.367 4.367-6.023 1.609-6.023-1.609-4.367-4.367-1.609-6.023 1.609-6.023 4.367-4.367 6.023-1.609 6.023 1.609 4.367 4.367 1.609 6.023z"></path>
+                                </svg>
+                              </i>
+                              Vài giờ đầu chơi khá khó khăn nếu không có người
+                              chơi có kinh nghiệm kéo
+                            </dd>
+                          </dl>
+
+                          <dl class="breakdown breakdown-score">
+                            <dt class="review-score">
+                              <div class="gs-score gs-score--large score-{{article.admin_point}}">
+                                <div class="gs-score__clip">
+                                  <div class="gs-score__pie gs-score__spinner"></div>
+                                </div>
+                                <div class="gs-score__clip gs-score__clip2">
+                                  <div class="gs-score__pie gs-score__filler"></div>
+                                </div>
+                                <div class="gs-score__inner">
+                                  <div class="gs-score__table">
+                                    <div class="gs-score__cell">
+                                      <span aria-label="Review score {{article.admin_point}}" tabindex="0">{{article.admin_point}}</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </dt>
+                            {% include 'snippet/point-system.twig' %}
+                          </dl>
+                        </div>
+                      </div>
+                    </div>
+                  {% endif %}
+
                   <div
                     class="field field--type-ds field__item">
                     <div class="views-element-container">
