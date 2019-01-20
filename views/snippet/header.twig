@@ -5,7 +5,7 @@
                 <div class="region region-header-logo">
                     <div id="block-gi5-branding" class="block block-system block-system-branding-block">
                         <a class="site-logo" href="/" rel="home" title="Home">
-                            <img src="{{ theme.uri }}/img/icon/logo.png" alt="Home"/>
+                            <img src="{{settings.logo | upload_url}}" alt="Home"/>
                         </a>
                     </div>
                 </div>
@@ -34,32 +34,27 @@
                     </nav>
                 </div>
             </div>
-            <!--<div class="d-none isLoginSuccess mobile">-->
-            <!--<div class="user-avatar">-->
-            <!--<img src="../../img/avatar-default.png" alt="avatar">-->
-            <!--</div>-->
-            <!--<p class="user-name">Nguyễn Văng Xa Vãi <img src="../../img/icon-menu-down.png" alt="menu-down" width="26px"></p>-->
-            <!--<div class="list-menu">-->
-            <!--<p onclick="logout()">Đăng xuất</p>-->
-            <!--</div>-->
-            <!--</div>-->
-                <div class="header-right-container"> <div class="header-icon search-button">
+            <div class="header-right-container">
+                <div class="header-icon search-button">
                     <div class="icon-search" onclick="showModalSearch(true)"></div>
                 </div>
                 <div class="block-login clearfix">
-                    <div id="login" class="clearfix">
-                        <a class="header-icon btn-signin">Đăng nhập</a>
-                        <a class="header-icon btn-signup">Đăng ký</a>
-                    </div>
-                    <div class="d-none isLoginSuccess">
-                        <div class="user-avatar">
-                            <img src="{{ theme.uri }}/img/avatar-default.png" alt="avatar"></div>
-                            <p class="user-name">Nguyễn Văng Xa Vãi</p>
-                            <div class="list-menu">
-                                <p onclick="logout()">Đăng xuất</p>
+                    {% if customer.logged_in %}
+                        <div class="isLoginSuccess">
+                            <div class="user-avatar">
+                                <img src="{{theme.uri}}/img/avatar-default.png" alt="avatar"></div>
+                                <p class="user-name">Nguyễn Văng Xa Vãi</p>
+                                <div class="list-menu">
+                                    <p onclick="logout()">Đăng xuất</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    {% else %}
+                        <div id="login" class="clearfix">
+                            <a class="header-icon btn-signin">Đăng nhập</a>
+                            <a class="header-icon btn-signup">Đăng ký</a>
+                        </div>
+                    {% endif %}
                     <div class="header-icon expanded-menu-button">
                         <div class="icon-expanded"></div>
                     </div>
@@ -88,16 +83,8 @@
         </div>
         <div class="slide-in scrollbar-lt" id="expanded-menu">
             <div class="max-width-container">
-                <!--<div class="d-none isLoginSuccess mobile">-->
-                <!--<div class="user-avatar">-->
-                <!--<img src="../../img/avatar-default.png" alt="avatar">-->
-                <!--</div>-->
-                <!--<p class="user-name">Nguyễn Văng Xa Vãi</p>-->
-                <!--<div class="list-menu">-->
-                <!--<p onclick="logout()">Logout</p>-->
-                <!--</div>-->
-                <!--</div>-->
-                    <div class="hamburger-top"> <div class="region region-header-hamburger-top">
+                <div class="hamburger-top">
+                    <div class="region region-header-hamburger-top">
                         <div class="views-exposed-form block block-views block-views-exposed-filter-blocksearch-content-page-1" data-drupal-selector="views-exposed-form-search-content-page-1" id="block-exposedformsearch-contentpage-1-2">
                             <span class="icon-search"></span>
                             <form accept-charset="UTF-8" id="views-exposed-form-search-content-page-1-mobile" method="get">
@@ -139,21 +126,22 @@
                 </div>
                 <div class="d-none isLoginSuccess mobile">
                     <div class="user-avatar">
-                        <img src="../../img/avatar-default.png" alt="avatar"></div>
-                        <p class="user-name">Nguyễn Văng Xa Vãi
-                            <img alt="menu-down" src="../../img/icon-menu-down.png" width="26px"></p>
-                        </div>
-                        <p class="isLogin d-none text-orange border" onclick="logout()">Đăng xuất</p>
-                        <div class="hamburger-bottom">
-                            <div id="toolbar-item-lightswitch">&nbsp;</div>
-                            <div class="user-menu user-loggedout main-nav">
-                                <ul>
-                                    <li><a class="cd-signin" href="javascript:;">Đăng nhập</a></li>
-                                    <li><a class="cd-signup" href="javascript:;">Đăng ký</a></li>
-                                </ul>
-                            </div>
+                        <img src="../../img/avatar-default.png" alt="avatar"/>
+                    </div>
+                    <p class="user-name">Nguyễn Văng Xa Vãi
+                        <img alt="menu-down" src="../../img/icon-menu-down.png" width="26px"></p>
+                    </div>
+                    <p class="isLogin d-none text-orange border" onclick="logout()">Đăng xuất</p>
+                    <div class="hamburger-bottom">
+                        <div id="toolbar-item-lightswitch">&nbsp;</div>
+                        <div class="user-menu user-loggedout main-nav">
+                            <ul>
+                                <li><a class="cd-signin" href="javascript:;">Đăng nhập</a></li>
+                                <li><a class="cd-signup" href="javascript:;">Đăng ký</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        
+        </div>
+    
