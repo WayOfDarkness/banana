@@ -147,11 +147,9 @@ $('.feed-view').click(function () {
 
 //click button sign in, sign up
 $('.btn-signin').click(function (e) {
-  console.log('da click dang knhapi');
   showLogin();
 })
 $('.btn-signup').click(function (e) {
-  console.log('da click dang ki');
   showRegister();
 })
 

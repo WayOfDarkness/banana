@@ -150,6 +150,7 @@ jQuery.fn.putCursorAtEnd = function () {
 };
 
 $("#register-form").submit(function (e) {
+	console.log('%%%%%%');
 	e.preventDefault();
 	var confirmPassword = $("#signup-password-confirm").val();
 	
@@ -158,6 +159,8 @@ $("#register-form").submit(function (e) {
 		email: $("#signup-email").val(),
 		password: $("#signup-password").val()
 	};
+
+	console.log('%%%%%%' + data);
 
 	if (!data.name) {
 		$('#signup-name').addClass('has-error').next('span').addClass('is-visible');
