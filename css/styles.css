@@ -1601,6 +1601,7 @@ main {
 .type-of-article img {
   width: 100% !important;
   height: 100% !important;
+  min-height: 40px !important;
   object-fit: contain !important;
   background: #ffffffbd;
   padding: 2px;
