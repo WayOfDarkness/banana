@@ -56,7 +56,8 @@
 {% block content %}
 
 	{% set featured_post = Article (settings.review_featured_post.handle) %}
-	{% set redirectBlog = 'huong-dan' %}
+	{% set redirectBlogHandle = 'huong-dan' %}
+	{% set redirectBlog = 'Hướng dẫn' %}
 
 	<div id="site-wrapper">
 		<div id="mantle_skin">
@@ -152,7 +153,7 @@
 															<div class="media-well media-well--review">
 																<div class="media-well--review-gs">
 																	<div class="media-well--review-score">
-																		<span class="content">{{item.point}}</span>
+																		<span class="content">{{item.admin_point}}</span>
 																	</div>
 																	<span class="score-word">{{item.point_letter}}</span>
 																</div>
