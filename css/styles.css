@@ -448,6 +448,10 @@ body.page-article {
 .page-blog .media-title {
   font-size: 1.2rem !important;
   color: #141517;
+  max-height: 2em;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .page-blog .pod {
