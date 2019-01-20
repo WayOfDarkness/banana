@@ -56,7 +56,6 @@
 {% block content %}
 
 	{% set featured_post = Article (settings.review_featured_post.handle) %}
-	{% set featured_slider = settings.review_featured_slider %}
 	{% set redirectBlog = 'huong-dan' %}
 
 	<div id="site-wrapper">
@@ -90,8 +89,7 @@
 						<div id="default-content" class="container row">
 							<section class="promo-strip span12">
 								<ul class="promo-strip__list row owl-carousel owl-theme">
-									{% for item in featured_slider %}
-										{% set post = Article (item.handle) %}
+									{% for post in blog.articles | slice (0, 10) %}
 										<li class="promo-type--grid promo-strip__item media">
 											<a href="{{post.url}}">
 												<figure class="media-figure">

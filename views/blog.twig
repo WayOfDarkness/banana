@@ -58,11 +58,9 @@
     
     {% if blog.handle == 'tin-tuc' %}
         {% set featured_post = Article (settings.news_featured_post.handle) %}
-        {% set featured_slider = settings.news_featured_slider %}
         {% set redirectBlog = 'danh-gia' %}
     {% elseif blog.handle == 'huong-dan' %}
         {% set featured_post = Article (settings.walkthrough_featured_post) %}
-        {% set featured_slider = settings.walkthrough_featured_slider %}
         {% set redirectBlog = 'tin-tuc' %}
     {% endif %}
 
@@ -96,8 +94,7 @@
                         <div id="default-content" class="container row">
                             <section class="promo-strip span12">
                                 <ul class="promo-strip__list row owl-carousel owl-theme">
-                                    {% for item in featured_slider %}
-                                        {% set post = Article (item.handle) %}
+                                    {% for post in blog.articles | slice (0, 10) %}
                                         <li class="promo-type--grid promo-strip__item media">
                                             <a href="{{post.url}}">
                                                 <figure class="media-figure">
