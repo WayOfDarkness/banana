@@ -56,36 +56,41 @@
 				{# <li class="reviews-list__header">
 					<span class="reviews-list__header-game">Game</span>
 					<span class="reviews-list__header-score">Điểm</span>
-				<li>
+				<li> #}
 
 				<div class="filter-results js-filter-results">
                     <ul class="game game--top-games">
 						{% for item in reviewBlog.articles | slice (1, 9) %}
-							<li class="reviews-list__item">
-								<a href="{{item.url}}">
-									<div class="align-vertical--contain">
-										<h4 class="game-title align-vertical--child">{{item.title}}</h4>
-										<dl class="game-score align-vertical--child ">
-											<dt>{{item.admin_point}}</dt>
-											{% include 'snippet/point-system.twig' %}
-										</dl>
-									</div>
-								</a>
-							</li>
-							<li class="game-background" style="background-image: url({{item.image | upload_url}})">
-								<div class="game-item">
-									<a href="{{item.url}}" class="game-info">
-										<h4 class="game-title">{{item.title}}</h4>
-										<dl class="game-score align-vertical--child">
-											<dt>{{item.admin_point}}</dt>
-											{% include 'snippet/point-system.twig' %}
-										</dl>
-									</a>
+							<li class="reviews-list__item reviews-list__item--first" style="background-image: url({{item.image | resize (640) | upload_url}})">
+						<a href="{{item.url}}">
+							<div class="align-vertical--contain">
+								<div class="align-vertical--child game-info-wrapper">
+									<h4 class="game-title">{{item.title}}</h4>
 								</div>
-							</li>
+								<dl class="game-score align-vertical--child ">
+									<dt>
+										<div class="gs-score  gs-score--small score-{{item.admin_point}}">
+											<div class="gs-score__clip">
+												<div class="gs-score__pie gs-score__spinner"></div>
+											</div>
+											<div class="gs-score__clip gs-score__clip2">
+												<div class="gs-score__pie gs-score__filler"></div>
+											</div>
+											<div class="gs-score__inner">
+												<div class="gs-score__table">
+													<div class="gs-score__cell">{{item.admin_point}}</div>
+												</div>
+											</div>
+										</div>
+									</dt>
+									{% include 'snippet/point-system.twig' %}
+								</dl>
+							</div>
+						</a>
+					</li>
 						{% endfor %}
 					</ul>
-               	</div> #}
+               	</div>
 			</ol>
 			
 			<footer class="pod-footer">
