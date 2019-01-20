@@ -5,6 +5,11 @@
 			<div class="promo--image">
 				<div class="content">
 					<img src="{{featured_post.image | upload_url}}" alt="{{featured_post.title}}" title="{{featured_post.title}}"/>
+					<div class="type-of-article {{featured_post.type}}">
+						<img class="news" src="{{theme.uri}}/img/icon-news.png" alt="type-of-article" width="50px">
+						<img class="review" src="{{theme.uri}}/img/icon-news.png" alt="type-of-article" width="50px">
+						<img class="walkthrough" src="{{theme.uri}}/img/icon-news.png" alt="type-of-article" width="50px">
+					</div>
 				</div>
 			</div>
 			<div>
