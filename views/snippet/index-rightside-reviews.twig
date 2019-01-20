@@ -23,7 +23,7 @@
 		</dl>
 		<div class="filter-results js-filter-results">
 			<ol class="reviews-list">
-				{% for item in reviewBlog.article | slice (0, 1) %}
+				{% for item in reviewBlog.articles | slice (0, 1) %}
 					<li class="reviews-list__item reviews-list__item--first" style="background-image: url({{item.image | resize (640) | upload_url}})">
 						<a href="{{item.url}}">
 							<div class="align-vertical--contain">
@@ -58,7 +58,7 @@
 					<span class="reviews-list__header-score">Điểm</span>
 				<li>
 
-				{% for item in reviewBlog.article | slice (1, 9) %}
+				{% for item in reviewBlog.articles | slice (1, 9) %}
 					<li class="reviews-list__item">
 						<a href="{{item.url}}">
 							<div class="align-vertical--contain">
