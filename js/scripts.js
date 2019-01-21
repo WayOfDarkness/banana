@@ -34,11 +34,6 @@ $('.pod-header__grid').click(function () {
 
 //END ALL PAGE
 
-//BLOG RUN THIS CODE
-if ($(".page-blog").length) {
-  console.log("Blog");
-}
-
 //scroll to loadmore
 var load_all = false;
 window.onscroll = function (e) {
@@ -74,8 +69,8 @@ function viewMore(numberOfArticle) {
 
 //ARTICLE RUN THIS CODE
 if ($(".page-article").length) {
-  console.log("Article");
-// Outline
+
+  // Outline
   var html = '';
 
   $('.ds-main .field--type-text-with-summary').find('h2').each(function (i, e) {
@@ -86,6 +81,7 @@ if ($(".page-article").length) {
 
   $('.ad-299').html(html);
   if ($(".scroll-animated").length < 10)
+    console.log($(".scroll-animated").length);
     $('.ad-299').css("overflow-y","none");
 
   $(".scroll-animated").click(function () {
@@ -116,41 +112,6 @@ if ($(".page-article").length) {
   });
 }
 //END ARTICLE PAGE
-
-//HOME RUN THIS CODE
-if ($(".page-home").length) {
-  console.log("Home");
-
-}
-//END HOME PAGE
-
-//NEWS RUN THIS CODE
-if ($(".page-news").length) {
-  console.log("News");
-
-}
-//END NEWS PAGE
-
-//REVIEWS RUN THIS CODE
-if ($(".page-reviews").length) {
-  console.log("Reviews");
-
-}
-//END REVIEWS PAGE
-
-//VIDEO RUN THIS CODE
-if ($(".page-Videos").length) {
-  console.log("Video");
-
-}
-//END VIDEO PAGE
-
-//WALKTHROUGH RUN THIS CODE
-if ($(".page-walkthrough").length) {
-  console.log("Walkthrough");
-
-}
-//END WALKTHROUGH
 
 $('.config-tab').click(function (e) {
   var s = $(this);
@@ -255,8 +216,9 @@ function doSearchMobile(e) {
 $('#edit-keyword').click(function (e) {
 })
 
-
-
+// Variables Initialization
+var error_color = '#E74C3C';
+var success_color = '#2C7ABE';
 
 // Check Login
 function checkLogin() {
@@ -267,20 +229,21 @@ function checkLogin() {
 // Check Upvote
 function checkUpvote() {
   if (checkLogin() != 1)
-    toast('Bạn cần đăng nhập để upvote', 3000);
+    toast('Bạn cần đăng nhập để upvote', 3000, error_color);
 }
 
 // Check Downvote
 function checkDownvote() {
   if (checkLogin() != 1)
-    toast('Bạn cần đăng nhập để downvote', 3000);
+    toast('Bạn cần đăng nhập để downvote', 3000, error_color);
 }
 
-//toast
-function toast(string, milisecond) {
+// Notification
+function toast(string, milisecond, color) {
   let toast = $('.toast');
   toast.find('.toast-content').html(string);
   toast.addClass('active');
+  toast.css('background-color', color);
   $('.other-effect').addClass('mario');
   setTimeout(function () {
     toast.removeClass('active');
