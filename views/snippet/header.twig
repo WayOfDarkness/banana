@@ -42,7 +42,7 @@
                                 {{customer.name}}
                             </p>
                             <div class="list-menu">
-                                <p onclick="logout()">Đăng xuất</p>
+                                <p onclick="/api/signout">Đăng xuất</p>
                             </div>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
             </div>
             
             {% if customer.logged_in %}
-                <div class="d-none isLoginSuccess mobile">
+                <div class="isLoginSuccess mobile">
                     <div class="user-avatar">
                         <img src="{{theme.uri}}/img/avatar-default.png" alt="avatar"/>
                     </div>
@@ -126,7 +126,7 @@
                         <img alt="menu-down" src="{{theme.uri}}/img/icon-menu-down.png" width="26px"/>
                     </p>
                 </div>
-                <p class="d-none text-orange border" onclick="logout()">Đăng xuất</p>
+                <p class="text-orange border" onclick="/api/signout">Đăng xuất</p>
             {% else %}
                 <div class="hamburger-bottom">
                     <div id="toolbar-item-lightswitch">&nbsp;</div>
