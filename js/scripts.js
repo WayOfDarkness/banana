@@ -85,6 +85,8 @@ if ($(".page-article").length) {
   })
 
   $('.ad-299').html(html);
+  if ($(".scroll-animated").length < 10)
+    $('.ad-299').css("overflow-y","none");
 
   $(".scroll-animated").click(function () {
     var id = $(this).attr('rel');
