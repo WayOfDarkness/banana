@@ -1456,6 +1456,9 @@ z-index: 99;
   font-size: 1rem;
 }
 
+#default-content .view-header h2 {
+  line-height: 3rem;
+}
 #default-content {
   background-color: #fffffe;
   padding: 0;
@@ -1609,3 +1612,9 @@ main {
   border-top-left-radius: 0;
 }
 /*end type of article*/
+
+.owl-carousel .owl-item img {
+  height: 300px !important;
+  object-fit: cover;
+  background-position: center center;
+}
