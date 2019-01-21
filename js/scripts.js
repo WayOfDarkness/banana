@@ -82,7 +82,7 @@ if ($(".page-article").length) {
   $('.ad-299').html(html);
   if ($(".scroll-animated").length < 10) {
     console.log($(".scroll-animated").length);
-    $('.ad-299').css("overflow-y","none");
+    $('.ad-299').css("overflow-y","hidden");
   }
 
   $(".scroll-animated").click(function () {
