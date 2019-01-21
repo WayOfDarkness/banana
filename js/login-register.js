@@ -136,7 +136,7 @@ jQuery(document).ready(function ($) {
 		});
 	}
 
-	$("#register-form").submit(function (e) {
+	$("#register-form input[type='submit']").click(function (e) {
 		console.log('%%%%%%');
 		e.preventDefault();
 		var confirmPassword = $("#signup-password-confirm").val();
