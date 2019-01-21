@@ -3464,11 +3464,11 @@ html[data-useragent*='iPad'] .skin-yes.skinadaptive #mantle_skin {
   }
 }
 
-body.skybox-loaded {
+.skybox-loaded {
   padding-top: 0
 }
 
-body.skybox-loaded.has-promo-alert {
+.skybox-loaded.has-promo-alert {
   padding-top: 0;
   -webkit-transition: unset;
   transition: unset
@@ -4119,7 +4119,7 @@ body {
   padding-top: 3.75rem
 }
 
-body.has-omnibar {
+.has-omnibar {
   padding-top: 6.5625rem
 }
 
@@ -4134,25 +4134,25 @@ body.has-omnibar {
   padding-bottom: 0
 }
 
-body.has-promo-alert {
+.has-promo-alert {
   -webkit-transition: padding-top .25s linear;
   transition: padding-top .25s linear
 }
 
-body.has-promo-alert--live-now {
+.has-promo-alert--live-now {
   padding-top: 6.25rem
 }
 
-body.has-promo-alert--breaking-news {
+.has-promo-alert--breaking-news {
   padding-top: 10rem
 }
 
 @media (max-width: 979px) {
-  body.has-promo-alert--live-now {
+  .has-promo-alert--live-now {
     padding-top: 5.625rem
   }
 
-  body.has-promo-alert--breaking-news {
+  .has-promo-alert--breaking-news {
     padding-top: 8.75rem
   }
 }
@@ -6660,13 +6660,13 @@ p.author {
   display: none
 }
 
-body.sub-sale {
+.sub-sale {
   background-image: -webkit-radial-gradient(#e83434, #830303 600px);
   background-image: radial-gradient(#e83434, #830303 600px);
   height: 100%
 }
 
-body.sub-sale #promo {
+.sub-sale #promo {
   width: 739px;
   height: 1050px;
   margin: auto;
@@ -6674,7 +6674,7 @@ body.sub-sale #promo {
   position: relative
 }
 
-body.sub-sale #promo .family-portrait {
+.sub-sale #promo .family-portrait {
   position: absolute;
   top: 275px;
   left: 0;
@@ -6682,7 +6682,7 @@ body.sub-sale #promo .family-portrait {
   width: 100%
 }
 
-body.sub-sale #promo .sale-btn {
+.sub-sale #promo .sale-btn {
   color: #fff;
   background: #c62420;
   display: inline-block;
@@ -6703,19 +6703,19 @@ body.sub-sale #promo .sale-btn {
   box-shadow: #ff4840 0 1px 0 inset, rgba(0, 0, 0, 0.5) 0 1px 10px
 }
 
-body.sub-sale #promo .sale-btn:hover {
+.sub-sale #promo .sale-btn:hover {
   -webkit-transform: scale(1.05, 1.05);
   box-shadow: #ff4840 0 1px 0 inset, rgba(255, 255, 255, 0.5) 0 1px 10px
 }
 
-body.sub-sale #promo .available {
+.sub-sale #promo .available {
   position: absolute;
   width: 95px;
   right: 327px;
   top: 830px
 }
 
-body.sub-sale #promo .available span {
+.sub-sale #promo .available span {
   display: inline-block;
   width: 19px;
   text-align: center;
@@ -13298,13 +13298,13 @@ tr.pm .time {
   display: none
 }
 
-body.body-fauxscreen, html.body-fauxscreen {
+.body-fauxscreen, html.body-fauxscreen {
   overflow: hidden;
   width: 100%;
   height: 100%
 }
 
-body.body-fauxscreen div, body.body-fauxscreen header, html.body-fauxscreen div, html.body-fauxscreen header {
+.body-fauxscreen div, .body-fauxscreen header, html.body-fauxscreen div, html.body-fauxscreen header {
   visibility: hidden;
   overflow: visible
 }
@@ -13405,7 +13405,7 @@ body.body-fauxscreen div, body.body-fauxscreen header, html.body-fauxscreen div,
   display: block
 }
 
-body.nocursor {
+.nocursor {
   cursor: none
 }
 
@@ -13769,7 +13769,7 @@ body.nocursor {
   overflow: hidden
 }
 
-.pod-body.pod-body--pad {
+.pod-.pod-body--pad {
   padding: .65rem
 }
 
