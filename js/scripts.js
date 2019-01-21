@@ -80,10 +80,6 @@ if ($(".page-article").length) {
   })
 
   $('.ad-299').html(html);
-  if ($(".scroll-animated").length < 10) {
-    console.log($(".scroll-animated").length);
-    $('.ad-299').css("overflow-y","hidden");
-  }
 
   $(".scroll-animated").click(function () {
     var id = $(this).attr('rel');
@@ -111,6 +107,9 @@ if ($(".page-article").length) {
       }
     });
   });
+
+  if ($(".scroll-animated").length < 10)
+    $('.ad-299').css("overflow-y","hidden");
 }
 //END ARTICLE PAGE
 
