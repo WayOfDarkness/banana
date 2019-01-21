@@ -1078,7 +1078,7 @@ body .expanded-menu-button {
 .isLoginSuccess p {
   margin: 0;
 }
-.isLoginSuccess .list-menu > p::before {
+.isLoginSuccess .list-menu > a::before {
   content: '>';
   display: block;
   position: absolute;
@@ -1089,15 +1089,15 @@ body .expanded-menu-button {
   width: 30px;
   height: 17px;
 }
-.isLoginSuccess .list-menu > p:hover::before {
+.isLoginSuccess .list-menu > a:hover::before {
   left: -5px;
   animation: rotateZ infinite 1s linear;
 }
-.isLoginSuccess .list-menu > p:hover {
+.isLoginSuccess .list-menu > a:hover {
   padding-left: 1.6rem;
   background: #eff2f4;
 }
-.isLoginSuccess .list-menu > p {
+.isLoginSuccess .list-menu > a {
   border-left: 3px solid transparent;
   background: white;
   color: #2C7ABE;
@@ -1106,7 +1106,7 @@ body .expanded-menu-button {
   transition: ease-out 0.1s;
   position: relative;
 }
-.isLoginSuccess .list-menu{
+.isLoginSuccess .list-menu {
   width: 100%;
   overflow: hidden;
   background: white;
