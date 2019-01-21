@@ -1467,6 +1467,9 @@ z-index: 99;
 .promo-strip {
   background-color: #eff2f4;
 }
+.promo--container .promo--object {
+  width: 100%;
+}
 .promo--container {
   padding: 0;
 }

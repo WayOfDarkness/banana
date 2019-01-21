@@ -519,7 +519,7 @@ table.sticky-header {
   border-bottom: 1px solid #ccc;
 }
 
-body.drag {
+.drag {
   cursor: move;
 }
 
