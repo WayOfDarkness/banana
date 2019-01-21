@@ -146,8 +146,6 @@ jQuery(document).ready(function ($) {
 			password: $("#signup-password").val()
 		};
 	
-		console.log('%%%%%%' + data);
-	
 		if (!data.name) {
 			$('#signup-name').addClass('has-error').next('span').addClass('is-visible');
 			$('#signup-name').addClass('has-error').next('span').html('Vui lòng nhập tên tài khoản!');
@@ -217,9 +215,12 @@ jQuery(document).ready(function ($) {
 							data: data,
 							success: function (result) {
 								if (!result.code) {
+									toast('Bạn đã đăng ký thành công', 3000, success_color);
 									setTimeout(function () {
 										window.location.reload();
 									}, 1000);
+								} else {
+									toast(result.message, 3000, error_color);
 								}
 							}
 						});
@@ -229,7 +230,7 @@ jQuery(document).ready(function ($) {
 		});
 	});
 	
-	$("#login-form").submit(function (e) {
+	$("#login-form input[type='submit']").click(function (e) {
 		e.preventDefault();
 		
 		var data = {
@@ -246,11 +247,11 @@ jQuery(document).ready(function ($) {
 		}
 	
 		if (!data.password) {
-			$('#signin-password').addClass('has-error').next('span').addClass('is-visible');
-			$('#signin-password').addClass('has-error').next('span').html('Vui lòng nhập mật khẩu!');
+			$('#signin-password').addClass('has-error').siblings('span').addClass('is-visible');
+			$('#signin-password').addClass('has-error').siblings('span').html('Vui lòng nhập mật khẩu!');
 			return;
 		} else {
-			$('#signin-password').removeClass('has-error').next('span').removeClass('is-visible');
+			$('#signin-password').removeClass('has-error').siblings('span').removeClass('is-visible');
 		}
 	
 		$.ajax({
@@ -259,20 +260,18 @@ jQuery(document).ready(function ($) {
 			data: data,
 			success: function (result) {
 				if (!result.code) {
+					toast('Bạn đã đăng nhập thành công', 3000, success_color);
 					setTimeout(function () {
 						window.location.reload();
 					}, 1000);
 				} else {
-					$('#signin-email').addClass('has-error').next('span').addClass('is-visible');
-					$('#signin-email').addClass('has-error').next('span').html('Tên tài khoản hoặc mật khẩu không đúng!');
-					$('#signin-password').addClass('has-error').next('span').addClass('is-visible');
-					$('#signin-password').addClass('has-error').next('span').html('Tên tài khoản hoặc mật khẩu không đúng!');
+					toast(result.message, 3000, error_color);
 				}
 			}
 		});
 	});
 	
-	$("#reset-form").submit(function (e) {
+	$("#reset-form input[type='submit']").click(function (e) {
 		e.preventDefault();
 		
 		var data = {
@@ -301,13 +300,12 @@ jQuery(document).ready(function ($) {
 			data: data,
 			success: function (result) {
 				if (!result.code) {
-					toastr.success(result.message);
+					toast('Vui lòng kiểm tra email để đổi mật khẩu', 3000, success_color);
 					setTimeout(function () {
 						window.location.reload();
 					}, 1000);
 				} else {
-					$('#reset-email').addClass('has-error').next('span').addClass('is-visible');
-					$('#reset-email').addClass('has-error').next('span').html('Email không tồn tại!');
+					toast(result.message, 3000, error_color);
 				}
 			}
 		});
