@@ -6698,7 +6698,7 @@ aside p {
 }
 
 .social-share-button {
-
+  cursor: pointer;
   text-transform: uppercase;
   margin: 1.5rem 0
 }

@@ -105,29 +105,29 @@
                             <div class="icon-collapse-close" onclick="showSocialMobile(false)"> << </div>
                           </div>
                           <div class="social-share-button">
-                            <a href="#" target="_blank" class="have-number">
+                            <a onclick="checkUpvote()" class="have-number">
                               <span class="social-icon upvote"></span>
                               <i>{{article.like}}</i>
                             </a>
                           </div>
                           <div class="social-share-button">
-                            <a href="#" target="_blank" class="have-number">
+                            <a onclick="checkDownvote()" class="have-number">
                               <span class="social-icon downvote"></span>
                               <i>{{article.dislike}}</i>
                             </a>
                           </div>
                           <div class="social-share-button">
-                            <a href="#" target="_blank">
+                            <a>
                               <span class="social-icon share"></span>
                             </a>
                           </div>
                           <div class="social-share-button">
-                            <a href="#" target="_blank">
+                            <a>
                               <span class="social-icon bookmark"></span>
                             </a>
                           </div>
                           <div class="social-share-button">
-                            <a href="#" target="_blank" class="have-number">
+                            <a class="have-number">
                               <span class="social-icon comment"></span>
                               <i>{{article.comment | length}}</i>
                             </a>

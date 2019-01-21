@@ -258,15 +258,23 @@ $('#edit-keyword').click(function (e) {
 
 
 
-//post review
-function postReview() {
-  if (checkLogin()) {
-    toast('Cảm ơn bạn đã Review!', 3000);
-  } else {
-    toast('Bạn cần đăng nhập để Reivew', 3000);
-  }
+// Check Login
+function checkLogin() {
+  var isLogin = $('#isCustomerHere').val();
+  return isLogin;
 }
 
+// Check Upvote
+function checkUpvote() {
+  if (checkLogin() != 1)
+    toast('Bạn cần đăng nhập để upvote', 3000);
+}
+
+// Check Downvote
+function checkDownvote() {
+  if (checkLogin() != 1)
+    toast('Bạn cần đăng nhập để downvote', 3000);
+}
 
 //toast
 function toast(string, milisecond) {
