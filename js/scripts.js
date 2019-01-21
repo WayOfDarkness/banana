@@ -80,9 +80,10 @@ if ($(".page-article").length) {
   })
 
   $('.ad-299').html(html);
-  if ($(".scroll-animated").length < 10)
+  if ($(".scroll-animated").length < 10) {
     console.log($(".scroll-animated").length);
     $('.ad-299').css("overflow-y","none");
+  }
 
   $(".scroll-animated").click(function () {
     var id = $(this).attr('rel');
@@ -236,6 +237,11 @@ function checkUpvote() {
 function checkDownvote() {
   if (checkLogin() != 1)
     toast('Bạn cần đăng nhập để downvote', 3000, error_color);
+}
+
+// Click Comment
+function clickComment() {
+  $('html,body').animate({scrollTop: $('#block-chat').offset().top - 60}, 'slow');
 }
 
 // Notification
