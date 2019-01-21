@@ -217,9 +217,12 @@ jQuery(document).ready(function ($) {
 							data: data,
 							success: function (result) {
 								if (!result.code) {
+									toast('Bạn đã đăng ký thành công', 3000, success_color);
 									setTimeout(function () {
 										window.location.reload();
 									}, 1000);
+								} else {
+									toast(result.message, 3000, error_color);
 								}
 							}
 						});
