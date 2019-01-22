@@ -1662,12 +1662,12 @@ main {
   color: red;
 }
 
-.modal-change-password-error input {
+.modal-change-password input {
   margin-bottom: 1rem;
   border-radius: 0px;
 }
-.modal-change-password-error label {
-
+.modal-change-password label {
+  font-weight: bold;
 }
 .dev-test {
   position: fixed;
@@ -1683,5 +1683,18 @@ main {
 }
 .text-blue {
   color: #2C7ABE;
+}
+.modal-password-footer button {
+  margin-top: 6px;
+  padding: 16px 0;
+  cursor: pointer;
+  background: #2C7ABE;
+  color: #FFF;
+  font-weight: bold;
+  border: none;
+}
+.modal-password-footer .col-6{
+  padding: 5px;
+
 }
 /*end modal change password*/
