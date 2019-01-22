@@ -1617,7 +1617,9 @@ main {
 }
 /*end type of article*/
 
-.owl-carousel .owl-item img {
+.owl-carousel .owl-item img:not(.new),
+.owl-carousel .owl-item img:not(.review),
+.owl-carousel .owl-item img:not(.walkthrough) {
   height: 300px !important;
   object-fit: cover;
   background-position: center center;
