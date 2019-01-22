@@ -291,3 +291,22 @@ function toast(string, milisecond, color) {
     toast.removeClass('active');
   }, milisecond);
 }
+
+//change password
+
+function openModalChangePassword() {
+  $('.modal-change-password').removeClass('d-none');
+  $('.modal-change-password').addClass('d-block');
+}
+
+function closeModalChangePassword() {
+  $('.modal-change-password').removeClass('d-block');
+  $('.modal-change-password').addClass('d-none');
+}
+
+function postChangePassword() {
+  //  TODO
+  //  1. check input variable
+  //  2. API here
+  closeModalChangePassword();
+}

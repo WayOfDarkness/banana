@@ -144,24 +144,6 @@
         </div>
         <a onclick="openModalChangePassword()" class="text-orange border">Đổi mật khẩu</a>
         <a class="text-orange border" href="/api/signout">Đăng xuất</a>
-        <script>
-          function openModalChangePassword() {
-            $('.modal-change-password').removeClass('d-none');
-            $('.modal-change-password').addClass('d-block');
-          }
-
-          function closeModalChangePassword() {
-            $('.modal-change-password').removeClass('d-block');
-            $('.modal-change-password').addClass('d-none');
-          }
-
-          function postChangePassword() {
-            //  TODO
-            //  1. check input variable
-            //  2. API here
-            closeModalChangePassword();
-          }
-        </script>
       {% else %}
         <div class="hamburger-bottom">
           <div id="toolbar-item-lightswitch">&nbsp;</div>
