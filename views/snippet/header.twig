@@ -161,16 +161,22 @@
 
 <div class="modal-change-password d-none">
   <div class="content-modal">
-    <label for="old-password"></label>
-    <input type="text" id="old-password" placeholder="Nhập mật khẩu cũ">
-    <label for="new-password"></label>
-    <input type="text" id="new-password" placeholder="Nhập mật khẩu mới">
-    <label for="re-new-password"></label>
-    <input type="text" id="re-new-password" placeholder="Nhập lại mật khẩu mới">
+    <h2 class="text-blue text-center text-bold"
+        style="margin-bottom: 0.5rem; padding-bottom: 0.5rem;">
+      Cập Nhập Thông Tin
+    </h2>
+    <label for="old-password">Nhập mật khẩu cũ</label>
+    <input type="password" id="old-password" placeholder="Nhập mật khẩu cũ">
+    <label for="new-password">Nhập mật khẩu mới</label>
+    <input type="password" id="new-password" placeholder="Nhập mật khẩu mới">
+    <label for="re-new-password">Nhập lại mật khẩu mới</label>
+    <input type="password" id="re-new-password" placeholder="Nhập lại mật khẩu mới">
     <p class="modal-change-password-error d-none">Error here</p>
-    <div>
+    <div class="modal-password-footer">
       <div class="col-6">
         <button class="full-width" onclick="closeModalChangePassword()">Hủy</button>
+      </div>
+      <div class="col-6">
         <button class="full-width" onclick="postChangePassword()">Cập nhập</button>
       </div>
     </div>
@@ -178,5 +184,6 @@
 </div>
 
 <div class="dev-test">
-  <button onclick="openModalChangePassword()">dev-test-button</button>
+  <input type="text" id="decode">
+  <button onclick="AreYouDev()">dev-test-button</button>
 </div>

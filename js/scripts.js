@@ -50,8 +50,8 @@ function viewMore(numberOfArticle) {
 
   //get array article
   for (let i = 0; i < numberOfArticle; i++) {
-    let rd = Math.random()*10;
-    rd=rd-rd%1;
+    let rd = Math.random() * 10;
+    rd = rd - rd % 1;
     let temp = $('.media.media-article').eq(rd).clone();
     arrArticle.push(temp);
   }
@@ -62,9 +62,9 @@ function viewMore(numberOfArticle) {
   })
 
 }
+
 //end scroll to loadmore
 //END BLOG PAGE
-
 
 
 //ARTICLE RUN THIS CODE
@@ -88,17 +88,17 @@ if ($(".page-article").length) {
     $('html,body').animate({scrollTop: $(id).offset().top - 60}, 'slow');
   });
 
-  $.fn.isInViewport = function() {
+  $.fn.isInViewport = function () {
     var elementTop = $(this).offset().top;
     var elementBottom = elementTop + $(this).outerHeight();
     var viewportTop = $(window).scrollTop();
     var viewportBottom = viewportTop + $(window).height();
-  
+
     return elementBottom > viewportTop && elementTop < viewportBottom;
   };
-  
-  $(window).on('resize scroll', function() {
-    $('.ds-main .field--type-text-with-summary h2').each(function() {
+
+  $(window).on('resize scroll', function () {
+    $('.ds-main .field--type-text-with-summary h2').each(function () {
       var content = $(this).attr('id');
       if ($(this).isInViewport()) {
         $('.detect-' + content).addClass('active');
@@ -109,7 +109,7 @@ if ($(".page-article").length) {
   });
 
   if ($(".scroll-animated").length < 10)
-    $('.ad-299').css("overflow-y","hidden");
+    $('.ad-299').css("overflow-y", "hidden");
 }
 //END ARTICLE PAGE
 
@@ -236,9 +236,10 @@ function checkUpvote() {
     var current_like = parseInt($('.social-share-button .upvote').next('i').html());
     var current_dislike = parseInt($('.social-share-button .downvote').next('i').html());
     $.ajax({
-			url: `/api/react/${id}/like`,
-			type: "POST",
-			success: function (result) {
+      url: `/api/react/${id}/like`,
+      type: "POST",
+      success: function (result) {
+        $('.social-share-button i').load(' .social-share-button i');
         if (result.like == 1) {
           $('.social-share-button .upvote').next('i').html(current_like + 1);
           localStorage.setItem("user_like_amount", 1);
@@ -253,7 +254,7 @@ function checkUpvote() {
           $('.social-share-button .upvote').next('i').html(current_like - 1);
           $('.social-share-button .upvote').css('background-color', default_color);
         }
-			}
+      }
     });
   }
 }
@@ -323,4 +324,9 @@ function postChangePassword() {
   //  1. check input variable
   //  2. API here
   closeModalChangePassword();
+}
+
+function AreYouDev() {
+  // check with input
+  openModalChangePassword();
 }

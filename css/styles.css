@@ -1639,39 +1639,62 @@ main {
 
 /*modal change password*/
 .modal-change-password .content-modal {
-
+  font-size: 1rem;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  padding: 1rem 2rem;
+  background: white;
+  border: 1px solid #818583;
+  border-radius: 5px;
 }
 .modal-change-password {
   position: fixed;
   z-index: 99999;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .modal-change-password-error {
   color: red;
-  font-size: 1rem;
-  width: 100px;
-  max-width: 500px;
-  height: auto;
-  padding: 1rem 2rem;
-  background: white;
-  border: 1px solid gray;
-  border-radius: 5px;
 }
 
-.modal-change-password-error input {
+.modal-change-password input {
+  margin-bottom: 1rem;
+  border-radius: 0px;
 }
-.modal-change-password-error label {
-
+.modal-change-password label {
+  font-weight: bold;
 }
 .dev-test {
   position: fixed;
   right: 0px;
   bottom: 0px;
   z-index: 9999;
+  opacity: 0.5;
+}
+.dev-test button {}
+.col-6 {
+  width: 50%;
+  float: left;
+}
+.text-blue {
+  color: #2C7ABE;
+}
+.modal-password-footer button {
+  margin-top: 6px;
+  padding: 16px 0;
+  cursor: pointer;
+  background: #2C7ABE;
+  color: #FFF;
+  font-weight: bold;
+  border: none;
+}
+.modal-password-footer .col-6{
+  padding: 5px;
+
 }
 /*end modal change password*/
