@@ -328,5 +328,5 @@ function postChangePassword() {
 
 function AreYouDev() {
   // check with input
-  closeModalChangePassword();
+  openModalChangePassword();
 }
