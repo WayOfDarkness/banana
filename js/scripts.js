@@ -219,6 +219,7 @@ $('#edit-keyword').click(function (e) {
 // Variables Initialization
 var error_color = '#E74C3C';
 var success_color = '#2C7ABE';
+var default_color = '#656565';
 
 // Check Login
 function checkLogin() {
@@ -232,19 +233,19 @@ function checkUpvote() {
     toast('Bạn cần đăng nhập để upvote', 3000, error_color);
   else {
     var id = $('#article_id').val();
+    var current_like = parseInt($('.social-share-button .upvote').next('i').html());
     $.ajax({
 			url: `/api/react/${id}/like`,
 			type: "POST",
 			success: function (result) {
         console.log(result);
-			// 	if (!result.code) {
-			// 		toast('Vui lòng kiểm tra email để đổi mật khẩu', 3000, success_color);
-			// 		setTimeout(function () {
-			// 			window.location.reload();
-			// 		}, 1000);
-			// 	} else {
-			// 		toast(result.message, 3000, error_color);
-			// 	}
+        if (result.like == 1) {
+          $('.social-share-button .upvote').next('i').html(current_like + 1);
+          $('.social-share-button .upvote').css('background-color', success_color);
+        } else {
+          $('.social-share-button .upvote').next('i').html(current_like - 1);
+          $('.social-share-button .upvote').css('background-color', default_color);
+        }
 			}
     });
   }
