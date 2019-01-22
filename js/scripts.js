@@ -239,11 +239,13 @@ function checkUpvote() {
 			type: "POST",
 			success: function (result) {
         if (result.like == 1) {
-          $('.social-share-button .upvote').next('i').html(current_like + 1);
+          //$('.social-share-button .upvote').next('i').html(current_like + 1);
           $('.social-share-button .upvote').css('background-color', success_color);
+          $('.social-share-button .upvote').next('i').load(); 
         } else {
-          $('.social-share-button .upvote').next('i').html(current_like - 1);
+          //$('.social-share-button .upvote').next('i').html(current_like - 1);
           $('.social-share-button .upvote').css('background-color', default_color);
+          $('.social-share-button .upvote').next('i').load(); 
         }
 			}
     });
@@ -262,11 +264,13 @@ function checkDownvote() {
       type: "POST",
       success: function (result) {
         if (result.dislike == 1) {
-          $('.social-share-button .downvote').next('i').html(current_like + 1);
+          //$('.social-share-button .downvote').next('i').html(current_like + 1);
           $('.social-share-button .downvote').css('background-color', success_color);
+          $('.social-share-button .upvote').next('i').load(); 
         } else {
-          $('.social-share-button .downvote').next('i').html(current_like - 1);
+          //$('.social-share-button .downvote').next('i').html(current_like - 1);
           $('.social-share-button .downvote').css('background-color', default_color);
+          $('.social-share-button .upvote').next('i').load(); 
         }
       }
     });
