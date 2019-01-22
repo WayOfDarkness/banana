@@ -238,12 +238,12 @@ function checkUpvote() {
 			url: `/api/react/${id}/like`,
 			type: "POST",
 			success: function (result) {
-        console.log(result);
+        $('.social-share-button i').load(' .social-share-button i');
         if (result.like == 1) {
-          $('.social-share-button .upvote').next('i').html(current_like + 1);
+          //$('.social-share-button .upvote').next('i').html(current_like + 1);
           $('.social-share-button .upvote').css('background-color', success_color);
         } else {
-          $('.social-share-button .upvote').next('i').html(current_like - 1);
+          //$('.social-share-button .upvote').next('i').html(current_like - 1);
           $('.social-share-button .upvote').css('background-color', default_color);
         }
 			}
@@ -255,6 +255,24 @@ function checkUpvote() {
 function checkDownvote() {
   if (checkLogin() != 1)
     toast('Bạn cần đăng nhập để downvote', 3000, error_color);
+  else {
+    var id = $('#article_id').val();
+    var current_like = parseInt($('.social-share-button .downvote').next('i').html());
+    $.ajax({
+      url: `/api/react/${id}/dislike`,
+      type: "POST",
+      success: function (result) {
+        $('.social-share-button i').load(' .social-share-button i');
+        if (result.dislike == 1) {
+          //$('.social-share-button .downvote').next('i').html(current_like + 1);
+          $('.social-share-button .downvote').css('background-color', success_color);
+        } else {
+          //$('.social-share-button .downvote').next('i').html(current_like - 1);
+          $('.social-share-button .downvote').css('background-color', default_color);
+        }
+      }
+    });
+  }
 }
 
 // Click Comment
