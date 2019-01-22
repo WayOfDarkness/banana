@@ -1540,7 +1540,7 @@ main {
   transition-duration: 0.5s;
 }
 .toast {
-  max-width: 300px;
+  max-width: 400px;
   position: fixed;
   right: -320px;
   transition-duration: 2s;

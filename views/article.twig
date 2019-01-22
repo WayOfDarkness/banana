@@ -7,6 +7,7 @@
 {% block content %}
 
     {% set parentBlog = Blog(article.blogs[0]) %}
+    <input type="hidden" id="article_id" value="{{article.id}}"/>
 
     <main role="main" class="container article----if--contains">
       <a id="main-content" tabindex="-1"></a>

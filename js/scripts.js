@@ -230,6 +230,25 @@ function checkLogin() {
 function checkUpvote() {
   if (checkLogin() != 1)
     toast('Bạn cần đăng nhập để upvote', 3000, error_color);
+  else {
+    var id = $('#article_id').val();
+    $.ajax({
+			url: `/api/react/${id}/like`,
+			type: "POST",
+			data: data
+			success: function (result) {
+        console.log(result);
+			// 	if (!result.code) {
+			// 		toast('Vui lòng kiểm tra email để đổi mật khẩu', 3000, success_color);
+			// 		setTimeout(function () {
+			// 			window.location.reload();
+			// 		}, 1000);
+			// 	} else {
+			// 		toast(result.message, 3000, error_color);
+			// 	}
+			}
+    });
+  }
 }
 
 // Check Downvote
