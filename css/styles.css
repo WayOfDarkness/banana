@@ -1605,10 +1605,14 @@ main {
 .type-of-article.walkthrough .walkthrough {
   display: block !important;
 }
+.owl-carousel .type-of-article img {
+  max-height: 40px !important;
+}
 .type-of-article img {
   width: 100% !important;
   height: 100% !important;
   min-height: 40px !important;
+  max-height: 40px !important;
   object-fit: contain !important;
   background: #ffffffbd;
   padding: 2px;
@@ -1617,9 +1621,7 @@ main {
 }
 /*end type of article*/
 
-.owl-carousel .owl-item img:not(.new),
-.owl-carousel .owl-item img:not(.review),
-.owl-carousel .owl-item img:not(.walkthrough) {
+.owl-carousel .owl-item img {
   height: 300px !important;
   object-fit: cover;
   background-position: center center;
