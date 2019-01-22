@@ -246,6 +246,7 @@ function checkUpvote() {
             $('.social-share-button .downvote').next('i').html(current_dislike - 1);
           $('.social-share-button .upvote').css('background-color', success_color);
         } else {
+          localStorage.setItem("user_like_amount", 0);
           $('.social-share-button .upvote').next('i').html(current_like - 1);
           $('.social-share-button .upvote').css('background-color', default_color);
         }
@@ -273,6 +274,7 @@ function checkDownvote() {
             $('.social-share-button .upvote').next('i').html(current_like - 1);
           $('.social-share-button .downvote').css('background-color', success_color);
         } else {
+          localStorage.setItem("user_dislike_amount", 0);
           $('.social-share-button .downvote').next('i').html(current_like - 1);
           $('.social-share-button .downvote').css('background-color', default_color);
         }
