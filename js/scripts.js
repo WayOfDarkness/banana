@@ -235,7 +235,7 @@ function checkUpvote() {
     $.ajax({
 			url: `/api/react/${id}/like`,
 			type: "POST",
-			data: data
+			data: data,
 			success: function (result) {
         console.log(result);
 			// 	if (!result.code) {
