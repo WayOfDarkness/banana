@@ -290,6 +290,16 @@ function checkDownvote() {
   }
 }
 
+// Check Bookmark
+function checkBookmark() {
+  if (checkLogin() != 1)
+    toast('Bạn cần đăng nhập để bookmark', 3000, error_color);
+  else {
+    
+  }
+}
+
+
 // Click Comment
 function clickComment() {
   $('html,body').animate({scrollTop: $('#block-chat').offset().top - 60}, 'slow');
