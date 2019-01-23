@@ -7,7 +7,6 @@
 {% block content %}
 
     {% set parentBlog = Blog(article.blogs[0]) %}
-    <input type="hidden" id="article_id" value="{{article.id}}"/>
 
     <main role="main" class="container article----if--contains">
       <a id="main-content" tabindex="-1"></a>
@@ -58,7 +57,7 @@
                         <div class="simple-text">
                           <div class="coloralert platform-color">
                             <p class="alert-text">
-                              <strong>OFFLINE</strong>
+                              <strong>{{article.option_1}}</strong>
                             </p>
                           </div>
                         </div>
@@ -67,7 +66,7 @@
                         <div class="simple-text ">
                           <div class="coloralert type-color">
                             <p class="alert-text">
-                              <strong>PC</strong>
+                              <strong>{{article.option_2}}</strong>
                             </p>
                           </div>
                         </div>
@@ -76,7 +75,7 @@
                         <div class="simple-text ">
                           <div class="coloralert brand-color">
                             <p class="alert-text">
-                              <strong>Blizzard</strong>
+                              <strong>{{article.option_3}}</strong>
                             </p>
                           </div>
                         </div>
@@ -85,7 +84,7 @@
                         <div class="simple-text ">
                           <div class="coloralert genre-color">
                             <p class="alert-text">
-                              <strong>RPG</strong>
+                              <strong>{{article.option_4}}</strong>
                             </p>
                           </div>
                         </div>
@@ -183,8 +182,10 @@
                       {% endif %}
                     </div>
                   </div>
-a={{article | json_encode}}
+
                   {% if article.type == 'review' %}
+
+                    <!-- GAME INFOMATIONS AND REQUIREMENTS -->
                     <div class="config-wrapper">
                       <ul class="config-tab-wrapper">
                         <a href="javascript:;" class="config-tab config-info active">Thông tin</a>
@@ -192,28 +193,20 @@ a={{article | json_encode}}
                       </ul>
                       <div class="author-footer config-footer config-info-area clearfix">
                         <div class="author-footer-info">
-                          <p>
-                            Sản xuất: Nomada Studio<br>
-                            Phát hành: Devolver Digital<br>
-                            Thể loại: phiêu lưu, giải đố<br>
-                            Ngày ra mắt: 13/12/2018<br>
-                            Hệ máy: PC | Nintendo Switch
-                          </p>
+                          {{game.description}}
                         </div>
                       </div>
                       <div class="author-footer config-footer config-req-area d-none clearfix">
                         <div class="author-footer-info">
-                          <p>
-                            OS: Windows 7 64-bit<br>
-                            Processor: Intel Core i5-2400<br>
-                            Memory: 8 GB RAM<br>
-                            Graphics: NVIDIA GeForce GTX 760 | AMD R9 270<br>
-                            Storage: 59 GB available space
-                          </p>
+                          {{game.requirememt}}
                         </div>
                       </div>
                     </div>
 
+                    <!-- ARTICLE RATING -->
+                    {% set value = getCustomfield(article.id, 'article', 'appreciation') %}
+a={{value[0]}}
+b={{value[1]}}
                     <div class="review-breakdown rating-overflow">
                       <div class="review-breakdown__inner">
                         <div class="container row">
@@ -229,39 +222,9 @@ a={{article | json_encode}}
                               </i>
                               Tạo ra bầu không khí kinh dị đáng sợ
                             </dd>
-                            <dd class="breakdown-good__item">
-                              <i>
-                                <svg version="1.1" width="28" height="28" viewBox="0 0 28 28"
-                                    aria-hidden="true" class="symbol symbol-plus-sign">
-                                  <path
-                                    d="M19 15v-2q0-0.406-0.297-0.703t-0.703-0.297h-4v-4q0-0.406-0.297-0.703t-0.703-0.297h-2q-0.406 0-0.703 0.297t-0.297 0.703v4h-4q-0.406 0-0.703 0.297t-0.297 0.703v2q0 0.406 0.297 0.703t0.703 0.297h4v4q0 0.406 0.297 0.703t0.703 0.297h2q0.406 0 0.703-0.297t0.297-0.703v-4h4q0.406 0 0.703-0.297t0.297-0.703zM24 14q0 3.266-1.609 6.023t-4.367 4.367-6.023 1.609-6.023-1.609-4.367-4.367-1.609-6.023 1.609-6.023 4.367-4.367 6.023-1.609 6.023 1.609 4.367 4.367 1.609 6.023z"></path>
-                                </svg>
-                              </i>
-                              Hệ thống kĩ năng, trang bị của nhân vật đa dạng
-                            </dd>
-                            <dd class="breakdown-good__item">
-                              <i>
-                                <svg version="1.1" width="28" height="28" viewBox="0 0 28 28"
-                                    aria-hidden="true" class="symbol symbol-plus-sign">
-                                  <path
-                                    d="M19 15v-2q0-0.406-0.297-0.703t-0.703-0.297h-4v-4q0-0.406-0.297-0.703t-0.703-0.297h-2q-0.406 0-0.703 0.297t-0.297 0.703v4h-4q-0.406 0-0.703 0.297t-0.297 0.703v2q0 0.406 0.297 0.703t0.703 0.297h4v4q0 0.406 0.297 0.703t0.703 0.297h2q0.406 0 0.703-0.297t0.297-0.703v-4h4q0.406 0 0.703-0.297t0.297-0.703zM24 14q0 3.266-1.609 6.023t-4.367 4.367-6.023 1.609-6.023-1.609-4.367-4.367-1.609-6.023 1.609-6.023 4.367-4.367 6.023-1.609 6.023 1.609 4.367 4.367 1.609 6.023z"></path>
-                                </svg>
-                              </i>
-                              Đồ họa cực đẹp
-                            </dd>
                           </dl>
                           <dl class="breakdown breakdown-bad span6">
                             <dt class="breakdown-bad__title"><span>Nhược điểm</span></dt>
-                            <dd class="breakdown-bad__item">
-                              <i>
-                                <svg version="1.1" width="28" height="28" viewBox="0 0 28 28"
-                                    aria-hidden="true" class="symbol symbol-minus-sign symbol--color-link">
-                                  <path
-                                    d="M19 15v-2q0-0.406-0.297-0.703t-0.703-0.297h-12q-0.406 0-0.703 0.297t-0.297 0.703v2q0 0.406 0.297 0.703t0.703 0.297h12q0.406 0 0.703-0.297t0.297-0.703zM24 14q0 3.266-1.609 6.023t-4.367 4.367-6.023 1.609-6.023-1.609-4.367-4.367-1.609-6.023 1.609-6.023 4.367-4.367 6.023-1.609 6.023 1.609 4.367 4.367 1.609 6.023z"></path>
-                                </svg>
-                              </i>
-                              Game rất nặng, gần 100 GB
-                            </dd>
                             <dd class="breakdown-bad__item">
                               <i>
                                 <svg version="1.1" width="28" height="28" viewBox="0 0 28 28"
@@ -300,6 +263,7 @@ a={{article | json_encode}}
                     </div>
                   {% endif %}
 
+                  <!-- ARTICLES AUTHOR -->
                   <div class="field field--type-ds field__item">
                     <div class="views-element-container">
                       <div class="view">
@@ -313,17 +277,10 @@ a={{article | json_encode}}
                               </div>
                               <div class="author-footer-info">
                                 <div class="author-footer-name">
-                                  <a title="View user profile." href="javascript:;" class="username">{{article.author}}</a>
+                                  <a title="View user profile." href="javascript:;" class="username">{{author.name}}</a>
                                 </div>
-                                <div class="author-footer-title">Admin</div>
-                                <div class="author-footer-shortbio">PegasuS is
-                                  often watching Adventure Time or Steven
-                                  Universe. When it comes to games, she loves
-                                  RPGs, open-world titles, and story-driven
-                                  experiences. If you bring up Mass Effect,
-                                  she probably won't shut up about
-                                  Thane.
-                                </div>
+                                <div class="author-footer-title">{{author.role}}</div>
+                                <div class="author-footer-shortbio">{{author.description}}</div>
                               </div>
                             </div>
                           </div>
@@ -332,12 +289,13 @@ a={{article | json_encode}}
                     </div>
                   </div>
 
+                  <!-- USER BOOKMARKS -->
                   <div class="ds-footer-full">
                     <div class="field field--type-ds field__item">
                       <div class="views-element-container">
                         <div id="default-content" class="recommended-articles-widget view">
                           <div class="view-header">
-                            <h2>{{parentBlog.title}} liên quan</h2>
+                            <h2>{{parentBlog.title}} đã lưu</h2>
                           </div>
                           <div class="article-carousel owl-carousel owl-theme">
                             {% for item in parentBlog.articles | slice (0, 10) %}
@@ -369,6 +327,8 @@ a={{article | json_encode}}
                   </div>
 
                   <div id="block-chat" class="block-chat clearfix">
+
+                    <!-- FACEBOOK COMMENT -->
                     <div class="block-comment">
                       <div class="fb-comments" data-href="https://www.facebook.com/PageChoiGiDay" data-width="100%" data-numposts="5"></div>
                       <div id="fb-root"></div>
@@ -382,40 +342,45 @@ a={{article | json_encode}}
                       </script>
                     </div>
 
+                    <!-- USER REVIEWS -->
                     {% if article.type == 'review' %}
                       <div class="block-reviews float-right">
                         <h2 class="block-title"><img src="{{theme.uri}}/img/icon/icon-star.png">
                           <span>Đánh giá</span>
                         </h2>
                         
-                        <div class="text-editer clearfix">
-                          <textarea name="comment" placeholder="Thêm bình luận..." id="text-editer-comment"></textarea>
-                          <div class="review-pusher">
-                            <button class="review-pusher-item btn-submit-comment effect-hover-1" onclick="postReview()">
-                              Đăng đánh giá
-                            </button>
-                            <dd class="pod-header__item review-pusher-item pod-header__filters pod-header__filters--js no-flex">
-                              <div class="pod-header__filters--select">
-                                <select class="effect-hover-1" name="sort">
-                                  <option value="0" selected>Điểm</option>
-                                  <option value="10">10 - Hoàn hảo</option>
-                                  <option value="9">9 - Xuất sắc</option>
-                                  <option value="8">8 - Hay</option>
-                                  <option value="7">7 - Khá</option>
-                                  <option value="6">6 - Tạm được</option>
-                                  <option value="5">5 - Trung bình</option>
-                                  <option value="4">4 - Nghèo nàn</option>
-                                  <option value="3">3 - Tệ</option>
-                                  <option value="2">2 - Quá tệ</option>
-                                  <option value="1">1 - Trash</option>
-                                </select>
-                              </div>
-                            </dd>
+                        <!-- REVIEW FORM -->
+                        {% if customer.logged_in %}
+                          <div class="text-editer clearfix">
+                            <textarea name="comment" placeholder="Thêm bình luận..." id="text-editer-comment"></textarea>
+                            <div class="review-pusher">
+                              <button class="review-pusher-item btn-submit-comment effect-hover-1" onclick="postReview()">
+                                Đăng đánh giá
+                              </button>
+                              <dd class="pod-header__item review-pusher-item pod-header__filters pod-header__filters--js no-flex">
+                                <div class="pod-header__filters--select">
+                                  <select class="effect-hover-1" name="sort">
+                                    <option value="0" selected>Điểm</option>
+                                    <option value="10">10 - Hoàn hảo</option>
+                                    <option value="9">9 - Xuất sắc</option>
+                                    <option value="8">8 - Hay</option>
+                                    <option value="7">7 - Khá</option>
+                                    <option value="6">6 - Tạm được</option>
+                                    <option value="5">5 - Trung bình</option>
+                                    <option value="4">4 - Nghèo nàn</option>
+                                    <option value="3">3 - Tệ</option>
+                                    <option value="2">2 - Quá tệ</option>
+                                    <option value="1">1 - Trash</option>
+                                  </select>
+                                </div>
+                              </dd>
+                            </div>
                           </div>
-                        </div>
+                        {% endif %}
 
+                        <!-- LIST REVIEWS -->
                         <div class="list-comment-review">
-                          {% for item in items %}
+                          {% for item in article.reviews %}
                             <div class="block-reviews--comment">
                               <div class="block-reviews--auth">
                                 <img src="{{theme.uri}}/img/avatar-default.png" alt="avatar" class="comment-avatar">
@@ -447,4 +412,7 @@ a={{article | json_encode}}
         </div>
       </div>
     </main>
+
+    <input type="hidden" id="article_id" value="{{article.id}}"/>
+    <input type="hidden" id="article_like_status" value="{{article.statusLike}}"/>
 {% endblock content %}
