@@ -2,32 +2,44 @@
 
 {% block pre_include %}
     <title>Trang không tồn tại</title>
+    <style>
+        * {
+            text-align: center;
+        }
+        h1 {
+            color: red;
+        }
+        a {
+
+        }
+        button:hover {
+            background: #e74c3c;
+        }
+        button {
+            max-width: 150px;
+            margin: auto;
+            display: block;
+            margin-top: 6px;
+            padding: 16px 0;
+            cursor: pointer;
+            background: #2C7ABE;
+            color: #FFF;
+            font-weight: bold;
+            border: none;
+        }
+    </style>
 {% endblock pre_include %}
 
 {% block content %}
 
     <main class="main-content">
-        <nav class="breadcrumbk">
-            <div class="container">
-                <ul class="reset-list breadcrumbk-list">
-                    <li class="item">
-                        <a href="/" class="link">
-                            <i class="fa fa-home"></i>
-                        </a>
-                    </li>
-                    <li class="item active">Trang không tồn tại</li>
-                </ul>
-            </div>
-        </nav>
-
         <section class="404-page pt-20">
             <div class="container">
                 <div class="error-container">
                     <h1 class="title">404</h1>
                     <h2>Không tìm thấy trang này!</h2>
                     <a href="/" class="btn-blue mb-4" title="Quay lại trang chủ">
-                        <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-                        Quay lại trang chủ
+                        <button>Quay lại trang chủ</button>
                     </a>
                 </div>
             </div>
