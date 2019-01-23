@@ -16,17 +16,15 @@
         <p>Nickname của bạn là: </p>
         <input type="text" placeholder="{{ 'tên của user' }}">
       </div>
-      <hr>
       <div class="change-avatar">
         <p>Cập nhật avatar: <span class="avatar-name"></span></p>
         <input type="file" onchange="checkInputImg()">
       </div>
-      <hr>
       <div class="change-password">
         <div class="modal-change-password">
           <div class="content-modal">
             <button class="text-blue text-center text-bold effect-hover-1"
-                    style="margin: 2rem auto;background: white;border: 1px solid #2c7abe;"
+                    style="margin: 2rem auto;background: white;border: 1px solid #2c7abe; padding: 0.5rem 0 !important;"
                     onclick="isShowChangePassword(true)">
               Đổi mật khẩu
             </button>
@@ -50,9 +48,9 @@
             <script>
               function isShowChangePassword(boolean) {
                 if(boolean)
-                  $('.collapseChangePassword').removeClass('d-none');
+                  $('.collapse-change-assword').removeClass('d-none');
                 else
-                  $('.collapseChangePassword').addClass('d-none');
+                  $('.collapse-change-assword').addClass('d-none');
               }
               function changePassword() {}
             </script>
