@@ -1734,6 +1734,7 @@ main {
 .user-account {
   min-width: 100%;
   margin: 60px 0 10px;
+  flex-grow: 1;
 }
 .change-avatar img {
   width: 100%;
@@ -1756,4 +1757,16 @@ main {
 }
 .change-password {
   border-bottom: 1px solid #818583;
+}
+
+.btn-loadmore:hover {
+  background: white !important;
+  color: #e74c3c !important;
+  border: 1px solid #e74c3c !important;
+}
+.btn-loadmore {
+  background: white !important;
+  width: 100%;
+  padding: 0.5rem 0 !important;
+  text-align: center;
 }
