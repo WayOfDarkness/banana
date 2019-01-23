@@ -1,0 +1,96 @@
+{% extends "layout.twig" %}
+
+{% block pre_include %}
+  <title>Tạo lại mật khẩu</title>
+{% endblock %}
+
+{% block content %}
+
+  <main class="main-content">
+    <nav class="breadcrumbk">
+      <div class="container">
+        <ul class="reset-list breadcrumbk-list">
+          <li class="item">
+            <a href="/" class="link">
+              <i class="fa fa-home"></i>
+            </a>
+          </li>
+          <li class="item active">Tạo lại mật khẩu</li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="dang-ky loginModal">
+      <h3 class="d-none">Đổi mật khẩu</h3>
+      <div class="container">
+        <div class="bg_white col py-4">
+          <a href="/" class="link d-block cl_blue pb-1 fm">
+            <i class="fa fa-angle-double-left pr-2"></i>Quay lại</a>
+
+          <h3 class="title text-uppercase text-center fs_24 mb-1">Đổi mật khẩu</h3>
+          <small class="small d-block text-center fs_14">Vui lòng nhập mật khẩu mới!</small>
+
+          <form id="create-new-password-form" class="login-form col-lg-8 col-xl-6 mx-auto">
+            <input type="hidden" id="user_token" value="{{token}}">
+            <input type="password" id="create-new-password" class="form-control style2" placeholder="Nhập mật khẩu mới"/>
+            <input type="password" id="create-new-password-confirm" class="form-control style2" placeholder="Nhập lại mật khẩu mới"/>
+            <button class="mr-4 reset-btn btn-blue mb-3">Đổi mật khẩu</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    $("#create-new-password-form").submit(function (e) {
+      e.preventDefault();
+      var data = {
+        token: $("#user_token").val(),
+        password: $("#create-new-password").val()
+      };
+      var passwordConfirmation = $("#create-new-password-confirm").val();
+
+      if (!data.password) {
+        $('#create-new-password').addClass('noti-input-error');
+        toastr.error("Vui lòng nhập mật khẩu mới");
+        return;
+      } else {
+        $('#create-new-password').removeClass('noti-input-error');
+      }
+
+      if (!passwordConfirmation) {
+        $('#create-new-password-confirm').addClass('noti-input-error');
+        toastr.error("Vui lòng xác nhận mật khẩu mới");
+        return;
+      } else {
+        $('#create-new-password-confirm').removeClass('noti-input-error');
+      }
+
+      if (data.password != passwordConfirmation) {
+        $('#create-new-password-confirm').addClass('noti-input-error');
+        toastr.error("Mật khẩu không trùng khớp");
+        return;
+      } else {
+        $('#create-new-password-confirm').removeClass('noti-input-error');
+      }
+
+      $.ajax({
+        url: "/api/resetPassword",
+        type: "POST",
+        data: data,
+        success: function (result) {
+          console.log(result);
+          if (!result.code) {
+            toastr.success("Tạo mật khẩu mới thành công");
+            setTimeout(function () {
+              location.href = '/';
+            }, 1000);
+          } else {
+            toastr.error(result.message);
+          }
+        }
+      });
+    });
+  </script>
+
+{% endblock content %}
