@@ -33,7 +33,9 @@ class CustomAdminController extends adminController {
 
 
 class CustomStoreFrontController extends Controller {
-  // get review count number
+  public function gotoUserAccount(Request $request, Response $response) {
+    return $this->view->render($response, 'user_account');
+  }
 }
 
 
@@ -44,7 +46,7 @@ function add_custom_admin_routes($app) {
 
 // TODO: add custom store front routes
 function add_custom_store_front_routes($app) {
-
+  $app->get('/user_account', 'CustomStoreFrontController:gotoUserAccount');
 }
 
 //register modul publish product

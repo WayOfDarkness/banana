@@ -1102,6 +1102,7 @@ body .expanded-menu-button {
   border-left: 3px solid transparent;
   background: white;
   color: #2C7ABE;
+  display: block;
   line-height: 1rem;
   margin: 0.5rem 0;
   padding: 0.5rem 1.2rem;
