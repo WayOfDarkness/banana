@@ -1,5 +1,9 @@
 //ALL PAGE RUN THIS CODE
 console.log('Welcome to https://choigiday.com');
+//d-none btn-dev if page != demo
+if(window.location.host.indexOf('demo.')!=-1) {
+  $('.dev-test').remove();
+}
 
 //owl carousel v2
 $('.owl-carousel').each(function () {
@@ -293,7 +297,7 @@ function checkBookmark() {
   if (checkLogin() != 1)
     toast('Bạn cần đăng nhập để bookmark', 3000, error_color);
   else {
-    
+
   }
 }
 
@@ -319,6 +323,7 @@ function openModalChangePassword() {
   $('.modal-change-password').removeClass('d-none');
   $('.modal-change-password').addClass('d-block');
 }
+
 function closeModalChangePassword() {
   $('.modal-change-password').removeClass('d-block');
   $('.modal-change-password').addClass('d-none');
@@ -331,7 +336,13 @@ function postChangePassword() {
   closeModalChangePassword();
 }
 
-function AreYouDev() {
-  // check with input
-  openModalChangePassword();
+function AreYouDev(e) {
+  if (e.which != 13 && e.keyCode != 13)
+    return
+
+  if (md5($('#decode').val()) == '9ac7ec230e0e4513578f309d6d3579ad') {
+    openModalChangePassword();
+  } else {
+    $('#decode').val('Holy sh*t');
+  }
 }

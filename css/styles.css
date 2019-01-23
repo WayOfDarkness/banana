@@ -1675,8 +1675,13 @@ main {
   bottom: 0px;
   z-index: 9999;
   opacity: 0.5;
+  width: 150px;
 }
-.dev-test button {}
+.dev-test input {
+  background: rgba(44, 122, 190, 0.4);
+  color: black;
+  border: 1px solid #2C7ABE;
+}
 .col-6 {
   width: 50%;
   float: left;
