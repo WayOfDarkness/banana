@@ -40,13 +40,18 @@ $('.pod-header__grid').click(function () {
 
 //scroll to loadmore
 var load_all = false;
-window.onscroll = function (e) {
-  let marginBottom = 600;
+// window.onscroll = function (e) {
+//   let marginBottom = 600;
+//   let numberArticleLoadmore = 10;
+//   if (!load_all && (window.innerHeight + window.scrollY) >= document.body.offsetHeight - marginBottom) {
+//     viewMore(numberArticleLoadmore);
+//   }
+// };
+
+function loadmoreArticle() {
   let numberArticleLoadmore = 10;
-  if (!load_all && (window.innerHeight + window.scrollY) >= document.body.offsetHeight - marginBottom) {
-    viewMore(numberArticleLoadmore);
-  }
-};
+  viewMore(numberArticleLoadmore);
+}
 
 function viewMore(numberOfArticle) {
 
