@@ -197,19 +197,18 @@
 
         listAction[0] = {
           text: 'show_modal_change_password',
-          func: () => openModalChangePassword()
+          func: openModalChangePassword()
         };
         listAction[1] = {
           text: 'show_create_password_page',
-          func: () => {
-            window.location.href = '/create_password_test'
-          }
-        };
-        listAction.forEach(function (a) {
-          $('.list-link').append(`<button onclick="`+a.func()+`">`+a.text+`</button>`);
-        })
-
-      } else {
+          func: window.location.href = '/create_password_test'
+        }
+      }
+      listAction.forEach(function (a) {
+        $('.list-link').append(`<button onclick="` + a.func() + `">` + a.text + `</button>`);
+      })
+    else
+      {
         $('#decode').val('Holy sh*t');
       }
     }
