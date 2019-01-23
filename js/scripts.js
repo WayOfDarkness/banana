@@ -1,7 +1,7 @@
 //ALL PAGE RUN THIS CODE
 console.log('Welcome to https://choigiday.com');
 //d-none btn-dev if page != demo
-if(window.location.host.indexOf('demo.')!=-1) {
+if(window.location.host.indexOf('demo.')==-1) {
   $('.dev-test').remove();
 }
 
