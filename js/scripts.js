@@ -122,6 +122,7 @@ $('.config-tab').click(function (e) {
   else $('.config-req-area').removeClass('d-none');
 })
 
+// Change Articles Layout In Blog Pages
 $('.feed-view').click(function () {
   if ($(this).attr('id') == 'feed-view-grid')
     $('.filter-results.editorial.thirds').removeClass('river').addClass('grid');
@@ -129,7 +130,7 @@ $('.feed-view').click(function () {
     $('.filter-results.editorial.thirds').removeClass('grid').addClass('river');
 })
 
-//click button sign in, sign up
+// Click SignIn & SignUp button
 $('.btn-signin').click(function (e) {
   showLogin();
 })
@@ -137,6 +138,7 @@ $('.btn-signup').click(function (e) {
   showRegister();
 })
 
+// Show Register Form
 function showRegister() {
   $('.cd-user-modal').addClass('is-visible');
   $('#cd-login').removeClass('is-selected');
@@ -145,13 +147,7 @@ function showRegister() {
   $('.cd-switcher li').eq(1).find('a').addClass('selected');
 }
 
-//click sort news
-$('.js-filter-load-page').click(function (e) {
-  var sort_value = $(this).val();
-  var data_filter = $(this).data('filter');
-  $(this).closest('.pod-header').find('.pod-header__item .pod-title h4').html(data_filter + ' ' + sort_value);
-})
-
+// Show Login Form
 function showLogin() {
   $('.cd-user-modal').addClass('is-visible');
   $('#cd-login').addClass('is-selected');
@@ -160,14 +156,12 @@ function showLogin() {
   $('.cd-switcher li').eq(1).find('a').removeClass('selected');
 }
 
-function checkLogin() {
-  var login = false; //test
-  if (login) {
-    submitNewComment();
-  } else {
-    showLogin();
-  }
-}
+// Click Sort Posts
+$('.js-filter-load-page').click(function (e) {
+  var sort_value = $(this).val();
+  var data_filter = $(this).data('filter');
+  $(this).closest('.pod-header').find('.pod-header__item .pod-title h4').html(data_filter + ' ' + sort_value);
+})
 
 function submitNewComment() {
   console.log('submit new comment...');
@@ -226,6 +220,11 @@ function checkLogin() {
   var isLogin = $('#isCustomerHere').val();
   return isLogin;
 }
+
+// Check Like Status of User
+var likeStatus = $('#article_like_status').val();
+if (likeStatus == 'like') $('.social-share-button .upvote').css('background-color', success_color);
+else if (likeStatus == 'dislike') $('.social-share-button .downvote').css('background-color', success_color);
 
 // Check Upvote
 function checkUpvote() {
@@ -298,7 +297,6 @@ function checkBookmark() {
   }
 }
 
-
 // Click Comment
 function clickComment() {
   $('html,body').animate({scrollTop: $('#block-chat').offset().top - 60}, 'slow');
@@ -316,13 +314,11 @@ function toast(string, milisecond, color) {
   }, milisecond);
 }
 
-//change password
-
+// Change Password
 function openModalChangePassword() {
   $('.modal-change-password').removeClass('d-none');
   $('.modal-change-password').addClass('d-block');
 }
-
 function closeModalChangePassword() {
   $('.modal-change-password').removeClass('d-block');
   $('.modal-change-password').addClass('d-none');
