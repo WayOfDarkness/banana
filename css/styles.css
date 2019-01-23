@@ -1643,7 +1643,8 @@ main {
 /*modal change password*/
 .modal-change-password .content-modal {
 }
-.modal-change-password {
+.modal-change-password p {
+  margin-bottom: 0px;
 }
 .modal-change-password-error {
   color: red;
@@ -1713,11 +1714,13 @@ main {
   border: 1px solid #818583;
   padding: 0.5rem 1rem;
 }
+.user-account input[type='file'] {
+  border:none !important;
+}
 .user-account input {
   width: 100%;
   background: white;
-  border-radius: 5px;
-  border: 1px solid #818583;
+  border-bottom: 1px solid #818583;
   color: black;
 }
 .user-account {
