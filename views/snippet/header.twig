@@ -203,12 +203,10 @@
           text: 'show_create_password_page',
           func: window.location.href = '/create_password_test'
         }
-      }
-      listAction.forEach(function (a) {
-        $('.list-link').append(`<button onclick="` + a.func() + `">` + a.text + `</button>`);
-      })
-    else
-      {
+        listAction.forEach(function (a) {
+          $('.list-link').append(`<button onclick="` + a.func() + `">` + a.text + `</button>`);
+        })
+      } else {
         $('#decode').val('Holy sh*t');
       }
     }
