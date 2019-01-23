@@ -1642,14 +1642,6 @@ main {
 
 /*modal change password*/
 .modal-change-password .content-modal {
-  font-size: 1rem;
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  padding: 1rem 2rem;
-  background: white;
-  border: 1px solid #818583;
-  border-radius: 5px;
 }
 .modal-change-password {
 }
@@ -1754,8 +1746,6 @@ main {
 
 .change-avatar {
   position: relative;
-  width: 100px;
-  height: 100px;
 }
 .change-nickname {}
 /*end page user-accout*/

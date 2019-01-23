@@ -13,33 +13,47 @@
   <div class="user-account">
     <div class="user-account-wrapper">
       <div class="change-nickname">
+        <p>Nickname của bạn là: </p>
         <input type="text" placeholder="{{ 'tên của user' }}">
       </div>
       <div class="change-avatar">
-        <p>Avatar: <input type="file" onchange="checkInputImg()"></p>
+        <p>Cập nhật avatar: <span class="avatar-name"></span></p>
+        <input type="file" onchange="checkInputImg()">
       </div>
       <div class="change-password">
-        <div class="modal-change-password d-none">
+        <div class="modal-change-password">
           <div class="content-modal">
-            <h2 class="text-blue text-center text-bold"
-                style="margin-bottom: 0.5rem; padding-bottom: 0.5rem;">
-              Cập Nhập Thông Tin
-            </h2>
-            <label for="old-password">Nhập mật khẩu cũ</label>
-            <input type="password" id="old-password" placeholder="Nhập mật khẩu cũ">
-            <label for="new-password">Nhập mật khẩu mới</label>
-            <input type="password" id="new-password" placeholder="Nhập mật khẩu mới">
-            <label for="re-new-password">Nhập lại mật khẩu mới</label>
-            <input type="password" id="re-new-password" placeholder="Nhập lại mật khẩu mới">
-            <p class="modal-change-password-error">Error here</p>
-            <div class="modal-password-footer">
-              <div class="col-6">
-                <button class="full-width" onclick="closeModalChangePassword()">Hủy</button>
-              </div>
-              <div class="col-6">
-                <button class="full-width" onclick="postChangePassword()">Cập nhập</button>
+            <button class="text-blue text-center text-bold"
+                    style="margin-bottom: 0.5rem;padding: 15px 0 0.5rem 0;background: white;border: 1px solid #2c7abe;"
+                    onclick="isShowChangePassword(true)">
+              Đổi mật khẩu
+            </button>
+            <div class="collapse-change-assword">
+              <label for="old-password">Nhập mật khẩu cũ</label>
+              <input type="password" id="old-password" placeholder="Nhập mật khẩu cũ">
+              <label for="new-password">Nhập mật khẩu mới</label>
+              <input type="password" id="new-password" placeholder="Nhập mật khẩu mới">
+              <label for="re-new-password">Nhập lại mật khẩu mới</label>
+              <input type="password" id="re-new-password" placeholder="Nhập lại mật khẩu mới">
+              <p class="modal-change-password-error d-none">Error here</p>
+              <div class="modal-password-footer">
+                <div class="col-6">
+                  <button class="full-width" onclick="isShowChangePassword(false)">Hủy</button>
+                </div>
+                <div class="col-6">
+                  <button class="full-width" onclick="changePassword()">Đổi</button>
+                </div>
               </div>
             </div>
+            <script>
+              function isShowChangePassword(boolean) {
+                if(boolean)
+                  $('.collapseChangePassword').removeClass('d-none');
+                else
+                  $('.collapseChangePassword').addClass('d-none');
+              }
+              function changePassword() {}
+            </script>
           </div>
         </div>
       </div>
