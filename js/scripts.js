@@ -239,7 +239,6 @@ function checkUpvote() {
       url: `/api/react/${id}/like`,
       type: "POST",
       success: function (result) {
-        $('.social-share-button i').load(' .social-share-button i');
         if (result.like == 1) {
           $('.social-share-button .upvote').next('i').html(current_like + 1);
           localStorage.setItem("user_like_amount", 1);
