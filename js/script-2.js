@@ -2595,10 +2595,10 @@
 });
 ;
 /*!
-  * jQuery Once v2.2.0 - http://github.com/robloach/jquery-once
+  * jQuery Once v2.2.0 - https://github.com/robloach/jquery-once
   * @license MIT, GPL-2.0
-  *   http://opensource.org/licenses/MIT
-  *   http://opensource.org/licenses/GPL-2.0
+  *   https://opensource.org/licenses/MIT
+  *   https://opensource.org/licenses/GPL-2.0
   */
 (function (e) {
   "use strict";
@@ -3344,9 +3344,9 @@ jQuery(function () {
 ;
 /**
  * Featherlight - ultra slim jQuery lightbox
- * Version 1.7.13 - http://noelboss.github.io/featherlight/
+ * Version 1.7.13 - https://noelboss.github.io/featherlight/
  *
- * Copyright 2018, NoĂ«l Raoul Bossart (http://www.noelboss.com)
+ * Copyright 2018, NoĂ«l Raoul Bossart (https://www.noelboss.com)
  * MIT Licensed.
  **/
 !function (a) {

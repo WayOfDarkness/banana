@@ -2743,10 +2743,10 @@ var Tooltip = function ($) {
 
   /**
    * Check for Tether dependency
-   * Tether - http://tether.io/
+   * Tether - https://tether.io/
    */
   if (typeof Tether === 'undefined') {
-    throw new Error('Bootstrap tooltips require Tether (http://tether.io/)');
+    throw new Error('Bootstrap tooltips require Tether (https://tether.io/)');
   }
 
   /**
