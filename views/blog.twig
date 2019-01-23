@@ -34,18 +34,18 @@
                     var href = location.href;
                     var s = location.search;
                     if (! s || ! s.indexOf('?page=')) {
-                        if (page == 1) 
+                        if (page == 1)
                             href = location.pathname;
-                         else 
+                         else
                             href = location.pathname + '?page=' + page;
-                        
+
                     } else {
-                        if (href.indexOf('&page=') > -1) 
+                        if (href.indexOf('&page=') > -1)
                             href = href.substring(0, href.indexOf('&page='));
-                        
-                        if (page > 1) 
+
+                        if (page > 1)
                             href = href + '&page=' + page;
-                        
+
                     }
                     location.href = href;
                 }
@@ -55,7 +55,7 @@
 {% endblock %}
 
 {% block content %}
-    
+
     {% if blog.handle == 'tin-tuc' %}
         {% set featured_post = Article (settings.news_featured_post.handle) %}
         {% set redirectBlogHandle = 'danh-gia' %}
@@ -192,13 +192,14 @@
                                                 </article>
                                             {% endfor %}
                                         </section>
+                                        <button class="btn-loadmore effect-hover-1" onclick="loadmoreArticle()">Tải thêm</button>
                                         <div class="pagination__wrapper">
                                             <div id="pagination" data-page_number="{{paginate.current_page}}" data-total="{{paginate.total_pages}}"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             {% include 'snippet/rightside-featured.twig' %}
                         </div>
                     </div>

@@ -1760,12 +1760,10 @@ main {
 }
 
 .btn-loadmore:hover {
-  background: white !important;
-  color: #e74c3c !important;
-  border: 1px solid #e74c3c !important;
 }
 .btn-loadmore {
   background: white !important;
+  margin: 0.5rem 0;
   width: 100%;
   padding: 0.5rem 0 !important;
   text-align: center;
