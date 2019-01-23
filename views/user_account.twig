@@ -14,7 +14,7 @@
     <div class="user-account-wrapper">
       <div class="change-nickname">
         <p>Nickname của bạn là: </p>
-        <input type="text" placeholder="{{ 'tên của user' }}">
+        <input type="text" placeholder="{{ customer.name }}" style="border-color: #2C7ABE">
       </div>
       <div class="change-avatar">
         <p>Cập nhật avatar: <span class="avatar-name"></span></p>
@@ -28,7 +28,7 @@
                     onclick="isShowChangePassword(true)">
               Đổi mật khẩu
             </button>
-            <div class="collapse-change-assword">
+            <div class="collapse-change-assword d-none">
               <label for="old-password">Nhập mật khẩu cũ</label>
               <input type="password" id="old-password" placeholder="Nhập mật khẩu cũ">
               <label for="new-password">Nhập mật khẩu mới</label>
