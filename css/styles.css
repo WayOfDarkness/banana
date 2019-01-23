@@ -1069,6 +1069,7 @@ body .expanded-menu-button {
 }
 .block-login {
   height: 100%;
+  min-width: 180px;
 }
 #login {
   height: 100%;
@@ -1094,7 +1095,7 @@ body .expanded-menu-button {
   animation: rotateZ infinite 1s linear;
 }
 .isLoginSuccess .list-menu > a:hover {
-  padding-left: 1.6rem;
+  padding-left: 2rem;
   background: #eff2f4;
 }
 .isLoginSuccess .list-menu > a {
@@ -1102,6 +1103,7 @@ body .expanded-menu-button {
   background: white;
   color: #2C7ABE;
   line-height: 1rem;
+  margin: 0.5rem 0;
   padding: 0.5rem 1.2rem;
   transition: ease-out 0.1s;
   position: relative;
@@ -1703,3 +1705,61 @@ main {
 
 }
 /*end modal change password*/
+
+/*page user-account*/
+.user-account-wrapper .update-info:hover {
+  background: #e74c3c;
+}
+.user-account-wrapper .update-info {
+  width: 100%;
+  margin: 1rem auto;
+  padding: 16px 0;
+  cursor: pointer;
+  background: #2C7ABE;
+  color: #FFF;
+  font-weight: bold;
+  border: none;
+}
+.user-account-wrapper {
+  max-width: 600px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #818583;
+  padding: 0.5rem 1rem;
+}
+.user-account input {
+  width: 100%;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid #818583;
+  color: black;
+}
+.user-account {
+  min-width: 100%;
+}
+.change-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid #818583;
+}
+.change-avatar input[] {
+
+}
+.change-avatar input {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  opacity: 0;
+}
+.change-avatar {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.change-nickname {}
+/*end page user-accout*/
