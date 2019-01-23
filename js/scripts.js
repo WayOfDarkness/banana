@@ -1,7 +1,7 @@
 //ALL PAGE RUN THIS CODE
 console.log('Welcome to https://choigiday.com');
 //d-none btn-dev if page != demo
-if(window.location.host.indexOf('demo.')==-1) {
+if (window.location.host.indexOf('demo.') == -1) {
   $('.dev-test').remove();
 }
 
@@ -334,15 +334,4 @@ function postChangePassword() {
   //  1. check input variable
   //  2. API here
   closeModalChangePassword();
-}
-
-function AreYouDev(e) {
-  if (e.which != 13 && e.keyCode != 13)
-    return
-
-  if (md5($('#decode').val()) == '9ac7ec230e0e4513578f309d6d3579ad') {
-    openModalChangePassword();
-  } else {
-    $('#decode').val('Holy sh*t');
-  }
 }
