@@ -1764,3 +1764,7 @@ main {
 }
 .change-nickname {}
 /*end page user-accout*/
+
+.page-article blockquote::before {
+  content: none !important;
+}
