@@ -972,7 +972,7 @@ body .expanded-menu-button {
 .pagination li:first-child {
   border: none;
 }
-.pagination button,
+.pagination a, 
 .pagination span {
   background: none;
   border: none;
@@ -987,12 +987,12 @@ body .expanded-menu-button {
   min-width: 40px;
   padding: 0;
 }
-.pagination button {
+.pagination a {
   outline: none;
   position: relative;
   transition: all 170ms linear;
 }
-.pagination button:before {
+.pagination a:before {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   content: "";
@@ -1007,16 +1007,16 @@ body .expanded-menu-button {
   top: 50%;
   width: 0;
 }
-.pagination button:hover:not(.active) {
+.pagination a:hover:not(.active) {
   color: black;
 }
-.pagination button:hover:not(.active):before {
+.pagination a:hover:not(.active):before {
   -webkit-animation: hoverAnimation 510ms linear forwards;
   animation: hoverAnimation 510ms linear forwards;
   height: 40px;
   width: 40px;
 }
-.pagination button.active {
+.pagination li.active a {
   background: #eee;
   color: #e03800;
 }
