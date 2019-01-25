@@ -247,6 +247,7 @@ function checkUpvote() {
       url: `/api/react/${id}/like`,
       type: "POST",
       success: function (result) {
+        console.log(likeStatus);
         if (likeStatus == 'none') {
           $('.social-share-button .upvote').css('background-color', success_color);
           $('.social-share-button .upvote').next('i').html(current_like + 1);
@@ -276,6 +277,7 @@ function checkDownvote() {
       url: `/api/react/${id}/dislike`,
       type: "POST",
       success: function (result) {
+        console.log(likeStatus);
         if (likeStatus == 'none') {
           $('.social-share-button .downvote').css('background-color', success_color);
           $('.social-share-button .downvote').next('i').html(current_dislike + 1);
