@@ -9,7 +9,7 @@
     $('.js-filter-option').click(function() {
       var sortbyValue = $(this).data('sort-value');
       sortby = '&sortby=' + sortbyValue ;
-      var url = '/api/search?type=article&view=snippet%2Farticle_sort&filter=view>=0' + sortby;
+      var url = '/api/search?type=article&filter=view>=0' + sortby;
       ajaxLoadFilter(url);
     })
     
@@ -19,7 +19,47 @@
           type: 'GET',
           success: function (html) {
             console.log(html);
-            $('.js-filter-results').html(html);
+            var content = '';
+            for (var i = 0 ; i < html.data.length ; i++) {
+              content += `<article class="media media-article">
+                            <a href="${html.data[i].url}">
+                                <figure class="media-figure media-figure--river">
+                                    <div class="media-img imgflare--river">
+                                        <img src="/uploads/${html.data[i].url}" alt="${html.data[i].title}" title="${html.data[i].title}"/>
+                                        <div class="media-type media-type--right">
+                                            <svg aria-hidden="true" class="symbol symbol-comments" height="28" version="1.1" viewBox="0 0 28 28" width="28">
+                                                <path d="M22 12q0 2.172-1.469 4.016t-4.008 2.914-5.523 1.070q-1.344 0-2.75-0.25-1.937 1.375-4.344 2-0.562 0.141-1.344 0.25h-0.047q-0.172 0-0.32-0.125t-0.18-0.328q-0.016-0.047-0.016-0.102t0.008-0.102 0.031-0.094l0.039-0.078t0.055-0.086 0.063-0.078 0.070-0.078 0.063-0.070q0.078-0.094 0.359-0.391t0.406-0.461 0.352-0.453 0.391-0.602 0.32-0.688q-1.937-1.125-3.047-2.766t-1.109-3.5q0-2.172 1.469-4.016t4.008-2.914 5.523-1.070 5.523 1.070 4.008 2.914 1.469 4.016zM28 16q0 1.875-1.109 3.508t-3.047 2.758q0.156 0.375 0.32 0.688t0.391 0.602 0.352 0.453 0.406 0.461 0.359 0.391q0.016 0.016 0.063 0.070t0.070 0.078 0.063 0.078 0.055 0.086l0.039 0.078t0.031 0.094 0.008 0.102-0.016 0.102q-0.047 0.219-0.203 0.344t-0.344 0.109q-0.781-0.109-1.344-0.25-2.406-0.625-4.344-2-1.406 0.25-2.75 0.25-4.234 0-7.375-2.063 0.906 0.063 1.375 0.063 2.516 0 4.828-0.703t4.125-2.016q1.953-1.437 3-3.313t1.047-3.969q0-1.203-0.359-2.375 2.016 1.109 3.187 2.781t1.172 3.594z"></path>
+                                            </svg>
+                                            ${html.data[i].comment}
+                                            <svg aria-hidden="true" class="symbol symbol-thumbs-up" height="28" version="1.1" viewBox="0 0 28 28" width="28">
+                                                <path d="M4 21q0-0.406-0.297-0.703t-0.703-0.297q-0.422 0-0.711 0.297t-0.289 0.703q0 0.422 0.289 0.711t0.711 0.289q0.406 0 0.703-0.289t0.297-0.711zM6.5 13v10q0 0.406-0.297 0.703t-0.703 0.297h-4.5q-0.406 0-0.703-0.297t-0.297-0.703v-10q0-0.406 0.297-0.703t0.703-0.297h4.5q0.406 0 0.703 0.297t0.297 0.703zM25 13q0 1.344-0.859 2.328 0.234 0.688 0.234 1.188 0.047 1.188-0.672 2.141 0.266 0.875 0 1.828-0.234 0.891-0.844 1.469 0.141 1.75-0.766 2.828-1 1.188-3.078 1.219h-2.016q-1.031 0-2.25-0.242t-1.898-0.453-1.883-0.617q-1.922-0.672-2.469-0.688-0.406-0.016-0.703-0.305t-0.297-0.695v-10.016q0-0.391 0.281-0.68t0.672-0.32q0.375-0.031 1.188-0.922t1.578-1.891q1.062-1.359 1.578-1.875 0.281-0.281 0.484-0.75t0.273-0.758 0.211-0.945q0.109-0.609 0.195-0.953t0.305-0.812 0.531-0.781q0.297-0.297 0.703-0.297 0.719 0 1.289 0.164t0.938 0.406 0.625 0.633 0.375 0.703 0.187 0.781 0.078 0.703 0.008 0.609q0 0.594-0.148 1.188t-0.297 0.938-0.43 0.875q-0.047 0.094-0.156 0.281t-0.172 0.344-0.125 0.375h4.328q1.219 0 2.109 0.891t0.891 2.109z"></path>
+                                            </svg>
+                                            ${html.data[i].like}
+                                        </div>
+                                        <div class="type-of-article {{item.type}}">
+                                            <img class="news" src="{{theme.uri}}/img/icon-article-news.png" alt="type-of-article" width="50px">
+                                            <img class="review" src="{{theme.uri}}/img/icon-article-review.png" alt="type-of-article" width="50px">
+                                            <img class="walkthrough" src="{{theme.uri}}/img/icon-article-walkthrough.png" alt="type-of-article" width="50px">
+                                        </div>
+                                    </div>
+                                </figure>
+                                <div class="media-body">
+                                    <h3 class="media-title">
+                                        ${html.data[i].title}
+                                    </h3>
+                                    <p class="media-deck">
+                                        ${html.data[i].description}
+                                    </p>
+                                    <footer class="media-meta">
+                                        <time class="media-date" datetime="${html.data[i].created_at}">
+                                            ${html.data[i].created_at}
+                                        </time>
+                                    </footer>
+                                </div>
+                            </a>
+                        </article>`;
+            }
+            $('.js-load-forever-container').html(content);
           }
       })
     }
