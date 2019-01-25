@@ -1753,7 +1753,7 @@ main {
 /*end page user-accout*/
 
 .page-article .ds-main blockquote::before {
-  content: none !important;
+  /*content: none !important;*/
 }
 .change-password {
   border-bottom: 1px solid #818583;
