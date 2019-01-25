@@ -19,7 +19,7 @@
           url: url,
           type: 'GET',
           success: function (html) {
-            /*var content = '';
+            var content = '';
             for (var i = 0 ; i < html.data.length ; i++) {
               content += `<article class="media media-article">
                             <a href="${html.data[i].url}">
@@ -58,9 +58,9 @@
                                 </div>
                             </a>
                         </article>`;
-            }*/
+            }
             pagination_html = `<div class="pagination" data-page_number="${html.paginate.current_page}" data-total="${html.paginate.total_pages}"></div>`;
-            //$('.js-load-forever-container').html(content);
+            $('.js-load-forever-container').html(content);
             $('.pagination__wrapper').html(pagination_html);
             initPaginate(url);
           }
