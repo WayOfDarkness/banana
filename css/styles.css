@@ -45,19 +45,19 @@ h2 {
 }
 
 .social-share-button .social-icon.downvote {
-  -webkit-mask: url("../img/icon/thumbs-down-solid.svg") no-repeat 100% 100%;
+  /*-webkit-mask: url("../img/icon/thumbs-down-solid.svg") no-repeat 100% 100%;*/
 }
 
 .social-share-button .social-icon.share {
-  -webkit-mask: url("../img/icon/facebook-brands.svg") no-repeat 100% 100%;
+  /*-webkit-mask: url("../img/icon/facebook-brands.svg") no-repeat 100% 100%;*/
 }
 
 .social-share-button .social-icon.comment {
-  -webkit-mask: url("../img/icon/comments-solid.svg") no-repeat 100% 100%;
+  /*-webkit-mask: url("../img/icon/comments-solid.svg") no-repeat 100% 100%;*/
 }
 
 .social-share-button .social-icon.bookmark {
-  -webkit-mask: url("../img/icon/bookmark-solid.svg") no-repeat 100% 100%;
+  /*-webkit-mask: url("../img/icon/bookmark-solid.svg") no-repeat 100% 100%;*/
 }
 
 .ad-299 {
