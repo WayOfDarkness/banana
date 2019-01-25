@@ -69,11 +69,11 @@
     function initPaginate(url) {
             var page_number,
                 total;
-            page_number = jQuery(document).find('#pagination').data('page_number');
-            total = jQuery(document).find('#pagination').data('total');
+            page_number = jQuery(document).find('.pagination').data('page_number');
+            total = jQuery(document).find('.pagination').data('total');
 
             if (total && parseInt(total) > 1) {
-                jQuery(document).find('#pagination').twbsPagination({
+                jQuery(document).find('.pagination').twbsPagination({
                     totalPages: parseInt(total),
                     visiblePages: 7,
                     startPage: parseInt(page_number),
