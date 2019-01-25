@@ -13,7 +13,6 @@
             </dd>
         </dl>
         <div class="filter-results js-filter-results">
-            {% set featured_post = settings.index_featured_post %}
             <section class="editorial river js-load-forever-container">
                 {% for item in Article (1, 5000, 'view-desc') %}
                     <article class="media media-article">
@@ -40,13 +39,15 @@
                             </figure>
                             <div class="media-body">
                                 <h3 class="media-title">
-                                    {{item.title}}</h3>
+                                    {{item.title}}
+                                </h3>
                                 <p class="media-deck">
-                                    {{item.description}}</p>
+                                    {{item.description}}
+                                </p>
                                 <footer class="media-meta">
                                     <time class="media-date" datetime="{{item.created_at}}">
                                         {{item.created_at}}
-																		</time>
+                                    </time>
                                 </footer>
                             </div>
                         </a>
