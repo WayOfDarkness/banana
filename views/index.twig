@@ -163,6 +163,50 @@
       url = '/api/search?type=article&filter=view>=0' + sortby;
       ajaxLoadFilter(url);
     })
+
+    $('.js-filter-json').change(function(e) {
+      var option = $(this).val();
+      var option_url = `/api/search?type=article&filter=type**news&sortby=${option}`;
+      console.log(option_url);
+      $.ajax({
+        url: url,
+        type: 'GET',
+        success: function (data) {
+          console.log(data);
+          var html = '';
+          for (var i = 0 ; i < data.data.length ; i++) {
+            html += `<li class="game-background reviews-list__item reviews-list__item--first" style="background-image: url('/upload/${data.data[i].image}')">
+                      <a href="${data.data[i].url}">
+                        <div class="align-vertical--contain">
+                          <div class="align-vertical--child game-info-wrapper">
+                            <h4 class="game-title">${data.data[i].title}</h4>
+                          </div>
+                          <dl class="game-score align-vertical--child ">
+                            <dt>
+                              <div class="gs-score  gs-score--small score-${data.data[i].admin_point}">
+                                <div class="gs-score__clip">
+                                  <div class="gs-score__pie gs-score__spinner"></div>
+                                </div>
+                                <div class="gs-score__clip gs-score__clip2">
+                                  <div class="gs-score__pie gs-score__filler"></div>
+                                </div>
+                                <div class="gs-score__inner">
+                                  <div class="gs-score__table">
+                                    <div class="gs-score__cell">${data.data[i].admin_point}</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </dt>
+                            {% include 'snippet/point-system.twig' %}
+                          </dl>
+                        </div>
+                      </a>
+                    </li>`;
+          }
+          $('.game--top-games').html(html);
+        }
+      });
+    })
   </script>
 {% endblock %}
 
