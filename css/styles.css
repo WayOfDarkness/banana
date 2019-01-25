@@ -246,6 +246,7 @@ a.text-block {
 .page-article .social-share-button .social-icon {
   height: 24px;
   width: 24px;
+  background: none;
 }
 
 .page-article .social-share-button:not(:last-of-type) {
