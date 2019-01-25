@@ -167,12 +167,10 @@
     $('.js-filter-json').change(function(e) {
       var option = $(this).val();
       var option_url = `/api/search?type=article&filter=type**review&sortby=${option}`;
-      console.log(option_url);
       $.ajax({
         url: option_url,
         type: 'GET',
         success: function (data) {
-          console.log(data);
           var html = '';
           for (var i = 0 ; i < data.data.length ; i++) {
             html += `<li class="game-background reviews-list__item reviews-list__item--first" style="background-image: url('/upload/${data.data[i].image}')">
@@ -197,7 +195,7 @@
                                 </div>
                               </div>
                             </dt>
-                            {% include 'snippet/point-system.twig' %}
+                            <dd>${pointSystem(data.data[i].admin_point)}</dd>
                           </dl>
                         </div>
                       </a>
@@ -207,6 +205,44 @@
         }
       });
     })
+
+    function pointSystem(point) {
+      switch(point) {
+        case 10:
+          return 'Hoàn hảo';
+          break;
+        case 9:
+          return 'Xuất sắc';
+          break;
+        case 8:
+          return 'Hay';
+          break;
+        case 7:
+          return 'Khá';
+          break;
+        case 6:
+          return 'Tạm được';
+          break;
+        case 5:
+          return 'Trung bình';
+          break;
+        case 4:
+          return 'Nghèo nàn';
+          break;
+        case 3:
+          return 'Tệ';
+          break;
+        case 2:
+          return 'Quá tệ';
+          break;
+        case 1:
+          return 'Trash';
+          break;
+        default:
+          return 'Chưa đánh giá';
+          break;
+      } 
+    }
   </script>
 {% endblock %}
 
