@@ -251,18 +251,20 @@ function checkUpvote() {
         if (likeStatus == 'none') {
           $('.social-share-button .upvote').css('background-color', success_color);
           $('.social-share-button .upvote').next('i').html(current_like + 1);
+          likeStatus = 'like';
         } else if (likeStatus == 'like') {
           $('.social-share-button .upvote').css('background-color', default_color);
           $('.social-share-button .upvote').next('i').html(current_like - 1);
+          likeStatus = 'none';
         } else {
           $('.social-share-button .upvote').css('background-color', success_color);
           $('.social-share-button .upvote').next('i').html(current_like + 1);
           $('.social-share-button .downvote').next('i').html(current_dislike - 1);
+          likeStatus = 'like';
         }
       }
     });
   }
-  likeStatus = $('#article_like_status').val();
 }
 
 // Check Downvote
@@ -281,18 +283,20 @@ function checkDownvote() {
         if (likeStatus == 'none') {
           $('.social-share-button .downvote').css('background-color', success_color);
           $('.social-share-button .downvote').next('i').html(current_dislike + 1);
+          likeStatus = 'dislike';
         } else if (likeStatus == 'dislike') {
           $('.social-share-button .downvote').css('background-color', default_color);
           $('.social-share-button .downvote').next('i').html(current_dislike - 1);
+          likeStatus = 'none';
         } else {
           $('.social-share-button .downvote').css('background-color', success_color);
           $('.social-share-button .downvote').next('i').html(current_dislike + 1);
           $('.social-share-button .upvote').next('i').html(current_like - 1);
+          likeStatus = 'dislike';
         }
       }
     });
   }
-  likeStatus = $('#article_like_status').val();
 }
 
 // Check Bookmark
