@@ -1752,7 +1752,7 @@ main {
 .change-nickname {}
 /*end page user-accout*/
 
-.page-article blockquote::before {
+.page-article .ds-main blockquote::before {
   content: none !important;
 }
 .change-password {
