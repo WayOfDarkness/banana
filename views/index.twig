@@ -173,7 +173,7 @@
         success: function (data) {
           var html = '';
           for (var i = 0 ; i < data.data.length ; i++) {
-            html += `<li class="game-background reviews-list__item reviews-list__item--first" style="background-image: url(/upload/${data.data[i].image})">
+            html += `<li class="game-background reviews-list__item reviews-list__item--first" style="background-image: url(/uploads/${data.data[i].image})">
                       <a href="${data.data[i].url}">
                         <div class="align-vertical--contain">
                           <div class="align-vertical--child game-info-wrapper">
