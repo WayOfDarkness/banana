@@ -1752,8 +1752,8 @@ main {
 .change-nickname {}
 /*end page user-accout*/
 
-.page-article blockquote::before {
-  content: none !important;
+.page-article .ds-main blockquote::before {
+  /*content: none !important;*/
 }
 .change-password {
   border-bottom: 1px solid #818583;
