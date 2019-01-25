@@ -8,9 +8,11 @@
   <script>
     $('.js-filter-option').click(function() {
       var sortbyValue = $(this).data('sort-value');
+      var content = '';
       sortby = '&sortby=' + sortbyValue ;
       var url = '/api/search?type=article&filter=view>=0' + sortby;
       ajaxLoadFilter(url);
+      $('.js-load-forever-container').html(content);
     })
     
     function ajaxLoadFilter(url) {
@@ -18,8 +20,6 @@
           url: url,
           type: 'GET',
           success: function (html) {
-            console.log(html);
-            var content = '';
             for (var i = 0 ; i < html.data.length ; i++) {
               content += `<article class="media media-article">
                             <a href="${html.data[i].url}">
@@ -52,17 +52,23 @@
                                     </p>
                                     <footer class="media-meta">
                                         <time class="media-date">
-                                            ${html.data[i].created_at | date('d/M/Y')}
+                                            ${html.data[i].created_at}
                                         </time>
                                     </footer>
                                 </div>
                             </a>
                         </article>`;
             }
-            $('.js-load-forever-container').html(content);
           }
       })
     }
+
+    $('.').click(function(e) {
+      var content = '';
+      var loadMore = '/api/article/loadmore?page=1&perpage=2&orderby=' + sortbyValue;
+      ajaxLoadFilter(url);
+      $('.js-load-forever-container').append(content);
+    })
   </script>
 {% endblock %}
 
