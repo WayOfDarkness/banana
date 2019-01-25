@@ -242,6 +242,7 @@ function checkUpvote() {
   else {
     var id = $('#article_id').val();
     var current_like = parseInt($('.social-share-button .upvote').next('i').html());
+    var current_dislike = parseInt($('.social-share-button .downvote').next('i').html());
     $.ajax({
       url: `/api/react/${id}/like`,
       type: "POST",
