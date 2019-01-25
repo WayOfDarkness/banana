@@ -169,7 +169,7 @@
       var option_url = `/api/search?type=article&filter=type**review&sortby=${option}`;
       console.log(option_url);
       $.ajax({
-        url: url,
+        url: option_url,
         type: 'GET',
         success: function (data) {
           console.log(data);
