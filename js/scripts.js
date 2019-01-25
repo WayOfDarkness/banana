@@ -242,28 +242,25 @@ function checkUpvote() {
   else {
     var id = $('#article_id').val();
     var current_like = parseInt($('.social-share-button .upvote').next('i').html());
-    var current_dislike = parseInt($('.social-share-button .downvote').next('i').html());
     $.ajax({
       url: `/api/react/${id}/like`,
       type: "POST",
       success: function (result) {
-        if (result.like == 1) {
-          $('.social-share-button .upvote').next('i').html(current_like + 1);
-          localStorage.setItem("user_like_amount", 1);
-          if (localStorage.getItem("user_dislike_amount") == 1) {
-            $('.social-share-button .downvote').next('i').html(current_dislike - 1);
-            $('.social-share-button .downvote').css('background-color', default_color);
-            localStorage.setItem("user_dislike_amount", 0);
-          }
+        if (likeStatus == 'none') {
           $('.social-share-button .upvote').css('background-color', success_color);
-        } else {
-          localStorage.setItem("user_like_amount", 0);
-          $('.social-share-button .upvote').next('i').html(current_like - 1);
+          $('.social-share-button .upvote').next('i').html(current_like + 1);
+        } else if (likeStatus == 'like') {
           $('.social-share-button .upvote').css('background-color', default_color);
+          $('.social-share-button .upvote').next('i').html(current_like - 1);
+        } else {
+          $('.social-share-button .upvote').css('background-color', success_color);
+          $('.social-share-button .upvote').next('i').html(current_like + 1);
+          $('.social-share-button .downvote').next('i').html(current_dislike - 1);
         }
       }
     });
   }
+  likeStatus = $('#article_like_status').val();
 }
 
 // Check Downvote
@@ -278,23 +275,21 @@ function checkDownvote() {
       url: `/api/react/${id}/dislike`,
       type: "POST",
       success: function (result) {
-        if (result.dislike == 1) {
-          $('.social-share-button .downvote').next('i').html(current_dislike + 1);
-          localStorage.setItem("user_dislike_amount", 1);
-          if (localStorage.getItem("user_like_amount") == 1) {
-            $('.social-share-button .upvote').next('i').html(current_like - 1);
-            $('.social-share-button .downvote').css('background-color', default_color);
-            localStorage.setItem("user_like_amount", 0);
-          }
+        if (likeStatus == 'none') {
           $('.social-share-button .downvote').css('background-color', success_color);
-        } else {
-          localStorage.setItem("user_dislike_amount", 0);
-          $('.social-share-button .downvote').next('i').html(current_dislike - 1);
+          $('.social-share-button .downvote').next('i').html(current_dislike + 1);
+        } else if (likeStatus == 'dislike') {
           $('.social-share-button .downvote').css('background-color', default_color);
+          $('.social-share-button .downvote').next('i').html(current_dislike - 1);
+        } else {
+          $('.social-share-button .downvote').css('background-color', success_color);
+          $('.social-share-button .downvote').next('i').html(current_dislike + 1);
+          $('.social-share-button .upvote').next('i').html(current_like - 1);
         }
       }
     });
   }
+  likeStatus = $('#article_like_status').val();
 }
 
 // Check Bookmark
