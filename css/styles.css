@@ -963,6 +963,7 @@ body .expanded-menu-button {
   margin: 0;
   padding: 0;
   width: 100%;
+  max-height: 50px;
 }
 .pagination li {
   display: block;
