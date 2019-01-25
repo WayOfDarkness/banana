@@ -166,7 +166,7 @@
 
     $('.js-filter-json').change(function(e) {
       var option = $(this).val();
-      var option_url = `/api/search?type=article&filter=type**news&sortby=${option}`;
+      var option_url = `/api/search?type=article&filter=type**review&sortby=${option}`;
       console.log(option_url);
       $.ajax({
         url: url,
