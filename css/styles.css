@@ -1768,3 +1768,9 @@ main {
   padding: 0.5rem 0 !important;
   text-align: center;
 }
+
+.pod-filter .filter-results.grid .media-game .media-figure img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
