@@ -167,7 +167,7 @@ function showLogin() {
 
 // Click Sort Posts
 $('.js-filter-load-page').click(function (e) {
-  var sort_value = $(this).data('title');
+  var sort_value = $(this).find('option:selected').data('title');
   var data_filter = $(this).data('filter');
   $(this).closest('.pod-header').find('.pod-header__item .pod-title h4').html(data_filter + ' ' + sort_value);
 })
@@ -345,6 +345,9 @@ function checkDateName(dateString) {
   var days = ['Chủ nhật', 'Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm', 'Thứ sáu', 'Thứ bảy'];
   var d = new Date(dateString);
   var dateName = days[d.getDay()];
-  var result = `${dateName}, ${dateString}`;
+  var date = dateString.split('-')[2];
+  var month = dateString.split('-')[1];
+  var year = dateString.split('-')[0];
+  var result = `${dateName}, ${date}/${month}/${year}`;
   return result;
 }

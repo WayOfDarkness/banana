@@ -203,6 +203,7 @@
                             <section class="promo-strip span12">
                                 <ul class="promo-strip__list row owl-carousel owl-theme">
                                     {% for post in blog.articles | slice (0, 10) %}
+                                    a={{post | json_encode}}
                                         <li class="promo-type--grid promo-strip__item media">
                                             <a href="{{post.url}}">
                                                 <figure class="media-figure">
