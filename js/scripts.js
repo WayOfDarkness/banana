@@ -341,6 +341,7 @@ function postChangePassword() {
   closeModalChangePassword();
 }
 
+// Check Date Name
 function checkDateName(dateString) {
   var days = ['Chủ nhật', 'Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm', 'Thứ sáu', 'Thứ bảy'];
   var d = new Date(dateString);
@@ -350,4 +351,43 @@ function checkDateName(dateString) {
   var year = dateString.split('-')[0];
   var result = `${dateName}, ${date}/${month}/${year}`;
   return result;
+}
+
+// Point System
+function pointSystem(point) {
+  switch(point) {
+    case 10:
+      return 'Hoàn hảo';
+      break;
+    case 9:
+      return 'Xuất sắc';
+      break;
+    case 8:
+      return 'Hay';
+      break;
+    case 7:
+      return 'Khá';
+      break;
+    case 6:
+      return 'Tạm được';
+      break;
+    case 5:
+      return 'Trung bình';
+      break;
+    case 4:
+      return 'Nghèo nàn';
+      break;
+    case 3:
+      return 'Tệ';
+      break;
+    case 2:
+      return 'Quá tệ';
+      break;
+    case 1:
+      return 'Trash';
+      break;
+    default:
+      return 'Chưa đánh giá';
+      break;
+  } 
 }

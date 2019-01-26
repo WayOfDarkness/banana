@@ -117,14 +117,14 @@
                                             </figure>
                                             <div class="media-body">
                                                 <h3 class="media-title">
-                                                    ${data.data[i].title.substring(0,100)}
+                                                    ${data.data[i].title.substring(0,100)}...
                                                 </h3>
                                                 <p class="media-deck">
-                                                    ${data.data[i].description.substring(0,170)}
+                                                    ${data.data[i].description.substring(0,170)}...
                                                 </p>
                                                 <footer class="media-meta">
                                                     <time class="media-date">
-                                                        ${data.data[i].created_at}
+                                                        ${checkDateName(data.data[i].created_at.split(' ')[0])}
                                                     </time>
                                                 </footer>
                                             </div>
@@ -152,7 +152,6 @@
             option = $('.js-filter-load-page').val();
             type = $('.js-filter-load-page').data('type');
             option_url = `/api/search?type=article&filter=type**${type}&sortby=${option}`;
-            console.log(option_url);
             loadTopArticles(option_url);
         })
     </script>
@@ -203,7 +202,6 @@
                             <section class="promo-strip span12">
                                 <ul class="promo-strip__list row owl-carousel owl-theme">
                                     {% for post in blog.articles | slice (0, 10) %}
-                                    a={{post | json_encode}}
                                         <li class="promo-type--grid promo-strip__item media">
                                             <a href="{{post.url}}">
                                                 <figure class="media-figure">

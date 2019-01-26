@@ -7,49 +7,141 @@
 {% block post_include %}
     <script src="{{shop.static}}/libs/twbsPagination.min.js"></script>
     <script type="text/javascript">
-        var page_number,
-            total;
-        page_number = jQuery(document).find('#pagination').data('page_number');
-        total = jQuery(document).find('#pagination').data('total');
-        if (total && parseInt(total) > 1) {
-            jQuery(document).find('#pagination').twbsPagination('destroy');
-            jQuery(document).find('#pagination').twbsPagination({
-                totalPages: parseInt(total),
-                visiblePages: 7,
-                startPage: parseInt(page_number),
-                initiateStartPageClick: false,
-                paginationClass: 'reset-list paginationk-list',
-                pageClass: 'item',
-                first: false,
-                prev: '<span></span>',
-                prevClass: 'item',
-                next: '<span></span>',
-                nextClass: 'item',
-                activeClass: 'active',
-                disabledClass: 'disabled',
-                anchorClass: 'link',
-                last: false,
-                href: false,
-                onPageClick: function (event, page) {
-                    var href = location.href;
-                    var s = location.search;
-                    if (! s || ! s.indexOf('?page=')) {
-                        if (page == 1) 
-                            href = location.pathname;
-                         else 
-                            href = location.pathname + '?page=' + page;
-                        
-                    } else {
-                        if (href.indexOf('&page=') > -1) 
-                            href = href.substring(0, href.indexOf('&page='));
-                        
-                        if (page > 1) 
-                            href = href + '&page=' + page;
+        
+        function loadTopArticles(url) {
+            $.ajax({
+                url: url,
+                type: 'GET',
+                success: function (data) {
+                    var html = '';
+                    for (var i = 0 ; i < data.data.length ; i++) {
+                        html += `<article class="media media-game media-game">
+									<a href="${data.data[i].url}">
+										<div class="media-well media-well--review">
+											<div class="media-well--review-gs">
+												<div class="media-well--review-score">
+													<span class="content">${data.data[i].admin_point}</span>
+												</div>
+												<span class="score-word">${pointSystem(data.data[i].admin_point)}</span>
+											</div>
+										</div>
+										<figure class="media-figure media-figure--medium">
+											<div class="media-img imgflare--boxart">
+												<img src="/uploads/${data.data[i].image}" alt="${data.data[i].title}" title="${data.data[i].title}"/>
+											</div>
+										</figure>
+										<div class="media-body">
+											<h3 class="media-title">${data.data[i].title.substring(0,60)}...</h3>
+											<p class="media-deck">${data.data[i].description.substring(0,150)}...</p>
+											<footer class="media-meta">
+												<time class="media-date">
+													${checkDateName(data.data[i].created_at.split(' ')[0])}
+												</time>
+											</footer>
+										</div>
+									</a>
+								</article>`;
                     }
-                    location.href = href;
+                    pagination_html = `<div class="pagination" data-page_number="${data.paginate.current_page}" data-total="${data.paginate.total_pages}"></div>`;
+                    $('.filter-review-results').html(html);
+                    $('.pagination__wrapper').html(pagination_html);
+                    initPaginate(url);
                 }
             });
         }
+
+        function initPaginate(url) {
+            var page_number,
+                total;
+            page_number = jQuery(document).find('.pagination').data('page_number');
+            total = jQuery(document).find('.pagination').data('total');
+
+            if (total && parseInt(total) > 1) {
+                jQuery(document).find('.pagination').twbsPagination({
+                totalPages: parseInt(total),
+                visiblePages: 5,
+                startPage: parseInt(page_number),
+                initiateStartPageClick: false,
+                paginationClass: 'reset-list paginationk-list',
+                first: 'Trang đầu',
+                last: 'Trang cuối',
+                pageClass: 'item',
+                prev: '&#10094;',
+                prevClass: 'prev',
+                next: '&#10095;',
+                nextClass: 'next',
+                activeClass: 'active',
+                disabledClass: 'disabled',
+                anchorClass: 'link',
+                href: false,
+                onPageClick: function (event, page) {
+                    var href = url;
+                    var s = location.search;
+                    if (!s || !s.indexOf('&page=')) {
+                    if (page == 1)
+                        href = url;
+                    else
+                        href = url + '&page=' + page;
+                    }
+                    else {
+                    if (href.indexOf('&page=') > -1)
+                        href = href.substring(0, href.indexOf('&page='));
+                    if (page > 1)
+                        href = href + '&page=' + page;
+                    }
+                    $.get(href, function (data) {
+                        var html = '';
+                        for (var i = 0; i < data.data.length; i++) {
+                            html += `<article class="media media-game media-game">
+										<a href="${data.data[i].url}">
+											<div class="media-well media-well--review">
+												<div class="media-well--review-gs">
+													<div class="media-well--review-score">
+														<span class="content">${data.data[i].admin_point}</span>
+													</div>
+													<span class="score-word">${pointSystem(data.data[i].admin_point)}</span>
+												</div>
+											</div>
+											<figure class="media-figure media-figure--medium">
+												<div class="media-img imgflare--boxart">
+													<img src="/uploads/${data.data[i].image}" alt="${data.data[i].title}" title="${data.data[i].title}"/>
+												</div>
+											</figure>
+											<div class="media-body">
+												<h3 class="media-title">${data.data[i].title.substring(0,60)}...</h3>
+												<p class="media-deck">${data.data[i].description.substring(0,150)}...</p>
+												<footer class="media-meta">
+													<time class="media-date">
+														${checkDateName(data.data[i].created_at.split(' ')[0])}
+													</time>
+												</footer>
+											</div>
+										</a>
+									</article>`;
+                        }
+                        pagination_html = `<div class="pagination" data-page_number="${data.paginate.current_page}" data-total="${data.paginate.total_pages}"></div>`;
+                        $('.filter-review-results').html(html);
+                        $('.pagination__wrapper').html(pagination_html);
+                        initPaginate(url);
+                        })
+                    }
+                });
+            }
+        }
+
+        $('.js-filter-load-page').change(function(e) {
+            option = $(this).val();
+            type = $('.js-filter-load-page').data('type');
+            option_url = `/api/search?type=article&filter=type**${type}&sortby=${option}`;
+            loadTopArticles(option_url);
+        })
+            
+        $(document).ready(function(){
+            option = $('.js-filter-load-page').val();
+            type = $('.js-filter-load-page').data('type');
+            option_url = `/api/search?type=article&filter=type**${type}&sortby=${option}`;
+            loadTopArticles(option_url);
+        })
     </script>
 {% endblock %}
 
@@ -58,6 +150,7 @@
 	{% set featured_post = Article (settings.review_featured_post.handle) %}
 	{% set redirectBlogHandle = 'huong-dan' %}
 	{% set redirectBlog = 'Hướng dẫn' %}
+	{% set type = 'review' %}
 
 	<div id="site-wrapper" class="col-2-template">
 		<div id="mantle_skin">
@@ -128,11 +221,11 @@
 											</dt>
 											<dd class="pod-header__item pod-header__filters no-flex">
 												<div class="pod-header__filters--select">
-													<select name="sort" class="js-filter-load-page" data-filter="Đánh giá">
-														<option value="mới nhất" selected="">Mới nhất</option>
-														<option value="phổ biến nhất">Phổ biến nhất</option>
-														<option value="cao nhất">Điểm từ cao đến thấp</option>
-														<option value="thấp nhất">Điểm từ thấp đến cao</option>
+													<select name="sort" class="js-filter-load-page" data-filter="{{blog.title}}" data-type="{{type}}">
+														<option value="created_at-desc" data-title="mới nhất" selected>Mới nhất</option>
+                                                    	<option value="view-desc" data-title="phổ biến nhất">Phổ biến nhất</option>
+														<option value="admin_point-desc" data-title="cao nhất">Điểm từ cao đến thấp</option>
+														<option value="admin_point-asc" data-title="thấp nhất">Điểm từ thấp đến cao</option>
 													</select>
 												</div>
 											</dd>
@@ -146,39 +239,8 @@
 											</form>
 										</div>
 										<div id="js-sort-filter-results">
-											<section class="editorial river">
-												{% for item in blog.articles %}
-													<article class="media media-game media-game">
-														<a href="{{item.url}}">
-															<div class="media-well media-well--review">
-																<div class="media-well--review-gs">
-																	<div class="media-well--review-score">
-																		<span class="content">{{item.admin_point}}</span>
-																	</div>
-																	{% include 'snippet/point-system.twig' %}
-																</div>
-															</div>
-															<figure class="media-figure media-figure--medium">
-																<div class="media-img imgflare--boxart">
-																	<img src="{{item.image | upload_url}}" alt="{{item.title}}"/>
-																</div>
-															</figure>
-															<div class="media-body">
-																<h3 class="media-title">{{item.title | truncate (60)}}</h3>
-																<p class="media-deck">{{item.description | truncate (150)}}</p>
-																<footer class="media-meta">
-																	<time class="media-date" datetime="{{item.created_at}}">
-																		{{item.created_at}}
-																	</time>
-																</footer>
-															</div>
-														</a>
-													</article>
-												{% endfor %}
-											</section>
-											<div class="pagination__wrapper">
-												<div id="pagination" data-page_number="{{paginate.current_page}}" data-total="{{paginate.total_pages}}"></div>
-											</div>
+											<section class="editorial river filter-review-results"></section>
+											<div class="pagination__wrapper"></div>
 										</div>
 									</div>
 								</div>
