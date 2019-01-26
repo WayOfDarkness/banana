@@ -164,10 +164,12 @@
         {% set featured_post = Article (settings.news_featured_post.handle) %}
         {% set redirectBlogHandle = 'danh-gia' %}
         {% set redirectBlog = 'Đánh giá' %}
+        {% set type = 'news' %}
     {% elseif blog.handle == 'huong-dan' %}
         {% set featured_post = Article (settings.walkthrough_featured_post) %}
         {% set redirectBlogHandle = 'tin-tuc' %}
         {% set redirectBlog = 'Tin tức' %}
+        {% set type = 'walkthrough' %}
     {% endif %}
 
     <div id="site-wrapper" class="page-blog col-2-template">
@@ -240,7 +242,7 @@
                                         </dt>
                                         <dd class="pod-header__item pod-header__filters pod-header__filters--js no-flex">
                                             <div class="pod-header__filters--select">
-                                                <select name="sort" class="js-filter-load-page" data-filter="{{blog.title}}" data-type="{{blog.type}}">
+                                                <select name="sort" class="js-filter-load-page" data-filter="{{blog.title}}" data-type="{{type}}">
                                                     <option value="created_at-desc" selected>Mới nhất</option>
                                                     <option value="view-desc">Phổ biến nhất</option>
                                                 </select>
