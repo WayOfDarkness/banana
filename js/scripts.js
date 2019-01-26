@@ -340,3 +340,10 @@ function postChangePassword() {
   //  2. API here
   closeModalChangePassword();
 }
+
+function checkDateName(dateString) {
+  var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var d = new Date(dateString);
+  var dateName = days[d.getDay()];
+  return dateName;
+}
