@@ -142,6 +142,13 @@
             option_url = `/api/search?type=article&filter=type**${type}&sortby=${option}`;
             loadTopArticles(option_url);
         })
+
+		$('.sort-search').submit(function(e) {
+			e.preventDefault();
+			var search_data = $(this).find('input[name="q"]').val();
+			var search_url = `/api/search?type=article&filter=type**review&q=${search_data}`;
+			loadTopArticles(search_url);
+		})
     </script>
 {% endblock %}
 
@@ -234,7 +241,6 @@
 											<form method="get" class="sort-search">
 												<fieldset>
 													<input type="text" name="q" placeholder="Tìm kiếm:" autocomplete="off" class="ready"/>
-													<input type="hidden" name="article" value="reviews"/>
 												</fieldset>
 											</form>
 										</div>
