@@ -132,21 +132,24 @@
         $('.js-filter-load-page').change(function(e) {
             option = $(this).val();
             type = $('.js-filter-load-page').data('type');
-            option_url = `/api/search?type=article&filter=type**${type}&sortby=${option}`;
+			search_data = $('.sort-search').find('input[name="q"]').val();
+            option_url = `/api/search?type=article&filter=type**${type}&q=${search_data}&sortby=${option}`;
             loadTopArticles(option_url);
         })
             
         $(document).ready(function(){
             option = $('.js-filter-load-page').val();
             type = $('.js-filter-load-page').data('type');
-            option_url = `/api/search?type=article&filter=type**${type}&sortby=${option}`;
+			search_data = $('.sort-search').find('input[name="q"]').val();
+            option_url = `/api/search?type=article&filter=type**${type}&q=${search_data}&sortby=${option}`;
             loadTopArticles(option_url);
         })
 
 		$('.sort-search').submit(function(e) {
 			e.preventDefault();
-			var search_data = $(this).find('input[name="q"]').val();
-			var search_url = `/api/search?type=article&filter=type**review&q=${search_data}`;
+			search_data = $(this).find('input[name="q"]').val();
+			option = $('.js-filter-load-page').val();
+			search_url = `/api/search?type=article&filter=type**review&q=${search_data}&sortby=${option}`;
 			loadTopArticles(search_url);
 		})
     </script>
