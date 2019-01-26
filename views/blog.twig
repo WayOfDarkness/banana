@@ -131,7 +131,7 @@
                                         </a>
                                     </article>`;
                         }
-                        pagination_html = `<div class="pagination" data-page_number="${html.paginate.current_page}" data-total="${html.paginate.total_pages}"></div>`;
+                        pagination_html = `<div class="pagination" data-page_number="${data.paginate.current_page}" data-total="${data.paginate.total_pages}"></div>`;
                         $('.filter-results').html(html);
                         $('.pagination__wrapper').html(pagination_html);
                         initPaginate(url);
