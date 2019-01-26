@@ -167,7 +167,7 @@ function showLogin() {
 
 // Click Sort Posts
 $('.js-filter-load-page').click(function (e) {
-  var sort_value = $(this).html();
+  var sort_value = $(this).data('title');
   var data_filter = $(this).data('filter');
   $(this).closest('.pod-header').find('.pod-header__item .pod-title h4').html(data_filter + ' ' + sort_value);
 })
@@ -342,8 +342,9 @@ function postChangePassword() {
 }
 
 function checkDateName(dateString) {
-  var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var days = ['Chủ nhật', 'Thứ hai', 'Thứ ba', 'Thứ tư', 'Thứ năm', 'Thứ sáu', 'Thứ bảy'];
   var d = new Date(dateString);
   var dateName = days[d.getDay()];
-  return dateName;
+  var result = `${dateName}, ${dateString}`;
+  return result;
 }

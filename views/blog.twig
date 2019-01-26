@@ -34,10 +34,10 @@
                                         </figure>
                                         <div class="media-body">
                                             <h3 class="media-title">
-                                                ${data.data[i].title.substring(0,100)}
+                                                ${data.data[i].title.substring(0,100)}...
                                             </h3>
                                             <p class="media-deck">
-                                                ${data.data[i].description.substring(0,170)}
+                                                ${data.data[i].description.substring(0,170)}...
                                             </p>
                                             <footer class="media-meta">
                                                 <time class="media-date">
@@ -243,8 +243,8 @@
                                         <dd class="pod-header__item pod-header__filters pod-header__filters--js no-flex">
                                             <div class="pod-header__filters--select">
                                                 <select name="sort" class="js-filter-load-page" data-filter="{{blog.title}}" data-type="{{type}}">
-                                                    <option value="created_at-desc" selected>Mới nhất</option>
-                                                    <option value="view-desc">Phổ biến nhất</option>
+                                                    <option value="created_at-desc" data-title="mới nhất" selected>Mới nhất</option>
+                                                    <option value="view-desc" data-title="phổ biến nhất">Phổ biến nhất</option>
                                                 </select>
                                             </div>
                                         </dd>

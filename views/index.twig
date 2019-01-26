@@ -45,14 +45,14 @@
                             </figure>
                             <div class="media-body">
                               <h3 class="media-title">
-                                ${html.data[i].title}
+                                ${html.data[i].title.substring(0,100)}...
                               </h3>
                               <p class="media-deck">
-                                ${html.data[i].description}
+                                ${html.data[i].description.substring(0,170)}...
                               </p>
                               <footer class="media-meta">
                                 <time class="media-date">
-                                  ${html.data[i].created_at}
+                                  ${checkDateName(html.data[i].created_at.split(' ')[0])}
                                 </time>
                               </footer>
                             </div>
@@ -133,14 +133,14 @@
                                 </figure>
                                 <div class="media-body">
                                   <h3 class="media-title">
-                                    ${html.data[i].title}
+                                    ${html.data[i].title.substring(0,100)}...
                                   </h3>
                                   <p class="media-deck">
-                                    ${html.data[i].description}
+                                    ${html.data[i].description.substring(0,170)}...
                                   </p>
                                   <footer class="media-meta">
                                     <time class="media-date">
-                                      ${html.data[i].created_at}
+                                      ${checkDateName(html.data[i].created_at.split(' ')[0])}
                                     </time>
                                   </footer>
                                 </div>
