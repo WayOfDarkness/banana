@@ -167,7 +167,7 @@ function showLogin() {
 
 // Click Sort Posts
 $('.js-filter-load-page').click(function (e) {
-  var sort_value = $(this).val();
+  var sort_value = $(this).html();
   var data_filter = $(this).data('filter');
   $(this).closest('.pod-header').find('.pod-header__item .pod-title h4').html(data_filter + ' ' + sort_value);
 })
