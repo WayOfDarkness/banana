@@ -34,10 +34,10 @@
                                     </figure>
                                     <div class="media-body">
                                         <h3 class="media-title">
-                                            ${data.data[i].title}
+                                            ${data.data[i].title.substring(0,100)}
                                         </h3>
                                         <p class="media-deck">
-                                            ${data.data[i].description}
+                                            ${data.data[i].description.substring(0,170)}
                                         </p>
                                         <footer class="media-meta">
                                             <time class="media-date">
@@ -117,10 +117,10 @@
                                         </figure>
                                         <div class="media-body">
                                             <h3 class="media-title">
-                                                ${data.data[i].title}
+                                                ${data.data[i].title.substring(0,100)}
                                             </h3>
                                             <p class="media-deck">
-                                                ${data.data[i].description}
+                                                ${data.data[i].description.substring(0,170)}
                                             </p>
                                             <footer class="media-meta">
                                                 <time class="media-date">
@@ -141,6 +141,13 @@
             }
         }
 
+        $('.js-filter-load-page').change(function(e) {
+            option = $(this).val();
+            type = $('.js-filter-load-page').data('type');
+            option_url = `/api/search?type=article&filter=type**${type}&sortby=${option}`;
+            loadTopArticles(option_url);
+        })
+            
         $(document).ready(function(){
             option = $('.js-filter-load-page').val();
             type = $('.js-filter-load-page').data('type');
