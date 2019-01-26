@@ -162,13 +162,21 @@
       sortby = '&sortby=' + sortbyValue ;
       url = '/api/search?type=article&filter=view>=0' + sortby;
       ajaxLoadFilter(url);
+
+      option = $('.js-filter-json').val();
+      option_url = `/api/search?type=article&filter=type**review&sortby=${option}`;
+      loadTopReviews(option_url);
     })
 
     $('.js-filter-json').change(function(e) {
       var option = $(this).val();
       var option_url = `/api/search?type=article&filter=type**review&sortby=${option}`;
+      loadTopReviews(option_url);
+    })
+
+    function loadTopReviews(url) {
       $.ajax({
-        url: option_url,
+        url: url,
         type: 'GET',
         success: function (data) {
           var html = '';
@@ -204,7 +212,7 @@
           $('.game--top-games').html(html);
         }
       });
-    })
+    }
 
     function pointSystem(point) {
       switch(point) {
