@@ -1732,7 +1732,9 @@ main {
   border:none !important;
 }
 .user-account input {
-  width: 100%;
+  width: 45%;
+  max-width: 200px;
+  margin-right: 1rem;
   background: white;
   border-bottom: 1px solid #818583;
   color: black;
@@ -1741,6 +1743,17 @@ main {
   min-width: 100%;
   margin: 60px 0 10px;
   flex-grow: 1;
+}
+.change-avatar {
+  max-width: 200px;
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin-right: 1rem;
+}
+#loadImg {
+  margin: 0px
 }
 .change-avatar img {
   width: 100%;
@@ -1850,7 +1863,13 @@ svg {
 .change-nickname-btn,
 .change-avatar-btn,
 .change-password-btn {
-  padding: 0.5rem 0px !important;
-  max-width: 300px;
+  padding: 0.25rem 0px !important;
+  max-width: 200px;
+  width: 45%;
   margin-bottom: 1rem;
+}
+.form-avatar {
+  max-width: 200px;
+  width: 45%;
+  margin-right: 1rem;
 }
