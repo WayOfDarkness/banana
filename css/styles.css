@@ -1740,7 +1740,7 @@ main {
 .user-account input {
   width: 45%;
   max-width: 200px;
-  margin-right: 1rem;
+  margin-right: 2rem;
   background: white;
   border-bottom: 1px solid #818583;
   color: black;
@@ -1754,7 +1754,6 @@ main {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
-  margin-right: 1rem;
 }
 #loadImg {
   margin: 0px
@@ -1874,7 +1873,7 @@ svg {
 .change-avatar .avatar {
   max-width: 200px;
   width: 45%;
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 
 .change-nickname {
@@ -1894,7 +1893,7 @@ svg {
   flex-wrap: wrap;
   width: 45%;
   max-width: 200px;
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 .collapse-change-assword input:last-child {
   margin-bottom: 0px;
