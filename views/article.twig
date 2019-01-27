@@ -468,8 +468,6 @@
 
                     <!-- ARTICLE RATING -->
                     {% set value = getCustomField(article.id, 'article', 'appreciation') %}
-                    a={{value[0] | json_encode}}
-                    b={{value[1] | json_encode}}
                     <div class="review-breakdown rating-overflow">
                       <div class="review-breakdown__inner">
                         <div class="container row">
