@@ -449,7 +449,7 @@
                   {% if article.type == 'review' %}
                     <!-- GAME INFOMATIONS AND REQUIREMENTS -->
                     a={{article.game | json_encode}}
-                    b={{article.game.requirement}}
+                    b={{article.game.requirement | raw}}
                     <div class="config-wrapper">
                       <ul class="config-tab-wrapper">
                         <a href="javascript:;" class="config-tab config-info active">Thông tin</a>
