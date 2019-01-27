@@ -1152,6 +1152,7 @@ body .expanded-menu-button {
   position: relative;
   border-left: 3px solid #2C7ABE;
   height: 35px;
+  top: 8px;
   cursor: pointer;
   padding: 5px;
   padding-right: 1rem;
@@ -1820,4 +1821,6 @@ svg {
 }
 .icon-expanded {
   background: none;
+}
+.page-user-account .layout-container {
 }
