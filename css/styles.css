@@ -1882,15 +1882,20 @@ svg {
 
 }
 .collapse-change-assword button {
-
+  margin: 0px;
 }
 .collapse-change-assword > div  {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
+  width: 45%;
+  max-width: 200px;
   margin-right: 1rem;
+}
+.collapse-change-assword input:last-child {
+  margin-bottom: 0px;
 }
 .collapse-change-assword input {
   max-width: 100%;
   width: 100%;
+  margin-right: 0;
 }
