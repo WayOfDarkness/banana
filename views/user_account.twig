@@ -1,20 +1,110 @@
 {% extends "layout.twig" %}
 
 {% block pre_include %}
-  <title>{{ blog.title }}</title>
-  <title>Tạo lại mật khẩu</title>
-  <link rel="stylesheet" href="{{ theme.uri }}/css/create-password.css">
+  <title>Tài khoản</title>
+  <link rel="stylesheet" href="{{theme.uri}}/css/create-password.css">
 {% endblock %}
 
+{% block post_include %}
+  <script>
+
+    function isShowChangePassword(boolean) {
+        if(boolean)
+          $('.collapse-change-assword').removeClass('d-none');
+        else
+          $('.collapse-change-assword').addClass('d-none');
+      }
+
+    $(".change-password-btn").click(function () {
+      var newPassConfirm = $("#re-new-password").val();
+      var data = {
+          old_password: $("#old-password").val(),
+          new_password: $("#new-password").val(),
+      };
+
+      if (!data.old_password) {
+          $("#old-password").addClass('has-error');
+          toast('Vui lòng nhập mật khẩu hiện tại', 3000, error_color);
+          return;
+      } else {
+          $("#old-password").removeClass('has-error');
+      }
+
+      if (!data.new_password) {
+          $("#new-password").addClass('has-error');
+          toast('Vui lòng nhập mật khẩu mới', 3000, error_color);
+          return;
+      } else {
+          $("#new-password").removeClass('has-error');
+      }
+
+      if (data.new_password != newPassConfirm) {
+          $("#re-new-password").addClass('has-error');
+          toast('Mật khẩu không trùng khớp', 3000, error_color);
+          return;
+      } else {
+          $("#re-new-password").removeClass('has-error');
+      }
+
+      $.ajax({
+          url: "/api/changePassword",
+          type: "POST",
+          data: data,
+          success: function (result) {
+              if (!result.code) {
+                  toast(result.message, 3000, error_color);
+                  $('#re-new-password').removeClass('has-error');
+                  $('#new-password').removeClass('has-error');
+                  $('#old-password').removeClass('has-error');
+                  location.href = "/";
+              } else {
+                  toast(result.message, 3000, error_color);
+                  $('#old-password').addClass('has-error');
+              }
+          }
+      });
+    })
+
+    $(".update-info").click(function () {
+
+          var data = {
+              email: $("#user_email").html(),
+              name: $(".change-nickname input").val()
+          };
+
+          if (!data.name) {
+              $(".change-nickname input").addClass('has-error');
+              toast('Vui lòng nhập tên tài khoản', 3000, error_color);
+              return;
+          } else {
+              $(".change-nickname input").removeClass('has-error');
+          }
+
+          $.ajax({
+              url: "/api/changeInformation",
+              type: "POST",
+              data: data,
+              success: function (result) {
+                  if (!result.code) {
+                      toast('Thay đổi thông tin thành công', 3000, success_color);
+                      window.location.reload();
+                  } else {
+                      toast(result.message, 3000, error_color);
+                  }
+              }
+          });
+      }
+    });
+  </script>
+{% endblock %}
 
 {% block content %}
-
 
   <div class="user-account">
     <div class="user-account-wrapper">
       <div class="change-nickname">
         <p>Nickname của bạn là: </p>
-        <input type="text" value="{{ customer.name }}" style="border-color: #2C7ABE">
+        <input type="text" value="{{customer.name}}" style="border-color: #2C7ABE">
       </div>
       <div class="change-avatar">
         <p>Cập nhật avatar: <span class="avatar-name"></span></p>
@@ -41,31 +131,19 @@
                   <button class="full-width effect-hover-1" onclick="isShowChangePassword(false)">Đóng</button>
                 </div>
                 <div class="col-6">
-                  <button class="full-width effect-hover-1" onclick="changePassword()">Đổi mật khẩu</button>
+                  <button class="change-password-btn full-width effect-hover-1">Đổi mật khẩu</button>
                 </div>
               </div>
             </div>
-            <script>
-              function isShowChangePassword(boolean) {
-                if(boolean)
-                  $('.collapse-change-assword').removeClass('d-none');
-                else
-                  $('.collapse-change-assword').addClass('d-none');
-              }
-              function changePassword() {}
-            </script>
           </div>
         </div>
       </div>
-      <button class="update-info" onclick="updateInfo()">Cập nhật thông tin</button>
+      <button class="update-info">Cập nhật thông tin</button>
     </div>
   </div>
+  <input type="hidden" id="user_email" value="{{customer.email}}"/>
 
   <script>
-    function updateInfo() {
-
-    }
-
     function checkInputImg() {
       let _filename = $('.change-avatar input').val();
       console.log(_filename);
@@ -79,7 +157,3 @@
   </script>
 
 {% endblock content %}
-
-{% block post_include %}
-
-{% endblock %}
