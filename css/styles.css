@@ -1796,4 +1796,6 @@ main {
 }
 .icon-search {
   background: none;
+  display: block;
+  fill: #2c7abe;
 }
