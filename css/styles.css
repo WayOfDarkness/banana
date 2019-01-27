@@ -1812,3 +1812,12 @@ svg {
   background: none;
   fill: #141517;
 }
+
+.icon-expanded svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+.icon-expanded {
+  background: none;
+}
