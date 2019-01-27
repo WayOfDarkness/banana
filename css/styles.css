@@ -1909,8 +1909,8 @@ svg {
   text-align: center;
   font-size: 1.3rem;
 }
-author-footer-info ul,
-author-footer-info li {
+.author-footer-info ul,
+.author-footer-info li {
   text-align: left;
   display: inline-block;
   margin: auto;
