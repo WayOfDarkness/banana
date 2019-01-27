@@ -1881,6 +1881,16 @@ svg {
 .change-nickname {
 
 }
+.collapse-change-assword button {
+
+}
+.collapse-change-assword > div  {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 1rem;
+}
 .collapse-change-assword input {
+  max-width: 100%;
   width: 100%;
 }
