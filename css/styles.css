@@ -376,6 +376,7 @@ a.text-block {
   margin-bottom: 5px !important;
   line-height: 36px;
   font-size: 1rem;
+  text-transform: uppercase !important;
 }
 
 .page-article .tag-block {
