@@ -445,25 +445,22 @@
                       {% endif %}
                     </div>
                   </div>
-
+                  
                   {% if article.type == 'review' %}
                     <!-- GAME INFOMATIONS AND REQUIREMENTS -->
-                    a={{article | json_encode}}
                     <div class="config-wrapper">
                       <ul class="config-tab-wrapper">
                         <a href="javascript:;" class="config-tab config-info active">Thông tin</a>
                         <a href="javascript:;" class="config-tab config-req">Cấu hình</a>
                       </ul>
-                     a {{article.game.requirememt | raw}}
                       <div class="author-footer config-footer config-info-area clearfix">
                         <div class="author-footer-info">
                           {{article.game.infomation | raw}}
                         </div>
                       </div>
-                    b  {{article.game.requirememt | raw}}
                       <div class="author-footer config-footer config-req-area d-none clearfix">
                         <div class="author-footer-info">
-                          {{article.game.requirememt | raw}}
+                          {{article.game.requirement | raw}}
                         </div>
                       </div>
                     </div>
