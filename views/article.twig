@@ -454,14 +454,16 @@
                         <a href="javascript:;" class="config-tab config-info active">Thông tin</a>
                         <a href="javascript:;" class="config-tab config-req">Cấu hình</a>
                       </ul>
+                     a {{article.game.requirememt | raw}}
                       <div class="author-footer config-footer config-info-area clearfix">
                         <div class="author-footer-info">
                           {{article.game.infomation | raw}}
                         </div>
                       </div>
+                    b  {{article.game.requirememt | raw}}
                       <div class="author-footer config-footer config-req-area d-none clearfix">
                         <div class="author-footer-info">
-                          {{article.game.requirememt}}
+                          {{article.game.requirememt | raw}}
                         </div>
                       </div>
                     </div>
