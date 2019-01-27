@@ -170,7 +170,7 @@
               success: function (json) {
                   console.log(json.data);
                   var html = '/uploads/' + json.data;
-                  $('.avata').html(`<img src="${html}" id="avatarImg">`);
+                  $('.form-avatar').html(`<img src="${html}" id="avatarImg">`);
               }
           });
         }
@@ -188,7 +188,7 @@
         <input type="text" value="{{customer.name}}" style="border-color: #2C7ABE">
       </div>
       <div class="change-avatar">
-        <div class="avata col-6">
+        <div class="avata">
           <form class="form-avatar" enctype="multipart/form-data">
               <input id="upload-image-avatar" type="file" name="upload[]" multiple="multiple" accept="image/*" class="upload-image">
               {% if customer.avatar %}
@@ -198,7 +198,7 @@
               {% endif %}
           </form>
         </div>
-        <a href="javascript:void(0);" class="txt_color_1 col-6" id="loadImg">Tải ảnh của bạn</a>
+        <a href="javascript:void(0);" class="txt_color_1" id="loadImg">Cập nhật ảnh đại diện của bạn</a>
       </div>
       <div class="change-password">
         <div class="modal-change-password">
