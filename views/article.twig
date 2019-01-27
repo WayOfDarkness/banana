@@ -445,10 +445,8 @@
                       {% endif %}
                     </div>
                   </div>
-d {{article.game | json_encode}}
-e {{article.game.requirememt | raw}}
+                  
                   {% if article.type == 'review' %}
-                 c {{article.game.requirememt | raw}}
                     <!-- GAME INFOMATIONS AND REQUIREMENTS -->
                     <div class="config-wrapper">
                       <ul class="config-tab-wrapper">
@@ -462,7 +460,7 @@ e {{article.game.requirememt | raw}}
                       </div>
                       <div class="author-footer config-footer config-req-area d-none clearfix">
                         <div class="author-footer-info">
-                          {{article.game.requirememt | raw}}
+                          {{article.game.requirement | raw}}
                         </div>
                       </div>
                     </div>
