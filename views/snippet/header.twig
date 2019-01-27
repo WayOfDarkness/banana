@@ -256,7 +256,10 @@
         </div>
       </div>
 
-      {% if not customer.logged_in %}
+      {% if customer.logged_in %}
+        <a onclick="/user_account" class="user-account-page text-orange border">Trang cá nhân</a>
+        <a class="text-orange border" href="/api/signout">Đăng xuất</a>
+      {% else %}
         <div class="hamburger-bottom">
           <div id="toolbar-item-lightswitch">&nbsp;</div>
           <div class="user-menu user-loggedout main-nav">
@@ -269,5 +272,4 @@
       {% endif %}
     </div>
   </div>
-</div>
 </div>
