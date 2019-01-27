@@ -222,7 +222,7 @@
     margin: 0;
   }
   .page-article .ds-wrapper > * {
-    width: 100%;
+    width: 100% !important;
   }
   .text-block {
     margin-right: 5px;
