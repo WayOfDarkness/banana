@@ -1750,6 +1750,9 @@ main {
   margin: 60px 0 10px;
   flex-grow: 1;
 }
+.user-account .has-error {
+  border-color: #E74C3C;
+}
 .change-avatar {
   display: flex;
   flex-wrap: wrap;
