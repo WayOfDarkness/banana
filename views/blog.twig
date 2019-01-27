@@ -184,7 +184,11 @@
                         <a href="{{featured_post.url}}" class="promo--object promo--offset-wide promo-type--overlay">
                             <div class="promo--image">
                                 <div class="content">
-                                    <img src="{{featured_post.image | upload_url}}" alt="{{featured_post.title}}" title="{{featured_post.title}}"/>
+                                    {% if featured_post.image %}
+                                        <img src="{{featured_post.image | upload_url}}" alt="{{featured_post.title}}" title="{{featured_post.title}}"/>
+                                    {% else %}
+                                        <img src="{{settings.sub_img | upload_url}}" alt="{{featured_post.title}}" title="{{featured_post.title}}"/>
+                                    {% endif %}  
                                 </div>
                             </div>
                             <div>
@@ -206,7 +210,11 @@
                                             <a href="{{post.url}}">
                                                 <figure class="media-figure">
                                                     <div class="media-img">
-                                                        <img src="{{post.image | upload_url}}" alt="{{post.title}}" title="{{post.title}}"/>
+                                                        {% if post.image %}
+                                                            <img src="{{post.image | upload_url}}" alt="{{post.title}}" title="{{post.title}}"/>
+                                                        {% else %}
+                                                            <img src="{{settings.sub_img | upload_url}}" alt="{{post.title}}" title="{{post.title}}"/>
+                                                        {% endif %} 
                                                     </div>
                                                     <span class="content-type hide-mobile content-symbol--medium"></span>
                                                     <div class="media-type media-type--right">

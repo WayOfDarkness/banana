@@ -7,7 +7,11 @@
 					<a href="{{post.url}}">
 						<figure class="media-figure">
 							<div class="media-img">
-								<img src="{{post.image | resize (640) | upload_url}}" alt="{{post.title}}" title="{{post.title}}"/>
+								{% if post.image %}
+                                    <img src="{{post.image | resize (640) | upload_url}}" alt="{{post.title}}" title="{{post.title}}"/>
+                                {% else %}
+									<img src="{{settings.sub_img | resize (640) | upload_url}}" alt="{{post.title}}" title="{{post.title}}"/>
+                                {% endif %}
 								<div class="type-of-article {{post.type}}">
 									<img class="news" src="{{theme.uri}}/img/icon-article-news.png" alt="type-of-article" width="50px">
 									<img class="review" src="{{theme.uri}}/img/icon-article-review.png" alt="type-of-article" width="50px">

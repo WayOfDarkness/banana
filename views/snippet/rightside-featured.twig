@@ -14,7 +14,11 @@
                     <a href="{{item.url}}">
                         <figure class="media-figure media-figure--has-rhythm">
                             <div class="media-img imgflare--river">
-                                <img src="{{item.image | upload_url}}" alt="{{item.title}}"/>
+                                {% if item.image %}
+                                    <img src="{{item.image | upload_url}}" alt="{{item.title}}"/>
+                                {% else %}
+                                    <img src="{{settings.sub_img | upload_url}}" alt="{{item.title}}"/>
+                                {% endif %}
                             </div>
                         </figure>
                         <div class="media-body">

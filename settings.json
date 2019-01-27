@@ -99,27 +99,24 @@
       "id": "custom",
       "groups": [
         {
-          "title": "Nhà vận chuyểnnn",
+          "title": "404",
           "attributes": [
             {
-              "label": "Tiêu đề 1",
-              "type": "text",
-              "name": "nvc_title_1"
-            },
+              "label": "Hình ảnh",
+              "type": "image",
+              "name": "error_img",
+              "size": "300x300"
+            }
+          ]
+        },
+        {
+          "title": "Hình thay thế",
+          "attributes": [
             {
-              "label": "Mô tả",
-              "type": "text",
-              "name": "nvc_desc_1"
-            },
-            {
-              "label": "Tiêu đề 2",
-              "type": "text",
-              "name": "nvc_title_2"
-            },
-            {
-              "label": "Mô tả ",
-              "type": "text",
-              "name": "nvc_desc_2"
+              "label": "Hình ảnh",
+              "type": "image",
+              "name": "sub_img",
+              "size": "300x300"
             }
           ]
         }

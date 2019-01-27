@@ -4,7 +4,11 @@
 		<a href="{{featured_post.url}}" class="promo--object promo--offset-wide promo-type--overlay">
 			<div class="promo--image">
 				<div class="content">
-					<img src="{{featured_post.image | upload_url}}" alt="{{featured_post.title}}" title="{{featured_post.title}}"/>
+					{% if featured_post.image %}
+						<img src="{{featured_post.image | upload_url}}" alt="{{featured_post.title}}" title="{{featured_post.title}}"/>
+					{% else %}
+						<img src="{{settings.sub_img | upload_url}}" alt="{{featured_post.title}}" title="{{featured_post.title}}"/>
+					{% endif %}
 					<div class="type-of-article {{featured_post.type}}">
 						<img class="news" src="{{theme.uri}}/img/icon-article-news.png" alt="type-of-article" width="50px">
 						<img class="review" src="{{theme.uri}}/img/icon-article-review.png" alt="type-of-article" width="50px">
