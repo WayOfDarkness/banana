@@ -6,7 +6,7 @@
   }
 
   #login {
-    display: none;
+    display: none !important;
   }
 
   .isLoginSuccess.mobile .user-name img {
