@@ -1794,3 +1794,6 @@ main {
 .page-article .social-share-button .social-icon {
   background: none !important;
 }
+.icon-search {
+  background: none;
+}
