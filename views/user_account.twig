@@ -9,11 +9,11 @@
   <script>
 
     function isShowChangePassword(boolean) {
-        if (boolean)
-          $('.collapse-change-assword').removeClass('d-none');
-        else
-          $('.collapse-change-assword').addClass('d-none');
-      }
+      if (boolean)
+        $('.collapse-change-assword').removeClass('d-none');
+      else
+        $('.collapse-change-assword').addClass('d-none');
+    }
 
     $(".change-password-btn").click(function () {
       var newPassConfirm = $("#re-new-password").val();
@@ -56,7 +56,9 @@
                   $('#re-new-password').removeClass('has-error');
                   $('#new-password').removeClass('has-error');
                   $('#old-password').removeClass('has-error');
-                  location.href = "/";
+                  setTimeout(function() {
+                    location.href = "/";
+                  }, 3000); 
               } else {
                   toast(result.message, 3000, error_color);
                   $('#old-password').addClass('has-error');
@@ -66,41 +68,41 @@
     })
 
     $(".update-info").click(function () {
+      var data = {
+          email: $("#user_email").val(),
+          name: $(".change-nickname input").val()
+      };
 
-          var data = {
-              email: $("#user_email").html(),
-              name: $(".change-nickname input").val()
-          };
-
-          if (!data.name) {
-              $(".change-nickname input").addClass('has-error');
-              toast('Vui lòng nhập tên tài khoản', 3000, error_color);
-              return;
-          } else {
-              $(".change-nickname input").removeClass('has-error');
-          }
-
-          $.ajax({
-              url: "/api/changeInformation",
-              type: "POST",
-              data: data,
-              success: function (result) {
-                  if (!result.code) {
-                      toast('Thay đổi thông tin thành công', 3000, success_color);
-                      window.location.reload();
-                  } else {
-                      toast(result.message, 3000, error_color);
-                  }
-              }
-          });
+      if (!data.name) {
+          $(".change-nickname input").addClass('has-error');
+          toast('Vui lòng nhập tên tài khoản', 3000, error_color);
+          return;
+      } else {
+          $(".change-nickname input").removeClass('has-error');
       }
+
+      $.ajax({
+          url: "/api/changeInformation",
+          type: "POST",
+          data: data,
+          success: function (result) {
+              if (!result.code) {
+                  toast('Thay đổi thông tin thành công', 3000, success_color);
+                  setTimeout(function() {
+                    window.location.reload();
+                  }, 3000); 
+              } else {
+                  toast(result.message, 3000, error_color);
+              }
+          }
+      });
     });
 
     $(function () {
-        $("#loadImg").on('click', function (e) {
-            e.preventDefault();
-            $("#upload-image-avatar:hidden").trigger('click');
-        });
+      $("#loadImg").on('click', function (e) {
+          e.preventDefault();
+          $("#upload-image-avatar:hidden").trigger('click');
+      });
     });
 
     function checkInputImg() {
