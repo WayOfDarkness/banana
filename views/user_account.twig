@@ -168,7 +168,6 @@
               contentType: false,
               processData: false,
               success: function (json) {
-                  console.log(json.data);
                   var html = '/uploads/' + json.data;
                   $('.form-avatar').html(`<img src="${html}" id="avatarImg">`);
               }
