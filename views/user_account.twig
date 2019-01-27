@@ -3,6 +3,18 @@
 {% block pre_include %}
   <title>Tài khoản</title>
   <link rel="stylesheet" href="{{theme.uri}}/css/create-password.css">
+  <style>
+      #upload-image-avatar {
+        display: none;
+      }
+
+      #avatarImg {
+        width: 60px;
+        height: 60px;
+        padding: 5px;
+        border-radius: 5px;
+      }
+  </style>
 {% endblock %}
 
 {% block post_include %}
@@ -105,7 +117,7 @@
       });
     });
 
-    function checkInputImg() {
+    {# function checkInputImg() {
       let _filename = $('.change-avatar input').val();
       console.log(_filename);
       if (_filename) {
@@ -114,7 +126,7 @@
         $('.change-avatar input').removeClass('selected');
       }
       $('.change-avatar .avatar-name').html(_filename);
-    }
+    } #}
 
     function checkExtImage(image) {
         var ext = image.split('.').pop().toLowerCase();
@@ -172,8 +184,17 @@
         <input type="text" value="{{customer.name}}" style="border-color: #2C7ABE">
       </div>
       <div class="change-avatar">
-        <p>Cập nhật avatar: <span class="avatar-name"></span></p>
-        <input type="file" id="loadImg" onchange="checkInputImg()">
+        <div class="avata">
+          <form class="form-avatar" enctype="multipart/form-data">
+              <input id="upload-image-avatar" type="file" name="upload[]" multiple="multiple" accept="image/*" class="upload-image">
+              {% if customer.avatar %}
+                  <img src="{{customer.avatar}}" id="avatarImg">
+              {% else %}
+                  <img src="{{theme.uri}}/img/avatar-default.png" id="avatarImg">
+              {% endif %}
+          </form>
+        </div>
+        <a href="javascript:void(0);" class="txt_color_1" id="loadImg">Tải ảnh của bạn</a>
       </div>
       <div class="change-password">
         <div class="modal-change-password">
