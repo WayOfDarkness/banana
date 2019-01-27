@@ -125,7 +125,7 @@
                           <div class="social-share-button">
                             <a onclick="checkUpvote()" class="have-number">
                               <div class="social-icon upvote">
-                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                <svg fill="#656565" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                    width="456.814px" height="456.814px" viewBox="0 0 456.814 456.814" style="enable-background:new 0 0 456.814 456.814;"
                                    xml:space="preserve">
 <g>
@@ -191,7 +191,7 @@
                           <div class="social-share-button">
                             <a onclick="checkDownvote()" class="have-number">
                               <div class="social-icon downvote" >
-                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                <svg fill="#656565" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                      width="456.824px" height="456.824px" viewBox="0 0 456.824 456.824" style="enable-background:new 0 0 456.824 456.824;"
                                      xml:space="preserve">
 <g>
@@ -256,8 +256,8 @@
                           </div>
                           <div class="social-share-button">
                             <a href="https://www.facebook.com/sharer/sharer.php?u={{article.url}}" target="_blank">
-                              <div  class="social-icon share">
-                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                              <div class="social-icon share">
+                                <svg fill="#656565" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                      viewBox="0 0 525.152 525.152" style="enable-background:new 0 0 525.152 525.152;" xml:space="preserve">
 <g>
   <path d="M420.735,371.217c-20.021,0-37.942,7.855-51.596,20.24L181.112,282.094c1.357-6.061,2.407-12.166,2.407-18.468
@@ -305,7 +305,7 @@
                           <div class="social-share-button">
                             <a>
                               <div class="social-icon bookmark" >
-                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                <svg fill="#656565" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                      width="431.972px" height="431.972px" viewBox="0 0 431.972 431.972" style="enable-background:new 0 0 431.972 431.972;"
                                      xml:space="preserve">
 <g>
@@ -353,7 +353,7 @@
                           <div class="social-share-button">
                             <a onclick="clickComment()" class="have-number">
                               <div class="social-icon comment">
-                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                <svg fill="#656565" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                      width="510px" height="510px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve">
 <g>
   <g id="messenger">
@@ -447,7 +447,7 @@
                   </div>
 
                   {% if article.type == 'review' %}
-
+                    {% set game = Game (article.game) %}
                     <!-- GAME INFOMATIONS AND REQUIREMENTS -->
                     <div class="config-wrapper">
                       <ul class="config-tab-wrapper">
@@ -456,7 +456,7 @@
                       </ul>
                       <div class="author-footer config-footer config-info-area clearfix">
                         <div class="author-footer-info">
-                          {{game.description}}
+                          {{game.infomation}}
                         </div>
                       </div>
                       <div class="author-footer config-footer config-req-area d-none clearfix">
