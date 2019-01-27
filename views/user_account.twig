@@ -188,7 +188,7 @@
         <button class="change-nickname-btn effect-hover-1">Cập nhập nickname</button>
       </div>
       <div class="change-avatar">
-        <div class="avata">
+        <div class="avatar">
           <form class="form-avatar" enctype="multipart/form-data">
               <input id="upload-image-avatar" type="file" name="upload[]" multiple="multiple" accept="image/*" class="upload-image">
               {% if customer.avatar %}
@@ -203,24 +203,12 @@
       <div class="change-password">
         <div class="modal-change-password">
           <div class="content-modal">
-            <button class="change-password-btn text-blue text-center text-bold effect-hover-1"
-                    style="margin: 2rem auto;background: white;border: 1px solid #2c7abe; padding: 0.5rem 0 !important;"
-                    onclick="isShowChangePassword(true)">
-              Đổi mật khẩu
-            </button>
-            <div class="collapse-change-assword d-none">
+            <div class="collapse-change-assword">
               <input type="password" id="old-password" placeholder="Nhập mật khẩu cũ">
               <input type="password" id="new-password" placeholder="Nhập mật khẩu mới">
               <input type="password" id="re-new-password" placeholder="Nhập lại mật khẩu mới">
+              <button class="change-password-btn full-width effect-hover-1">Đổi mật khẩu</button>
               <p class="modal-change-password-error d-none">Error here</p>
-              <div class="modal-password-footer">
-                <div class="col-6">
-                  <button class="full-width effect-hover-1" onclick="isShowChangePassword(false)">Đóng</button>
-                </div>
-                <div class="col-6">
-                  <button class="change-password-btn full-width effect-hover-1">Đổi mật khẩu</button>
-                </div>
-              </div>
             </div>
           </div>
         </div>

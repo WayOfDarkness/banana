@@ -1720,6 +1720,12 @@ main {
   font-weight: bold;
   color: #2c7abe;
 }
+.user-account-wrapper > * {
+  padding: 0.5rem 1rem;
+  background: #F7F7F7;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
 .user-account-wrapper {
   max-width: 600px;
   margin:auto;
@@ -1745,8 +1751,6 @@ main {
   flex-grow: 1;
 }
 .change-avatar {
-  max-width: 200px;
-  width: 45%;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
@@ -1868,8 +1872,15 @@ svg {
   width: 45%;
   margin-bottom: 1rem;
 }
-.form-avatar {
+.change-avatar .avatar {
   max-width: 200px;
   width: 45%;
   margin-right: 1rem;
+}
+
+.change-nickname {
+
+}
+.collapse-change-assword input {
+  width: 100%;
 }
