@@ -2,22 +2,22 @@
 
 {% block pre_include %}
   <title>Tài khoản</title>
-  <link rel="stylesheet" href="{{theme.uri}}/css/create-password.css">
+  <link rel="stylesheet" href="{{ theme.uri }}/css/create-password.css">
   <style>
-      #upload-image-avatar {
-        display: none;
-      }
+    #upload-image-avatar {
+      display: none;
+    }
 
-      #avatarImg {
-        width: 60px;
-        height: 60px;
-        padding: 5px;
-        border-radius: 5px;
-      }
+    #avatarImg {
+      width: 60px;
+      height: 60px;
+      padding: 5px;
+      border-radius: 5px;
+    }
 
-      #loadImg {
+    #loadImg {
 
-      }
+    }
   </style>
 {% endblock %}
 
@@ -34,90 +34,90 @@
     $(".change-password-btn").click(function () {
       var newPassConfirm = $("#re-new-password").val();
       var data = {
-          old_password: $("#old-password").val(),
-          new_password: $("#new-password").val(),
+        old_password: $("#old-password").val(),
+        new_password: $("#new-password").val(),
       };
 
       if (!data.old_password) {
-          $("#old-password").addClass('has-error');
-          toast('Vui lòng nhập mật khẩu hiện tại', 3000, error_color);
-          return;
+        $("#old-password").addClass('has-error');
+        toast('Vui lòng nhập mật khẩu hiện tại', 3000, error_color);
+        return;
       } else {
-          $("#old-password").removeClass('has-error');
+        $("#old-password").removeClass('has-error');
       }
 
       if (!data.new_password) {
-          $("#new-password").addClass('has-error');
-          toast('Vui lòng nhập mật khẩu mới', 3000, error_color);
-          return;
+        $("#new-password").addClass('has-error');
+        toast('Vui lòng nhập mật khẩu mới', 3000, error_color);
+        return;
       } else {
-          $("#new-password").removeClass('has-error');
+        $("#new-password").removeClass('has-error');
       }
 
       if (data.new_password != newPassConfirm) {
-          $("#re-new-password").addClass('has-error');
-          toast('Mật khẩu không trùng khớp', 3000, error_color);
-          return;
+        $("#re-new-password").addClass('has-error');
+        toast('Mật khẩu không trùng khớp', 3000, error_color);
+        return;
       } else {
-          $("#re-new-password").removeClass('has-error');
+        $("#re-new-password").removeClass('has-error');
       }
 
       $.ajax({
-          url: "/api/changePassword",
-          type: "POST",
-          data: data,
-          success: function (result) {
-              if (!result.code) {
-                  toast(result.message, 3000, error_color);
-                  $('#re-new-password').removeClass('has-error');
-                  $('#new-password').removeClass('has-error');
-                  $('#old-password').removeClass('has-error');
-                  setTimeout(function() {
-                    location.href = "/";
-                  }, 3000); 
-              } else {
-                  toast(result.message, 3000, error_color);
-                  $('#old-password').addClass('has-error');
-              }
+        url: "/api/changePassword",
+        type: "POST",
+        data: data,
+        success: function (result) {
+          if (!result.code) {
+            toast(result.message, 3000, error_color);
+            $('#re-new-password').removeClass('has-error');
+            $('#new-password').removeClass('has-error');
+            $('#old-password').removeClass('has-error');
+            setTimeout(function () {
+              location.href = "/";
+            }, 3000);
+          } else {
+            toast(result.message, 3000, error_color);
+            $('#old-password').addClass('has-error');
           }
+        }
       });
     })
 
     $(".update-info").click(function () {
       var data = {
-          email: $("#user_email").val(),
-          name: $(".change-nickname input").val()
+        email: $("#user_email").val(),
+        name: $(".change-nickname input").val()
       };
 
       if (!data.name) {
-          $(".change-nickname input").addClass('has-error');
-          toast('Vui lòng nhập tên tài khoản', 3000, error_color);
-          return;
+        $(".change-nickname input").addClass('has-error');
+        toast('Vui lòng nhập tên tài khoản', 3000, error_color);
+        return;
       } else {
-          $(".change-nickname input").removeClass('has-error');
+        $(".change-nickname input").removeClass('has-error');
       }
 
       $.ajax({
-          url: "/api/changeInformation",
-          type: "POST",
-          data: data,
-          success: function (result) {
-              if (!result.code) {
-                  toast('Thay đổi thông tin thành công', 3000, success_color);
-                  setTimeout(function() {
-                    window.location.reload();
-                  }, 3000); 
-              } else {
-                  toast(result.message, 3000, error_color);
-              }
+        url: "/api/changeInformation",
+        type: "POST",
+        data: data,
+        success: function (result) {
+          if (!result.code) {
+            toast('Thay đổi thông tin thành công', 3000, success_color);
+            setTimeout(function () {
+              window.location.reload();
+            }, 3000);
+          } else {
+            toast(result.message, 3000, error_color);
           }
+        }
       });
     });
 
     $(function () {
       $("#loadImg").on('click', function (e) {
-          e.preventDefault();
-          $("#upload-image-avatar:hidden").trigger('click');
+        e.preventDefault();
+        $("#upload-image-avatar:hidden").trigger('click');
       });
     });
 
@@ -133,47 +133,47 @@
     } #}
 
     function checkExtImage(image) {
-        var ext = image.split('.').pop().toLowerCase();
-        if ($.inArray(ext, [
-            'png',
-            'jpg',
-            'jpeg',
-            'gif',
-            'svg',
-            'ico'
-        ]) == -1) {
-            toastr.error('Vui lòng chọn đúng định dạng hình ảnh');
-            return 0;
-        }
-        return 1;
+      var ext = image.split('.').pop().toLowerCase();
+      if ($.inArray(ext, [
+        'png',
+        'jpg',
+        'jpeg',
+        'gif',
+        'svg',
+        'ico'
+      ]) == -1) {
+        toastr.error('Vui lòng chọn đúng định dạng hình ảnh');
+        return 0;
+      }
+      return 1;
     }
 
     $(document).on('change', '#upload-image-avatar', function () {
-        var self = $(this);
-        if ($(this).val()) {
-          var form = $('.form-avatar');
-          var formData = new FormData(form[0]);
-          for (var value of formData.values()) {
-            if (!checkExtImage(value.name)) {
-              form.removeClass('disabled');
-              return;
-            }
+      var self = $(this);
+      if ($(this).val()) {
+        var form = $('.form-avatar');
+        var formData = new FormData(form[0]);
+        for (var value of formData.values()) {
+          if (!checkExtImage(value.name)) {
+            form.removeClass('disabled');
+            return;
           }
-
-          $.ajax({
-              type: 'POST',
-              url: '/api/uploadAvatar',
-              data: formData,
-              cache: false,
-              contentType: false,
-              processData: false,
-              success: function (json) {
-                  var html = '/uploads/' + json.data;
-                  $('.form-avatar').html(`<img src="${html}" id="avatarImg">`);
-              }
-          });
         }
-        $(this).val("");
+
+        $.ajax({
+          type: 'POST',
+          url: '/api/uploadAvatar',
+          data: formData,
+          cache: false,
+          contentType: false,
+          processData: false,
+          success: function (json) {
+            var html = '/uploads/' + json.data;
+            $('.form-avatar').html(`<img src="${html}" id="avatarImg">`);
+          }
+        });
+      }
+      $(this).val("");
     });
   </script>
 {% endblock %}
@@ -184,29 +184,33 @@
     <div class="user-account-wrapper">
       <div class="change-nickname">
         <p>Nickname của bạn là: </p>
-        <input type="text" value="{{customer.name}}" style="border-color: #2C7ABE">
+        <input type="text" value="{{ customer.name }}" style="border-color: #2C7ABE">
         <button class="change-nickname-btn effect-hover-1">Cập nhập nickname</button>
       </div>
       <div class="change-avatar">
         <div class="avatar">
           <form class="form-avatar" enctype="multipart/form-data">
-              <input id="upload-image-avatar" type="file" name="upload[]" multiple="multiple" accept="image/*" class="upload-image">
-              {% if customer.avatar %}
-                  <img src="{{customer.avatar | upload_url}}" id="avatarImg">
-              {% else %}
-                  <img src="{{theme.uri}}/img/avatar-default.png" id="avatarImg">
-              {% endif %}
+            <input id="upload-image-avatar" type="file" name="upload[]" multiple="multiple" accept="image/*"
+                   class="upload-image">
+            {% if customer.avatar %}
+              <img src="{{ customer.avatar | upload_url }}" id="avatarImg">
+            {% else %}
+              <img src="{{ theme.uri }}/img/avatar-default.png" id="avatarImg">
+            {% endif %}
           </form>
         </div>
-        <button id="loadImg" class="txt_color_1 change-avatar-btn full-width effect-hover-1">Cập nhập ảnh đại diện</button>
+        <button id="loadImg" class="txt_color_1 change-avatar-btn full-width effect-hover-1">Cập nhập ảnh đại diện
+        </button>
       </div>
       <div class="change-password">
         <div class="modal-change-password">
           <div class="content-modal">
             <div class="collapse-change-assword">
-              <input type="password" id="old-password" placeholder="Nhập mật khẩu cũ">
-              <input type="password" id="new-password" placeholder="Nhập mật khẩu mới">
-              <input type="password" id="re-new-password" placeholder="Nhập lại mật khẩu mới">
+              <div>
+                <input type="password" id="old-password" placeholder="Nhập mật khẩu cũ">
+                <input type="password" id="new-password" placeholder="Nhập mật khẩu mới">
+                <input type="password" id="re-new-password" placeholder="Nhập lại mật khẩu mới">
+              </div>
               <button class="change-password-btn full-width effect-hover-1">Đổi mật khẩu</button>
               <p class="modal-change-password-error d-none">Error here</p>
             </div>
@@ -216,5 +220,5 @@
       <button class="update-info">Cập nhật thông tin</button>
     </div>
   </div>
-  <input type="hidden" id="user_email" value="{{customer.email}}"/>
+  <input type="hidden" id="user_email" value="{{ customer.email }}"/>
 {% endblock content %}
