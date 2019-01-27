@@ -447,7 +447,7 @@
                   </div>
 
                   {% if article.type == 'review' %}
-                    {% set game = Game (article.game) %}
+                    {# {% set game = Game (article.game) %} #}
                     <!-- GAME INFOMATIONS AND REQUIREMENTS -->
                     <div class="config-wrapper">
                       <ul class="config-tab-wrapper">
@@ -456,12 +456,12 @@
                       </ul>
                       <div class="author-footer config-footer config-info-area clearfix">
                         <div class="author-footer-info">
-                          {{game.infomation}}
+                          {# {{game.infomation}} #}
                         </div>
                       </div>
                       <div class="author-footer config-footer config-req-area d-none clearfix">
                         <div class="author-footer-info">
-                          {{game.requirememt}}
+                          {# {{game.requirememt}} #}
                         </div>
                       </div>
                     </div>
