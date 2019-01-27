@@ -1781,3 +1781,15 @@ main {
 .social-share-button a:hover .social-icon {
   background: none;
 }
+.ds-right .social-share-button svg:hover,
+.ds-right .social-share-button svg:hover ~ i {
+  fill: #2c7abe;
+  color: #2c7abe;
+}
+.ds-right .social-share-button svg {
+  width: 24px;
+  height: 24px;
+}
+.page-article .social-share-button .social-icon {
+  background: none !important;
+}
