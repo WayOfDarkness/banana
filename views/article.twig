@@ -636,7 +636,11 @@ b={{value[1]}}
                           {% for item in article.reviews %}
                             <div class="block-reviews--comment">
                               <div class="block-reviews--auth">
-                                <img src="{{theme.uri}}/img/avatar-default.png" alt="avatar" class="comment-avatar">
+                                {% if customer.avatar %}
+                                  <img src="{{customer.avatar | upload_url}}" alt="avatar" class="comment-avatar"/>
+                                {% else %}
+                                  <img src="{{theme.uri}}/img/avatar-default.png" alt="avatar" class="comment-avatar"/>
+                                {% endif %}
                                 <span>Đánh giá bởi <strong class="review-author">{{item.user}}</strong></span>
                                 <span class="rating-review">
                                   <img src="{{theme.uri}}/img/icon/icon-star.png" width="16px" height="16px"/>

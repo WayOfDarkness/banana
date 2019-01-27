@@ -82,7 +82,11 @@
           {% if customer.logged_in %}
           <div class="isLoginSuccess">
             <div class="user-avatar">
-              <img src="{{theme.uri}}/img/avatar-default.png" alt="avatar"/>
+              {% if customer.avatar %}
+                <img src="{{customer.avatar | upload_url}}" alt="avatar"/>
+              {% else %}
+                <img src="{{theme.uri}}/img/avatar-default.png" alt="avatar"/>
+              {% endif %}
             </div>
             <p class="user-name">
               {{customer.name}}
@@ -234,7 +238,11 @@
       {% if customer.logged_in %}
         <div class="isLoginSuccess mobile">
           <div class="user-avatar">
-            <img src="{{theme.uri}}/img/avatar-default.png" alt="avatar"/>
+            {% if customer.avatar %}
+              <img src="{{customer.avatar | upload_url}}" alt="avatar"/>
+            {% else %}
+              <img src="{{theme.uri}}/img/avatar-default.png" alt="avatar"/>
+            {% endif %}
           </div>
           <p class="user-name">
             {{customer.name}}
