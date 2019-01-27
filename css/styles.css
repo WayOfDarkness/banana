@@ -1794,3 +1794,14 @@ main {
 .page-article .social-share-button .social-icon {
   background: none !important;
 }
+.icon-search {
+  background: none !important;
+}
+.icon-search svg {
+  width: 24px;
+  height: 24px;
+  background: none;
+  fill: #2c7abe;
+  display: block;
+
+}
