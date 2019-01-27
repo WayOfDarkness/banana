@@ -232,8 +232,8 @@ function checkLogin() {
 
 // Check Like Status of User
 var likeStatus = $('#article_like_status').val();
-if (likeStatus == 'like') $('.social-share-button .upvote').css('background-color', success_color);
-else if (likeStatus == 'dislike') $('.social-share-button .downvote').css('background-color', success_color);
+if (likeStatus == 'like') $('.social-share-button .upvote svg').css('fill', success_color);
+else if (likeStatus == 'dislike') $('.social-share-button .downvote svg').css('fill', success_color);
 
 // Check Upvote
 function checkUpvote() {
@@ -241,24 +241,24 @@ function checkUpvote() {
     toast('Bạn cần đăng nhập để upvote', 3000, error_color);
   else {
     var id = $('#article_id').val();
-    var current_like = parseInt($('.social-share-button .upvote').next('i').html());
-    var current_dislike = parseInt($('.social-share-button .downvote').next('i').html());
+    var current_like = parseInt($('.social-share-button .upvote i').html());
+    var current_dislike = parseInt($('.social-share-button .downvote i').html());
     $.ajax({
       url: `/api/react/${id}/like`,
       type: "POST",
       success: function () {
         if (likeStatus == 'none') {
-          $('.social-share-button .upvote').css('background-color', success_color);
-          $('.social-share-button .upvote').next('i').html(current_like + 1);
+          $('.social-share-button .upvote svg').css('fill', success_color);
+          $('.social-share-button .upvote i').html(current_like + 1);
           likeStatus = 'like';
         } else if (likeStatus == 'like') {
-          $('.social-share-button .upvote').css('background-color', default_color);
-          $('.social-share-button .upvote').next('i').html(current_like - 1);
+          $('.social-share-button .upvote svg').css('fill', default_color);
+          $('.social-share-button .upvote i').html(current_like - 1);
           likeStatus = 'none';
         } else {
-          $('.social-share-button .upvote').css('background-color', success_color);
-          $('.social-share-button .upvote').next('i').html(current_like + 1);
-          $('.social-share-button .downvote').next('i').html(current_dislike - 1);
+          $('.social-share-button .upvote svg').css('fill', success_color);
+          $('.social-share-button .upvote i').html(current_like + 1);
+          $('.social-share-button .downvote i').html(current_dislike - 1);
           likeStatus = 'like';
         }
       }
@@ -272,24 +272,24 @@ function checkDownvote() {
     toast('Bạn cần đăng nhập để downvote', 3000, error_color);
   else {
     var id = $('#article_id').val();
-    var current_like = parseInt($('.social-share-button .upvote').next('i').html());
-    var current_dislike = parseInt($('.social-share-button .downvote').next('i').html());
+    var current_like = parseInt($('.social-share-button .upvote i').html());
+    var current_dislike = parseInt($('.social-share-button .downvote i').html());
     $.ajax({
       url: `/api/react/${id}/dislike`,
       type: "POST",
       success: function () {
         if (likeStatus == 'none') {
-          $('.social-share-button .downvote').css('background-color', success_color);
-          $('.social-share-button .downvote').next('i').html(current_dislike + 1);
+          $('.social-share-button .downvote svg').css('fill', success_color);
+          $('.social-share-button .downvote i').html(current_dislike + 1);
           likeStatus = 'dislike';
         } else if (likeStatus == 'dislike') {
-          $('.social-share-button .downvote').css('background-color', default_color);
-          $('.social-share-button .downvote').next('i').html(current_dislike - 1);
+          $('.social-share-button .downvote svg').css('fill', default_color);
+          $('.social-share-button .downvote i').html(current_dislike - 1);
           likeStatus = 'none';
         } else {
-          $('.social-share-button .downvote').css('background-color', success_color);
-          $('.social-share-button .downvote').next('i').html(current_dislike + 1);
-          $('.social-share-button .upvote').next('i').html(current_like - 1);
+          $('.social-share-button .downvote svg').css('fill', success_color);
+          $('.social-share-button .downvote i').html(current_dislike + 1);
+          $('.social-share-button .upvote i').html(current_like - 1);
           likeStatus = 'dislike';
         }
       }
