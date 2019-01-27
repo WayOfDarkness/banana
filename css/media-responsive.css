@@ -151,8 +151,8 @@
     right: -16px !important;
   }
   body .expanded-menu-button {
-    display: block;
-    position: fixed;
+    display: block !important;
+    position: fixed !important;
     top: 20px;
     right: 30px;
   }
