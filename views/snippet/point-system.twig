@@ -1,22 +1,22 @@
-{% if item.admin_point == 10 %}
+{% if item.admin_point == 10 or article.admin_point == 10 %}
     {% set admin_point_label = 'Hoàn hảo' %}
-    {% elseif item.admin_point == 9 %}
+    {% elseif item.admin_point == 9 or article.admin_point == 9 %}
     {% set admin_point_label = 'Xuất sắc' %}
-    {% elseif item.admin_point == 8 %}
+    {% elseif item.admin_point == 8 or article.admin_point == 8 %}
     {% set admin_point_label = 'Hay' %}
-    {% elseif item.admin_point == 7 %}
+    {% elseif item.admin_point == 7 or article.admin_point == 7 %}
     {% set admin_point_label = 'Khá' %}
-    {% elseif item.admin_point == 6 %}
+    {% elseif item.admin_point == 6 or article.admin_point == 6 %}
     {% set admin_point_label = 'Tạm được' %}
-    {% elseif item.admin_point == 5 %}
+    {% elseif item.admin_point == 5 or article.admin_point == 5 %}
     {% set admin_point_label = 'Trung bình' %}
-    {% elseif item.admin_point == 4 %}
+    {% elseif item.admin_point == 4 or article.admin_point == 4 %}
     {% set admin_point_label = 'Nghèo nàn' %}
-    {% elseif item.admin_point == 3 %}
+    {% elseif item.admin_point == 3 or article.admin_point == 3 %}
     {% set admin_point_label = 'Tệ' %}
-    {% elseif item.admin_point == 2 %}
+    {% elseif item.admin_point == 2 or article.admin_point == 2 %}
     {% set admin_point_label = 'Quá tệ' %}
-    {% elseif item.admin_point == 1 %}
+    {% elseif item.admin_point == 1 or article.admin_point == 1 %}
     {% set admin_point_label = 'Trash' %}
     {% else %}
     {% set admin_point_label = 'Chưa đánh giá' %}
