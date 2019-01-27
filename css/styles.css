@@ -1795,11 +1795,13 @@ main {
   background: none !important;
 }
 .icon-search {
-  display: block;
+  background: none !important;
 }
 .icon-search svg {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   background: none;
   fill: #2c7abe;
+  display: block;
+
 }
