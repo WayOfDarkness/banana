@@ -1781,7 +1781,7 @@ main {
 .social-share-button a:hover .social-icon {
   background: none;
 }
-.ds-right .social-share-button:hover,
+.ds-right .social-share-button:hover svg,
 .ds-right .social-share-button:hover i {
   fill: #2c7abe;
   color: #2c7abe;
