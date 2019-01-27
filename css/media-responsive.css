@@ -5,9 +5,10 @@
     display: none;
   }
 
-  .header-right-container {
+  #login {
     display: none;
   }
+
   .isLoginSuccess.mobile .user-name img {
     display: none;
   }
