@@ -1732,7 +1732,7 @@ main {
   background: white;
   border-radius: 5px;
   border: 1px solid #818583;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 .user-account input[type='file'] {
   border:none !important;
@@ -1749,6 +1749,9 @@ main {
   min-width: 100%;
   margin: 60px 0 10px;
   flex-grow: 1;
+}
+.user-account .has-error {
+  border-color: #E74C3C !important;
 }
 .change-avatar {
   display: flex;
