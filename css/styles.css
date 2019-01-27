@@ -1732,7 +1732,7 @@ main {
   background: white;
   border-radius: 5px;
   border: 1px solid #818583;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 .user-account input[type='file'] {
   border:none !important;

@@ -14,10 +14,6 @@
       padding: 5px;
       border-radius: 5px;
     }
-
-    #loadImg {
-
-    }
   </style>
 {% endblock %}
 
@@ -83,7 +79,7 @@
       });
     })
 
-    $(".update-info").click(function () {
+    $(".change-nickname-btn").click(function () {
       var data = {
         email: $("#user_email").val(),
         name: $(".change-nickname input").val()
@@ -120,17 +116,6 @@
         $("#upload-image-avatar:hidden").trigger('click');
       });
     });
-
-    {# function checkInputImg() {
-      let _filename = $('.change-avatar input').val();
-      console.log(_filename);
-      if (_filename) {
-        $('.change-avatar input').addClass('selected');
-      } else {
-        $('.change-avatar input').removeClass('selected');
-      }
-      $('.change-avatar .avatar-name').html(_filename);
-    } #}
 
     function checkExtImage(image) {
       var ext = image.split('.').pop().toLowerCase();
@@ -217,7 +202,6 @@
           </div>
         </div>
       </div>
-      <button class="update-info">Cập nhật thông tin</button>
     </div>
   </div>
   <input type="hidden" id="user_email" value="{{ customer.email }}"/>
