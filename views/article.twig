@@ -7,7 +7,11 @@
 {% block content %}
 
     {% set parentBlog = Blog(article.blogs[0]) %}
-    {% set author = CustomField(article.id,'article','author') %}
+    {% if CustomField(article.id,'article','author') %}
+      {% set author = CustomField(article.id,'article','author') %}
+    {% else %}
+      {% set author = Phi %}
+    {% endif %}
 
     <main role="main" class="container article----if--contains">
       <a id="main-content" tabindex="-1"></a>
