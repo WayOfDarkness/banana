@@ -1847,6 +1847,10 @@ svg {
   border-bottom: #2c7abe !important;
 }
 
-.change-nickname-btn {
+.change-nickname-btn,
+.change-avatar-btn,
+.change-password-btn {
   padding: 0.5rem 0px !important;
+  max-width: 300px;
+  margin-bottom: 1rem;
 }
