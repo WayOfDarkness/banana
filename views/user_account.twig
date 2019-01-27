@@ -9,7 +9,7 @@
   <script>
 
     function isShowChangePassword(boolean) {
-        if(boolean)
+        if (boolean)
           $('.collapse-change-assword').removeClass('d-none');
         else
           $('.collapse-change-assword').addClass('d-none');
@@ -95,6 +95,69 @@
           });
       }
     });
+
+    $(function () {
+        $("#loadImg").on('click', function (e) {
+            e.preventDefault();
+            $("#upload-image-avatar:hidden").trigger('click');
+        });
+    });
+
+    function checkInputImg() {
+      let _filename = $('.change-avatar input').val();
+      console.log(_filename);
+      if (_filename) {
+        $('.change-avatar input').addClass('selected');
+      } else {
+        $('.change-avatar input').removeClass('selected');
+      }
+      $('.change-avatar .avatar-name').html(_filename);
+    }
+
+    function checkExtImage(image) {
+        var ext = image.split('.').pop().toLowerCase();
+        if ($.inArray(ext, [
+            'png',
+            'jpg',
+            'jpeg',
+            'gif',
+            'svg',
+            'ico'
+        ]) == -1) {
+            toastr.error('Vui lòng chọn đúng định dạng hình ảnh');
+            return 0;
+        }
+        return 1;
+    }
+
+    $(document).on('change', '#upload-image-avatar', function () {
+        var self = $(this);
+        if ($(this).val()) {
+          var form = $('.form-avatar');
+          var formData = new FormData(form[0]);
+          for (var value of formData.values()) {
+            if (!checkExtImage(value.name)) {
+              form.removeClass('disabled');
+              return;
+            }
+          }
+
+          $.ajax({
+              type: 'POST',
+              url: '/api/uploadAvatar',
+              data: formData,
+              cache: false,
+              contentType: false,
+              processData: false,
+              success: function (json) {
+                  console.log(json.data);
+                  var html = '/uploads/' + json.data;
+                  $('.avata').html(`<img src="${html}" id="avatarImg">`);
+              }
+          });
+        }
+        $(this).val("");
+    });
   </script>
 {% endblock %}
 
@@ -108,7 +171,7 @@
       </div>
       <div class="change-avatar">
         <p>Cập nhật avatar: <span class="avatar-name"></span></p>
-        <input type="file" onchange="checkInputImg()">
+        <input type="file" id="loadImg" onchange="checkInputImg()">
       </div>
       <div class="change-password">
         <div class="modal-change-password">
@@ -142,18 +205,4 @@
     </div>
   </div>
   <input type="hidden" id="user_email" value="{{customer.email}}"/>
-
-  <script>
-    function checkInputImg() {
-      let _filename = $('.change-avatar input').val();
-      console.log(_filename);
-      if (_filename) {
-        $('.change-avatar input').addClass('selected');
-      } else {
-        $('.change-avatar input').removeClass('selected');
-      }
-      $('.change-avatar .avatar-name').html(_filename);
-    }
-  </script>
-
 {% endblock content %}
