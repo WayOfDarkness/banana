@@ -448,8 +448,6 @@
 
                   {% if article.type == 'review' %}
                     <!-- GAME INFOMATIONS AND REQUIREMENTS -->
-                    a={{article.game | json_encode}}
-                    b={{article.game.requirement | raw}}
                     <div class="config-wrapper">
                       <ul class="config-tab-wrapper">
                         <a href="javascript:;" class="config-tab config-info active">Thông tin</a>
@@ -457,7 +455,7 @@
                       </ul>
                       <div class="author-footer config-footer config-info-area clearfix">
                         <div class="author-footer-info">
-                          {{article.game.infomation | raw}}
+                          {{article.game.requirememt | raw}}
                         </div>
                       </div>
                       <div class="author-footer config-footer config-req-area d-none clearfix">
