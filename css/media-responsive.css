@@ -5,6 +5,10 @@
     display: none !important;
   }
 
+  .isLoginSuccess.mobile {
+    display: block;
+  }
+
   #login {
     display: none !important;
   }
