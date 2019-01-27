@@ -7,6 +7,7 @@
 {% block content %}
 
     {% set parentBlog = Blog(article.blogs[0]) %}
+    {% set author = CustomField(article.id,'article','author') %}
 
     <main role="main" class="container article----if--contains">
       <a id="main-content" tabindex="-1"></a>
@@ -52,7 +53,7 @@
                   <div
                     class="field field--type-ds field__item">
                     <div class="author-details">bởi
-                      <a href="javascript:;">{{article.author}}</a> vào {{article.created_at}}
+                      <a href="javascript:;">{{author}}</a> vào {{article.created_at}}
                     </div>
                   </div>
                   <wrap class="flex-div mobile clearfix">
@@ -454,8 +455,6 @@
 
                     <!-- ARTICLE RATING -->
                     {% set value = getCustomField(article.id, 'article', 'appreciation') %}
-a={{value[0]}}
-b={{value[1]}}
                     <div class="review-breakdown rating-overflow">
                       <div class="review-breakdown__inner">
                         <div class="container row">
@@ -519,18 +518,33 @@ b={{value[1]}}
                         <div class="view-content">
                           <div>
                             <div class="author-footer clearfix">
-                              <div class="author-footer-photo">
-                                <a href="#">
-                                  <img src="{{theme.uri}}/img/author/PegasuS.jpg" width="100" height="100" alt="PegasuS" class="image-style-user-thumbnail"/>
-                                </a>
-                              </div>
-                              <div class="author-footer-info">
-                                <div class="author-footer-name">
-                                  <a title="View user profile." href="javascript:;" class="username">{{author.name}}</a>
+                              {% if author == 'Sigma' %}
+                                <div class="author-footer-photo">
+                                  <a href="#">
+                                    <img src="{{theme.uri}}/img/author/Sigma.jpg" width="100" height="100" alt="Sigma" class="image-style-user-thumbnail"/>
+                                  </a>
                                 </div>
-                                <div class="author-footer-title">{{author.role}}</div>
-                                <div class="author-footer-shortbio">{{author.description}}</div>
-                              </div>
+                                <div class="author-footer-info">
+                                  <div class="author-footer-name">
+                                    <a title="View user profile." href="javascript:;" class="username">{{author}}</a>
+                                  </div>
+                                  <div class="author-footer-title">Admin</div>
+                                  <div class="author-footer-shortbio">Sigma có kinh nghiệm chơi và đánh giá game trên 10 năm, hiện anh vẫn đang tiếp tục chơi để có thể viết những bài chất lượng cho độc giả</div>
+                                </div>
+                              {% else %}
+                                <div class="author-footer-photo">
+                                  <a href="#">
+                                    <img src="{{theme.uri}}/img/author/Phi.jpg" width="100" height="100" alt="Phi" class="image-style-user-thumbnail"/>
+                                  </a>
+                                </div>
+                                <div class="author-footer-info">
+                                  <div class="author-footer-name">
+                                    <a title="View user profile." href="javascript:;" class="username">{{author}}</a>
+                                  </div>
+                                  <div class="author-footer-title">Admin</div>
+                                  <div class="author-footer-shortbio">Phi tuy mới tìm hiểu và chơi game gần đây, tuy nhiên cô ấy học rất nhanh và vẫn đang cố gắng tạo ra nhiều bài viết chất lượng cho độc giả</div>
+                                </div>
+                              {% endif %}
                             </div>
                           </div>
                         </div>
