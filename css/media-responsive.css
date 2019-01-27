@@ -5,8 +5,14 @@
     display: none !important;
   }
 
+  .isLoginSuccess.mobile .user-avatar img {
+    margin-right: 0.5rem;
+  }
+  .isLoginSuccess.mobile .user-avatar {
+    display: flex;
+  }
   .isLoginSuccess.mobile {
-    display: block;
+    display: block !important;
   }
 
   #login {

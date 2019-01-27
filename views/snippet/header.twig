@@ -5,7 +5,7 @@
         <div class="region region-header-logo">
           <div id="block-gi5-branding" class="block block-system block-system-branding-block">
             <a class="site-logo" href="/" rel="home" title="Home">
-              <img src="{{settings.logo | upload_url}}" alt="Home"/>
+              <img src="{{ settings.logo | upload_url }}" alt="Home"/>
             </a>
           </div>
         </div>
@@ -20,8 +20,8 @@
               {% for item in header_menu.children %}
                 {% set active = item.link == url ? 'nav-active' : '' %}
                 <li class="menu-item font-arima" id="menu-News">
-                  <a href="{{item.link}}" class="{{active}}">
-                    {{item.title}}
+                  <a href="{{ item.link }}" class="{{ active }}">
+                    {{ item.title }}
                   </a>
                 </li>
               {% endfor %}
@@ -32,8 +32,10 @@
       <div class="header-right-container">
         <div class="header-icon search-button">
           <div class="icon-search" onclick="showModalSearch(true)">
-            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                 width="485.213px" height="485.213px" viewBox="0 0 485.213 485.213" style="enable-background:new 0 0 485.213 485.213;"
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                 x="0px" y="0px"
+                 width="485.213px" height="485.213px" viewBox="0 0 485.213 485.213"
+                 style="enable-background:new 0 0 485.213 485.213;"
                  xml:space="preserve">
 <g>
   <g>
@@ -83,13 +85,13 @@
           <div class="isLoginSuccess">
             <div class="user-avatar">
               {% if customer.avatar %}
-                <img src="{{customer.avatar | upload_url}}" alt="avatar"/>
+                <img src="{{ customer.avatar | upload_url }}" alt="avatar"/>
               {% else %}
-                <img src="{{theme.uri}}/img/avatar-default.png" alt="avatar"/>
+                <img src="{{ theme.uri }}/img/avatar-default.png" alt="avatar"/>
               {% endif %}
             </div>
             <p class="user-name">
-              {{customer.name}}
+              {{ customer.name }}
             </p>
             <div class="list-menu">
               <a href="/user_account">Trang cá nhân</a>
@@ -105,7 +107,8 @@
         {% endif %}
         <div class="header-icon expanded-menu-button">
           <div class="icon-expanded">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 24 24">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 24 24">
               <g>
                 <path d="M24,3c0-0.6-0.4-1-1-1H1C0.4,2,0,2.4,0,3v2c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V3z"/>
                 <path d="M24,11c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1v2c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V11z"/>
@@ -124,8 +127,10 @@
         <div class="views-exposed-form block block-views block-views-exposed-filter-blocksearch-content-page-1"
              data-drupal-selector="views-exposed-form-search-content-page-1" id="block-exposedformsearch-contentpage-1">
           <span class="icon-search" onclick="doSearch(event)">
-            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                 width="485.213px" height="485.213px" viewBox="0 0 485.213 485.213" style="enable-background:new 0 0 485.213 485.213;"
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                 x="0px" y="0px"
+                 width="485.213px" height="485.213px" viewBox="0 0 485.213 485.213"
+                 style="enable-background:new 0 0 485.213 485.213;"
                  xml:space="preserve">
 <g>
   <g>
@@ -190,18 +195,20 @@
     </div>
   </div>
   <div class="slide-in scrollbar-lt" id="expanded-menu">
-    <div class="isLoginSuccess mobile">
-      <div class="user-avatar">
-        <img src="/themes/banana/img/avatar-default.png" alt="avatar">
+    {% if customer.logged_in %}
+      <div class="isLoginSuccess mobile">
+        <div class="user-avatar">
+          {% if customer.avatar %}
+            <img src="{{ customer.avatar | upload_url }}" alt="avatar"/>
+          {% else %}
+            <img src="{{ theme.uri }}/img/avatar-default.png" alt="avatar"/>
+          {% endif %}
+          <p class="user-name">
+            {{ customer.name }}
+          </p>
+        </div>
       </div>
-      <p class="user-name">
-        DevTest
-      </p>
-      <div class="list-menu">
-        <a href="/user_account">Trang cá nhân</a>
-        <a href="/api/signout">Đăng xuất</a>
-      </div>
-    </div>
+    {% endif %}
     <div class="max-width-container">
       <div class="hamburger-top">
         <div class="region region-header-hamburger-top">
@@ -214,8 +221,10 @@
                 <div
                   class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-keyword form-item-keyword">
                   <label for="edit-keyword">Search</label>
-                  <input class="form-text" data-drupal-selector="edit-keyword" id="edit-keyword-mobile" maxlength="128"
-                         name="keyword" onkeypress="doSearchMobile(event)" size="30" type="text" value=""/>
+                  <input class="form-text" data-drupal-selector="edit-keyword" id="edit-keyword-mobile"
+                         maxlength="128"
+                         name="keyword" onkeypress="doSearchMobile(event)" size="30" type="text" value=""
+                         placeholder="Search..."/>
                 </div>
                 <div class="form-actions js-form-wrapper form-wrapper" data-drupal-selector="edit-actions"
                      id="edit-actions-mobile"><input class="button js-form-submit form-submit"
@@ -237,8 +246,8 @@
               {% for item in header_menu.children %}
                 {% set active = item.link == url ? 'nav-active' : '' %}
                 <li class="menu-item font-arima" id="menu-News">
-                  <a href="{{item.link}}" class="{{active}}">
-                    {{item.title}}
+                  <a href="{{ item.link }}" class="{{ active }}">
+                    {{ item.title }}
                   </a>
                 </li>
               {% endfor %}
@@ -248,19 +257,6 @@
       </div>
 
       {% if customer.logged_in %}
-        <div class="isLoginSuccess mobile">
-          <div class="user-avatar">
-            {% if customer.avatar %}
-              <img src="{{customer.avatar | upload_url}}" alt="avatar"/>
-            {% else %}
-              <img src="{{theme.uri}}/img/avatar-default.png" alt="avatar"/>
-            {% endif %}
-          </div>
-          <p class="user-name">
-            {{customer.name}}
-            <img alt="menu-down" src="{{theme.uri}}/img/icon-menu-down.png" width="26px"/>
-          </p>
-        </div>
         <a onclick="/user_account" class="user-account-page text-orange border">Trang cá nhân</a>
         <a class="text-orange border" href="/api/signout">Đăng xuất</a>
       {% else %}
