@@ -468,6 +468,8 @@
 
                     <!-- ARTICLE RATING -->
                     {% set value = getCustomField(article.id, 'article', 'appreciation') %}
+                    a={{value[0] | json_encode}}
+                    b={{value[1] | json_encode}}
                     <div class="review-breakdown rating-overflow">
                       <div class="review-breakdown__inner">
                         <div class="container row">
@@ -488,7 +490,7 @@
                           </dl>
                           <dl class="breakdown breakdown-bad span6">
                             <dt class="breakdown-bad__title"><span>Nhược điểm</span></dt>
-                            {% for item in value[0] %}
+                            {% for item in value[1] %}
                               <dd class="breakdown-bad__item">
                                 <i>
                                   <svg version="1.1" width="28" height="28" viewBox="0 0 28 28"
