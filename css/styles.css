@@ -41,7 +41,7 @@ h2 {
 }
 
 .social-share-button .social-icon.upvote {
-  /*-webkit-mask: url("../img/icon/thumbs-up-solid.svg") no-repeat 100% 100%;*/
+  -webkit-mask: url("../img/icon/thumbs-up-solid.svg") no-repeat 100% 100%;
 }
 
 .social-share-button .social-icon.downvote {
