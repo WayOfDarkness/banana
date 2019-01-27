@@ -56,7 +56,9 @@
                   $('#re-new-password').removeClass('has-error');
                   $('#new-password').removeClass('has-error');
                   $('#old-password').removeClass('has-error');
-                  location.href = "/";
+                  setTimeout(function() {
+                    location.href = "/";
+                  }, 3000); 
               } else {
                   toast(result.message, 3000, error_color);
                   $('#old-password').addClass('has-error');
@@ -86,7 +88,9 @@
           success: function (result) {
               if (!result.code) {
                   toast('Thay đổi thông tin thành công', 3000, success_color);
-                  window.location.reload();
+                  setTimeout(function() {
+                    window.location.reload();
+                  }, 3000); 
               } else {
                   toast(result.message, 3000, error_color);
               }
