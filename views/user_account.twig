@@ -36,7 +36,7 @@
 
       if (!data.old_password) {
         $("#old-password").addClass('has-error');
-        toast('Vui lòng nhập mật khẩu hiện tại', 3000, error_color);
+        toast('Vui lòng nhập mật khẩu cũ', 3000, error_color);
         return;
       } else {
         $("#old-password").removeClass('has-error');
@@ -155,6 +155,10 @@
           success: function (json) {
             var html = '/uploads/' + json.data;
             $('.form-avatar').html(`<img src="${html}" id="avatarImg">`);
+            toast('Thay đổi ảnh đại diện thành công', 3000, success_color);
+            setTimeout(function () {
+              window.location.reload();
+            }, 3000);
           }
         });
       }
