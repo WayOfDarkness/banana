@@ -31,7 +31,11 @@
                     <div class="layout__region">
                       <div class="full-width">
                         <div class="field field--name-field-image field__item">
-                          <img src="{{article.image | upload_url}}" width="1460" height="821" alt="{{article.title}}" title="{{article.title}}" class="image-style-full"/>
+                          {% if article.image %}
+                            <img src="{{article.image | upload_url}}" width="1460" height="821" alt="{{article.title}}" title="{{article.title}}" class="image-style-full"/>
+                          {% else %}
+                            <img src="{{settings.sub_img | upload_url}}" width="1460" height="821" alt="{{article.title}}" title="{{article.title}}" class="image-style-full"/>
+                          {% endif %} 
                         </div>
                       </div>
                     </div>
@@ -550,7 +554,11 @@ b={{value[1]}}
                                             <div class="teaser-left-wrapper">
                                                 <div class="promo-img-thumb">
                                                     <a href="{{item.url}}">
-                                                    <img src="{{item.image | upload_url}}"/>
+                                                    {% if item.image %}
+                                                      <img src="{{item.image | upload_url}}"/>
+                                                    {% else %}
+                                                      <img src="{{settings.sub_img | upload_url}}"/>
+                                                    {% endif %} 
                                                     </a>
                                                 </div>
                                             </div>
