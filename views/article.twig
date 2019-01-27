@@ -4,9 +4,23 @@
     <title>{{article.title}}</title>
 {% endblock %}
 
+{% block post_include %}
+  <script>
+    $(document).ready(function () {
+      var date = $('.author-details span').html();
+      $('.author-details span').html(checkDateName(date.split(' ')[0]));
+    })
+  </script>
+{% endblock %}
+
 {% block content %}
 
     {% set parentBlog = Blog(article.blogs[0]) %}
+    {% if CustomField(article.id,'article','author') %}
+      {% set author = CustomField(article.id,'article','author') %}
+    {% else %}
+      {% set author = 'Phi' %}
+    {% endif %}
 
     <main role="main" class="container article----if--contains">
       <a id="main-content" tabindex="-1"></a>
@@ -52,7 +66,7 @@
                   <div
                     class="field field--type-ds field__item">
                     <div class="author-details">bởi
-                      <a href="javascript:;">{{article.author}}</a> vào {{article.created_at}}
+                      <a href="javascript:;">{{author}}</a> vào <span>{{article.created_at}}</span>
                     </div>
                   </div>
                   <wrap class="flex-div mobile clearfix">
@@ -454,37 +468,38 @@
 
                     <!-- ARTICLE RATING -->
                     {% set value = getCustomField(article.id, 'article', 'appreciation') %}
-a={{value[0]}}
-b={{value[1]}}
                     <div class="review-breakdown rating-overflow">
                       <div class="review-breakdown__inner">
                         <div class="container row">
                           <dl class="breakdown breakdown-good span6">
                             <dt class="breakdown-good__title"><span>Ưu điểm</span></dt>
-                            <dd class="breakdown-good__item">
-                              <i>
-                                <svg version="1.1" width="28" height="28" viewBox="0 0 28 28"
-                                    aria-hidden="true" class="symbol symbol-plus-sign">
-                                  <path
-                                    d="M19 15v-2q0-0.406-0.297-0.703t-0.703-0.297h-4v-4q0-0.406-0.297-0.703t-0.703-0.297h-2q-0.406 0-0.703 0.297t-0.297 0.703v4h-4q-0.406 0-0.703 0.297t-0.297 0.703v2q0 0.406 0.297 0.703t0.703 0.297h4v4q0 0.406 0.297 0.703t0.703 0.297h2q0.406 0 0.703-0.297t0.297-0.703v-4h4q0.406 0 0.703-0.297t0.297-0.703zM24 14q0 3.266-1.609 6.023t-4.367 4.367-6.023 1.609-6.023-1.609-4.367-4.367-1.609-6.023 1.609-6.023 4.367-4.367 6.023-1.609 6.023 1.609 4.367 4.367 1.609 6.023z"></path>
-                                </svg>
-                              </i>
-                              Tạo ra bầu không khí kinh dị đáng sợ
-                            </dd>
+                            {% for item in value[0] %}
+                              <dd class="breakdown-good__item">
+                                <i>
+                                  <svg version="1.1" width="28" height="28" viewBox="0 0 28 28"
+                                      aria-hidden="true" class="symbol symbol-plus-sign">
+                                    <path
+                                      d="M19 15v-2q0-0.406-0.297-0.703t-0.703-0.297h-4v-4q0-0.406-0.297-0.703t-0.703-0.297h-2q-0.406 0-0.703 0.297t-0.297 0.703v4h-4q-0.406 0-0.703 0.297t-0.297 0.703v2q0 0.406 0.297 0.703t0.703 0.297h4v4q0 0.406 0.297 0.703t0.703 0.297h2q0.406 0 0.703-0.297t0.297-0.703v-4h4q0.406 0 0.703-0.297t0.297-0.703zM24 14q0 3.266-1.609 6.023t-4.367 4.367-6.023 1.609-6.023-1.609-4.367-4.367-1.609-6.023 1.609-6.023 4.367-4.367 6.023-1.609 6.023 1.609 4.367 4.367 1.609 6.023z"></path>
+                                  </svg>
+                                </i>
+                                {{item}}
+                              </dd>
+                            {% endfor %}
                           </dl>
                           <dl class="breakdown breakdown-bad span6">
                             <dt class="breakdown-bad__title"><span>Nhược điểm</span></dt>
-                            <dd class="breakdown-bad__item">
-                              <i>
-                                <svg version="1.1" width="28" height="28" viewBox="0 0 28 28"
-                                    aria-hidden="true" class="symbol symbol-minus-sign symbol--color-link">
-                                  <path
-                                    d="M19 15v-2q0-0.406-0.297-0.703t-0.703-0.297h-12q-0.406 0-0.703 0.297t-0.297 0.703v2q0 0.406 0.297 0.703t0.703 0.297h12q0.406 0 0.703-0.297t0.297-0.703zM24 14q0 3.266-1.609 6.023t-4.367 4.367-6.023 1.609-6.023-1.609-4.367-4.367-1.609-6.023 1.609-6.023 4.367-4.367 6.023-1.609 6.023 1.609 4.367 4.367 1.609 6.023z"></path>
-                                </svg>
-                              </i>
-                              Vài giờ đầu chơi khá khó khăn nếu không có người
-                              chơi có kinh nghiệm kéo
-                            </dd>
+                            {% for item in value[0] %}
+                              <dd class="breakdown-bad__item">
+                                <i>
+                                  <svg version="1.1" width="28" height="28" viewBox="0 0 28 28"
+                                      aria-hidden="true" class="symbol symbol-minus-sign symbol--color-link">
+                                    <path
+                                      d="M19 15v-2q0-0.406-0.297-0.703t-0.703-0.297h-12q-0.406 0-0.703 0.297t-0.297 0.703v2q0 0.406 0.297 0.703t0.703 0.297h12q0.406 0 0.703-0.297t0.297-0.703zM24 14q0 3.266-1.609 6.023t-4.367 4.367-6.023 1.609-6.023-1.609-4.367-4.367-1.609-6.023 1.609-6.023 4.367-4.367 6.023-1.609 6.023 1.609 4.367 4.367 1.609 6.023z"></path>
+                                  </svg>
+                                </i>
+                                {{item}}
+                              </dd>
+                            {% endfor %}
                           </dl>
 
                           <dl class="breakdown breakdown-score">
@@ -519,18 +534,33 @@ b={{value[1]}}
                         <div class="view-content">
                           <div>
                             <div class="author-footer clearfix">
-                              <div class="author-footer-photo">
-                                <a href="#">
-                                  <img src="{{theme.uri}}/img/author/PegasuS.jpg" width="100" height="100" alt="PegasuS" class="image-style-user-thumbnail"/>
-                                </a>
-                              </div>
-                              <div class="author-footer-info">
-                                <div class="author-footer-name">
-                                  <a title="View user profile." href="javascript:;" class="username">{{author.name}}</a>
+                              {% if author == 'Sigma' %}
+                                <div class="author-footer-photo">
+                                  <a href="#">
+                                    <img src="{{theme.uri}}/img/author/Sigma.jpg" width="100" height="100" alt="Sigma" class="image-style-user-thumbnail"/>
+                                  </a>
                                 </div>
-                                <div class="author-footer-title">{{author.role}}</div>
-                                <div class="author-footer-shortbio">{{author.description}}</div>
-                              </div>
+                                <div class="author-footer-info">
+                                  <div class="author-footer-name">
+                                    <a title="View user profile." href="javascript:;" class="username">{{author}}</a>
+                                  </div>
+                                  <div class="author-footer-title">Admin</div>
+                                  <div class="author-footer-shortbio">Sigma có kinh nghiệm chơi và đánh giá game trên 10 năm, hiện anh vẫn đang tiếp tục chơi để có thể viết những bài chất lượng cho độc giả</div>
+                                </div>
+                              {% else %}
+                                <div class="author-footer-photo">
+                                  <a href="#">
+                                    <img src="{{theme.uri}}/img/author/Phi.jpg" width="100" height="100" alt="Phi" class="image-style-user-thumbnail"/>
+                                  </a>
+                                </div>
+                                <div class="author-footer-info">
+                                  <div class="author-footer-name">
+                                    <a title="View user profile." href="javascript:;" class="username">{{author}}</a>
+                                  </div>
+                                  <div class="author-footer-title">Admin</div>
+                                  <div class="author-footer-shortbio">Phi tuy mới tìm hiểu và chơi game gần đây, tuy nhiên cô ấy học rất nhanh và vẫn đang cố gắng tạo ra nhiều bài viết chất lượng cho độc giả</div>
+                                </div>
+                              {% endif %}
                             </div>
                           </div>
                         </div>
