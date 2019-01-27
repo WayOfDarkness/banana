@@ -1903,3 +1903,15 @@ svg {
   width: 100%;
   margin-right: 0;
 }
+.author-footer-info {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  font-size: 1.3rem;
+}
+.author-footer-info ul,
+.author-footer-info li {
+  text-align: left;
+  display: inline-block;
+  margin: auto;
+}
