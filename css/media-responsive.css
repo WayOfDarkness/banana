@@ -5,6 +5,9 @@
     display: none;
   }
 
+  .header-right-container {
+    display: none;
+  }
   .isLoginSuccess.mobile .user-name img {
     display: none;
   }
