@@ -80,13 +80,13 @@
                 Đăng nhập bằng
             </label>
             <div class="d-flex justify-content-between flex-wrap">
-                <a class="btn d-flex align-items-center omniauth-btn text-left oauth-login qa-saml-login-button" data-method="post" href="/users/auth/google_oauth2" id="oauth-login-google_oauth2" rel="nofollow">
+                <a class="btn d-flex align-items-center omniauth-btn text-left oauth-login qa-saml-login-button" data-method="post" href="{{loginGoogle(url)}}" id="oauth-login-google_oauth2" rel="nofollow">
                     <img alt="Google" class="js-lazy-loaded" src="{{theme.uri}}/img/icon-google.png" title="Sign in with Google"/>
                     <span>
                         Google
                     </span>
                 </a>
-                <a class="btn d-flex align-items-center omniauth-btn text-left oauth-login qa-saml-login-button" data-method="post" href="/users/auth/twitter" id="oauth-login-twitter" rel="nofollow">
+                <a class="btn d-flex align-items-center omniauth-btn text-left oauth-login qa-saml-login-button" data-method="post" href="{{loginFacebook(url)}}" id="oauth-login-twitter" rel="nofollow">
                     <img alt="Twitter" class="js-lazy-loaded" src="{{theme.uri}}/img/icon-twitter.png" title="Sign in with Twitter"/>
                     <span>
                         Facebook
