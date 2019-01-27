@@ -1921,3 +1921,8 @@ svg {
   text-align: left;
   margin: auto;
 }
+
+.review-breakdown__inner .breakdown-score {
+  display: flex;
+  flex-direction: column;
+}
