@@ -1751,7 +1751,7 @@ main {
   flex-grow: 1;
 }
 .user-account .has-error {
-  border-color: #E74C3C;
+  border-color: #E74C3C !important;
 }
 .change-avatar {
   display: flex;
