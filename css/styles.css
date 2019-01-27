@@ -1152,7 +1152,6 @@ body .expanded-menu-button {
   position: relative;
   border-left: 3px solid #2C7ABE;
   height: 35px;
-  top: 8px;
   cursor: pointer;
   padding: 5px;
   padding-right: 1rem;
@@ -1806,9 +1805,6 @@ main {
   display: block;
 }
 
-svg:hover {
-  fill: #2c7abe;
-}
 svg {
   background: none;
   fill: #141517;
@@ -1823,4 +1819,11 @@ svg {
   background: none;
 }
 .page-user-account .layout-container {
+}
+
+.header-icon.close > div {
+  background: none !important;
+}
+.slide-in {
+  padding: 4rem 1.5rem 1.5rem;
 }
