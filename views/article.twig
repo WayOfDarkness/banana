@@ -49,7 +49,7 @@
                             <img src="{{article.image | upload_url}}" width="1460" height="821" alt="{{article.title}}" title="{{article.title}}" class="image-style-full"/>
                           {% else %}
                             <img src="{{settings.sub_img | upload_url}}" width="1460" height="821" alt="{{article.title}}" title="{{article.title}}" class="image-style-full"/>
-                          {% endif %} 
+                          {% endif %}
                         </div>
                       </div>
                     </div>
@@ -445,7 +445,7 @@
                       {% endif %}
                     </div>
                   </div>
-                  
+
                   {% if article.type == 'review' %}
                     <!-- GAME INFOMATIONS AND REQUIREMENTS -->
                     <div class="config-wrapper">
@@ -587,7 +587,7 @@
                                                       <img src="{{item.image | upload_url}}"/>
                                                     {% else %}
                                                       <img src="{{settings.sub_img | upload_url}}"/>
-                                                    {% endif %} 
+                                                    {% endif %}
                                                     </a>
                                                 </div>
                                             </div>
@@ -612,7 +612,7 @@
 
                     <!-- FACEBOOK COMMENT -->
                     <div class="block-comment">
-                      <div class="fb-comments" data-href="https://www.facebook.com/PageChoiGiDay" data-width="100%" data-numposts="5"></div>
+                      <div class="fb-comments" data-href="{{url}}" data-width="100%" data-numposts="5"></div>
                       <div id="fb-root"></div>
                       <script>(function(d, s, id) {
                         var js, fjs = d.getElementsByTagName(s)[0];
@@ -630,7 +630,7 @@
                         <h2 class="block-title"><img src="{{theme.uri}}/img/icon/icon-star.png">
                           <span>Đánh giá</span>
                         </h2>
-                        
+
                         <!-- REVIEW FORM -->
                         {% if customer.logged_in %}
                           <div class="text-editer clearfix">
