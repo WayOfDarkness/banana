@@ -1821,3 +1821,6 @@ svg {
 .icon-expanded {
   background: none;
 }
+.page-user-account .layout-container {
+  display: flex !important;
+}
