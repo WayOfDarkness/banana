@@ -256,23 +256,7 @@
         </div>
       </div>
 
-      {% if customer.logged_in %}
-        <div class="isLoginSuccess mobile">
-          <div class="user-avatar">
-            {% if customer.avatar %}
-              <img src="{{ customer.avatar | upload_url }}" alt="avatar"/>
-            {% else %}
-              <img src="{{ theme.uri }}/img/avatar-default.png" alt="avatar"/>
-            {% endif %}
-          </div>
-          <p class="user-name">
-            {{ customer.name }}
-            <img alt="menu-down" src="{{ theme.uri }}/img/icon-menu-down.png" width="26px"/>
-          </p>
-        </div>
-        <a onclick="/user_account" class="user-account-page text-orange border">Trang cá nhân</a>
-        <a class="text-orange border" href="/api/signout">Đăng xuất</a>
-      {% else %}
+      {% if not customer.logged_in %}
         <div class="hamburger-bottom">
           <div id="toolbar-item-lightswitch">&nbsp;</div>
           <div class="user-menu user-loggedout main-nav">
