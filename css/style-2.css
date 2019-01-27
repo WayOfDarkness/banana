@@ -4071,8 +4071,8 @@ label[for="edit-keyword"] {
   speak: none;
   width: 26px;
   height: 26px;
-  -webkit-mask: url("../img/icon/bars-solid.svg") no-repeat 100% 100%;
-  mask: url("../img/icon/bars-solid.svg") no-repeat 100% 100%
+  /*-webkit-mask: url("../img/icon/bars-solid.svg") no-repeat 100% 100%;*/
+  /*mask: url("../img/icon/bars-solid.svg") no-repeat 100% 100%*/
 }
 
 .icon-expanded:hover {

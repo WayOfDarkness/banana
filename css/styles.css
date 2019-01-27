@@ -1803,5 +1803,12 @@ main {
   background: none;
   fill: #2c7abe;
   display: block;
+}
 
+svg:hover {
+  fill: #2c7abe;
+}
+svg {
+  background: none;
+  fill: #141517;
 }
