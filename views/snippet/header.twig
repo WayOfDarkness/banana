@@ -190,6 +190,18 @@
     </div>
   </div>
   <div class="slide-in scrollbar-lt" id="expanded-menu">
+    <div class="isLoginSuccess mobile">
+      <div class="user-avatar">
+        <img src="/themes/banana/img/avatar-default.png" alt="avatar">
+      </div>
+      <p class="user-name">
+        DevTest
+      </p>
+      <div class="list-menu">
+        <a href="/user_account">Trang cá nhân</a>
+        <a href="/api/signout">Đăng xuất</a>
+      </div>
+    </div>
     <div class="max-width-container">
       <div class="hamburger-top">
         <div class="region region-header-hamburger-top">
@@ -249,7 +261,7 @@
             <img alt="menu-down" src="{{theme.uri}}/img/icon-menu-down.png" width="26px"/>
           </p>
         </div>
-        <a onclick="/user_account" class="text-orange border">Trang cá nhân</a>
+        <a onclick="/user_account" class="user-account-page text-orange border">Trang cá nhân</a>
         <a class="text-orange border" href="/api/signout">Đăng xuất</a>
       {% else %}
         <div class="hamburger-bottom">
