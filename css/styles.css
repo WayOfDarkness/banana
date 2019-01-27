@@ -1078,6 +1078,9 @@ body .expanded-menu-button {
   display: flex;
   align-items: center;
 }
+.isLoginSuccess a {
+  display: block;
+}
 .isLoginSuccess p {
   margin: 0;
 }
@@ -1826,4 +1829,10 @@ svg {
 }
 .slide-in {
   padding: 4rem 1.5rem 1.5rem;
+}
+
+.user-account-page {
+  text-transform: uppercase;
+  display: block;
+  color: #d9d9d9;
 }
