@@ -41,7 +41,7 @@ h2 {
 }
 
 .social-share-button .social-icon.upvote {
-  -webkit-mask: url("../img/icon/thumbs-up-solid.svg") no-repeat 100% 100%;
+  /*-webkit-mask: url("../img/icon/thumbs-up-solid.svg") no-repeat 100% 100%;*/
 }
 
 .social-share-button .social-icon.downvote {
@@ -1775,4 +1775,9 @@ main {
   width: 100%;
   height: 150px;
   object-fit: cover;
+}
+
+/*fix css article icon*/
+.social-share-button a:hover .social-icon {
+  background: none;
 }
