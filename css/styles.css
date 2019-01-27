@@ -1909,9 +1909,12 @@ svg {
   text-align: center;
   font-size: 1.3rem;
 }
+.author-footer-info ul {
+  display: flex;
+  flex-direction: column;
+}
 .author-footer-info ul,
 .author-footer-info li {
   text-align: left;
-  display: inline-block;
   margin: auto;
 }
