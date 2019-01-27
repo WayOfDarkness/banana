@@ -209,85 +209,81 @@
         </div>
       </div>
     {% endif %}
-  </div>
-  <a onclick="/user_account" class="user-account-page text-orange border">Trang cá nhân</a>
-  <a class="text-orange border" href="/api/signout">Đăng xuất</a>
-  {% endif %}
-  <div class="max-width-container">
-    <div class="hamburger-top">
-      <div class="region region-header-hamburger-top">
-        <div class="views-exposed-form block block-views block-views-exposed-filter-blocksearch-content-page-1"
-             data-drupal-selector="views-exposed-form-search-content-page-1"
-             id="block-exposedformsearch-contentpage-1-2">
-          <span class="icon-search"></span>
-          <form accept-charset="UTF-8" id="views-exposed-form-search-content-page-1-mobile" method="get">
-            <div class="form--inline clearfix">
-              <div
-                class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-keyword form-item-keyword">
-                <label for="edit-keyword">Search</label>
-                <input class="form-text" data-drupal-selector="edit-keyword" id="edit-keyword-mobile"
-                       maxlength="128"
-                       name="keyword" onkeypress="doSearchMobile(event)" size="30" type="text" value=""
-                       placeholder="Search..."/>
+    <div class="max-width-container">
+      <div class="hamburger-top">
+        <div class="region region-header-hamburger-top">
+          <div class="views-exposed-form block block-views block-views-exposed-filter-blocksearch-content-page-1"
+               data-drupal-selector="views-exposed-form-search-content-page-1"
+               id="block-exposedformsearch-contentpage-1-2">
+            <span class="icon-search"></span>
+            <form accept-charset="UTF-8" id="views-exposed-form-search-content-page-1-mobile" method="get">
+              <div class="form--inline clearfix">
+                <div
+                  class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-keyword form-item-keyword">
+                  <label for="edit-keyword">Search</label>
+                  <input class="form-text" data-drupal-selector="edit-keyword" id="edit-keyword-mobile"
+                         maxlength="128"
+                         name="keyword" onkeypress="doSearchMobile(event)" size="30" type="text" value=""
+                         placeholder="Search..."/>
+                </div>
+                <div class="form-actions js-form-wrapper form-wrapper" data-drupal-selector="edit-actions"
+                     id="edit-actions-mobile"><input class="button js-form-submit form-submit"
+                                                     data-drupal-selector="edit-submit-search-content"
+                                                     id="edit-submit-search-content-mobile" value="Search"/>
+                </div>
               </div>
-              <div class="form-actions js-form-wrapper form-wrapper" data-drupal-selector="edit-actions"
-                   id="edit-actions-mobile"><input class="button js-form-submit form-submit"
-                                                   data-drupal-selector="edit-submit-search-content"
-                                                   id="edit-submit-search-content-mobile" value="Search"/>
-              </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="hamburger-middle">
-      <div class="region region-header-hamburger">
-        <nav aria-labelledby="block-hamburgermenu-menu" class="block block-menu navigation menu--hamburger-menu"
-             id="block-hamburgermenu" role="navigation">
-          <h2 class="visually-hidden" id="block-hamburgermenu-menu">Hamburger Menu</h2>
-          {% set header_menu = Menu ('menu') %}
-          <ul class="menu">
-            {% for item in header_menu.children %}
-              {% set active = item.link == url ? 'nav-active' : '' %}
-              <li class="menu-item font-arima" id="menu-News">
-                <a href="{{ item.link }}" class="{{ active }}">
-                  {{ item.title }}
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        </nav>
+      <div class="hamburger-middle">
+        <div class="region region-header-hamburger">
+          <nav aria-labelledby="block-hamburgermenu-menu" class="block block-menu navigation menu--hamburger-menu"
+               id="block-hamburgermenu" role="navigation">
+            <h2 class="visually-hidden" id="block-hamburgermenu-menu">Hamburger Menu</h2>
+            {% set header_menu = Menu ('menu') %}
+            <ul class="menu">
+              {% for item in header_menu.children %}
+                {% set active = item.link == url ? 'nav-active' : '' %}
+                <li class="menu-item font-arima" id="menu-News">
+                  <a href="{{ item.link }}" class="{{ active }}">
+                    {{ item.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
       </div>
-    </div>
 
-    {% if customer.logged_in %}
-      <div class="isLoginSuccess mobile">
-        <div class="user-avatar">
-          {% if customer.avatar %}
-            <img src="{{ customer.avatar | upload_url }}" alt="avatar"/>
-          {% else %}
-            <img src="{{ theme.uri }}/img/avatar-default.png" alt="avatar"/>
-          {% endif %}
+      {% if customer.logged_in %}
+        <div class="isLoginSuccess mobile">
+          <div class="user-avatar">
+            {% if customer.avatar %}
+              <img src="{{ customer.avatar | upload_url }}" alt="avatar"/>
+            {% else %}
+              <img src="{{ theme.uri }}/img/avatar-default.png" alt="avatar"/>
+            {% endif %}
+          </div>
+          <p class="user-name">
+            {{ customer.name }}
+            <img alt="menu-down" src="{{ theme.uri }}/img/icon-menu-down.png" width="26px"/>
+          </p>
         </div>
-        <p class="user-name">
-          {{ customer.name }}
-          <img alt="menu-down" src="{{ theme.uri }}/img/icon-menu-down.png" width="26px"/>
-        </p>
-      </div>
-      <a onclick="/user_account" class="user-account-page text-orange border">Trang cá nhân</a>
-      <a class="text-orange border" href="/api/signout">Đăng xuất</a>
-    {% else %}
-      <div class="hamburger-bottom">
-        <div id="toolbar-item-lightswitch">&nbsp;</div>
-        <div class="user-menu user-loggedout main-nav">
-          <ul>
-            <li><a class="cd-signin" href="javascript:;">Đăng nhập</a></li>
-            <li><a class="cd-signup" href="javascript:;">Đăng ký</a></li>
-          </ul>
+        <a onclick="/user_account" class="user-account-page text-orange border">Trang cá nhân</a>
+        <a class="text-orange border" href="/api/signout">Đăng xuất</a>
+      {% else %}
+        <div class="hamburger-bottom">
+          <div id="toolbar-item-lightswitch">&nbsp;</div>
+          <div class="user-menu user-loggedout main-nav">
+            <ul>
+              <li><a class="cd-signin" href="javascript:;">Đăng nhập</a></li>
+              <li><a class="cd-signup" href="javascript:;">Đăng ký</a></li>
+            </ul>
+          </div>
         </div>
-      </div>
-    {% endif %}
+      {% endif %}
+    </div>
   </div>
-</div>
 </div>
 </div>
