@@ -153,7 +153,7 @@
             option = $('.search-select-sort').val();
             type = $('#post-type').val();
             if (!searchContent) searchContent = searchContentDefault;
-            option_url = `/api/search?type=article&filter=type**${type}&q=${searchContent}sortby=${option}`;
+            option_url = `/api/search?type=article&filter=type**${type}&q=${searchContent}&sortby=${option}`;
             console.log(option_url);
             loadTopArticles(option_url);
         })
