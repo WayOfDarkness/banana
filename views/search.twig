@@ -140,17 +140,21 @@
             }
         }
 
-        $('.js-filter-load-page').change(function(e) {
+        $('.search-select-sort').change(function(e) {
             option = $(this).val();
-            type = $('.js-filter-load-page').data('type');
+            type = $('.search-select-sort').data('type');
             option_url = `/api/search?type=article&filter=type**${type}&sortby=${option}`;
             loadTopArticles(option_url);
         })
             
         $(document).ready(function(){
-            option = $('.js-filter-load-page').val();
-            type = $('.js-filter-load-page').data('type');
-            option_url = `/api/search?type=article&filter=type**${type}&sortby=${option}`;
+            searchContent = $('.divider input').val();
+            searchContentDefault = $('#search-content-hidden').val();
+            option = $('.search-select-sort').val();
+            type = $('#post-type').val();
+            if (!searchContent) searchContent = searchContentDefault;
+            option_url = `/api/search?type=article&filter=type**${type}&q=${searchContent}sortby=${option}`;
+            console.log(option_url);
             loadTopArticles(option_url);
         })
     </script>
@@ -186,7 +190,7 @@
                                         </dl>
                                         <div class="divider">
                                             <fieldset>
-                                                <input onkeypress="doSearch(event)" placeholder="Tìm kiếm:" type="text"/>
+                                                <input placeholder="Tìm kiếm:" type="text"/>
                                             </fieldset>
                                         </div>
                                         {% if search.data | length > 0 %}
@@ -245,11 +249,11 @@
                                         <li class="filter-list__item">
                                             <span class="filter-list__label">Nhóm bài viết</span>
                                             <span class="filter-list__filter">
-                                                <select id="attr-filter">
-                                                    <option value="0">Tất cả</option>
-                                                    <option value="news">Tin tức</option>
-                                                    <option value="review">Đánh giá</option>
-                                                    <option value="walkthrough">Hướng dẫn</option>
+                                                <select id="post-type">
+                                                    <option value="view>=0">Tất cả</option>
+                                                    <option value="type**news">Tin tức</option>
+                                                    <option value="type**review">Đánh giá</option>
+                                                    <option value="type**walkthrough">Hướng dẫn</option>
                                                 </select>
                                             </span>
                                         </li>
@@ -277,4 +281,5 @@
             </div>
         </div>
     </div>
+    <input type="hidden" id="search-content-hidden" value="{{search.terms}}"/>
 {% endblock content %}
