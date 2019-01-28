@@ -157,7 +157,11 @@
             searchContentDefault = $('#search-content-hidden').val();
             option = $(this).val();
             type = $('#post-type').val();
-            if (!searchContent) searchContent = searchContentDefault;
+            if (!searchContent)
+                searchContent = searchContentDefault;
+            if (type == 'type**review') 
+                option_url = `/api/search?type=article&filter=${type}%26%26admin_point>0&q=${searchContent}&sortby=${option}`;
+            else
                 option_url = `/api/search?type=article&filter=${type}&q=${searchContent}&sortby=${option}`;
             console.log(option_url);
             loadTopArticles(option_url);
@@ -168,7 +172,11 @@
             searchContentDefault = $('#search-content-hidden').val();
             option = $('.search-select-sort').val();
             type = $('#post-type').val();
-            if (!searchContent) searchContent = searchContentDefault;
+            if (!searchContent)
+                searchContent = searchContentDefault;
+            if (type == 'type**review') 
+                option_url = `/api/search?type=article&filter=${type}%26%26admin_point>0&q=${searchContent}&sortby=${option}`;
+            else
                 option_url = `/api/search?type=article&filter=${type}&q=${searchContent}&sortby=${option}`;
             console.log(option_url);
             loadTopArticles(option_url);
