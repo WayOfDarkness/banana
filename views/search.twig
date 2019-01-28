@@ -12,7 +12,7 @@
                         <div id="default-content" class=" container row">
                             <div class="primary-content span8 medium-span7">
                                 <div>
-                                    <div id="river" class="pod pod-river ">
+                                    <div id="river" class="pod pod-river">
                                         <dl class="pod-header has-feed-group no-layout" data-feed-group="news-list">
                                             <dt class="pod-header__item">
                                                 <div class="pod-title">
@@ -45,7 +45,7 @@
                                                                 {% if item.type == 'review' %}
                                                                     <div class="media-well media-well--review">
                                                                         <div class="media-well--review-gs">
-                                                                            <div class="media-well--review-score ">
+                                                                            <div class="media-well--review-score">
                                                                                 <span class="content">{{item.admin_point}}</span>
                                                                             </div>
                                                                             {% include 'snippet/point-system.twig' %}
@@ -77,7 +77,7 @@
 
                             <aside class="secondary-content span4 medium-span5">
                                 <div class="pod pod-popular">
-                                    <dl class="pod-header  ">
+                                    <dl class="pod-header ">
                                         <dt class="pod-header__item">
                                             <div class="pod-title">
                                                 <h4>Lọc kết quả</h4>
@@ -86,17 +86,17 @@
                                         </dt>
                                     </dl>
                                 </div>
-                                {% set attr = Attributes () %}
-                                a={{attr | json_encode}}
+                                {% set attr = Attributes() %}
                                 <div class="custom-filter">
                                     <ul class="filter-list">
                                         {% for item in attr %}
                                             <li class="filter-list__item">
-                                                <span class="filter-list__label">Chọn lọc</span>
+                                                <span class="filter-list__label">{{item.name}}</span>
                                                 <span class="filter-list__filter">
-                                                    <select id="filter-1" name="review_filter_type[platform]">
-                                                        <option value="">Current platforms</option>
-                                                        <option value="103">Zodiac</option>
+                                                    <select id="attr-filter">
+                                                        {% for child in item.child %}
+                                                            <option value="{{child}}">{{child}}</option>
+                                                        {% endfor %}
                                                     </select>
                                                 </span>
                                             </li>
