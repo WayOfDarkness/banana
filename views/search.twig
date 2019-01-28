@@ -178,34 +178,34 @@
             <div id="rbSkin" class="rbSkin">
                 <div id="wrapper" style="margin-top: 100px !important;">
                     <div id="site" role="main">
-                        <div id="default-content" class=" container row">
-                            <div class="primary-content span8 medium-span7">
-                                <div>
-                                    <div id="river" class="pod pod-river">
-                                        <dl class="pod-header has-feed-group no-layout" data-feed-group="news-list">
-                                            <dt class="pod-header__item">
-                                                <div class="pod-title">
-                                                    <h4>Kết quả tìm kiếm cho từ khóa "{{search.terms}}"</h4>
-                                                    <span aria-hidden="true" class="pod-div" role="presentation"></span>
-                                                </div>
-                                            </dt>
-                                            <dd class="pod-header__item pod-header__filters pod-header__filters--js no-flex">
-                                                <div class="pod-header__filters--select">
-                                                    <select class="search-select-sort">
-                                                        <option value="created_at-desc" selected>Mới nhất</option>
-                                                        <option value="view-desc">Phổ biến nhất</option>
-                                                        <option value="admin_point-desc">Điểm từ cao đến thấp</option>
-                                                        <option value="admin_point-asc">Điểm từ thấp đến cao</option>
-                                                    </select>
-                                                </div>
-                                            </dd>
-                                        </dl>
-                                        <div class="divider">
-                                            <fieldset>
-                                                <input placeholder="Tìm kiếm:" type="text"/>
-                                            </fieldset>
-                                        </div>
-                                        {% if search.data | length > 0 %}
+                        {% if search.data | length > 0 %}
+                            <div id="default-content" class="container row">
+                                <div class="primary-content span8 medium-span7">
+                                    <div>
+                                        <div id="river" class="pod pod-river">
+                                            <dl class="pod-header has-feed-group no-layout" data-feed-group="news-list">
+                                                <dt class="pod-header__item">
+                                                    <div class="pod-title">
+                                                        <h4>Kết quả tìm kiếm cho từ khóa "{{search.terms}}"</h4>
+                                                        <span aria-hidden="true" class="pod-div" role="presentation"></span>
+                                                    </div>
+                                                </dt>
+                                                <dd class="pod-header__item pod-header__filters pod-header__filters--js no-flex">
+                                                    <div class="pod-header__filters--select">
+                                                        <select class="search-select-sort">
+                                                            <option value="created_at-desc" selected>Mới nhất</option>
+                                                            <option value="view-desc">Phổ biến nhất</option>
+                                                            <option value="admin_point-desc">Điểm từ cao đến thấp</option>
+                                                            <option value="admin_point-asc">Điểm từ thấp đến cao</option>
+                                                        </select>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <div class="divider">
+                                                <fieldset>
+                                                    <input placeholder="Tìm kiếm:" type="text"/>
+                                                </fieldset>
+                                            </div>
                                             <div id="js-sort-filter-results">
                                                 <section class="editorial river">
                                                     {% for item in search.data %}
@@ -239,55 +239,72 @@
                                                 </section>
                                                 <div class="pagination__wrapper"></div>
                                             </div>
-                                        {% endif %}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <aside class="secondary-content span4 medium-span5">
-                                <div class="pod pod-popular">
-                                    <dl class="pod-header ">
-                                        <dt class="pod-header__item">
-                                            <div class="pod-title">
-                                                <h4>Lọc kết quả</h4>
-                                                <span aria-hidden="true" class="pod-div" role="presentation"></span>
-                                            </div>
-                                        </dt>
-                                    </dl>
-                                </div>
-                                
-                                <div class="custom-filter">
-                                    <ul class="filter-list">
-                                        <li class="filter-list__item">
-                                            <span class="filter-list__label">Nhóm bài viết</span>
-                                            <span class="filter-list__filter">
-                                                <select id="post-type">
-                                                    <option value="view>=0">Tất cả</option>
-                                                    <option value="type**news">Tin tức</option>
-                                                    <option value="type**review">Đánh giá</option>
-                                                    <option value="type**walkthrough">Hướng dẫn</option>
-                                                </select>
-                                            </span>
-                                        </li>
-
-                                        {% set attr = Attributes() %}
-                                        {% for item in attr %}
+                                <aside class="secondary-content span4 medium-span5">
+                                    <div class="pod pod-popular">
+                                        <dl class="pod-header ">
+                                            <dt class="pod-header__item">
+                                                <div class="pod-title">
+                                                    <h4>Lọc kết quả</h4>
+                                                    <span aria-hidden="true" class="pod-div" role="presentation"></span>
+                                                </div>
+                                            </dt>
+                                        </dl>
+                                    </div>
+                                    
+                                    <div class="custom-filter">
+                                        <ul class="filter-list">
                                             <li class="filter-list__item">
-                                                <span class="filter-list__label">{{item.name}}</span>
+                                                <span class="filter-list__label">Nhóm bài viết</span>
                                                 <span class="filter-list__filter">
-                                                    <select id="attr-filter">
-                                                            <option value="0">Chọn {{item.name}}</option>
-                                                        {% for child in item.child %}
-                                                            <option value="{{child}}">{{child}}</option>
-                                                        {% endfor %}
+                                                    <select id="post-type">
+                                                        <option value="view>=0">Tất cả</option>
+                                                        <option value="type**news">Tin tức</option>
+                                                        <option value="type**review">Đánh giá</option>
+                                                        <option value="type**walkthrough">Hướng dẫn</option>
                                                     </select>
                                                 </span>
                                             </li>
-                                        {% endfor %}
-                                    </ul>
+
+                                            {% set attr = Attributes() %}
+                                            {% for item in attr %}
+                                                <li class="filter-list__item">
+                                                    <span class="filter-list__label">{{item.name}}</span>
+                                                    <span class="filter-list__filter">
+                                                        <select id="attr-filter">
+                                                                <option value="0">Chọn {{item.name}}</option>
+                                                            {% for child in item.child %}
+                                                                <option value="{{child}}">{{child}}</option>
+                                                            {% endfor %}
+                                                        </select>
+                                                    </span>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </aside>
+                            </div>
+                        {% else %}
+                            <div id="default-content" class="container row">
+                                <div class="primary-content span8 medium-span7">
+                                    <div>
+                                        <div id="river" class="pod pod-river">
+                                            <dl class="pod-header has-feed-group no-layout" data-feed-group="news-list">
+                                                <dt class="pod-header__item">
+                                                    <div class="pod-title">
+                                                        <h4>Không có kết quả tìm kiếm cho từ khóa "{{search.terms}}"</h4>
+                                                        <span aria-hidden="true" class="pod-div" role="presentation"></span>
+                                                    </div>
+                                                </dt>
+                                            </dl>
+                                        </div>
+                                    </div>
                                 </div>
-                            </aside>
-                        </div>
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>
