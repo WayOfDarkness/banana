@@ -153,9 +153,13 @@
         }
 
         $('.search-select-sort').change(function(e) {
+            searchContent = $('.divider input').val();
+            searchContentDefault = $('#search-content-hidden').val();
             option = $(this).val();
-            type = $('.search-select-sort').data('type');
-            option_url = `/api/search?type=article&filter=type**${type}&sortby=${option}`;
+            type = $('#post-type').val();
+            if (!searchContent) searchContent = searchContentDefault;
+                option_url = `/api/search?type=article&filter=${type}&q=${searchContent}&sortby=${option}`;
+            console.log(option_url);
             loadTopArticles(option_url);
         })
             
@@ -165,7 +169,7 @@
             option = $('.search-select-sort').val();
             type = $('#post-type').val();
             if (!searchContent) searchContent = searchContentDefault;
-            option_url = `/api/search?type=article&filter=${type}&q=${searchContent}&sortby=${option}`;
+                option_url = `/api/search?type=article&filter=${type}&q=${searchContent}&sortby=${option}`;
             console.log(option_url);
             loadTopArticles(option_url);
         })
