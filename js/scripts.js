@@ -195,11 +195,9 @@ function toggleSocialMobile() {
 
 //go to page search
 function doSearch(e) {
-
   if (e.which == '13') {
     var searchContent = $('#edit-keyword').val();
-    console.log('search ', searchContent);
-    window.location.href = "../search/";
+    window.location.href = `/tim-kiem?type=article&q=${searchContent}`;
   }
   return false;
 }
