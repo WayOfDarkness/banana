@@ -13,7 +13,7 @@
                 type: 'GET',
                 success: function (data) {
                     var html = '';
-                    if (data.data.length == 0) html = 'Không tìm thấy kết quả!!!'
+                    if (data.data.length == 0) html = 'Không tìm thấy kết quả!!!';
                     for (var i = 0 ; i < data.data.length ; i++) {
                         html += `<article class="media media-game media-game">
                                     <a href="${data.data[i].url}">`;
