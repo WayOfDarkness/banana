@@ -13,6 +13,7 @@
                 type: 'GET',
                 success: function (data) {
                     var html = '';
+                    if (data.data.length == 0) html = 'Không tìm thấy kết quả!!!'
                     for (var i = 0 ; i < data.data.length ; i++) {
                         html += `<article class="media media-game media-game">
                                     <a href="${data.data[i].url}">`;
@@ -102,6 +103,7 @@
                     }
                     $.get(href, function (data) {
                         var html = '';
+                        if (data.data.length == 0) html = 'Không tìm thấy kết quả!!!
                         for (var i = 0; i < data.data.length; i++) {
                             html += `<article class="media media-game media-game">
                                     <a href="${data.data[i].url}">`;
@@ -157,12 +159,16 @@
             searchContentDefault = $('#search-content-hidden').val();
             option = $(this).val();
             type = $('#post-type').val();
+            option_1 = $('#attr-filter-1').val();
+            option_2 = $('#attr-filter-2').val();
+            option_3 = $('#attr-filter-3').val();
+            option_4 = $('#attr-filter-4').val();
             if (!searchContent)
                 searchContent = searchContentDefault;
             if (option == 'admin_point-desc' || option == 'admin_point-asc')
-                option_url = `/api/search?type=article&filter=${type}%26%26admin_point>0&q=${searchContent}&sortby=${option}`;
+                option_url = `/api/search?type=article&filter=${type}%26%26admin_point>0${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
             else
-                option_url = `/api/search?type=article&filter=${type}&q=${searchContent}&sortby=${option}`;
+                option_url = `/api/search?type=article&filter=${type}${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
             console.log(option_url);
             loadTopArticles(option_url);
         })
@@ -172,12 +178,16 @@
             searchContentDefault = $('#search-content-hidden').val();
             option = $('.search-select-sort').val();
             type = $(this).val();
+            option_1 = $('#attr-filter-1').val();
+            option_2 = $('#attr-filter-2').val();
+            option_3 = $('#attr-filter-3').val();
+            option_4 = $('#attr-filter-4').val();
             if (!searchContent)
                 searchContent = searchContentDefault;
             if (option == 'admin_point-desc' || option == 'admin_point-asc')
-                option_url = `/api/search?type=article&filter=${type}%26%26admin_point>0&q=${searchContent}&sortby=${option}`;
+                option_url = `/api/search?type=article&filter=${type}%26%26admin_point>0${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
             else
-                option_url = `/api/search?type=article&filter=${type}&q=${searchContent}&sortby=${option}`;
+                option_url = `/api/search?type=article&filter=${type}${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
             console.log(option_url);
             loadTopArticles(option_url);
         })
@@ -187,12 +197,16 @@
             searchContentDefault = $('#search-content-hidden').val();
             option = $('.search-select-sort').val();
             type = $('#post-type').val();
+            option_1 = $('#attr-filter-1').val();
+            option_2 = $('#attr-filter-2').val();
+            option_3 = $('#attr-filter-3').val();
+            option_4 = $('#attr-filter-4').val();
             if (!searchContent)
                 searchContent = searchContentDefault;
             if (option == 'admin_point-desc' || option == 'admin_point-asc')
-                option_url = `/api/search?type=article&filter=${type}%26%26admin_point>0&q=${searchContent}&sortby=${option}`;
+                option_url = `/api/search?type=article&filter=${type}%26%26admin_point>0${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
             else
-                option_url = `/api/search?type=article&filter=${type}&q=${searchContent}&sortby=${option}`;
+                option_url = `/api/search?type=article&filter=${type}${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
             console.log(option_url);
             loadTopArticles(option_url);
         })
@@ -205,133 +219,85 @@
             <div id="rbSkin" class="rbSkin">
                 <div id="wrapper" style="margin-top: 100px !important;">
                     <div id="site" role="main">
-                        {% if search.data | length > 0 %}
-                            <div id="default-content" class="container row">
-                                <div class="primary-content span8 medium-span7">
-                                    <div>
-                                        <div id="river" class="pod pod-river">
-                                            <dl class="pod-header has-feed-group no-layout" data-feed-group="news-list">
-                                                <dt class="pod-header__item">
-                                                    <div class="pod-title">
-                                                        <h4>Kết quả tìm kiếm cho từ khóa "{{search.terms}}"</h4>
-                                                        <span aria-hidden="true" class="pod-div" role="presentation"></span>
-                                                    </div>
-                                                </dt>
-                                                <dd class="pod-header__item pod-header__filters pod-header__filters--js no-flex">
-                                                    <div class="pod-header__filters--select">
-                                                        <select class="search-select-sort">
-                                                            <option value="created_at-desc" selected>Mới nhất</option>
-                                                            <option value="view-desc">Phổ biến nhất</option>
-                                                            <option value="admin_point-desc">Điểm từ cao đến thấp</option>
-                                                            <option value="admin_point-asc">Điểm từ thấp đến cao</option>
-                                                        </select>
-                                                    </div>
-                                                </dd>
-                                            </dl>
-                                            <div class="divider">
-                                                <fieldset>
-                                                    <input placeholder="Tìm kiếm:" type="text"/>
-                                                </fieldset>
-                                            </div>
-                                            <div id="js-sort-filter-results">
-                                                <section class="editorial river">
-                                                    {% for item in search.data %}
-                                                        <article class="media media-game media-game">
-                                                            <a href="{{item.url}}">
-                                                                {% if item.type == 'review' %}
-                                                                    <div class="media-well media-well--review">
-                                                                        <div class="media-well--review-gs">
-                                                                            <div class="media-well--review-score">
-                                                                                <span class="content">{{item.admin_point}}</span>
-                                                                            </div>
-                                                                            {% include 'snippet/point-system.twig' %}
-                                                                        </div>
-                                                                    </div>
-                                                                {% endif %}
-                                                                <figure class="media-figure media-figure--medium">
-                                                                    <div class="media-img imgflare--boxart">
-                                                                        <img src="{{item.image | upload_url}}" alt="{{item.title}}" title="{{item.title}}"/>
-                                                                    </div>
-                                                                </figure>
-                                                                <div class="media-body">
-                                                                    <h3 class="media-title">{{item.title}}</h3>
-                                                                    <p class="media-deck">{{item.description}}</p>
-                                                                    <footer class="media-meta">
-                                                                        <time class="media-date">{{item.created_at}}</time>
-                                                                    </footer>
-                                                                </div>
-                                                            </a>
-                                                        </article>
-                                                    {% endfor %}
-                                                </section>
-                                                <div class="pagination__wrapper"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <aside class="secondary-content span4 medium-span5">
-                                    <div class="pod pod-popular">
-                                        <dl class="pod-header ">
+                        <div id="default-content" class="container row">
+                            <div class="primary-content span8 medium-span7">
+                                <div>
+                                    <div id="river" class="pod pod-river">
+                                        <dl class="pod-header has-feed-group no-layout" data-feed-group="news-list">
                                             <dt class="pod-header__item">
                                                 <div class="pod-title">
-                                                    <h4>Lọc kết quả</h4>
+                                                    <h4>Kết quả tìm kiếm cho từ khóa "{{search.terms}}"</h4>
                                                     <span aria-hidden="true" class="pod-div" role="presentation"></span>
                                                 </div>
                                             </dt>
-                                        </dl>
-                                    </div>
-                                    
-                                    <div class="custom-filter">
-                                        <ul class="filter-list">
-                                            <li class="filter-list__item">
-                                                <span class="filter-list__label">Nhóm bài viết</span>
-                                                <span class="filter-list__filter">
-                                                    <select id="post-type">
-                                                        <option value="view>=0">Tất cả</option>
-                                                        <option value="type**news">Tin tức</option>
-                                                        <option value="type**review">Đánh giá</option>
-                                                        <option value="type**walkthrough">Hướng dẫn</option>
+                                            <dd class="pod-header__item pod-header__filters pod-header__filters--js no-flex">
+                                                <div class="pod-header__filters--select">
+                                                    <select class="search-select-sort">
+                                                        <option value="created_at-desc" selected>Mới nhất</option>
+                                                        <option value="view-desc">Phổ biến nhất</option>
+                                                        <option value="admin_point-desc">Điểm từ cao đến thấp</option>
+                                                        <option value="admin_point-asc">Điểm từ thấp đến cao</option>
                                                     </select>
-                                                </span>
-                                            </li>
-
-                                            {% set attr = Attributes() %}
-                                            {% for item in attr %}
-                                                <li class="filter-list__item">
-                                                    <span class="filter-list__label">{{item.name}}</span>
-                                                    <span class="filter-list__filter">
-                                                        <select id="attr-filter">
-                                                                <option value="0">Chọn {{item.name}}</option>
-                                                            {% for child in item.child %}
-                                                                <option value="{{child}}">{{child}}</option>
-                                                            {% endfor %}
-                                                        </select>
-                                                    </span>
-                                                </li>
-                                            {% endfor %}
-                                        </ul>
-                                    </div>
-                                </aside>
-                            </div>
-                        {% else %}
-                            <div id="default-content" class="container row">
-                                <div class="primary-content span8 medium-span7">
-                                    <div style="height: 345px !important;">
-                                        <div id="river" class="pod pod-river">
-                                            <dl class="pod-header has-feed-group no-layout" data-feed-group="news-list">
-                                                <dt class="pod-header__item">
-                                                    <div class="pod-title">
-                                                        <h4>Không có kết quả tìm kiếm cho từ khóa "{{search.terms}}"</h4>
-                                                        <span aria-hidden="true" class="pod-div" role="presentation"></span>
-                                                    </div>
-                                                </dt>
-                                            </dl>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                        <div class="divider">
+                                            <fieldset>
+                                                <input placeholder="Tìm kiếm:" type="text"/>
+                                            </fieldset>
+                                        </div>
+                                        <div id="js-sort-filter-results">
+                                            <section class="editorial river"></section>
+                                            <div class="pagination__wrapper"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        {% endif %}
+
+                            <aside class="secondary-content span4 medium-span5">
+                                <div class="pod pod-popular">
+                                    <dl class="pod-header ">
+                                        <dt class="pod-header__item">
+                                            <div class="pod-title">
+                                                <h4>Lọc kết quả</h4>
+                                                <span aria-hidden="true" class="pod-div" role="presentation"></span>
+                                            </div>
+                                        </dt>
+                                    </dl>
+                                </div>
+                                
+                                <div class="custom-filter">
+                                    <ul class="filter-list">
+                                        <li class="filter-list__item">
+                                            <span class="filter-list__label">Nhóm bài viết</span>
+                                            <span class="filter-list__filter">
+                                                <select id="post-type">
+                                                    <option value="view>=0">Tất cả</option>
+                                                    <option value="type**news">Tin tức</option>
+                                                    <option value="type**review">Đánh giá</option>
+                                                    <option value="type**walkthrough">Hướng dẫn</option>
+                                                </select>
+                                            </span>
+                                        </li>
+
+                                        {% set attr = Attributes() %}
+                                        {% for item in attr %}
+                                            <li class="filter-list__item">
+                                                <span class="filter-list__label">{{item.name}}</span>
+                                                <span class="filter-list__filter">
+                                                    <select id="attr-filter-{{loop.index}}">
+                                                            <option value="">Tất cả</option>
+                                                        {% for child in item.child %}
+                                                            <option value="%26%26option_{{loop.index}}**{{child}}">{{child}}</option>
+                                                        {% endfor %}
+                                                    </select>
+                                                </span>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </aside>
+                        </div>
                     </div>
                 </div>
             </div>
