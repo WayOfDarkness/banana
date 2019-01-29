@@ -478,17 +478,17 @@
 }
 @media screen and (max-width: 500px) {
   .user-account input {
-    width: 100%;
-    max-width: 100%;
-    margin-right: 0px;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-right: 0px !important;
   }
   .collapse-change-assword > div {
-    width: 100%;
-    margin-right: 0px;
+    width: 100% !important;
+    margin-right: 0px !important;
   }
   .change-nickname-btn, .change-avatar-btn, .change-password-btn {
-    width: 100%;
-    max-width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }
 @media screen and (max-width: 425px) {
