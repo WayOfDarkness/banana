@@ -249,6 +249,18 @@
   }
 }
 @media screen and (max-width: 979px) {
+  .blog-review-article .media-title {
+    margin-bottom: 1rem;
+  }
+  .blog-review-article .media-figure {
+    max-width: calc(100% - 75px);
+    width: 100%;
+    order: -1;
+  }
+  .media-well--review-multiple.media-well, .media-well--review.media-well {
+    min-width: 70px;
+    margin-left: 5px;
+  }
   .rating-overflow {
     width: 100%;
     margin-left: 0;

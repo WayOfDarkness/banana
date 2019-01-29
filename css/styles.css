@@ -2104,3 +2104,8 @@ svg {
 .media--is-top {
   margin-bottom: 1rem;
 }
+.blog-review-article {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
