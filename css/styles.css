@@ -1366,6 +1366,7 @@ body .expanded-menu-button {
 
 .pod-header.has-feed-group.no-layout {
   padding-right: 0 !important;
+  flex-wrap: wrap;
 }
 
 .social-share-button {
@@ -2099,4 +2100,7 @@ svg {
   margin: 0px;
   max-width: 100%;
   width: 100%;
+}
+.media--is-top {
+  margin-bottom: 1rem;
 }

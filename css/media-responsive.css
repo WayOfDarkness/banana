@@ -243,6 +243,11 @@
 }
 
 
+@media screen and (max-width: 980px) {
+  .container {
+    width: initial !important;
+  }
+}
 @media screen and (max-width: 979px) {
   .rating-overflow {
     width: 100%;
@@ -331,6 +336,9 @@
 }
 
 @media screen and (max-width: 759px) {
+  .secondary-content {
+    padding-left: 15px !important;
+  }
   .review-breakdown__inner {
     padding-bottom: 0px;
   }
@@ -363,19 +371,25 @@
 
 @media screen and (max-width: 639px) {
   .pagination li {
-    line-height: 20px;
-    height: 20px;
-    width: 20px;
+    line-height: 30px !important;
+    height: 30px !important;
+    width: 30px !important;
+    padding: 4px !important;
+}
+  .pagination a {
+    line-height: 22px !important;
+    height: 22px !important;
+    width: 22px !important;
   }
   .paginationk-list {
     margin-top: 0.7rem;
   }
   .media-article .block-content {
-    display: flex;
+    display: flex !important;
     flex-wrap: wrap;
   }
   .media-article figure {
-    width: 100%;
+    width: 100% !important;
   }
   .media-article .media-title {
     margin-bottom: 1rem;
@@ -407,6 +421,11 @@
   /*}*/
 }
 
+@media screen and (max-width: 599px) {
+  .promo-strip .media-title {
+    padding-left: 0.5rem;
+  }
+}
 @media screen and (max-width: 525px) {
   .block-login {
     min-width: 50px;
