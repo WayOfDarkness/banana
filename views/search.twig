@@ -158,26 +158,31 @@
             searchContent = $('.divider input').val();
             searchContentDefault = $('#search-content-hidden').val();
             option = $(this).val();
-            type = $('#post-type').val();
-            option_1 = $('#attr-filter-1').val();
-            option_2 = $('#attr-filter-2').val();
-            option_3 = $('#attr-filter-3').val();
-            option_4 = $('#attr-filter-4').val();
             if (!searchContent)
                 searchContent = searchContentDefault;
             if (option == 'admin_point-desc' || option == 'admin_point-asc')
                 option_url = `/api/search?type=article&filter=${type}%26%26admin_point>0${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
             else
                 option_url = `/api/search?type=article&filter=${type}${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
-            console.log(option_url);
             loadTopArticles(option_url);
         })
 
         $('#post-type').change(function(e) {
             searchContent = $('.divider input').val();
             searchContentDefault = $('#search-content-hidden').val();
-            option = $('.search-select-sort').val();
             type = $(this).val();
+            if (!searchContent)
+                searchContent = searchContentDefault;
+            if (option == 'admin_point-desc' || option == 'admin_point-asc')
+                option_url = `/api/search?type=article&filter=${type}%26%26admin_point>0${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
+            else
+                option_url = `/api/search?type=article&filter=${type}${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
+            loadTopArticles(option_url);
+        })
+            
+        $('#attr-filter-1, #attr-filter-2, #attr-filter-3, #attr-filter-4').change(function(e) {
+            searchContent = $('.divider input').val();
+            searchContentDefault = $('#search-content-hidden').val();
             option_1 = $('#attr-filter-1').val();
             option_2 = $('#attr-filter-2').val();
             option_3 = $('#attr-filter-3').val();
@@ -188,10 +193,24 @@
                 option_url = `/api/search?type=article&filter=${type}%26%26admin_point>0${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
             else
                 option_url = `/api/search?type=article&filter=${type}${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
-            console.log(option_url);
             loadTopArticles(option_url);
         })
-            
+
+        function searchFilter(e) {
+            if (e.which == '13') {
+                searchContent = $('.divider input').val();
+                searchContentDefault = $('#search-content-hidden').val();
+                if (!searchContent)
+                    searchContent = searchContentDefault;
+                if (option == 'admin_point-desc' || option == 'admin_point-asc')
+                    option_url = `/api/search?type=article&filter=${type}%26%26admin_point>0${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
+                else
+                    option_url = `/api/search?type=article&filter=${type}${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
+                loadTopArticles(option_url);
+            }
+            return false;
+        })
+
         $(document).ready(function(){
             searchContent = $('.divider input').val();
             searchContentDefault = $('#search-content-hidden').val();
@@ -207,7 +226,6 @@
                 option_url = `/api/search?type=article&filter=${type}%26%26admin_point>0${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
             else
                 option_url = `/api/search?type=article&filter=${type}${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
-            console.log(option_url);
             loadTopArticles(option_url);
         })
     </script>
@@ -243,7 +261,7 @@
                                         </dl>
                                         <div class="divider">
                                             <fieldset>
-                                                <input placeholder="Tìm kiếm:" type="text"/>
+                                                <input placeholder="Tìm kiếm:" onclick="searchFilter(event)" type="text"/>
                                             </fieldset>
                                         </div>
                                         <div id="js-sort-filter-results">
@@ -282,13 +300,14 @@
 
                                         {% set attr = Attributes() %}
                                         {% for item in attr %}
+                                            {% set index = loop.index %}
                                             <li class="filter-list__item">
                                                 <span class="filter-list__label">{{item.name}}</span>
                                                 <span class="filter-list__filter">
-                                                    <select id="attr-filter-{{loop.index}}">
+                                                    <select id="attr-filter-{{index}}">
                                                             <option value="">Tất cả</option>
                                                         {% for child in item.child %}
-                                                            <option value="%26%26option_{{loop.index}}**{{child}}">{{child}}</option>
+                                                            <option value="%26%26option_{{index}}**{{child}}">{{child}}</option>
                                                         {% endfor %}
                                                     </select>
                                                 </span>
