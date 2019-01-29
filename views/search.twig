@@ -169,7 +169,7 @@
                 option_url = `/api/search?type=article&filter=${type}%26%26admin_point>0${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
             else
                 option_url = `/api/search?type=article&filter=${type}${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
-            console.log(option_url);
+            console.log(encodeURIComponent(option_url));
             loadTopArticles(option_url);
         })
 
@@ -188,7 +188,7 @@
                 option_url = `/api/search?type=article&filter=${type}%26%26admin_point>0${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
             else
                 option_url = `/api/search?type=article&filter=${type}${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
-            console.log(option_url);
+            console.log(encodeURIComponent(option_url));
             loadTopArticles(option_url);
         })
             
@@ -207,7 +207,7 @@
                 option_url = `/api/search?type=article&filter=${type}%26%26admin_point>0${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
             else
                 option_url = `/api/search?type=article&filter=${type}${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
-            console.log(option_url);
+            console.log(encodeURIComponent(option_url));
             loadTopArticles(option_url);
         })
     </script>
@@ -282,13 +282,14 @@
 
                                         {% set attr = Attributes() %}
                                         {% for item in attr %}
+                                            {% set index = loop.index %}
                                             <li class="filter-list__item">
                                                 <span class="filter-list__label">{{item.name}}</span>
                                                 <span class="filter-list__filter">
-                                                    <select id="attr-filter-{{loop.index}}">
+                                                    <select id="attr-filter-{{index}}">
                                                             <option value="">Tất cả</option>
                                                         {% for child in item.child %}
-                                                            <option value="%26%26option_{{loop.index}}**{{child}}">{{child}}</option>
+                                                            <option value="%26%26option_{{index}}**{{child}}">{{child}}</option>
                                                         {% endfor %}
                                                     </select>
                                                 </span>
