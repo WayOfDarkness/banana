@@ -22,7 +22,7 @@
           var content = '';
           for (var i = 0 ; i < html.data.length ; i++) {
             content += `<article class="media media-article">
-                          <a href="${html.data[i].url}">
+                          <a href="${html.data[i].url}" class="block-content">
                             <figure class="media-figure media-figure--river">
                               <div class="media-img imgflare--river">
                                 <img src="/uploads/${html.data[i].image}" alt="${html.data[i].title}" title="${html.data[i].title}"/>
@@ -110,7 +110,7 @@
               var content = '';
               for (var i = 0; i < html.data.length; i++) {
                 content += `<article class="media media-article">
-                              <a href="${html.data[i].url}">
+                              <a href="${html.data[i].url}" class="block-content">
                                 <figure class="media-figure media-figure--river">
                                   <div class="media-img imgflare--river">
                                     <img src="/uploads/${html.data[i].image}" alt="${html.data[i].title}" title="${html.data[i].title}"/>
