@@ -482,9 +482,18 @@
     max-width: 100% !important;
     margin-right: 0px !important;
   }
+  .change-avatar .avatar {
+    margin: 0 auto 1rem;
+    text-align: center;
+  }
   .collapse-change-assword > div {
     width: 100% !important;
     margin-right: 0px !important;
+    max-width: 100% !important;
+    margin-bottom: 1rem !important;
+  }
+  .collapse-change-assword {
+    flex-wrap: wrap;
   }
   .change-nickname-btn, .change-avatar-btn, .change-password-btn {
     width: 100% !important;
