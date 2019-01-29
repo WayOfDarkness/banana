@@ -10635,3 +10635,6 @@ aside {
 .theme-dark-header .slide-in {
   background-color: #000
 }
+.river .media-figure {
+  max-width: 40%;
+}

@@ -2109,3 +2109,6 @@ svg {
   flex-wrap: wrap;
   align-items: center;
 }
+.media-game .media-figure {
+  width: 40%;
+}

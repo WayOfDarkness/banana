@@ -183,6 +183,9 @@
     width: 100%;
   }
 
+  .page-article .tag-block {
+    padding: 0px;
+  }
   .flex-div.mobile {
     display: block !important;
     margin-top: 0 !important;
@@ -192,6 +195,7 @@
   }
   .flex-div.mobile .tag-block a.text-block {
     padding-right: 0.5rem;
+    width: 25%;
   }
   .flex-div.mobile .tag-block a.text-block .simple-text {
     padding: 0.5rem 0;
@@ -199,6 +203,7 @@
   }
   .flex-div.mobile .tag-block {
     margin: 0 !important;
+    border: none;
     width: 100%;
   }
   .flex-div {
@@ -281,6 +286,16 @@
   }
 }
 @media screen and (max-width: 768px) {
+
+  .flex-div.mobile .tag-block a.text-block {
+    width: 50%;
+  }
+  .page-article .ds-standard-article {
+    padding: 0.5rem;
+  }
+  .block-comment, .block-reviews {
+    padding: 0 0.25rem;
+  }
 
   .header-logo .site-logo img {
     width: 120px;
@@ -391,7 +406,8 @@
   .pagination a {
     line-height: 22px !important;
     height: 22px !important;
-    width: 22px !important;
+    min-width: 22px !important;
+    max-width: 22px !important;
   }
   .paginationk-list {
     margin-top: 0.7rem;
@@ -459,6 +475,21 @@
     padding: 1rem 0px;
   }
 
+}
+@media screen and (max-width: 500px) {
+  .user-account input {
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0px;
+  }
+  .collapse-change-assword > div {
+    width: 100%;
+    margin-right: 0px;
+  }
+  .change-nickname-btn, .change-avatar-btn, .change-password-btn {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 @media screen and (max-width: 425px) {
   html {
