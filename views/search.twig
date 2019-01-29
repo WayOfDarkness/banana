@@ -192,6 +192,20 @@
             loadTopArticles(option_url);
         })
             
+        $('#attr-filter-1').change(function(e) {
+            searchContent = $('.divider input').val();
+            searchContentDefault = $('#search-content-hidden').val();
+            option_1 = $(this).val();
+            if (!searchContent)
+                searchContent = searchContentDefault;
+            if (option == 'admin_point-desc' || option == 'admin_point-asc')
+                option_url = `/api/search?type=article&filter=${type}%26%26admin_point>0${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
+            else
+                option_url = `/api/search?type=article&filter=${type}${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
+            console.log(option_url);
+            loadTopArticles(option_url);
+        })
+
         $(document).ready(function(){
             searchContent = $('.divider input').val();
             searchContentDefault = $('#search-content-hidden').val();
