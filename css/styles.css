@@ -1392,10 +1392,6 @@ body .expanded-menu-button {
 #search-dropdown .x-close:hover {
   transition-duration: 0.3s;
   border-color: #e74c3c;
-  /*transform: rotateZ(180deg);*/
-}
-
-body[modal-search="true"] #search-dropdown::before {
 }
 
 #search-dropdown {
@@ -1415,7 +1411,6 @@ body[modal-search="true"] #search-dropdown::before {
 body[modal-search="true"] #search-dropdown {
   top: 0;
 }
-
 
 body[modal-search="true"] {
   overflow: hidden;
@@ -1765,9 +1760,6 @@ main {
 }
 
 /*modal change password*/
-.modal-change-password .content-modal {
-}
-
 .modal-change-password p {
   margin-bottom: 0px;
 }
