@@ -6,17 +6,17 @@
 				<li class="promo-type--grid promo-strip__item media">
 					<a href="{{post.url}}">
 						<figure class="media-figure">
+							<div class="type-of-article {{post.type}}">
+								<img class="news" src="{{theme.uri}}/img/icon-article-news.png" alt="type-of-article" width="50px">
+								<img class="review" src="{{theme.uri}}/img/icon-article-review.png" alt="type-of-article" width="50px">
+								<img class="walkthrough" src="{{theme.uri}}/img/icon-article-walkthrough.png" alt="type-of-article" width="50px">
+							</div>
 							<div class="media-img">
 								{% if post.image %}
                                     <img src="{{post.image | resize (640) | upload_url}}" alt="{{post.title}}" title="{{post.title}}"/>
                                 {% else %}
 									<img src="{{settings.sub_img | resize (640) | upload_url}}" alt="{{post.title}}" title="{{post.title}}"/>
                                 {% endif %}
-								<div class="type-of-article {{post.type}}">
-									<img class="news" src="{{theme.uri}}/img/icon-article-news.png" alt="type-of-article" width="50px">
-									<img class="review" src="{{theme.uri}}/img/icon-article-review.png" alt="type-of-article" width="50px">
-									<img class="walkthrough" src="{{theme.uri}}/img/icon-article-walkthrough.png" alt="type-of-article" width="50px">
-								</div>
 							</div>
 							<span class="content-type hide-mobile content-symbol--medium"></span>
 							<div class="media-type media-type--right">
