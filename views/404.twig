@@ -55,19 +55,23 @@
     </main>
 
 {% endblock content %} #}
-
 <html>
     <head>
         <title>Trang không tồn tại</title>
     </head>
     <body bgcolor="#000000" background="{{theme.uri}}/img/bg-404.jpg">
-        <center>
-            <img src="{{theme.uri}}/img/404.png"/>
-            <br/>
-            <br/>
-            <a href="javascript:history.back(-1)">
-                <img src="{{theme.uri}}/img/turnback.png" border="0"/>
-            </a>
-        </center>
+        <main class="main-content">
+            <section class="404-page pt-20">
+                <div class="container">
+                    <div class="error-container">
+                        <img src="{{theme.uri}}/img/404.png"/>
+                        <img src="{{settings.error_img | upload_url}}"/>
+                        <a href="javascript:history.back(-1)">
+                            <img src="{{theme.uri}}/img/turnback.png" border="0"/>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
     </body>
 </html>
