@@ -1,4 +1,4 @@
-{% extends "layout.twig" %}
+{# {% extends "layout.twig" %}
 
 {% block pre_include %}
     <title>Trang không tồn tại</title>
@@ -54,4 +54,75 @@
         </section>
     </main>
 
-{% endblock content %}
+{% endblock content %} #}
+
+<html>
+    <head>
+        <title>Trang không tồn tại</title>
+        <style>
+            * {
+            text-align: center;
+            }
+            .main-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .img-404 {
+                display: block;
+                margin: 150px auto auto;
+            }
+            .img-turnback {
+                width: 100%;
+            }
+            button:hover {
+                background: #bedead;
+            }
+            button {
+                width: 200px;
+                margin: 6px auto 2rem;
+                display: block;
+                padding: 16px 0;
+                cursor: pointer;
+                background: #2C7ABE;
+                color: #FFF;
+                font-weight: bold;
+                border: none;
+            }
+            .hidden-door {
+                display: none;
+            }
+            .hidden-door > * {
+                display: none;
+            }
+        </style>
+        <script src="{{theme.uri}}/js/jquery-3.3.1.min.js"></script>
+    </head>
+    
+    <body bgcolor="#000000" background="{{theme.uri}}/img/bg-404.jpg">
+        <main class="main-content">
+            <section class="404-page pt-20">
+                <div class="container">
+                    <div class="error-container">
+                        <img class="img-404" src="{{theme.uri}}/img/404.png"/>
+                        <a href="javascript:history.back(-1)">
+                            <img class="img-turnback" src="{{theme.uri}}/img/turnback.png" border="0"/>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <div class="hidden-door">
+                <input/>
+                <button>Click me</button>
+            </div>
+        </main>
+    </body>
+
+    <script>
+        $('.hidden-door button').click(function(e) {
+            hiddenContent = $('.hidden-door input').val();
+            if (hiddenContent == 'bedead')
+                $('.error-container').html(`It's not 404 anymore, it's a hidden door. Go though <a href="http://marvriddle.webd.pl/">it</a>...`);
+        })
+    </script>
+</html>
