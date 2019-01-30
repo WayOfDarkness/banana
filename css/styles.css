@@ -1565,6 +1565,11 @@ body[modal-search="true"]::before {
   padding: 0;
   transform: initial;
 }
+.filter-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .filter-list__filter {
   margin: 0;
   line-height: 1.6rem;
