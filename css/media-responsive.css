@@ -179,6 +179,13 @@
 @media screen and (max-width: 1024px) {
 
 
+  #default-content{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #default-content .primary-content {
+    order: 1;
+  }
   #default-content > * {
     width: 100%;
   }

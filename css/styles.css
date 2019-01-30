@@ -479,6 +479,7 @@ body .expanded-menu-button {
 
 #expanded-menu a {
   font-size: 1.2rem !important;
+  text-align: left;
 }
 
 .page-blog {
@@ -1560,8 +1561,22 @@ body[modal-search="true"]::before {
 
 .filter-list__label {
   font-size: 1rem;
+  display: block;
+  position: static;
+  top: initial;
+  font-weight: bold;
+  width: initial;
+  margin: 0;
+  padding: 0;
+  transform: initial;
 }
-
+.filter-list__filter {
+  margin: 0;
+  line-height: 1.6rem;
+  padding: 0.5rem 0;
+  flex-grow: 1;
+  margin-left: 1rem;
+}
 .filter-list__filter > select {
   font-size: 1rem;
 }
@@ -2101,14 +2116,17 @@ svg {
   max-width: 100%;
   width: 100%;
 }
+
 .media--is-top {
   margin-bottom: 1rem;
 }
+
 .blog-review-article {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
+
 .media-game .media-figure {
   width: 40%;
 }
