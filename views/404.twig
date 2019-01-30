@@ -68,6 +68,13 @@
                 justify-content: center;
                 align-items: center;
             }
+            .img-404 {
+                display: block;
+                margin: 150px auto auto;
+            }
+            .img-turnback {
+                width: 100%;
+            }
         </style>
     </head>
     
@@ -76,9 +83,9 @@
             <section class="404-page pt-20">
                 <div class="container">
                     <div class="error-container">
-                        <img src="{{theme.uri}}/img/404.png"/>
+                        <img class="img-404" src="{{theme.uri}}/img/404.png"/>
                         <a href="javascript:history.back(-1)">
-                            <img src="{{theme.uri}}/img/turnback.png" border="0"/>
+                            <img class="img-turnback" src="{{theme.uri}}/img/turnback.png" border="0"/>
                         </a>
                     </div>
                 </div>
