@@ -220,13 +220,13 @@ html * {
     background-position: 50% 0;
   }
   .cd-form label.cd-name {
-    background-image: url("../img/icon/user-ninja-solid.svg");
+    background-image: url("../img/icon/user-ninja-solid-v2.svg");
   }
   .cd-form label.cd-email {
-    background-image: url("../img/icon/envelope-solid.svg");
+    background-image: url("../img/icon/envelope-solid-v2.svg");
   }
   .cd-form label.cd-password {
-    background-image: url("../img/icon/lock-solid.svg");
+    background-image: url("../img/icon/lock-solid-v2.svg");
   }
   .cd-form input {
     margin: 0;
