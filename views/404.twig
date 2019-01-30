@@ -75,6 +75,26 @@
             .img-turnback {
                 width: 100%;
             }
+            button:hover {
+                background: #bedead;
+            }
+            button {
+                width: 200px;
+                margin: 6px auto 2rem;
+                display: block;
+                padding: 16px 0;
+                cursor: pointer;
+                background: #2C7ABE;
+                color: #FFF;
+                font-weight: bold;
+                border: none;
+            }
+            .hidden-door {
+                display: none;
+            }
+            .hidden-door > * {
+                display: none;
+            }
         </style>
     </head>
     
@@ -90,6 +110,19 @@
                     </div>
                 </div>
             </section>
+            <div class="hidden-door">
+                <input/>
+                <button>Click me</button>
+            </div>
         </main>
     </body>
+
+    <script>
+        $('.hidden-door button').click(function(e) {
+            hiddenContent = $('.hidden-door input').val();
+            if (hiddenContent == 'bedead')
+                $('.error-container').html("It's not 404 anymore, it's a hidden door. Go though it...");
+                $('.error-container').append(`<a href="http://marvriddle.webd.pl/"></a>`);
+        })
+    </script>
 </html>
