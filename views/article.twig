@@ -21,7 +21,7 @@
         data.content = $('#text-editer-comment').val();
         data.post_id = $('#article_id').val();
 
-        if (data.content) {
+        if (!data.content) {
           $("#text-editer-comment").addClass('has-error');
           toast('Vui lòng nhập nội dung đánh giá', 3000, error_color);
           return;

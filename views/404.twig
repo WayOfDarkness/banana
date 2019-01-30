@@ -1,4 +1,4 @@
-{% extends "layout.twig" %}
+{# {% extends "layout.twig" %}
 
 {% block pre_include %}
     <title>Trang không tồn tại</title>
@@ -54,4 +54,20 @@
         </section>
     </main>
 
-{% endblock content %}
+{% endblock content %} #}
+
+<html>
+    <head>
+        <title>Trang không tồn tại</title>
+    </head>
+    <body bgcolor="#000000" background="{{theme.uri}}/img/bg-404.jpg">
+        <center>
+            <img src="{{theme.uri}}/img/404.png"/>
+            <br/>
+            <br/>
+            <a href="javascript:history.back(-1)">
+                <img src="{{theme.uri}}/img/turnback.png" border="0"/>
+            </a>
+        </center>
+    </body>
+</html>
