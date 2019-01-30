@@ -1564,7 +1564,7 @@ body[modal-search="true"]::before {
   font-weight: bold;
   width: initial;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 1rem;
   transform: initial;
 }
 .filter-list__item {
@@ -1573,11 +1573,10 @@ body[modal-search="true"]::before {
   align-items: center;
 }
 .filter-list__filter {
-  margin: 0;
+  margin: 0 1rem;
   line-height: 1.6rem;
   padding: 0.5rem 0;
   flex-grow: 1;
-  margin-left: 1rem;
 }
 .filter-list__filter > select {
   font-size: 1rem;
@@ -2122,6 +2121,6 @@ svg {
 .media-game .media-figure {
   width: 40%;
 }
-.pod-title {
+.pod-title h4 {
   white-space: pre-wrap;
 }
