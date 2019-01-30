@@ -10,6 +10,45 @@
       var date = $('.author-details span').html();
       $('.author-details span').html(checkDateName(date.split(' ')[0]));
     })
+
+    function postReview() {
+      if (checkLogin() != 1)
+        toast('Bạn cần đăng nhập để đăng đánh giá', 3000, error_color);
+      else {
+        var data = {};
+        data.rating = $('#review-point').val();
+        data.post_type = 'article';
+        data.content = $('#text-editer-comment').val();
+        data.post_id = $('#article_id').val();
+
+        if (data.content) {
+          $("#text-editer-comment").addClass('has-error');
+          toast('Vui lòng nhập nội dung đánh giá', 3000, error_color);
+          return;
+        } else {
+          $("#text-editer-comment").removeClass('has-error');
+        }
+
+        if (data.rating == 0) {
+          $('#review-point').addClass('has-error');
+          toast('Vui lòng chọn điểm đánh giá', 3000, error_color);
+          return;
+        } else {
+          $('#review-point').removeClass('has-error');
+        }
+
+        StoreAPI.addReview(data, function (result) {
+          if (!result.code) {
+            toast('Đăng đánh giá thành công', 3000, error_color);
+            setTimeout(function () {
+              location.reload();
+            }, 1000);
+          } else {
+            toast(result.message, 3000, error_color);
+          }
+        })
+      }
+    }
   </script>
 {% endblock %}
 
@@ -446,7 +485,7 @@
                     </div>
                   </div>
 
-                  {% if article.type == 'review' %}
+                  {% if article.type == 'review' and (article.game.infomation or article.game.requirement) %}
                     <!-- GAME INFOMATIONS AND REQUIREMENTS -->
                     <div class="config-wrapper">
                       <ul class="config-tab-wrapper">
@@ -641,8 +680,9 @@
                               </button>
                               <dd class="pod-header__item review-pusher-item pod-header__filters pod-header__filters--js no-flex">
                                 <div class="pod-header__filters--select">
-                                  <select class="effect-hover-1" name="sort">
-                                    <option value="10" selected>10 - Hoàn hảo</option>
+                                  <select class="effect-hover-1" id="review-point" name="sort">
+                                    <option value="0" selected>Điểm</option>
+                                    <option value="10">10 - Hoàn hảo</option>
                                     <option value="9">9 - Xuất sắc</option>
                                     <option value="8">8 - Hay</option>
                                     <option value="7">7 - Khá</option>
@@ -652,7 +692,6 @@
                                     <option value="3">3 - Tệ</option>
                                     <option value="2">2 - Quá tệ</option>
                                     <option value="1">1 - Trash</option>
-                                    <option value="0">Điểm</option>
                                   </select>
                                 </div>
                               </dd>
