@@ -221,12 +221,18 @@ html * {
   }
   .cd-form label.cd-name {
     background-image: url("../img/icon/user-ninja-solid-v2.svg");
+    z-index: 1;
+    background-size: contain;
   }
   .cd-form label.cd-email {
     background-image: url("../img/icon/envelope-solid-v2.svg");
+    z-index: 1;
+    background-size: contain;
   }
   .cd-form label.cd-password {
     background-image: url("../img/icon/lock-solid-v2.svg");
+    z-index: 1;
+    background-size: contain;
   }
   .cd-form input {
     margin: 0;
