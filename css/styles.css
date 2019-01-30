@@ -1555,6 +1555,8 @@ body[modal-search="true"]::before {
 }
 
 .filter-list__label {
+  text-align: left;
+  min-width: 100px;
   font-size: 1rem;
   display: block;
   position: static;
@@ -2119,4 +2121,7 @@ svg {
 
 .media-game .media-figure {
   width: 40%;
+}
+.pod-title {
+  white-space: pre-wrap;
 }
