@@ -18,9 +18,6 @@
             html += `<article class="media media-game media-game">
                                     <a href="${data.data[i].url}">`;
 
-            //tuan check
-            //mới phân ra 2 loại review và blog
-            //search ra cái nào thì hiện cái đó
 
             if (data.data[i].type == 'review') {
               html += `<div class="media-well media-well--review">
@@ -56,34 +53,6 @@
                                 </div>
                             </a>
                         </article>`;
-            }
-            else if (data.data[i].type == 'blog') {
-              html += `<article class="media media-game media-game">
-									<a class="blog-review-article" href="${data.data[i].url}">
-										<div class="media-well media-well--review">
-											<div class="media-well--review-gs">
-												<div class="media-well--review-score">
-													<span class="content">${data.data[i].admin_point}</span>
-												</div>
-												<span class="score-word">${pointSystem(data.data[i].admin_point)}</span>
-											</div>
-										</div>
-										<figure class="media-figure media-figure--medium">
-											<div class="media-img imgflare--boxart">
-												<img src="/uploads/${data.data[i].image}" alt="${data.data[i].title}" title="${data.data[i].title}"/>
-											</div>
-										</figure>
-										<div class="media-body">
-											<h3 class="media-title">${data.data[i].title.substring(0,60)}...</h3>
-											<p class="media-deck">${data.data[i].description.substring(0,150)}...</p>
-											<footer class="media-meta">
-												<time class="media-date">
-													${checkDateName(data.data[i].created_at.split(' ')[0])}
-												</time>
-											</footer>
-										</div>
-									</a>
-								</article>`;
             }
           }
 
