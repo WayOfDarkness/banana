@@ -1556,7 +1556,7 @@ body[modal-search="true"]::before {
 
 .filter-list__label {
   text-align: left;
-  min-width: 100px;
+  min-width: 110px;
   font-size: 1rem;
   display: block;
   position: static;
