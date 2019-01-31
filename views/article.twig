@@ -39,6 +39,7 @@
         }
 
         StoreAPI.addReview(data, function (result) {
+          console.log(result);
           if (!result.code) {
             toast('Đăng đánh giá thành công', 3000, error_color);
             setTimeout(function () {
