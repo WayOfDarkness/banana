@@ -2125,3 +2125,6 @@ svg {
 .pod-title h4 {
   white-space: pre-wrap;
 }
+.pod-filter .filter-results.grid .media-figure {
+  width: 100%;
+}
