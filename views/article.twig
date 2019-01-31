@@ -18,6 +18,7 @@
         var data = {};
         data.rating = $('#review-point').val();
         data.post_type = 'article';
+        data.title = '___';
         data.content = $('#text-editer-comment').val();
         data.post_id = $('#article_id').val();
 
@@ -342,7 +343,7 @@
                             </a>
                           </div>
                           <div class="social-share-button">
-                            <a>
+                            <a onclick="checkBookmark()">
                               <div class="social-icon bookmark" >
                                 <svg fill="#656565" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                      width="431.972px" height="431.972px" viewBox="0 0 431.972 431.972" style="enable-background:new 0 0 431.972 431.972;fill:#656565;"
