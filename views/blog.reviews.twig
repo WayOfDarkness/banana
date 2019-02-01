@@ -31,7 +31,7 @@
 											</div>
 										</figure>
 										<div class="media-body">
-											<h3 class="media-title">${data.data[i].title.substring(0,60)}...</h3>
+											<h3 class="media-title">${convertTitle(data.data[i].title.substring(0,60))}...</h3>
 											<p class="media-deck">${data.data[i].description.substring(0,150)}...</p>
 											<footer class="media-meta">
 												<time class="media-date">
@@ -108,7 +108,7 @@
 												</div>
 											</figure>
 											<div class="media-body">
-												<h3 class="media-title">${data.data[i].title.substring(0,60)}...</h3>
+												<h3 class="media-title">${convertTitle(data.data[i].title.substring(0,60))}...</h3>
 												<p class="media-deck">${data.data[i].description.substring(0,150)}...</p>
 												<footer class="media-meta">
 													<time class="media-date">
