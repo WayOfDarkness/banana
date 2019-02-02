@@ -17,7 +17,7 @@
                         {% set header_menu = Menu ('menu') %}
                         <ul class="menu">
                             {% for item in header_menu.children %}
-                                {% set active = item.link == url ? 'nav-active' : '' %}
+                                {% set active = item.link in url ? 'nav-active' : '' %}
                                 <li class="menu-item font-arima" id="menu-News">
                                     <a href="{{ item.link }}" class="{{ active }}">
                                         {{ item.title }}

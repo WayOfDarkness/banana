@@ -297,12 +297,59 @@ function checkDownvote() {
   }
 }
 
+// Get Bookmark
+function getBookmark() {
+  $.ajax({
+    url: `/api/bookmark`,
+    type: "POST",
+    success: function (result) {
+      if (!result.code) {
+        for (var i = 0; i < data.data.length; i++) {
+          html += `<div class="teaser">
+                    <div class="teaser-left">
+                        <div class="teaser-left-wrapper">
+                            <div class="promo-img-thumb">
+                                <a href="${data.data[i].url}">
+                                  <img src="/uploads/${data.data[i].image}"/>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teaser-right">
+                        <div class="teaser-right-wrapper">
+                            <h3 class="page-title article-title">
+                                <a href="${data.data[i].url}">${data.data[i].title}</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>`;
+        }
+        $('.article-carousel').html(html);
+      }
+    }
+  });
+}
+
 // Check Bookmark
 function checkBookmark() {
   if (checkLogin() != 1)
     toast('Bạn cần đăng nhập để bookmark', 3000, error_color);
   else {
-
+    var id = $('#article_id').val();
+    $.ajax({
+      url: `/api/bookmark/${id}`,
+      type: "POST",
+      success: function (result) {
+        if (result.status == 'save') {
+          toast('Bạn đã bookmark thành công', 3000, success_color);
+          $('.social-share-button .bookmark svg').css('fill', success_color);
+        } else {
+          $('.social-share-button .bookmark svg').css('fill', default_color);
+          toast('Bạn đã hủy bookmark thành công', 3000, success_color);
+        }
+      }
+    });
+    getBookmark();
   }
 }
 
@@ -371,7 +418,7 @@ function pointSystem(point) {
     case 6:
       return 'Tạm được';
       break;
-    case 5:
+    case 5:o
       return 'Trung bình';
       break;
     case 4:

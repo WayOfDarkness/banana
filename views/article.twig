@@ -9,6 +9,8 @@
     $(document).ready(function () {
       var date = $('.author-details span').html();
       $('.author-details span').html(checkDateName(date.split(' ')[0]));
+      getBookmark();
+      getReview();
     })
 
     function postReview() {
@@ -50,6 +52,37 @@
           }
         })
       }
+    }
+
+    function getReview() {
+      var data = {};
+      data.post_type = 'article';
+      data.post_id = $('#article_id').val();
+
+      StoreAPI.getReview(post_type, post_id, 'created_at-desc', function (result) {
+        var review_list = '';
+        for (var i = 1; i < result.data.length; i++) {
+          review_list += `<div class="block-reviews--comment">
+                            <div class="block-reviews--auth">
+                              <img src="/uploads/${result.data[i].avatar}" alt="avatar" class="comment-avatar"/>
+                              <span>Đánh giá bởi <strong class="review-author">${result.data[i].title}</strong></span>
+                              <span class="rating-review">
+                                <img src="{{theme.uri}}/img/icon/icon-star.png" width="16px" height="16px"/>
+                                ${result.data[i].rating}/10
+                              </span>
+                            </div>
+                            <div class="comment-text-review">
+                              <p class="review-title">
+                                ${result.data[i].title}
+                              </p>
+                              <p class="review-content">
+                                ${result.data[i].content}
+                              </p>
+                            </div>
+                          </div>`;
+        }
+        $('.list-comment-review').html(review_list);
+      })
     }
   </script>
 {% endblock %}
