@@ -71,6 +71,7 @@
       var arr = image.split('.');
       var last_element = arr[arr.length - 1];
       var new_image = image.replace('.' + last_element, '_' + size + '.' + last_element);
+      console.log("arr: ", arr);
       console.log("last element: ", last_element);
       console.log(new_image);
       return new_image;
