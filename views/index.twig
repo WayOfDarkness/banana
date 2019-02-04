@@ -68,6 +68,7 @@
     }
 
     function resizeImage(image, size) {
+      var matches = image.match(/(.*\/[\w\-\_\.]+)\.(\w{2,4})/);
       console.log("test: ", matches[1].replace(/http:/g, '') + '_' + size + '.' + matches[2]);
       try {
         if (size == 'original') {
