@@ -5,7 +5,7 @@
                 <div class="region region-header-logo">
                     <div id="block-gi5-branding" class="block block-system block-system-branding-block">
                         <a class="site-logo" href="/" rel="home" title="Home">
-                            <img src="{{ settings.logo | upload_url }}" alt="Home"/>
+                            <img src="{{ settings.logo | resize(240)  | upload_url }}" alt="Home"/>
                         </a>
                     </div>
                 </div>
