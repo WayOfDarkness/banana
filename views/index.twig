@@ -68,7 +68,7 @@
     }
 
     function resizeImage(image, size) {
-      var arr = image.split('.', image);
+      var arr = image.split('.');
       var last_element = arr[arr.length - 1];
       var new_image = image.replace('.' + last_element, '_' + size + '.' + last_element);
       console.log("last element: ", last_element);
