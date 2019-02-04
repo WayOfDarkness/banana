@@ -69,7 +69,7 @@
 
     function resizeImage(image, size) {
       var matches = image.match(/(.*\/[\w\-\_\.]+)\.(\w{2,4})/);
-      console.log(matches);
+      console.log('image: ' ,image, ' mathches ' , matches);
       try {
         if (size == 'original') {
           return image;
