@@ -53,12 +53,8 @@ h2 {
 }
 
 .footer-custom-logo {
-  /* background-image: url("../img/icon/logo.png");
-  background-size: contain;
-  background-repeat: no-repeat; */
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
-  /* background-position: center; */
   min-height: 100px;
   overflow: hidden;
   text-indent: -9999px;

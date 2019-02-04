@@ -1,7 +1,7 @@
 <footer role="contentinfo">
     <input type="hidden" id="isCustomerHere" value="{{customer.logged_in}}"/>
     <a href="/">
-        <div class="footer-custom-logo" style="background: url({{settings.logo | resize(240) | upload_url}}) contain no-repeat center;">{{settings.website_name}}</div>
+        <div class="footer-custom-logo" style="background: url({{settings.logo | resize(240) | upload_url}}) no-repeat center;">{{settings.website_name}}</div>
     </a>
 
     {% if settings.facebook or settings.youtube %}
