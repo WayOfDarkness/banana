@@ -68,7 +68,7 @@
     }
 
     function resizeImage(image, size) {
-      console.log("test");
+      console.log("test: ", matches[1].replace(/http:/g, '') + '_' + size + '.' + matches[2]);
       try {
         if (size == 'original') {
           return image;
