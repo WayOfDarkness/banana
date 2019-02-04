@@ -68,18 +68,11 @@
     }
 
     function resizeImage(image, size) {
-      var matches = image.match(/(.*\/[\w\-\_\.]+)\.(\w{2,4})/);
-      console.log('image: ' ,image, ' mathches ' , matches);
-      try {
-        if (size == 'original') {
-          return image;
-        } else {
-          var matches = image.match(/(.*\/[\w\-\_\.]+)\.(\w{2,4})/);
-          return matches[1].replace(/http:/g, '') + '_' + size + '.' + matches[2];
-        }
-      } catch (e) {
-        return image.replace(/http:/g, '');
-      }
+      var arr = image.split('.', $image);
+      var last_element = arr[arr.length - 1];
+      var new_image = image.replace('.' + last_element, '_' + size + '.' + last_element);
+      console.log(new_image);
+      return new_image;
     };
 
     function initPaginate(url) {
