@@ -5,7 +5,7 @@
                 <div class="region region-header-logo">
                     <div id="block-gi5-branding" class="block block-system block-system-branding-block">
                         <a class="site-logo" href="/" rel="home" title="Home">
-                            <img src="{{ settings.logo | resize(240)  | upload_url }}" alt="Home"/>
+                            <img src="{{settings.logo | resize(240)  | upload_url}}" alt="Home"/>
                         </a>
                     </div>
                 </div>
@@ -17,10 +17,10 @@
                         {% set header_menu = Menu ('menu') %}
                         <ul class="menu">
                             {% for item in header_menu.children %}
-                                {% set active = item.link in url ? 'nav-active' : '' %}
+                                {% set active = item.link == url ? 'nav-active' : '' %}
                                 <li class="menu-item font-arima" id="menu-News">
-                                    <a href="{{ item.link }}" class="{{ active }}">
-                                        {{ item.title }}
+                                    <a href="{{item.link}}" class="{{active}}">
+                                        {{item.title}}
                                     </a>
                                 </li>
                             {% endfor %}
@@ -65,13 +65,13 @@
                         <div class="isLoginSuccess">
                             <div class="user-avatar">
                                 {% if customer.avatar %}
-                                    <img src="{{ customer.avatar | upload_url }}" alt="avatar"/>
+                                    <img src="{{customer.avatar | upload_url}}" alt="avatar"/>
                                     {% else %}
-                                    <img src="{{ theme.uri }}/img/avatar-default.png" alt="avatar"/>
+                                    <img src="{{theme.uri}}/img/avatar-default.png" alt="avatar"/>
                                 {% endif %}
                             </div>
                             <p class="user-name">
-                                {{ customer.name }}
+                                {{customer.name}}
                             </p>
                             <div class="list-menu">
                                 <a href="/user_account">Trang cá nhân</a>
@@ -153,12 +153,12 @@
             <div class="isLoginSuccess mobile">
                 <div class="user-avatar">
                     {% if customer.avatar %}
-                        <img src="{{ customer.avatar | upload_url }}" alt="avatar"/>
+                        <img src="{{customer.avatar | upload_url}}" alt="avatar"/>
                         {% else %}
-                        <img src="{{ theme.uri }}/img/avatar-default.png" alt="avatar"/>
+                        <img src="{{theme.uri}}/img/avatar-default.png" alt="avatar"/>
                     {% endif %}
                     <p class="user-name">
-                        {{ customer.name }}
+                        {{customer.name}}
                     </p>
                 </div>
             </div>
@@ -190,8 +190,8 @@
                             {% for item in header_menu.children %}
                                 {% set active = item.link == url ? 'nav-active' : '' %}
                                 <li class="menu-item font-arima" id="menu-News">
-                                    <a href="{{ item.link }}" class="{{ active }}">
-                                        {{ item.title }}
+                                    <a href="{{item.link}}" class="{{active}}">
+                                        {{item.title}}
                                     </a>
                                 </li>
                             {% endfor %}

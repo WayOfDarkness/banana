@@ -44,26 +44,6 @@ h2 {
   font-weight: bold;
 }
 
-.social-share-button .social-icon.upvote {
-  /*-webkit-mask: url("../img/icon/thumbs-up-solid.svg") no-repeat 100% 100%;*/
-}
-
-.social-share-button .social-icon.downvote {
-  /*-webkit-mask: url("../img/icon/thumbs-down-solid.svg") no-repeat 100% 100%;*/
-}
-
-.social-share-button .social-icon.share {
-  /*-webkit-mask: url("../img/icon/facebook-brands.svg") no-repeat 100% 100%;*/
-}
-
-.social-share-button .social-icon.comment {
-  /*-webkit-mask: url("../img/icon/comments-solid.svg") no-repeat 100% 100%;*/
-}
-
-.social-share-button .social-icon.bookmark {
-  /*-webkit-mask: url("../img/icon/bookmark-solid.svg") no-repeat 100% 100%;*/
-}
-
 .ad-299 {
   padding: 1rem 0.5rem;
   text-align: left;
@@ -73,12 +53,12 @@ h2 {
 }
 
 .footer-custom-logo {
-  background-image: url("../img/icon/logo.png");
+  /* background-image: url("../img/icon/logo.png");
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
-  background-position: center;
+  /* background-position: center; */
   min-height: 100px;
   overflow: hidden;
   text-indent: -9999px;
