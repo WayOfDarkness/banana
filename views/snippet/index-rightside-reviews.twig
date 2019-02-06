@@ -26,7 +26,7 @@
 			<ol class="reviews-list">
 				<div class="filter-results js-filter-results">
                     <ul class="game game--top-games">
-						{% set count = 0 %}
+						{# {% set count = 0 %}
 						{% for item in Article (1, 1000, 'view-desc') %}
 							{% if item.type == 'review' and count <= 10 %}
 								<li class="game-background reviews-list__item reviews-list__item--first" style="background-image: url({{item.image | resize (640) | upload_url}})">
@@ -58,7 +58,7 @@
 								</li>
 								{% set count = count + 1 %}
 							{% endif %}
-						{% endfor %}
+						{% endfor %} #}
 					</ul>
                	</div>
 			</ol>

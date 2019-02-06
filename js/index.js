@@ -154,13 +154,13 @@ $('.js-filter-option').click(function() {
     ajaxLoadFilter(url);
 
     option = $('.js-filter-json').val();
-    option_url = `/api/search?type=article&filter=type**review&sortby=${option}`;
+    option_url = `/api/search?type=article&filter=type**review&sortby=${option}&perpage=10`;
     loadTopReviews(option_url);
   })
 
   $('.js-filter-json').change(function(e) {
     var option = $(this).val();
-    var option_url = `/api/search?type=article&filter=type**review&sortby=${option}`;
+    var option_url = `/api/search?type=article&filter=type**review&sortby=${option}&perpage=10`;
     loadTopReviews(option_url);
   })
 
