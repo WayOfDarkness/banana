@@ -16,9 +16,9 @@ $('.js-filter-option').click(function() {
                         <a href="${html.data[i].url}" class="block-content">
                           <figure class="media-figure media-figure--river">
                             <div class="type-of-article ${html.data[i].type}">
-                              <img class="news" src="../img/icon-article-news.png" alt="type-of-article" width="50px">
-                              <img class="review" src="../img/icon-article-review.png" alt="type-of-article" width="50px">
-                              <img class="walkthrough" src="../img/icon-article-walkthrough.png" alt="type-of-article" width="50px">
+                              <img class="news" src="/themes/banana/img/icon-article-news.png" alt="type-of-article" width="50px">
+                              <img class="review" src="/themes/banana/img/icon-article-review.png" alt="type-of-article" width="50px">
+                              <img class="walkthrough" src="/themes/banana/img/icon-article-walkthrough.png" alt="type-of-article" width="50px">
                             </div>
                             <div class="media-img imgflare--river">
                               <img src="/uploads/${resizeImage(html.data[i].image, 480)}" alt="${html.data[i].title}" title="${html.data[i].title}"/>
@@ -107,9 +107,9 @@ $('.js-filter-option').click(function() {
                             <a href="${html.data[i].url}" class="block-content">
                               <figure class="media-figure media-figure--river">
                                 <div class="type-of-article ${html.data[i].type}">
-                                  <img class="news" src="../img/icon-article-news.png" alt="type-of-article" width="50px">
-                                  <img class="review" src="../img/icon-article-review.png" alt="type-of-article" width="50px">
-                                  <img class="walkthrough" src="../img/icon-article-walkthrough.png" alt="type-of-article" width="50px">
+                                  <img class="news" src="/themes/banana/img/icon-article-news.png" alt="type-of-article" width="50px">
+                                  <img class="review" src="/themes/banana/img/icon-article-review.png" alt="type-of-article" width="50px">
+                                  <img class="walkthrough" src="/themes/banana/img/icon-article-walkthrough.png" alt="type-of-article" width="50px">
                                 </div>
                                 <div class="media-img imgflare--river">
                                   <img src="/uploads/${resizeImage(html.data[i].image, 480)}" alt="${html.data[i].title}" title="${html.data[i].title}"/>
