@@ -190,20 +190,6 @@ $('.divider input').change(function() {
         option_url = `/api/search?type=article&filter=${type}${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
     loadTopArticles(option_url);
 })
-// function searchFilter(e) {
-//     if (e.which == '13') {
-//         searchContent = $('.divider input').val();
-//         searchContentDefault = $('#search-content-hidden').val();
-//         if (!searchContent)
-//             searchContent = searchContentDefault;
-//         if (option == 'admin_point-desc' || option == 'admin_point-asc')
-//             option_url = `/api/search?type=article&filter=${type}%26%26admin_point>0${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
-//         else
-//             option_url = `/api/search?type=article&filter=${type}${option_1}${option_2}${option_3}${option_4}&q=${searchContent}&sortby=${option}`;
-//         loadTopArticles(option_url);
-//     }
-//     return false;
-// }
 
 $(document).ready(function () {
     searchContent = $('.divider input').val();
