@@ -436,6 +436,10 @@
     width: 100%;
     padding-top: 1rem;
   }
+  #default-content .media-figure {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
 }
 @media screen and (max-width: 603px) {
   /*.review-breakdown {*/
