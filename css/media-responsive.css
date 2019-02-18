@@ -184,7 +184,7 @@
     flex-wrap: wrap;
   }
   #default-content .primary-content {
-    order: 1;
+    order: 0;
   }
   #default-content > * {
     width: 100%;
@@ -293,7 +293,9 @@
   }
 }
 @media screen and (max-width: 768px) {
-
+  .cd-user-modal.is-visible {
+    padding: 0;
+  }
   #default-content > * {
     padding: 0 1rem;
   }
