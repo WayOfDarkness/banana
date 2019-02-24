@@ -67,12 +67,19 @@
   .icon-menu-mobile {
     display: block;
   }
+
   .page-article .tag-block {
     border-left: none;
   }
+
   .page-article .ds-right .field__item {
     display: none;
   }
+
+  .block-fab {
+    display: block;
+  }
+
   .page-article .social-share {
     position: fixed;
     top: 50%;

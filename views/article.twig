@@ -1,127 +1,132 @@
 {% extends "layout.twig" %}
 
 {% block pre_include %}
-    <title>{{article.title}}</title>
+  <title>{{ article.title }}</title>
 {% endblock %}
 
 {% block post_include %}
-  <script src="{{theme.uri}}/js/article.js"></script>
+  <script src="{{ theme.uri }}/js/article.js"></script>
 {% endblock %}
 
 {% block content %}
 
-    {% set parentBlog = Blog(article.blogs[0]) %}
-    {% if CustomField(article.id,'article','author') %}
-      {% set author = CustomField(article.id,'article','author') %}
-    {% else %}
-      {% set author = 'Phi' %}
-    {% endif %}
+  {% set parentBlog = Blog(article.blogs[0]) %}
+  {% if CustomField(article.id,'article','author') %}
+    {% set author = CustomField(article.id,'article','author') %}
+  {% else %}
+    {% set author = 'Phi' %}
+  {% endif %}
 
-    <main role="main" class="container article----if--contains">
-      <a id="main-content" tabindex="-1"></a>
-      <div class="content-wrapper">
-        <div class="layout-content">
-          <div class="region">
-            <div class="block">
-              <div class="ds-full-width">
-                <div class="field field--name-dynamic-block-fieldnode-content-bug field--type-ds field__item">
-                  <div class="views-element-container p-0">
-                    <div class="view">
-                      <div class="view-content">
-                        <div>
-                          <div class="bug-text">{{parentBlog.title}}</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="field field--name-field-header field__item">
-                  <div class="layout layout--onecol">
-                    <div class="layout__region">
-                      <div class="full-width">
-                        <div class="field field--name-field-image field__item">
-                          {% if article.image %}
-                            <img src="{{article.image | upload_url}}" width="1460" height="821" alt="{{article.title}}" title="{{article.title}}" class="image-style-full"/>
-                          {% else %}
-                            <img src="{{settings.sub_img | upload_url}}" width="1460" height="821" alt="{{article.title}}" title="{{article.title}}" class="image-style-full"/>
-                          {% endif %}
-                        </div>
+  <main role="main" class="container article----if--contains">
+    <a id="main-content" tabindex="-1"></a>
+    <div class="content-wrapper">
+      <div class="layout-content">
+        <div class="region">
+          <div class="block">
+            <div class="ds-full-width">
+              <div class="field field--name-dynamic-block-fieldnode-content-bug field--type-ds field__item">
+                <div class="views-element-container p-0">
+                  <div class="view">
+                    <div class="view-content">
+                      <div>
+                        <div class="bug-text">{{ parentBlog.title }}</div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="node ds-standard-article clearfix">
-                <div class="ds-header">
-                  <div class="field field--type-ds field__item">
-                    <h1 class="page-title">
-                      {{article.title}}
-                    </h1>
-                  </div>
-                  <div
-                    class="field field--type-ds field__item">
-                    <div class="author-details">bởi
-                      <a href="javascript:;"> {{author}}</a> vào <span>{{article.created_at}}</span>
-                    </div>
-                  </div>
-                  <wrap class="flex-div mobile clearfix">
-                    <div class="tag-block">
-                      <a href="javascript:;" class="text-block">
-                        <div class="simple-text">
-                          <div class="coloralert platform-color">
-                            <p class="alert-text">
-                              <strong>{{article.option_1}}</strong>
-                            </p>
-                          </div>
-                        </div>
-                      </a>
-                      <a href="javascript:;" class="text-block">
-                        <div class="simple-text ">
-                          <div class="coloralert type-color">
-                            <p class="alert-text">
-                              <strong>{{article.option_2}}</strong>
-                            </p>
-                          </div>
-                        </div>
-                      </a>
-                      <a href="javascript:;" class="text-block">
-                        <div class="simple-text ">
-                          <div class="coloralert brand-color">
-                            <p class="alert-text">
-                              <strong>{{article.option_3}}</strong>
-                            </p>
-                          </div>
-                        </div>
-                      </a>
-                      <a href="javascript:;" class="text-block">
-                        <div class="simple-text ">
-                          <div class="coloralert genre-color">
-                            <p class="alert-text">
-                              <strong>{{article.option_4}}</strong>
-                            </p>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  </wrap>
-                  <div class="ds-wrapper clearfix">
-                    <div class="ds-main">
-                      <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field__item">
-                        {{article.content | raw}}
+              <div class="field field--name-field-header field__item">
+                <div class="layout layout--onecol">
+                  <div class="layout__region">
+                    <div class="full-width">
+                      <div class="field field--name-field-image field__item">
+                        {% if article.image %}
+                          <img src="{{ article.image | upload_url }}" width="1460" height="821"
+                               alt="{{ article.title }}" title="{{ article.title }}" class="image-style-full"/>
+                        {% else %}
+                          <img src="{{ settings.sub_img | upload_url }}" width="1460" height="821"
+                               alt="{{ article.title }}" title="{{ article.title }}" class="image-style-full"/>
+                        {% endif %}
                       </div>
                     </div>
-                    <div class="ds-right sticky">
-                      <wrap class="flex-div">
-                        <section class="social-share" showSocialMobile="true">
-                          <div class="collapse-social-icon">
-                            <div class="icon-collapse-open" onclick="showSocialMobile(true)"> >> </div>
-                            <div class="icon-collapse-close" onclick="showSocialMobile(false)"> << </div>
-                          </div>
-                          <div class="social-share-button">
-                            <a onclick="checkUpvote()" class="have-number">
-                              <div class="social-icon upvote">
-                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                   width="456.814px" height="456.814px" viewBox="0 0 456.814 456.814" style="enable-background:new 0 0 456.814 456.814; fill:#656565;"
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="node ds-standard-article clearfix">
+              <div class="ds-header">
+                <div class="field field--type-ds field__item">
+                  <h1 class="page-title">
+                    {{ article.title }}
+                  </h1>
+                </div>
+                <div
+                  class="field field--type-ds field__item">
+                  <div class="author-details">bởi
+                    <a href="javascript:;"> {{ author }}</a> vào <span>{{ article.created_at }}</span>
+                  </div>
+                </div>
+                <wrap class="flex-div mobile clearfix">
+                  <div class="tag-block">
+                    <a href="javascript:;" class="text-block">
+                      <div class="simple-text">
+                        <div class="coloralert platform-color">
+                          <p class="alert-text">
+                            <strong>{{ article.option_1 }}</strong>
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="javascript:;" class="text-block">
+                      <div class="simple-text ">
+                        <div class="coloralert type-color">
+                          <p class="alert-text">
+                            <strong>{{ article.option_2 }}</strong>
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="javascript:;" class="text-block">
+                      <div class="simple-text ">
+                        <div class="coloralert brand-color">
+                          <p class="alert-text">
+                            <strong>{{ article.option_3 }}</strong>
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                    <a href="javascript:;" class="text-block">
+                      <div class="simple-text ">
+                        <div class="coloralert genre-color">
+                          <p class="alert-text">
+                            <strong>{{ article.option_4 }}</strong>
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </wrap>
+                <div class="ds-wrapper clearfix">
+                  <div class="ds-main">
+                    <div
+                      class="clearfix text-formatted field field--name-body field--type-text-with-summary field__item">
+                      {{ article.content | raw }}
+                    </div>
+                  </div>
+                  <div class="ds-right sticky">
+                    <wrap class="flex-div">
+                      <section class="social-share" showSocialMobile="true">
+                        <div class="collapse-social-icon">
+                          <div class="icon-collapse-open" onclick="showSocialMobile(true)"> >></div>
+                          <div class="icon-collapse-close" onclick="showSocialMobile(false)"> <<</div>
+                        </div>
+                        <div class="social-share-button">
+                          <a onclick="checkUpvote()" class="have-number">
+                            <div class="social-icon upvote">
+                              <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                   width="456.814px" height="456.814px" viewBox="0 0 456.814 456.814"
+                                   style="enable-background:new 0 0 456.814 456.814; fill:#656565;"
                                    xml:space="preserve">
 <g>
   <g>
@@ -179,16 +184,18 @@
                                 <g>
                                 </g>
 </svg>
-                              </div>
-                              <i>{{article.like}}</i>
-                            </a>
-                          </div>
-                          <div class="social-share-button">
-                            <a onclick="checkDownvote()" class="have-number">
-                              <div class="social-icon downvote" >
-                                <svg fill="#656565" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                     width="456.824px" height="456.824px" viewBox="0 0 456.824 456.824" style="enable-background:new 0 0 456.824 456.824;fill:#656565;"
-                                     xml:space="preserve">
+                            </div>
+                            <i>{{ article.like }}</i>
+                          </a>
+                        </div>
+                        <div class="social-share-button">
+                          <a onclick="checkDownvote()" class="have-number">
+                            <div class="social-icon downvote">
+                              <svg fill="#656565" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                   width="456.824px" height="456.824px" viewBox="0 0 456.824 456.824"
+                                   style="enable-background:new 0 0 456.824 456.824;fill:#656565;"
+                                   xml:space="preserve">
 <g>
   <g>
     <path d="M100.5,45.683H18.276c-4.949,0-9.231,1.809-12.851,5.426C1.809,54.724,0,59.007,0,63.954v182.729
@@ -214,46 +221,48 @@
 			"/>
   </g>
 </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
 </svg>
-                              </div>
-                              <i>{{article.dislike}}</i>
-                            </a>
-                          </div>
-                          <div class="social-share-button">
-                            <a href="https://www.facebook.com/sharer/sharer.php?u={{article.url}}" target="_blank">
-                              <div class="social-icon share">
-                                <svg fill="#656565" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                     viewBox="0 0 525.152 525.152" style="enable-background:new 0 0 525.152 525.152;fill:#656565;" xml:space="preserve">
+                            </div>
+                            <i>{{ article.dislike }}</i>
+                          </a>
+                        </div>
+                        <div class="social-share-button">
+                          <a href="https://www.facebook.com/sharer/sharer.php?u={{ article.url }}" target="_blank">
+                            <div class="social-icon share">
+                              <svg fill="#656565" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                   viewBox="0 0 525.152 525.152"
+                                   style="enable-background:new 0 0 525.152 525.152;fill:#656565;" xml:space="preserve">
 <g>
   <path d="M420.735,371.217c-20.021,0-37.942,7.855-51.596,20.24L181.112,282.094c1.357-6.061,2.407-12.166,2.407-18.468
 		c0-6.302-1.072-12.385-2.407-18.468l185.904-108.335c14.179,13.129,32.931,21.334,53.719,21.334
@@ -263,46 +272,48 @@
 		c-1.291,5.58-2.101,11.4-2.101,17.199c0,42.45,34.594,76.979,76.979,76.979c42.428,0,77.044-34.507,77.044-76.979
 		S463.163,371.217,420.735,371.217z"/>
 </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
 </svg>
-                              </div>
-                            </a>
-                          </div>
-                          <div class="social-share-button">
-                            <a onclick="checkBookmark()">
-                              <div class="social-icon bookmark" >
-                                <svg fill="#656565" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                     width="431.972px" height="431.972px" viewBox="0 0 431.972 431.972" style="enable-background:new 0 0 431.972 431.972;fill:#656565;"
-                                     xml:space="preserve">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="social-share-button">
+                          <a onclick="checkBookmark()">
+                            <div class="social-icon bookmark">
+                              <svg fill="#656565" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                   width="431.972px" height="431.972px" viewBox="0 0 431.972 431.972"
+                                   style="enable-background:new 0 0 431.972 431.972;fill:#656565;"
+                                   xml:space="preserve">
 <g>
   <path d="M393.146,14.279c-3.713-5.333-8.713-9.233-14.989-11.707c-3.997-1.711-8.186-2.568-12.565-2.568V0H66.378
 		c-4.377,0-8.562,0.857-12.56,2.568c-6.28,2.472-11.278,6.377-14.989,11.707c-3.71,5.33-5.568,11.228-5.568,17.701v368.019
@@ -311,389 +322,430 @@
 		c4.76,0,8.948-0.756,12.565-2.279c6.276-2.471,11.276-6.375,14.989-11.711c3.71-5.328,5.564-11.225,5.564-17.699V31.98
 		C398.71,25.507,396.852,19.609,393.146,14.279z"/>
 </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
 </svg>
-                              </div>
-                            </a>
-                          </div>
-                          <div class="social-share-button">
-                            <a onclick="clickComment()" class="have-number">
-                              <div class="social-icon comment">
-                                <svg fill="#656565" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                     width="510px" height="510px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;fill:#656565;" xml:space="preserve">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="social-share-button">
+                          <a onclick="clickComment()" class="have-number">
+                            <div class="social-icon comment">
+                              <svg fill="#656565" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                   xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                   width="510px" height="510px" viewBox="0 0 510 510"
+                                   style="enable-background:new 0 0 510 510;fill:#656565;" xml:space="preserve">
 <g>
   <g id="messenger">
     <path d="M459,0H51C22.95,0,0,22.95,0,51v459l102-102h357c28.05,0,51-22.95,51-51V51C510,22.95,487.05,0,459,0z"/>
   </g>
 </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
-                                  <g>
-                                  </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
 </svg>
-                              </div>
-                              <i>{{article.comment | length}}</i>
-                            </a>
-                          </div>
-                        </section>
-                        <div class="tag-block">
-                          <a href="javascript:;" class="text-block">
-                            <div class="simple-text">
-                              <div class="coloralert platform-color">
-                                <p class="alert-text">
-                                  <strong>{{article.option_1}}</strong>
-                                </p>
-                              </div>
                             </div>
-                          </a>
-                          <a href="javascript:;" class="text-block">
-                            <div class="simple-text ">
-                              <div class="coloralert type-color">
-                                <p class="alert-text">
-                                  <strong>{{article.option_2}}</strong>
-                                </p>
-                              </div>
-                            </div>
-                          </a>
-                          <a href="javascript:;" class="text-block">
-                            <div class="simple-text ">
-                              <div class="coloralert brand-color">
-                                <p class="alert-text">
-                                  <strong>{{article.option_3}}</strong>
-                                </p>
-                              </div>
-                            </div>
-                          </a>
-                          <a href="javascript:;" class="text-block">
-                            <div class="simple-text ">
-                              <div class="coloralert genre-color">
-                                <p class="alert-text">
-                                  <strong>{{article.option_4}}</strong>
-                                </p>
-                              </div>
-                            </div>
+                            <i>{{ article.comment | length }}</i>
                           </a>
                         </div>
-                      </wrap>
-                      {% if CustomField(article.id,'article','outline')=="true" %}
-                        <div class="field field--type-ds field__item">
-                          <h2>OUTLINE</h2>
-                          <div class="block-ad-299">
-                            <div class="ads ad-299"></div>
-                          </div>
-                        </div>
-                      {% endif %}
-                    </div>
-                  </div>
-
-                  {% if article.type == 'review' and (article.game.infomation or article.game.requirement) %}
-                    <!-- GAME INFOMATIONS AND REQUIREMENTS -->
-                    <div class="config-wrapper">
-                      <ul class="config-tab-wrapper">
-                        <a href="javascript:;" class="config-tab config-info active">Thông tin</a>
-                        <a href="javascript:;" class="config-tab config-req">Cấu hình</a>
-                      </ul>
-                      <div class="author-footer config-footer config-info-area clearfix">
-                        <div class="author-footer-info">
-                          {{article.game.infomation | raw}}
-                        </div>
-                      </div>
-                      <div class="author-footer config-footer config-req-area d-none clearfix">
-                        <div class="author-footer-info">
-                          {{article.game.requirement | raw}}
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- ARTICLE RATING -->
-                    {% set value = getCustomField(article.id, 'article', 'appreciation') %}
-                    <div class="review-breakdown rating-overflow">
-                      <div class="review-breakdown__inner">
-                        <div class="container row">
-                          <dl class="breakdown breakdown-good span6">
-                            <dt class="breakdown-good__title"><span>Ưu điểm</span></dt>
-                            {% for item in value[0] %}
-                              <dd class="breakdown-good__item">
-                                <i>
-                                  <svg version="1.1" width="28" height="28" viewBox="0 0 28 28"
-                                      aria-hidden="true" class="symbol symbol-plus-sign">
-                                    <path
-                                      d="M19 15v-2q0-0.406-0.297-0.703t-0.703-0.297h-4v-4q0-0.406-0.297-0.703t-0.703-0.297h-2q-0.406 0-0.703 0.297t-0.297 0.703v4h-4q-0.406 0-0.703 0.297t-0.297 0.703v2q0 0.406 0.297 0.703t0.703 0.297h4v4q0 0.406 0.297 0.703t0.703 0.297h2q0.406 0 0.703-0.297t0.297-0.703v-4h4q0.406 0 0.703-0.297t0.297-0.703zM24 14q0 3.266-1.609 6.023t-4.367 4.367-6.023 1.609-6.023-1.609-4.367-4.367-1.609-6.023 1.609-6.023 4.367-4.367 6.023-1.609 6.023 1.609 4.367 4.367 1.609 6.023z"></path>
-                                  </svg>
-                                </i>
-                                {{item.value}}
-                              </dd>
-                            {% endfor %}
-                          </dl>
-                          <dl class="breakdown breakdown-bad span6">
-                            <dt class="breakdown-bad__title"><span>Nhược điểm</span></dt>
-                            {% for item in value[1] %}
-                              <dd class="breakdown-bad__item">
-                                <i>
-                                  <svg version="1.1" width="28" height="28" viewBox="0 0 28 28"
-                                      aria-hidden="true" class="symbol symbol-minus-sign symbol--color-link">
-                                    <path
-                                      d="M19 15v-2q0-0.406-0.297-0.703t-0.703-0.297h-12q-0.406 0-0.703 0.297t-0.297 0.703v2q0 0.406 0.297 0.703t0.703 0.297h12q0.406 0 0.703-0.297t0.297-0.703zM24 14q0 3.266-1.609 6.023t-4.367 4.367-6.023 1.609-6.023-1.609-4.367-4.367-1.609-6.023 1.609-6.023 4.367-4.367 6.023-1.609 6.023 1.609 4.367 4.367 1.609 6.023z"></path>
-                                  </svg>
-                                </i>
-                                {{item.value}}
-                              </dd>
-                            {% endfor %}
-                          </dl>
-
-                          <dl class="breakdown breakdown-score">
-                            <dt class="review-score">
-                              <div class="gs-score gs-score--large score-{{article.admin_point}}">
-                                <div class="gs-score__clip">
-                                  <div class="gs-score__pie gs-score__spinner"></div>
-                                </div>
-                                <div class="gs-score__clip gs-score__clip2">
-                                  <div class="gs-score__pie gs-score__filler"></div>
-                                </div>
-                                <div class="gs-score__inner">
-                                  <div class="gs-score__table">
-                                    <div class="gs-score__cell">
-                                      <span aria-label="Review score {{article.admin_point}}" tabindex="0">{{article.admin_point}}</span>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </dt>
-                            {% include 'snippet/point-system.twig' %}
-                          </dl>
-                        </div>
-                      </div>
-                    </div>
-                  {% endif %}
-
-                  <!-- ARTICLES AUTHOR -->
-                  <div class="field field--type-ds field__item">
-                    <div class="views-element-container">
-                      <div class="view">
-                        <div class="view-content admin-info">
-                          <div>
-                            <div class="author-footer clearfix">
-                              {% if author == 'Sigma' %}
-                                <div class="author-footer-photo">
-                                  <a href="#">
-                                    <img src="{{theme.uri}}/img/author/Sigma.jpg" width="100" height="100" alt="Sigma" class="image-style-user-thumbnail"/>
-                                  </a>
-                                </div>
-                                <div class="author-footer-info">
-                                  <div class="author-footer-name">
-                                    <a title="View user profile." href="javascript:;" class="username">{{author}}</a>
-                                  </div>
-                                  <div class="author-footer-title">Admin</div>
-                                  <div class="author-footer-shortbio">Sigma có kinh nghiệm chơi và đánh giá game trên 10 năm, hiện anh vẫn đang tiếp tục chơi để có thể viết những bài chất lượng cho độc giả</div>
-                                </div>
-                              {% else %}
-                                <div class="author-footer-photo">
-                                  <a href="#">
-                                    <img src="{{theme.uri}}/img/author/Phi.jpg" width="100" height="100" alt="Phi" class="image-style-user-thumbnail"/>
-                                  </a>
-                                </div>
-                                <div class="author-footer-info">
-                                  <div class="author-footer-name">
-                                    <a title="View user profile." href="javascript:;" class="username">{{author}}</a>
-                                  </div>
-                                  <div class="author-footer-title">Admin</div>
-                                  <div class="author-footer-shortbio">Phi tuy mới tìm hiểu và chơi game gần đây, tuy nhiên cô ấy học rất nhanh và vẫn đang cố gắng tạo ra nhiều bài viết chất lượng cho độc giả</div>
-                                </div>
-                              {% endif %}
+                      </section>
+                      <div class="tag-block">
+                        <a href="javascript:;" class="text-block">
+                          <div class="simple-text">
+                            <div class="coloralert platform-color">
+                              <p class="alert-text">
+                                <strong>{{ article.option_1 }}</strong>
+                              </p>
                             </div>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- USER BOOKMARKS -->
-                  <div class="ds-footer-full">
-                    <div class="field field--type-ds field__item">
-                      <div class="views-element-container">
-                        <div id="default-content" class="recommended-articles-widget view">
-                          <div class="view-header">
-                            <h2>{{parentBlog.title}} đã lưu</h2>
-                          </div>
-                          <div class="article-carousel owl-carousel owl-theme">
-                            {% for item in parentBlog.articles | slice (0, 10) %}
-                                {% if item.id != article.id %}
-                                    <div class="teaser">
-                                        <div class="teaser-left">
-                                            <div class="teaser-left-wrapper">
-                                                <div class="promo-img-thumb">
-                                                    <a href="{{item.url}}">
-                                                    {% if item.image %}
-                                                      <img src="{{item.image | upload_url}}"/>
-                                                    {% else %}
-                                                      <img src="{{settings.sub_img | upload_url}}"/>
-                                                    {% endif %}
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="teaser-right">
-                                            <div class="teaser-right-wrapper">
-                                                <h3 class="page-title article-title">
-                                                    <a href="{{item.url}}">{{item.title}}</a>
-                                                </h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                {% endif %}
-                            {% endfor %}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div id="block-chat" class="block-chat clearfix">
-
-                    <!-- FACEBOOK COMMENT -->
-                    <div class="block-comment">
-                      <div class="fb-comments" data-href="{{url}}" data-width="100%" data-numposts="5"></div>
-                      <div id="fb-root"></div>
-                      <script>(function(d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (d.getElementById(id)) return;
-                        js = d.createElement(s); js.id = id;
-                        js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=839840852755043&autoLogAppEvents=1';
-                        fjs.parentNode.insertBefore(js, fjs);
-                      }(document, 'script', 'facebook-jssdk'));
-                      </script>
-                    </div>
-
-                    <!-- USER REVIEWS -->
-                    {% if article.type == 'review' %}
-                      <div class="block-reviews float-right">
-                        <h2 class="block-title"><img src="{{theme.uri}}/img/icon/icon-star.png">
-                          <span>Đánh giá</span>
-                        </h2>
-
-                        <!-- REVIEW FORM -->
-                        {% if customer.logged_in %}
-                          <div class="text-editer clearfix">
-                            <textarea name="comment" placeholder="Thêm bình luận..." id="text-editer-comment"></textarea>
-                            <div class="review-pusher">
-                              <button class="review-pusher-item btn-submit-comment effect-hover-1" onclick="postReview()">
-                                Đăng đánh giá
-                              </button>
-                              <dd class="pod-header__item review-pusher-item pod-header__filters pod-header__filters--js no-flex">
-                                <div class="pod-header__filters--select">
-                                  <select class="effect-hover-1" id="review-point" name="sort">
-                                    <option value="0" selected>Điểm</option>
-                                    <option value="10">10 - Hoàn hảo</option>
-                                    <option value="9">9 - Xuất sắc</option>
-                                    <option value="8">8 - Hay</option>
-                                    <option value="7">7 - Khá</option>
-                                    <option value="6">6 - Tạm được</option>
-                                    <option value="5">5 - Trung bình</option>
-                                    <option value="4">4 - Nghèo nàn</option>
-                                    <option value="3">3 - Tệ</option>
-                                    <option value="2">2 - Quá tệ</option>
-                                    <option value="1">1 - Trash</option>
-                                  </select>
-                                </div>
-                              </dd>
+                        </a>
+                        <a href="javascript:;" class="text-block">
+                          <div class="simple-text ">
+                            <div class="coloralert type-color">
+                              <p class="alert-text">
+                                <strong>{{ article.option_2 }}</strong>
+                              </p>
                             </div>
                           </div>
-                        {% endif %}
-
-                        <!-- LIST REVIEWS -->
-                        <div class="list-comment-review">
-                          {% for item in article.reviews %}
-                            <div class="block-reviews--comment">
-                              <div class="block-reviews--auth">
-                                {% if customer.avatar %}
-                                  <img src="{{customer.avatar | upload_url}}" alt="avatar" class="comment-avatar"/>
-                                {% else %}
-                                  <img src="{{theme.uri}}/img/avatar-default.png" alt="avatar" class="comment-avatar"/>
-                                {% endif %}
-                                <span>Đánh giá bởi <strong class="review-author">{{item.user}}</strong></span>
-                                <span class="rating-review">
-                                  <img src="{{theme.uri}}/img/icon/icon-star.png" width="16px" height="16px"/>
-                                  {{item.point}}/10
-                                </span>
-                              </div>
-                              <div class="comment-text-review">
-                                <p class="review-title">
-                                  {{item.title}}
-                                </p>
-                                <p class="review-content">
-                                  {{item.content}}
-                                </p>
-                              </div>
+                        </a>
+                        <a href="javascript:;" class="text-block">
+                          <div class="simple-text ">
+                            <div class="coloralert brand-color">
+                              <p class="alert-text">
+                                <strong>{{ article.option_3 }}</strong>
+                              </p>
                             </div>
-                          {% endfor %}
-                          <button class="btn-load-more-comment">Tải thêm đánh giá</button>
+                          </div>
+                        </a>
+                        <a href="javascript:;" class="text-block">
+                          <div class="simple-text ">
+                            <div class="coloralert genre-color">
+                              <p class="alert-text">
+                                <strong>{{ article.option_4 }}</strong>
+                              </p>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </wrap>
+                    {% if CustomField(article.id,'article','outline')=="true" %}
+                      <div class="field field--type-ds field__item">
+                        <h2>OUTLINE</h2>
+                        <div class="block-ad-299">
+                          <div class="ads ad-299"></div>
                         </div>
                       </div>
                     {% endif %}
                   </div>
+                </div>
+
+                {% if article.type == 'review' and (article.game.infomation or article.game.requirement) %}
+                  <!-- GAME INFOMATIONS AND REQUIREMENTS -->
+                  <div class="config-wrapper">
+                    <ul class="config-tab-wrapper">
+                      <a href="javascript:;" class="config-tab config-info active">Thông tin</a>
+                      <a href="javascript:;" class="config-tab config-req">Cấu hình</a>
+                    </ul>
+                    <div class="author-footer config-footer config-info-area clearfix">
+                      <div class="author-footer-info">
+                        {{ article.game.infomation | raw }}
+                      </div>
+                    </div>
+                    <div class="author-footer config-footer config-req-area d-none clearfix">
+                      <div class="author-footer-info">
+                        {{ article.game.requirement | raw }}
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ARTICLE RATING -->
+                  {% set value = getCustomField(article.id, 'article', 'appreciation') %}
+                  <div class="review-breakdown rating-overflow">
+                    <div class="review-breakdown__inner">
+                      <div class="container row">
+                        <dl class="breakdown breakdown-good span6">
+                          <dt class="breakdown-good__title"><span>Ưu điểm</span></dt>
+                          {% for item in value[0] %}
+                            <dd class="breakdown-good__item">
+                              <i>
+                                <svg version="1.1" width="28" height="28" viewBox="0 0 28 28"
+                                     aria-hidden="true" class="symbol symbol-plus-sign">
+                                  <path
+                                    d="M19 15v-2q0-0.406-0.297-0.703t-0.703-0.297h-4v-4q0-0.406-0.297-0.703t-0.703-0.297h-2q-0.406 0-0.703 0.297t-0.297 0.703v4h-4q-0.406 0-0.703 0.297t-0.297 0.703v2q0 0.406 0.297 0.703t0.703 0.297h4v4q0 0.406 0.297 0.703t0.703 0.297h2q0.406 0 0.703-0.297t0.297-0.703v-4h4q0.406 0 0.703-0.297t0.297-0.703zM24 14q0 3.266-1.609 6.023t-4.367 4.367-6.023 1.609-6.023-1.609-4.367-4.367-1.609-6.023 1.609-6.023 4.367-4.367 6.023-1.609 6.023 1.609 4.367 4.367 1.609 6.023z"></path>
+                                </svg>
+                              </i>
+                              {{ item.value }}
+                            </dd>
+                          {% endfor %}
+                        </dl>
+                        <dl class="breakdown breakdown-bad span6">
+                          <dt class="breakdown-bad__title"><span>Nhược điểm</span></dt>
+                          {% for item in value[1] %}
+                            <dd class="breakdown-bad__item">
+                              <i>
+                                <svg version="1.1" width="28" height="28" viewBox="0 0 28 28"
+                                     aria-hidden="true" class="symbol symbol-minus-sign symbol--color-link">
+                                  <path
+                                    d="M19 15v-2q0-0.406-0.297-0.703t-0.703-0.297h-12q-0.406 0-0.703 0.297t-0.297 0.703v2q0 0.406 0.297 0.703t0.703 0.297h12q0.406 0 0.703-0.297t0.297-0.703zM24 14q0 3.266-1.609 6.023t-4.367 4.367-6.023 1.609-6.023-1.609-4.367-4.367-1.609-6.023 1.609-6.023 4.367-4.367 6.023-1.609 6.023 1.609 4.367 4.367 1.609 6.023z"></path>
+                                </svg>
+                              </i>
+                              {{ item.value }}
+                            </dd>
+                          {% endfor %}
+                        </dl>
+
+                        <dl class="breakdown breakdown-score">
+                          <dt class="review-score">
+                            <div class="gs-score gs-score--large score-{{ article.admin_point }}">
+                              <div class="gs-score__clip">
+                                <div class="gs-score__pie gs-score__spinner"></div>
+                              </div>
+                              <div class="gs-score__clip gs-score__clip2">
+                                <div class="gs-score__pie gs-score__filler"></div>
+                              </div>
+                              <div class="gs-score__inner">
+                                <div class="gs-score__table">
+                                  <div class="gs-score__cell">
+                                    <span aria-label="Review score {{ article.admin_point }}"
+                                          tabindex="0">{{ article.admin_point }}</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </dt>
+                          {% include 'snippet/point-system.twig' %}
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                {% endif %}
+
+                <!-- ARTICLES AUTHOR -->
+                <div class="field field--type-ds field__item">
+                  <div class="views-element-container">
+                    <div class="view">
+                      <div class="view-content admin-info">
+                        <div>
+                          <div class="author-footer clearfix">
+                            {% if author == 'Sigma' %}
+                              <div class="author-footer-photo">
+                                <a href="#">
+                                  <img src="{{ theme.uri }}/img/author/Sigma.jpg" width="100" height="100" alt="Sigma"
+                                       class="image-style-user-thumbnail"/>
+                                </a>
+                              </div>
+                              <div class="author-footer-info">
+                                <div class="author-footer-name">
+                                  <a title="View user profile." href="javascript:;" class="username">{{ author }}</a>
+                                </div>
+                                <div class="author-footer-title">Admin</div>
+                                <div class="author-footer-shortbio">Sigma có kinh nghiệm chơi và đánh giá game trên 10
+                                  năm, hiện anh vẫn đang tiếp tục chơi để có thể viết những bài chất lượng cho độc giả
+                                </div>
+                              </div>
+                            {% else %}
+                              <div class="author-footer-photo">
+                                <a href="#">
+                                  <img src="{{ theme.uri }}/img/author/Phi.jpg" width="100" height="100" alt="Phi"
+                                       class="image-style-user-thumbnail"/>
+                                </a>
+                              </div>
+                              <div class="author-footer-info">
+                                <div class="author-footer-name">
+                                  <a title="View user profile." href="javascript:;" class="username">{{ author }}</a>
+                                </div>
+                                <div class="author-footer-title">Admin</div>
+                                <div class="author-footer-shortbio">Phi tuy mới tìm hiểu và chơi game gần đây, tuy nhiên
+                                  cô ấy học rất nhanh và vẫn đang cố gắng tạo ra nhiều bài viết chất lượng cho độc giả
+                                </div>
+                              </div>
+                            {% endif %}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- USER BOOKMARKS -->
+                <div class="ds-footer-full">
+                  <div class="field field--type-ds field__item">
+                    <div class="views-element-container">
+                      <div id="default-content" class="recommended-articles-widget view">
+                        <div class="view-header">
+                          <h2>{{ parentBlog.title }} đã lưu</h2>
+                        </div>
+                        <div class="article-carousel owl-carousel owl-theme">
+                          {% for item in parentBlog.articles | slice (0, 10) %}
+                            {% if item.id != article.id %}
+                              <div class="teaser">
+                                <div class="teaser-left">
+                                  <div class="teaser-left-wrapper">
+                                    <div class="promo-img-thumb">
+                                      <a href="{{ item.url }}">
+                                        {% if item.image %}
+                                          <img src="{{ item.image | upload_url }}"/>
+                                        {% else %}
+                                          <img src="{{ settings.sub_img | upload_url }}"/>
+                                        {% endif %}
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="teaser-right">
+                                  <div class="teaser-right-wrapper">
+                                    <h3 class="page-title article-title">
+                                      <a href="{{ item.url }}">{{ item.title }}</a>
+                                    </h3>
+                                  </div>
+                                </div>
+                              </div>
+                            {% endif %}
+                          {% endfor %}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="block-chat" class="block-chat clearfix">
+
+                  <!-- FACEBOOK COMMENT -->
+                  <div class="block-comment">
+                    <div class="fb-comments" data-href="{{ url }}" data-width="100%" data-numposts="5"></div>
+                    <div id="fb-root"></div>
+                    <script>(function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=839840852755043&autoLogAppEvents=1';
+                        fjs.parentNode.insertBefore(js, fjs);
+                      }(document, 'script', 'facebook-jssdk'));
+                    </script>
+                  </div>
+
+                  <!-- USER REVIEWS -->
+                  {% if article.type == 'review' %}
+                    <div class="block-reviews float-right">
+                      <h2 class="block-title"><img src="{{ theme.uri }}/img/icon/icon-star.png">
+                        <span>Đánh giá</span>
+                      </h2>
+
+                      <!-- REVIEW FORM -->
+                      {% if customer.logged_in %}
+                        <div class="text-editer clearfix">
+                          <textarea name="comment" placeholder="Thêm bình luận..." id="text-editer-comment"></textarea>
+                          <div class="review-pusher">
+                            <button class="review-pusher-item btn-submit-comment effect-hover-1" onclick="postReview()">
+                              Đăng đánh giá
+                            </button>
+                            <dd
+                              class="pod-header__item review-pusher-item pod-header__filters pod-header__filters--js no-flex">
+                              <div class="pod-header__filters--select">
+                                <select class="effect-hover-1" id="review-point" name="sort">
+                                  <option value="0" selected>Điểm</option>
+                                  <option value="10">10 - Hoàn hảo</option>
+                                  <option value="9">9 - Xuất sắc</option>
+                                  <option value="8">8 - Hay</option>
+                                  <option value="7">7 - Khá</option>
+                                  <option value="6">6 - Tạm được</option>
+                                  <option value="5">5 - Trung bình</option>
+                                  <option value="4">4 - Nghèo nàn</option>
+                                  <option value="3">3 - Tệ</option>
+                                  <option value="2">2 - Quá tệ</option>
+                                  <option value="1">1 - Trash</option>
+                                </select>
+                              </div>
+                            </dd>
+                          </div>
+                        </div>
+                      {% endif %}
+
+                      <!-- LIST REVIEWS -->
+                      <div class="list-comment-review">
+                        {% for item in article.reviews %}
+                          <div class="block-reviews--comment">
+                            <div class="block-reviews--auth">
+                              {% if customer.avatar %}
+                                <img src="{{ customer.avatar | upload_url }}" alt="avatar" class="comment-avatar"/>
+                              {% else %}
+                                <img src="{{ theme.uri }}/img/avatar-default.png" alt="avatar" class="comment-avatar"/>
+                              {% endif %}
+                              <span>Đánh giá bởi <strong class="review-author">{{ item.user }}</strong></span>
+                              <span class="rating-review">
+                                  <img src="{{ theme.uri }}/img/icon/icon-star.png" width="16px" height="16px"/>
+                                  {{ item.point }}/10
+                                </span>
+                            </div>
+                            <div class="comment-text-review">
+                              <p class="review-title">
+                                {{ item.title }}
+                              </p>
+                              <p class="review-content">
+                                {{ item.content }}
+                              </p>
+                            </div>
+                          </div>
+                        {% endfor %}
+                        <button class="btn-load-more-comment">Tải thêm đánh giá</button>
+                      </div>
+                    </div>
+                  {% endif %}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <input type="hidden" id="article_id" value="{{article.id}}"/>
-    <input type="hidden" id="article_like_status" value="{{article.statusLike}}"/>
+  <div class="block-fab">
+    <div class="fab-content">
+      {% if CustomField(article.id,'article','outline')=="true" %}
+        <div class="field field--type-ds field__item">
+          <h2>OUTLINE</h2>
+          <div class="block-ad-299">
+            <div class="ads ad-299"></div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+    <div class="fab-icon" onclick="toggleFabContent()">
+      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+           x="0px" y="0px"
+           viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+          <circle style="fill:#43B05C;" cx="25" cy="25" r="25"/>
+        <line
+          style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+          x1="25" y1="13" x2="25" y2="38"/>
+        <line
+          style="fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+          x1="37.5" y1="25" x2="12.5" y2="25"/></svg>
+    </div>
+    <script>
+      function toggleFabContent() {
+        $('.block-fab .fab-content').toggleClass('active');
+      }
+    </script>
+  </div>
+
+  <input type="hidden" id="article_id" value="{{ article.id }}"/>
+  <input type="hidden" id="article_like_status" value="{{ article.statusLike }}"/>
 {% endblock content %}

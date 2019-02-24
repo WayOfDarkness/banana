@@ -2104,3 +2104,36 @@ svg {
 .pod-filter .filter-results.grid .media-figure {
   width: 100%;
 }
+
+/*css block fab*/
+.block-fab {
+  display: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  border-left: 1px solid gray;
+  background: #F7F7F7;
+}
+
+.block-fab .fab-content {
+  display: none;
+}
+
+.block-fab .fab-content.active {
+  display: block;
+}
+
+.block-fab .fab-icon {
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+.block-fab .fab-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+/*end css block fab*/
