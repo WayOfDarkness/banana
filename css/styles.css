@@ -2129,7 +2129,7 @@ svg {
   bottom: 1rem;
   right: 1rem;
   padding: 0.25rem;
-  z-index: 120;
+  z-index: 3000;
 }
 
 .block-fab .fab-content {
