@@ -2111,6 +2111,14 @@ svg {
   border-left: 1px solid gray;
   background: #F7F7F7;
 }
+.block-fab h2 {
+  margin-bottom: 0 !important;
+  padding-top: 0.5rem;
+  padding-left: 0.25rem;
+}
+.block-fab .ad-299 {
+  min-height: 120px;
+}
 .block-fab {
   display: none;
   position: fixed;
@@ -2134,20 +2142,28 @@ svg {
 }
 
 .block-fab .fab-icon {
-  transition-duration: 0.5s;
   cursor: pointer;
   width: 100%;
   position: relative;
   text-align: right;
 }
 
-.block-fab.active .fab-icon svg {
+.block-fab.active .fab-icon svg circle {
   fill: #e74c3c;
 }
 .block-fab .fab-icon svg {
+  transition-duration: 0.5s;
   width: 60px;
   height: 60px;
 }
 
 
 /*end css block fab*/
+
+.review-breakdown__inner .breakdown-score .review-score {
+  background: none !important;
+}
+
+.cd-user-modal.is-visible {
+  z-index: 2000;
+}
