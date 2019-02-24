@@ -1845,7 +1845,7 @@ main {
 
 .user-account-wrapper > * {
   padding: 1rem;
-  background: #F7F7F7;
+  background: #eff2f436;
   border-radius: 5px;
   margin-bottom: 1rem;
 }
@@ -2116,8 +2116,12 @@ svg {
   padding-top: 0.5rem;
   padding-left: 0.25rem;
 }
+.block-fab .ad-299 > * {
+  margin-bottom: 0.25rem;
+}
 .block-fab .ad-299 {
   min-height: 120px;
+  height: initial !important;
 }
 .block-fab {
   display: none;
@@ -2149,7 +2153,7 @@ svg {
 }
 
 .block-fab.active .fab-icon svg circle {
-  fill: #e74c3c;
+  fill: #e74c3c !important;
 }
 .block-fab .fab-icon svg {
   transition-duration: 0.5s;
@@ -2166,4 +2170,11 @@ svg {
 
 .cd-user-modal.is-visible {
   z-index: 2000;
+}
+.user-account-page {
+  margin: 1rem auto;
+}
+
+.user-account .nav-tabs {
+  margin-bottom: 1rem;
 }

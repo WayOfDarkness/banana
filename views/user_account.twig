@@ -24,43 +24,79 @@
 {% block content %}
 
   <div class="user-account">
-    <div class="user-account-wrapper">
-      <div class="change-nickname clearfix">
-        <p>Nickname của bạn là: </p>
-        <input type="text" value="{{ customer.name }}" style="border-color: #2C7ABE">
-        <button class="change-nickname-btn effect-hover-1">Cập nhập nickname</button>
-      </div>
-      <div class="change-avatar">
-        <div class="avatar">
-          <form class="form-avatar" enctype="multipart/form-data">
-            <input id="upload-image-avatar" type="file" name="upload[]" multiple="multiple" accept="image/*"
-                   class="upload-image">
-            {% if customer.avatar %}
-              <img src="{{ customer.avatar | upload_url }}" id="avatarImg">
-            {% else %}
-              <img src="{{ theme.uri }}/img/avatar-default.png" id="avatarImg">
-            {% endif %}
-          </form>
-        </div>
-        <button id="loadImg" class="txt_color_1 change-avatar-btn full-width effect-hover-1">Cập nhập ảnh đại diện
-        </button>
-      </div>
-      <div class="change-password">
-        <div class="modal-change-password">
-          <div class="content-modal">
-            <div class="collapse-change-assword">
-              <div>
-                <input type="password" id="old-password" placeholder="Nhập mật khẩu cũ">
-                <input type="password" id="new-password" placeholder="Nhập mật khẩu mới">
-                <input type="password" id="re-new-password" placeholder="Nhập lại mật khẩu mới">
+    <div class="user-account-wrapper container">
+      <div class="container">
+        <ul class="nav nav-tabs">
+          <li class="active"><a data-toggle="tab" href="#menu1">Cập nhật tên</a></li>
+          <li><a data-toggle="tab" href="#menu2">Cập nhật avatar</a></li>
+          <li><a data-toggle="tab" href="#menu3">Cập nhật mật khẩu</a></li>
+        </ul>
+
+        <div class="tab-content">
+          <div id="menu1" class="tab-pane fade in active">
+            <h3>Cập nhật tên</h3>
+            <div class="change-nickname clearfix">
+              <p>Nickname của bạn là: </p>
+              <input type="text" value="{{ customer.name }}" style="border-color: #2C7ABE">
+              <button class="change-nickname-btn effect-hover-1">Cập nhập nickname</button>
+            </div>
+          </div>
+          <div id="menu2" class="tab-pane fade">
+            <h3>Cập nhật avatar</h3>
+            <div class="change-avatar">
+              <div class="avatar">
+                <form class="form-avatar" enctype="multipart/form-data">
+                  <input id="upload-image-avatar" type="file" name="upload[]" multiple="multiple" accept="image/*"
+                         class="upload-image">
+                  {% if customer.avatar %}
+                    <img src="{{ customer.avatar | upload_url }}" id="avatarImg">
+                  {% else %}
+                    <img src="{{ theme.uri }}/img/avatar-default.png" id="avatarImg">
+                  {% endif %}
+                </form>
               </div>
-              <button class="change-password-btn full-width effect-hover-1">Đổi mật khẩu</button>
-              <p class="modal-change-password-error d-none">Error here</p>
+              <button id="loadImg" class="txt_color_1 change-avatar-btn full-width effect-hover-1">Cập nhập ảnh đại diện
+              </button>
+            </div>
+          </div>
+          <div id="menu3" class="tab-pane fade">
+            <h3>Cập nhật mật khẩu</h3>
+            <div class="change-password">
+              <div class="modal-change-password">
+                <div class="content-modal">
+                  <div class="collapse-change-assword">
+                    <div>
+                      <input type="password" id="old-password" placeholder="Nhập mật khẩu cũ">
+                      <input type="password" id="new-password" placeholder="Nhập mật khẩu mới">
+                      <input type="password" id="re-new-password" placeholder="Nhập lại mật khẩu mới">
+                    </div>
+                    <button class="change-password-btn full-width effect-hover-1">Đổi mật khẩu</button>
+                    <p class="modal-change-password-error d-none">Error here</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
   <input type="hidden" id="user_email" value="{{ customer.email }}"/>
+
+  <script>
+    // Select all tabs
+    $('.nav-tabs a').click(function(){
+      $(this).tab('show');
+    })
+
+    // Select first tab
+    $('.nav-tabs a:first').tab('show')
+
+    // Select last tab
+    $('.nav-tabs a:last').tab('show')
+
+    // Select fourth tab (zero-based)
+    $('.nav-tabs li a').tab('show')
+  </script>
 {% endblock content %}
