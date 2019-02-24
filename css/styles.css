@@ -48,6 +48,7 @@ h2 {
   padding: 1rem 0.5rem;
   text-align: left;
   height: calc(100vh - 350px);
+  min-height: 50vh;
   max-height: 400px;
   overflow-y: scroll;
 }
@@ -2106,27 +2107,29 @@ svg {
 }
 
 /*css block fab*/
+.block-fab.active {
+  border-left: 1px solid gray;
+  background: #F7F7F7;
+}
 .block-fab {
   display: none;
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 0.25rem;
+  z-index: 120;
 }
 
 .block-fab .fab-content {
   display: none;
+  margin-bottom: 0.5rem;
 }
 
 .block-fab.active .fab-content {
   display: block;
 }
 
-.block-fab.active .fab-icon {
-  display: none;
-}
-
-.block-fab.active .fab-icon {
+.block-fab.active .fab-icon svg {
   transform: rotateZ(45deg);
 }
 
@@ -2135,13 +2138,13 @@ svg {
   cursor: pointer;
   width: 100%;
   position: relative;
+  text-align: right;
 }
 
 .block-fab.active .fab-icon svg {
   fill: #e74c3c;
 }
 .block-fab .fab-icon svg {
-  float: right;
   width: 60px;
   height: 60px;
 }

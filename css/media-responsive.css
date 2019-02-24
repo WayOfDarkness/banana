@@ -78,8 +78,6 @@
 
   .block-fab {
     display: block;
-    border-left: 1px solid gray;
-    background: #F7F7F7;
   }
 
   .page-article .social-share {
@@ -304,6 +302,10 @@
 @media screen and (max-width: 768px) {
   .cd-user-modal.is-visible {
     padding: 0;
+  }
+  .block-fab .fab-icon svg {
+    width: 40px;
+    height: 40px;
   }
   #default-content > * {
     padding: 0 1rem;
