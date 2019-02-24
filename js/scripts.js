@@ -418,7 +418,7 @@ function pointSystem(point) {
     case 6:
       return 'Tạm được';
       break;
-    case 5:o
+    case 5:
       return 'Trung bình';
       break;
     case 4:
