@@ -2177,4 +2177,16 @@ svg {
 
 .user-account .nav-tabs {
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav-tabs > li > a {
+  padding: 5px !important;
+}
+.nav-tabs > li:first-child > a {
+  margin-left: 0px !important;;
+}
+.nav-tabs > li:not(:first-child) > a {
+  margin-left: 0.25rem !important;;
 }
