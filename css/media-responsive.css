@@ -78,6 +78,8 @@
 
   .block-fab {
     display: block;
+    border-left: 1px solid gray;
+    background: #F7F7F7;
   }
 
   .page-article .social-share {
