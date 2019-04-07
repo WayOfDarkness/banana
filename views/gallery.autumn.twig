@@ -5,7 +5,7 @@
 {% block post_include %}{% endblock %}
 
 {% block content %}
-
+{{gallery | json_encode}}
     <img src="{{gallery.photo[0].image | upload_url}}" usemap="#planetmap">
     <map name="planetmap">
         <area coords="480,160,90" shape="circle" title="October 4, 2009">
