@@ -1,0 +1,18 @@
+{% block pre_include %}
+    <title>{{gallery.description | raw}}</title>
+{% endblock %}
+
+{% block post_include %}{% endblock %}
+
+{% block content %}
+
+    <img src="{{gallery.photo[0] | upload_url}}" usemap="#planetmap">
+    <map name="planetmap">
+        <area coords="480,160,90" shape="circle" title="October 4, 2009">
+        <area coords="712,68,3" shape="circle" title="November 1, 2001">
+        <area coords="234,273,3" shape="circle" title="February 16, 2003">
+        <area coords="764,255,3" shape="circle" title="July 31, 2004">
+        <area coords="1049,308,2" shape="circle" title="May 9, 2009">
+    </map>
+
+{% endblock content %}
