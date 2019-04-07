@@ -1,12 +1,12 @@
 {% block pre_include %}
-    <title>{{gallery.description | raw}}</title>
+    <title>{{gallery.description | striptags}}</title>
 {% endblock %}
 
 {% block post_include %}{% endblock %}
 
 {% block content %}
 
-    <img src="{{gallery.photo[0] | upload_url}}" usemap="#planetmap">
+    <img src="{{gallery.photo[0].image | upload_url}}" usemap="#planetmap">
     <map name="planetmap">
         <area coords="480,160,90" shape="circle" title="October 4, 2009">
         <area coords="712,68,3" shape="circle" title="November 1, 2001">
