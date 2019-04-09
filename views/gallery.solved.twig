@@ -7,10 +7,10 @@
 
 {% block content %}
 
-    Chúc mừng bạn đã vượt qua thử thách {{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}
-    Bấm vào <a href={{getCustomField(gallery.id, 'gallery', 'next-riddle')}}>đây</a> để tiếp tục với thử thách tiếp theo
-    Hoặc bấm vào <a href="https://choigiday.com/the-four-paths">đây</a> để quay trở lại trang lựa chọn.
-
-    
+    <div>Chúc mừng bạn đã vượt qua thử thách {{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}</div>
+    <div>
+        <a href={{getCustomField(gallery.id, 'gallery', 'next-riddle')}}>Trở lại</a>
+        <a href="https://choigiday.com/the-four-paths">Thử thách tiếp theo</a>
+    </div>
 
 {% endblock content %}
