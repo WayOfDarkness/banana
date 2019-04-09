@@ -1,12 +1,12 @@
 {% block pre_include %}
-    <title>{{gallery.description | striptags}}</title>
+    <title>The Autumn Night</title>
 {% endblock %}
 
 {% block post_include %}{% endblock %}
 
 {% block content %}
 
-    <img src="{{gallery.photos[0].image | upload_url}}" usemap="#planetmap">
+    <img src="{{theme.uri}}/img/four-seasons/riddles/autumn/autumn_1.jpg" usemap="#planetmap">
     <map name="planetmap">
         <area coords="480,160,90" shape="circle" title="October 4, 2009">
         <area coords="712,68,3" shape="circle" title="November 1, 2001">
