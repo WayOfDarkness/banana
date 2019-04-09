@@ -200,7 +200,7 @@ html, body {
 #fs .item.riddle-solved:after {
   position: absolute;
   content: '';
-  background-image: url('../img/tick-done.png');
+  background-image: url('../img/four-seasons/tick-done.png');
   background-size: 100% 100%;
   filter: brightness(500%);
   top: 50%;
@@ -261,7 +261,7 @@ html, body {
 /*--------------------------------------------*/
 
 .season-autumn {
-  background: url(../img/autumn.jpg) center top no-repeat;
+  background: url(../img/four-seasons/autumn.jpg) center top no-repeat;
 }
 
 .season-autumn .border-image {
@@ -286,7 +286,7 @@ html, body {
   width: 80px;
   height: 80px;
   margin: -280px 40px 54px -34px;
-  background: url("../img/leaf.png");
+  background: url("../img/four-seasons/leaf.png");
   -webkit-animation: fallingLeaves 10s infinite linear;
   -moz-animation: fallingLeaves 10s infinite linear;
   z-index: 0;
@@ -395,7 +395,7 @@ html, body {
 
 
 .season-winter {
-  background: url(../img/winter.PNG) center top no-repeat;
+  background: url(../img/four-seasons/winter.PNG) center top no-repeat;
   background-size: cover;
 }
 
@@ -438,7 +438,7 @@ html, body {
 
 .snow--near {
   animation-duration: 100s;
-  background-image: url("../img/snow-large.png");
+  background-image: url("../img/four-seasons/snow-large.png");
   background-size: contain;
 }
 
@@ -448,7 +448,7 @@ html, body {
 
 .snow--mid {
   animation-duration: 20s;
-  background-image: url("../img/snow-medium.png");
+  background-image: url("../img/four-seasons/snow-medium.png");
   background-size: contain;
 }
 
@@ -458,7 +458,7 @@ html, body {
 
 .snow--far {
   animation-duration: 30s;
-  background-image: url("../img/snow-small.png");
+  background-image: url("../img/four-seasons/snow-small.png");
   background-size: contain;
 }
 
@@ -482,7 +482,7 @@ html, body {
 
 
 .season-summer {
-  background: url(summer3.gif) center center no-repeat;
+  background: url(../img/four-seasons/summer3.gif) center center no-repeat;
   background-size: cover;
   filter: brightness(150%);
 }
@@ -624,7 +624,7 @@ html, body {
 /*--------------------------------------------*/
 
 .season-spring {
-  background: url(../img/spring3.png) center bottom no-repeat;
+  background: url(../img/four-seasons/spring3.png) center bottom no-repeat;
   background-size: cover;
   perspective: 600px;
   perspective-origin: 0% 0%;
@@ -674,7 +674,7 @@ html, body {
 }
 
 .butterfly-1 .leftwing {
-  background-image: url(../img/wing.png);
+  background-image: url(../img/four-seasons/wing.png);
   left: -175px;
   top: 0;
   width: 178px;
@@ -687,7 +687,7 @@ html, body {
   top: 0px;
   width: 178px;
   height: 208px;
-  background-image: url(../img/wing.png);
+  background-image: url(../img/four-seasons/wing.png);
   animation-name: rightwingani;
 }
 
@@ -701,7 +701,7 @@ html, body {
 }
 
 .butterfly-2 .leftwing {
-  background-image: url(../img/wing-4.png);
+  background-image: url(../img/four-seasons/wing-4.png);
   left: -174px;
   top: 0;
   width: 178px;
@@ -714,7 +714,7 @@ html, body {
   top: 0px;
   width: 178px;
   height: 208px;
-  background-image: url(../img/wing-4.png);
+  background-image: url(../img/four-seasons/wing-4.png);
   animation-name: rightwingani;
 }
 
@@ -728,7 +728,7 @@ html, body {
 }
 
 .butterfly-3 .leftwing {
-  background-image: url(../img/wing-3.png);
+  background-image: url(../img/four-seasons/wing-3.png);
   left: -174px;
   top: 0;
   width: 178px;
@@ -741,7 +741,7 @@ html, body {
   top: 0px;
   width: 178px;
   height: 208px;
-  background-image: url(../img/wing-3.png);
+  background-image: url(../img/four-seasons/wing-3.png);
   animation-name: rightwingani;
 }
 
@@ -756,7 +756,7 @@ html, body {
 }
 
 .butterfly-4 .leftwing {
-  background-image: url(../img/wing-2.png);
+  background-image: url(../img/four-seasons/wing-2.png);
   left: -174px;
   top: 0;
   width: 178px;
@@ -769,7 +769,7 @@ html, body {
   top: 0px;
   width: 178px;
   height: 208px;
-  background-image: url(../img/wing-2.png);
+  background-image: url(../img/four-seasons/wing-2.png);
   animation-name: rightwingani;
 }
 
