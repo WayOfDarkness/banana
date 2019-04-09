@@ -1,0 +1,855 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+}
+
+/*four seasons*/
+/*--------------------------------------------*/
+#fs {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#fs .fs-content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/*close*/
+/*--------------------------------------------*/
+#fs .fs-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#fs .fs-close:before,
+#fs .fs-close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: white;
+}
+
+#fs .fs-close:before {
+  transform: rotate(45deg);
+}
+
+#fs .fs-close:after {
+  transform: rotate(-45deg);
+}
+
+
+/*bg*/
+/*--------------------------------------------*/
+#fs .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 0;
+}
+
+#fs .bg img {
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#fs .bg img:last-child {
+  opacity: 0.35;
+}
+
+#fs .bg video {
+  object-fit: cover;
+  height: 100%;
+}
+
+#fs .bg:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+
+/*border shadow*/
+/*--------------------------------------------*/
+#fs .effect-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+#fs .season-spring .effect-shadow {
+  box-shadow: 0 0 15px 5px #56e277 inset, 0 0 10px 0px #b2ffaf;
+}
+
+#fs .season-summer .effect-shadow {
+  box-shadow: 0 0 15px 5px #ffd040 inset, 0 0 10px 0px #fff2cd;
+}
+
+#fs .season-autumn .effect-shadow {
+  box-shadow: 0 0 15px 5px #de7b20 inset, 0 0 10px 0px #ffdfbf;
+}
+
+#fs .season-winter .effect-shadow {
+  box-shadow: 0 0 15px 5px #d7f1ff inset, 0 0 10px 0px #93d6e8;
+}
+
+/*bg shadow*/
+/*--------------------------------------------*/
+#fs .bg-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  transition-duration: 0.3s;
+}
+
+#fs .fs-season:hover .bg-shadow {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/*seasons*/
+/*--------------------------------------------*/
+#fs .fs-season {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px;
+  position: relative;
+  z-index: 3;
+  width: 25%;
+  overflow: hidden;
+}
+
+#fs .fs-season:hover {
+  z-index: 4;
+  overflow: visible;
+}
+
+#fs .item {
+  position: relative;
+  margin: 10px 0;
+  width: 100%;
+  height: 15%;
+  cursor: pointer;
+  z-index: 4;
+  opacity: 0.9;
+  transition-duration: 0.3s;
+  filter: grayscale(50%);
+}
+
+#fs .item:hover {
+  animation: effect-shadow-hearth 2s infinite linear;
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+#fs .item.riddle-solved {
+  opacity: 1;
+}
+
+#fs .item.riddle-solved:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.825);
+}
+
+#fs .item.riddle-solved:after {
+  position: absolute;
+  content: '';
+  background-image: url('../img/tick-done.png');
+  background-size: 100% 100%;
+  filter: brightness(500%);
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  transform: translate(-50%, -50%);
+}
+
+#fs .season-spring .item:hover {
+  box-shadow: 0 0 10px 5px white;
+}
+
+#fs .season-summer .item:hover {
+  box-shadow: 0 0 10px 5px white;
+}
+
+#fs .season-autumn .item:hover {
+  box-shadow: 0 0 10px 5px white;
+}
+
+#fs .season-winter .item:hover {
+  box-shadow: 0 0 10px 5px white;
+}
+
+#fs .item .title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 15px;
+  line-height: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+#fs .item img {
+  object-position: center center;
+  width: 100%;
+  height: 100%;
+}
+
+#fs .item .border-image {
+  position: absolute;
+  width: calc(100% + 10px);
+  height: calc(100% + 14px);
+  top: -7px;
+  left: -5px;
+}
+
+#fs .item .border-image img {
+  object-fit: fill;
+}
+
+
+/*--------------------------------------------*/
+/*autumn*/
+/*--------------------------------------------*/
+
+.season-autumn {
+  background: url(../img/autumn.jpg) center top no-repeat;
+}
+
+.season-autumn .border-image {
+  filter: contrast(350%) grayscale(20%)
+}
+
+.season-autumn .fallingLeaves {
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  top: -25%;
+  left: 0;
+  z-index: 3;
+}
+
+.fallingLeaves {
+  text-align: center;
+}
+
+.fallingLeaves span {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: -280px 40px 54px -34px;
+  background: url("../img/leaf.png");
+  -webkit-animation: fallingLeaves 10s infinite linear;
+  -moz-animation: fallingLeaves 10s infinite linear;
+  z-index: 0;
+}
+
+.fallingLeaves span:nth-child(5n+5) {
+
+  -webkit-animation-delay: 1.3s;
+  -moz-animation-delay: 1.3s;
+}
+
+.fallingLeaves span:nth-child(3n+2) {
+
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+}
+
+.fallingLeaves span:nth-child(2n+5) {
+
+  -webkit-animation-delay: 1.7s;
+  -moz-animation-delay: 1.7s;
+}
+
+.fallingLeaves span:nth-child(3n+10) {
+
+  -webkit-animation-delay: 2.7s;
+  -moz-animation-delay: 2.7s;
+}
+
+.fallingLeaves span:nth-child(7n+2) {
+
+  -webkit-animation-delay: 3.5s;
+  -moz-animation-delay: 3.5s;
+}
+
+.fallingLeaves span:nth-child(4n+5) {
+
+  -webkit-animation-delay: 5.5s;
+  -moz-animation-delay: 5.5s;
+}
+
+.fallingLeaves span:nth-child(3n+7) {
+
+  -webkit-animation-delay: 8s;
+  -moz-animation-delay: 8s;
+}
+
+@-webkit-keyframes fallingLeaves {
+  0% {
+    opacity: 1;
+
+    -webkit-transform: translate(0, 0px) rotateZ(0deg);
+  }
+  75% {
+    opacity: 1;
+
+    -webkit-transform: translate(100px, 600px) rotateZ(270deg);
+  }
+  100% {
+    opacity: 0;
+
+    -webkit-transform: translate(150px, 800px) rotateZ(360deg);
+  }
+}
+
+@-moz-keyframes fallingLeaves {
+  0% {
+    opacity: 1;
+
+    -webkit-transform: translate(0, 0px) rotateZ(0deg);
+  }
+  75% {
+    opacity: 1;
+
+    -webkit-transform: translate(100px, 600px) rotateZ(270deg);
+  }
+  100% {
+    opacity: 0;
+
+    -webkit-transform: translate(150px, 800px) rotateZ(360deg);
+  }
+}
+
+@keyframes effect-shadow-hearth {
+  0% {
+    box-shadow: 0 0 4px 4px #ffcea9;
+  }
+  30% {
+    box-shadow: 0 0 10px 5px #ffcea9;
+  }
+  50% {
+    box-shadow: 0 0 6px 8px #ffcea9;
+  }
+  70% {
+    box-shadow: 0 0 10px 5px #ffcea9;
+  }
+  100% {
+    box-shadow: 0 0 4px 4px #ffcea9;
+  }
+}
+
+
+/*--------------------------------------------*/
+/*winter*/
+/*--------------------------------------------*/
+
+
+.season-winter {
+  background: url(../img/winter.PNG) center top no-repeat;
+  background-size: cover;
+}
+
+.season-winter .border-image {
+  filter: grayscale(80%);
+}
+
+.season-winter .winter-is-coming {
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  top: -25%;
+  left: 0;
+  z-index: 3;
+}
+
+.snow, .winter-is-coming {
+  z-index: 100;
+  pointer-events: none;
+}
+
+.winter-is-coming {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+.snow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: falling linear infinite both;
+  transform: translate3D(0, -100%, 0);
+}
+
+.snow--near {
+  animation-duration: 100s;
+  background-image: url("../img/snow-large.png");
+  background-size: contain;
+}
+
+.snow--near + .snow--alt {
+  animation-delay: 2s;
+}
+
+.snow--mid {
+  animation-duration: 20s;
+  background-image: url("../img/snow-medium.png");
+  background-size: contain;
+}
+
+.snow--mid + .snow--alt {
+  animation-delay: 1s;
+}
+
+.snow--far {
+  animation-duration: 30s;
+  background-image: url("../img/snow-small.png");
+  background-size: contain;
+}
+
+.snow--far + .snow--alt {
+  animation-delay: 15s;
+}
+
+@keyframes falling {
+  0% {
+    transform: translate3D(-7.5%, -100%, 0);
+  }
+  100% {
+    transform: translate3D(7.5%, 100%, 0);
+  }
+}
+
+
+/*--------------------------------------------*/
+/*summer*/
+/*--------------------------------------------*/
+
+
+.season-summer {
+  background: url(summer3.gif) center center no-repeat;
+  background-size: cover;
+  filter: brightness(150%);
+}
+
+.season-summer .border-image {
+  filter: saturate(2);
+}
+
+.sun {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  right: 0;
+  bottom: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.9;
+  box-shadow: 0px 0px 40px 15px white;
+}
+
+.ray_box {
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 70px;
+  -webkit-animation: ray_anim 120s linear infinite;
+  animation: ray_anim 120s linear infinite;
+}
+
+.ray {
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+  margin-left: 10px;
+  border-radius: 80% 80% 0 0;
+  position: absolute;
+  opacity: 0.25;
+}
+
+.ray1 {
+  height: 170px;
+  width: 30px;
+  -webkit-transform: rotate(180deg);
+  top: -175px;
+  left: 15px;
+}
+
+.ray2 {
+  height: 100px;
+  width: 8px;
+  -webkit-transform: rotate(220deg);
+  top: -90px;
+  left: 75px;
+}
+
+.ray3 {
+  height: 170px;
+  width: 50px;
+  -webkit-transform: rotate(250deg);
+  top: -80px;
+  left: 100px;
+}
+
+.ray4 {
+  height: 120px;
+  width: 14px;
+  -webkit-transform: rotate(305deg);
+  top: 30px;
+  left: 100px;
+}
+
+.ray5 {
+  height: 140px;
+  width: 30px;
+  -webkit-transform: rotate(-15deg);
+  top: 60px;
+  left: 40px;
+}
+
+.ray6 {
+  height: 90px;
+  width: 50px;
+  -webkit-transform: rotate(30deg);
+  top: 60px;
+  left: -40px;
+}
+
+.ray7 {
+  height: 180px;
+  width: 10px;
+  -webkit-transform: rotate(70deg);
+  top: -35px;
+  left: -40px;
+}
+
+.ray8 {
+  height: 120px;
+  width: 30px;
+  -webkit-transform: rotate(100deg);
+  top: -45px;
+  left: -90px;
+}
+
+.ray9 {
+  height: 80px;
+  width: 10px;
+  -webkit-transform: rotate(120deg);
+  top: -65px;
+  left: -60px;
+}
+
+.ray10 {
+  height: 190px;
+  width: 23px;
+  -webkit-transform: rotate(150deg);
+  top: -185px;
+  left: -60px;
+}
+
+
+@-webkit-keyframes ray_anim {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+/*--------------------------------------------*/
+/*spring*/
+/*--------------------------------------------*/
+
+.season-spring {
+  background: url(../img/spring3.png) center bottom no-repeat;
+  background-size: cover;
+  perspective: 600px;
+  perspective-origin: 0% 0%;
+}
+
+.season-spring .border-image {
+  filter: hue-rotate(80deg);
+}
+
+.season-spring .butterfly {
+  position: absolute;
+  transform: rotate3d(0, 1, 0, 0deg) scale3d(0.5, 0.5, 0.5);
+  transform-origin: 50% 50%;
+  transform-style: preserve-3d;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.season-spring .leftwing {
+  transform: rotateX(90deg) rotate3d(0, 1, 0, 0deg);
+  position: absolute;
+  transform-origin: top right;
+
+  background-repeat: no-repeat;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.season-spring .rightwing {
+  transform: rotateX(90deg) translate3d(-178px, 0px, 0px) rotate3d(0, 1, 0, 180deg);
+  transform-origin: top right;
+  position: absolute;
+  background-repeat: no-repeat;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.butterfly-1 {
+  animation-name: butterflyani;
+  left: -100%;
+  top: 0;
+  width: 300%;
+  height: 20%;
+  animation-duration: 10s;
+}
+
+.butterfly-1 .leftwing {
+  background-image: url(../img/wing.png);
+  left: -175px;
+  top: 0;
+  width: 178px;
+  height: 208px;
+  animation-name: leftwingani;
+}
+
+.butterfly-1 .rightwing {
+  left: 0px;
+  top: 0px;
+  width: 178px;
+  height: 208px;
+  background-image: url(../img/wing.png);
+  animation-name: rightwingani;
+}
+
+.butterfly-2 {
+  animation-name: butterflyani-reverse;
+  left: -80%;
+  top: 40%;
+  width: 200%;
+  height: 20%;
+  animation-duration: 12s;
+}
+
+.butterfly-2 .leftwing {
+  background-image: url(../img/wing-4.png);
+  left: -174px;
+  top: 0;
+  width: 178px;
+  height: 208px;
+  animation-name: leftwingani;
+}
+
+.butterfly-2 .rightwing {
+  left: 0px;
+  top: 0px;
+  width: 178px;
+  height: 208px;
+  background-image: url(../img/wing-4.png);
+  animation-name: rightwingani;
+}
+
+.butterfly-3 {
+  animation-name: butterflyani;
+  left: -20%;
+  top: 70%;
+  width: 130%;
+  height: 20%;
+  animation-duration: 10s;
+}
+
+.butterfly-3 .leftwing {
+  background-image: url(../img/wing-3.png);
+  left: -174px;
+  top: 0;
+  width: 178px;
+  height: 208px;
+  animation-name: leftwingani;
+}
+
+.butterfly-3 .rightwing {
+  left: 0px;
+  top: 0px;
+  width: 178px;
+  height: 208px;
+  background-image: url(../img/wing-3.png);
+  animation-name: rightwingani;
+}
+
+
+.butterfly-4 {
+  animation-name: butterflyani-reverse;
+  left: -40%;
+  top: -10%;
+  width: 150%;
+  height: 5%;
+  animation-duration: 8s;
+}
+
+.butterfly-4 .leftwing {
+  background-image: url(../img/wing-2.png);
+  left: -174px;
+  top: 0;
+  width: 178px;
+  height: 208px;
+  animation-name: leftwingani;
+}
+
+.butterfly-4 .rightwing {
+  left: 0px;
+  top: 0px;
+  width: 178px;
+  height: 208px;
+  background-image: url(../img/wing-2.png);
+  animation-name: rightwingani;
+}
+
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden;
+  font-size: 0px;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+@keyframes butterflyani {
+  from {
+    transform: rotate3d(0, 1, 0, 0deg) scale3d(0.5, 0.5, 0.5) translate3d(-300px, 350px, 0px);
+  }
+  25% {
+    transform: rotate3d(0, 1, 0, -90deg) scale3d(0.5, 0.5, 0.5) translate3d(-300px, 350px, 0px);
+  }
+  50% {
+    transform: rotate3d(0, 1, 0, -180deg) scale3d(0.5, 0.5, 0.5) translate3d(-300px, 350px, 0px);
+  }
+  75% {
+    transform: rotate3d(0, 1, 0, -270deg) scale3d(0.5, 0.5, 0.5) translate3d(-300px, 350px, 0px);
+  }
+  to {
+    transform: rotate3d(0, 1, 0, -360deg) scale3d(0.5, 0.5, 0.5) translate3d(-300px, 350px, 0px);
+  }
+}
+
+@keyframes butterflyani-reverse {
+  from {
+    transform: rotate3d(0, 1, 0, -360deg) scale3d(0.5, 0.5, 0.5) translate3d(-300px, 350px, 0px);
+  }
+  25% {
+    transform: rotate3d(0, 1, 0, -270deg) scale3d(0.5, 0.5, 0.5) translate3d(-300px, 350px, 0px);
+  }
+  50% {
+    transform: rotate3d(0, 1, 0, -180deg) scale3d(0.5, 0.5, 0.5) translate3d(-300px, 350px, 0px);
+  }
+  75% {
+    transform: rotate3d(0, 1, 0, -90deg) scale3d(0.5, 0.5, 0.5) translate3d(-300px, 350px, 0px);
+  }
+  to {
+    transform: rotate3d(0, 1, 0, 0deg) scale3d(0.5, 0.5, 0.5) translate3d(-300px, 350px, 0px);
+  }
+}
+
+
+@keyframes rightwingani {
+  from {
+    transform: rotateX(90deg) translate3d(-178px, 0px, 0px) rotate3d(0, 1, 0, 180deg);
+  }
+  50% {
+    transform: rotateX(90deg) translate3d(-178px, 0px, 0px) rotate3d(0, 1, 0, 100deg);
+  }
+  to {
+    transform: rotateX(90deg) translate3d(-178px, 0px, 0px) rotate3d(0, 1, 0, 180deg);
+  }
+}
+
+
+@keyframes leftwingani {
+  from {
+    transform: rotateX(90deg) rotate3d(0, 1, 0, 0deg);
+  }
+  50% {
+    transform: rotateX(90deg) rotate3d(0, 1, 0, 80deg);
+  }
+  to {
+    transform: rotateX(90deg) rotate3d(0, 1, 0, 00deg);
+  }
+}
+
+
