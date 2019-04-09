@@ -1,16 +1,18 @@
 {% block pre_include %}
     <title>"{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" Is Solved!</title>
-    <link rel="stylesheet" href="{{theme.uri}}/css/riddles.css">
+    <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
 {% endblock %}
 
 {% block post_include %}{% endblock %}
 
 {% block content %}
 
-    <div>Chúc mừng bạn đã vượt qua thử thách {{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}</div>
+    <div>Chúc mừng bạn đã vượt qua thử thách "{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}"!</div>
     <div>
-        <a href={{getCustomField(gallery.id, 'gallery', 'next-riddle')}}>Trở lại</a>
-        <a href="https://choigiday.com/the-four-paths">Thử thách tiếp theo</a>
+        <a href="https://choigiday.com/the-four-paths">Trở lại</a>
+        <a href={{getCustomField(gallery.id, 'gallery', 'next-riddle')}}>Thử thách tiếp theo</a>
     </div>
+
+    {# Chạy API #}
 
 {% endblock content %}
