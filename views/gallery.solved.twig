@@ -1,0 +1,16 @@
+{% block pre_include %}
+    <title>"{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" Is Solved!</title>
+    <link rel="stylesheet" href="{{theme.uri}}/css/riddles.css">
+{% endblock %}
+
+{% block post_include %}{% endblock %}
+
+{% block content %}
+
+    Chúc mừng bạn đã vượt qua thử thách {{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}
+    Bấm vào <a href={{getCustomField(gallery.id, 'gallery', 'next-riddle')}}>đây</a> để tiếp tục với thử thách tiếp theo
+    Hoặc bấm vào <a href="https://choigiday.com/the-four-paths">đây</a> để quay trở lại trang lựa chọn.
+
+    
+
+{% endblock content %}

@@ -111,18 +111,6 @@
                     </div>
                 </div>
             </section>
-            <div class="hidden-door">
-                <input/>
-                <button>Click me</button>
-            </div>
         </main>
     </body>
-
-    <script>
-        $('.hidden-door button').click(function(e) {
-            hiddenContent = $('.hidden-door input').val();
-            if (hiddenContent == 'bedead')
-                $('.error-container').html(`It's not 404 anymore, it's a hidden door. Go though <a href="http://marvriddle.webd.pl/">it</a>...`);
-        })
-    </script>
 </html>
