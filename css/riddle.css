@@ -1,0 +1,22 @@
+.main-img {
+    text-align: center;
+}
+
+.border-image {
+    position: absolute;
+    width: calc(100% + 10px);
+    height: calc(100% + 14px);
+    top: -7px;
+    left: -5px;
+}
+
+.item img {
+    object-position: center center;
+    width: 100%;
+    height: 100%;
+}
+
+.item {
+    position: relative;
+    margin: 10px 0;
+  }
