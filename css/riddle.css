@@ -1,3 +1,7 @@
+body {
+    background-color: black;
+}
+
 .main-img {
     text-align: center;
 }
@@ -19,4 +23,4 @@
 .item {
     position: relative;
     margin: 10px 0;
-  }
+}
