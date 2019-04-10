@@ -139,5 +139,6 @@ function parse_raw_product($data) {
 
 registerCustomField("Outline","article","checkbox");
 registerCustomField("Author","article","select", ['Sigma', 'Phi']);
+registerCustomField("Riddle Point","gallery","input");
 registerCustomField("Solved Riddle","gallery","input");
 registerCustomField("Next Riddle","gallery","input");
