@@ -222,7 +222,7 @@ html, body {
 }
 
 .season-summer .solved-number {
-  filter: brightness(80%);
+  filter: brightness(70%);
 }
 
 #fs .season-spring .item:hover {
