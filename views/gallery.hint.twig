@@ -1,5 +1,5 @@
 {% block pre_include %}
-    <title>{{gallery.title}}</title>
+    <title>{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}</title>
 {% endblock %}
 
 {% block post_include %}{% endblock %}
