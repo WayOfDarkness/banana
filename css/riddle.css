@@ -17,9 +17,12 @@ p.clue {
 }
 
 img {
-	border: 2px white solid;
 	width: 100%;
 	height: 99.5%;
+}
+
+img.winter {
+	border: 2px white solid;
 }
 
 a:link, a:visited {
