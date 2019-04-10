@@ -29,6 +29,14 @@ img.autumn {
 	border: 2px orange solid;
 }
 
+img.summer {
+	border: 2px blue solid;
+}
+
+img.spring {
+	border: 2px green solid;
+}
+
 a:link, a:visited {
 	background-color: #f44336;
 	color: white;

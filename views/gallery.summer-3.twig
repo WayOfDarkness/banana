@@ -1,0 +1,11 @@
+{% block pre_include %}
+    <title>Rush Hours</title>
+    <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
+    <link rel="shortcut icon" href="{{settings.favicon | upload_url}}">
+{% endblock %}
+
+{% block post_include %}{% endblock %}
+
+{% block content %}
+    <img class="summer" src="{{gallery.photos[0].image | upload_url}}" alt="Rush Hours">
+{% endblock content %}
