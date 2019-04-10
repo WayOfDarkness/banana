@@ -30,11 +30,19 @@ img.autumn {
 }
 
 img.summer {
-	border: 2px blue solid;
+	border: 2px red solid;
 }
 
 img.spring {
 	border: 2px green solid;
+}
+
+img.starting {
+	border: 2px blue solid;
+}
+
+img.final {
+	border: 2px purple solid;
 }
 
 a:link, a:visited {
