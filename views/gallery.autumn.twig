@@ -2,13 +2,22 @@
     <title>The Autumn Night</title>
     <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
     <link rel="shortcut icon" href="{{settings.favicon | upload_url}}">
+
 {% endblock %}
 
-{% block post_include %}{% endblock %}
+{% block post_include %}
+    <script language="javascript">
+        function autoResizeDiv() {
+            document.getElementById('full-screen-me').style.height = window.innerHeight + 'px';
+        }
+        window.onresize = autoResizeDiv;
+        autoResizeDiv();
+    </script>
+{% endblock %}
 
 {% block content %}
-    
-    <img class="autumn" src="{{theme.uri}}/img/four-seasons/riddles/autumn/autumn_1.jpg" alt="The Autumn Night" usemap="#planetmap">
+
+    <img id="full-screen-me" class="autumn" src="{{theme.uri}}/img/four-seasons/riddles/autumn/autumn_1.jpg" alt="The Autumn Night" usemap="#planetmap">
     <map name="planetmap">
         <area coords="670,155,90" shape="circle" title="October 4, 2009">
         <area coords="1000,68,3" shape="circle" title="November 1, 2001">
