@@ -1,22 +1,25 @@
 body {
-	background-color: #000000;
-	color: #FFFFFF;
-	text-align: center;
+  background-color: #000000;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
 }
 
 p {
-	color: #CCCCCC;
-	font-size: 10pt;
-	font-family: Arial;
+  color: #CCCCCC;
+  font-size: 10pt;
+  font-family: Arial;
 }
 
 p.clue {
-	color: #EEEEEE;
-	font-size: 12pt;
-	margin-bottom: 35px;
+  color: #EEEEEE;
+  font-size: 12pt;
+  margin-bottom: 35px;
 }
 
 img {
+  border: 0px;
 	width: 100%;
 	height: 99.5%;
 }
@@ -46,14 +49,14 @@ img.final {
 }
 
 a:link, a:visited {
-	background-color: #f44336;
-	color: white;
-	padding: 14px 25px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 
 a:hover, a:active {
-	background-color: red;
+  background-color: red;
 }
