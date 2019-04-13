@@ -1,6 +1,7 @@
+{% extends "layout.twig" %}
+
 {% block pre_include %}
     <title>{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}</title>
-    <link rel="shortcut icon" href="{{settings.favicon | upload_url}}">
 {% endblock %}
 
 {% block post_include %}{% endblock %}
