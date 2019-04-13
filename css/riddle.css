@@ -122,6 +122,6 @@ a:hover, a:active {
   object-fit: fill;
 }
 
-.introdution {
+.introdution, .solve {
   margin-top: 100px;
 }
