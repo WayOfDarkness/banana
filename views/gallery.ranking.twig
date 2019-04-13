@@ -2,12 +2,38 @@
     <title>Bảng xếp hạng</title>
 {% endblock %}
 
-{% block post_include %}{% endblock %}
+{% block post_include %}
+    <script>
+        function loadRanking(url) {
+            $.ajax({
+                url: url,
+                type: 'GET',
+                success: function (data) {
+                    var html = '';
+                    if (data.data.length == 0) 
+                        html = 'Không tìm thấy kết quả!!!';
+                    
+                    for (var i = 0; i < data.data.length; i++) {
+                        html += `${data.data[i].name}<br>`;
+                    }
+
+                    $('.ranking').html(html);
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            option_url = 'api/customer?page=1&sortby=point';
+            loadRanking(option_url);
+        })
+    </script>
+{% endblock %}
 
 {% block content %}
 
-    Bảng xếp hạng hiện tại của các người chơi!
-
-
+    <h2>Bảng xếp hạng hiện tại của các người chơi!</h2>
+    <div class="ranking">
+    
+    </div>
 
 {% endblock content %}
