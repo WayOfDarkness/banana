@@ -1,0 +1,45 @@
+{% extends "layout.twig" %}
+
+{% block pre_include %}
+    <title>The Event</title>
+    <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
+{% endblock %}
+
+{% block post_include %}{% endblock %}
+
+{% block content %}
+
+    <div class="item riddle-solved">
+        <a href="">
+            <img alt="" src="{{theme.uri}}/img/four-seasons/locked.jpg">
+            <div class="border-image">
+                <img alt="" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
+            </div>
+            <span class="solved-number">
+                0
+            </span>
+        </a>
+    </div>
+    <div class="item">
+        <a href="">
+            <img alt="" src="{{theme.uri}}/img/four-seasons/locked.jpg">
+            <div class="border-image">
+                <img alt="" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
+            </div>
+            <span class="solved-number">
+                0
+            </span>
+        </a>
+    </div>
+    <div class="item">
+        <a href="">
+            <img alt="" src="{{theme.uri}}/img/four-seasons/locked.jpg">
+            <div class="border-image">
+                <img alt="" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
+            </div>
+            <span class="solved-number">
+                0
+            </span>
+        </a>
+    </div>
+{% endblock content %}
