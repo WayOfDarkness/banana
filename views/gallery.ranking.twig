@@ -13,11 +13,16 @@
                 success: function (data) {
                     console.log(data);
                     var html = '';
-                    if (data.data.length == 0) 
+                    if (data.customer.length == 0) 
                         html = 'Không tìm thấy kết quả!!!';
                     
-                    for (var i = 0; i < data.data.length; i++) {
-                        html += `${data.data[i].name}<br>`;
+                    for (var i = 0; i < data.customer.length; i++) {
+                        html += `<div>
+                            <div>${i+1}</div>
+                            <img src="/uploads/${data.customer[i].avatar}" alt="${data.customer[i].name}" />
+                            <div>${data.customer[i].name}</div>
+                            <div>${data.customer[i].point}</div>
+                        </div><br>`;
                     }
 
                     $('.ranking').html(html);
