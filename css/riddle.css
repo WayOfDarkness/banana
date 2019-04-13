@@ -124,16 +124,5 @@ a:hover, a:active {
 
 .introdution, .solve {
   margin-top: 100px;
-}
-
-.genric-btn {
-	display: inline-block;
-	outline: none;
-	line-height: 40px;
-	padding: 0 30px;
-	font-size: 1em;
-	text-align: center;
-	text-decoration: none;
-	font-weight: 500;
-	cursor: pointer;
+  margin-bottom: 100px;
 }
