@@ -1,7 +1,7 @@
 {% extends "layout.twig" %}
 
 {% block pre_include %}
-    <title>The Event</title>
+    <title>All Riddles</title>
     <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
 {% endblock %}
 
@@ -9,7 +9,7 @@
 
 {% block content %}
 
-    <div class="item riddle-solved">
+    <div class="item-slot riddle-solved">
         <a href="">
             <img alt="" src="{{theme.uri}}/img/four-seasons/locked.jpg">
             <div class="border-image">
@@ -20,18 +20,15 @@
             </span>
         </a>
     </div>
-    <div class="item">
+    <div class="item-slot">
         <a href="">
             <img alt="" src="{{theme.uri}}/img/four-seasons/locked.jpg">
             <div class="border-image">
                 <img alt="" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
             </div>
-            <span class="solved-number">
-                0
-            </span>
         </a>
     </div>
-    <div class="item">
+    <div class="item-slot">
         <a href="">
             <img alt="" src="{{theme.uri}}/img/four-seasons/locked.jpg">
             <div class="border-image">

@@ -18,26 +18,32 @@ p.clue {
   margin-bottom: 35px;
 }
 
-img {
-	width: 100%;
+img.winter {
+  border: 2px white solid;
+  width: 100%;
 	height: 100%;
   box-sizing: border-box;
 }
 
-img.winter {
-	border: 2px white solid;
-}
-
 img.autumn {
-	border: 2px orange solid;
+  border: 2px orange solid;
+  width: 100%;
+	height: 100%;
+  box-sizing: border-box;
 }
 
 img.summer {
-	border: 2px red solid;
+  border: 2px red solid;
+  width: 100%;
+	height: 100%;
+  box-sizing: border-box;
 }
 
 img.spring {
-	border: 2px green solid;
+  border: 2px green solid;
+  width: 100%;
+	height: 100%;
+  box-sizing: border-box;
 }
 
 img.starting {
@@ -61,17 +67,17 @@ a:hover, a:active {
   background-color: red;
 }
 
-.item {
+.item-slot {
   width: 27%;
   margin-left: 3%;
   margin-right: 3%;
 }
 
-.item.riddle-solved {
+.item-slot.riddle-solved {
   opacity: 1;
 }
 
-.item.riddle-solved:before {
+.item-slot.riddle-solved:before {
   position: absolute;
   content: '';
   width: 100%;
@@ -81,7 +87,7 @@ a:hover, a:active {
   background: rgba(0, 0, 0, 0.825);
 }
 
-.item.riddle-solved:after {
+.item-slot.riddle-solved:after {
   position: absolute;
   content: '';
   background-image: url('../img/four-seasons/tick-done.png');
@@ -94,7 +100,7 @@ a:hover, a:active {
   transform: translate(-50%, -50%);
 }
 
-.item .solved-number {
+.item-slot .solved-number {
   position: absolute;
   top: 0;
   right: 0;
@@ -104,7 +110,7 @@ a:hover, a:active {
   text-shadow: 0px 0px 8px #ffffff, 0px 0px 8px #ffffff, 0px 0px 8px #ffffff, 0px 0px 8px #ffffff, 0px 0px 8px #ffffff;
 }
 
-.item .border-image {
+.item-slot .border-image {
   position: absolute;
   width: calc(100% + 10px);
   height: calc(100% + 14px);
@@ -112,6 +118,6 @@ a:hover, a:active {
   left: -5px;
 }
 
-.item .border-image img {
+.item-slot .border-image img {
   object-fit: fill;
 }
