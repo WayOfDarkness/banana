@@ -54,19 +54,6 @@ img.final {
 	border: 2px purple solid;
 }
 
-a:link, a:visited {
-  background-color: #f44336;
-  color: white;
-  padding: 14px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-a:hover, a:active {
-  background-color: red;
-}
-
 .item-slot {
   width: 27%;
   margin-left: 3%;
