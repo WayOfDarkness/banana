@@ -1,11 +1,10 @@
 {% block pre_include %}
-    <title>{{gallery.title}}</title>
+    <title>{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}</title>
+    <link rel="shortcut icon" href="{{settings.favicon | upload_url}}">
 {% endblock %}
 
 {% block post_include %}{% endblock %}
 
 {% block content %}
-
-    Gợi ý thêm cho người chơi
-
+    {{gallery.description | raw}}
 {% endblock content %}

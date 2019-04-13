@@ -221,6 +221,10 @@ html, body {
   text-shadow: 0px 0px 8px #ffffff, 0px 0px 8px #ffffff, 0px 0px 8px #ffffff, 0px 0px 8px #ffffff, 0px 0px 8px #ffffff;
 }
 
+.season-summer .solved-number {
+  filter: brightness(70%);
+}
+
 #fs .season-spring .item:hover {
   box-shadow: 0 0 10px 5px white;
 }
