@@ -3,21 +3,32 @@
 {% block pre_include %}
     <title>"{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" Is Solved!</title>
     <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
+    <link rel="stylesheet" href="{{theme.uri}}/css/button.css">
 {% endblock %}
 
 {% block post_include %}{% endblock %}
 
 {% block content %}
 
-    <div class="solve">
+    <section class="solve">
         <div>Chúc mừng bạn đã vượt qua thử thách "{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}"!</div>
-        <div>Số điểm bạn đã giành được là {{getCustomField(gallery.id, 'gallery', 'riddle-point')}}</div>
-        <div>Số điểm hiện tại của bạn là {{user.point}}</div>
-        <div>
-            <a href="https://choigiday.com/the-four-paths" class="genric-btn default">Trở lại</a>
-            <a href={{getCustomField(gallery.id, 'gallery', 'next-riddle')}} class="genric-btn default">Thử thách tiếp theo</a>
+        <div>Số điểm bạn đã giành được là
+            {{getCustomField(gallery.id, 'gallery', 'riddle-point')}}</div>
+        <div>Số điểm hiện tại của bạn là
+            {{user.point}}</div>
+        <div id="container_buttons">
+            <p>
+                <a class="a_demo_four" href="https://choigiday.com/the-four-paths">
+                    Trở lại!
+                </a>
+            </p>
+            <p>
+                <a class="a_demo_four" href={{getCustomField(gallery.id, 'gallery', 'next-riddle')}}>
+                    Thử thách tiếp theo!
+                </a>
+            </p>
         </div>
-    </div>
+    </section>
 
     {# Chạy API #}
 
