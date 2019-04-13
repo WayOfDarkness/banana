@@ -12,15 +12,14 @@
 
     <section class="solve">
         <div>Chúc mừng bạn đã vượt qua thử thách "{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}"!</div>
-        <div>Số điểm bạn đã giành được là
-            {{getCustomField(gallery.id, 'gallery', 'riddle-point')}}</div>
-        <div>Số điểm hiện tại của bạn là
-            {{user.point}}</div>
+        <div>Số điểm bạn đã giành được trong thử thách vừa rồi là {{getCustomField(gallery.id, 'gallery', 'riddle-point')}}</div>
+        <div>Số điểm hiện tại của bạn là {{customer.point}}</div>
+
         <div id="container_buttons">
-            <a class="a_demo_four" href="https://choigiday.com/the-four-paths">
+            <a class="btn-general back-to-the-beginning" href="https://choigiday.com/the-four-paths">
                 Trở lại!
             </a>
-            <a class="a_demo_four" href={{getCustomField(gallery.id, 'gallery', 'next-riddle')}}>
+            <a class="btn-general next-level" href={{getCustomField(gallery.id, 'gallery', 'next-riddle')}}>
                 Thử thách tiếp theo!
             </a>
         </div>
