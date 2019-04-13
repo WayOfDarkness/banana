@@ -121,3 +121,7 @@ a:hover, a:active {
 .item-slot .border-image img {
   object-fit: fill;
 }
+
+.introdution {
+  margin-top: 100px;
+}
