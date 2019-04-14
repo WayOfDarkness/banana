@@ -7,7 +7,25 @@
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
 {% endblock %}
 
-{% block post_include %}{% endblock %}
+{% block post_include %}
+    <script>
+        var id = $('.riddler-id').html();
+        if (id) {
+            $.ajax({
+                url: `api/customer/set-point/${id}`,
+                type: "POST",
+                data: 20,
+                success: function (result) {
+                    if (! result.code) {
+                        console.log('thanh cong');
+                    } else {
+                        console.log('that bai');
+                    }
+                }
+            });
+        }
+    </script>
+{% endblock %}
 
 {% block content %}
 
@@ -15,8 +33,10 @@
         <div class="innerCircle">
             <div class="innerText">Chúc mừng bạn đã vượt qua thử thách!</div>
             <div class="innerText">{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}</div>
-            <div class="innerText">Số điểm bạn đã giành được trong thử thách vừa rồi là {{getCustomField(gallery.id, 'gallery', 'riddle-point')}}</div>
-            <div class="innerText">Số điểm hiện tại của bạn là {{customer.point}}</div>
+            <div class="innerText">Số điểm bạn đã giành được trong thử thách vừa rồi là
+                {{getCustomField(gallery.id, 'gallery', 'riddle-point')}}</div>
+            <div class="innerText">Số điểm hiện tại của bạn là
+                {{customer.point + getCustomField(gallery.id, 'gallery', 'riddle-point')}}</div>
 
             <div id="container_buttons">
                 <a class="btn-general back-to-the-beginning" href="https://choigiday.com/the-four-paths">
@@ -29,6 +49,8 @@
         </div>
     </section>
 
-    {# Chạy API #}
+    {% if customer.logged_in %}
+        <div class="riddler-id">{{customer.id}}</div>
+    {% endif %}
 
 {% endblock content %}
