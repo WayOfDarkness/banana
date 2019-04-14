@@ -18,32 +18,30 @@ p.clue {
   margin-bottom: 35px;
 }
 
+img {
+  width: 1000px;
+  height: 600px;
+  box-sizing: border-box;
+  margin: -300px 0 0 -500px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
+}
+
 img.winter {
   border: 2px white solid;
-  width: 100%;
-	height: 100%;
-  box-sizing: border-box;
 }
 
 img.autumn {
   border: 2px orange solid;
-  width: 100%;
-	height: 100%;
-  box-sizing: border-box;
 }
 
 img.summer {
   border: 2px red solid;
-  width: 100%;
-	height: 100%;
-  box-sizing: border-box;
 }
 
 img.spring {
   border: 2px green solid;
-  width: 100%;
-	height: 100%;
-  box-sizing: border-box;
 }
 
 img.starting {
