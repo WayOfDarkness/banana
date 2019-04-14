@@ -1,25 +1,31 @@
+{% extends "layout.twig" %}
+
 {% block pre_include %}
     <title>"{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" Is Solved!</title>
     <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
     <link rel="stylesheet" href="{{theme.uri}}/css/button.css">
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
 {% endblock %}
 
 {% block post_include %}{% endblock %}
 
 {% block content %}
 
-    <section class="solve">
-        <div>Chúc mừng bạn đã vượt qua thử thách "{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}"!</div>
-        <div>Số điểm bạn đã giành được trong thử thách vừa rồi là {{getCustomField(gallery.id, 'gallery', 'riddle-point')}}</div>
-        <div>Số điểm hiện tại của bạn là {{customer.point}}</div>
+    <section class="circleBase type3 nav-primary">
+        <div class="innerCircle">
+            <div class="innerText">Chúc mừng bạn đã vượt qua thử thách!</div>
+            <div class="innerText">{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}</div>
+            <div class="innerText">Số điểm bạn đã giành được trong thử thách vừa rồi là {{getCustomField(gallery.id, 'gallery', 'riddle-point')}}</div>
+            <div class="innerText">Số điểm hiện tại của bạn là {{customer.point}}</div>
 
-        <div id="container_buttons">
-            <a class="btn-general back-to-the-beginning" href="https://choigiday.com/the-four-paths">
-                Trở lại!
-            </a>
-            <a class="btn-general next-level" href={{getCustomField(gallery.id, 'gallery', 'next-riddle')}}>
-                Thử thách tiếp theo!
-            </a>
+            <div id="container_buttons">
+                <a class="btn-general back-to-the-beginning" href="https://choigiday.com/the-four-paths">
+                    <span>Trở lại!</span>
+                </a>
+                <a class="btn-general next-level" href={{getCustomField(gallery.id, 'gallery', 'next-riddle')}}>
+                    Thử thách tiếp theo!
+                </a>
+            </div>
         </div>
     </section>
 
