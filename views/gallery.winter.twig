@@ -7,10 +7,13 @@
 {% block post_include %}{% endblock %}
 
 {% block content %}
-    <img class="winter" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
+
     {% if gallery.handle == 'winter-4-time-travel' %}
+        <img class="winter" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#planetmap">
         <map name="planetmap">
-            <area coords="670,155,680,200" shape="rectangle" href="">
+            <area coords="670,155,680,200" shape="rectangle" href="https://choigiday.com/winter-4-winter">
         </map>
+    {% else %}
+        <img class="winter" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
     {% endif %}
 {% endblock content %}
