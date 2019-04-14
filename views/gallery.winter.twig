@@ -9,10 +9,10 @@
 
 {% block content %}
 
-    {% if gallery.handle == 'winter-4-time-travel' %}
+    {% if gallery.handle == 'winter-4-time-lapse' or gallery.handle == 'winter-4-night' %}
         <img class="winter" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#planetmap">
         <map name="planetmap">
-            <area coords="670,155,680,200" shape="rectangle" href="https://choigiday.com/winter-4-winter">
+            <area coords="750,426,769,425,770,442,749,442" shape="rectangle" href="https://choigiday.com/winter-4-locked-house">
         </map>
     {% else %}
         <img class="winter" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
