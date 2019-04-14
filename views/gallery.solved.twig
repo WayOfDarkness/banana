@@ -10,11 +10,13 @@
 {% block post_include %}
     <script>
         var id = $('.riddler-id').html();
+        var point = $('.riddle-point').html();
+        var current_point = $('.riddler-point').html();
         if (id) {
             $.ajax({
                 url: `api/customer/set-point/${id}`,
                 type: "POST",
-                data: 20,
+                data: point + current_point,
                 success: function (result) {
                     if (! result.code) {
                         console.log('thanh cong');
@@ -51,6 +53,8 @@
 
     {% if customer.logged_in %}
         <div class="riddler-id">{{customer.id}}</div>
+        <div class="riddle-point">{{getCustomField(gallery.id, 'gallery', 'riddle-point')}}</div>
+        <div class="riddler-point">{{customer.point}}</div>
     {% endif %}
 
 {% endblock content %}
