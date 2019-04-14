@@ -108,6 +108,11 @@ img.final {
 }
 
 .introdution, .solve {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  width: 1000px;
+  height: 600px;
+  box-sizing: border-box;
+  margin: -300px 0 0 -500px;
+  left: 50%;
+  top: 50%;
+  position: absolute;
 }
