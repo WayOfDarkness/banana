@@ -50,7 +50,7 @@ body {
 
 .next-level::before {
 	background-color: #2591b4;
-	background-image: url('right_arrow.png');
+	background-image: url('../img/icon/right_arrow.png');
 	background-repeat: no-repeat;
 	background-position: center center;
 	content: "";
@@ -72,7 +72,7 @@ body {
 
 .back-to-the-beginning::before {
 	background-color: #2591b4;
-	background-image: url('left_arrow.png');
+	background-image: url('../img/icon/left_arrow.png');
 	background-repeat: no-repeat;
 	background-position: center center;
 	content: "";
