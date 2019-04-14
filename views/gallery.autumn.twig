@@ -9,7 +9,7 @@
 
 {% block content %}
 
-    {% if gallery.handle = 'autumn-2-the-autumn-night' %}
+    {% if gallery.handle == 'autumn-2-the-autumn-night' %}
         <img class="autumn" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#planetmap">
         <map name="planetmap">
             <area coords="530,160,70" shape="circle" title="October 4, 2009">
