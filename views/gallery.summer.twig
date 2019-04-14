@@ -1,5 +1,5 @@
 {% block pre_include %}
-    <title>Spring Tone</title>
+    <title>{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}</title>
     <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
     <link rel="shortcut icon" href="{{settings.favicon | upload_url}}">
 {% endblock %}
@@ -7,5 +7,5 @@
 {% block post_include %}{% endblock %}
 
 {% block content %}
-    <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="Spring Tone">
+    <img class="summer" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
 {% endblock content %}

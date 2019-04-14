@@ -1,5 +1,5 @@
 {% block pre_include %}
-    <title>Time Travel</title>
+    <title>{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}</title>
     <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
     <link rel="shortcut icon" href="{{settings.favicon | upload_url}}">
 {% endblock %}
@@ -7,7 +7,7 @@
 {% block post_include %}{% endblock %}
 
 {% block content %}
-    <img class="winter" src="{{gallery.photos[0].image | upload_url}}" alt="Time Travel">
+    <img class="winter" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
     {% if gallery.handle = 'winter-4-time-travel' %}
         <map name="planetmap">
             <area coords="670,155,680,200" shape="rectangle" href="">
