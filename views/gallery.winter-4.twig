@@ -8,7 +8,9 @@
 
 {% block content %}
     <img class="winter" src="{{gallery.photos[0].image | upload_url}}" alt="Time Travel">
-    <map name="planetmap">
-        <area coords="670,155,90" shape="rectangle" href="">
-    </map>
+    {% if gallery.handle = 'winter-4-time-travel' %}
+        <map name="planetmap">
+            <area coords="670,155,680,200" shape="rectangle" href="">
+        </map>
+    {% endif %}
 {% endblock content %}
