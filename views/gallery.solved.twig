@@ -10,9 +10,9 @@
 
 {% block post_include %}
     <script>
-        var id = $('.riddler-id').html();
-        var point = $('.riddle-point').html();
-        var current_point = $('.riddler-point').html();
+        var id = $('.riddler-id').val();
+        var point = $('.riddle-point').val();
+        var current_point = $('.riddler-point').val();
         if (id) {
             $.ajax({
                 url: `api/customer/set-point/${id}`,
@@ -53,9 +53,9 @@
     </section>
 
     {% if customer.logged_in %}
-        <div class="riddler-id">{{customer.id}}</div>
-        <div class="riddle-point">{{getCustomField(gallery.id, 'gallery', 'riddle-point')}}</div>
-        <div class="riddler-point">{{customer.point}}</div>
+        <input type="hidden" class="riddler-id" value={{customer.id}} />
+        <input type="hidden" class="riddle-point" value={{getCustomField(gallery.id, 'gallery', 'riddle-point')}} />
+        <input type="hidden" class="riddler-point" value={{customer.point}} />
     {% endif %}
 
 {% endblock content %}
