@@ -2,10 +2,23 @@
 
 {% block pre_include %}
     <title>{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}</title>
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000000;
+            color: #FFFFFF;
+            text-align: center;
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Patrick Hand', cursive !important;
+        }
+        .hint-screen{
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+    </style>
 {% endblock %}
 
-{% block post_include %}{% endblock %}
-
 {% block content %}
-    {{gallery.description | raw}}
+    <div class="hint-screen">Gợi ý: {{gallery.description | raw}}</div>
 {% endblock content %}
