@@ -62,6 +62,8 @@
         </div>
     </section>
 
+    <div>{{customer | json_encode}}</div>
+
     {% if customer.logged_in %}
         <input type="hidden" class="riddler-id" value={{customer.id}} />
         <input type="hidden" class="riddle-point" value={{getCustomField(gallery.id, 'gallery', 'riddle-point')}} />
