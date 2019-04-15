@@ -10,10 +10,10 @@
 {% block content %}
 
     {% if gallery.handle == 'spring-5-antidote' %}
-        <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#locked">
-        <map name="locked">
-            <area coords="745,424,767,424,767,443,745,443" href="https://choigiday.com/winter-4-the-locked-house" shape="poly">
-            <area coords="745,424,767,424,767,443,745,443" href="https://choigiday.com/winter-4-the-locked-house" shape="poly">
+        <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#pills">
+        <map name="pills">
+            <area coords="745,424,767,424,767,443,745,443" href="https://choigiday.com/spring-5-red-pill" shape="poly">
+            <area coords="745,424,767,424,767,443,745,443" href="https://choigiday.com/spring-5-blue-pill" shape="poly">
         </map>
     {% else %}
         <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
