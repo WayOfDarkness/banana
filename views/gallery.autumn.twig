@@ -13,12 +13,12 @@
     {% if gallery.handle == 'autumn-2-the-autumn-night' %}
         <img class="autumn" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#planetmap">
         <map name="planetmap">
-            <area coords="553,165,80" shape="circle" title="October 4, 2009">
-            <area coords="881,263,3" shape="circle" title="November 1, 2001">
-            <area coords="268,283,3" shape="circle" title="February 16, 2003">
-            <area coords="497,401,3" shape="circle" title="July 31, 2004">
-            <area coords="1210,319,2" shape="circle" title="May 9, 2009">
-            <area coords="617,581,771,365,1005,357,1103,301,1105,355,1242,352,1244,744,618,745" shape="poly" title="House?">
+            <area coords="441,130,86" shape="circle" title="October 4, 2009">
+            <area coords="899,173,2" shape="circle" title="November 1, 2001">
+            <area coords="215,227,3" shape="circle" title="February 16, 2003">
+            <area coords="399,322,3" shape="circle" title="July 31, 2004">
+            <area coords="968,256,2" shape="circle" title="May 9, 2009">
+            <area coords="493,467,621,293,807,285,805,241,883,241,883,285,999,282,999,597,493,597" shape="poly" title="House?">
         </map>
     {% else %}
         <img class="autumn" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
