@@ -12,8 +12,8 @@
     {% if gallery.handle == 'spring-5-antidote' %}
         <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#pills">
         <map name="pills">
-            <area coords="745,424,767,424,767,443,745,443" href="https://choigiday.com/spring-5-red-pill" shape="poly">
-            <area coords="745,424,767,424,767,443,745,443" href="https://choigiday.com/spring-5-blue-pill" shape="poly">
+            <area coords="392,370,452,380,458,393,452,402,390,394,382,382" href="https://choigiday.com/spring-5-red-pill" shape="poly">
+            <area coords="603,398,647,385,657,391,658,400,613,417,608,417,600,413" href="https://choigiday.com/spring-5-blue-pill" shape="poly">
         </map>
     {% else %}
         <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
