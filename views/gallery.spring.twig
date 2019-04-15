@@ -2,6 +2,7 @@
     <title>{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}</title>
     <meta content="YsdIiXgCV-gDo4Nr4MngeUys0pOYPEaxTcOp4JpvUus" name="google-site-verification" />
     <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
+    <link rel="stylesheet" href="{{theme.uri}}/css/button.css">
     <link rel="shortcut icon" href="{{settings.favicon | upload_url}}">
 {% endblock %}
 
@@ -17,7 +18,14 @@
         </map>
     {% elseif gallery.handle == 'spring-5-red-pill' or gallery.handle == 'spring-5-blue-pill' %}
         <div>{{gallery.description | raw}}</div>
-        <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
+        <div id="container_buttons">
+            <a class="btn-general back-to-the-beginning" href="https://choigiday.com/spring-5-antidote">
+                <span>Không!</span>
+            </a>
+            <a class="btn-general next-level" href={{getCustomField(gallery.id, 'gallery', 'next-riddle')}}>
+                <span>Có!</span>
+            </a>
+        </div>
     {% else %}
         <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
     {% endif %}

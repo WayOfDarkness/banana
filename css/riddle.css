@@ -18,7 +18,7 @@ p.clue {
   margin-bottom: 35px;
 }
 
-img {
+.text, img {
   width: 1000px;
   height: 600px;
   box-sizing: border-box;
