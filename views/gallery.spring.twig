@@ -1,6 +1,6 @@
 {% block pre_include %}
     <title>{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}</title>
-    <meta name="google-site-verification" content="YsdIiXgCV-gDo4Nr4MngeUys0pOYPEaxTcOp4JpvUus" />
+    <meta content="YsdIiXgCV-gDo4Nr4MngeUys0pOYPEaxTcOp4JpvUus" name="google-site-verification" />
     <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
     <link rel="shortcut icon" href="{{settings.favicon | upload_url}}">
 {% endblock %}
@@ -8,5 +8,15 @@
 {% block post_include %}{% endblock %}
 
 {% block content %}
-    <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
+
+    {% if gallery.handle == 'spring-5-antidote' %}
+        <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#locked">
+        <map name="locked">
+            <area coords="745,424,767,424,767,443,745,443" href="https://choigiday.com/winter-4-the-locked-house" shape="poly">
+            <area coords="745,424,767,424,767,443,745,443" href="https://choigiday.com/winter-4-the-locked-house" shape="poly">
+        </map>
+    {% else %}
+        <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
+    {% endif %}
+
 {% endblock content %}

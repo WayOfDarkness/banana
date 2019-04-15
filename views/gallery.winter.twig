@@ -8,7 +8,6 @@
 {% block post_include %}{% endblock %}
 
 {% block content %}
-
     {% if gallery.handle == 'winter-4-time-lapse' or gallery.handle == 'winter-4-night' %}
         <img class="winter" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#locked">
         <map name="locked">
