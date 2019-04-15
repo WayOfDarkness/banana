@@ -8,13 +8,14 @@ body {
 }
 
 .btn-general {
+	width: 500px;
 	outline: none;
 	background-color: #3bb3e0;
-	font-size: 12px;
+	font-size: 16px;
 	text-decoration: none;
 	color: #fff;
 	position: relative;
-	padding: 10px 50px 10px 20px;
+	padding: 10px 20px;
 	background-image: linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
 	background-image: -o-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
 	background-image: -moz-linear-gradient(bottom, rgb(44,160,202) 0%, rgb(62,184,229) 100%);
@@ -29,7 +30,7 @@ body {
 	-moz-box-shadow: inset 0 1px 0 #2ab7ec, 0 5px 0 0 #156785, 0 10px 5px #999;
 	-o-box-shadow: inset 0 1px 0 #2ab7ec, 0 5px 0 0 #156785, 0 10px 5px #999;
 	box-shadow: inset 0 1px 0 #2ab7ec, 0 5px 0 0 #156785, 0 10px 5px #999;
-	margin: 20px;
+	margin: 15px;
 	text-transform: uppercase;
 	font-weight: bold;
 }
@@ -113,6 +114,10 @@ body {
 	margin-left: 20px;
 }
 
+.next-level span {
+	margin-right: 20px;
+}
+
 .circleBase {
 	border-radius: 50%;
 }
@@ -121,30 +126,24 @@ body {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	width: 400px;
-	height: 200px;
+	width: 500px;
+	height: 250px;
 	box-sizing: border-box;
-	margin: -100px 0 0 -200px;
-	font-size: 20px;
+	margin: -125px 0 0 -250px;
+	font-size: 24px;
+	padding: 10px;
 }
 .innerText {
 	text-shadow: 1px 1px yellow;
 }
 
 .type3 {
-	width: 500px;
-	height: 500px;
-	width: 500px;
+	width: 600px;
+	height: 600px;
 	box-sizing: border-box;
-	margin: -250px 0 0 -250px;
+	margin: -300px 0 0 -300px;
 	left: 50%;
 	top: 50%;
 	position: absolute;
 	box-shadow: 1px 1px 1px 10p;
-}
-.nav-primary {
-	background-color: #000;
-	background-image: radial-gradient(#fff 10%, transparent 10%), radial-gradient(#fff 10%, transparent 10%);
-	background-size: 30px 30px;
-	background-position: 0 0, 15px 15px;
 }
