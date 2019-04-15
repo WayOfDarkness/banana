@@ -122,7 +122,6 @@ body {
 	border-radius: 50%;
 }
 .innerCircle {
-	color: orange;
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -133,8 +132,29 @@ body {
 	font-size: 24px;
 	padding: 10px;
 }
-.innerText {
+.innerText.autumn {
+	color: orange;
 	text-shadow: 1px 1px yellow;
+}
+.innerText.winter {
+	color: white;
+	text-shadow: 1px 1px grey;
+}
+.innerText.spring {
+	color: green;
+	text-shadow: 1px 1px teal;
+}
+.innerText.summer {
+	color: red;
+	text-shadow: 1px 1px orange;
+}
+.innerText.starting {
+	color: blue;
+	text-shadow: 1px 1px purple;
+}
+.innerText.final {
+	color: purple;
+	text-shadow: 1px 1px pink;
 }
 
 .type3 {
