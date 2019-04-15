@@ -167,3 +167,7 @@ body {
 	position: absolute;
 	box-shadow: 1px 1px 1px 10p;
 }
+
+.innerText.title {
+	text-transform: uppercase;
+}
