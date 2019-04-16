@@ -28,6 +28,11 @@
                 </a>
             </div>
         </div>
+    {% elseif gallery.handle == 'red-pill-the-knowledge' %}
+        <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#piece-of-paper">
+        <map name="piece-of-paper">
+            <area coords="466,255,514,278" shape="reactangle" href="https://choigiday.com/red-pill-piece-of-paper">
+        </map>
     {% else %}
         <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
     {% endif %}
