@@ -28,10 +28,16 @@
                 </a>
             </div>
         </div>
-    {% elseif gallery.handle == 'red-pill-the-knowledge' %}
+    {% elseif gallery.handle == 'red-pill-forbidden-city' %}
         <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#piece-of-paper">
         <map name="piece-of-paper">
             <area coords="466,255,514,278" shape="reactangle" href="https://choigiday.com/red-pill-piece-of-paper">
+        </map>
+    {% elseif gallery.handle == 'red-pill-baffled' %}
+        <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#another-room">
+        <map name="another-room">
+            <area coords="463,375,545,585" shape="reactangle" href="https://choigiday.com/winter-4-puzzle-wall">
+            <area coords="503,325,30" shape="circle" href="https://choigiday.com/winter-4-do-you-remember">
         </map>
     {% else %}
         <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
