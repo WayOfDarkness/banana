@@ -17,14 +17,16 @@
             <area coords="603,398,647,385,657,391,658,400,613,417,608,417,600,413" href="https://choigiday.com/spring-5-blue-pill" shape="poly">
         </map>
     {% elseif gallery.handle == 'spring-5-red-pill' or gallery.handle == 'spring-5-blue-pill' %}
-        <div>{{gallery.description | raw}}</div>
-        <div id="container_buttons">
-            <a class="btn-general back-to-the-beginning" href="https://choigiday.com/spring-5-antidote">
-                <span>Không!</span>
-            </a>
-            <a class="btn-general next-level" href={{getCustomField(gallery.id, 'gallery', 'next-riddle')}}>
-                <span>Có!</span>
-            </a>
+        <div class="innerCircle">
+            <div>{{gallery.description | raw}}</div>
+            <div id="container_buttons">
+                <a class="btn-general back-to-the-beginning" href="https://choigiday.com/spring-5-antidote">
+                    <span>Không!</span>
+                </a>
+                <a class="btn-general next-level" href={{getCustomField(gallery.id, 'gallery', 'next-riddle')}}>
+                    <span>Có!</span>
+                </a>
+            </div>
         </div>
     {% else %}
         <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
