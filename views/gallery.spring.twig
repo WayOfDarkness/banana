@@ -10,7 +10,7 @@
 
 {% block content %}
 
-    {% if gallery.handle == 'spring-5-antidote' %}
+    {% if gallery.handle == 'spring-5-the-past-and-the-future' %}
         <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#pills">
         <map name="pills">
             <area coords="392,370,452,380,458,393,452,402,390,394,382,382" href="https://choigiday.com/spring-5-red-pill" shape="poly">
@@ -20,7 +20,7 @@
         <div class="innerCircle">
             <div>{{gallery.description | raw}}</div>
             <div id="container_buttons">
-                <a class="btn-general back-to-the-beginning" href="https://choigiday.com/spring-5-antidote">
+                <a class="btn-general back-to-the-beginning" href="https://choigiday.com/spring-5-the-past-and-the-future">
                     <span>NO!</span>
                 </a>
                 <a class="btn-general next-level" href={{getCustomField(gallery.id, 'gallery', 'next-riddle')}}>
