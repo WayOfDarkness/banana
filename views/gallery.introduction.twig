@@ -4,17 +4,24 @@
     <title>The Event</title>
     <meta name="google-site-verification" content="YsdIiXgCV-gDo4Nr4MngeUys0pOYPEaxTcOp4JpvUus" />
     <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
+    <link rel="stylesheet" href="{{theme.uri}}/css/button.css">
+    <link rel="shortcut icon" href="{{settings.favicon | upload_url}}">
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
 {% endblock %}
 
 {% block post_include %}{% endblock %}
 
 {% block content %}
     
-    <div class="introdution">
-        <p>Chào mừng tất cả người chơi đã đến đây..</p>
-        <div>
-            <a href="https://choigiday.com/all-riddles">Bắt đầu!</a>
+    <section class="circleBase type3 nav-primary">
+        <div class="innerCircle">
+            <div class="innerText">Chào mừng tất cả nhà giải mã đã đến với cuộc chơi hôm nay.</div>
+            <div id="container_buttons">
+                <a class="btn-general next-level" href="https://choigiday.com/all-riddles">
+                    <span>Bắt đầu!</span>
+                </a>
+            </div>
         </div>
-    </div>
+    </section>
 
 {% endblock content %}
