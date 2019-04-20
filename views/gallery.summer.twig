@@ -8,12 +8,18 @@
 {% block post_include %}{% endblock %}
 
 {% block content %}
-    {% if gallery.handle == 'spring-5-the-strange-forest' %}
+    {% if gallery.handle == 'summer-5-the-strange-forest' %}
         <img class="summer" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#forest">
         <map name="forest">
             <area coords="870,230,885,255,920,230" href="https://choigiday.com/summer-5-the-pool" shape="poly">
             <area coords="940,350,940,390,980,370" href="https://choigiday.com/summer-5-the-road" shape="poly">
             <area coords="50,550,950,550,500,590" href="https://choigiday.com/summer-5-the-wood-cabin" shape="poly">
+        </map>
+    {% elseif gallery.handle == 'summer-5-the-wood-cabin' %}
+        <img class="summer" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#cabin">
+        <map name="cabin">
+            <area coords="870,230,885,255,920,230" href="https://choigiday.com/summer-5-the-pool" shape="poly">
+            <area coords="50,550,950,550" href="https://choigiday.com/summer-5-the-wood-cabin" shape="rectangle">
         </map>
     {% else %}
         <img class="summer" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
