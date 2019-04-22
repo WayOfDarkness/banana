@@ -9,8 +9,10 @@ html, body {
   height: 100vh;
 }
 
-/*four seasons*/
 /*--------------------------------------------*/
+/* TEMPLATE */
+/*--------------------------------------------*/
+
 #fs {
   position: fixed;
   width: 100vw;
@@ -30,40 +32,10 @@ html, body {
   height: 100%;
 }
 
-/*close*/
 /*--------------------------------------------*/
-#fs .fs-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 1;
-}
-
-#fs .fs-close:before,
-#fs .fs-close:after {
-  position: absolute;
-  left: 15px;
-  content: ' ';
-  height: 33px;
-  width: 2px;
-  background-color: white;
-}
-
-#fs .fs-close:before {
-  transform: rotate(45deg);
-}
-
-#fs .fs-close:after {
-  transform: rotate(-45deg);
-}
-
-
-/*bg*/
+/* BG */
 /*--------------------------------------------*/
+
 #fs .bg {
   position: absolute;
   top: 0;
@@ -104,8 +76,10 @@ html, body {
   z-index: 1;
 }
 
-/*border shadow*/
 /*--------------------------------------------*/
+/* BORDER-SHADOW */
+/*--------------------------------------------*/
+
 #fs .effect-shadow {
   position: absolute;
   top: 0;
@@ -131,8 +105,10 @@ html, body {
   box-shadow: 0 0 15px 5px #d7f1ff inset, 0 0 10px 0px #93d6e8;
 }
 
-/*bg shadow*/
 /*--------------------------------------------*/
+/* BG-SHADOW */
+/*--------------------------------------------*/
+
 #fs .bg-shadow {
   position: absolute;
   top: 0;
@@ -147,8 +123,10 @@ html, body {
   background: rgba(0, 0, 0, 0.25);
 }
 
-/*seasons*/
 /*--------------------------------------------*/
+/* SEASONS */
+/*--------------------------------------------*/
+
 #fs .fs-season {
   display: flex;
   flex-direction: column;
@@ -210,19 +188,30 @@ html, body {
   transform: translate(-50%, -50%);
 }
 
-
 #fs .item .solved-number {
   position: absolute;
   top: 0;
   right: 0;
-  color: green;
   font-weight: bold;
   padding: 0 10px;
-  text-shadow: 0px 0px 8px green, 0px 0px 8px green, 0px 0px 8px green, 0px 0px 8px green, 0px 0px 8px green;
+  text-shadow: 0px 0px 8px #fff, 0px 0px 8px #fff, 0px 0px 8px #fff, 0px 0px 8px #fff, 0px 0px 8px #fff;
+  filter: brightness(70%);
 }
 
 .season-summer .solved-number {
-  filter: brightness(70%);
+  color: red;
+}
+
+.season-spring .solved-number {
+  color: green;
+}
+
+.season-autumn .solved-number {
+  color: orange;
+}
+
+.season-winter .solved-number {
+  color: white;
 }
 
 #fs .season-spring .item:hover {
@@ -270,9 +259,8 @@ html, body {
   object-fit: fill;
 }
 
-
 /*--------------------------------------------*/
-/*autumn*/
+/* AUTUMN */
 /*--------------------------------------------*/
 
 .season-autumn {
@@ -403,11 +391,9 @@ html, body {
   }
 }
 
-
 /*--------------------------------------------*/
-/*winter*/
+/* WINTER */
 /*--------------------------------------------*/
-
 
 .season-winter {
   background: url(../img/four-seasons/winter.png) center top no-repeat;
@@ -490,11 +476,9 @@ html, body {
   }
 }
 
-
 /*--------------------------------------------*/
-/*summer*/
+/* SUMMER */
 /*--------------------------------------------*/
-
 
 .season-summer {
   background: url(../img/four-seasons/summer3.gif) center center no-repeat;
@@ -621,7 +605,6 @@ html, body {
   left: -60px;
 }
 
-
 @-webkit-keyframes ray_anim {
   0% {
     -webkit-transform: rotate(0deg);
@@ -633,9 +616,8 @@ html, body {
   }
 }
 
-
 /*--------------------------------------------*/
-/*spring*/
+/* SPRING */
 /*--------------------------------------------*/
 
 .season-spring {
@@ -760,7 +742,6 @@ html, body {
   animation-name: rightwingani;
 }
 
-
 .butterfly-4 {
   animation-name: butterflyani-reverse;
   left: -40%;
@@ -787,7 +768,6 @@ html, body {
   background-image: url(../img/four-seasons/wing-2.png);
   animation-name: rightwingani;
 }
-
 
 .clearfix:after {
   content: ".";
@@ -841,7 +821,6 @@ html, body {
   }
 }
 
-
 @keyframes rightwingani {
   from {
     transform: rotateX(90deg) translate3d(-178px, 0px, 0px) rotate3d(0, 1, 0, 180deg);
@@ -854,7 +833,6 @@ html, body {
   }
 }
 
-
 @keyframes leftwingani {
   from {
     transform: rotateX(90deg) rotate3d(0, 1, 0, 0deg);
@@ -866,5 +844,3 @@ html, body {
     transform: rotateX(90deg) rotate3d(0, 1, 0, 00deg);
   }
 }
-
-
