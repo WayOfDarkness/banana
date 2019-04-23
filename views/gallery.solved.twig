@@ -1,6 +1,6 @@
 {% block pre_include %}
     <title>"{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" Is Solved!</title>
-    <meta name="google-site-verification" content="YsdIiXgCV-gDo4Nr4MngeUys0pOYPEaxTcOp4JpvUus" />
+    <meta content="YsdIiXgCV-gDo4Nr4MngeUys0pOYPEaxTcOp4JpvUus" name="google-site-verification"/>
     <link rel="shortcut icon" href="{{settings.favicon | upload_url}}">
     <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
     <link rel="stylesheet" href="{{theme.uri}}/css/button.css">
@@ -10,20 +10,36 @@
 
 {% block post_include %}
     <script>
-        var id = $('.riddler-id').val();
+        var gallery_id = $('.gallery-id').val();
+        var customer_id = $('.customer-id').val();
         var point = $('.riddle-point').val();
         var current_point = $('.riddler-point').val();
+        
         if (id) {
             $.ajax({
-                url: `api/customer/set-point/${id}`,
+                url: `api/customer/set-point/${customer_id}`,
                 type: "POST",
                 data: point + current_point,
                 success: function (result) {
                     if (! result.code) {
-                        console.log(id + " " + point + " " + current_point);
+                        console.log(customer_id + " " + point + " " + current_point);
                     } else {
                         console.log('that bai');
                     }
+                }
+            });
+
+            // Solved Status
+            $.ajax({
+                type: 'POST',
+                url: '/admin/api/setRole',
+                data: {
+                    'gallery_id': gallery_id,
+                    'customer_id': customer_id,
+                    'role': 3
+                },
+                success: function (result) {
+                    console.log(result)
                 }
             });
         }
@@ -41,7 +57,7 @@
     {% endif %}
 
     {% set theme = getCustomField(gallery.id, 'gallery', 'theme') %}
-    
+
     <section class="circleBase type3 nav-primary">
         <div class="innerCircle">
             <div class="innerText {{theme}}">Chúc mừng bạn đã vượt qua thử thách!</div>
@@ -50,7 +66,7 @@
                 {{getCustomField(gallery.id, 'gallery', 'riddle-point')}}</div>
             <div class="innerText {{theme}}">Số điểm hiện tại của bạn là
                 {{customer.point + getCustomField(gallery.id, 'gallery', 'riddle-point')}}</div>
-{{customer.point}}
+            {{customer.point}}
             <div id="container_buttons">
                 <a class="btn-general back-to-the-beginning" href={{prevLink}}>
                     <span>Chọn lựa thử thách!</span>
@@ -63,9 +79,10 @@
     </section>
 
     {% if customer.logged_in %}
-        <input type="hidden" class="riddler-id" value={{customer.id}} />
-        <input type="hidden" class="riddle-point" value={{getCustomField(gallery.id, 'gallery', 'riddle-point')}} />
-        <input type="hidden" class="riddler-point" value={{customer.point}} />
+        <input type="hidden" class="gallery-id" value={{gallery.id}}/>
+        <input type="hidden" class="customer-id" value={{customer.id}}/>
+        <input type="hidden" class="riddle-point" value={{getCustomField(gallery.id, 'gallery', 'riddle-point')}}/>
+        <input type="hidden" class="riddler-point" value={{customer.point}}/>
     {% endif %}
 
 {% endblock content %}
