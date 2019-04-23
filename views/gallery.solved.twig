@@ -145,10 +145,10 @@
 {% block content %}
 
     {% if gallery.handle == 'starting-riddle-domino-dance' %}
-        {% set prevLink = 'https://choigiday.com/all-riddles' %}
+        {% set prevLink = 'all-riddles' %}
         {% set nextLink = 'the-four-paths' %}
     {% else %}
-        {% set prevLink = 'https://choigiday.com/the-four-paths' %}
+        {% set prevLink = 'the-four-paths' %}
         {% set nextLink = getCustomField(gallery.id, 'gallery', 'next-riddle') %}
     {% endif %}
 
@@ -164,10 +164,10 @@
                 {{customer.point + getCustomField(gallery.id, 'gallery', 'riddle-point')}}</div>
             {{customer.point}}
             <div id="container_buttons">
-                <a class="btn-general back-to-the-beginning" href={{prevLink}}>
+                <a class="btn-general back-to-the-beginning" href={{Gallery(prevLink).url}}>
                     <span>Chọn lựa thử thách!</span>
                 </a>
-                <a class="btn-general next-level" href={{nextLink}}>
+                <a class="btn-general next-level" href={{Gallery(nextLink).url}}>
                     <span>Thử thách tiếp theo!</span>
                 </a>
             </div>
