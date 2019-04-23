@@ -200,6 +200,7 @@ html, body {
 
 .season-summer .solved-number {
   color: red;
+  filter: brightness(70%);
 }
 
 .season-spring .solved-number {
