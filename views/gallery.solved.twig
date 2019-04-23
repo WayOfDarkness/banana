@@ -16,7 +16,7 @@
         var point = $('.riddle-point').val();
         var current_point = $('.customer-point').val();
         
-        if (customer_id) {
+        if (customer_id && next_gallery_id != 1) {
             $.ajax({
                 url: `api/customer/set-point/${customer_id}`,
                 type: "POST",
@@ -54,6 +54,91 @@
                 }
             });
         }
+
+        if (customer_id && next_gallery_id == 1) {
+
+            // Solved Status
+            $.ajax({
+                type: 'POST',
+                url: '/admin/api/setRole',
+                data: {
+                    'gallery_id': current_gallery_id,
+                    'customer_id': customer_id,
+                    'role': 3
+                },
+                success: function (result) {
+                    console.log(result)
+                }
+            });
+
+            // Accessible Status
+            $.ajax({
+                type: 'POST',
+                url: '/admin/api/setRole',
+                data: {
+                    'gallery_id': 14,
+                    'customer_id': customer_id,
+                    'role': 2
+                },
+                success: function (result) {
+                    console.log(result)
+                }
+            });
+
+            $.ajax({
+                type: 'POST',
+                url: '/admin/api/setRole',
+                data: {
+                    'gallery_id': next_gallery_id,
+                    'customer_id': customer_id,
+                    'role': 2
+                },
+                success: function (result) {
+                    console.log(result)
+                }
+            });
+
+            $.ajax({
+                type: 'POST',
+                url: '/admin/api/setRole',
+                data: {
+                    'gallery_id': next_gallery_id,
+                    'customer_id': customer_id,
+                    'role': 2
+                },
+                success: function (result) {
+                    console.log(result)
+                }
+            });
+
+            $.ajax({
+                type: 'POST',
+                url: '/admin/api/setRole',
+                data: {
+                    'gallery_id': next_gallery_id,
+                    'customer_id': customer_id,
+                    'role': 2
+                },
+                success: function (result) {
+                    console.log(result)
+                }
+            });
+
+            $.ajax({
+                type: 'POST',
+                url: '/admin/api/setRole',
+                data: {
+                    'gallery_id': next_gallery_id,
+                    'customer_id': customer_id,
+                    'role': 2
+                },
+                success: function (result) {
+                    console.log(result)
+                }
+            });
+        }
+
+        
     </script>
 {% endblock %}
 
