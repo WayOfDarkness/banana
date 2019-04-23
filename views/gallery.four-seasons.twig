@@ -1,74 +1,51 @@
 {% block pre_include %}
     <title>The Four Paths</title>
-    <meta name="google-site-verification" content="YsdIiXgCV-gDo4Nr4MngeUys0pOYPEaxTcOp4JpvUus" />
+    <meta content="YsdIiXgCV-gDo4Nr4MngeUys0pOYPEaxTcOp4JpvUus" name="google-site-verification"/>
     <link rel="shortcut icon" href="{{settings.favicon | upload_url}}">
     <link rel="stylesheet" href="{{theme.uri}}/css/four-seasons.css">
 {% endblock %}
 
 {% block content %}
 
-    {% set spring_1 = Gallery('spring-1-beautiful-flowers') %}
+    {% set spring.item1 = Gallery('spring-1-beautiful-flowers') %}
+    {% set spring.item2 = Gallery('spring-2-') %}
+    {% set spring.item3 = Gallery('spring-3-') %}
+    {% set spring.item4 = Gallery('spring-4-') %}
+    {% set spring.item5 = Gallery('spring-5-the-past-and-the-future') %}
+    {% set summer_1 = Gallery('summer-1-multiple-choice-exams-part-1') %}
+    {% set summer_2 = Gallery('summer-2-') %}
+    {% set summer_3 = Gallery('summer-3-rush-houers') %}
+    {% set summer_4 = Gallery('summer-4-drink-with-me') %}
+    {% set summer_5 = Gallery('summer-5-the-strange-forest') %}
+    {% set autumn_1 = Gallery('autumn-1-') %}
+    {% set autumn_2 = Gallery('autumn-2-the-autumn-night') %}
+    {% set autumn_3 = Gallery('autumn-3-') %}
+    {% set autumn_4 = Gallery('autumn-4-') %}
+    {% set autumn_5 = Gallery('autumn-5-') %}
+    {% set winter_1 = Gallery('winter-1-') %}
+    {% set winter_2 = Gallery('winter-2-') %}
+    {% set winter_3 = Gallery('winter-3-winter-is-coming') %}
+    {% set winter_4 = Gallery('winter-4-time-lapse') %}
+    {% set winter_5 = Gallery('winter-5-') %}
 
     <div id="fs">
         <div class="fs-content">
 
             <!-- SPRING -->
             <div class="fs-season season-spring">
-                <div class="item">
-                    <a href={{spring_1.role == 2 ? 'https://choigiday.com/spring-1-beautiful-flowers' : '#'}}>
-                        <img alt={{spring_1.role == 2 ? getCustomField(spring_1.id, 'gallery', 'solved-riddle') : 'locked'}} src={{spring_1.role == 2 ? '/themes/banana/img/four-seasons/riddles/spring-1.jpg' : '/themes/banana/img/four-seasons/locked.jpg'}}>
-                        <div class="border-image">
-                            <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                        </div>
-                        <span class="solved-number">
-                            {{spring_1.role == 2 ? spring_1.solved_number : null}}
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="https://choigiday.com/">
-                        <img alt="" src="{{theme.uri}}/img/four-seasons/locked.jpg">
-                        <div class="border-image">
-                            <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                        </div>
-                        <span class="solved-number">
-                            0
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="https://choigiday.com/">
-                        <img alt="" src="{{theme.uri}}/img/four-seasons/locked.jpg">
-                        <div class="border-image">
-                            <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                        </div>
-                        <span class="solved-number">
-                            0
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="https://choigiday.com/">
-                        <img alt="" src="{{theme.uri}}/img/four-seasons/locked.jpg">
-                        <div class="border-image">
-                            <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                        </div>
-                        <span class="solved-number">
-                            0
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="https://choigiday.com/spring-5-the-past-and-the-future">
-                        <img alt="The Past & The Future" src="{{theme.uri}}/img/four-seasons/riddles/spring-5.jpg">
-                        <div class="border-image">
-                            <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                        </div>
-                        <span class="solved-number">
-                            0
-                        </span>
-                    </a>
-                </div>
+                {% for item in range(1, 5) %}
+                    <div class="item">
+                        <a href={{spring['item' ~ i].role == 2 ? spring['item' ~ i].url : '#'}}>
+                            <img alt={{spring['item' ~ i].role == 2 ? getCustomField(spring['item' ~ i].id, 'gallery', 'solved-riddle') : 'locked'}} src={{spring['item' ~ i].role == 2 ? spring['item' ~ i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}>
+                            <div class="border-image">
+                                <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
+                            </div>
+                            <span class="solved-number">
+                                {{spring['item' ~ i].role == 2 ? spring['item' ~ i].solved_number : null}}
+                            </span>
+                        </a>
+                    </div>
+                {% endfor %}
 
                 <div class="effect-shadow"></div>
                 <div class="bg-shadow"></div>
