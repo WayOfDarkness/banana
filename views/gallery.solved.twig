@@ -10,22 +10,19 @@
 
 {% block post_include %}
     <script>
-        var gallery_id = $('.gallery-id').val();
+        var current_gallery_id = $('.current-gallery-id').val();
+        var next_gallery_id = $('.next-gallery-id').val();
         var customer_id = $('.customer-id').val();
         var point = $('.riddle-point').val();
-        var current_point = $('.riddler-point').val();
+        var current_point = $('.customer-point').val();
         
-        if (id) {
+        if (customer_id) {
             $.ajax({
                 url: `api/customer/set-point/${customer_id}`,
                 type: "POST",
                 data: point + current_point,
                 success: function (result) {
-                    if (! result.code) {
-                        console.log(customer_id + " " + point + " " + current_point);
-                    } else {
-                        console.log('that bai');
-                    }
+                    console.log(result)
                 }
             });
 
@@ -34,9 +31,23 @@
                 type: 'POST',
                 url: '/admin/api/setRole',
                 data: {
-                    'gallery_id': gallery_id,
+                    'gallery_id': current_gallery_id,
                     'customer_id': customer_id,
                     'role': 3
+                },
+                success: function (result) {
+                    console.log(result)
+                }
+            });
+
+            // Accessible Status
+            $.ajax({
+                type: 'POST',
+                url: '/admin/api/setRole',
+                data: {
+                    'gallery_id': next_gallery_id,
+                    'customer_id': customer_id,
+                    'role': 2
                 },
                 success: function (result) {
                     console.log(result)
@@ -79,10 +90,11 @@
     </section>
 
     {% if customer.logged_in %}
-        <input type="hidden" class="gallery-id" value={{gallery.id}}/>
+        <input type="hidden" class="current-gallery-id" value={{gallery.id}}/>
+        <input type="hidden" class="next-gallery-id" value={{Gallery(nextLink).id}}/>
         <input type="hidden" class="customer-id" value={{customer.id}}/>
         <input type="hidden" class="riddle-point" value={{getCustomField(gallery.id, 'gallery', 'riddle-point')}}/>
-        <input type="hidden" class="riddler-point" value={{customer.point}}/>
+        <input type="hidden" class="customer-point" value={{customer.point}}/>
     {% endif %}
 
 {% endblock content %}
