@@ -6,13 +6,16 @@
 {% endblock %}
 
 {% block content %}
+
+    {% set spring_1 = Gallery('spring-1-beautiful-flowers') %}
+
     <div id="fs">
         <div class="fs-content">
 
             <!-- SPRING -->
             <div class="fs-season season-spring">
                 <div class="item">
-                    <a href="https://choigiday.com/spring-1-beautiful-flowers">
+                    <a href={{spring_1.role == 2 ? 'https://choigiday.com/spring-1-beautiful-flowers' : '#'}}>
                         <img alt="Beautiful Flowers" src="{{theme.uri}}/img/four-seasons/riddles/spring-1.jpg">
                         <div class="border-image">
                             <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
