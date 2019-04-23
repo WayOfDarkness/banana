@@ -2,6 +2,19 @@
 
 {% block pre_include %}
     <title>Bảng xếp hạng</title>
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000000;
+            color: #FFFFFF;
+            text-align: center;
+            margin: 0;
+            overflow: hidden;
+        }
+        .page-article .layout-container {
+            display: flex !important;
+        }
+    </style>
 {% endblock %}
 
 {% block post_include %}
@@ -22,7 +35,6 @@
                             </div><br>`;
                         }
                     }
-
                     $('.ranking').html(html);
                 }
             });
