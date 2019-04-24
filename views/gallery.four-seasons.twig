@@ -69,61 +69,19 @@
 
             <!-- SUMMER -->
             <div class="fs-season season-summer">
-                <div class="item">
-                    <a href="https://choigiday.com/summer-1-multiple-choice-exams-part-1">
-                        <img alt="Multiple Choice Exams" src="{{theme.uri}}/img/four-seasons/riddles/summer-1.jpg">
-                        <div class="border-image">
-                            <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                        </div>
-                        <span class="solved-number">
-                            0
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="https://choigiday.com/">
-                        <img alt="" src="{{theme.uri}}/img/four-seasons/locked.jpg">
-                        <div class="border-image">
-                            <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                        </div>
-                        <span class="solved-number">
-                            0
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="https://choigiday.com/summer-3-rush-hours">
-                        <img alt="Rush Hours" src="{{theme.uri}}/img/four-seasons/riddles/summer-3.png">
-                        <div class="border-image">
-                            <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                        </div>
-                        <span class="solved-number">
-                            0
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="https://choigiday.com/summer-4-drink-with-me">
-                        <img alt="Drink With Me" src="{{theme.uri}}/img/four-seasons/riddles/summer-4.jpg">
-                        <div class="border-image">
-                            <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                        </div>
-                        <span class="solved-number">
-                            0
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="https://choigiday.com/summer-5-the-strange-forest">
-                        <img alt="" src="{{theme.uri}}/img/four-seasons/riddles/summer-5.jpg">
-                        <div class="border-image">
-                            <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                        </div>
-                        <span class="solved-number">
-                            0
-                        </span>
-                    </a>
-                </div>
+                {% for item in range(1, 5) %}
+                    <div class="item {{summer['item' ~ i].amountOfRole == 3 ? 'riddle-solved' : ''}}">
+                        <a href={{summer['item' ~ i].role != 1 ? summer['item' ~ i].url : '#'}}>
+                            <img alt={{summer['item' ~ i].role != 1 ? getCustomField(summer['item' ~ i].id, 'gallery', 'current-riddle') : 'locked'}} src={{summer['item' ~ i].role != 1 ? summer['item' ~ i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}>
+                            <div class="border-image">
+                                <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
+                            </div>
+                            <span class="solved-number">
+                                {{summer['item' ~ i].amountOfRole != 1 ? summer['item' ~ i].solved_number : null}}
+                            </span>
+                        </a>
+                    </div>
+                {% endfor %}
 
                 <div class="effect-shadow"></div>
                 <div class="bg-shadow"></div>
@@ -145,61 +103,19 @@
 
             <!-- AUTUMN -->
             <div class="fs-season season-autumn">
-                <div class="item">
-                    <a href="https://choigiday.com/">
-                        <img alt="" src="{{theme.uri}}/img/four-seasons/locked.jpg">
-                        <div class="border-image">
-                            <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                        </div>
-                        <span class="solved-number">
-                            0
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="https://choigiday.com/autumn-2-the-autumn-night">
-                        <img alt="The Autumn Night" src="{{theme.uri}}/img/four-seasons/riddles/autumn-2.jpg">
-                        <div class="border-image">
-                            <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                        </div>
-                        <span class="solved-number">
-                            0
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="https://choigiday.com/">
-                        <img alt="" src="{{theme.uri}}/img/four-seasons/locked.jpg">
-                        <div class="border-image">
-                            <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                        </div>
-                        <span class="solved-number">
-                            0
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="https://choigiday.com/">
-                        <img alt="" src="{{theme.uri}}/img/four-seasons/locked.jpg">
-                        <div class="border-image">
-                            <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                        </div>
-                        <span class="solved-number">
-                            0
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="https://choigiday.com/">
-                        <img alt="" src="{{theme.uri}}/img/four-seasons/locked.jpg">
-                        <div class="border-image">
-                            <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                        </div>
-                        <span class="solved-number">
-                            0
-                        </span>
-                    </a>
-                </div>
+                {% for item in range(1, 5) %}
+                    <div class="item {{autumn['item' ~ i].amountOfRole == 3 ? 'riddle-solved' : ''}}">
+                        <a href={{autumn['item' ~ i].role != 1 ? autumn['item' ~ i].url : '#'}}>
+                            <img alt={{autumn['item' ~ i].role != 1 ? getCustomField(autumn['item' ~ i].id, 'gallery', 'current-riddle') : 'locked'}} src={{autumn['item' ~ i].role != 1 ? autumn['item' ~ i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}>
+                            <div class="border-image">
+                                <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
+                            </div>
+                            <span class="solved-number">
+                                {{autumn['item' ~ i].amountOfRole != 1 ? autumn['item' ~ i].solved_number : null}}
+                            </span>
+                        </a>
+                    </div>
+                {% endfor %}
 
                 <div class="fallingLeaves">
                     <span></span>
@@ -238,61 +154,19 @@
 
             <!-- WINTER -->
             <div class="fs-season season-winter">
-                <div class="item">
-                    <a href="https://choigiday.com/">
-                        <img alt="" src="{{theme.uri}}/img/four-seasons/locked.jpg">
-                        <div class="border-image">
-                            <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                        </div>
-                        <span class="solved-number">
-                            0
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="https://choigiday.com/">
-                        <img alt="" src="{{theme.uri}}/img/four-seasons/locked.jpg">
-                        <div class="border-image">
-                            <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                        </div>
-                        <span class="solved-number">
-                            0
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="https://choigiday.com/winter-3-winter-is-coming">
-                        <img alt="Winter Is Coming" src="{{theme.uri}}/img/four-seasons/riddles/winter-3.jpg">
-                        <div class="border-image">
-                            <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                        </div>
-                        <span class="solved-number">
-                            0
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="https://choigiday.com/winter-4-time-lapse">
-                        <img alt="Time Lapse" src="{{theme.uri}}/img/four-seasons/riddles/winter-4.jpg">
-                        <div class="border-image">
-                            <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                        </div>
-                        <span class="solved-number">
-                            0
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="https://choigiday.com/">
-                        <img alt="" src="{{theme.uri}}/img/four-seasons/locked.jpg">
-                        <div class="border-image">
-                            <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                        </div>
-                        <span class="solved-number">
-                            0
-                        </span>
-                    </a>
-                </div>
+                {% for item in range(1, 5) %}
+                    <div class="item {{winter['item' ~ i].amountOfRole == 3 ? 'riddle-solved' : ''}}">
+                        <a href={{winter['item' ~ i].role != 1 ? winter['item' ~ i].url : '#'}}>
+                            <img alt={{winter['item' ~ i].role != 1 ? getCustomField(winter['item' ~ i].id, 'gallery', 'current-riddle') : 'locked'}} src={{winter['item' ~ i].role != 1 ? winter['item' ~ i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}>
+                            <div class="border-image">
+                                <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
+                            </div>
+                            <span class="solved-number">
+                                {{winter['item' ~ i].amountOfRole != 1 ? winter['item' ~ i].solved_number : null}}
+                            </span>
+                        </a>
+                    </div>
+                {% endfor %}
 
                 <div class="winter-is-coming">
                     <div class="snow snow--near"></div>
