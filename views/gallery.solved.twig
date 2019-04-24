@@ -20,7 +20,9 @@
             $.ajax({
                 url: `api/customer/set-point/${customer_id}`,
                 type: "POST",
-                data: point + current_point,
+                data: {
+                    'point': current_point + point
+                },
                 success: function (result) {
                     console.log(result)
                 }
@@ -137,8 +139,6 @@
                 }
             });
         }
-
-        
     </script>
 {% endblock %}
 
@@ -162,7 +162,6 @@
                 {{getCustomField(gallery.id, 'gallery', 'riddle-point')}}</div>
             <div class="innerText {{theme}}">Số điểm hiện tại của bạn là
                 {{customer.point + getCustomField(gallery.id, 'gallery', 'riddle-point')}}</div>
-            {{customer.point}}
             <div id="container_buttons">
                 <a class="btn-general back-to-the-beginning" href={{Gallery(prevLink).url}}>
                     <span>Chọn lựa thử thách!</span>
