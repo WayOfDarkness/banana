@@ -34,14 +34,14 @@
             <!-- SPRING -->
             <div class="fs-season season-spring">
                 {% for item in range(1, 5) %}
-                    <div class="item">
-                        <a href={{spring['item' ~ i].role == 2 ? spring['item' ~ i].url : '#'}}>
-                            <img alt={{spring['item' ~ i].role == 2 ? getCustomField(spring['item' ~ i].id, 'gallery', 'solved-riddle') : 'locked'}} src={{spring['item' ~ i].role == 2 ? spring['item' ~ i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}>
+                    <div class="item {{spring['item' ~ i].amountOfRole == 3 ? 'riddle-solved' : ''}}">
+                        <a href={{spring['item' ~ i].role != 1 ? spring['item' ~ i].url : '#'}}>
+                            <img alt={{spring['item' ~ i].role != 1 ? getCustomField(spring['item' ~ i].id, 'gallery', 'current-riddle') : 'locked'}} src={{spring['item' ~ i].role != 1 ? spring['item' ~ i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}>
                             <div class="border-image">
                                 <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
                             </div>
                             <span class="solved-number">
-                                {{spring['item' ~ i].amountOfRole == 2 ? spring['item' ~ i].solved_number : null}}
+                                {{spring['item' ~ i].amountOfRole != 1 ? spring['item' ~ i].solved_number : null}}
                             </span>
                         </a>
                     </div>
