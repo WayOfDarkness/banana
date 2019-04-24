@@ -20,7 +20,7 @@
 
             // Update Point For User
             $.ajax({
-                url: `api/customer/set-point/${customer_id}`,
+                url: `/api/customer/set-point/${customer_id}`,
                 type: "POST",
                 data: {
                     'point': current_point + point
