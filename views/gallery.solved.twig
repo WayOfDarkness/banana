@@ -59,6 +59,8 @@
 
         if (customer_id && next_gallery_id == 1) {
 
+            console.log('starting riddle access')
+
             // Solved Status
             $.ajax({
                 type: 'POST',
@@ -73,64 +75,12 @@
                 }
             });
 
-            // Accessible Status
+            // Change Spring 1 Status From Unavailable to Accessible
             $.ajax({
                 type: 'POST',
                 url: '/admin/api/setRole',
                 data: {
                     'gallery_id': 14,
-                    'customer_id': customer_id,
-                    'role': 2
-                },
-                success: function (result) {
-                    console.log(result)
-                }
-            });
-
-            $.ajax({
-                type: 'POST',
-                url: '/admin/api/setRole',
-                data: {
-                    'gallery_id': next_gallery_id,
-                    'customer_id': customer_id,
-                    'role': 2
-                },
-                success: function (result) {
-                    console.log(result)
-                }
-            });
-
-            $.ajax({
-                type: 'POST',
-                url: '/admin/api/setRole',
-                data: {
-                    'gallery_id': next_gallery_id,
-                    'customer_id': customer_id,
-                    'role': 2
-                },
-                success: function (result) {
-                    console.log(result)
-                }
-            });
-
-            $.ajax({
-                type: 'POST',
-                url: '/admin/api/setRole',
-                data: {
-                    'gallery_id': next_gallery_id,
-                    'customer_id': customer_id,
-                    'role': 2
-                },
-                success: function (result) {
-                    console.log(result)
-                }
-            });
-
-            $.ajax({
-                type: 'POST',
-                url: '/admin/api/setRole',
-                data: {
-                    'gallery_id': next_gallery_id,
                     'customer_id': customer_id,
                     'role': 2
                 },
