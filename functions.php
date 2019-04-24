@@ -142,4 +142,5 @@ registerCustomField("Author","article","select", ['Sigma', 'Phi']);
 registerCustomField("Theme","gallery","select", ['Starting', 'Spring', 'Summer', 'Autumn', 'Winter', 'Final']);
 registerCustomField("Riddle Point","gallery","input");
 registerCustomField("Solved Riddle","gallery","input");
+registerCustomField("Current Riddle","gallery","input");
 registerCustomField("Next Riddle","gallery","input");
