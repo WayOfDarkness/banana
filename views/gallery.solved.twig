@@ -17,18 +17,18 @@
         var current_point = $('.customer-point').val();
         
         if (customer_id && next_gallery_id != 1) {
+
+            // Update Point For User
             $.ajax({
                 url: `api/customer/set-point/${customer_id}`,
                 type: "POST",
                 data: {
                     'point': current_point + point
                 },
-                success: function (result) {
-                    console.log(result)
-                }
+                success: function (result) {}
             });
 
-            // Solved Status
+            // Change The Current Riddle Status From Accessible To Solved
             $.ajax({
                 type: 'POST',
                 url: '/admin/api/setRole',
@@ -37,12 +37,10 @@
                     'customer_id': customer_id,
                     'role': 3
                 },
-                success: function (result) {
-                    console.log(result)
-                }
+                success: function (result) {}
             });
 
-            // Accessible Status
+            // Change The Next Riddle Status From Unavailable To Accessible
             $.ajax({
                 type: 'POST',
                 url: '/admin/api/setRole',
@@ -51,17 +49,15 @@
                     'customer_id': customer_id,
                     'role': 2
                 },
-                success: function (result) {
-                    console.log(result)
-                }
+                success: function (result) {}
             });
         }
 
         if (customer_id && next_gallery_id == 1) {
 
-            console.log('starting riddle access')
+            console.log('starting riddle access');
 
-            // Solved Status
+            // Change The Domino Dance Riddle Status From Accessible To Solved
             $.ajax({
                 type: 'POST',
                 url: '/admin/api/setRole',
@@ -75,7 +71,7 @@
                 }
             });
 
-            // Change Spring 1 Status From Unavailable to Accessible
+            // Change Spring 1 Riddle Status From Unavailable To Accessible
             $.ajax({
                 type: 'POST',
                 url: '/admin/api/setRole',
