@@ -22,6 +22,9 @@
         .page-article .layout-container {
             display: flex !important;
         }
+        .all-riddles-container {
+            margin-top: 30px;
+        }
     </style>
 {% endblock %}
 
@@ -33,17 +36,19 @@
         Gallery('final-riddle'),
     ] %}
 
-    {% for item in range(0, 2) %}
-        <div class="item {{riddle[i].role == 2 ? 'riddle-solved' : ''}}">
-            <a href="{{riddle[i].role != 0 ? riddle[i].url : '#'}}">
-                <img alt="{{riddle[i].role != 0 ? getCustomField(riddle[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{riddle[i].role != 0 ? riddle[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
-                <div class="border-image">
-                    <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                </div>
-                <span class="solved-number">
-                    {{riddle[i].role != 0 ? riddle[i].top : null}}
-                </span>
-            </a>
-        </div>
-    {% endfor %}
+    <div class="all-riddles-container">
+        {% for item in range(0, 2) %}
+            <div class="item {{riddle[i].role == 2 ? 'riddle-solved' : ''}}">
+                <a href="{{riddle[i].role != 0 ? riddle[i].url : '#'}}">
+                    <img alt="{{riddle[i].role != 0 ? getCustomField(riddle[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{riddle[i].role != 0 ? riddle[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
+                    <div class="border-image">
+                        <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
+                    </div>
+                    <span class="solved-number">
+                        {{riddle[i].role != 0 ? riddle[i].top : null}}
+                    </span>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock content %}
