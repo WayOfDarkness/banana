@@ -15,10 +15,7 @@
             display: flex !important;
         }
         .all-riddles-container {
-            margin-top: 100px;
-            margin-bottom: 50px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 100px auto 50px;
             box-sizing: border-box;
             font-size: 24px;
             padding: 10px;
@@ -99,31 +96,31 @@
                     <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
                 </div>
                 <span class="solved-number">
-                    {{riddle[i].top}}
+                    {{riddle[0].top}}
                 </span>
             </a>
             <div class="label">Starting Riddle</div>
         </div>
-        <div class="item {{riddle[i].role == 2 ? 'riddle-solved' : ''}}">
-            <a href="{{riddle[i].role != 0 ? riddle[i].url : '#'}}">
-                <img class="riddle-img" alt="{{riddle[i].role != 0 ? getCustomField(riddle[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{riddle[i].role != 0 ? riddle[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
+        <div class="item {{riddle[1].role == 2 ? 'riddle-solved' : ''}}">
+            <a href="{{riddle[1].role != 0 ? riddle[1].url : '#'}}">
+                <img class="riddle-img" alt="{{riddle[1].role != 0 ? getCustomField(riddle[1].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{riddle[1].role != 0 ? riddle[1].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
                 <div class="border-image">
                     <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
                 </div>
                 <span class="solved-number">
-                    {{riddle[i].role != 0 ? riddle[i].top : null}}
+                    {{riddle[1].role != 0 ? riddle[1].top : null}}
                 </span>
             </a>
             <div class="label">The Four Paths</div>
         </div>
-        <div class="item {{riddle[i].role == 2 ? 'riddle-solved' : ''}}">
-            <a href="{{riddle[i].role != 0 ? riddle[i].url : '#'}}">
-                <img class="riddle-img" alt="{{riddle[i].role != 0 ? getCustomField(riddle[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{riddle[i].role != 0 ? riddle[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
+        <div class="item {{riddle[2].role == 2 ? 'riddle-solved' : ''}}">
+            <a href="{{riddle[2].role != 0 ? riddle[2].url : '#'}}">
+                <img class="riddle-img" alt="{{riddle[2].role != 0 ? getCustomField(riddle[2].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{riddle[2].role != 0 ? riddle[2].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
                 <div class="border-image">
                     <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
                 </div>
                 <span class="solved-number">
-                    {{riddle[i].role != 0 ? riddle[i].top : null}}
+                    {{riddle[2].role != 0 ? riddle[2].top : null}}
                 </span>
             </a>
             <div class="label">Final Riddle</div>
