@@ -47,14 +47,14 @@
             <!-- SPRING -->
             <div class="fs-season season-spring">
                 {% for item in range(0, 4) %}
-                    <div class="item {{spring[i].role == 3 ? 'riddle-solved' : ''}}">
-                        <a href={{spring[i].role != 1 ? spring[i].url : '#'}}>
-                            <img alt={{spring[i].role != 1 ? getCustomField(spring[i].id, 'gallery', 'current-riddle') : 'locked'}} src={{spring[i].role != 1 ? spring[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}>
+                    <div class="item {{spring[i].role == 2 ? 'riddle-solved' : ''}}">
+                        <a href={{spring[i].role != 0 ? spring[i].url : '#'}}>
+                            <img alt={{spring[i].role != 0 ? getCustomField(spring[i].id, 'gallery', 'current-riddle') : 'locked'}} src={{spring[i].role != 0 ? spring[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}>
                             <div class="border-image">
                                 <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
                             </div>
                             <span class="solved-number">
-                                {{spring[i].amountOfRole != 1 ? spring[i].solved_number : null}}
+                                {{spring[i].amountOfRole != 0 ? spring[i].solved_number : null}}
                             </span>
                         </a>
                     </div>
@@ -83,14 +83,14 @@
             <!-- SUMMER -->
             <div class="fs-season season-summer">
                 {% for item in range(1, 5) %}
-                    <div class="item {{summer[i].amountOfRole == 3 ? 'riddle-solved' : ''}}">
-                        <a href={{summer[i].role != 1 ? summer[i].url : '#'}}>
-                            <img alt={{summer[i].role != 1 ? getCustomField(summer[i].id, 'gallery', 'current-riddle') : 'locked'}} src={{summer[i].role != 1 ? summer[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}>
+                    <div class="item {{summer[i].amountOfRole == 2 ? 'riddle-solved' : ''}}">
+                        <a href={{summer[i].role != 0 ? summer[i].url : '#'}}>
+                            <img alt={{summer[i].role != 0 ? getCustomField(summer[i].id, 'gallery', 'current-riddle') : 'locked'}} src={{summer[i].role != 0 ? summer[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}>
                             <div class="border-image">
                                 <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
                             </div>
                             <span class="solved-number">
-                                {{summer[i].amountOfRole != 1 ? summer[i].solved_number : null}}
+                                {{summer[i].amountOfRole != 0 ? summer[i].solved_number : null}}
                             </span>
                         </a>
                     </div>
@@ -117,14 +117,14 @@
             <!-- AUTUMN -->
             <div class="fs-season season-autumn">
                 {% for item in range(1, 5) %}
-                    <div class="item {{autumn[i].amountOfRole == 3 ? 'riddle-solved' : ''}}">
-                        <a href={{autumn[i].role != 1 ? autumn[i].url : '#'}}>
-                            <img alt={{autumn[i].role != 1 ? getCustomField(autumn[i].id, 'gallery', 'current-riddle') : 'locked'}} src={{autumn[i].role != 1 ? autumn[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}>
+                    <div class="item {{autumn[i].amountOfRole == 2 ? 'riddle-solved' : ''}}">
+                        <a href={{autumn[i].role != 0 ? autumn[i].url : '#'}}>
+                            <img alt={{autumn[i].role != 0 ? getCustomField(autumn[i].id, 'gallery', 'current-riddle') : 'locked'}} src={{autumn[i].role != 0 ? autumn[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}>
                             <div class="border-image">
                                 <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
                             </div>
                             <span class="solved-number">
-                                {{autumn[i].amountOfRole != 1 ? autumn[i].solved_number : null}}
+                                {{autumn[i].amountOfRole != 0 ? autumn[i].solved_number : null}}
                             </span>
                         </a>
                     </div>
@@ -168,14 +168,14 @@
             <!-- WINTER -->
             <div class="fs-season season-winter">
                 {% for item in range(1, 5) %}
-                    <div class="item {{winter[i].amountOfRole == 3 ? 'riddle-solved' : ''}}">
-                        <a href={{winter[i].role != 1 ? winter[i].url : '#'}}>
-                            <img alt={{winter[i].role != 1 ? getCustomField(winter[i].id, 'gallery', 'current-riddle') : 'locked'}} src={{winter[i].role != 1 ? winter[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}>
+                    <div class="item {{winter[i].amountOfRole == 2 ? 'riddle-solved' : ''}}">
+                        <a href={{winter[i].role != 0 ? winter[i].url : '#'}}>
+                            <img alt={{winter[i].role != 0 ? getCustomField(winter[i].id, 'gallery', 'current-riddle') : 'locked'}} src={{winter[i].role != 0 ? winter[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}>
                             <div class="border-image">
                                 <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
                             </div>
                             <span class="solved-number">
-                                {{winter[i].amountOfRole != 1 ? winter[i].solved_number : null}}
+                                {{winter[i].amountOfRole != 0 ? winter[i].solved_number : null}}
                             </span>
                         </a>
                     </div>
