@@ -11,9 +11,11 @@
             margin: 0;
             overflow: hidden;
         }
+
         .page-article .layout-container {
             display: flex !important;
         }
+
         .all-riddles-container {
             margin-top: auto;
             margin-bottom: auto;
@@ -22,20 +24,25 @@
             padding: 10px;
             font-family: 'Patrick Hand', cursive !important;
         }
-        .all-riddles-container .item {
+
+        .item {
             float: left;
             width: 30%;
         }
-        .all-riddles-container .item .border-image {
+
+        .item .border-image {
             position: absolute;
-            top: 0;
+            top: 127px;
             left: 0;
+            width: 344px;
+            height: 210px;
         }
-        .all-riddles-container .item.riddle-solved {
+
+        .item.riddle-solved {
             opacity: 1;
         }
 
-        .all-riddles-container .item.riddle-solved:before {
+        .item.riddle-solved:before {
             position: absolute;
             content: '';
             width: 100%;
@@ -45,7 +52,7 @@
             background: rgba(0, 0, 0, 0.825);
         }
 
-        .all-riddles-container .item.riddle-solved:after {
+        .item.riddle-solved:after {
             position: absolute;
             content: '';
             background-image: url({{theme.uri}}/img/four-seasons/tick-done.png);
@@ -56,6 +63,11 @@
             width: 60px;
             height: 60px;
             transform: translate(-50%, -50%);
+        }
+        .solved-number {
+            position: absolute;
+            top: 145px;
+            left: 315px;
         }
     </style>
 {% endblock %}
