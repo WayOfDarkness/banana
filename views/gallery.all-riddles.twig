@@ -26,6 +26,37 @@
             float: left;
             width: 30%;
         }
+        .all-riddles-container .item .border-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .all-riddles-container .item.riddle-solved {
+            opacity: 1;
+        }
+
+        .all-riddles-container .item.riddle-solved:before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.825);
+        }
+
+        .all-riddles-container .item.riddle-solved:after {
+            position: absolute;
+            content: '';
+            background-image: url({{theme.uri}}/img/four-seasons/tick-done.png);
+            background-size: 100% 100%;
+            filter: brightness(500%);
+            top: 50%;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            transform: translate(-50%, -50%);
+        }
     </style>
 {% endblock %}
 
@@ -45,8 +76,8 @@
                     <div class="border-image">
                         <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
                     </div>
-                    <span class="solved-number">
-                        {{riddle[i].role != 0 ? riddle[i].top : null}}
+                    <span class="solved-number">0
+                        {# {{riddle[i].role != 0 ? riddle[i].top : null}} #}
                     </span>
                 </a>
             </div>
