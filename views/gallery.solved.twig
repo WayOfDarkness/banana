@@ -18,6 +18,7 @@
         
         if (customer_id && next_gallery_id != 1) {
 
+            console.log('theme riddle access');
             // Update Point For User
             $.ajax({
                 url: `/api/customer/set-point/${customer_id}`,
