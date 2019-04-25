@@ -39,8 +39,6 @@
         Gallery('winter-5-')
      ] %}
 
-    {{spring[0].role}} 
-
     <div id="fs">
         <div class="fs-content">
 
@@ -82,15 +80,15 @@
 
             <!-- SUMMER -->
             <div class="fs-season season-summer">
-                {% for item in range(1, 5) %}
-                    <div class="item {{summer[i].amountOfRole == 2 ? 'riddle-solved' : ''}}">
-                        <a href={{summer[i].role != 0 ? summer[i].url : '#'}}>
-                            <img alt={{summer[i].role != 0 ? getCustomField(summer[i].id, 'gallery', 'current-riddle') : 'locked'}} src={{summer[i].role != 0 ? summer[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}>
+                {% for item in range(0, 4) %}
+                    <div class="item {{summer[i].role == 2 ? 'riddle-solved' : ''}}">
+                        <a href="{{summer[i].role != 0 ? summer[i].url : '#'}}">
+                            <img alt="{{summer[i].role != 0 ? getCustomField(summer[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{summer[i].role != 0 ? summer[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
                             <div class="border-image">
                                 <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
                             </div>
                             <span class="solved-number">
-                                {{summer[i].amountOfRole != 0 ? summer[i].solved_number : null}}
+                                {{summer[i].role != 0 ? summer[i].top : null}}
                             </span>
                         </a>
                     </div>
@@ -116,15 +114,15 @@
 
             <!-- AUTUMN -->
             <div class="fs-season season-autumn">
-                {% for item in range(1, 5) %}
-                    <div class="item {{autumn[i].amountOfRole == 2 ? 'riddle-solved' : ''}}">
-                        <a href={{autumn[i].role != 0 ? autumn[i].url : '#'}}>
-                            <img alt={{autumn[i].role != 0 ? getCustomField(autumn[i].id, 'gallery', 'current-riddle') : 'locked'}} src={{autumn[i].role != 0 ? autumn[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}>
+                {% for item in range(0, 4) %}
+                    <div class="item {{autumn[i].role == 2 ? 'riddle-solved' : ''}}">
+                        <a href="{{autumn[i].role != 0 ? autumn[i].url : '#'}}">
+                            <img alt="{{autumn[i].role != 0 ? getCustomField(autumn[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{autumn[i].role != 0 ? autumn[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
                             <div class="border-image">
                                 <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
                             </div>
                             <span class="solved-number">
-                                {{autumn[i].amountOfRole != 0 ? autumn[i].solved_number : null}}
+                                {{autumn[i].role != 0 ? autumn[i].top : null}}
                             </span>
                         </a>
                     </div>
@@ -167,15 +165,15 @@
 
             <!-- WINTER -->
             <div class="fs-season season-winter">
-                {% for item in range(1, 5) %}
-                    <div class="item {{winter[i].amountOfRole == 2 ? 'riddle-solved' : ''}}">
-                        <a href={{winter[i].role != 0 ? winter[i].url : '#'}}>
-                            <img alt={{winter[i].role != 0 ? getCustomField(winter[i].id, 'gallery', 'current-riddle') : 'locked'}} src={{winter[i].role != 0 ? winter[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}>
+                {% for item in range(0, 4) %}
+                    <div class="item {{winter[i].role == 2 ? 'riddle-solved' : ''}}">
+                        <a href="{{winter[i].role != 0 ? winter[i].url : '#'}}">
+                            <img alt="{{winter[i].role != 0 ? getCustomField(winter[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{winter[i].role != 0 ? winter[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
                             <div class="border-image">
                                 <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
                             </div>
                             <span class="solved-number">
-                                {{winter[i].amountOfRole != 0 ? winter[i].solved_number : null}}
+                                {{winter[i].role != 0 ? winter[i].top : null}}
                             </span>
                         </a>
                     </div>
