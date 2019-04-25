@@ -11,7 +11,10 @@
             margin: 0;
             overflow: hidden;
         }
-        .hint-screen {
+        .page-article .layout-container {
+            display: flex !important;
+        }
+        .all-riddles-container {
             margin-top: auto;
             margin-bottom: auto;
             box-sizing: border-box;
@@ -19,11 +22,9 @@
             padding: 10px;
             font-family: 'Patrick Hand', cursive !important;
         }
-        .page-article .layout-container {
-            display: flex !important;
-        }
-        .all-riddles-container {
-            margin-top: 30px;
+        .all-riddles-container .item {
+            float: left;
+            width: 30%;
         }
     </style>
 {% endblock %}
