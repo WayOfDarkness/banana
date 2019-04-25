@@ -76,6 +76,9 @@
             font-size: 30px;
             line-height: 2;
         }
+        .riddle-img {
+            height: 280px;
+        }
     </style>
 {% endblock %}
 
@@ -90,7 +93,7 @@
     <div class="all-riddles-container">
         <div class="item {{riddle[0].role == 2 ? 'riddle-solved' : ''}}">
             <a href="https://choigiday.com/starting-riddle-domino-dance">
-                <img alt="Domino Dance" src="{{riddle[0].photos[0].image | upload_url}}">
+                <img class="riddle-img" alt="Domino Dance" src="{{riddle[0].photos[0].image | upload_url}}">
                 <div class="border-image">
                     <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
                 </div>
@@ -102,7 +105,7 @@
         </div>
         <div class="item {{riddle[i].role == 2 ? 'riddle-solved' : ''}}">
             <a href="{{riddle[i].role != 0 ? riddle[i].url : '#'}}">
-                <img alt="{{riddle[i].role != 0 ? getCustomField(riddle[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{riddle[i].role != 0 ? riddle[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
+                <img class="riddle-img" alt="{{riddle[i].role != 0 ? getCustomField(riddle[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{riddle[i].role != 0 ? riddle[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
                 <div class="border-image">
                     <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
                 </div>
@@ -115,7 +118,7 @@
         </div>
         <div class="item {{riddle[i].role == 2 ? 'riddle-solved' : ''}}">
             <a href="{{riddle[i].role != 0 ? riddle[i].url : '#'}}">
-                <img alt="{{riddle[i].role != 0 ? getCustomField(riddle[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{riddle[i].role != 0 ? riddle[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
+                <img class="riddle-img" alt="{{riddle[i].role != 0 ? getCustomField(riddle[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{riddle[i].role != 0 ? riddle[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
                 <div class="border-image">
                     <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
                 </div>
