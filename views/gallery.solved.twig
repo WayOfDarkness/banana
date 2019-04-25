@@ -10,6 +10,7 @@
 
 {% block post_include %}
     <script>
+    $(document).ready(function () {
         var current_gallery_id = $('.current-gallery-id').val();
         var next_gallery_id = $('.next-gallery-id').val();
         var customer_id = $('.customer-id').val();
@@ -82,6 +83,7 @@
                 success: function (result) {}
             });
         }
+    });
     </script>
 {% endblock %}
 
