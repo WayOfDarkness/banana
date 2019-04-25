@@ -2,8 +2,28 @@
 
 {% block pre_include %}
     <title>All Riddles</title>
-    <meta content="YsdIiXgCV-gDo4Nr4MngeUys0pOYPEaxTcOp4JpvUus" name="google-site-verification"/>
     <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000000;
+            color: #FFFFFF;
+            text-align: center;
+            margin: 0;
+            overflow: hidden;
+        }
+        .hint-screen {
+            margin-top: auto;
+            margin-bottom: auto;
+            box-sizing: border-box;
+            font-size: 24px;
+            padding: 10px;
+            font-family: 'Patrick Hand', cursive !important;
+        }
+        .page-article .layout-container {
+            display: flex !important;
+        }
+    </style>
 {% endblock %}
 
 {% block content %}
