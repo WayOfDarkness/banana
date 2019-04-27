@@ -4,6 +4,10 @@
     <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
     <link rel="stylesheet" href="{{theme.uri}}/css/button.css">
     <link rel="shortcut icon" href="{{settings.favicon | upload_url}}">
+    {% if gallery.handle == 'blue-pill-one-hundred-doors' %}
+        <script src="{{theme.uri}}/js/GjT3krgmQ3B9a93Z.js"></script>
+    {% endif %}
+    
 {% endblock %}
 
 {% block content %}
@@ -37,6 +41,8 @@
             <area coords="463,375,545,585" shape="reactangle" href="https://choigiday.com/red-pill-puzzle-wall">
             <area coords="503,325,30" shape="circle" href="https://choigiday.com/red-pill-do-you-remember">
         </map>
+    {% elseif gallery.handle == 'blue-pill-one-hundred-doors' %}
+        <div class"one-hundred-doors"></div>
     {% else %}
         <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
     {% endif %}
