@@ -15,7 +15,7 @@ function makeid(length) {
     var r3 = Math.floor((Math.random() * 100) + 1);
     var html = '';
     for (var i = 1; i < 101; i++) {
-        html += `<a href="${i == r1 ? '/Nuf8cqH02k' : (i == r2 ? '/JzusnaVVXX' : (i == r3 ? '/6uCqm1Sl2B' : '/' + makeid(10)))}">${i}</a>${i % 10 == 0 ? '<br>' : ''}`;
+        html += `<a target="_blank" href="${i == r1 ? '/Nuf8cqH02k' : (i == r2 ? '/JzusnaVVXX' : (i == r3 ? '/6uCqm1Sl2B' : '/' + makeid(10)))}">${i}</a>${i % 10 == 0 ? '<br>' : ''}`;
     }
     $('.one-hundred-switches').html(html);
 });
