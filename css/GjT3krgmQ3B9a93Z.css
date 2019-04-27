@@ -2,16 +2,16 @@
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	width: 500px;
+	width: 1200px;
 	height: 500px;
 	box-sizing: border-box;
-	margin: -250px 0 0 -250px;
+	margin: -250px 0 0 -600px;
 	font-size: 24px;
 }
 
 .one-hundred-doors a {
     display: inline-block;
-    width: 50px;
+    width: 100px;
     margin: 0 0.1em 0.1em 0;
     border: 0.16em solid rgba(255,255,255,0);
     border-radius: 2em;
