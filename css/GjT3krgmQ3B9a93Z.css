@@ -1,5 +1,11 @@
 .one-hundred-doors {
-    height: 2000px;
+    position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 1000px;
+	height: 500px;
+	box-sizing: border-box;
+	margin: -250px 0 0 -500px;
 }
 
 .one-hundred-doors a{
