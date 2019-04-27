@@ -2,10 +2,10 @@
     position: absolute;
 	left: 50%;
 	top: 50%;
-	width: 1000px;
+	width: 1500px;
 	height: 500px;
 	box-sizing: border-box;
-	margin: -250px 0 0 -500px;
+	margin: -250px 0 0 -750px;
 }
 
 .one-hundred-doors a {
@@ -21,6 +21,7 @@
     text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
     text-align: center;
     transition: all 0.2s;
+    background-color: cyan;
 }
 
 .one-hundred-doors:hover {
