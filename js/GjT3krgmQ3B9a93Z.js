@@ -1,3 +1,4 @@
+var counter = 0;
 function makeid(length) {
     var result           = '';
     var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -7,7 +8,7 @@ function makeid(length) {
     }
     return result;
  }
- 
+
  $(document).ready(function () {
     var r1 = Math.floor((Math.random() * 100) + 1);
     var r2 = Math.floor((Math.random() * 100) + 1);
@@ -18,3 +19,12 @@ function makeid(length) {
     }
     $('.one-hundred-switches').html(html);
 });
+
+$('one-hundred-switches a').onClick(function() {
+    counter++;
+    console.log('clicked!');
+    if (counter > 10) {
+        console.log('reload!');
+        window.location.reload();
+    }
+})
