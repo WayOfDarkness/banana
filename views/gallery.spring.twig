@@ -44,7 +44,7 @@
             <area coords="503,325,30" shape="circle" href="https://choigiday.com/red-pill-do-you-remember">
         </map>
     {% elseif gallery.handle == 'blue-pill-one-hundred-doors' %}
-        <div class"one-hundred-doors"></div>
+        <div class="one-hundred-doors"></div>
     {% else %}
         <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
     {% endif %}
