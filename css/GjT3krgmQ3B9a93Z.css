@@ -8,7 +8,7 @@
 	margin: -250px 0 0 -500px;
 }
 
-.one-hundred-doors a{
+.one-hundred-doors a {
     display: inline-block;
     padding: 0.3em 1.2em;
     margin: 0 0.1em 0.1em 0;
@@ -23,6 +23,6 @@
     transition: all 0.2s;
 }
 
-.one-hundred-doors:hover{
+.one-hundred-doors:hover {
     border-color: rgba(255,255,255,1);
 }
