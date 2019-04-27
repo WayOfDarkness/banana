@@ -1,4 +1,4 @@
-.one-hundred-doors {
+.one-hundred-switches {
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -9,7 +9,7 @@
 	font-size: 24px;
 }
 
-.one-hundred-doors a {
+.one-hundred-switches a {
     display: inline-block;
     width: 100px;
     margin: 0 0.1em 0.1em 0;
@@ -25,6 +25,6 @@
     background-color: cyan;
 }
 
-.one-hundred-doors:hover {
-    border-color: rgba(255,255,255,1);
+.one-hundred-switches a:hover {
+    border-color: rgba(255, 255, 255, 1);
 }
