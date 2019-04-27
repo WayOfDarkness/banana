@@ -20,7 +20,7 @@ function makeid(length) {
     $('.one-hundred-switches').html(html);
 });
 
-$('one-hundred-switches a').click(function() {
+$('.one-hundred-switches a').click(function() {
     counter++;
     console.log('clicked!');
     if (counter > 10) {
