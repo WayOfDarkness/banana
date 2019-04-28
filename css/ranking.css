@@ -37,7 +37,7 @@ table {
 	border: 1px solid white;
 	border-radius: 10px;
 	box-shadow: white;
-	overflow: hidden;
+	border-collapse: unset;
 }
 
 tbody tr td {
@@ -85,12 +85,4 @@ tbody tr:nth-child(3) .column1 i {
 	top: 25px;
 	left: 28px;
 	font-size: 10px;
-}
-
-table tr:last-child td:first-child {
-    border-bottom-left-radius: 10px;
-}
-
-table tr:last-child td:last-child {
-    border-bottom-right-radius: 10px;
 }
