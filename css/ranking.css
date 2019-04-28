@@ -11,13 +11,9 @@ body {
 }
 
 .table01 {
-	width:  100%;
-	min-height: 100vh;
 	display: flex;
-	align-items: center;
-	justify-content: center;;
-	flex-wrap: wrap;
-	padding: 33px 30px;
+	justify-content: center;
+	padding: 100px 0 50px 0;
 }
 
 .table_head th{
