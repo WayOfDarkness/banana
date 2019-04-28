@@ -68,7 +68,7 @@ tbody tr:nth-child(3) .column1 i {
 }
 
 .active-user {
-	background: linear-gradient(90deg, red, orange);
+	background: linear-gradient(90deg, red, orange) !important;
 }
 
 .fa-medal {
