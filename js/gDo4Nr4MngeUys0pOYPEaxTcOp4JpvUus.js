@@ -6,7 +6,7 @@ $(document).ready(function () {
     var point = parseInt($('.riddle-point').val());
     var current_point = parseInt($('.customer-point').val());
     
-    if (customer_id && point != 0 && current_gallery_status == 1) {
+    if (customer_id && point != 0) {
 
         // Update Point For User
         $.ajax({
@@ -43,17 +43,17 @@ $(document).ready(function () {
         });
     }
 
-    if (customer_id && point != 0 && current_gallery_status == 0) {
+    // if (customer_id && point != 0 && current_gallery_status == 0) {
 
-        // Cheater Is Here 
-        $('.innerCircle').html('Dừng ngay việc làm đáng xấu hổ này lại! Kẻ gian lận!');
-    }
+    //     // Cheater Is Here 
+    //     $('.innerCircle').html('Dừng ngay việc làm đáng xấu hổ này lại! Kẻ gian lận!');
+    // }
 
-    if (customer_id && point != 0 && current_gallery_status == 2) {
+    // if (customer_id && point != 0 && current_gallery_status == 2) {
 
-        // Already Solved
-        $('.current-point').html(current_point);
-    }
+    //     // Already Solved
+    //     $('.current-point').html(current_point);
+    // }
 
     if (customer_id && point == 0) {
 
