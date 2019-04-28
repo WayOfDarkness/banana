@@ -84,6 +84,9 @@ tbody tr:nth-child(3) img {
 
 .no-one img {
 	border: 1px solid white !important;
+}
+
+.no-one {
 	color: white !important;
 }
 
