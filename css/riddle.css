@@ -30,25 +30,25 @@ p.clue {
 }
 
 img.winter {
-  border: 2px white solid;
+  border: 5px white solid;
 }
 
 img.autumn {
-  border: 2px orange solid;
+  border: 5px orange solid;
 }
 
 img.summer {
-  border: 2px red solid;
+  border: 5px red solid;
 }
 
 img.spring {
-  border: 2px green solid;
+  border: 5px green solid;
 }
 
 img.starting {
-	border: 2px blue solid;
+	border: 5px cyan solid;
 }
 
 img.final {
-	border: 2px purple solid;
+	border: 5px purple solid;
 }
