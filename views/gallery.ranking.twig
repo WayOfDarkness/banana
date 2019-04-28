@@ -28,6 +28,21 @@
                                     </tr>`;
                         }
                     }
+
+                    if (data.customer.length < 6) {
+                        for (var i = 6; i < data.customer.length; i--) {
+                            html += `<tr>
+                                        <td class="column1">
+                                            <i class="fas fa-medal"></i>
+                                            <span>-</span>
+                                        </td>
+                                        <td class="column2"><img src="/themes/banana/img/icon/question-mark-face.jpg" alt=""></td>
+                                        <td class="column3">-</td>
+                                        <td class="column4">-</td>
+                                    </tr>`;
+                        }
+                    }
+
                     $('tbody').html(html);
                 }
             });
