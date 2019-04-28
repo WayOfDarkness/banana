@@ -1,19 +1,19 @@
 {% block pre_include %}
     <title>{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}</title>
-    <meta content="YsdIiXgCV-gDo4Nr4MngeUys0pOYPEaxTcOp4JpvUus" name="google-site-verification" />
+    <meta content="YsdIiXgCV-gDo4Nr4MngeUys0pOYPEaxTcOp4JpvUus" name="google-site-verification"/>
     <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
     <link rel="stylesheet" href="{{theme.uri}}/css/button.css">
     <link rel="shortcut icon" href="{{settings.favicon | upload_url}}">
     <script src="{{theme.uri}}/js/jquery-3.3.1.min.js"></script>
     {% if gallery.handle == 'blue-pill-one-hundred-switches' %}
-    <link rel="stylesheet" href="{{theme.uri}}/css/GjT3krgmQ3B9a93Z.css">
-    <script src="{{theme.uri}}/js/GjT3krgmQ3B9a93Z.js"></script>
+        <link rel="stylesheet" href="{{theme.uri}}/css/GjT3krgmQ3B9a93Z.css">
+        <script src="{{theme.uri}}/js/GjT3krgmQ3B9a93Z.js"></script>
     {% endif %}
-    
+
 {% endblock %}
 
 {% block content %}
-{{gallery.role}}
+    {{gallery.role}}
     {% if gallery.handle == 'spring-5-the-past-and-the-future' %}
         <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#pills">
         <map name="pills">
@@ -35,16 +35,21 @@
     {% elseif gallery.handle == 'red-pill-forbidden-city' %}
         <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#piece-of-paper">
         <map name="piece-of-paper">
-            <area coords="466,255,514,278" shape="reactangle" href="https://choigiday.com/red-pill-piece-of-paper">
+            <area coords="466,255,514,278" href="https://choigiday.com/red-pill-piece-of-paper" shape="rectangle">
         </map>
     {% elseif gallery.handle == 'red-pill-baffled' %}
         <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#another-room">
         <map name="another-room">
-            <area coords="463,375,545,585" shape="reactangle" href="https://choigiday.com/red-pill-puzzle-wall">
-            <area coords="503,325,30" shape="circle" href="https://choigiday.com/red-pill-do-you-remember">
+            <area coords="463,375,545,585" href="https://choigiday.com/red-pill-puzzle-wall" shape="rectangle">
+            <area coords="503,325,30" href="https://choigiday.com/red-pill-do-you-remember" shape="circle">
         </map>
     {% elseif gallery.handle == 'blue-pill-one-hundred-switches' %}
         <div class="one-hundred-switches"></div>
+    {% elseif gallery.handle == 'spring-2-play-with-me' %}
+        <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#red-envelopes">
+        <map name="red-envelopes">
+            <area coords="470,21,522,69" href="https://choigiday.com/spring-2-red-envelopes" shape="rectangle">
+        </map>
     {% else %}
         <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
     {% endif %}
