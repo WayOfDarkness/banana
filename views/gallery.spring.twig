@@ -48,7 +48,7 @@
     {% elseif gallery.handle == 'spring-2-play-with-me' %}
         <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#red-envelopes">
         <map name="red-envelopes">
-            <area coords="470,21,522,69" href="https://choigiday.com/spring-2-red-envelopes" shape="rectangle">
+            <area coords="468,20,515,69" href="https://choigiday.com/spring-2-red-envelopes" shape="rectangle">
         </map>
     {% else %}
         <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
