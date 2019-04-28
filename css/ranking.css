@@ -58,16 +58,28 @@ img {
 	border: 1px solid white;
 }
 
-tbody tr:nth-child(1) .column1 i {
+tbody tr:nth-child(1) {
 	color: gold;
 }
 
-tbody tr:nth-child(2) .column1 i {
+tbody tr:nth-child(1) img {
+	border: 1px solid gold;
+}
+
+tbody tr:nth-child(2) {
 	color: silver;
 }
 
-tbody tr:nth-child(3) .column1 i {
+tbody tr:nth-child(2) img {
+	border: 1px solid silver;
+}
+
+tbody tr:nth-child(3) {
 	color: #b87333;
+}
+
+tbody tr:nth-child(3) img {
+	border: 1px solid #b87333;
 }
 
 .active-user {
