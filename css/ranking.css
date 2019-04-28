@@ -82,6 +82,11 @@ tbody tr:nth-child(3) img {
 	border: 1px solid #b87333;
 }
 
+.no-one img {
+	border: 1px solid white !important;
+	color: white !important;
+}
+
 .active-user {
 	background: linear-gradient(90deg, red, orange) !important;
 }
