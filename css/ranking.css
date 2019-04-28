@@ -36,6 +36,7 @@ table {
 	border-radius: 10px;
 	overflow: hidden;
 	outline: none;
+	margin-bottom: 0;
 }
 
 tbody tr td {
@@ -66,8 +67,8 @@ tbody tr:nth-child(3) .column1 i {
 	color: #b87333;
 }
 
-.activee {
-	background-image: linear-gradient(90deg,hsl(147, 76%, 50%), hsl(147, 76%, 70%), hsl(147, 76%, 50%));
+.active-user {
+	background-image: linear-gradient(90deg,hsl(147, 76%, 50%), hsl(147, 76%, 70%), hsl(147, 76%, 50%)) !important;
 	box-shadow: 1px 1px 5px black;
 }
 
