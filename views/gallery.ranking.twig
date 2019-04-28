@@ -17,7 +17,7 @@
                     var html = '';
                     var counter = 0;
                     for (var i = 0; i < data.customer.length; i++) {
-                        if (data.customer[i].point > 0) {
+                        if (data.customer[i].point > -1) {
                             html += `<tr>
                                         <td class="column1">
                                             ${counter == 0 || counter == 1 || counter == 2 ? 
