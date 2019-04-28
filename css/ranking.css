@@ -75,3 +75,13 @@ tbody tr:nth-child(3) .column1 i {
 .fa-medal {
 	font-size: 35px;
 }
+
+.column1 {
+	position: relative;
+}
+
+.column1 span {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
