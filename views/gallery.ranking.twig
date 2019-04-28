@@ -20,7 +20,7 @@
                     var counter = 0;
                     for (var i = 0; i < data.customer.length; i++) {
                         if (data.customer[i].point > -1) {
-                            html += `<tr ${data.customer[i].id == userId ? 'active-user' : ''}>
+                            html += `<tr class="${data.customer[i].id == userId ? 'active-user' : ''}">
                                         <td class="column1">
                                             ${counter == 0 || counter == 1 || counter == 2 ? 
                                             `<i class="fas fa-medal"></i>
