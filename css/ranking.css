@@ -17,7 +17,8 @@ body {
 }
 
 .table_head th {
-	font-size: 30px;
+	font-size: 25px;
+	text-align: center;
 }
 
 table thead tr {
@@ -34,7 +35,8 @@ table {
 tbody tr td {
 	vertical-align: middle;
 	text-align: center;
-	font-size: 25px;
+	font-size: 16px;
+	padding: 0px;
 }
 
 tbody tr:hover {
