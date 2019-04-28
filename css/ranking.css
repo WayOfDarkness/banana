@@ -31,10 +31,8 @@ table {
 	outline: none;
 }
 
-* {
-	margin:0px;
-	padding:0px;
-	box-sizing: border-box;
+tbody tr td {
+	vertical-align: middle;
 }
 
 tbody tr:hover {
