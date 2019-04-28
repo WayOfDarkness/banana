@@ -9,6 +9,8 @@
 
 {% block post_include %}
     <script>
+        var userId = $('.userID').val();
+
         function loadRanking(url) {
             $.ajax({
                 url: url,
@@ -49,7 +51,6 @@
         }
 
         $(document).ready(function () {
-            var userId = $('.userID').val();
             option_url = 'api/customer?page=1&sortby=point';
             loadRanking(option_url);
         })
