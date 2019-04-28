@@ -26,7 +26,7 @@ table thead tr {
 	border: 1px solid white;
 }
 
-table thead tr:nth-of-type(2n+1) {
+table tbody tr:nth-of-type(2n+1) {
 	background: linear-gradient(90deg, #005AA7, green);
 	border: 1px solid white;
 }
