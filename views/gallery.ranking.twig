@@ -18,13 +18,13 @@
                     var counter = 0;
                     for (var i = 0; i < data.customer.length; i++) {
                         if (data.customer[i].point > -1) {
-                            html += `<tr>
+                            html += `<tr ${data.customer[i].id == userId ? 'active-user' : ''}>
                                         <td class="column1">
                                             ${counter == 0 || counter == 1 || counter == 2 ? 
                                             `<i class="fas fa-medal"></i>
                                             <span>${i+1}</span>` : i + 1}
                                         </td>
-                                        <td class="column2"><img src="/uploads/${data.customer[i].avatar}" alt="${data.customer[i].name}"></td>
+                                        <td class="column2"><img src=`${data.customer[i].avatar ? '/uploads/${data.customer[i].avatar' : '/themes/banana/img/icon/question-mark-face.jpg'}` alt="${data.customer[i].name}"></td>
                                         <td class="column3">${data.customer[i].name}</td>
                                         <td class="column4">${data.customer[i].point}</td>
                                     </tr>`;
@@ -49,6 +49,7 @@
         }
 
         $(document).ready(function () {
+            var userId = $('.userID').val();
             option_url = 'api/customer?page=1&sortby=point';
             loadRanking(option_url);
         })
@@ -170,5 +171,5 @@
             </tbody>
         </table>
     </div>
-
+    <input class="userID" value="{{customer.id}}" type="hidden" />
 {% endblock content %}
