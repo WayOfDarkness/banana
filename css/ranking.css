@@ -68,8 +68,7 @@ tbody tr:nth-child(3) .column1 i {
 }
 
 .active-user {
-	background-image: linear-gradient(90deg,hsl(147, 76%, 50%), hsl(147, 76%, 70%), hsl(147, 76%, 50%)) !important;
-	box-shadow: 1px 1px 5px black;
+	background: linear-gradient(90deg, red, orange);
 }
 
 .fa-medal {
@@ -82,6 +81,7 @@ tbody tr:nth-child(3) .column1 i {
 
 .column1 span {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 25px;
+	left: 28px;
+	font-size: 10px;
 }
