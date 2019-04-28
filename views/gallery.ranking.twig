@@ -24,7 +24,7 @@
                                             `<i class="fas fa-medal"></i>
                                             <span>${i+1}</span>` : i + 1}
                                         </td>
-                                        <td class="column2"><img src=`${data.customer[i].avatar ? '/uploads/' + data.customer[i].avatar : '/themes/banana/img/icon/question-mark-face.jpg'}` alt="${data.customer[i].name}"></td>
+                                        <td class="column2"><img src="${data.customer[i].avatar ? '/uploads/' + data.customer[i].avatar : '/themes/banana/img/icon/question-mark-face.jpg'}" alt="${data.customer[i].name}"></td>
                                         <td class="column3">${data.customer[i].name}</td>
                                         <td class="column4">${data.customer[i].point}</td>
                                     </tr>`;
