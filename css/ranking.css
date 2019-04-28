@@ -16,10 +16,8 @@ body {
 	padding: 100px 0 50px 0;
 }
 
-.table_head th{
+.table_head th {
 	font-size: 30px;
-	line-height: 1.2;
-	font-weight: unset;
 }
 
 table thead tr {
