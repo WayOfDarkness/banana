@@ -39,57 +39,17 @@ table {
 	box-sizing: border-box;
 }
 
-.column1 {
-	width: 70px;
-}
-
-.column2 {
-	width: 100px;
-}
-
-.column3 {
-	width: 300px;
-}
-
-.column4 {
-	width: 100px;
-}
-
-table td, table th {
-	text-align: center;
-}
-
-td, th{
-	display: table-cell;
-	vertical-align: inherit;
-}
-
-table tbody tr {
-	height: 50px;
-}
-
-tbody tr {
-	font-size: 20px;
-	line-height: 1.2;
-	font-weight: unset;
-}
-
 tbody tr:hover {
 	background-color:  #ff99ff;
 }
 
 img {
-width: 40px;
-height:40px;
-border-radius:50%;
--moz-border-radius:50%;
--webkit-border-radius:50%;
-margin: 4px 4px;
-}
-
-tbody .column1 {
-	font-size: 25px;
-	font-weight: bold;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	margin: 4px 4px;
 }
 
 tbody tr:nth-child(1) .column1 i {
@@ -104,29 +64,11 @@ tbody tr:nth-child(3) .column1 i {
 	color: #b87333;
 }
 
-tbody tr:nth-child(1) {
-	font-size: 23px;
-	height: 65px;
-}
-
-tbody tr:nth-child(2) {
-	height: 65px;
-	font-size: 23px;
-}
-
-tbody tr:nth-child(3) {
-	height: 65px;
-	font-size: 23px;
-}
-
-tbody .column1::before {
-}
-
 .activee {
 	background-image: linear-gradient(90deg,hsl(147, 76%, 50%), hsl(147, 76%, 70%), hsl(147, 76%, 50%));
 	box-shadow: 1px 1px 5px black;
 }
 
-.fa-medal{
+.fa-medal {
 	font-size: 50px;
 }
