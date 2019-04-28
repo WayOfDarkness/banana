@@ -20,8 +20,9 @@
                         if (data.customer[i].point > 0) {
                             html += `<tr>
                                         <td class="column1">
-                                            <i class="fas fa-medal"></i>
-                                            <span>${i+1}</span>
+                                            ${counter == 0 || counter == 1 || counter == 2 ? 
+                                            `<i class="fas fa-medal"></i>
+                                            <span>${i+1}</span>` : i + 1}
                                         </td>
                                         <td class="column2"><img src="/uploads/${data.customer[i].avatar}" alt="${data.customer[i].name}"></td>
                                         <td class="column3">${data.customer[i].name}</td>
