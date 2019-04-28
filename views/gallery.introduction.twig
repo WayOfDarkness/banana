@@ -3,7 +3,6 @@
 {% block pre_include %}
     <title>{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}</title>
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
-    <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
     <link rel="stylesheet" href="{{theme.uri}}/css/button.css">
     <style>
         body {
@@ -13,6 +12,14 @@
             margin: 0;
             overflow: hidden;
         }
+        .introduction {
+            margin-top: auto;
+            margin-bottom: auto;
+            box-sizing: border-box;
+            font-size: 24px;
+            padding: 10px;
+            font-family: 'Patrick Hand', cursive !important;
+        }
         .page-article .layout-container {
             display: flex !important;
         }
@@ -20,10 +27,13 @@
 {% endblock %}
 
 {% block content %}
-    <section class="circleBase type3 nav-primary">
+    <section class="introduction">
         <div class="innerCircle">
-            <div class="innerText">Chào mừng tất cả nhà giải mã đã đến với cuộc chơi hôm nay.</div>
+            <div class="innerText">Chào mừng tất cả nhà giải mã đã đến với cuộc chơi hôm nay. Hãy click vào những nút bên dưới để tìm hiểu thêm về Event này nhé.</div>
             <div id="container_buttons">
+                <button class="btn-general">
+                    <span>Luật</span>
+                </button>
                 <a class="btn-general next-level" href="https://choigiday.com/all-riddles">
                     <span>Bắt đầu!</span>
                 </a>
