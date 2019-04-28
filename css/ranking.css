@@ -14,7 +14,6 @@ body {
 	display: flex;
 	justify-content: center;
 	padding: 100px 0 50px 0;
-	outline: none;
 }
 
 .table_head th{
@@ -27,31 +26,17 @@ table thead tr {
 	background: linear-gradient(90deg, #ad5389,#3c1053);
 }
 
-table *{
-	position: relative;
-}
-
 table {
-	border-collapse: collapse;
 	background: linear-gradient(90deg, #005AA7,#FFFDE4);
 	border-radius: 10px;
 	overflow: hidden;
-	width: 100%;
-	margin: 0 auto;
-	position: relative;
-	box-shadow: 3px 3px 10px white;
+	outline: none;
 }
 
 * {
 	margin:0px;
 	padding:0px;
 	box-sizing: border-box;
-}
-
-tr {
-	display: table-row;
-	vertical-align: inherit;
-	border-collapse: inherit;
 }
 
 .column1 {
