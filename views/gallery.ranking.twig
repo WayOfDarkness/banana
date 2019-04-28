@@ -15,6 +15,7 @@
                 type: 'GET',
                 success: function (data) {
                     var html = '';
+                    var counter = 0;
                     for (var i = 0; i < data.customer.length; i++) {
                         if (data.customer[i].point > 0) {
                             html += `<tr>
@@ -26,11 +27,12 @@
                                         <td class="column3">${data.customer[i].name}</td>
                                         <td class="column4">${data.customer[i].point}</td>
                                     </tr>`;
+                            counter++;
                         }
                     }
 
-                    if (data.customer.length < 6) {
-                        for (var i = 6; i < data.customer.length; i--) {
+                    if (counter < 6) {
+                        for (var i = 6; i < counter; i--) {
                             html += `<tr>
                                         <td class="column1">
                                             <i class="fas fa-medal"></i>
