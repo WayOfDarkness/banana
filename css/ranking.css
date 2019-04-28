@@ -83,7 +83,7 @@ tbody tr:nth-child(3) .column1 i {
 	font-size: 10px;
 }
 
-table thead tr:last-child td:first-child {
+table tr:last-child td:first-child {
     border-bottom-left-radius: 10px;
 }
 
