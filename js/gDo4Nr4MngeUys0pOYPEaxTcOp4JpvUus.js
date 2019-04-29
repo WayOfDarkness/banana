@@ -6,7 +6,7 @@ $(document).ready(function () {
     var point = parseInt($('.riddle-point').val());
     var current_point = parseInt($('.customer-point').val());
     
-    if (customer_id && point != 0) {
+    if (customer_id && point != 0 && current_gallery_status == 1) {
 
         // Update Point For User
         $.ajax({

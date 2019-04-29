@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block content %}
-{{gallery.role}}
+
     {% if gallery.handle == 'summer-5-the-strange-forest' %}
         <img class="summer" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#forest">
         <map name="forest">
@@ -23,4 +23,5 @@
     {% else %}
         <img class="summer" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
     {% endif %}
+    
 {% endblock content %}

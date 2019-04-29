@@ -13,7 +13,7 @@
 {% endblock %}
 
 {% block content %}
-    {{gallery.role}}
+
     {% if gallery.handle == 'spring-5-the-past-and-the-future' %}
         <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#pills">
         <map name="pills">
