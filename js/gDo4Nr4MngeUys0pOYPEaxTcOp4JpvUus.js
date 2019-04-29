@@ -21,7 +21,7 @@ $(document).ready(function () {
         // Change The Current Riddle Status From Accessible To Solved
         $.ajax({
             type: 'POST',
-            url: '/admin/api/setRole',
+            url: '/api/setRole',
             data: {
                 'gallery_id': current_gallery_id,
                 'customer_id': customer_id,
@@ -33,7 +33,7 @@ $(document).ready(function () {
         // Change The Next Riddle Status From Unavailable To Accessible
         $.ajax({
             type: 'POST',
-            url: '/admin/api/setRole',
+            url: '/api/setRole',
             data: {
                 'gallery_id': next_gallery_id,
                 'customer_id': customer_id,
@@ -60,7 +60,7 @@ $(document).ready(function () {
         // Change The Domino Dance Riddle Status From Accessible To Solved
         $.ajax({
             type: 'POST',
-            url: '/admin/api/setRole',
+            url: '/api/setRole',
             data: {
                 'gallery_id': current_gallery_id,
                 'customer_id': customer_id,
@@ -72,7 +72,7 @@ $(document).ready(function () {
         // Change Spring 1 Riddle Status From Unavailable To Accessible
         $.ajax({
             type: 'POST',
-            url: '/admin/api/setRole',
+            url: '/api/setRole',
             data: {
                 'gallery_id': 14,
                 'customer_id': customer_id,
