@@ -66,7 +66,9 @@ $(document).ready(function () {
                 'customer_id': customer_id,
                 'role': 2
             },
-            success: function (result) {}
+            success: function (result) {
+                console.log(result);
+            }
         });
 
         // Change Spring 1 Riddle Status From Unavailable To Accessible
@@ -78,7 +80,9 @@ $(document).ready(function () {
                 'customer_id': customer_id,
                 'role': 1
             },
-            success: function (result) {}
+            success: function (result) {
+                console.log(result);
+            }
         });
     }
 });
