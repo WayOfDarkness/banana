@@ -1,3 +1,21 @@
+body {
+	background-color: #000000;
+	color: #FFFFFF;
+	text-align: center;
+	margin: 0;
+}
+
+.page-article .layout-container {
+	display: flex !important;
+}
+
+.menu {
+	font-family: 'Patrick Hand', cursive !important;
+	display: flex;
+	justify-content: center;
+	padding: 100px 0 50px 0;
+}
+
 hr {
   border: 0;
   margin: 0.8em auto;
@@ -137,7 +155,6 @@ h2{
 	margin: 5px;
 }
 .modal-header{
-	
 	padding: 2px 5px;
 	background-image: linear-gradient(#f12711,#f5af19);
 	color: white;
@@ -150,7 +167,6 @@ h2{
 	font-size: 20px;
 }
 .modal-footer{
-	
 	padding: 2px 3px;
 	background-image: linear-gradient(#f12711,#f5af19,#f12711);
 	color: white;
