@@ -159,6 +159,7 @@ body {
 
 .modal-body p {
 	margin-bottom: 0;
+	text-align: left;
 }
 
 .modal-footerr {
