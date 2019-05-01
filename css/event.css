@@ -10,10 +10,16 @@ body {
 }
 
 .menu {
+	margin-top: 100px;
+	margin-bottom: 50px;
+	box-sizing: border-box;
+	font-size: 24px;
+	padding: 10px;
 	font-family: 'Patrick Hand', cursive !important;
-	display: flex;
-	justify-content: center;
-	padding: 100px 0 50px 0;
+}
+
+.introduction {
+	color: white;
 }
 
 hr {
@@ -171,16 +177,4 @@ h2{
 	background-image: linear-gradient(#f12711,#f5af19,#f12711);
 	color: white;
 	border-radius:0px 0px 20px 20px;
-}
-.menu {
-	margin-top: 100px;
-	margin-bottom: 50px;
-	box-sizing: border-box;
-	font-size: 24px;
-	padding: 10px;
-	font-family: 'Patrick Hand', cursive !important;
-}
-
-.introduction {
-	color: white;
 }
