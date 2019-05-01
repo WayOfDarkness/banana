@@ -1,5 +1,4 @@
-{% if customer.logged_in %}
-{% else %}
+{% if not customer.logged_in %}
     {% extends "layout.twig" %}
 {% endif %}
 
@@ -8,6 +7,11 @@
     <meta content="YsdIiXgCV-gDo4Nr4MngeUys0pOYPEaxTcOp4JpvUus" name="google-site-verification"/>
     <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
     <link rel="shortcut icon" href="{{settings.favicon | upload_url}}">
+    <style>
+        .page-article .layout-container {
+            display: flex !important;
+        }
+    </style>
 {% endblock %}
 
 {% block content %}
