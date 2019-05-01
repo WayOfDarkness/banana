@@ -53,11 +53,8 @@
                 <span class="close-btn" id="closebtn3">&times;</span>
                 <div>Giới thiệu về phần thưởng</div>
             </div>
-            <div class="modal-body">
-                <p>{{getCustomField(page.id, 'page', 'phan-thuong') | raw}}</p>
-            </div>
-            <div class="modal-footerr">
-            </div>
+            <div class="modal-body">{{getCustomField(page.id, 'page', 'phan-thuong') | raw}}</div>
+            <div class="modal-footerr"></div>
         </div>
     </div>
 {% endblock content %}
