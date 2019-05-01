@@ -61,3 +61,7 @@ img.final {
   font-size: 30px;
   text-transform: uppercase;
 }
+
+.cd-user-modal {
+  display: block;
+}
