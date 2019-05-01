@@ -54,11 +54,10 @@ img.final {
 }
 
 .need-to-login {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -17px 0 0 -317px;
-  font-size: 30px;
-  text-transform: uppercase;
+  margin-top: auto;
+  margin-bottom: auto;
+  box-sizing: border-box;
+  font-size: 24px;
+  padding: 10px;
   font-family: 'Patrick Hand', cursive !important;
 }
