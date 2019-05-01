@@ -120,10 +120,10 @@ body {
 .modal-content {
 	margin: 10% auto;
 	width: 80%;
-	background-color: white;
+	background-color: black;
 	border: 3px solid white;
 	border-radius: 20px;
-	color: black;
+	color: white;
 }
 
 .close-btn {
@@ -146,7 +146,7 @@ body {
 }
 
 .modal-header {
-	background-image: linear-gradient(blue, white);
+	background-image: linear-gradient(blue, black);
 	color: white;
 	text-align: center;
 	text-transform: uppercase;
@@ -158,8 +158,12 @@ body {
 	font-size: 20px;
 }
 
+.modal-body p {
+	margin-bottom: 0;
+}
+
 .modal-footerr {
-	background-image: linear-gradient(blue,white,blue);
+	background-image: linear-gradient(blue,black,blue);
 	border-radius: 0px 0px 20px 20px;
 	height: 20px;
 }
