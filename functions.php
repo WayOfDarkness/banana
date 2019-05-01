@@ -144,3 +144,7 @@ registerCustomField("Riddle Point","gallery","input");
 registerCustomField("Solved Riddle","gallery","input");
 registerCustomField("Current Riddle","gallery","input");
 registerCustomField("Next Riddle","gallery","input");
+
+registerCustomField("Mật mã","page","editor");
+registerCustomField("Điểm","page","editor");
+registerCustomField("Phần thưởng","page","editor");
