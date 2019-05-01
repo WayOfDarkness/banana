@@ -27,9 +27,7 @@
 // }
 
 $(document).ready(function () {
-	console.log('da vao');
 	$('.close-btn').click(function () {
-		console.log('da click');
-		$(this).parent('.modal').hide();
+		$(this).closest('.modal').hide();
 	})
 });
