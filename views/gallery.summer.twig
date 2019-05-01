@@ -1,4 +1,5 @@
-{% if customer.logged_in != 1 %}
+{% if customer.logged_in %}
+{% else %}
     {% extends "layout.twig" %}
 {% endif %}
 
