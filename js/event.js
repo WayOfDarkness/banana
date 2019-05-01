@@ -34,7 +34,7 @@ $(document).ready(function () {
 			window.location.href = '/all-riddles';
 		else if (btnID = 'ranking-btn')
 			window.location.href = '/bang-xep-hang';
-		else $(btnID).show();
+		else $(`.${btnID}`).show();
 	});
 
 	$('.close-btn').click(function () {
