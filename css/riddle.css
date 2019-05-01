@@ -54,12 +54,14 @@ p.clue {
 }
 
 .need-to-login {
-  margin-top: auto;
-  margin-bottom: auto;
   box-sizing: border-box;
   font-size: 24px;
   padding: 10px;
   font-family: 'Patrick Hand', cursive !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -27px 0 0 -252px;
 }
 
 .page-article .layout-container {
