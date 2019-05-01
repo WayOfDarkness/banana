@@ -24,6 +24,7 @@
 
     {% set theme = getCustomField(gallery.id, 'gallery', 'theme') %}
 
+{{Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')) | json_encode}}
     <section class="circleBase type3 nav-primary">
         <div class="innerCircle">
             {% if Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).role %}
