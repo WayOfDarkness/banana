@@ -13,46 +13,50 @@
 {% endblock %}
 
 {% block content %}
-
-{{gallery | json_encode}}
-    {% if gallery.handle == 'spring-5-the-past-and-the-future' %}
-        <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#pills">
-        <map name="pills">
-            <area coords="392,370,452,380,458,393,452,402,390,394,382,382" href="https://choigiday.com/spring-5-red-pill" shape="poly">
-            <area coords="603,398,647,385,657,391,658,400,613,417,608,417,600,413" href="https://choigiday.com/spring-5-blue-pill" shape="poly">
-        </map>
-    {% elseif gallery.handle == 'spring-5-red-pill' or gallery.handle == 'spring-5-blue-pill' %}
-        <div class="innerCircle">
-            <div>{{gallery.description | raw}}</div>
-            <div id="container_buttons">
-                <a class="btn-general back-to-the-beginning" href="https://choigiday.com/spring-5-the-past-and-the-future">
-                    <span>NO!</span>
-                </a>
-                <a class="btn-general next-level" href={{getCustomField(gallery.id, 'gallery', 'next-riddle')}}>
-                    <span>YES!</span>
-                </a>
+    {{gallery | json_encode}}
+    {% if customer.logged_in %}
+        {% if gallery.handle == 'spring-5-the-past-and-the-future' %}
+            <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#pills">
+            <map name="pills">
+                <area coords="392,370,452,380,458,393,452,402,390,394,382,382" href="https://choigiday.com/spring-5-red-pill" shape="poly">
+                <area coords="603,398,647,385,657,391,658,400,613,417,608,417,600,413" href="https://choigiday.com/spring-5-blue-pill" shape="poly">
+            </map>
+        {% elseif gallery.handle == 'spring-5-red-pill' or gallery.handle == 'spring-5-blue-pill' %}
+            <div class="innerCircle">
+                <div>{{gallery.description | raw}}</div>
+                <div id="container_buttons">
+                    <a class="btn-general back-to-the-beginning" href="https://choigiday.com/spring-5-the-past-and-the-future">
+                        <span>NO!</span>
+                    </a>
+                    <a class="btn-general next-level" href={{getCustomField(gallery.id, 'gallery', 'next-riddle')}}>
+                        <span>YES!</span>
+                    </a>
+                </div>
             </div>
-        </div>
-    {% elseif gallery.handle == 'red-pill-forbidden-city' %}
-        <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#piece-of-paper">
-        <map name="piece-of-paper">
-            <area coords="466,255,514,278" href="https://choigiday.com/red-pill-piece-of-paper" shape="rectangle">
-        </map>
-    {% elseif gallery.handle == 'red-pill-baffled' %}
-        <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#another-room">
-        <map name="another-room">
-            <area coords="463,375,545,585" href="https://choigiday.com/red-pill-puzzle-wall" shape="rectangle">
-            <area coords="503,325,30" href="https://choigiday.com/red-pill-do-you-remember" shape="circle">
-        </map>
-    {% elseif gallery.handle == 'blue-pill-one-hundred-switches' %}
-        <div class="one-hundred-switches"></div>
-    {% elseif gallery.handle == 'spring-2-play-with-me' %}
-        <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#red-envelopes">
-        <map name="red-envelopes">
-            <area coords="468,20,518,69" href="https://choigiday.com/spring-2-red-envelopes" shape="rectangle">
-        </map>
+        {% elseif gallery.handle == 'red-pill-forbidden-city' %}
+            <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#piece-of-paper">
+            <map name="piece-of-paper">
+                <area coords="466,255,514,278" href="https://choigiday.com/red-pill-piece-of-paper" shape="rectangle">
+            </map>
+        {% elseif gallery.handle == 'red-pill-baffled' %}
+            <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#another-room">
+            <map name="another-room">
+                <area coords="463,375,545,585" href="https://choigiday.com/red-pill-puzzle-wall" shape="rectangle">
+                <area coords="503,325,30" href="https://choigiday.com/red-pill-do-you-remember" shape="circle">
+            </map>
+        {% elseif gallery.handle == 'blue-pill-one-hundred-switches' %}
+            <div class="one-hundred-switches"></div>
+        {% elseif gallery.handle == 'spring-2-play-with-me' %}
+            <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#red-envelopes">
+            <map name="red-envelopes">
+                <area coords="468,20,518,69" href="https://choigiday.com/spring-2-red-envelopes" shape="rectangle">
+            </map>
+        {% else %}
+            <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
+        {% endif %}
     {% else %}
-        <img class="spring" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
+        <div class="need-to-login">
+            Đăng nhập để tiếp tục tham gia event!
+        </div>
     {% endif %}
-
 {% endblock content %}

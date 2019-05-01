@@ -52,3 +52,12 @@ img.starting {
 img.final {
 	border: 5px purple solid;
 }
+
+.need-to-login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -17px 0 0 -317px;
+  font-size: 30px;
+  text-transform: uppercase;
+}

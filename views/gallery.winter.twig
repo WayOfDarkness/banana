@@ -1,19 +1,24 @@
 {% block pre_include %}
     <title>{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}</title>
-    <meta name="google-site-verification" content="YsdIiXgCV-gDo4Nr4MngeUys0pOYPEaxTcOp4JpvUus" />
+    <meta content="YsdIiXgCV-gDo4Nr4MngeUys0pOYPEaxTcOp4JpvUus" name="google-site-verification"/>
     <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
     <link rel="shortcut icon" href="{{settings.favicon | upload_url}}">
 {% endblock %}
 
 {% block content %}
-{{gallery.role}}
-    {% if gallery.handle == 'winter-4-time-lapse' or gallery.handle == 'winter-4-night' %}
-        <img class="winter" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#locked">
-        <map name="locked">
-            <area coords="745,424,767,424,767,443,745,443" shape="poly" href="https://choigiday.com/winter-4-the-locked-house">
-        </map>
+    {{gallery.role}}
+    {% if customer.logged_in %}
+        {% if gallery.handle == 'winter-4-time-lapse' or gallery.handle == 'winter-4-night' %}
+            <img class="winter" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#locked">
+            <map name="locked">
+                <area coords="745,424,767,424,767,443,745,443" href="https://choigiday.com/winter-4-the-locked-house" shape="poly">
+            </map>
+        {% else %}
+            <img class="winter" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
+        {% endif %}
     {% else %}
-        <img class="winter" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
+        <div class="need-to-login">
+            Đăng nhập để tiếp tục tham gia event!
+        </div>
     {% endif %}
-    
 {% endblock content %}
