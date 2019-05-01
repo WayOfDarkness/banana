@@ -12,7 +12,8 @@
 
 {% block content %}
     <div class="menu">
-        <div class="introduction">{{page.content | raw}}</div>
+        <div class="introduction-title">{{page.description}}</div>
+        <div class="introduction-content">{{page.content | raw}}</div>
         <div class="button-group">
             <div class="button">
                 <a href="#">
