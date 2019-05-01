@@ -52,3 +52,7 @@ p.clue {
 .riddle-img.final {
 	border: 5px purple solid;
 }
+
+.cd-user-modal {
+  display: block;
+}
