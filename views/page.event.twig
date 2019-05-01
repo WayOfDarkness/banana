@@ -21,13 +21,13 @@
                 <div class="mask"></div>
             </div>
 
-            <div class="button" id="point-btn" onclick="clickFunc(this.id)">
+            <div class="button" id="point-btn">
                 Điểm
                 <span class="shift">››</span>
                 <div class="mask"></div>
             </div>
 
-            <div class="button" id="riddles-btn" onclick="clickFunc(this.id)">
+            <div class="button" id="riddles-btn">
                 Mật mã
                 <span class="shift">››</span>
                 <div class="mask"></div>
@@ -39,7 +39,7 @@
                 <div class="mask"></div>
             </div>
 
-            <div class="button" id="rewards-btn" onclick="clickFunc(this.id)">
+            <div class="button" id="rewards-btn">
                 Phần thưởng
                 <span class="shift">››</span>
                 <div class="mask"></div>
@@ -47,11 +47,33 @@
         </div>
     </div>
 
-    <div class="modal" id="modalbtn3">
+    <div class="modal riddles-btn">
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close-btn">&times;</span>
-                <div>Giới thiệu về phần thưởng</div>
+                <div>Danh sách mật mã</div>
+            </div>
+            <div class="modal-body">{{getCustomField(page.id, 'page', 'mat-ma') | raw}}</div>
+            <div class="modal-footerr"></div>
+        </div>
+    </div>
+
+    <div class="modal point-btn">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-btn">&times;</span>
+                <div>Cách tính điểm</div>
+            </div>
+            <div class="modal-body">{{getCustomField(page.id, 'page', 'diem') | raw}}</div>
+            <div class="modal-footerr"></div>
+        </div>
+    </div>
+
+    <div class="modal rewards-btn">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-btn">&times;</span>
+                <div>Phần thưởng</div>
             </div>
             <div class="modal-body">{{getCustomField(page.id, 'page', 'phan-thuong') | raw}}</div>
             <div class="modal-footerr"></div>
