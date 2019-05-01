@@ -36,22 +36,6 @@ body {
 	margin-bottom: 0;
 }
 
-hr {
-  border: 0;
-  margin: 0.8em auto;
-  max-width: 100%;
-  background-position: 50%;
-  box-sizing: border-box;
-}
-.accessory {
-  height: 10px;
-  background-image: radial-gradient(
-    closest-side,
-    hsla(0, 0%, 100%, 1.0),
-    hsla(0, 0%, 100%, 0) 100%);
-  position: relative;
-
-}
 .button {
 	border: 2px solid #2e2e2e;
 	cursor: pointer;
@@ -135,9 +119,9 @@ body {
 
 .modal-content {
   background-color: #fefefe;
-  margin: 10% auto; /* 15% from the top and centered */
+  margin: 10% auto;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%;
   box-shadow: 3px 3px 3px white;
   border:none;
 border-radius: 20px;
@@ -176,8 +160,7 @@ border-radius: 20px;
 }
 
 .modal-footer {
-	padding: 2px 3px;
 	background-image: linear-gradient(#f12711,#f5af19,#f12711);
-	color: white;
-	border-radius:0px 0px 20px 20px;
+	border-radius: 0px 0px 20px 20px;
+	height: 20px;
 }
