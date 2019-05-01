@@ -19,8 +19,7 @@ body {
 }
 
 .introduction-title {
-	font-size: 2rem;
-	-webkit-text-stroke: 3px white;
+	font-size: 2.5rem;
 	background: -webkit-linear-gradient(blue, white);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
