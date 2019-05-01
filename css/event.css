@@ -67,10 +67,11 @@ hr {
 		color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 	user-select: none;
 	margin: 10px 10px;
+	background: -webkit-linear-gradient(blue, white);
 }
 
 .button a {
-	color: #969696;
+	color: black;
 	text-decoration: none;
 	font-size: 20px;
 }
@@ -97,10 +98,6 @@ hr {
 	transition: background 0s;
 }
 
-.button:hover a {
-	color: #fff;
-}
-
 .button:hover .mask {
 	background-color: #fff;
 	transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
@@ -121,6 +118,7 @@ hr {
 body.show {
 	background-color: #282828;
 }
+
 body {
 	align-items: center;
 	background-color: #202020;
@@ -130,7 +128,7 @@ body {
 	justify-content: center;
 	transition: background-color 2s cubic-bezier(0.19, 1, 0.22, 1);
 }
-/* The Modal (background) */
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -144,9 +142,7 @@ body {
 
 }
 
-/* Modal Content/Box */
 .modal-content {
-
   background-color: #fefefe;
   margin: 10% auto; /* 15% from the top and centered */
   border: 1px solid #888;
@@ -156,7 +152,6 @@ body {
 border-radius: 20px;
 }
 
-/* The Close Button */
 .close {
   color: black;
   float: right;
@@ -165,16 +160,17 @@ border-radius: 20px;
   margin-right: 10px;
 }
 
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
-h2{
+
+h2 {
 	margin: 5px;
 }
-.modal-header{
+
+.modal-header {
 	padding: 2px 5px;
 	background-image: linear-gradient(#f12711,#f5af19);
 	color: white;
@@ -182,11 +178,13 @@ h2{
 	text-transform: uppercase;
 	border-radius: 20px 20px 0px 0px;
 }
-.modal-body{
+
+.modal-body {
 	padding: 2px 16px;
 	font-size: 20px;
 }
-.modal-footer{
+
+.modal-footer {
 	padding: 2px 3px;
 	background-image: linear-gradient(#f12711,#f5af19,#f12711);
 	color: white;
