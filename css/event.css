@@ -143,7 +143,7 @@ body {
 border-radius: 20px;
 }
 
-.close {
+.close-btn {
   color: black;
   float: right;
   font-size: 30px;
@@ -159,6 +159,7 @@ border-radius: 20px;
 
 .modal-header div {
 	margin: 5px !important;
+	font-size: 30px;
 }
 
 .modal-header {
