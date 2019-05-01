@@ -1,3 +1,7 @@
+{% if customer.logged_in != 1 %}
+    {% extends "layout.twig" %}
+{% endif %}
+
 {% block pre_include %}
     <title>{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}</title>
     <meta content="YsdIiXgCV-gDo4Nr4MngeUys0pOYPEaxTcOp4JpvUus" name="google-site-verification"/>
