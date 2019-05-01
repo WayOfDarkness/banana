@@ -3,6 +3,12 @@
     <meta content="YsdIiXgCV-gDo4Nr4MngeUys0pOYPEaxTcOp4JpvUus" name="google-site-verification"/>
     <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
     <link rel="shortcut icon" href="{{settings.favicon | upload_url}}">
+    <link rel="stylesheet" href="{{theme.uri}}/css/login-register.css">
+    <script src="{{theme.uri}}/js/jquery-3.3.1.min.js"></script>
+{% endblock %}
+
+{% block post_include %}
+    <script src="{{theme.uri}}/js/login-register.js" type="application/javascript"></script>
 {% endblock %}
 
 {% block content %}
@@ -10,6 +16,6 @@
     {% if customer.logged_in %}
         <img class="starting riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
     {% else %}
-        {% include 'snippet/popup.twig' %} 
+        {% include 'snippet/popup.twig' %}
     {% endif %}
 {% endblock content %}
