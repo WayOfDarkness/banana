@@ -1,11 +1,17 @@
 {% block pre_include %}
-    <title>Domino Dance</title>
-    <meta name="google-site-verification" content="YsdIiXgCV-gDo4Nr4MngeUys0pOYPEaxTcOp4JpvUus" />
+    <title>{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}</title>
+    <meta content="YsdIiXgCV-gDo4Nr4MngeUys0pOYPEaxTcOp4JpvUus" name="google-site-verification"/>
     <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
     <link rel="shortcut icon" href="{{settings.favicon | upload_url}}">
 {% endblock %}
 
 {% block content %}
-{{gallery.role}}
-    <img class="starting" src="{{gallery.photos[0].image | upload_url}}" alt="Domino Dance">
+    {{gallery.role}}
+    {% if customer.logged_in %}
+        <img class="starting" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
+    {% else %}
+        <div>
+            Đăng nhập để tiếp tục tham gia event!
+        </div>    
+    {% endif %}
 {% endblock content %}
