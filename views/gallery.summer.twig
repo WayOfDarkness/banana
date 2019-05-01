@@ -8,11 +8,22 @@
     <meta content="YsdIiXgCV-gDo4Nr4MngeUys0pOYPEaxTcOp4JpvUus" name="google-site-verification"/>
     <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
     <link rel="shortcut icon" href="{{settings.favicon | upload_url}}">
-    <style>
-        .page-article .layout-container {
-            display: flex !important;
-        }
-    </style>
+    {% if customer.logged_in %}
+    {% else %}
+        <style>
+            body {
+                background-color: #000000;
+                color: #FFFFFF;
+                text-align: center;
+                margin: 0;
+                overflow: hidden;
+            }
+            .page-article .layout-container {
+                display: flex !important;
+            }
+        </style>
+    {% endif %}
+
 {% endblock %}
 
 {% block content %}
