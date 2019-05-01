@@ -1,7 +1,7 @@
 {% extends "layout.twig" %}
 
 {% block pre_include %}
-    <title>Bảng xếp hạng</title>
+    <title>{{page.title}}</title>
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="{{theme.uri}}/css/ranking.css">
@@ -10,7 +10,6 @@
 {% block post_include %}
     <script>
         var userId = $('.userID').val();
-
         function loadRanking(url) {
             $.ajax({
                 url: url,
@@ -58,7 +57,6 @@
 {% endblock %}
 
 {% block content %}
-
     <div class="table01">
         <table>
             <thead>
