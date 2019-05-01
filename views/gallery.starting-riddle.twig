@@ -3,13 +3,6 @@
     <meta content="YsdIiXgCV-gDo4Nr4MngeUys0pOYPEaxTcOp4JpvUus" name="google-site-verification"/>
     <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
     <link rel="shortcut icon" href="{{settings.favicon | upload_url}}">
-    <link rel="stylesheet" href="{{theme.uri}}/css/login-register.css">
-    <script src="{{theme.uri}}/js/jquery-3.3.1.min.js"></script>
-{% endblock %}
-
-{% block post_include %}
-    <script src="{{theme.uri}}/js/modernizr.min.js" type="application/javascript"></script>
-    <script src="{{theme.uri}}/js/login-register.js" type="application/javascript"></script>
 {% endblock %}
 
 {% block content %}
@@ -17,6 +10,8 @@
     {% if customer.logged_in %}
         <img class="starting riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
     {% else %}
-        {% include 'snippet/popup.twig' %}
+        <div class="need-to-login">
+            Bạn cần đăng nhập trước khi tham gia Event!
+        </div>
     {% endif %}
 {% endblock content %}

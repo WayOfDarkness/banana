@@ -8,10 +8,10 @@
 {% block content %}
     {{gallery.role}}
     {% if customer.logged_in %}
-        <img class="starting riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
+        <img class="final riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
     {% else %}
         <div class="need-to-login">
-            Đăng nhập để tiếp tục tham gia event!
+            Bạn cần đăng nhập trước khi tham gia Event!
         </div>
     {% endif %}
 {% endblock content %}
