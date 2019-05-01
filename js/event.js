@@ -29,7 +29,7 @@
 $(document).ready(function () {
 	$('.button-group .button').click (function() {
 		var btnID = $(this).attr('id');
-		console.log(btnID);
+		console.log(`.${btnID}`);
 		// if (btnID == 'start-btn')
 		// 	window.location.href = '/all-riddles';
 		// else if (btnID = 'ranking-btn')
