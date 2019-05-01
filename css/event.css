@@ -96,6 +96,7 @@ hr {
 	border-color: #fff;
 	box-shadow: 0 0 5px rgba(255, 245, 245, 0.8);
 	transition: background 0s;
+	color: red;
 }
 
 .button:hover .mask {
