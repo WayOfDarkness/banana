@@ -147,4 +147,5 @@ registerCustomField("Next Riddle","gallery","input");
 
 registerCustomField("Mật mã","page","editor");
 registerCustomField("Điểm","page","editor");
+registerCustomField("Gợi ý","page","editor");
 registerCustomField("Phần thưởng","page","editor");
