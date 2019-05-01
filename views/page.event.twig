@@ -3,46 +3,121 @@
 {% block pre_include %}
     <title>{{page.title}}</title>
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
-    <style>
-        body {
-            background-color: #000000;
-            color: #FFFFFF;
-            text-align: center;
-            margin: 0;
-            overflow: hidden;
-        }
-        .event {
-            margin-top: auto;
-            margin-bottom: auto;
-            box-sizing: border-box;
-            font-size: 24px;
-            padding: 10px;
-            font-family: 'Patrick Hand', cursive !important;
-        }
-        .page-article .layout-container {
-            display: flex !important;
-        }
-    </style>
+    <link rel="stylesheet" href="{{theme.uri}}/css/event.css">
+{% endblock %}
+
+{% block post_include %}
+    <script src="{{theme.uri}}/js/event.js"></script>
 {% endblock %}
 
 {% block content %}
-    <section class="event">
-        <div class="innerCircle">
-            <div class="innerText">Chào mừng tất cả nhà giải mã đã đến với cuộc chơi hôm nay. Hãy click vào những nút bên dưới để tìm hiểu thêm về Event này nhé.</div>
-            <div id="container_buttons">
-                <a class="btn-general" role="button">
-                    <span>Mật mã</span>
-                </a>
-                <a class="btn-general" role="button">
-                    <span>Cách tính điểm</span>
-                </a>
-                <a class="btn-general" role="button">
-                    <span>Phần thưởng</span>
-                </a>
-                <a class="btn-general next-level" href="https://choigiday.com/all-riddles">
-                    <span>Bắt đầu!</span>
-                </a>
+    <div class="menu">
+        <div class="button">
+            <a href="#">
+                Bắt&nbsp;đầu&nbsp;
+                <span class="shift">››</span>
+            </a>
+            <div class="mask"></div>
+        </div>
+
+        <div class="button" id="btn1" onclick="clickFunc(this.id)">
+            <a href="#">
+                điểm&nbsp;
+                <span class="shift">››</span>
+            </a>
+            <div class="mask"></div>
+        </div>
+
+        <div class="button" id="btn2" onclick="clickFunc(this.id)">
+            <a>
+                mật&nbsp;mã&nbsp;
+                <span class="shift">››</span>
+            </a>
+            <div class="mask"></div>
+        </div>
+
+        <div class="button">
+            <a href="scoreboard.html">
+                bảng&nbsp;xếp&nbsp;hạng&nbsp;
+                <span class="shift">››</span>
+            </a>
+            <div class="mask"></div>
+        </div>
+
+        <div class="button" id="btn3" onclick="clickFunc(this.id)">
+            <a href="#">
+                phần&nbsp;thưởng&nbsp;
+                <span class="shift">››</span>
+            </a>
+            <div class="mask"></div>
+        </div>
+
+
+        <!--Score-->
+        <div
+            class="modal" id="modalbtn1">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" id="closebtn1">&times;</span>
+                    <h2>Cách tính điểm</h2>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Hôm nay đã là ngày cuối của kì nghỉ nhưng lượng du khách kéo đến Cầu Vàng vẫn đông nghẹt. Hình ảnh cả biển người ngược xuôi chen chúc trong nắng nóng tại Cầu Vàng khiến dân tình "chỉ nhìn thôi mà cũng mệt giùm". Nếu chủ nhân của bức ảnh không chú thích thì có lẽ, chẳng ai nhận ra đây là Cầu Vàng nổi tiếng bởi lẽ chỉ toàn thấy người và người chen lấn, lỉnh kỉnh ô dù và mũ nón để tránh nắng.
+                        
+                        Rất nhiều cư dân mạng đã để lại bình luận rôm rả: 
+                        
+                        - "Đông thế này thì không biết chụp ảnh kiểu gì nhỉ. Chụp xong chả thấy cầu đâu chỉ thấy lố nhố ngoài người".
+                        
+                        - "Nhìn chú kia vã mồ hôi mà mệt hộ luôn ấy. Sao phải chen chúc thế nhỉ?".
+                        
+                        - "Nằm nhà và cảm thấy bản thân thật sáng suốt khi không đi du lịch lễ này".
+                        Một số bình luận thì lại cho rằng chẳng có gì phải ngạc nhiên vì đây là tình trạng thường thấy ở tất cả những địa điểm du lịch nổi tiếng trên thế giới chứ không riêng gì ở Việt Nam.
+                        
+                        "Đi du lịch ngày lễ mà, đâu cũng vậy thôi. Chẳng lẽ có người vẫn ôm mộng đi du lịch một mình một cõi vắng vẻ không người à?".
+                        
+                        "Chuyện bình thường thôi các bạn ạ. Chỗ nào nổi tiếng mà chẳng thế".
+                        
+                        Bên cạnh đó, một số bình luận cho rằng không phải lúc nào Cầu Vàng cũng trong tình trạng đông đúc hay quá tải. Nếu tranh thủ đi sớm hoặc canh lúc vắng người thì bạn hoàn hoàn có thể chụp một tấm ảnh đẹp mà không phải quá vất vả.</p>
+                </div>
+                <div class="modal-footer">
+                    <hr class="accessory">
+                </div>
             </div>
         </div>
-    </section>
-{% endblock content %}
+        <!-- Modal -->
+        <div
+            class="modal" id="modalbtn2">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" id="closebtn2">&times;</span>
+                    <h2>Giới thiệu về mật mã</h2>
+                </div>
+                <div class="modal-body">
+                    <p>In an essay, article, or book, an introduction is a beginning section which states the purpose and goals of the following writing.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <hr class="accessory">
+                </div>
+            </div>
+        </div>
+        <div
+            class="modal" id="modalbtn3">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" id="closebtn3">&times;</span>
+                    <h2>Giới thiệu về phần thưởng</h2>
+                </div>
+                <div class="modal-body">
+                    <p>In an essay, article, or book, an introduction is a beginning section which states the purpose and goals of the following writing. This is generally followed by the body and conclusion. The introduction typically describes the scope of the document and gives the brief explanation or summary of the document.</p>
+                </div>
+                <div class="modal-footer">
+                    <hr class="accessory">
+                </div>
+            </div>
+        </div>
+    {% endblock content %}
