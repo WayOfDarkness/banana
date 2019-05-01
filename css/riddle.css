@@ -7,7 +7,7 @@ body {
 }
 
 p {
-  color: #CCCCCC;
+  color: #CCC;
   font-size: 10pt;
   font-family: Arial;
 }
@@ -18,7 +18,7 @@ p.clue {
   margin-bottom: 35px;
 }
 
-.text, img {
+.text, .riddle-img {
   width: 1000px;
   height: 600px;
   box-sizing: border-box;
@@ -29,27 +29,27 @@ p.clue {
   border-radius: 6px;
 }
 
-img.winter {
+.riddle-img.winter {
   border: 5px white solid;
 }
 
-img.autumn {
+.riddle-img.autumn {
   border: 5px orange solid;
 }
 
-img.summer {
+.riddle-img.summer {
   border: 5px red solid;
 }
 
-img.spring {
+.riddle-img.spring {
   border: 5px green solid;
 }
 
-img.starting {
+.riddle-img.starting {
 	border: 5px blue solid;
 }
 
-img.final {
+.riddle-img.final {
 	border: 5px purple solid;
 }
 
