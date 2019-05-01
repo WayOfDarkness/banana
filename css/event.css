@@ -157,8 +157,8 @@ h2{
 	border-radius:0px 0px 20px 20px;
 }
 .menu {
-	margin-top: auto;
-	margin-bottom: auto;
+	margin-top: 100px;
+	margin-bottom: 50px;
 	box-sizing: border-box;
 	font-size: 24px;
 	padding: 10px;
