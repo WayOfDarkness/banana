@@ -9,12 +9,12 @@
     {{gallery.role}}
     {% if customer.logged_in %}
         {% if gallery.handle == 'winter-4-time-lapse' or gallery.handle == 'winter-4-night' %}
-            <img class="winter" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#locked">
+            <img class="winter riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#locked">
             <map name="locked">
                 <area coords="745,424,767,424,767,443,745,443" href="https://choigiday.com/winter-4-the-locked-house" shape="poly">
             </map>
         {% else %}
-            <img class="winter" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
+            <img class="winter riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
         {% endif %}
     {% else %}
         <div class="need-to-login">

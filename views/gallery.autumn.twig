@@ -9,7 +9,7 @@
     {{gallery.role}}
     {% if customer.logged_in %}
         {% if gallery.handle == 'autumn-2-the-autumn-night' %}
-            <img class="autumn" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#planetmap">
+            <img class="autumn riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#planetmap">
             <map name="planetmap">
                 <area coords="441,130,86" shape="circle" title="October 4, 2009">
                 <area coords="899,173,2" shape="circle" title="November 1, 2001">
@@ -19,7 +19,7 @@
                 <area coords="493,467,621,293,807,285,805,241,883,241,883,285,999,282,999,597,493,597" shape="poly" title="House?">
             </map>
         {% else %}
-            <img class="autumn" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
+            <img class="autumn riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
         {% endif %}
     {% else %}
         <div class="need-to-login">

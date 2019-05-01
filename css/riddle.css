@@ -1,6 +1,6 @@
 body {
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: #000;
+  color: #FFF;
   text-align: center;
   margin: 0;
   overflow: hidden;
@@ -13,7 +13,7 @@ p {
 }
 
 p.clue {
-  color: #EEEEEE;
+  color: #EEE;
   font-size: 12pt;
   margin-bottom: 35px;
 }
@@ -51,13 +51,4 @@ p.clue {
 
 .riddle-img.final {
 	border: 5px purple solid;
-}
-
-.need-to-login {
-  margin-top: auto;
-  margin-bottom: auto;
-  box-sizing: border-box;
-  font-size: 24px;
-  padding: 10px;
-  font-family: 'Patrick Hand', cursive !important;
 }
