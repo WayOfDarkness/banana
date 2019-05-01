@@ -52,3 +52,16 @@ p.clue {
 .riddle-img.final {
 	border: 5px purple solid;
 }
+
+.need-to-login {
+  margin-top: auto;
+  margin-bottom: auto;
+  box-sizing: border-box;
+  font-size: 24px;
+  padding: 10px;
+  font-family: 'Patrick Hand', cursive !important;
+}
+
+.page-article .layout-container {
+  display: flex !important;
+}

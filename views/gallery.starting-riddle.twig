@@ -11,7 +11,7 @@
         <img class="starting riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
     {% else %}
         <div class="need-to-login">
-            Bạn cần đăng nhập trước khi tham gia Event!
+            Bạn cần <a href="/">đăng nhập</a> trước khi tham gia Event!
         </div>
     {% endif %}
 {% endblock content %}
