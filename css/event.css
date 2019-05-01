@@ -65,7 +65,6 @@ hr {
 		background 5s cubic-bezier(0.19, 1, 0.22, 1),
 		border 1s cubic-bezier(0.19, 1, 0.22, 1),
 		color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-	user-select: none;
 	margin: 10px 10px;
 	background: -webkit-linear-gradient(blue, white);
 	color: black;
@@ -93,7 +92,7 @@ hr {
 	border-color: #fff;
 	box-shadow: 0 0 5px rgba(255, 245, 245, 0.8);
 	transition: background 0s;
-	color: red;
+	color: red !important;
 }
 
 .button:hover .mask {
