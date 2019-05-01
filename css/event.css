@@ -154,7 +154,7 @@ body {
 
 .modal-body p {
 	margin-bottom: 0;
-	text-align: left;
+	text-align: justify;
 	padding: 15px 30px !important;
 }
 
