@@ -18,6 +18,11 @@ body {
 	font-family: 'Patrick Hand', cursive !important;
 }
 
+.introduction-title {
+	font-size: 2rem;
+	color: linear-gradient(#f12711,#f5af19);
+}
+
 .introduction-title, .introduction-content {
 	color: white;
 	padding: 0 100px;
