@@ -68,10 +68,10 @@ hr {
 	user-select: none;
 	margin: 10px 10px;
 	background: -webkit-linear-gradient(blue, white);
-	color: black;
 }
 
 .button a {
+	color: black;
 	text-decoration: none;
 	font-size: 20px;
 }
