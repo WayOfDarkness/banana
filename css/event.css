@@ -123,6 +123,7 @@ body {
 	background-color: white;
 	border: 3px solid white;
 	border-radius: 20px;
+	color: black;
 }
 
 .close-btn {
@@ -145,7 +146,7 @@ body {
 }
 
 .modal-header {
-	background-image: linear-gradient(#f12711,#f5af19);
+	background-image: linear-gradient(blue, white);
 	color: white;
 	text-align: center;
 	text-transform: uppercase;
@@ -158,7 +159,7 @@ body {
 }
 
 .modal-footerr {
-	background-image: linear-gradient(#f12711,#f5af19,#f12711);
+	background-image: linear-gradient(blue,white,blue);
 	border-radius: 0px 0px 20px 20px;
 	height: 20px;
 }
