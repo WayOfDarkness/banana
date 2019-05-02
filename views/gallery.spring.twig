@@ -14,7 +14,6 @@
 {% endblock %}
 
 {% block content %}
-    {{gallery | json_encode}}
     {% if customer.logged_in %}
         {% if gallery.handle == 'spring-5-the-past-and-the-future' %}
             <img class="spring riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#pills">
