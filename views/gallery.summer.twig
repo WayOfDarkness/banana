@@ -7,7 +7,6 @@
 {% endblock %}
 
 {% block content %}
-    {{gallery.role}}
     {% if customer.logged_in %}
         {% if gallery.handle == 'summer-5-the-strange-forest' %}
             <img class="summer riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#forest">

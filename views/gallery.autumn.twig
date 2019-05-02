@@ -7,7 +7,6 @@
 {% endblock %}
 
 {% block content %}
-    {{gallery.role}}
     {% if customer.logged_in %}
         {% if gallery.handle == 'autumn-2-the-autumn-night' %}
             <img class="autumn riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#planetmap">
