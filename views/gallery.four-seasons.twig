@@ -7,13 +7,7 @@
 
 {% block content %}
 
-    {% set spring = [
-        Gallery('spring-1-beautiful-flowers'),
-        Gallery('spring-2-'),
-        Gallery('spring-3-'),
-        Gallery('spring-4-'),
-        Gallery('spring-5-the-past-and-the-future')
-     ] %}
+    {% set spring = ['spring-1-beautiful-flowers', 'spring-2-', 'spring-3-', 'spring-4-', 'spring-5-the-past-and-the-future'] %}
 
     {% set summer = [
         Gallery('summer-1-multiple-choice-exams-part-1'),
@@ -22,7 +16,7 @@
         Gallery('summer-4-drink-with-me'),
         Gallery('summer-5-the-strange-forest')
     ] %}
-      
+
     {% set autumn = [
         Gallery('autumn-1-'),
         Gallery('autumn-2-the-autumn-night'),
@@ -40,20 +34,21 @@
      ] %}
 
     <div id="fs">
-        <div class="fs-content">
+        <div
+            class="fs-content">
 
             <!-- SPRING -->
             <div class="fs-season season-spring">
                 {% for item in range(0, 4) %}
                     {{spring[i] | json_encode}}
-                    <div class="item {{spring[i].role == 2 ? 'riddle-solved' : ''}}">
-                        <a href="{{spring[i].role != 0 ? spring[i].url : '#'}}">
-                            <img alt="{{spring[i].role != 0 ? getCustomField(spring[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{spring[i].role != 0 ? spring[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
+                    <div class="item {{Gallery(spring[i]).role == 2 ? 'riddle-solved' : ''}}">
+                        <a href="{{Gallery(spring[i]).role != 0 ? spring[i].url : '#'}}">
+                            <img alt="{{Gallery(spring[i]).role != 0 ? getCustomField(spring[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{Gallery(spring[i]).role != 0 ? spring[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
                             <div class="border-image">
                                 <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
                             </div>
                             <span class="solved-number">
-                                {{spring[i].role != 0 ? spring[i].top : null}}
+                                {{Gallery(spring[i]).role != 0 ? spring[i].top : null}}
                             </span>
                         </a>
                     </div>
