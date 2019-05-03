@@ -24,6 +24,10 @@
         {% else %}
             <img class="summer riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
         {% endif %}
+    {% elseif customer.logged_in and gallery.role == 0 %}
+        <div class="need-to-login">
+            Bạn không đủ điều kiện để truy cập trang này!
+        </div>
     {% else %}
         <div class="need-to-login">
             Bạn cần <a href="/">đăng nhập</a> trước khi tham gia Event!
