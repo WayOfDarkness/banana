@@ -92,19 +92,25 @@ $(document).ready(function () {
         });
 
         // Change Summer 1 Riddle Status From Unavailable To Accessible
-        for (var i = 54; i <= 63; i++) {
-            if (i != 59) {
-                $.ajax({
-                    type: 'POST',
-                    url: '/api/setRole',
-                    data: {
-                        'gallery_id': i,
-                        'customer_id': customer_id,
-                        'role': 1
-                    },
-                    success: function (result) { }
-                });
-            }
-        }
+        $.ajax({
+            type: 'POST',
+            url: '/api/setRole',
+            data: {
+                'gallery_id': 54,
+                'customer_id': customer_id,
+                'role': 1
+            },
+            success: function (result) { }
+        });
+        $.ajax({
+            type: 'POST',
+            url: '/api/setRole',
+            data: {
+                'gallery_id': 55,
+                'customer_id': customer_id,
+                'role': 1
+            },
+            success: function (result) { }
+        });
     }
 });
