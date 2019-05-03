@@ -77,6 +77,16 @@
             height: 275px;
             width: 470px;
         }
+        .need-to-login {
+            box-sizing: border-box;
+            font-size: 24px;
+            padding: 10px;
+            font-family: 'Patrick Hand', cursive !important;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -26px 0 0 -202px;
+        }
     </style>
 {% endblock %}
 
@@ -88,42 +98,48 @@
         Gallery('final-riddle'),
     ] %}
 
-    <div class="all-riddles-container">
-        <div class="item {{riddle[0].role == 2 ? 'riddle-solved' : ''}}">
-            <a href="https://choigiday.com/starting-riddle-domino-dance">
-                <img class="riddle-img" alt="Domino Dance" src="{{riddle[0].photos[0].image | upload_url}}">
-                <div class="border-image">
-                    <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                </div>
-                <span class="solved-number">
-                    {{riddle[0].top}}
-                </span>
-            </a>
-            <div class="label">Starting Riddle</div>
+    {% if customer.logged_in %}
+        <div class="all-riddles-container">
+            <div class="item {{riddle[0].role == 2 ? 'riddle-solved' : ''}}">
+                <a href="https://choigiday.com/starting-riddle-domino-dance">
+                    <img class="riddle-img" alt="Domino Dance" src="{{riddle[0].photos[0].image | upload_url}}">
+                    <div class="border-image">
+                        <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
+                    </div>
+                    <span class="solved-number">
+                        {{riddle[0].top}}
+                    </span>
+                </a>
+                <div class="label">Starting Riddle</div>
+            </div>
+            <div class="item {{riddle[1].role == 2 ? 'riddle-solved' : ''}}">
+                <a href="{{riddle[1].role != 0 ? riddle[1].url : '#'}}">
+                    <img class="riddle-img" alt="{{riddle[1].role != 0 ? getCustomField(riddle[1].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{riddle[1].role != 0 ? riddle[1].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
+                    <div class="border-image">
+                        <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
+                    </div>
+                    <span class="solved-number">
+                        {{riddle[1].role != 0 ? riddle[1].top : null}}
+                    </span>
+                </a>
+                <div class="label">The Four Paths</div>
+            </div>
+            <div class="item {{riddle[2].role == 2 ? 'riddle-solved' : ''}}">
+                <a href="{{riddle[2].role != 0 ? riddle[2].url : '#'}}">
+                    <img class="riddle-img" alt="{{riddle[2].role != 0 ? getCustomField(riddle[2].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{riddle[2].role != 0 ? riddle[2].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
+                    <div class="border-image">
+                        <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
+                    </div>
+                    <span class="solved-number">
+                        {{riddle[2].role != 0 ? riddle[2].top : null}}
+                    </span>
+                </a>
+                <div class="label">Final Riddle</div>
+            </div>
         </div>
-        <div class="item {{riddle[1].role == 2 ? 'riddle-solved' : ''}}">
-            <a href="{{riddle[1].role != 0 ? riddle[1].url : '#'}}">
-                <img class="riddle-img" alt="{{riddle[1].role != 0 ? getCustomField(riddle[1].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{riddle[1].role != 0 ? riddle[1].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
-                <div class="border-image">
-                    <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                </div>
-                <span class="solved-number">
-                    {{riddle[1].role != 0 ? riddle[1].top : null}}
-                </span>
-            </a>
-            <div class="label">The Four Paths</div>
+    {% else %}
+        <div class="need-to-login">
+            Bạn cần đăng nhập trước khi tham gia Event!
         </div>
-        <div class="item {{riddle[2].role == 2 ? 'riddle-solved' : ''}}">
-            <a href="{{riddle[2].role != 0 ? riddle[2].url : '#'}}">
-                <img class="riddle-img" alt="{{riddle[2].role != 0 ? getCustomField(riddle[2].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{riddle[2].role != 0 ? riddle[2].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
-                <div class="border-image">
-                    <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                </div>
-                <span class="solved-number">
-                    {{riddle[2].role != 0 ? riddle[2].top : null}}
-                </span>
-            </a>
-            <div class="label">Final Riddle</div>
-        </div>
-    </div>
+    {% endif %}
 {% endblock content %}
