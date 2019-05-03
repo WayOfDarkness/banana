@@ -27,7 +27,7 @@
     {% if customer.logged_in %}
         <section class="circleBase type3 nav-primary">
             <div class="innerCircle">
-                {% if Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).role == 1 %}
+                {% if Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).role == 1 or (Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).role == 0 && Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).id = 21) %}
                     <div class="innerText {{theme}}">Chúc mừng bạn đã vượt qua thử thách!</div>
                     <div class="innerText {{theme}} title">{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}</div>
                     <div class="innerText {{theme}}">Số điểm bạn đã giành được trong thử thách vừa rồi là
