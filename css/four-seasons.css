@@ -856,3 +856,11 @@ html, body {
   left: 50%;
   margin: -26px 0 0 -202px;
 }
+
+body {
+  background-color: #000000;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+}
