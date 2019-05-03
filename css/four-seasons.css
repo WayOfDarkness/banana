@@ -845,3 +845,14 @@ html, body {
     transform: rotateX(90deg) rotate3d(0, 1, 0, 00deg);
   }
 }
+
+.need-to-login {
+  box-sizing: border-box;
+  font-size: 24px;
+  padding: 10px;
+  font-family: 'Patrick Hand', cursive !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -26px 0 0 -202px;
+}

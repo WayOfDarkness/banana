@@ -39,160 +39,166 @@
         Gallery('winter-5-')
      ] %}
 
-    <div id="fs">
-        <div class="fs-content">
+    {% if customer.logged_in %}
+        <div id="fs">
+            <div class="fs-content">
 
-            <!-- SPRING -->
-            <div class="fs-season season-spring">
-                {% for i in range(0, 4) %}
-                    <div class="item {{spring[i].role == 2 ? 'riddle-solved' : ''}}">
-                        <a href="{{spring[i].role != 0 ? spring[i].url : '#'}}">
-                            <img alt="{{spring[i].role != 0 ? getCustomField(spring[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{spring[i].role != 0 ? spring[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
-                            <div class="border-image">
-                                <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                            </div>
-                            <span class="solved-number">
-                                {{spring[i].role != 0 ? spring[i].top : null}}
-                            </span>
-                        </a>
+                <!-- SPRING -->
+                <div class="fs-season season-spring">
+                    {% for i in range(0, 4) %}
+                        <div class="item {{spring[i].role == 2 ? 'riddle-solved' : ''}}">
+                            <a href="{{spring[i].role != 0 ? spring[i].url : '#'}}">
+                                <img alt="{{spring[i].role != 0 ? getCustomField(spring[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{spring[i].role != 0 ? spring[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
+                                <div class="border-image">
+                                    <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
+                                </div>
+                                <span class="solved-number">
+                                    {{spring[i].role != 0 ? spring[i].top : null}}
+                                </span>
+                            </a>
+                        </div>
+                    {% endfor %}
+
+                    <div class="effect-shadow"></div>
+                    <div class="bg-shadow"></div>
+                    <div class="butterfly butterfly-1">
+                        <div class="leftwing"></div>
+                        <div class="rightwing"></div>
                     </div>
-                {% endfor %}
-
-                <div class="effect-shadow"></div>
-                <div class="bg-shadow"></div>
-                <div class="butterfly butterfly-1">
-                    <div class="leftwing"></div>
-                    <div class="rightwing"></div>
-                </div>
-                <div class="butterfly butterfly-2">
-                    <div class="leftwing"></div>
-                    <div class="rightwing"></div>
-                </div>
-                <div class="butterfly butterfly-3">
-                    <div class="leftwing"></div>
-                    <div class="rightwing"></div>
-                </div>
-                <div class="butterfly butterfly-4">
-                    <div class="leftwing"></div>
-                    <div class="rightwing"></div>
-                </div>
-            </div>
-
-            <!-- SUMMER -->
-            <div class="fs-season season-summer">
-                {% for i in range(0, 4) %}
-                    <div class="item {{summer[i].role == 2 ? 'riddle-solved' : ''}}">
-                        <a href="{{summer[i].role != 0 ? summer[i].url : '#'}}">
-                            <img alt="{{summer[i].role != 0 ? getCustomField(summer[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{summer[i].role != 0 ? summer[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
-                            <div class="border-image">
-                                <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                            </div>
-                            <span class="solved-number">
-                                {{summer[i].role != 0 ? summer[i].top : null}}
-                            </span>
-                        </a>
+                    <div class="butterfly butterfly-2">
+                        <div class="leftwing"></div>
+                        <div class="rightwing"></div>
                     </div>
-                {% endfor %}
-
-                <div class="effect-shadow"></div>
-                <div class="bg-shadow"></div>
-                <div class="sun">
-                    <div class="ray_box">
-                        <div class="ray ray1"></div>
-                        <div class="ray ray2"></div>
-                        <div class="ray ray3"></div>
-                        <div class="ray ray4"></div>
-                        <div class="ray ray5"></div>
-                        <div class="ray ray6"></div>
-                        <div class="ray ray7"></div>
-                        <div class="ray ray8"></div>
-                        <div class="ray ray9"></div>
-                        <div class="ray ray10"></div>
+                    <div class="butterfly butterfly-3">
+                        <div class="leftwing"></div>
+                        <div class="rightwing"></div>
+                    </div>
+                    <div class="butterfly butterfly-4">
+                        <div class="leftwing"></div>
+                        <div class="rightwing"></div>
                     </div>
                 </div>
-            </div>
 
-            <!-- AUTUMN -->
-            <div class="fs-season season-autumn">
-                {% for i in range(0, 4) %}
-                    <div class="item {{autumn[i].role == 2 ? 'riddle-solved' : ''}}">
-                        <a href="{{autumn[i].role != 0 ? autumn[i].url : '#'}}">
-                            <img alt="{{autumn[i].role != 0 ? getCustomField(autumn[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{autumn[i].role != 0 ? autumn[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
-                            <div class="border-image">
-                                <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                            </div>
-                            <span class="solved-number">
-                                {{autumn[i].role != 0 ? autumn[i].top : null}}
-                            </span>
-                        </a>
+                <!-- SUMMER -->
+                <div class="fs-season season-summer">
+                    {% for i in range(0, 4) %}
+                        <div class="item {{summer[i].role == 2 ? 'riddle-solved' : ''}}">
+                            <a href="{{summer[i].role != 0 ? summer[i].url : '#'}}">
+                                <img alt="{{summer[i].role != 0 ? getCustomField(summer[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{summer[i].role != 0 ? summer[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
+                                <div class="border-image">
+                                    <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
+                                </div>
+                                <span class="solved-number">
+                                    {{summer[i].role != 0 ? summer[i].top : null}}
+                                </span>
+                            </a>
+                        </div>
+                    {% endfor %}
+
+                    <div class="effect-shadow"></div>
+                    <div class="bg-shadow"></div>
+                    <div class="sun">
+                        <div class="ray_box">
+                            <div class="ray ray1"></div>
+                            <div class="ray ray2"></div>
+                            <div class="ray ray3"></div>
+                            <div class="ray ray4"></div>
+                            <div class="ray ray5"></div>
+                            <div class="ray ray6"></div>
+                            <div class="ray ray7"></div>
+                            <div class="ray ray8"></div>
+                            <div class="ray ray9"></div>
+                            <div class="ray ray10"></div>
+                        </div>
                     </div>
-                {% endfor %}
-
-                <div class="fallingLeaves">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
                 </div>
 
-                <div class="effect-shadow"></div>
-                <div class="bg-shadow"></div>
-            </div>
+                <!-- AUTUMN -->
+                <div class="fs-season season-autumn">
+                    {% for i in range(0, 4) %}
+                        <div class="item {{autumn[i].role == 2 ? 'riddle-solved' : ''}}">
+                            <a href="{{autumn[i].role != 0 ? autumn[i].url : '#'}}">
+                                <img alt="{{autumn[i].role != 0 ? getCustomField(autumn[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{autumn[i].role != 0 ? autumn[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
+                                <div class="border-image">
+                                    <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
+                                </div>
+                                <span class="solved-number">
+                                    {{autumn[i].role != 0 ? autumn[i].top : null}}
+                                </span>
+                            </a>
+                        </div>
+                    {% endfor %}
 
-            <!-- WINTER -->
-            <div class="fs-season season-winter">
-                {% for i in range(0, 4) %}
-                    <div class="item {{winter[i].role == 2 ? 'riddle-solved' : ''}}">
-                        <a href="{{winter[i].role != 0 ? winter[i].url : '#'}}">
-                            <img alt="{{winter[i].role != 0 ? getCustomField(winter[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{winter[i].role != 0 ? winter[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
-                            <div class="border-image">
-                                <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
-                            </div>
-                            <span class="solved-number">
-                                {{winter[i].role != 0 ? winter[i].top : null}}
-                            </span>
-                        </a>
+                    <div class="fallingLeaves">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
-                {% endfor %}
 
-                <div class="winter-is-coming">
-                    <div class="snow snow--near"></div>
-                    <div class="snow snow--near snow--alt"></div>
-
-                    <div class="snow snow--mid"></div>
-                    <div class="snow snow--mid snow--alt"></div>
-
-                    <div class="snow snow--far"></div>
-                    <div class="snow snow--far snow--alt"></div>
+                    <div class="effect-shadow"></div>
+                    <div class="bg-shadow"></div>
                 </div>
 
-                <div class="effect-shadow"></div>
-                <div class="bg-shadow"></div>
+                <!-- WINTER -->
+                <div class="fs-season season-winter">
+                    {% for i in range(0, 4) %}
+                        <div class="item {{winter[i].role == 2 ? 'riddle-solved' : ''}}">
+                            <a href="{{winter[i].role != 0 ? winter[i].url : '#'}}">
+                                <img alt="{{winter[i].role != 0 ? getCustomField(winter[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{winter[i].role != 0 ? winter[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
+                                <div class="border-image">
+                                    <img alt="stone frame border" src="{{theme.uri}}/img/four-seasons/stone-frame-medium.png">
+                                </div>
+                                <span class="solved-number">
+                                    {{winter[i].role != 0 ? winter[i].top : null}}
+                                </span>
+                            </a>
+                        </div>
+                    {% endfor %}
+
+                    <div class="winter-is-coming">
+                        <div class="snow snow--near"></div>
+                        <div class="snow snow--near snow--alt"></div>
+
+                        <div class="snow snow--mid"></div>
+                        <div class="snow snow--mid snow--alt"></div>
+
+                        <div class="snow snow--far"></div>
+                        <div class="snow snow--far snow--alt"></div>
+                    </div>
+
+                    <div class="effect-shadow"></div>
+                    <div class="bg-shadow"></div>
+                </div>
             </div>
         </div>
-    </div>
+    {% else %}
+        <div class="need-to-login">
+            Bạn cần đăng nhập trước khi tham gia Event!
+        </div>
+    {% endif %}
 {% endblock content %}
