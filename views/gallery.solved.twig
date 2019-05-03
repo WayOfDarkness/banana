@@ -24,7 +24,7 @@
 
     {% set theme = getCustomField(gallery.id, 'gallery', 'theme') %}
 
-    {% if customer.logged_in and gallery.role != 0 %}
+    {% if customer.logged_in and (gallery.role != 0 or (Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).role == 0 and Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).id == 21)) %}
         <section class="circleBase type3 nav-primary">
             <div class="innerCircle">
                 {% if Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).role == 1 or (Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).role == 0 and Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).id == 21) %}
