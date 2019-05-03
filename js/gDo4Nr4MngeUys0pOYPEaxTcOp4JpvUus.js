@@ -43,7 +43,7 @@ $(document).ready(function () {
         });
     }
 
-    if (customer_id && point == 0) {
+    if (customer_id && point == 0 && current_gallery_status != 2) {
 
         // Change The Domino Dance Riddle Status From Accessible To Solved
         $.ajax({
