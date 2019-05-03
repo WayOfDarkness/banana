@@ -14,20 +14,14 @@
 
 {% block content %}
 
-    {% if gallery.handle == 'starting-riddle-team' %}
-        {% set prevLink = 'all-riddles' %}
-        {% set nextLink = 'the-four-paths' %}
-    {% else %}
-        {% set prevLink = 'the-four-paths' %}
-        {% set nextLink = getCustomField(gallery.id, 'gallery', 'next-riddle') %}
-    {% endif %}
-
+    {% set prevLink = 'all-riddles' %}
+    {% set nextLink = 'the-four-paths' %}
     {% set theme = getCustomField(gallery.id, 'gallery', 'theme') %}
 
-    {% if customer.logged_in and gallery.role != 0 %}
+    {% if customer.logged_in %}
         <section class="circleBase type3 nav-primary">
             <div class="innerCircle">
-                {% if Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).role == 1 %}
+                {% if Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).role != 2 %}
                     <div class="innerText {{theme}}">Chúc mừng bạn đã vượt qua thử thách!</div>
                     <div class="innerText {{theme}} title">{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}</div>
                     <div class="innerText {{theme}}">Số điểm bạn đã giành được trong thử thách vừa rồi là
@@ -59,10 +53,6 @@
             <input type="hidden" class="customer-point" value="{{customer.point ? customer.point : '0'}}"/>
         {% endif %}
 
-    {% elseif customer.logged_in and gallery.role == 0 %}
-        <div class="need-to-login">
-            Bạn không đủ điều kiện để truy cập trang này!
-        </div>
     {% else %}
         <div class="need-to-login">
             Bạn cần
