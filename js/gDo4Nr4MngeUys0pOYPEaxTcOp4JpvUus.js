@@ -68,5 +68,17 @@ $(document).ready(function () {
             },
             success: function (result) {}
         });
+
+        // Change Summer 1 Riddle Status From Unavailable To Accessible
+        $.ajax({
+            type: 'POST',
+            url: '/api/setRole',
+            data: {
+                'gallery_id': 54,
+                'customer_id': customer_id,
+                'role': 1
+            },
+            success: function (result) {}
+        });
     }
 });
