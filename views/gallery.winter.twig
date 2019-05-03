@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block content %}
-    {% if customer.logged_in && gallery.role != 0 %}
+    {% if customer.logged_in and gallery.role != 0 %}
         {% if gallery.handle == 'winter-4-time-lapse' or gallery.handle == 'winter-4-night' %}
             <img class="winter riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#locked">
             <map name="locked">
