@@ -57,6 +57,18 @@ $(document).ready(function () {
             success: function (result) {}
         });
 
+        // Change The Four Paths Status From Unavailable To Accessible
+        $.ajax({
+            type: 'POST',
+            url: '/api/setRole',
+            data: {
+                'gallery_id': 1,
+                'customer_id': customer_id,
+                'role': 1
+            },
+            success: function (result) {}
+        });
+
         // Change Spring 1 Riddle Status From Unavailable To Accessible
         $.ajax({
             type: 'POST',
