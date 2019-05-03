@@ -93,6 +93,7 @@ $(document).ready(function () {
 
         // Change Summer 1 Riddle Status From Unavailable To Accessible
         for (var i = 54; i <= 63; i++) {
+            console.log(i);
             if (i != 59) {
                 $.ajax({
                     type: 'POST',
