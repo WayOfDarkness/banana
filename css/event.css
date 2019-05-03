@@ -163,3 +163,12 @@ body {
 	border-radius: 0px 0px 20px 20px;
 	height: 20px;
 }
+
+.need-to-login {
+	margin-top: auto;
+	margin-bottom: auto;
+	box-sizing: border-box;
+	font-size: 24px;
+	padding: 10px;
+	font-family: 'Patrick Hand', cursive !important;
+}
