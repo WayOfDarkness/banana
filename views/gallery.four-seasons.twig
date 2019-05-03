@@ -39,7 +39,7 @@
 
             <!-- SPRING -->
             <div class="fs-season season-spring">
-                {% for item in range(0, 4) %}
+                {% for i in range(0, 4) %}
                     {{Gallery(spring[i]) | json_encode}}
                     <div class="item {{Gallery(spring[i]).role == 2 ? 'riddle-solved' : ''}}">
                         <a href="{{Gallery(spring[i]).role != 0 ? spring[i].url : '#'}}">
