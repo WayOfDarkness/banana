@@ -92,7 +92,7 @@ $(document).ready(function () {
         });
 
         // Change Summer 1 Riddle Status From Unavailable To Accessible
-        for (i = 55; i <= 63; i++) {
+        for (var i = 55; i <= 63; i++) {
             if (i != 59) {
                 $.ajax({
                     type: 'POST',
