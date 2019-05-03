@@ -40,7 +40,6 @@
             <!-- SPRING -->
             <div class="fs-season season-spring">
                 {% for i in range(0, 4) %}
-                    {{Gallery(spring[i]) | json_encode}}
                     <div class="item {{Gallery(spring[i]).role == 2 ? 'riddle-solved' : ''}}">
                         <a href="{{Gallery(spring[i]).role != 0 ? spring[i].url : '#'}}">
                             <img alt="{{Gallery(spring[i]).role != 0 ? getCustomField(spring[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{Gallery(spring[i]).role != 0 ? spring[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
