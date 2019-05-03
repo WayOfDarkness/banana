@@ -80,7 +80,7 @@
 
             <!-- SUMMER -->
             <div class="fs-season season-summer">
-                {% for item in range(0, 4) %}
+                {% for i in range(0, 4) %}
                     <div class="item {{summer[i].role == 2 ? 'riddle-solved' : ''}}">
                         <a href="{{summer[i].role != 0 ? summer[i].url : '#'}}">
                             <img alt="{{summer[i].role != 0 ? getCustomField(summer[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{summer[i].role != 0 ? summer[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
@@ -114,7 +114,7 @@
 
             <!-- AUTUMN -->
             <div class="fs-season season-autumn">
-                {% for item in range(0, 4) %}
+                {% for i in range(0, 4) %}
                     <div class="item {{autumn[i].role == 2 ? 'riddle-solved' : ''}}">
                         <a href="{{autumn[i].role != 0 ? autumn[i].url : '#'}}">
                             <img alt="{{autumn[i].role != 0 ? getCustomField(autumn[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{autumn[i].role != 0 ? autumn[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
@@ -165,7 +165,7 @@
 
             <!-- WINTER -->
             <div class="fs-season season-winter">
-                {% for item in range(0, 4) %}
+                {% for i in range(0, 4) %}
                     <div class="item {{winter[i].role == 2 ? 'riddle-solved' : ''}}">
                         <a href="{{winter[i].role != 0 ? winter[i].url : '#'}}">
                             <img alt="{{winter[i].role != 0 ? getCustomField(winter[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{winter[i].role != 0 ? winter[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
