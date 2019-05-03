@@ -36,10 +36,8 @@
                     <div class="innerText {{theme}}">Số điểm hiện tại của bạn là
                         <span class="current-point">{{customer.point + getCustomField(gallery.id, 'gallery', 'riddle-point')}}</span>
                     </div>
-                {% elseif Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).role == 2 %}
-                    <div class="innerText {{theme}}">Bạn đã vượt qua thử thách này!</div>
                 {% else %}
-                    <div class="innerText {{theme}}">Dừng ngay việc gian lận này lại<br>trước khi bị tước quyền tham gia!</div>
+                    <div class="innerText {{theme}}">Bạn đã vượt qua thử thách này!</div>
                 {% endif %}
                 <div id="container_buttons">
                     <a class="btn-general back-to-the-beginning" href={{Gallery(prevLink).url}}>
