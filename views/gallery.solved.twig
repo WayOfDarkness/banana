@@ -24,40 +24,49 @@
 
     {% set theme = getCustomField(gallery.id, 'gallery', 'theme') %}
 
-    <section class="circleBase type3 nav-primary">
-        <div class="innerCircle">
-            {% if Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).role == 1 %}
-                <div class="innerText {{theme}}">Chúc mừng bạn đã vượt qua thử thách!</div>
-                <div class="innerText {{theme}} title">{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}</div>
-                <div class="innerText {{theme}}">Số điểm bạn đã giành được trong thử thách vừa rồi là
-                    {{getCustomField(gallery.id, 'gallery', 'riddle-point')}}
-                </div>
-                <div class="innerText {{theme}}">Số điểm hiện tại của bạn là
-                    <span class="current-point">{{customer.point + getCustomField(gallery.id, 'gallery', 'riddle-point')}}</span>
-                </div>
-            {% elseif Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).role == 2 %}
-                <div class="innerText {{theme}}">Bạn đã vượt qua thử thách này!</div>
-            {% else %}
-                <div class="innerText {{theme}}">Dừng ngay việc gian lận này lại<br>trước khi bị tước quyền tham gia!</div>
-            {% endif %}
-            <div id="container_buttons">
-                <a class="btn-general back-to-the-beginning" href={{Gallery(prevLink).url}}>
-                    <span>Chọn lựa thử thách!</span>
-                </a>
-                <a class="btn-general next-level" href={{Gallery(nextLink).url}}>
-                    <span>Thử thách tiếp theo!</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
     {% if customer.logged_in %}
-        <input type="hidden" class="current-gallery-id" value="{{Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).id}}"/>
-        <input type="hidden" class="current-gallery-status" value="{{Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).role}}"/>
-        <input type="hidden" class="next-gallery-id" value="{{Gallery(nextLink).id}}"/>
-        <input type="hidden" class="customer-id" value="{{customer.id}}"/>
-        <input type="hidden" class="riddle-point" value="{{getCustomField(gallery.id, 'gallery', 'riddle-point')}}"/>
-        <input type="hidden" class="customer-point" value="{{customer.point ? customer.point : '0'}}"/>
+        <section class="circleBase type3 nav-primary">
+            <div class="innerCircle">
+                {% if Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).role == 1 %}
+                    <div class="innerText {{theme}}">Chúc mừng bạn đã vượt qua thử thách!</div>
+                    <div class="innerText {{theme}} title">{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}</div>
+                    <div class="innerText {{theme}}">Số điểm bạn đã giành được trong thử thách vừa rồi là
+                        {{getCustomField(gallery.id, 'gallery', 'riddle-point')}}
+                    </div>
+                    <div class="innerText {{theme}}">Số điểm hiện tại của bạn là
+                        <span class="current-point">{{customer.point + getCustomField(gallery.id, 'gallery', 'riddle-point')}}</span>
+                    </div>
+                {% elseif Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).role == 2 %}
+                    <div class="innerText {{theme}}">Bạn đã vượt qua thử thách này!</div>
+                {% else %}
+                    <div class="innerText {{theme}}">Dừng ngay việc gian lận này lại<br>trước khi bị tước quyền tham gia!</div>
+                {% endif %}
+                <div id="container_buttons">
+                    <a class="btn-general back-to-the-beginning" href={{Gallery(prevLink).url}}>
+                        <span>Chọn lựa thử thách!</span>
+                    </a>
+                    <a class="btn-general next-level" href={{Gallery(nextLink).url}}>
+                        <span>Thử thách tiếp theo!</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        {% if customer.logged_in %}
+            <input type="hidden" class="current-gallery-id" value="{{Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).id}}"/>
+            <input type="hidden" class="current-gallery-status" value="{{Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).role}}"/>
+            <input type="hidden" class="next-gallery-id" value="{{Gallery(nextLink).id}}"/>
+            <input type="hidden" class="customer-id" value="{{customer.id}}"/>
+            <input type="hidden" class="riddle-point" value="{{getCustomField(gallery.id, 'gallery', 'riddle-point')}}"/>
+            <input type="hidden" class="customer-point" value="{{customer.point ? customer.point : '0'}}"/>
+        {% endif %}
+
+    {% else %}
+        <div class="need-to-login">
+            Bạn cần
+            <a href="/">đăng nhập</a>
+            trước khi tham gia Event!
+        </div>
     {% endif %}
 
 {% endblock content %}

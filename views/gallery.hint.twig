@@ -26,5 +26,11 @@
 {% endblock %}
 
 {% block content %}
-    <div class="hint-screen">Gợi ý: {{gallery.description | raw}}</div>
+    {% if customer.logged_in %}
+        <div class="hint-screen">Gợi ý: {{gallery.description | raw}}</div>
+    {% else %}
+        <div class="need-to-login">
+            Bạn cần đăng nhập trước khi tham gia Event!
+        </div>
+    {% endif %}
 {% endblock content %}
