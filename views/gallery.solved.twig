@@ -24,7 +24,7 @@
 
     {% set theme = getCustomField(gallery.id, 'gallery', 'theme') %}
 
-    {% if customer.logged_in %}
+    {% if customer.logged_in and gallery.role != 0 %}
         <section class="circleBase type3 nav-primary">
             <div class="innerCircle">
                 {% if Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).role == 1 or (Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).role == 0 && Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).id = 21) %}
@@ -61,6 +61,10 @@
             <input type="hidden" class="customer-point" value="{{customer.point ? customer.point : '0'}}"/>
         {% endif %}
 
+    {% elseif customer.logged_in and gallery.role == 0 %}
+        <div class="need-to-login">
+            Bạn không đủ điều kiện để truy cập trang này!
+        </div>
     {% else %}
         <div class="need-to-login">
             Bạn cần

@@ -11,7 +11,8 @@
             margin: 0;
             overflow: hidden;
         }
-        .hint-screen, .need-to-login {
+        .hint-screen,
+        .need-to-login {
             margin-top: auto;
             margin-bottom: auto;
             box-sizing: border-box;
@@ -26,11 +27,18 @@
 {% endblock %}
 
 {% block content %}
-    {% if customer.logged_in %}
-        <div class="hint-screen">Gợi ý: {{gallery.description | raw}}</div>
+    {% if customer.logged_in and gallery.role != 0 %}
+        <div class="hint-screen">Gợi ý:
+            {{gallery.description | raw}}</div>
+    {% elseif customer.logged_in and gallery.role == 0 %}
+        <div class="need-to-login">
+            Bạn không đủ điều kiện để truy cập trang này!
+        </div>
     {% else %}
         <div class="need-to-login">
-            Bạn cần đăng nhập trước khi tham gia Event!
+            Bạn cần
+            <a href="/">đăng nhập</a>
+            trước khi tham gia Event!
         </div>
     {% endif %}
 {% endblock content %}
