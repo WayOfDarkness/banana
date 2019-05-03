@@ -6,7 +6,7 @@ $(document).ready(function () {
     var point = parseInt($('.riddle-point').val());
     var current_point = parseInt($('.customer-point').val());
     
-    if (customer_id && point != 0) {
+    if (customer_id && point != 0 && current_gallery_status == 1) {
 
         // Update Point For User
         $.ajax({
@@ -49,11 +49,11 @@ $(document).ready(function () {
     //     $('.innerCircle').html('Dừng ngay việc làm đáng xấu hổ này lại! Kẻ gian lận!');
     // }
 
-    // if (customer_id && point != 0 && current_gallery_status == 2) {
+    if (customer_id && point != 0 && current_gallery_status == 2) {
 
-    //     // Already Solved
-    //     $('.current-point').html(current_point);
-    // }
+        // Already Solved
+        $('.current-point').html(current_point);
+    }
 
     if (customer_id && point == 0) {
 
@@ -66,9 +66,7 @@ $(document).ready(function () {
                 'customer_id': customer_id,
                 'role': 2
             },
-            success: function (result) {
-                console.log(result);
-            }
+            success: function (result) {}
         });
 
         // Change Spring 1 Riddle Status From Unavailable To Accessible
@@ -80,9 +78,7 @@ $(document).ready(function () {
                 'customer_id': customer_id,
                 'role': 1
             },
-            success: function (result) {
-                console.log(result);
-            }
+            success: function (result) {}
         });
     }
 });
