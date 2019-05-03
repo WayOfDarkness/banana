@@ -5,7 +5,7 @@ $(document).ready(function () {
     var customer_id = $('.customer-id').val();
     var point = parseInt($('.riddle-point').val());
     var current_point = parseInt($('.customer-point').val());
-    
+
     if (customer_id && point != 0 && current_gallery_status == 1) {
 
         // Update Point For User
@@ -15,7 +15,7 @@ $(document).ready(function () {
             data: {
                 'point': current_point + point
             },
-            success: function (result) {}
+            success: function (result) { }
         });
 
         // Change The Current Riddle Status From Accessible To Solved
@@ -27,7 +27,7 @@ $(document).ready(function () {
                 'customer_id': customer_id,
                 'role': 2
             },
-            success: function (result) {}
+            success: function (result) { }
         });
 
         // Change The Next Riddle Status From Unavailable To Accessible
@@ -39,7 +39,7 @@ $(document).ready(function () {
                 'customer_id': customer_id,
                 'role': 1
             },
-            success: function (result) {}
+            success: function (result) { }
         });
     }
 
@@ -54,7 +54,7 @@ $(document).ready(function () {
                 'customer_id': customer_id,
                 'role': 2
             },
-            success: function (result) {}
+            success: function (result) { }
         });
 
         // Change The Four Paths Status From Unavailable To Accessible
@@ -66,7 +66,7 @@ $(document).ready(function () {
                 'customer_id': customer_id,
                 'role': 1
             },
-            success: function (result) {}
+            success: function (result) { }
         });
 
         // Change Spring 1 Riddle Status From Unavailable To Accessible
@@ -78,19 +78,33 @@ $(document).ready(function () {
                 'customer_id': customer_id,
                 'role': 1
             },
-            success: function (result) {}
+            success: function (result) { }
         });
-
-        // Change Summer 1 Riddle Status From Unavailable To Accessible
         $.ajax({
             type: 'POST',
             url: '/api/setRole',
             data: {
-                'gallery_id': 54,
+                'gallery_id': 17,
                 'customer_id': customer_id,
                 'role': 1
             },
-            success: function (result) {}
+            success: function (result) { }
         });
+
+        // Change Summer 1 Riddle Status From Unavailable To Accessible
+        for (i = 55; i <= 63; i++) {
+            if (i != 59) {
+                $.ajax({
+                    type: 'POST',
+                    url: '/api/setRole',
+                    data: {
+                        'gallery_id': i,
+                        'customer_id': customer_id,
+                        'role': 1
+                    },
+                    success: function (result) { }
+                });
+            }
+        }
     }
 });
