@@ -43,18 +43,6 @@ $(document).ready(function () {
         });
     }
 
-    // if (customer_id && point != 0 && current_gallery_status == 0) {
-
-    //     // Cheater Is Here 
-    //     $('.innerCircle').html('Dừng ngay việc làm đáng xấu hổ này lại! Kẻ gian lận!');
-    // }
-
-    if (customer_id && point != 0 && current_gallery_status == 2) {
-
-        // Already Solved
-        $('.current-point').html(current_point);
-    }
-
     if (customer_id && point == 0) {
 
         // Change The Domino Dance Riddle Status From Accessible To Solved
