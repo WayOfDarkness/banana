@@ -38,20 +38,20 @@
 .rowbar {
     position: absolute;
     display: block;
-    left: 57.5%;
+    left: 887px;
     background-color: #333;
     width: 60px;
     height: 3px;
     z-index: 1;
 }
 .rowbar1 {
-    top: 30%;
+    top: 230px;
 }
 .rowbar2 {
-    top: 33%;
+    top: 238px;
 }
 .rowbar3 {
-    top: 36%;
+    top: 246px;
 }
 .colbar {
     position: absolute;
