@@ -16,9 +16,9 @@
             </map>
         {% elseif gallery.handle == 'winter-1-drive-with-me' %}
             <div id="traffic-light">
-                <input id="color1" name="traffic-light-color" type="radio" value="color1"/>
-                <input id="color2" name="traffic-light-color" type="radio" value="color2"/>
-                <input id="color3" name="traffic-light-color" type="radio" value="colo3"/>
+                <div id="color1"></div>
+                <div id="color2"></div>
+                <div id="color3"></div>
             </div>
             <img class="winter riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#locked">
         {% else %}

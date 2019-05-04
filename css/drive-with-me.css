@@ -11,7 +11,7 @@
   border-radius: 30px;
 }
 
-#traffic-light input {
+#traffic-light div {
   appearance: none;
   position: relative;
   left: 50%;
