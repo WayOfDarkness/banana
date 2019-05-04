@@ -61,14 +61,11 @@
 .colbar {
     position: absolute;
     display: block;
-    left: 63%;
-    margin-left: -60px;
-    margin-top: -160px;
+    left: 62%;
     background-color: #333;
-    width: 88px;
-    height: 300px;
-    font-size: 100px;
-    top: 107%;
+    width: 24px;
+    height: 223px;
+    top: 32%;
     z-index: 1;
 }
 
