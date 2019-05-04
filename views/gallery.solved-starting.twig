@@ -43,7 +43,7 @@
                 </div>
             </div>
         </section>
-
+a={{getCustomField(gallery.id, 'gallery', 'current-riddle') | json_encode}}
         {% if customer.logged_in %}
             <input type="hidden" class="current-gallery-status" value="{{getCustomField(gallery.id, 'gallery', 'current-riddle').role}}"/>
             <input type="hidden" class="customer-id" value="{{customer.id}}"/>
