@@ -1,10 +1,8 @@
 #traffic-light {
     position: absolute;
     display: block;
-    left: 60%;
-    top: 50%;
-    margin-left: -60px;
-    margin-top: -160px;
+    left: 700px;
+    top: 200px;
     background-color: #333;
     width: 30px;
     height: 80px;
