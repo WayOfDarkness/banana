@@ -23,6 +23,18 @@
   display: block;
 }
 
+#traffic-light section {
+    position: relative;
+    left: 50%;
+    width:80px;
+    height:80px;
+    margin-top: 0;
+    margin-left:0;
+    background-color: grey;
+    border-radius: 100%;
+    display: block;
+  }
+
 #color1 {
     background-color: #FF0000 !important;
     opacity: 0.5;
