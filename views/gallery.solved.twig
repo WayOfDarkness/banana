@@ -14,14 +14,8 @@
 
 {% block content %}
 
-    {% if gallery.handle == 'starting-riddle-team' %}
-        {% set prevLink = 'all-riddles' %}
-        {% set nextLink = 'the-four-paths' %}
-    {% else %}
-        {% set prevLink = 'the-four-paths' %}
-        {% set nextLink = getCustomField(gallery.id, 'gallery', 'next-riddle') %}
-    {% endif %}
-
+    {% set prevLink = 'the-four-paths' %}
+    {% set nextLink = getCustomField(gallery.id, 'gallery', 'next-riddle') %}
     {% set theme = getCustomField(gallery.id, 'gallery', 'theme') %}
 
     {% if customer.logged_in and gallery.role != 0 %}
