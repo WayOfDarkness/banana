@@ -17,6 +17,9 @@ $(document).ready(function () {
             $('.yellow').removeClass('active');
             $('.green').removeClass('active');
             $(this).addClass('active');
+            $('#counter-platform').addClass('red-number');
+            $('#counter-platform').removeClass('yellow-number');
+            $('#counter-platform').removeClass('green-number');
         }
     })
 
@@ -30,6 +33,9 @@ $(document).ready(function () {
             $('.red').removeClass('active');
             $('.green').removeClass('active');
             $(this).addClass('active');
+            $('#counter-platform').addClass('yellow-number');
+            $('#counter-platform').removeClass('red-number');
+            $('#counter-platform').removeClass('green-number');
         }
     })
 
@@ -43,6 +49,9 @@ $(document).ready(function () {
             $('.yellow').removeClass('active');
             $('.red').removeClass('active');
             $(this).addClass('active');
+            $('#counter-platform').addClass('green-number');
+            $('#counter-platform').removeClass('yellow-number');
+            $('#counter-platform').removeClass('red-number');
         }
     })
 });
