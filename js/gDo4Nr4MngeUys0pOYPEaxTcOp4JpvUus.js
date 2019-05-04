@@ -19,12 +19,12 @@ $(document).ready(function () {
         });
 
         // Change The Current Riddle Status From Accessible To Solved
-        for (var i = 0; i < set_role_to_1.split(' ').length; i++) {
+        for (var i = 0; i < set_role_to_2.split(' ').length; i++) {
             $.ajax({
                 type: 'POST',
                 url: '/api/setRole',
                 data: {
-                    'gallery_id': set_role_to_1.split(' ')[i],
+                    'gallery_id': set_role_to_2.split(' ')[i],
                     'customer_id': customer_id,
                     'role': 2
                 },
@@ -33,12 +33,12 @@ $(document).ready(function () {
         }
 
         // Change The Next Riddles Status From Unavailable To Accessible
-        for (var i = 0; i < set_role_to_2.split(' ').length; i++) {
+        for (var i = 0; i < set_role_to_1.split(' ').length; i++) {
             $.ajax({
                 type: 'POST',
                 url: '/api/setRole',
                 data: {
-                    'gallery_id': set_role_to_2.split(' ')[i],
+                    'gallery_id': set_role_to_1.split(' ')[i],
                     'customer_id': customer_id,
                     'role': 1
                 },
