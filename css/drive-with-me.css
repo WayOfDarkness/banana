@@ -1,28 +1,27 @@
 #traffic-light {
-  position: absolute;
-  display:block;
-  left: 50%;
-  top: 50%; 
-  margin-left: -60px;
-  margin-top: -160px;
-  background-color: #333;
-  width: 120px;
-  height: 320px;
-  border-radius: 30px;
-  z-index: 1;
+    position: absolute;
+    display: block;
+    left: 60%;
+    top: 50%;
+    margin-left: -60px;
+    margin-top: -160px;
+    background-color: #333;
+    width: 30px;
+    height: 80px;
+    border-radius: 30px;
+    z-index: 1;
 }
 
 #traffic-light div {
-  position: relative;
-  left: 50%;
-  width:80px;
-  height:80px;
-  margin-top: 20px;
-  margin-left:-40px;
-  background-color: grey;
-  border-radius: 100%;
-  display: block;
-  z-index: 1;
+    position: relative;
+    left: 18%;
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    background-color: grey;
+    border-radius: 100%;
+    display: block;
+    z-index: 1;
 }
 
 #counter-platform {
