@@ -145,6 +145,7 @@ registerCustomField("Solved Riddle","gallery","input");
 registerCustomField("Current Riddle","gallery","input");
 registerCustomField("Next Riddle","gallery","input");
 registerCustomField("Set Role To 1","gallery","select-multiple","blog");
+registerCustomField("Set Role To 2","gallery","select-multiple","blog");
 
 registerCustomField("Mật mã","page","editor");
 registerCustomField("Điểm","page","editor");
