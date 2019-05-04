@@ -7,12 +7,19 @@
 {% endblock %}
 
 {% block content %}
-    {% if customer.logged_in %}
+    {% if customer.logged_in and gallery.role != 0 %}
         {% if gallery.handle == 'winter-4-time-lapse' or gallery.handle == 'winter-4-night' %}
             <img class="winter riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#locked">
             <map name="locked">
                 <area coords="745,424,767,424,767,443,745,443" href="https://choigiday.com/winter-4-the-locked-house" shape="poly">
             </map>
+        {% elseif gallery.handle == 'winter-1-drive-with-me' %}
+            <div id="traffic-light">
+                <input id="color1" name="traffic-light-color" type="radio" value="color1"/>
+                <input id="color2" name="traffic-light-color" type="radio" value="color2"/>
+                <input id="color3" name="traffic-light-color" type="radio" value="colo3"/>
+            </div>
+            <img class="winter riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#locked">
         {% else %}
             <img class="winter riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
         {% endif %}
@@ -22,7 +29,9 @@
         </div>
     {% else %}
         <div class="need-to-login">
-            Bạn cần <a href="/">đăng nhập</a> trước khi tham gia Event!
+            Bạn cần
+            <a href="/">đăng nhập</a>
+            trước khi tham gia Event!
         </div>
     {% endif %}
 {% endblock content %}
