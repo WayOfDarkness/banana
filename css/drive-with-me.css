@@ -25,8 +25,8 @@
 #counter-platform {
     position: absolute;
     display: block;
-    left: 59%;
-    top: 30%;
+    left: 900px;
+    top: 218px;
     background-color: #333;
     width: 30px;
     height: 40px;
@@ -56,11 +56,11 @@
 .colbar {
     position: absolute;
     display: block;
-    left: 62%;
+    left: 946px;
+    top: 230px;
     background-color: #333;
     width: 24px;
     height: 223px;
-    top: 32%;
     z-index: 1;
 }
 
