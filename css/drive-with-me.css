@@ -39,19 +39,26 @@
     border: 2px solid aliceblue;
 }
 
-#rowbar {
+.rowbar {
     position: absolute;
     display: block;
-    left: 62%;
-    top: 68%;
+    left: 57%;
     margin-left: -60px;
     margin-top: -160px;
     background-color: #333;
-    width: 120px;
-    height: 160px;
-    border-radius: 30px;
+    width: 80px;
+    height: 11px;
     font-size: 100px;
     line-height: 10rem;
+}
+.rowbar1 {
+    top: 85%;
+}
+.rowbar2 {
+    top: 88%;
+}
+.rowbar3 {
+    top: 91%;
 }
 
 #color1 {
