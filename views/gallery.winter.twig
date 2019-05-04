@@ -3,7 +3,11 @@
     <meta content="YsdIiXgCV-gDo4Nr4MngeUys0pOYPEaxTcOp4JpvUus" name="google-site-verification"/>
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
     <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
-    <link rel="stylesheet" href="{{theme.uri}}/css/drive-with-me.css">
+    <script src="{{theme.uri}}/js/jquery-3.3.1.min.js"></script>
+    {% if gallery.handle == 'blue-pill-one-hundred-switches' %}
+        <link rel="stylesheet" href="{{theme.uri}}/css/drive-with-me.css">
+        <script src="{{theme.uri}}/js/rqTrSd8N8y.js"></script>
+    {% endif %}
     <link rel="shortcut icon" href="{{settings.favicon | upload_url}}">
 {% endblock %}
 
@@ -23,7 +27,7 @@
             <div class="rowbar rowbar1"></div>
             <div class="rowbar rowbar2"></div>
             <div class="rowbar rowbar3"></div>
-            <div id="counter-platform">1</div>
+            <div id="counter-platform" class="red">67</div>
             <div class="colbar"></div>
             <img class="winter riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#locked">
         {% else %}
