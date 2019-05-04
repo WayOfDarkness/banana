@@ -26,35 +26,26 @@
 
 #color1 {
     background-color: #FF0000 !important;
+    opacity: 0.5;
 }
-#color1:hover {
-    animation: blink1 1.1s step-end infinite;
-}
-#color1:checked {
-    background-color: #FF0000;
-    box-shadow: 0 0 6em #FF0000;
+#color1.active {
+    opacity: 1;
 }
 
 #color2 {
     background-color: #FFFF00 !important;
+    opacity: 0.5;
 }
-#color2:hover {
-    animation: blink2 1s step-end infinite;
-}
-#color2:checked {
-    background-color: #FFFF00;
-    box-shadow: 0 0 6em #FFFF00;
+#color2.active {
+    opacity: 1;
 }
 
 #color3 {
     background-color: #00FF00 !important;
+    opacity: 0.5;
 }
-#color3:hover {
-    animation: blink3 1s step-end infinite;
-}
-#color3:checked {
-    background-color: #00FF00;
-    box-shadow: 0 0 6em #00FF00;
+#color3.active {
+    opacity: 1;
 }
 
 * {
