@@ -29,7 +29,7 @@
             <div class="rowbar rowbar3"></div>
             <div id="counter-platform" class="red-number">99</div>
             <div class="colbar"></div>
-            <img class="winter riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#locked">
+            <img class="winter riddle-img" src="{{gallery.photos[1].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#locked">
         {% else %}
             <img class="winter riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
         {% endif %}
