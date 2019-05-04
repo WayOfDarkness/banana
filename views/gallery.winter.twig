@@ -16,11 +16,11 @@
             </map>
         {% elseif gallery.handle == 'winter-1-drive-with-me' %}
             <div id="traffic-light">
-                <section id="counter">1</section>
                 <div id="color1" class="active"></div>
                 <div id="color2"></div>
                 <div id="color3"></div>
             </div>
+            <div id="counter-platform">1</div>
             <img class="winter riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#locked">
         {% else %}
             <img class="winter riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">

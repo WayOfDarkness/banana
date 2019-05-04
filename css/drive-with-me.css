@@ -23,7 +23,7 @@
   display: block;
 }
 
-#traffic-light section {
+#counter-platform {
     position: relative;
     left: 50%;
     width:80px;
@@ -33,7 +33,7 @@
     background-color: grey;
     border-radius: 100%;
     display: block;
-  }
+}
 
 #color1 {
     background-color: #FF0000 !important;
