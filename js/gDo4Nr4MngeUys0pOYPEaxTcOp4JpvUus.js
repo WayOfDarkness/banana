@@ -6,7 +6,7 @@ $(document).ready(function () {
     var set_role_to_1 = $('.set-role-to-1').val();
     var set_role_to_2 = $('.set-role-to-2').val();
 
-    if (customer_id && ((point != 0 && current_gallery_status == 1) || (point == 0))) {
+    if (customer_id && ((point != 0) || (point == 0))) {
 
         // Update Point For User
         $.ajax({
