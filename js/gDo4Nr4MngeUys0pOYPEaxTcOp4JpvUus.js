@@ -8,7 +8,10 @@ $(document).ready(function () {
     var set_role_to_1 = $('.set-role-to-1').val();
     var set_role_to_2 = $('.set-role-to-2').val();
 
-    console.log(set_role_to_1);
+    for (var i = 0; i < set_role_to_1.split(' ').length; i++) {
+        console.log(set_role_to_1[i]);
+        console.log('-');
+    }
 
     if (customer_id && point != 0 && current_gallery_status == 1) {
 
@@ -50,6 +53,19 @@ $(document).ready(function () {
     if (customer_id && point == 0) {
 
         // Change The Domino Dance Riddle Status From Accessible To Solved
+        for (var i = 14; i <= 17; i = i + 3) {
+            $.ajax({
+                type: 'POST',
+                url: '/api/setRole',
+                data: {
+                    'gallery_id': i,
+                    'customer_id': customer_id,
+                    'role': 1
+                },
+                success: function (result) { }
+            });
+        }
+        
         $.ajax({
             type: 'POST',
             url: '/api/setRole',
