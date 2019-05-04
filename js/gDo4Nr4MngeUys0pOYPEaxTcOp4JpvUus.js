@@ -71,7 +71,6 @@ $(document).ready(function () {
 
         // Change Spring 1 Riddle Status From Unavailable To Accessible
         for (var i = 14; i <= 17; i = i + 3) {
-            console.log(i);
             $.ajax({
                 type: 'POST',
                 url: '/api/setRole',
