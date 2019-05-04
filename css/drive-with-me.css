@@ -26,8 +26,8 @@
 #counter-platform {
     position: absolute;
     display: block;
-    left: 65%;
-    top: 60%;
+    left: 62%;
+    top: 68%;
     margin-left: -60px;
     margin-top: -160px;
     background-color: #333;
@@ -37,6 +37,21 @@
     font-size: 100px;
     line-height: 10rem;
     border: 2px solid aliceblue;
+}
+
+#rowbar {
+    position: absolute;
+    display: block;
+    left: 62%;
+    top: 68%;
+    margin-left: -60px;
+    margin-top: -160px;
+    background-color: #333;
+    width: 120px;
+    height: 160px;
+    border-radius: 30px;
+    font-size: 100px;
+    line-height: 10rem;
 }
 
 #color1 {
