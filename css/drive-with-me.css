@@ -12,7 +12,6 @@
 }
 
 #traffic-light div {
-  appearance: none;
   position: relative;
   left: 50%;
   width:80px;
@@ -29,6 +28,7 @@
     opacity: 0.5;
 }
 #color1.active {
+    background-color: #FF0000 !important;
     opacity: 1;
 }
 
@@ -37,6 +37,7 @@
     opacity: 0.5;
 }
 #color2.active {
+    background-color: #FFFF00 !important;
     opacity: 1;
 }
 
@@ -45,6 +46,7 @@
     opacity: 0.5;
 }
 #color3.active {
+    background-color: #00FF00 !important;
     opacity: 1;
 }
 
