@@ -5,6 +5,10 @@ $(document).ready(function () {
     var customer_id = $('.customer-id').val();
     var point = parseInt($('.riddle-point').val());
     var current_point = parseInt($('.customer-point').val());
+    var set_role_to_1 = $('.set-role-to-1').val();
+    var set_role_to_2 = $('.set-role-to-2').val();
+
+    console.log(set_role_to_1);
 
     if (customer_id && point != 0 && current_gallery_status == 1) {
 

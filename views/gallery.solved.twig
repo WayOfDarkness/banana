@@ -51,6 +51,8 @@
             <input type="hidden" class="customer-id" value="{{customer.id}}"/>
             <input type="hidden" class="riddle-point" value="{{getCustomField(gallery.id, 'gallery', 'riddle-point')}}"/>
             <input type="hidden" class="customer-point" value="{{customer.point ? customer.point : '0'}}"/>
+            <input type="hidden" class="set-role-to-1" value="{{getCustomField(gallery.id, 'gallery', 'set-role-to-1')}}"/>
+            <input type="hidden" class="set-role-to-2" value="{{getCustomField(gallery.id, 'gallery', 'set-role-to-2')}}"/>
         {% endif %}
 
     {% elseif customer.logged_in and gallery.role == 0 %}
