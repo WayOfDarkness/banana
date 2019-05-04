@@ -9,7 +9,7 @@ $(document).ready(function () {
     var set_role_to_2 = $('.set-role-to-2').val();
 
     for (var i = 0; i < set_role_to_1.split(' ').length; i++) {
-        console.log(set_role_to_1[i]);
+        console.log(set_role_to_1.split(' ')[i]);
         console.log('-');
     }
 
