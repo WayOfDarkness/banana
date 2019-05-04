@@ -67,32 +67,38 @@
 
 .red {
     background-color: #FF0000 !important;
-    color: #FF0000;
     opacity: 0.4;
     z-index: 1;
 }
 .red.active {
     opacity: 1;
 }
+.red-number {
+    color: #FF0000;
+}
 
 .yellow {
     background-color: #FFFF00 !important;
-    color: #FFFF00;
     opacity: 0.4;
     z-index: 1;
 }
 .yellow.active {
     opacity: 1;
 }
+.yellow-number {
+    color: #FFFF00;
+}
 
 .green {
     background-color: #00FF00 !important;
-    color: #00FF00;
     opacity: 0.4;
     z-index: 1;
 }
 .green.active {
     opacity: 1;
+}
+.green-number {
+    color: #00FF00;
 }
 
 * {
