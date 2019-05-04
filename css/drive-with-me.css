@@ -25,36 +25,36 @@
 }
 
 #color1 {
-    background-color: darken(#FF0000,15%) !important;
+    background-color: #FF0000 !important;
 }
 #color1:hover {
     animation: blink1 1.1s step-end infinite;
 }
 #color1:checked {
     background-color: #FF0000;
-    box-shadow: 0 0 6em lighten(#FF0000,10%);
+    box-shadow: 0 0 6em #FF0000;
 }
 
 #color2 {
-    background-color: darken(#FFFF00,15%) !important;
+    background-color: #FFFF00 !important;
 }
 #color2:hover {
     animation: blink2 1s step-end infinite;
 }
 #color2:checked {
     background-color: #FFFF00;
-    box-shadow: 0 0 6em lighten(#FFFF00,10%);
+    box-shadow: 0 0 6em #FFFF00;
 }
 
 #color3 {
-    background-color: darken(#00FF00,15%) !important;
+    background-color: #00FF00 !important;
 }
 #color3:hover {
     animation: blink3 1s step-end infinite;
 }
 #color3:checked {
     background-color: #00FF00;
-    box-shadow: 0 0 6em lighten(#00FF00,10%);
+    box-shadow: 0 0 6em #00FF00;
 }
 
 * {
