@@ -5,7 +5,7 @@ $(document).ready(function () {
         if (currentNumber > 0) {
             $('#counter-platform').html(currentNumber - 1);
         }
-    }, 1000);
+    }, 1500);
 
     $('.red').click(function() {
         if ($(this).hasClass('active')) {
