@@ -49,7 +49,6 @@
     width: 80px;
     height: 11px;
     font-size: 100px;
-    line-height: 10rem;
 }
 .rowbar1 {
     top: 80%;
@@ -63,14 +62,14 @@
 .colbar {
     position: absolute;
     display: block;
-    left: 57%;
+    left: 63%;
     margin-left: -60px;
     margin-top: -160px;
     background-color: #333;
-    width: 80px;
-    height: 11px;
+    width: 88px;
+    height: 300px;
     font-size: 100px;
-    line-height: 10rem;
+    top: 107%;
 }
 
 #color1 {
