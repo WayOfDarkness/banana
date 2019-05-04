@@ -8,7 +8,7 @@ $(document).ready(function () {
     }, 1000);
 
     $('.red').click(function() {
-        if (currentNumber == 78 || currentNumber == 73 || currentNumber == 70 || currentNumber == 50 || currentNumber == 35 || currentNumber == 17) {
+        if (currentNumber == 79 || currentNumber == 74 || currentNumber == 71 || currentNumber == 51 || currentNumber == 36 || currentNumber == 18) {
             $('#counter-platform').html(99);
         }
     })
