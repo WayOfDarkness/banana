@@ -18,7 +18,7 @@
     {% set nextLink = getCustomField(gallery.id, 'gallery', 'next-riddle') %}
     {% set theme = getCustomField(gallery.id, 'gallery', 'theme') %}
 
-    {% if customer.logged_in and gallery.role != 0 %}
+    {% if customer.logged_in %}
         <section class="circleBase type3 nav-primary">
             <div class="innerCircle">
                 {% if Gallery(getCustomField(gallery.id, 'gallery', 'current-riddle')).role == 1 %}
@@ -53,10 +53,10 @@
             <input type="hidden" class="set-role-to-2" value="{{getCustomField(gallery.id, 'gallery', 'set-role-to-2')}}"/>
         {% endif %}
 
-    {% elseif customer.logged_in and gallery.role == 0 %}
+    {# {% elseif customer.logged_in and gallery.role == 0 %}
         <div class="need-to-login">
             Bạn không đủ điều kiện để truy cập trang này!
-        </div>
+        </div> #}
     {% else %}
         <div class="need-to-login">
             Bạn cần

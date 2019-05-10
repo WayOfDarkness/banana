@@ -27,13 +27,13 @@
 {% endblock %}
 
 {% block content %}
-    {% if customer.logged_in and gallery.role != 0 %}
+    {% if customer.logged_in %}
         <div class="hint-screen">Gợi ý:
             {{gallery.description | raw}}</div>
-    {% elseif customer.logged_in and gallery.role == 0 %}
+    {# {% elseif customer.logged_in and gallery.role == 0 %}
         <div class="need-to-login">
             Bạn không đủ điều kiện để truy cập trang này!
-        </div>
+        </div> #}
     {% else %}
         <div class="need-to-login">
             Bạn cần
