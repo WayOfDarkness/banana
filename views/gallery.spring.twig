@@ -55,6 +55,18 @@
             <map name="light">
                 <area coords="97,195,6" href="https://choigiday.com/blue-pill-turn-on-the-light" shape="circle">
             </map>
+        {% elseif gallery.handle == 'blue-pill-turn-on-the-light' %}
+            <img class="spring riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#light">
+            <map name="light">
+                <area coords="97,195,6" href="https://choigiday.com/blue-pill-holdem" shape="circle">
+                <area coords="105,195,6" href="https://choigiday.com/blue-pill-the-vision" shape="circle">
+            </map>
+        {% elseif gallery.handle == 'blue-pill-the-vision' %}
+            <img class="spring riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#light">
+            <map name="light">
+                <area coords="97,195,6" href="https://choigiday.com/blue-pill-holdem" shape="circle">
+                <area coords="105,195,6" href="https://choigiday.com/blue-pill-turn-on-the-light" shape="circle">
+            </map>
         {% elseif gallery.handle == 'blue-pill-one-hundred-switches' %}
             <div class="one-hundred-switches"></div>
         {% elseif gallery.handle == 'spring-2-play-with-me' %}
