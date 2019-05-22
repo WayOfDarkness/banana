@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block content %}
-    {% if customer.logged_in and gallery.role != 0 %}
+    {% if customer.logged_in %}
         {% if gallery.handle == 'spring-5-the-past-and-the-future' %}
             <img class="spring riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#pills">
             <map name="pills">
@@ -44,6 +44,12 @@
                 <area coords="463,375,545,585" href="https://choigiday.com/red-pill-puzzle-wall" shape="rectangle">
                 <area coords="503,325,30" href="https://choigiday.com/red-pill-do-you-remember" shape="circle">
             </map>
+        {% elseif gallery.handle == 'blue-pill-the-corridor' %}
+            <img class="spring riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#way">
+            <map name="way">
+                <area coords="319,146,355,169" title="Use what you have" shape="rectangle">
+                <area coords="650,145,678,168" title="Use what you don’t have" shape="rectangle">
+            </map>
         {% elseif gallery.handle == 'blue-pill-one-hundred-switches' %}
             <div class="one-hundred-switches"></div>
         {% elseif gallery.handle == 'spring-2-play-with-me' %}
@@ -54,13 +60,15 @@
         {% else %}
             <img class="spring riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
         {% endif %}
-    {% elseif customer.logged_in and gallery.role == 0 %}
+    {% elseif customer.logged_in %}
         <div class="need-to-login">
             Bạn không đủ điều kiện để truy cập trang này!
         </div>
     {% else %}
         <div class="need-to-login">
-            Bạn cần <a href="/">đăng nhập</a> trước khi tham gia Event!
+            Bạn cần
+            <a href="/">đăng nhập</a>
+            trước khi tham gia Event!
         </div>
     {% endif %}
 {% endblock content %}
