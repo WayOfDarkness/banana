@@ -50,6 +50,11 @@
                 <area coords="394,55,442,85" title="Use what you have" shape="rectangle">
                 <area coords="805,55,840,85" title="Use what you don’t have" shape="rectangle">
             </map>
+        {% elseif gallery.handle == 'blue-pill-holdem' %}
+            <img class="spring riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#light">
+            <map name="light">
+                <area coords="394,55,3" href="https://choigiday.com/blue-pill-turn-on-the-light" shape="circle">
+            </map>
         {% elseif gallery.handle == 'blue-pill-one-hundred-switches' %}
             <div class="one-hundred-switches"></div>
         {% elseif gallery.handle == 'spring-2-play-with-me' %}
