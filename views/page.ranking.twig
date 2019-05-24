@@ -28,6 +28,7 @@
                                         <td class="column2"><img src="${data.customer[i].avatar ? '/uploads/' + data.customer[i].avatar : '/themes/banana/img/icon/question-mark-face.jpg'}" alt="${data.customer[i].name}"></td>
                                         <td class="column3">${data.customer[i].name}</td>
                                         <td class="column4">${data.customer[i].point}</td>
+                                        <td class="column5">${data.customer[i].hint}</td>
                                     </tr>`;
                             counter++;
                         }
@@ -40,6 +41,7 @@
                                         <td class="column2"><img src="/themes/banana/img/icon/question-mark-face.jpg" alt=""></td>
                                         <td class="column3">-</td>
                                         <td class="column4">-</td>
+                                        <td class="column5">-</td>
                                     </tr>`;
                         }
                     }
@@ -65,6 +67,7 @@
                     <th class="column2">Avatar</th>
                     <th class="column3">Name</th>
                     <th class="column4">Score</th>
+                    <th class="column4">Hint</th>
                 </tr>
             </thead>
             <tbody></tbody>
