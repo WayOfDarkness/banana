@@ -10,10 +10,10 @@ $(document).ready(function () {
     $('.red').click(function() {
         if ($(this).hasClass('active')) {
             if (currentNumber == 79 || currentNumber == 74 || currentNumber == 71 || currentNumber == 51 || currentNumber == 36 || currentNumber == 18) {
-                $('#counter-platform').html(99);
+                $('#counter-platform').html(100);
             }
         } else {
-            $('#counter-platform').html(99);
+            $('#counter-platform').html(100);
             $('.yellow').removeClass('active');
             $('.green').removeClass('active');
             $(this).addClass('active');
@@ -26,10 +26,10 @@ $(document).ready(function () {
     $('.yellow').click(function() {
         if ($(this).hasClass('active')) {
             if (currentNumber == 17 || currentNumber == 11) {
-                $('#counter-platform').html(30);
+                $('#counter-platform').html(31);
             }
         } else {
-            $('#counter-platform').html(30);
+            $('#counter-platform').html(31);
             $('.red').removeClass('active');
             $('.green').removeClass('active');
             $(this).addClass('active');
@@ -42,10 +42,10 @@ $(document).ready(function () {
     $('.green').click(function() {
         if ($(this).hasClass('active')) {
             if (currentNumber == 45 || currentNumber == 36 || currentNumber == 29 || currentNumber == 21 || currentNumber == 1) {
-                $('#counter-platform').html(57);
+                $('#counter-platform').html(56);
             }
         } else {
-            $('#counter-platform').html(57);
+            $('#counter-platform').html(56);
             $('.yellow').removeClass('active');
             $('.red').removeClass('active');
             $(this).addClass('active');
