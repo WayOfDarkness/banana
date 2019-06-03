@@ -30,6 +30,8 @@
             <div id="counter-platform" class="red-number">100</div>
             <div class="colbar"></div>
             <img class="winter riddle-img" src="{{gallery.photos[1].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#locked">
+        {% elseif gallery.handle == 'winter-2-bang-hoa-dao' %}
+            <img class="winter riddle-img" src="{{theme.uri}}/img/four-seasons/riddles/winter-2.gif" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
         {% else %}
             <img class="winter riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
         {% endif %}
