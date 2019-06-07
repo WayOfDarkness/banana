@@ -179,4 +179,12 @@ body.show {
 	background: -webkit-linear-gradient(blue, white);
 	border: none;
 	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+.button-remaster:hover {
+	background-color: rgba(255, 255, 255, 0.05);
+	border-color: #fff;
+	box-shadow: 0 0 5px rgba(255, 245, 245, 0.8);
+	transition: background 0s;
 }
