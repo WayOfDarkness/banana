@@ -171,3 +171,7 @@ body.show {
 .hint-form-request label, .hint-form-request input, .hint-form-request textarea  {
 	margin-bottom: 10px;
 }
+
+.button-remaster {
+	background-image: linear-gradient(blue,black,blue);
+}
