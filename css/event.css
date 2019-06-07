@@ -168,11 +168,11 @@ body.show {
 	margin: auto;
 }
 
-.hint-form-request label, .hint-form-request input, .hint-form-request .current-status  {
+.hint-form-request label, .hint-form-request input, .hint-form-request textarea, .hint-form-request .current-status  {
 	margin-bottom: 10px;
 }
 
-.hint-form-request input {
+.hint-form-request input, .hint-form-request textarea {
 	border: 1px solid white;
 	color: black;
 }
