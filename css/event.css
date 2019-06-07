@@ -168,7 +168,7 @@ body.show {
 	margin: auto;
 }
 
-.hint-form-request label, .hint-form-request input, .hint-form-request textarea  {
+.hint-form-request label, .hint-form-request input, .hint-form-request textarea, .hint-form-request .current-status  {
 	margin-bottom: 10px;
 }
 
