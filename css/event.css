@@ -173,5 +173,10 @@ body.show {
 }
 
 .button-remaster {
-	background-image: linear-gradient(blue,black,blue);
+	height: 40px;
+	width: 80px;
+	text-transform: uppercase;
+	background: -webkit-linear-gradient(blue, white);
+	border: none;
+	margin-bottom: 20px;
 }
