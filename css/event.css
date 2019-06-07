@@ -162,3 +162,12 @@ body.show {
 	padding: 10px;
 	font-family: 'Patrick Hand', cursive !important;
 }
+
+.hint-form-request {
+	width: 500px;
+	margin: auto;
+}
+
+.hint-form-request label, .hint-form-request input, .hint-form-request textarea  {
+	margin-bottom: 10px;
+}
