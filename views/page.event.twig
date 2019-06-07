@@ -77,17 +77,15 @@
                     <span class="close-btn">&times;</span>
                     <div>Hệ thống gợi ý</div>
                 </div>
-                <div class="modal-body">
-                    <div>{{getCustomField(page.id, 'page', 'goi-y') | raw}}<div>
-                    <p>Bạn đang có {{customer.hint}} chìa khóa</p>
-                    <form>
-                        <label>Level</label>
-                        <input name="level" />
-                        <label>Description</label>
-                        <textarea name="description"></textarea>
-                        <button type="submit">Sử dụng<button>
-                    </form>
-                </div>
+                <div class="modal-body">{{getCustomField(page.id, 'page', 'goi-y') | raw}}</div>
+                <p>Bạn đang có {{customer.hint}} chìa khóa</p>
+                <form>
+                    <label>Level</label>
+                    <input name="level" />
+                    <label>Description</label>
+                    <textarea name="description"></textarea>
+                    <button type="submit">Sử dụng<button>
+                </form>
                 <div class="modal-footerr"></div>
             </div>
         </div>
