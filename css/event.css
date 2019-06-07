@@ -178,7 +178,7 @@ body.show {
 }
 
 .hint-form-request input:focus, .hint-form-request textarea:focus {
-	border: 1px solid -webkit-linear-gradient(blue, white);
+	border: 1px solid blue !important;
 }
 
 .button-remaster {
