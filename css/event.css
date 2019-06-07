@@ -172,6 +172,14 @@ body.show {
 	margin-bottom: 10px;
 }
 
+.hint-form-request input, .hint-form-request textarea {
+	border: 1px solid white;
+}
+
+.hint-form-request input:focus, .hint-form-request textarea:focus {
+	border: 1px solid -webkit-linear-gradient(blue, white);
+}
+
 .button-remaster {
 	height: 40px;
 	width: 80px;
