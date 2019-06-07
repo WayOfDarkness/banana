@@ -142,3 +142,9 @@ $(document).on('change', '#upload-image-avatar', function () {
     }
     $(this).val("");
 });
+
+$('.user-li').click(function() {
+    var s = $(this);
+    $('.user-li').removeClass('active');
+    s.addClass('active');
+})
