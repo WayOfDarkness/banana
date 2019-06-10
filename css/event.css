@@ -252,16 +252,11 @@ body.show {
     opacity: 0;
   }
   60% {
-    opacity: 0.2;
-  }
-  80% {
-    height: 40%;
-    width: 40%;
     opacity: 0.3;
   }
   100% {
-    height: 20%;
-    width: 20%;
-    opacity: 0.2;
+    height: 0%;
+    width: 0%;
+    opacity: 0.4;
   }
 }
