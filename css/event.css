@@ -164,7 +164,6 @@ body.show {
 }
 
 .hint-form-request {
-	width: 600px;
 	margin: auto;
 }
 
@@ -185,7 +184,6 @@ body.show {
 
 .button-remaster {
 	height: 40px;
-	width: 80px;
 	text-transform: uppercase;
 	background: -webkit-linear-gradient(blue, white);
 	border: none;
