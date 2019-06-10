@@ -15,7 +15,7 @@ $(document).ready(function () {
 
 function makeid(length) {
 	var result = '';
-	var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+	var characters = '0123456789';
 	var charactersLength = characters.length;
 	for (var i = 0; i < length; i++) {
 		result += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -31,7 +31,7 @@ function postReview() {
 	data.post_id = makeid(20);
 	data.title = $('input[name="level"]').val();
 	data.content = $('textarea[name="description"]').val();
-console.log(data);
+
 	if (!data.title) {
 		$('input[name="level"]').addClass('has-error');
 		toast('Vui lòng nhập tiêu đề mã', 3000, 'red');
