@@ -62,19 +62,19 @@ body {
   margin: 5px 0 !important;
 }
 
-.button:before {
+.button:hover:before {
   animation: effect-background 2s infinite;
 }
 
-.button:after {
-  animation: effect-background 2s infinite 0.7s;
+.button:hover:after {
+  animation: effect-background 2s infinite 1s;
 }
 
 .button:before,
 .button:after {
   content: '';
   position: absolute;
-  background: white;
+  background: rgba(255, 255, 255, 0.51);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -250,13 +250,20 @@ body.show {
     width: 100%;
     height: 100%;
     opacity: 0;
+    border-radius: 0;
   }
   60% {
     opacity: 0.3;
   }
-  100% {
-    height: 0%;
-    width: 0%;
+  90% {
+    border-radius: 50%;
+    height: 20%;
+    width: 20%;
     opacity: 0.4;
+    box-shadow: 0 0 4px white;
+  }
+  100% {
+    box-shadow: 0 0 30px white;
+    opacity: 0;
   }
 }
