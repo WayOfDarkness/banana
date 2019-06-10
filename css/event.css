@@ -63,15 +63,16 @@ body {
 }
 
 .button:hover:before {
-  animation: effect-background 2s infinite, effect-rotate 0.5s;
+  animation: effect-background 2s infinite, effect-rotate 0.5s infinite;
 }
 
 .button:hover:after {
-  animation: effect-background 2s infinite 1s, effect-rotate 0.5s;
+  animation: effect-background 2s infinite 1s, effect-rotate 0.5s infinite;
 }
 
 .button:before,
 .button:after {
+  transform-origin: center center;
   content: '';
   position: absolute;
   background: rgba(255, 255, 255, 0.51);
