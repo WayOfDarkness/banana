@@ -161,7 +161,12 @@ $('select[data-target]').change(function () {
 
 $(document).ready(function() {
     StoreAPI.customerReview(function(result){
-        console.log(result);
-        $('.aaaaa').html(result);
+        var hintList = '';
+        if (!result.code) {
+            for (var i = 0; i<result.reviews.length; i++) {
+                hintList += `<option value="tab-${i}">${result.reviews[i].title}</option>`;
+            }
+        }
+        $('select').html(hintList);
     })
 })
