@@ -48,12 +48,11 @@ $('.hint-form-request').submit(function () {
 	}
 
 	StoreAPI.addReview(data, function (result) {
-		console.log(result);
 		if (!result.code) {
 			toast('Gửi câu hỏi thành công!', 3000, 'blue');
 			setTimeout(function () {
 				location.reload();
-			}, 1000);
+			}, 5000);
 		} else {
 			toast('Đã xảy ra lỗi!', 3000, 'red');
 		}
