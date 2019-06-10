@@ -143,14 +143,11 @@ $(document).on('change', '#upload-image-avatar', function () {
     $(this).val("");
 });
 
-$('.user-li').click(function() {
+$('.user-li').click(function () {
     var s = $(this);
     $('.user-li').removeClass('active');
     s.addClass('active');
 })
-
-$('.select-multi-tab > *:not(first-child)').hide();
-$('.select-multi-tab > *:first-child').show();
 
 $('select[data-target]').change(function () {
     let target = $(this).data('target');
@@ -159,17 +156,19 @@ $('select[data-target]').change(function () {
     $(target + ' *[data-value=' + value + ']').show(300);
 })
 
-$(document).ready(function() {
-    StoreAPI.customerReview(function(result){
+$(document).ready(function () {
+    StoreAPI.customerReview(function (result) {
         var hintList = '';
         var questionList = '';
         if (!result.code) {
-            for (var i = 0; i<result.reviews.length; i++) {
+            for (var i = 0; i < result.reviews.length; i++) {
                 hintList += `<option value="tab-${i}">${result.reviews[i].title}</option>`;
                 questionList += `<div data-value="tab-${i}">${result.reviews[i].content}</div>`;
             }
         }
         $('select').html(hintList);
         $('.select-multi-tab').html(questionList);
+        $('.select-multi-tab > *:not(first-child)').hide();
+        $('.select-multi-tab > *:first-child').show();
     })
 })
