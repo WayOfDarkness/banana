@@ -4,9 +4,15 @@
     <title>{{page.title}}</title>
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
     <link rel="stylesheet" href="{{theme.uri}}/css/event.css">
+    <style>
+        .has-error {
+            border-color: red;
+        }
+    </style>
 {% endblock %}
 
 {% block post_include %}
+    <script src="{{theme.uri}}/js/script.js"></script>
     <script src="{{theme.uri}}/js/event.js"></script>
 {% endblock %}
 
@@ -81,9 +87,9 @@
                 <div class="hint-form-request">
                     <div class="current-status">Bạn đang có {{customer.hint}} chìa khóa</div>
                     <div>
-                        <label>Tiêu đề</label>
+                        <label>Tiêu đề mã</label>
                         <input name="level" placeholder="Tiêu đề mã ..."/>
-                        <label>Mô tả</label>
+                        <label>Mô tả quá trình giải</label>
                         <textarea rows="8" name="description" placeholder="Mô tả quá trình giải ..."></textarea>
                         <button class="button-remaster">Sử dụng</button>
                     </div>
