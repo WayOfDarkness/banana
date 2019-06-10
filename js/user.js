@@ -148,3 +148,13 @@ $('.user-li').click(function() {
     $('.user-li').removeClass('active');
     s.addClass('active');
 })
+
+$('.select-multi-tab > *:not(first-child)').hide();
+$('.select-multi-tab > *:first-child').show();
+
+$('select[data-target]').change(function () {
+    let target = $(this).data('target');
+    let value = this.value;
+    $(target + ' > *').hide(100);
+    $(target + ' *[data-value=' + value + ']').show(300);
+})
