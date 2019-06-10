@@ -39,6 +39,7 @@ function postReview() {
 	}
 
 	StoreAPI.addReview(data, function (result) {
+		console.log(result);
 		if (!result.code) {
 			toast('Gửi câu hỏi thành công!', 3000, 'blue');
 			setTimeout(function () {
