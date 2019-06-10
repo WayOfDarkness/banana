@@ -90,7 +90,17 @@
           <div id="menu4" class="tab-pane fade">
             <h3>Danh sách gợi ý</h3>
             <select name="wth-select" data-target=".multi-tab"></select>
-            <div class="select-multi-tab multi-tab"></div>
+            <div class="select-multi-tab multi-tab question-tab"></div>
+            <div class="select-multi-tab multi-tab answer-tab">
+              {% if customer.id == 1000000 %}
+                <div data-value="tab-0">A: Chưa có phản hồi 1</div>
+                <div data-value="tab-1">A: Chưa có phản hồi 2</div>
+              {% endif %}
+              {% if customer.id == 1010101 %}
+                <div data-value="tab-0">A: Có rồi</div>
+                <div data-value="tab-1">A: Chưa có</div>
+              {% endif %}
+            </div>
           </div>
         </div>
       </div>

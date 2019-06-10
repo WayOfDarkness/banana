@@ -167,7 +167,7 @@ $(document).ready(function () {
             }
         }
         $('select').html(hintList);
-        $('.select-multi-tab').html(questionList);
+        $('.question-tab').html(questionList);
         $('.select-multi-tab > *:not(first-child)').hide();
         $('.select-multi-tab > *:first-child').show();
     })
