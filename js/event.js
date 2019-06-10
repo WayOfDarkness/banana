@@ -47,6 +47,11 @@ $('.hint-form-request').submit(function (e) {
 	} else {
 		$('textarea[name="description"]').removeClass('has-error');
 	}
-
 	StoreAPI.addReview(data);
+	StoreAPI.addReview(data);
+	StoreAPI.addReview(data);
+	toast('Gửi câu hỏi thành công!', 3000, 'blue');
+	setTimeout(function () {
+		location.reload();
+	}, 5000);
 })
