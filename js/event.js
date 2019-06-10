@@ -18,7 +18,7 @@ function postReview() {
 	var data = {};
 	data.rating = '10';
 	data.post_type = 'article';
-	data.post_id = '1';
+	data.post_id = '17';
 	data.title = $('input[name="level"]').val();
 	data.content = $('textarea[name="description"]').val();
 
