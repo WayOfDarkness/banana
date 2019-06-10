@@ -23,7 +23,8 @@ function makeid(length) {
 	return result;
 }
 
-$('.hint-form-request').submit(function () {
+$('.hint-form-request').submit(function (e) {
+	e.preventDefault();
 	var data = {};
 	data.rating = '10';
 	data.post_type = 'article';
