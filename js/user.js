@@ -158,3 +158,10 @@ $('select[data-target]').change(function () {
     $(target + ' > *').hide(100);
     $(target + ' *[data-value=' + value + ']').show(300);
 })
+
+$(document).ready(function() {
+    StoreAPI.customerReview(function(result){
+        console.log(result);
+        $('.aaaaa').html(result);
+    })
+})
