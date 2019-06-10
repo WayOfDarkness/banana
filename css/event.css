@@ -1,95 +1,124 @@
 body {
-	background-color: #000000;
-	color: #FFFFFF;
-	text-align: center;
-	margin: 0;
+  background-color: #000000;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0;
 }
 
 .page-article .layout-container {
-	display: flex !important;
+  display: flex !important;
 }
 
 .menu {
-	margin-top: 100px;
-	margin-bottom: 50px;
-	box-sizing: border-box;
-	font-size: 24px;
-	padding: 10px;
-	font-family: 'Patrick Hand', cursive !important;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  font-size: 24px;
+  padding: 10px;
+  font-family: 'Patrick Hand', cursive !important;
 }
 
 .introduction-title {
-	font-size: 2.5rem;
-	background: -webkit-linear-gradient(blue, white);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  background: -webkit-linear-gradient(blue, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .introduction-title, .introduction-content {
-	color: white;
-	padding: 0 5%;
-	margin-bottom: 1.7rem;
+  color: white;
+  padding: 0 5%;
+  margin-bottom: 1.7rem;
 }
 
 .introduction-content p {
-	font-size: 1.2rem;
-	margin-bottom: 0;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .button {
-	border: 2px solid #2e2e2e;
-	cursor: pointer;
-	letter-spacing: 0.2125rem;
-	overflow: hidden;
-	padding: 10px 15px;
-	position: relative;
-	text-align: center;
-	text-transform: uppercase;
-	transition: 
-		background 5s cubic-bezier(0.19, 1, 0.22, 1),
-		border 1s cubic-bezier(0.19, 1, 0.22, 1),
-		color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-	margin: 10px !important;
-	background: -webkit-linear-gradient(blue, white);
-	color: black;
-	text-decoration: none;
-	font-size: 20px;
+  cursor: pointer;
+  border: 1px solid white;
+  letter-spacing: 0.2125rem;
+  width: 25%;
+  overflow: hidden;
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 5s cubic-bezier(0.19, 1, 0.22, 1),
+  border 1s cubic-bezier(0.19, 1, 0.22, 1),
+  color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  background: -webkit-linear-gradient(blue, white);
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 5px 0 !important;
+}
+
+@media (max-width: 1150px) {
+  .button {
+    width: 33%;
+  }
+}
+
+@media (max-width: 992px) {
+  .button {
+    width: 50%;
+  }
+}
+
+@media (max-width: 650px) {
+  .button {
+    width: 100% !important;
+    background-color: rgba(255, 255, 255, 0.05)!important;
+    border-color: #fff!important;
+    box-shadow: 0 0 5px rgba(255, 245, 245, 0.8)!important;
+    transition: background 0s!important;
+    color: red !important;
+  }
 }
 
 .button .mask {
-	background-color: #fff;
-	background-color: rgba(255, 255, 255, 0.5);
-	height: 100px;
-	position: absolute;
-	transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
-	transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
-	width: 200px;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 100px;
+  position: absolute;
+  transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
+  transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+  width: 200px;
 }
 
 .button .shift {
-	display: inline-block;
-	transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+  display: inline-block;
+  transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .button:hover {
-	background-color: rgba(255, 255, 255, 0.05);
-	border-color: #fff;
-	box-shadow: 0 0 5px rgba(255, 245, 245, 0.8);
-	transition: background 0s;
-	color: red !important;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: #fff;
+  box-shadow: 0 0 5px rgba(255, 245, 245, 0.8);
+  transition: background 0s;
+  color: red !important;
 }
 
 .button:hover .mask {
-	background-color: #fff;
-	transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
+  background-color: #fff;
+  transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
 }
 
 .button:hover .shift {
-	transform: translateX(5px);
+  transform: translateX(5px);
 }
 
 body.show {
-	background-color: #282828;
+  background-color: #282828;
 }
 
 .modal {
@@ -102,18 +131,18 @@ body.show {
   margin-left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   opacity: 1;
   font-family: 'Patrick Hand', cursive !important;
 }
 
 .modal-content {
-	margin: 100px auto;
-	width: 80%;
-	background-color: black;
-	border: 3px solid white;
-	border-radius: 20px;
-	color: white;
+  margin: 100px auto;
+  width: 80%;
+  background-color: black;
+  border: 3px solid white;
+  border-radius: 20px;
+  color: white;
 }
 
 .close-btn {
@@ -121,139 +150,145 @@ body.show {
   float: right;
   font-size: 30px;
   font-weight: bold;
-	margin-right: 10px;
-	cursor: pointer;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 .modal-header div {
-	margin: 5px !important;
-	font-size: 30px;
+  margin: 5px !important;
+  font-size: 30px;
 }
 
 .modal-header {
-	background-image: linear-gradient(blue, black);
-	color: white;
-	text-align: center;
-	text-transform: uppercase;
-	border-radius: 20px 20px 0px 0px;
+  background-image: linear-gradient(blue, black);
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 20px 20px 0px 0px;
 }
 
 .modal-body {
-	font-size: 20px;
+  font-size: 20px;
 }
 
 .modal-body p {
-	margin-bottom: 0;
-	text-align: justify;
-	padding: 15px 30px !important;
+  margin-bottom: 0;
+  text-align: justify;
+  padding: 15px 30px !important;
 }
 
 .modal-footerr {
-	background-image: linear-gradient(blue,black,blue);
-	border-radius: 0px 0px 20px 20px;
-	height: 20px;
+  background-image: linear-gradient(blue, black, blue);
+  border-radius: 0px 0px 20px 20px;
+  height: 20px;
 }
 
 .need-to-login {
-	margin-top: auto;
-	margin-bottom: auto;
-	box-sizing: border-box;
-	font-size: 24px;
-	padding: 10px;
-	font-family: 'Patrick Hand', cursive !important;
+  margin-top: auto;
+  margin-bottom: auto;
+  box-sizing: border-box;
+  font-size: 24px;
+  padding: 10px;
+  font-family: 'Patrick Hand', cursive !important;
 }
 
 .hint-form-request {
-	margin: auto;
+  margin: auto;
 }
 
-.hint-form-request label, .hint-form-request input, .hint-form-request textarea, .hint-form-request .current-status  {
-	margin-bottom: 10px;
+.hint-form-request label, .hint-form-request input, .hint-form-request textarea, .hint-form-request .current-status {
+  margin-bottom: 10px;
 }
 
 .hint-form-request input, .hint-form-request textarea {
-	border: 1px solid white;
-	color: black;
+  border: 1px solid white;
+  color: black;
 }
 
 .hint-form-request input:focus, .hint-form-request textarea:focus {
-	border: 1px solid blue !important;
-	-webkit-transition: none !important;
-	transition: none !important;
+  border: 1px solid blue !important;
+  -webkit-transition: none !important;
+  transition: none !important;
 }
 
 .button-remaster {
-	height: 40px;
-	text-transform: uppercase;
-	background: -webkit-linear-gradient(blue, white);
-	border: none;
-	margin-bottom: 20px;
-	margin-top: 10px;
+  height: 40px;
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(blue, white);
+  border: none;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .button-remaster:hover {
-	background-color: rgba(255, 255, 255, 0.05);
-	border-color: #fff;
-	box-shadow: 0 0 5px rgba(255, 245, 245, 0.8);
-	transition: background 0s;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: #fff;
+  box-shadow: 0 0 5px rgba(255, 245, 245, 0.8);
+  transition: background 0s;
 }
 
 
 /*effect hover btn*/
 
 .button14 {
-	color: rgba(255,255,255,1);
-	-webkit-transition: all 0.5s;
-	-moz-transition: all 0.5s;
-	-o-transition: all 0.5s;
-	transition: all 0.5s;
-	position: relative;
+  color: rgba(255, 255, 255, 1);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  position: relative;
 }
-.button14 a{
-	color: rgba(51,51,51,1);
-	text-decoration: none;
-	display: block;
+
+.button14 a {
+  color: rgba(51, 51, 51, 1);
+  text-decoration: none;
+  display: block;
 }
-.button14::before{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	background-color: rgba(255,255,255,0.25);
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
+
+.button14::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.25);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 
 }
-.button14:hover::before{
-	opacity: 0 ;
-	-webkit-transform: scale(0.5,0.5);
-	transform: scale(0.5,0.5);
+
+.button14:hover::before {
+  opacity: 0;
+  -webkit-transform: scale(0.5, 0.5);
+  transform: scale(0.5, 0.5);
 }
-.button14::after{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	opacity: 0;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
-	border: 1px solid rgba(255,255,255,0.5);
-	-webkit-transform: scale(1.2,1.2);
-	transform: scale(1.2,1.2);
+
+.button14::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
 }
-.button14:hover::after{
-	opacity: 1;
-	-webkit-transform: scale(1,1);
-	transform: scale(1,1);
+
+.button14:hover::after {
+  opacity: 1;
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
 }
+
 /*end effect hover button */
