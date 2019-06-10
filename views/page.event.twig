@@ -82,17 +82,19 @@
                     <span class="close-btn">&times;</span>
                     <div>Hệ thống gợi ý</div>
                 </div>
-                <div class="modal-body">{{getCustomField(page.id, 'page', 'goi-y') | raw}}</div>
-                <form class="hint-form-request">
-                    <div class="current-status">Bạn đang có {{customer.hint}} chìa khóa</div>
-                    <div>
-                        <label>Tiêu đề mã</label>
-                        <input name="level" placeholder="Tiêu đề mã ..."/>
-                        <label>Mô tả quá trình giải</label>
-                        <textarea rows="8" name="description" placeholder="Mô tả quá trình giải ..."></textarea>
-                        <button class="button-remaster" type="submit">Sử dụng</button>
-                    </div>
-                </form>
+                <div class="modal-body">
+                    {{getCustomField(page.id, 'page', 'goi-y') | raw}}
+                    <form class="hint-form-request">
+                        <div class="current-status">Bạn đang có {{customer.hint}} chìa khóa</div>
+                        <div>
+                            <label>Tiêu đề mã</label>
+                            <input name="level" placeholder="Tiêu đề mã ..."/>
+                            <label>Mô tả quá trình giải</label>
+                            <textarea rows="8" name="description" placeholder="Mô tả quá trình giải ..."></textarea>
+                            <button class="button-remaster" type="submit">Sử dụng</button>
+                        </div>
+                    </form>
+                </div>
                 <div class="modal-footerr"></div>
             </div>
         </div>
