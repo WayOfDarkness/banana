@@ -256,13 +256,15 @@ body.show {
     opacity: 0.3;
   }
   90% {
-    border-radius: 50%;
     height: 20%;
     width: 20%;
     opacity: 0.4;
     box-shadow: 0 0 4px white;
   }
   100% {
+    border-radius: 10%;
+    width: 80%;
+    height: 80%;
     box-shadow: 0 0 30px white;
     opacity: 0;
   }
