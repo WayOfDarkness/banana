@@ -48,14 +48,5 @@ $('.hint-form-request').submit(function (e) {
 		$('textarea[name="description"]').removeClass('has-error');
 	}
 
-	StoreAPI.addReview(data, function (result) {
-		if (!result.code) {
-			toast('Gửi câu hỏi thành công!', 3000, 'blue');
-			setTimeout(function () {
-				location.reload();
-			}, 5000);
-		} else {
-			toast('Đã xảy ra lỗi!', 3000, 'red');
-		}
-	})
+	StoreAPI.addReview(data);
 })
