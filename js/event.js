@@ -24,11 +24,10 @@ function makeid(length) {
 }
 
 function postReview() {
-
 	var data = {};
 	data.rating = '10';
 	data.post_type = 'article';
-	data.post_id = makeid(20);
+	data.post_id = '17';
 	data.title = $('input[name="level"]').val();
 	data.content = $('textarea[name="description"]').val();
 
@@ -48,7 +47,15 @@ function postReview() {
 		$('textarea[name="description"]').removeClass('has-error');
 	}
 
-	StoreAPI.addReview(data, function () {
-		toast('Gửi câu hỏi thành công!', 3000, 'blue');
+	StoreAPI.addReview(data, function (result) {
+		console.log(result);
+		if (!result.code) {
+			toast('Gửi câu hỏi thành công!', 3000, 'blue');
+			setTimeout(function () {
+				location.reload();
+			}, 1000);
+		} else {
+			toast('Đã xảy ra lỗi!', 3000, 'red');
+		}
 	})
 }
