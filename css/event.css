@@ -46,7 +46,7 @@ body {
   cursor: pointer;
   border: 1px solid white;
   letter-spacing: 0.2125rem;
-  width: 25%;
+  width: 23%;
   overflow: hidden;
   padding: 10px 15px;
   position: relative;
@@ -62,25 +62,40 @@ body {
   margin: 5px 0 !important;
 }
 
+.button:before {
+  animation: effect-background 2s infinite;
+}
+
+.button:after {
+  animation: effect-background 2s infinite 0.7s;
+}
+
+.button:before,
+.button:after {
+  content: '';
+  position: absolute;
+  background: white;
+}
+
 @media (max-width: 1150px) {
   .button {
-    width: 33%;
+    width: 30%;
   }
 }
 
 @media (max-width: 992px) {
   .button {
-    width: 50%;
+    width: 45%;
   }
 }
 
 @media (max-width: 650px) {
   .button {
     width: 100% !important;
-    background-color: rgba(255, 255, 255, 0.05)!important;
-    border-color: #fff!important;
-    box-shadow: 0 0 5px rgba(255, 245, 245, 0.8)!important;
-    transition: background 0s!important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: #fff !important;
+    box-shadow: 0 0 5px rgba(255, 245, 245, 0.8) !important;
+    transition: background 0s !important;
     color: red !important;
   }
 }
@@ -227,68 +242,23 @@ body.show {
   transition: background 0s;
 }
 
-
-/*effect hover btn*/
-
-.button14 {
-  color: rgba(255, 255, 255, 1);
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-  position: relative;
+@keyframes effect-background {
+  0% {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.2;
+  }
+  80% {
+    height: 40%;
+    width: 40%;
+    opacity: 0.3;
+  }
+  100% {
+    height: 20%;
+    width: 20%;
+    opacity: 0.2;
+  }
 }
-
-.button14 a {
-  color: rgba(51, 51, 51, 1);
-  text-decoration: none;
-  display: block;
-}
-
-.button14::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background-color: rgba(255, 255, 255, 0.25);
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-
-}
-
-.button14:hover::before {
-  opacity: 0;
-  -webkit-transform: scale(0.5, 0.5);
-  transform: scale(0.5, 0.5);
-}
-
-.button14::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: 0;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  -webkit-transform: scale(1.2, 1.2);
-  transform: scale(1.2, 1.2);
-}
-
-.button14:hover::after {
-  opacity: 1;
-  -webkit-transform: scale(1, 1);
-  transform: scale(1, 1);
-}
-
-/*end effect hover button */
