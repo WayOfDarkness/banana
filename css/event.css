@@ -108,7 +108,7 @@ body.show {
 }
 
 .modal-content {
-	margin: 10% auto;
+	margin: auto;
 	width: 80%;
 	background-color: black;
 	border: 3px solid white;

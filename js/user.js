@@ -166,7 +166,6 @@ $(document).ready(function () {
                 questionList += `<div data-value="tab-${i}">Q: ${result.reviews[i].content}</div>`;
             }
         }
-        console.log(result.reviews);
         $('select').html(hintList);
         $('.question-tab').html(questionList);
         $('.select-multi-tab > *:not(first-child)').hide();
