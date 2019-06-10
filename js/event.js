@@ -31,7 +31,7 @@ function postReview() {
 	data.post_id = makeid(20);
 	data.title = $('input[name="level"]').val();
 	data.content = $('textarea[name="description"]').val();
-
+console.log(data);
 	if (!data.title) {
 		$('input[name="level"]').addClass('has-error');
 		toast('Vui lòng nhập tiêu đề mã', 3000, 'red');
