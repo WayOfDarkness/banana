@@ -23,7 +23,7 @@ function makeid(length) {
 	return result;
 }
 
-function postReview() {
+$('.hint-form-request').submit(function () {
 	var data = {};
 	data.rating = '10';
 	data.post_type = 'article';
@@ -58,4 +58,4 @@ function postReview() {
 			toast('Đã xảy ra lỗi!', 3000, 'red');
 		}
 	})
-}
+})
