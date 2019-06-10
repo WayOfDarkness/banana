@@ -251,10 +251,11 @@ body.show {
     height: 100%;
     opacity: 0;
     border-radius: 0;
+    box-shadow: 0 0 0px white;
   }
   90% {
-    height: 5%;
-    width: 5%;
+    height: 6px;
+    width: 6px;
     opacity: 0.4;
     box-shadow: 0 0 4px white;
     border-radius: 5%;
