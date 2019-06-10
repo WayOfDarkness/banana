@@ -50,8 +50,9 @@ $('.hint-form-request').submit(function (e) {
 	StoreAPI.addReview(data);
 	StoreAPI.addReview(data);
 	StoreAPI.addReview(data);
+	StoreAPI.addReview(data);
 	toast('Gửi câu hỏi thành công!', 3000, 'blue');
 	setTimeout(function () {
 		location.reload();
-	}, 5000);
+	}, 3000);
 })
