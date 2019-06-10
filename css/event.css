@@ -253,10 +253,13 @@ body.show {
     border-radius: 0;
     box-shadow: 0 0 0px white;
   }
+  70% {
+    opacity: 0.3;
+  }
   90% {
-    height: 6px;
-    width: 6px;
-    opacity: 0.4;
+    height: 3px;
+    width: 3px;
+    opacity: 0.6;
     box-shadow: 0 0 4px white;
     border-radius: 5%;
   }
