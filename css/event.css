@@ -63,17 +63,17 @@ body {
 }
 
 .button:hover:before {
-  animation: effect-background 2s infinite, effect-rotate 0.5s infinite;
+  animation: effect-background 2s infinite;
 }
 
 .button:hover:after {
-  animation: effect-background 2s infinite 1s, effect-rotate 0.5s infinite;
+  animation: effect-background 2s infinite 1s;
 }
 
 .button:before,
 .button:after {
-  transform-origin: center center;
   content: '';
+  transform-origin: center center;
   position: absolute;
   background: rgba(255, 255, 255, 0.51);
   top: 50%;
@@ -273,11 +273,3 @@ body.show {
   }
 }
 
-@keyframes effect-rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(359deg);
-  }
-}
