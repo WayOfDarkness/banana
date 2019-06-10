@@ -253,8 +253,8 @@ body.show {
     border-radius: 0;
   }
   90% {
-    height: 20%;
-    width: 20%;
+    height: 5%;
+    width: 5%;
     opacity: 0.4;
     box-shadow: 0 0 4px white;
     border-radius: 5%;
