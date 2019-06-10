@@ -163,7 +163,7 @@ $(document).ready(function () {
         if (!result.code) {
             for (var i = 0; i < result.reviews.length; i++) {
                 hintList += `<option value="tab-${i}">${result.reviews[i].title}</option>`;
-                questionList += `<div data-value="tab-${i}">${result.reviews[i].content}</div>`;
+                questionList += `<div data-value="tab-${i}">Q: ${result.reviews[i].content}</div>`;
             }
         }
         $('select').html(hintList);
