@@ -1,117 +1,124 @@
 {% extends "layout.twig" %}
 
 {% block pre_include %}
-    <title>{{page.title}}</title>
-    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
-    <link rel="stylesheet" href="{{theme.uri}}/css/event.css">
-    <style>
-        .has-error {
-            border: 2px solid red !important;
-        }
-    </style>
+  <title>{{ page.title }}</title>
+  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+  <link rel="stylesheet" href="{{ theme.uri }}/css/event.css">
+  <style>
+    .has-error {
+      border: 2px solid red !important;
+    }
+  </style>
 {% endblock %}
 
 {% block post_include %}
-    <script src="{{theme.uri}}/js/event.js"></script>
+  <script src="{{ theme.uri }}/js/event.js"></script>
 {% endblock %}
 
 {% block content %}
-    {% if customer.logged_in %}
-        <div class="menu">
-            <div class="introduction-title">{{page.description}}</div>
-            <div class="introduction-content">{{page.content | raw}}</div>
-            <div class="button-group">
-                <div class="button" id="riddles-btn">
-                    Mật mã
-                    <span class="shift">››</span>
-                    <div class="mask"></div>
-                </div>
-                <div class="button" id="point-btn">
-                    Điểm
-                    <span class="shift">››</span>
-                    <div class="mask"></div>
-                </div>
-                <div class="button" id="hint-btn">
-                    Gợi ý
-                    <span class="shift">››</span>
-                    <div class="mask"></div>
-                </div>
-                <div class="button" id="ranking-btn">
-                    Bảng xếp hạng
-                    <span class="shift">››</span>
-                    <div class="mask"></div>
-                </div>
-                <div class="button" id="rewards-btn">
-                    Phần thưởng
-                    <span class="shift">››</span>
-                    <div class="mask"></div>
-                </div>
-                <div class="button" id="start-btn">
-                    Bắt đầu
-                    <span class="shift">››</span>
-                    <div class="mask"></div>
-                </div>
-            </div>
-        </div>
+  {% if customer.logged_in %}
+    <div class="menu">
+      <div class="introduction-title">{{ page.description }}</div>
+      <div class="introduction-content">{{ page.content | raw }}</div>
+      <div class="button-group">
 
-        <div class="modal riddles-btn">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <span class="close-btn">&times;</span>
-                    <div>Danh sách mật mã</div>
-                </div>
-                <div class="modal-body">{{getCustomField(page.id, 'page', 'mat-ma') | raw}}</div>
-                <div class="modal-footerr"></div>
-            </div>
-        </div>
+        <div class="button" id="riddles-btn">
 
-        <div class="modal point-btn">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <span class="close-btn">&times;</span>
-                    <div>Cách tính điểm</div>
-                </div>
-                <div class="modal-body">{{getCustomField(page.id, 'page', 'diem') | raw}}</div>
-                <div class="modal-footerr"></div>
+          <div class="wrapper-inner-tab-backgrounds-third">
+            <div class="sim-button button14">
+              <span>Recover Password</span>
             </div>
-        </div>
+          </div>
 
-        <div class="modal hint-btn">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <span class="close-btn">&times;</span>
-                    <div>Hệ thống gợi ý</div>
-                </div>
-                <div class="modal-body">
-                    {{getCustomField(page.id, 'page', 'goi-y') | raw}}
-                    <form class="hint-form-request">
-                        <div class="current-status">Bạn đang có {{customer.hint}} chìa khóa</div>
-                        <div>
-                            <label>Tiêu đề mã</label>
-                            <input name="level" placeholder="Tiêu đề mã ..."/>
-                            <label>Mô tả quá trình giải</label>
-                            <textarea rows="8" name="description" placeholder="Mô tả quá trình giải ..."></textarea>
-                            <button class="button-remaster" type="submit">Sử dụng</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footerr"></div>
-            </div>
+          <span class="shift">››</span>
+          <div class="mask"></div>
         </div>
+        <div class="button" id="point-btn">
+          Điểm
+          <span class="shift">››</span>
+          <div class="mask"></div>
+        </div>
+        <div class="button" id="hint-btn">
+          Gợi ý
+          <span class="shift">››</span>
+          <div class="mask"></div>
+        </div>
+        <div class="button" id="ranking-btn">
+          Bảng xếp hạng
+          <span class="shift">››</span>
+          <div class="mask"></div>
+        </div>
+        <div class="button" id="rewards-btn">
+          Phần thưởng
+          <span class="shift">››</span>
+          <div class="mask"></div>
+        </div>
+        <div class="button" id="start-btn">
+          Bắt đầu
+          <span class="shift">››</span>
+          <div class="mask"></div>
+        </div>
+      </div>
+    </div>
 
-        <div class="modal rewards-btn">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <span class="close-btn">&times;</span>
-                    <div>Phần thưởng</div>
-                </div>
-                <div class="modal-body">{{getCustomField(page.id, 'page', 'phan-thuong') | raw}}</div>
-                <div class="modal-footerr"></div>
+    <div class="modal riddles-btn">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close-btn">&times;</span>
+          <div>Danh sách mật mã</div>
+        </div>
+        <div class="modal-body">{{ getCustomField(page.id, 'page', 'mat-ma') | raw }}</div>
+        <div class="modal-footerr"></div>
+      </div>
+    </div>
+
+    <div class="modal point-btn">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close-btn">&times;</span>
+          <div>Cách tính điểm</div>
+        </div>
+        <div class="modal-body">{{ getCustomField(page.id, 'page', 'diem') | raw }}</div>
+        <div class="modal-footerr"></div>
+      </div>
+    </div>
+
+    <div class="modal hint-btn">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close-btn">&times;</span>
+          <div>Hệ thống gợi ý</div>
+        </div>
+        <div class="modal-body">
+          {{ getCustomField(page.id, 'page', 'goi-y') | raw }}
+          <form class="hint-form-request">
+            <div class="current-status">Bạn đang có {{ customer.hint }} chìa khóa</div>
+            <div>
+              <label>Tiêu đề mã</label>
+              <input name="level" placeholder="Tiêu đề mã ..."/>
+              <label>Mô tả quá trình giải</label>
+              <textarea rows="8" name="description" placeholder="Mô tả quá trình giải ..."></textarea>
+              <button class="button-remaster" type="submit">Sử dụng</button>
             </div>
+          </form>
         </div>
-    {% else %}
-        <div class="need-to-login">
-            Bạn cần đăng nhập trước khi tham gia Event!
+        <div class="modal-footerr"></div>
+      </div>
+    </div>
+
+    <div class="modal rewards-btn">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close-btn">&times;</span>
+          <div>Phần thưởng</div>
         </div>
-    {% endif %}
+        <div class="modal-body">{{ getCustomField(page.id, 'page', 'phan-thuong') | raw }}</div>
+        <div class="modal-footerr"></div>
+      </div>
+    </div>
+  {% else %}
+    <div class="need-to-login">
+      Bạn cần đăng nhập trước khi tham gia Event!
+    </div>
+  {% endif %}
 {% endblock content %}
