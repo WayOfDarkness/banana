@@ -214,6 +214,10 @@ body.show {
   width: 80%;
 }
 
+.hint-form-request label {
+  font-size: 14px;
+}
+
 .hint-form-request label, .hint-form-request input, .hint-form-request textarea, .hint-form-request .current-status {
   margin-bottom: 10px;
 }
