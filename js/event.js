@@ -25,13 +25,14 @@ function makeid(length) {
 
 $('.hint-form-request').submit(function (e) {
 	e.preventDefault();
+	var customer_id = $('.customer-id').val();
 	var data = {};
 	data.rating = '10';
 	data.post_type = 'article';
 	data.post_id = makeid(5);
 	data.title = $('input[name="level"]').val();
 	data.content = $('textarea[name="description"]').val();
-
+	
 	if (!data.title) {
 		$('input[name="level"]').addClass('has-error');
 		toast('Vui lòng nhập tiêu đề mã', 3000, 'red');
@@ -47,9 +48,19 @@ $('.hint-form-request').submit(function (e) {
 	} else {
 		$('textarea[name="description"]').removeClass('has-error');
 	}
-	StoreAPI.addReview(data);
-	toast('Gửi câu hỏi thành công!', 3000, 'blue');
-	setTimeout(function () {
-		location.reload();
-	}, 3000);
-})
+
+	StoreAPI.addReview(data, function (result) {
+		if (!result.code) {
+			$.ajax({
+				url: `/api/customer/decreaseCustomerOne/${customer_id}`,
+				type: "POST",
+				success: function (result) {
+					toast('Gửi câu hỏi thành công!', 3000, 'blue');
+					setTimeout(function () {
+						location.reload();
+					}, 3000);
+				}
+			});
+		}
+	});
+});
