@@ -94,7 +94,7 @@ body {
 
 @media (max-width: 650px) {
   .button {
-    width: 100% !important;
+    width: 80% !important;
   }
 }
 
