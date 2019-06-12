@@ -214,6 +214,7 @@ body.show {
 
 .hint-form-request {
   margin: auto;
+  width: 80%;
 }
 
 .hint-form-request label, .hint-form-request input, .hint-form-request textarea, .hint-form-request .current-status {
