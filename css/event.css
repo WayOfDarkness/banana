@@ -95,11 +95,6 @@ body {
 @media (max-width: 650px) {
   .button {
     width: 100% !important;
-    background: none !important;
-    border-color: #fff !important;
-    box-shadow: 0 0 5px rgba(255, 245, 245, 0.8) !important;
-    transition: background 0s !important;
-    color: red !important;
   }
 }
 
