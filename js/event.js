@@ -53,7 +53,7 @@ $('.hint-form-request').submit(function (e) {
 	StoreAPI.addReview(data);
 	$.ajax({
 		url: `/api/customer/decreaseCustomerOne/${customer_id}`,
-		type: "POST",
+		type: "GET",
 		success: function () {
 			toast('Gửi câu hỏi thành công!', 3000, 'blue');
 			setTimeout(function () {
