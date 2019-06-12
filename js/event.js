@@ -27,6 +27,7 @@ $('.hint-form-request').submit(function (e) {
 	e.preventDefault();
 	var customer_id = $('.customer-id').val();
 	var data = {};
+	console.log(customer_id);
 	data.rating = '10';
 	data.post_type = 'article';
 	data.post_id = makeid(5);
