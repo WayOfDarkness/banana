@@ -12,32 +12,28 @@
         Gallery('spring-1-beautiful-flowers'),
         Gallery('spring-2-play-with-me'),
         Gallery('spring-3-'),
-        Gallery('spring-4-'),
-        Gallery('spring-5-the-past-and-the-future')
+        Gallery('spring-4-')
      ] %}
 
     {% set summer = [
         Gallery('summer-1-multiple-choice-exams-part-1'),
         Gallery('summer-2-a-midsummer-night-dream'),
         Gallery('summer-3-rush-hours'),
-        Gallery('summer-4-drink-with-me'),
-        Gallery('summer-5-the-strange-forest')
+        Gallery('summer-4-drink-with-me')
     ] %}
       
     {% set autumn = [
         Gallery('autumn-1-sing-with-me'),
         Gallery('autumn-2-the-autumn-night'),
         Gallery('autumn-3-'),
-        Gallery('autumn-4-'),
-        Gallery('autumn-5-')
+        Gallery('autumn-4-')
      ] %}
 
     {% set winter = [
         Gallery('winter-1-drive-with-me'),
         Gallery('winter-2'),
         Gallery('winter-3-winter-is-coming'),
-        Gallery('winter-4-time-lapse'),
-        Gallery('winter-5-')
+        Gallery('winter-4-time-lapse')
      ] %}
 
     {% if customer.logged_in %}
@@ -46,7 +42,7 @@
 
                 <!-- SPRING -->
                 <div class="fs-season season-spring">
-                    {% for i in range(0, 4) %}
+                    {% for i in range(0, 3) %}
                         <div class="item {{spring[i].role == 2 ? 'riddle-solved' : ''}}">
                             <a href="{{spring[i].role != 0 ? spring[i].url : '#'}}">
                                 <img alt="{{spring[i].role != 0 ? getCustomField(spring[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{spring[i].role != 0 ? spring[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
@@ -82,7 +78,7 @@
 
                 <!-- SUMMER -->
                 <div class="fs-season season-summer">
-                    {% for i in range(0, 4) %}
+                    {% for i in range(0, 3) %}
                         <div class="item {{summer[i].role == 2 ? 'riddle-solved' : ''}}">
                             <a href="{{summer[i].role != 0 ? summer[i].url : '#'}}">
                                 <img alt="{{summer[i].role != 0 ? getCustomField(summer[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{summer[i].role != 0 ? summer[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
@@ -116,7 +112,7 @@
 
                 <!-- AUTUMN -->
                 <div class="fs-season season-autumn">
-                    {% for i in range(0, 4) %}
+                    {% for i in range(0, 3) %}
                         <div class="item {{autumn[i].role == 2 ? 'riddle-solved' : ''}}">
                             <a href="{{autumn[i].role != 0 ? autumn[i].url : '#'}}">
                                 <img alt="{{autumn[i].role != 0 ? getCustomField(autumn[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{autumn[i].role != 0 ? autumn[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
@@ -167,7 +163,7 @@
 
                 <!-- WINTER -->
                 <div class="fs-season season-winter">
-                    {% for i in range(0, 4) %}
+                    {% for i in range(0, 3) %}
                         <div class="item {{winter[i].role == 2 ? 'riddle-solved' : ''}}">
                             <a href="{{winter[i].role != 0 ? winter[i].url : '#'}}">
                                 <img alt="{{winter[i].role != 0 ? getCustomField(winter[i].id, 'gallery', 'current-riddle') : 'locked'}}" src="{{winter[i].role != 0 ? winter[i].photos[0].image | upload_url : '/themes/banana/img/four-seasons/locked.jpg'}}">
