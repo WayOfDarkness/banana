@@ -16,8 +16,8 @@
      ] %}
 
     {% set summer = [
-        Gallery('summer-1-multiple-choice-exams-part-1'),
-        Gallery('summer-2-a-midsummer-night-dream'),
+        Gallery('summer-1-a-midsummer-night-dream'),
+        Gallery('summer-2-multiple-choice-exams-part-1'),
         Gallery('summer-3-rush-hours'),
         Gallery('summer-4-drink-with-me')
     ] %}
@@ -31,7 +31,7 @@
 
     {% set winter = [
         Gallery('winter-1-drive-with-me'),
-        Gallery('winter-2'),
+        Gallery('winter-2-bang-hoa-dao'),
         Gallery('winter-3-winter-is-coming'),
         Gallery('winter-4-time-lapse')
      ] %}
@@ -39,7 +39,6 @@
     {% if customer.logged_in %}
         <div id="fs">
             <div class="fs-content">
-
                 <!-- SPRING -->
                 <div class="fs-season season-spring">
                     {% for i in range(0, 3) %}
