@@ -7,10 +7,10 @@
 {% endblock %}
 
 {% block content %}
-    {% if customer.logged_in and gallery.role != 0 %}
+    {% if customer.logged_in %}
         {% if gallery.handle == 'autumn-2-the-autumn-night' %}
-            <img class="autumn riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#planetmap">
-            <map name="planetmap">
+            <img class="autumn riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#starmap">
+            <map name="starmap">
                 <area coords="441,130,86" shape="circle" title="October 4, 2009">
                 <area coords="899,173,2" shape="circle" title="November 1, 2001">
                 <area coords="215,227,3" shape="circle" title="February 16, 2003">
@@ -18,16 +18,27 @@
                 <area coords="968,256,2" shape="circle" title="May 9, 2009">
                 <area coords="493,467,621,293,807,285,805,241,883,241,883,285,999,282,999,597,493,597" shape="poly" title="House?">
             </map>
+        {% elseif gallery.handle == 'autumn-4-halloween' %}
+            <img class="autumn riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#halloweenmap">
+            <map name="halloweenmap">
+                <area coords="441,130,86" shape="circle" href="https://choigiday.com/autumn-4-pumpkin-face">
+                <area coords="899,173,2" shape="circle" href="https://choigiday.com/autumn-4-witch-house">
+                <area coords="215,227,3" shape="circle" href="https://choigiday.com/autumn-4-cathedral">
+                <area coords="399,322,3" shape="circle" href="https://choigiday.com/autumn-4-ghost">
+                <area coords="968,256,2" shape="circle" href="https://choigiday.com/autumn-4-iron-gate">
+            </map>
         {% else %}
             <img class="autumn riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
         {% endif %}
-    {% elseif customer.logged_in and gallery.role == 0 %}
+    {# {% elseif customer.logged_in and gallery.role == 0 %}
         <div class="need-to-login">
             Bạn không đủ điều kiện để truy cập trang này!
-        </div>
+        </div> #}
     {% else %}
         <div class="need-to-login">
-            Bạn cần <a href="/">đăng nhập</a> trước khi tham gia Event!
+            Bạn cần
+            <a href="/">đăng nhập</a>
+            trước khi tham gia Event!
         </div>
     {% endif %}
 {% endblock content %}

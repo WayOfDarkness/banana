@@ -160,7 +160,6 @@ $(document).ready(function () {
     StoreAPI.customerReview(function (result) {
         var hintList = '';
         var questionList = '';
-        console.log(result);
         if (!result.code) {
             for (var i = 0; i < result.reviews.length; i++) {
                 hintList += `<option value="tab-${i}">${result.reviews[i].title}</option>`;
