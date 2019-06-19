@@ -67,3 +67,9 @@ p.clue {
 .page-article .layout-container {
   display: flex !important;
 }
+
+.text-img {
+  position: relative;
+  top: 100px;
+  left: -150px;
+}
