@@ -69,10 +69,10 @@ p.clue {
 }
 
 .text-img {
-  max-width: 650px;
+  max-width: 640px;
   text-align: justify;
   position: absolute;
-  left: 415px;
+  left: 575px;
   top: 100px;
 }
 
