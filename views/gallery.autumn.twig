@@ -21,12 +21,12 @@
         {% elseif gallery.handle == 'autumn-4-pumpkin-brothers' %}
             <img class="autumn riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#pumpkinmap">
             <map name="pumpkinmap">
-                <area coords="0,0,300,270" href="https://choigiday.com/autumn-4-demongo" shape="rectangle">
-                <area coords="300,0,640,270" href="https://choigiday.com/autumn-4-jack" shape="rectangle">
-                <area coords="640,0,1000,270" href="https://choigiday.com/autumn-4-sam" shape="rectangle">
-                <area coords="0,270,350,600" href="https://choigiday.com/autumn-4-fraidy-cat" shape="rectangle">
-                <area coords="350,270,690,600" href="https://choigiday.com/autumn-4-victor" shape="rectangle">
-                <area coords="690,270,1000,600" href="https://choigiday.com/autumn-4-milford" shape="rectangle">
+                <area coords="0,0,300,260" href="https://choigiday.com/autumn-4-demongo" shape="rectangle">
+                <area coords="300,0,640,260" href="https://choigiday.com/autumn-4-jack" shape="rectangle">
+                <area coords="640,0,1000,260" href="https://choigiday.com/autumn-4-sam" shape="rectangle">
+                <area coords="0,260,350,600" href="https://choigiday.com/autumn-4-fraidy-cat" shape="rectangle">
+                <area coords="350,260,690,600" href="https://choigiday.com/autumn-4-victor" shape="rectangle">
+                <area coords="690,260,1000,600" href="https://choigiday.com/autumn-4-milford" shape="rectangle">
             </map>
         {% else %}
             <img class="autumn riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
