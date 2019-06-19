@@ -29,17 +29,15 @@
                 <area coords="690,267,1000,600" href="https://choigiday.com/autumn-4-milford" shape="rectangle">
             </map>
         {% elseif gallery.handle == 'autumn-4-demongo' %}
-            <div>
-                <img class="autumn riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
-                <p>{{gallery.description | raw}}</p>
-            </div>
+            <img class="autumn riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
+            <div class="text-img">{{gallery.description | raw}}</div>
         {% else %}
             <img class="autumn riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
         {% endif %}
         {# {% elseif customer.logged_in and gallery.role == 0 %}
-                                        <div class="need-to-login">
-                                            Bạn không đủ điều kiện để truy cập trang này!
-                                        </div> #}
+                                                <div class="need-to-login">
+                                                    Bạn không đủ điều kiện để truy cập trang này!
+                                                </div> #}
     {% else %}
         <div class="need-to-login">
             Bạn cần
