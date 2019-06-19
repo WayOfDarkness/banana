@@ -71,7 +71,9 @@ p.clue {
 .text-img {
   position: relative;
   top: 100px;
-  left: -150px;
+  left: 410px;
+  max-width: 650px;
+  text-align: justify;
 }
 
 .text-img p {
