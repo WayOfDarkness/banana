@@ -28,7 +28,7 @@
                 <area coords="350,267,690,600" href="https://choigiday.com/autumn-4-victor" shape="rectangle">
                 <area coords="690,267,1000,600" href="https://choigiday.com/autumn-4-milford" shape="rectangle">
             </map>
-        {% elseif gallery.handle == 'autumn-4-demongo' %}
+        {% elseif gallery.handle == 'autumn-4-demongo' or gallery.handle == 'autumn-4-demongo-jack' %}
             <img class="autumn riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
             <div class="text-img">{{gallery.description | raw}}</div>
         {% else %}
