@@ -1,0 +1,43 @@
+{% block pre_include %}
+    <title>{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}</title>
+    <meta content="YsdIiXgCV-gDo4Nr4MngeUys0pOYPEaxTcOp4JpvUus" name="google-site-verification"/>
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+    <link rel="stylesheet" href="{{theme.uri}}/css/riddle.css">
+    <link rel="shortcut icon" href="{{settings.favicon | upload_url}}">
+    <style>
+        .riddle-container {
+            
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    {% if customer.logged_in %}
+        {% if gallery.handle == 'autumn-4-pumpkin-brothers' %}
+            <img class="autumn riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}" usemap="#pumpkinmap">
+            <map name="pumpkinmap">
+                <area coords="0,0,300,267" href="https://choigiday.com/autumn-4-demongo" shape="rectangle">
+                <area coords="300,0,640,267" href="https://choigiday.com/autumn-4-jack" shape="rectangle">
+                <area coords="640,0,1000,267" href="https://choigiday.com/autumn-4-sam" shape="rectangle">
+                <area coords="0,267,350,600" href="https://choigiday.com/autumn-4-fraidy-cat" shape="rectangle">
+                <area coords="350,267,690,600" href="https://choigiday.com/autumn-4-victor" shape="rectangle">
+                <area coords="690,267,1000,600" href="https://choigiday.com/autumn-4-milford" shape="rectangle">
+            </map>
+        {% else %}
+            <div class="riddle-container">
+                <img class="autumn riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
+                <div class="text-img">{{gallery.description | raw}}</div>
+            </div>
+        {% endif %}
+        {# {% elseif customer.logged_in and gallery.role == 0 %}
+                                                                                <div class="need-to-login">
+                                                                                    Bạn không đủ điều kiện để truy cập trang này!
+                                                                                </div> #}
+    {% else %}
+        <div class="need-to-login">
+            Bạn cần
+            <a href="/">đăng nhập</a>
+            trước khi tham gia Event!
+        </div>
+    {% endif %}
+{% endblock content %}
