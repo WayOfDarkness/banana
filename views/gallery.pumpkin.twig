@@ -14,6 +14,7 @@
             top: 50%;
             position: absolute;
             border-radius: 6px;
+            border: 5px orange solid;
         }
 
         .riddle-img {
@@ -45,7 +46,7 @@
                 <area coords="690,267,1000,600" href="https://choigiday.com/autumn-4-milford" shape="rectangle">
             </map>
         {% else %}
-            <div class="autumn riddle-container">
+            <div class="riddle-container">
                 <img class="riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
                 <div class="text-img">{{gallery.description | raw}}</div>
             </div>
