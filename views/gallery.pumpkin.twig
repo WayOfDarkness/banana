@@ -47,7 +47,7 @@
             </map>
         {% else %}
             <div class="riddle-container">
-                <img class="riddle-img" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
+                <img class="riddle-img-pumpkin" src="{{gallery.photos[0].image | upload_url}}" alt="{{getCustomField(gallery.id, 'gallery', 'solved-riddle')}}">
                 <div class="text-img">{{gallery.description | raw}}</div>
             </div>
         {% endif %}
