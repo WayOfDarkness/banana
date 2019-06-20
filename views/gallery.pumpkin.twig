@@ -20,6 +20,15 @@
             position: static;
             margin: auto;
         }
+        .text-img {
+            max-width: 640px;
+            text-align: justify;
+            margin: auto;
+        }
+        .text-img p {
+            font-family: 'Patrick Hand', cursive !important;
+            font-size: 20px !important;
+        }
     </style>
 {% endblock %}
 
@@ -42,9 +51,9 @@
             </div>
         {% endif %}
         {# {% elseif customer.logged_in and gallery.role == 0 %}
-                                                                                <div class="need-to-login">
-                                                                                    Bạn không đủ điều kiện để truy cập trang này!
-                                                                                </div> #}
+                                                                                        <div class="need-to-login">
+                                                                                            Bạn không đủ điều kiện để truy cập trang này!
+                                                                                        </div> #}
     {% else %}
         <div class="need-to-login">
             Bạn cần

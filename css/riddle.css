@@ -67,16 +67,3 @@ p.clue {
 .page-article .layout-container {
   display: flex !important;
 }
-
-.text-img {
-  max-width: 640px;
-  text-align: justify;
-  position: absolute;
-  left: 575px;
-  top: 100px;
-}
-
-.text-img p {
-  font-family: 'Patrick Hand', cursive !important;
-  font-size: 20px !important;
-}
