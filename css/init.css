@@ -19516,11 +19516,14 @@ a:hover .link-img .hover-play-pause {
   margin: 0;
   max-height: 0;
   font-size: 1.125rem;
-  line-height: 1.3rem;
-
   font-weight: normal;
   font-style: normal;
-  line-height: 1.3em
+  line-height: 1.3em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .promo-type--overlay:hover .promo--metadata span {

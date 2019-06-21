@@ -7746,8 +7746,6 @@ header {
 
 .header-icon.close > div {
   background-color: #2C7ABE !important;
-  width: 32px;
-  height: 32px;
   transition-duration: 0.3s;
 }
 .header-icon.close::before {
