@@ -6,7 +6,7 @@
   "author": "//choigiday.com",
   "license": "MIT",
   "dependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-css": "^0.1.0",
     "gulp-cssimport": "^7.0.0"
